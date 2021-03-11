@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <id>https://github.com/NCAR/esds</id>
+  <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2021-03-11T19:41:54.563130+00:00</updated>
-  <link href="https://github.com/NCAR/esds"/>
-  <link href="https://github.com/NCAR/esds/blog/atom.xml"/>
+  <updated>2021-03-11T19:45:22.639084+00:00</updated>
+  <link href="ncar.github.io/esds/"/>
+  <link href="ncar.github.io/esds/blog/atom.xml"/>
   <generator uri="https://ablog.readthedocs.org" version="0.10.13">ABlog</generator>
   <entry>
-    <id>https://github.com/NCAR/esds/posts/test/</id>
+    <id>ncar.github.io/esds/posts/test/</id>
     <title>Test to check if this is working</title>
     <updated>2021-03-11T00:00:00+00:00</updated>
     <author>
@@ -15,7 +15,7 @@
     </author>
     <content type="html">&lt;p&gt;Here is a test - let’s hope this works.&lt;/p&gt;
 </content>
-    <link href="https://github.com/NCAR/esds/posts/test/" rel="alternate"/>
+    <link href="ncar.github.io/esds/posts/test/" rel="alternate"/>
     <published>2021-03-11T00:00:00+00:00</published>
   </entry>
 </feed>
