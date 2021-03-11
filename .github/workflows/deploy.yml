@@ -32,4 +32,4 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./_build/dirhtml
-        cname: github.com/ncar/esds
+        cname: ncar.github.io/esds
