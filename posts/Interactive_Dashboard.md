@@ -1,7 +1,7 @@
 ---
 author: Max Grover
 date: 2021-3-19
-tags: dashboard, jupyter,
+tags: dashboard, jupyter
 ---
 # HiRes-CESM Interactive Dashboard Example
 
