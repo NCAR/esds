@@ -9,7 +9,7 @@ The ESDS initiative aims to build an inclusive ***sociotechnical*** network to p
 - Community-oriented, community-developed analysis frameworks
 - Entrain stakeholders in co-design processes
 
-![ESDS Vision](./images/esds_vision)
+![ESDS Vision](./images/esds_vision.png)
 
 ## Near-term Goals
 1. Facilitate a process for developing the next generation CESM diagnostic frameworks
