@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2021-03-20T02:08:44.784854+00:00</updated>
+  <updated>2021-03-24T01:13:27.275119+00:00</updated>
   <link href="ncar.github.io/esds/"/>
-  <link href="ncar.github.io/esds/blog/atom.xml"/>
-  <generator uri="https://ablog.readthedocs.org" version="0.10.13">ABlog</generator>
+  <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.16">ABlog</generator>
   <entry>
     <id>ncar.github.io/esds/posts/Interactive_Dashboard/</id>
     <title>HiRes-CESM Interactive Dashboard Example</title>
@@ -17,6 +17,9 @@
 &lt;p&gt;We are specifically interested in looking at plots created using the &lt;a class="reference external" href="https://github.com/marbl-ecosys/HiRes-CESM-analysis"&gt;HighRes-CESM-Analysis&lt;/a&gt; repository.&lt;/p&gt;
 &lt;img alt="https://img.shields.io/badge/%E2%86%91_Deploy_to-Heroku-7056bf.svg" src="http://img.shields.io/badge/%E2%86%91_launch_dashboard_on-Heroku-7056bf.svg" /&gt;</content>
     <link href="ncar.github.io/esds/posts/Interactive_Dashboard/" rel="alternate"/>
+    <summary>In this example, our goal is to create an interactive dashboard, using images already output on a remote server.We are specifically interested in looking at plots created using the HighRes-CESM-Analysis repository.https://img.shields.io/badge/%E2%86%91_Deploy_to-Heroku-7056bf.svg</summary>
+    <category term="dashboard" label="dashboard"/>
+    <category term="jupyter" label="jupyter"/>
     <published>2021-03-19T00:00:00+00:00</published>
   </entry>
 </feed>
