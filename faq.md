@@ -1,12 +1,12 @@
 # Frequently Asked Questions
 This contains relevant questions and answers from common workflow issues and questions posted on Zulip.
 
-***This page is meant to be a list of FAQ regarding climate datasets, movivated by a variety of employees across UCAR/NCAR***
+***This page is meant to be a list of FAQ regarding climate datasets, motivated by a variety of employees across UCAR/NCAR***
 
 
 ## How do I optimize reading multiple files using Xarray and Dask?
 
-### I receive errors when trying to read in my dataset... are there certain arguements
+### I receive errors when trying to read in my dataset... are there certain arguments
 
 A good first place to start when reading in multiple files is [Xarray's multi-file documentation](https://xarray.pydata.org/en/stable/io.html#reading-multi-file-datasets).
 
@@ -109,9 +109,9 @@ Keep an eye on the dask dashboard.
 
 ## Debugging the dask dashboard
 
-### NCAR JupyterHub
+## NCAR JupyterHub
 
-### SSH tunnels to lab resources
+## SSH tunnels to lab resources
 
 ## Help, my analysis is slow!
 
@@ -125,14 +125,21 @@ Keep an eye on the dask dashboard.
    to know where NaNs are present to drop them. Instead see if you can write your statement as a `.clip`,  `.sel`, `.isel`, or 
    `.query` statement.
 
-### I have to do lots of rechunking, but the rechunk step uses too much memory and kills my workers.
+## I have to do lots of rechunking, but the rechunk step uses too much memory and kills my workers.
 
 Try the [rechunker package](https://github.com/pangeo-data/rechunker).
 
-### Writing to files in parallel
+## Writing to files in parallel
 
 Distributed writes to netCDF are hard.
 
 1. Try writing to `zarr` using `Dataset.to_zarr`.
 1. If you need to write to netCDF and your final dataset can fit in memory then use `dataset.load().to_netcdf(...)`.
 1. If you really must write a big dataset to netCDF try using `save_mfdataset` (see [here](https://ncar.github.io/xdev/posts/writing-multiple-netcdf-files-in-parallel-with-xarray-and-dask/)). 
+
+## My Dask workers are taking a long time to start.   How can I monitor them?
+
+Dask worker requests are added to the job queues on Casper and Cheyenne with the `cluster.scale()` method.   After this method is called, you can verify that they are waiting in the queue with these commands:
+*  `squeue --me` on Casper
+*  `qstat -u <my_username>` on Cheyenne
+If you see no pending worker jobs, then verify that you have called `cluster.scale()`.
