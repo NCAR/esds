@@ -355,4 +355,4 @@ dashboard.servable("HiRes-CESM Diagnostics Dashboard")
 
 Since these plots are not rendered directly in this notebook online, here is the ouput deployed using Dokku/Heroku
 
-[![https://img.shields.io/badge/%E2%86%91_Deploy_to-Heroku-7056bf.svg](https://img.shields.io/badge/%E2%86%91_launch_dashboard_on-Heroku-7056bf.svg)](https://hires-cesm-analysis.dokku.projectpythia.org/Interactive_Dashboard)
+[![https://img.shields.io/badge/%E2%86%91_Deploy_to-Heroku-7056bf.svg](http://img.shields.io/badge/%E2%86%91_launch_dashboard_on-Heroku-7056bf.svg)](https://hires-cesm-analysis.dokku.projectpythia.org/Interactive_Dashboard)
