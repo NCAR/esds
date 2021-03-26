@@ -30,7 +30,7 @@ ds = xr.open_mfdataset(
         # Only non-dim coordinate variables in which concat_dim already appears are concatenated.
         coords="minimal",
 
-        # Skip comparing and pick variable from first dataset.
+        # Skip comparing and pick variable from first dataset when concat_dim is not a dimension of a variable
         compat="override",
         parallel=True,
     )
