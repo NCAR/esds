@@ -133,5 +133,6 @@ Distributed writes to netCDF are hard.
 Dask worker requests are added to the job queues on Casper and Cheyenne with the `cluster.scale()` method.   After this method is called, you can verify that they are waiting in the queue with these commands:
 *  `squeue --me` on Casper
 *  `qstat -u <my_username>` on Cheyenne
+
 If you see no pending worker jobs, then verify that you have called `cluster.scale()`.
 
