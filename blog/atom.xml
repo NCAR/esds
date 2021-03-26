@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2021-03-26T20:38:01.429154+00:00</updated>
+  <updated>2021-03-26T21:12:22.333612+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.17">ABlog</generator>
@@ -21,5 +21,22 @@
     <category term="dashboard" label="dashboard"/>
     <category term="jupyter" label="jupyter"/>
     <published>2021-03-19T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/esds-blog/</id>
+    <title>NCAR-CGD ESDS Town Hall</title>
+    <updated>2021-03-26T00:00:00+00:00</updated>
+    <author>
+      <name>Max Grover</name>
+    </author>
+    <content type="html">&lt;p&gt;Last week, there was a town hall focused on gathering input on the Earth System Data Science initiative at NCAR. The meeting began with an introduction about the initiative, the vision, goals, and how the team is planning to start working toward these goals.&lt;/p&gt;
+&lt;p&gt;The Question/Answer portion of the town hall was very informative and brought up some great topics for discussion. They have been collected from both the chat and Google Doc, sorted by category.&lt;/p&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/esds-blog/" rel="alternate"/>
+    <summary>Last week, there was a town hall focused on gathering input on the Earth System Data Science initiative at NCAR. The meeting began with an introduction about the initiative, the vision, goals, and how the team is planning to start working toward these goals.The Question/Answer portion of the town hall was very informative and brought up some great topics for discussion. They have been collected from both the chat and Google Doc, sorted by category.</summary>
+    <category term="townhall" label="townhall"/>
+    <category term="cgd" label="cgd"/>
+    <category term="questions" label="questions"/>
+    <published>2021-03-26T00:00:00+00:00</published>
   </entry>
 </feed>
