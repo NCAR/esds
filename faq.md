@@ -50,7 +50,7 @@ For example, let's say you trying to read in multiple files, each with ~600 time
 
 You can check the size of each chunk by subsetting a single DataArray (ex. `ds['temperature']`)
 
-If you have very large chunks, try modifying the number of chunks you specify within  `xr.open_mfdataset(files, ..., chunks={'lev':1, "time": 500})` where lev and time are vertical and time dimensions respectively.
+If you have very large chunks, try modifying the number of chunks you specify within  `xr.open_mfdataset(files, ..., chunks={'lev':1, "time": 500})` where `lev` and `time` are dimension names.
 
 Check to see how large each chunk is after modifying the chunk size, and modify as necessary.
 
