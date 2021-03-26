@@ -60,4 +60,4 @@ Check to see how large each chunk is after modifying the chunk size, and modify 
 
 If you have a few large files, having the number of workers equal to to the number of input files read in using `xr.open_mfdataset` would be a good practice
 
-If you have a large number of smaller files, you may not run into this issue, and it is suggest you look at the other potential solutions.
+If you have a large number of smaller files, you may not run into this issue, and it is suggest you look at the other potential solutions. If you are reading a large number of netCDF files, you should check the number of threads vs number of processes in your cluster. File reading is parallelized across processes, not threads so this is a potential bottleneck.
