@@ -24,7 +24,7 @@ ds = xr.open_mfdataset(
         # Specify chunks for dask - explained later
         chunks={"lev": 1, "time": 500},
 
-        # Only data variables in which the dimension already appears are included.
+        # Only data variables in which the concat_dim already appears are concatenated.
         data_vars="minimal",
 
         # Only coordinates in which the dimension already appears are included.
