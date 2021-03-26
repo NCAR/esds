@@ -38,6 +38,8 @@ ds = xr.open_mfdataset(
 
 ### My file is taking forever to read in... what can I do to improve this?
 
+1. Have you looked at [Xarray's multi-file documentation](https://xarray.pydata.org/en/stable/io.html#reading-multi-file-datasets)? Usually `data_vars="minimal", coords="minimal", compat="override"` works for model datasets that are consistent across the files you are reading in.
+
 1. Try subsetting for ***just*** the variable(s) you need for example, if you are reading in a dataset with ~25 variables, and you only need `temperature`, just read in temperature. You can specificy which variables to read in by using the following syntax, following the example of the temperature variable.
 
 ```python
