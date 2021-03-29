@@ -126,4 +126,12 @@ Distributed writes to netCDF are hard.
 
 1. Try writing to `zarr` using `Dataset.to_zarr`.
 1. If you need to write to netCDF and your final dataset can fit in memory then use `dataset.load().to_netcdf(...)`.
-1. If you really must write a big dataset to netCDF try using `save_mfdataset` (see [here](https://ncar.github.io/xdev/posts/writing-multiple-netcdf-files-in-parallel-with-xarray-and-dask/)).
+1. If you really must write a big dataset to netCDF try using `save_mfdataset` (see [here](https://ncar.github.io/xdev/posts/writing-multiple-netcdf-files-in-parallel-with-xarray-and-dask/)). 
+
+### My Dask workers are taking a long time to start.   How can I monitor them?
+
+Dask worker requests are added to the job queues on Casper and Cheyenne with the `cluster.scale()` method.   After this method is called, you can verify that they are waiting in the queue with this command:
+*  `qstat -u <my_username>` on Cheyenne, and the same command will work on Casper after April 2021.
+
+If you see no pending worker jobs, then verify that you have called `cluster.scale()`.
+
