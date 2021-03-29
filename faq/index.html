@@ -235,6 +235,11 @@
      Writing to files in parallel
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#my-dask-workers-are-taking-a-long-time-to-start-how-can-i-monitor-them">
+     My Dask workers are taking a long time to start.   How can I monitor them?
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -385,6 +390,14 @@ in a serial context.</p>
 <li><p>If you need to write to netCDF and your final dataset can fit in memory then use <code class="docutils literal notranslate"><span class="pre">dataset.load().to_netcdf(...)</span></code>.</p></li>
 <li><p>If you really must write a big dataset to netCDF try using <code class="docutils literal notranslate"><span class="pre">save_mfdataset</span></code> (see <a class="reference external" href="https://ncar.github.io/xdev/posts/writing-multiple-netcdf-files-in-parallel-with-xarray-and-dask/">here</a>).</p></li>
 </ol>
+</div>
+<div class="section" id="my-dask-workers-are-taking-a-long-time-to-start-how-can-i-monitor-them">
+<h3>My Dask workers are taking a long time to start.   How can I monitor them?<a class="headerlink" href="#my-dask-workers-are-taking-a-long-time-to-start-how-can-i-monitor-them" title="Permalink to this headline">¶</a></h3>
+<p>Dask worker requests are added to the job queues on Casper and Cheyenne with the <code class="docutils literal notranslate"><span class="pre">cluster.scale()</span></code> method.   After this method is called, you can verify that they are waiting in the queue with this command:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">qstat</span> <span class="pre">-u</span> <span class="pre">&lt;my_username&gt;</span></code> on Cheyenne, and the same command will work on Casper after April 2021.</p></li>
+</ul>
+<p>If you see no pending worker jobs, then verify that you have called <code class="docutils literal notranslate"><span class="pre">cluster.scale()</span></code>.</p>
 </div>
 </div>
 </div>
