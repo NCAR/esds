@@ -16,8 +16,8 @@ jobs:
       - uses: actions/checkout@v2
 
       # Install dependencies
-      - name: Set up Python 3.8
-        uses: actions/setup-python@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2.2.1
         with:
           python-version: 3.8
 
@@ -30,8 +30,8 @@ jobs:
           make dirhtml
       # Push the book's HTML to github-pages
       - name: GitHub Pages action
-        if: github.ref == 'refs/heads/main'
         uses: peaceiris/actions-gh-pages@v3.8.0
+        if: github.ref == 'refs/heads/main'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_build/dirhtml
