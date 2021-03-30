@@ -34,6 +34,7 @@ extensions = [
     'myst_nb',
     'ablog',
     'sphinx_panels',
+    'sphinx_comments',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -86,6 +87,11 @@ myst_deflist_enable = True
 
 # Temporarily stored as off until we fix it
 jupyter_execute_notebooks = 'off'
+
+
+comments_config = {
+    'utterances': {'repo': 'NCAR/esds', 'optional': 'config', 'label': '💬 comment'},
+}
 
 
 def setup(app):
