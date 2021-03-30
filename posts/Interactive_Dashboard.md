@@ -3,6 +3,7 @@ author: Max Grover
 date: 2021-3-19
 tags: dashboard, jupyter
 ---
+
 # HiRes-CESM Interactive Dashboard Example
 
 In this example, our goal is to create an interactive dashboard, using images already output on a remote server.
@@ -12,8 +13,6 @@ We are specifically interested in looking at plots created using the [HighRes-CE
 Images created by this package can be visualized through an interactive
 dashboard using [Panelify](https://github.com/andersy005/panelify)
 
-
-
 ```python
 import pandas as pd
 import panel as pn
@@ -21,10 +20,6 @@ import panelify
 
 pn.extension()
 ```
-
-
-
-
 
 ---
 
@@ -34,8 +29,6 @@ The plots from this example are stored on the
 [CGD webext machine](https://webext.cgd.ucar.edu/), specifically from
 [this specific case](https://webext.cgd.ucar.edu/g.e22b05.G1850ECOIAF_JRA.TL319_g17.cocco.001/),
 which we use as the path.
-
-
 
 ```python
 paths = (
@@ -48,8 +41,6 @@ paths = (
 
 We use pandas to remotely read in the data, dropping the Unnamed column, and
 merging the absolute path to the directory and the relative filepaths
-
-
 
 ```python
 df_list = []
@@ -65,13 +56,9 @@ for path in paths:
 df = pd.concat(df_list)
 ```
 
-
 ```python
 df
 ```
-
-
-
 
 <div>
 <style scoped>
@@ -86,6 +73,7 @@ df
     .dataframe thead th {
         text-align: right;
     }
+
 </style>
 <table border="1" class="dataframe">
   <thead>
@@ -240,13 +228,9 @@ df
 <p>1969 rows × 9 columns</p>
 </div>
 
-
-
 ### Dealing with Relative vs. Absolute Paths
 
 In the previous cell, we edited the filepaths... that is because the image filepaths are relative paths, but we would ideally like absolute paths. We make use of the dataframe path to assign the new absolute filepaths. An example is given below.
-
-
 
 ```python
 print("Original filepath: ", df.filepath.values[0])
@@ -260,29 +244,20 @@ print("New filepath ", df.filepath.values[0])
     Original filepath:  histogram/CaCO3_FLUX_100m.0001-01-01_0001-12-31.png
     New filepath  https://webext.cgd.ucar.edu/g.e22.G1850ECO_JRA_HR.TL319_t13.003/histogram/CaCO3_FLUX_100m.0001-01-01_0001-12-31.png
 
-
 ---
 
 ### Build the Dashboard
 
 First, we check which types of plots are included in the analysis.
 
-
-
 ```python
 df.plot_type.unique()
 ```
 
-
-
-
     array(['histogram', 'summary_map', 'time_series', 'trend_hist',
            'trend_map'], dtype=object)
 
-
-
 Although there are five different plot types, we focus on the first three.
-
 
 ```python
 # Since we are using https, we leave this dictionary empty
@@ -330,8 +305,6 @@ canvas = panelify.Canvas(
 ### Run the Dashboard Inline
 
 Now that we have built the dashboard, we run it within the notebook.
-
-
 
 ```python
 hv_logo = '<a href="https://holoviz.org"><img src="https://holoviz.org/assets/holoviz-logo-stacked.svg" width=80></a>'
