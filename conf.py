@@ -31,9 +31,9 @@ release = '0.1'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    "myst_nb",
-    "ablog",
-    "sphinx_panels",
+    'myst_nb',
+    'ablog',
+    'sphinx_panels',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -54,9 +54,9 @@ html_theme = 'pydata_sphinx_theme'
 
 # Add some more theme Options
 html_theme_options = {
-  "github_url": "https://github.com/ncar/esds",
-  "search_bar_text": "Search this site... ",
-  "search_bar_position": "navbar",
+    'github_url': 'https://github.com/ncar/esds',
+    'search_bar_text': 'Search this site... ',
+    'search_bar_position': 'navbar',
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,
@@ -68,11 +68,11 @@ html_static_path = ['_static']
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
-blog_baseurl = "ncar.github.io/esds/"
-blog_title = "NCAR ESDS"
-blog_path = "blog"
+blog_baseurl = 'ncar.github.io/esds/'
+blog_title = 'NCAR ESDS'
+blog_path = 'blog'
 fontawesome_included = True
-blog_post_pattern = "posts/*"
+blog_post_pattern = 'posts/*'
 post_redirect_refresh = 1
 post_auto_image = 1
 post_auto_excerpt = 2
@@ -85,7 +85,8 @@ myst_admonition_enable = True
 myst_deflist_enable = True
 
 # Temporarily stored as off until we fix it
-jupyter_execute_notebooks = "off"
+jupyter_execute_notebooks = 'off'
+
 
 def setup(app):
-    app.add_css_file("custom.css")
+    app.add_css_file('custom.css')

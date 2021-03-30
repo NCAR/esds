@@ -1,103 +1,103 @@
 /* Bio area */
 div.profile-pic {
-    margin-top: 1em;
+  margin-top: 1em;
 }
 
 div.profile-pic img {
-    border-radius: 500px;
-    width: 80%;
-    max-width: 190px;
-    margin: 0 auto;
-    display: block;
+  border-radius: 500px;
+  width: 80%;
+  max-width: 190px;
+  margin: 0 auto;
+  display: block;
 }
 
 .bio-info {
-    margin: 1em auto;
-    max-width: 220px;
+  margin: 1em auto;
+  max-width: 220px;
 }
 
 .name {
-    font-size: 1.5em;
+  font-size: 1.5em;
 }
 
 .focusareas {
-    font-size: .9em;
-    font-weight: bold;
+  font-size: 0.9em;
+  font-weight: bold;
 }
 
 .whatido {
-    margin-top: 1em;
+  margin-top: 1em;
 }
-
 
 /* Sidebar for blog archive / each post */
 ul.ablog-archive {
-    padding-left: 0px;
+  padding-left: 0px;
 }
 
 .bd-sidebar h2 {
-    font-size: 1.4em;
+  font-size: 1.4em;
 }
 
 .bd-sidebar ul {
-    padding-left: 0;
-    list-style-type: none;
+  padding-left: 0;
+  list-style-type: none;
 }
 
 .bd-sidebar li {
-    padding-bottom: .5em;
+  padding-bottom: 0.5em;
 }
 
-div.bd-sidebar h3, div.bd-sidebar h2, div.bd-sidebar ul {
-    padding-left: 5%;
+div.bd-sidebar h3,
+div.bd-sidebar h2,
+div.bd-sidebar ul {
+  padding-left: 5%;
 }
 
 /* In-page post lists */
 ul.postlist {
-    padding-left: 0;
+  padding-left: 0;
 }
 
 ul.postlist > li > p:first-child {
-    font-size: 1.5em;
+  font-size: 1.5em;
 }
 
 ul.postlist li + li {
-    margin-top: 2em;
+  margin-top: 2em;
 }
 
 ul.postlist li > p > a {
-    font-style: normal;
-    font-size: 1.3em;
+  font-style: normal;
+  font-size: 1.3em;
 }
-
 
 /* Timeline CSS */
 div.timeline div.card {
-    border: 0px;
+  border: 0px;
 }
 
 div.timeline div.left {
-    text-align: right;
-    border-right: 1px solid black;
+  text-align: right;
+  border-right: 1px solid black;
 }
 
 div.timeline div.entry::after {
-    width: 1em;
-    height: 1em;
-    background: white;
-    border-radius: 50%;
-    content: "";
-    top: 1em;
-    display: block;
-    position: absolute;
-    border: 1px black solid;
-    z-index: 999;
+  width: 1em;
+  height: 1em;
+  background: white;
+  border-radius: 50%;
+  content: '';
+  top: 1em;
+  display: block;
+  position: absolute;
+  border: 1px black solid;
+  z-index: 999;
 }
 
 div.timeline div.entry.left::after {
-    right: -.5em;
+  right: -0.5em;
 }
 
 div.timeline div.entry.right::after {
-    left: -.5em;
+  left: -0.5em;
 }
