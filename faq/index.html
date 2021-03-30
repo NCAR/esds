@@ -271,7 +271,7 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#my-dask-workers-are-taking-a-long-time-to-start-how-can-i-monitor-them">
-     My Dask workers are taking a long time to start.   How can I monitor them?
+     My Dask workers are taking a long time to start. How can I monitor them?
     </a>
    </li>
   </ul>
@@ -295,7 +295,7 @@ commentsRunWhenDOMLoaded(addUtterances);
                  <div class="section" id="frequently-asked-questions">
 <h1>Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Permalink to this headline">¶</a></h1>
 <p>This contains relevant questions and answers from common workflow issues and questions posted on Zulip.</p>
-<p><em><strong>This page is meant to be a list of FAQ regarding climate datasets, movivated by a variety of employees across UCAR/NCAR</strong></em></p>
+<p><strong><em>This page is meant to be a list of FAQ regarding climate datasets, movivated by a variety of employees across UCAR/NCAR</em></strong></p>
 <div class="section" id="i-need-help-with-this">
 <h2>I need help with this!<a class="headerlink" href="#i-need-help-with-this" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="where-do-i-go-for-help">
@@ -342,7 +342,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 chunks.</p></li>
 <li><p>Choose chunking appropriate to your analysis. If you’re working with time series then chunk more in space and less along time.</p></li>
 <li><p>Avoid indexing with <code class="docutils literal notranslate"><span class="pre">.where</span></code> as much as possible. In particulate <code class="docutils literal notranslate"><span class="pre">.where(...,</span> <span class="pre">drop=True)</span></code> will trigger a compute since it needs
-to know where NaNs are present to drop them. Instead see if you can write your statement as a <code class="docutils literal notranslate"><span class="pre">.clip</span></code>,  <code class="docutils literal notranslate"><span class="pre">.sel</span></code>, <code class="docutils literal notranslate"><span class="pre">.isel</span></code>, or
+to know where NaNs are present to drop them. Instead see if you can write your statement as a <code class="docutils literal notranslate"><span class="pre">.clip</span></code>, <code class="docutils literal notranslate"><span class="pre">.sel</span></code>, <code class="docutils literal notranslate"><span class="pre">.isel</span></code>, or
 <code class="docutils literal notranslate"><span class="pre">.query</span></code> statement.</p></li>
 </ol>
 </div>
@@ -394,7 +394,7 @@ in a serial context.</p>
 <div class="section" id="help-my-analysis-is-slow">
 <h3>Help, my analysis is slow!<a class="headerlink" href="#help-my-analysis-is-slow" title="Permalink to this headline">¶</a></h3>
 <ol class="simple">
-<li><p>Try subsetting for <em><strong>just</strong></em> the variable(s) you need for example, if you are reading in a dataset with ~25 variables, and you only need <code class="docutils literal notranslate"><span class="pre">temperature</span></code>, just read in temperature. You can specificy which variables to read in by using the following syntax, following the example of the temperature variable.</p></li>
+<li><p>Try subsetting for <strong><em>just</em></strong> the variable(s) you need for example, if you are reading in a dataset with ~25 variables, and you only need <code class="docutils literal notranslate"><span class="pre">temperature</span></code>, just read in temperature. You can specificy which variables to read in by using the following syntax, following the example of the temperature variable.</p></li>
 </ol>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">data_vars</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;temperature&#39;</span><span class="p">])</span>
 </pre></div>
@@ -404,7 +404,7 @@ in a serial context.</p>
 </ol>
 <p>For example, let’s say you trying to read in multiple files, each with ~600 time steps. This is case where each file is very large (several 10s of GB) and using Dask to help with data processing is <em>essential</em>.</p>
 <p>You can check the size of each chunk by subsetting a single DataArray (ex. <code class="docutils literal notranslate"><span class="pre">ds['temperature']</span></code>)</p>
-<p>If you have very large chunks, try modifying the number of chunks you specify within  <code class="docutils literal notranslate"><span class="pre">xr.open_mfdataset(files,</span> <span class="pre">...,</span> <span class="pre">chunks={'lev':1,</span> <span class="pre">&quot;time&quot;:</span> <span class="pre">500})</span></code> where lev and time are vertical and time dimensions respectively.</p>
+<p>If you have very large chunks, try modifying the number of chunks you specify within <code class="docutils literal notranslate"><span class="pre">xr.open_mfdataset(files,</span> <span class="pre">...,</span> <span class="pre">chunks={'lev':1,</span> <span class="pre">&quot;time&quot;:</span> <span class="pre">500})</span></code> where lev and time are vertical and time dimensions respectively.</p>
 <p>Check to see how large each chunk is after modifying the chunk size, and modify as necessary.</p>
 <ol class="simple">
 <li><p>You do not have enough dask workers</p></li>
@@ -426,8 +426,8 @@ in a serial context.</p>
 </ol>
 </div>
 <div class="section" id="my-dask-workers-are-taking-a-long-time-to-start-how-can-i-monitor-them">
-<h3>My Dask workers are taking a long time to start.   How can I monitor them?<a class="headerlink" href="#my-dask-workers-are-taking-a-long-time-to-start-how-can-i-monitor-them" title="Permalink to this headline">¶</a></h3>
-<p>Dask worker requests are added to the job queues on Casper and Cheyenne with the <code class="docutils literal notranslate"><span class="pre">cluster.scale()</span></code> method.   After this method is called, you can verify that they are waiting in the queue with this command:</p>
+<h3>My Dask workers are taking a long time to start. How can I monitor them?<a class="headerlink" href="#my-dask-workers-are-taking-a-long-time-to-start-how-can-i-monitor-them" title="Permalink to this headline">¶</a></h3>
+<p>Dask worker requests are added to the job queues on Casper and Cheyenne with the <code class="docutils literal notranslate"><span class="pre">cluster.scale()</span></code> method. After this method is called, you can verify that they are waiting in the queue with this command:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">qstat</span> <span class="pre">-u</span> <span class="pre">&lt;my_username&gt;</span></code> on Cheyenne, and the same command will work on Casper after April 2021.</p></li>
 </ul>
