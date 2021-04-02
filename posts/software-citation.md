@@ -1,7 +1,7 @@
 ---
 author: Max Grover
 date: 2021-4-2
-tags: open-science, citation
+tags: open-science, citation, software
 ---
 
 # The Importance of Software Citation
@@ -36,4 +36,5 @@ DOI stands for "Digital Object Identifier" and serves as a permanent identifier 
   - Publication year of software
 
 ## How do I mint a DOI for my repository if I am outside the NCAR organization?
+
 Zenodo is a great option, and integrated within Github [Zenodo Plugin](https://guides.github.com/activities/citable-code/). This option can be good for people within the NCAR organization as well, especially if you would like to assign discrete DOIs to each of your releases.
