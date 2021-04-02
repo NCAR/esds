@@ -12,7 +12,7 @@ Data and academic publication citations have become popular in the literature, b
 
 The [NCAR Library team](https://library.ucar.edu/) put together a website, detailing software citation best practices, based on evaluating the >500 [NCAR Github Repositories](https://github.com/NCAR)
 
-Here, we provide an overview of these recommendations, but if you are interested in more of the details, be sure to check out [their documentation]([NCAR Github Repositories](https://github.com/NCAR)).
+Here, we provide an overview of these recommendations, but if you are interested in more of the details, be sure to check out [the NCAR software citation documentation](https://ncar.github.io/software-citation/).
 
 ## How else should I make sure people cite my software?
 
