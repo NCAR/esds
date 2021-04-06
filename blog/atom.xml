@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2021-04-06T23:00:42.038399+00:00</updated>
+  <updated>2021-04-06T23:21:56.892782+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.17">ABlog</generator>
@@ -55,5 +55,21 @@
     <category term="citation" label="citation"/>
     <category term="software" label="software"/>
     <published>2021-04-02T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/casper_pbs_dask/</id>
+    <title>Using Dask on the New Casper PBS Scheduler</title>
+    <updated>2021-04-06T00:00:00+00:00</updated>
+    <author>
+      <name>Max Grover</name>
+    </author>
+    <content type="html">&lt;p&gt;Non-consecutive header level increase; 0 to 2 [myst.header]&lt;/p&gt;
+&lt;p&gt;Casper will complete a transition from Slurm to the PBS Pro workload manager on April 7, 2021. This has implications for how to spin up a Dask cluster, including via the &lt;a class="reference external" href="https://jupyterhub.ucar.edu"&gt;NCAR Jupyterhub&lt;/a&gt;.&lt;/p&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/casper_pbs_dask/" rel="alternate"/>
+    <summary>Non-consecutive header level increase; 0 to 2 [myst.header]Casper will complete a transition from Slurm to the PBS Pro workload manager on April 7, 2021. This has implications for how to spin up a Dask cluster, including via the NCAR Jupyterhub.</summary>
+    <category term="jupyterhub" label="jupyterhub"/>
+    <category term="dask" label="dask"/>
+    <published>2021-04-06T00:00:00+00:00</published>
   </entry>
 </feed>
