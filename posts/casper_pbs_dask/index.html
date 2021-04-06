@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
 
-    <title>The Importance of Software Citation &#8212; NCAR-ESDS 0.1 documentation</title>
+    <title>Using Dask on the New Casper PBS Scheduler &#8212; NCAR-ESDS 0.1 documentation</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.f6b7ca918bee2f46fd9abac01cfb07d5.css" rel="stylesheet" />
@@ -197,18 +197,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 <nav id="bd-toc-nav">
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#how-else-should-i-make-sure-people-cite-my-software">
-   How else should I make sure people cite my software?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#why-would-i-want-a-doi">
-   Why would I want a DOI?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#how-do-i-mint-a-doi-for-my-repository-if-i-am-outside-the-ncar-organization">
-   How do I mint a DOI for my repository if I am outside the NCAR organization?
+  <a class="reference internal nav-link" href="#example-using-new-casper-batch-login">
+   Example using new Casper-batch login
   </a>
  </li>
 </ul>
@@ -227,56 +217,63 @@ commentsRunWhenDOMLoaded(addUtterances);
           <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
               
               <div>
-                 <section id="the-importance-of-software-citation">
-<h1>The Importance of Software Citation<a class="headerlink" href="#the-importance-of-software-citation" title="Permalink to this headline">¶</a></h1>
-<p>One of the questions that came up during the <a class="reference external" href="https://ncar.github.io/esds/posts/esds-blog/">ESDS Town Hall</a> was how do scientists/developers get credit toward their efforts in developing open-source code? Software that is used by the wider community should received the acknowledgment and recognition it deserves.</p>
-<p>Data and academic publication citations have become popular in the literature, but often times, software is not cited… which can be arguably just as important to the work as the data.</p>
-<p>The <a class="reference external" href="https://library.ucar.edu/">NCAR Library team</a> put together a website, detailing software citation best practices, based on evaluating the &gt;500 <a class="reference external" href="https://github.com/NCAR">NCAR Github Repositories</a></p>
-<p>Here, we provide an overview of these recommendations, but if you are interested in more of the details, be sure to check out <a class="reference external" href="https://ncar.github.io/software-citation/">the NCAR software citation documentation</a>.</p>
-<section id="how-else-should-i-make-sure-people-cite-my-software">
-<h2>How else should I make sure people cite my software?<a class="headerlink" href="#how-else-should-i-make-sure-people-cite-my-software" title="Permalink to this headline">¶</a></h2>
-<p>Within your <code class="docutils literal notranslate"><span class="pre">README.md</span></code> document, be sure to add how you would like others to cite your work. For example, if your repository is for a specific paper, then provide the citation to that paper. If you would like people to cite the software itself, then be sure to specify that.</p>
-<p>A great example of software citation instructions can be found on <a class="reference external" href="https://www.unidata.ucar.edu/community/index.html#acknowledge">Unidata’s website</a></p>
-<p>You can even add a DOI badge to your repository once you have one minted. An example is given below.</p>
-<p><a class="reference external" href="https://doi.org/YOUR_NCAR_DOI">![DOI](https://img.shields.io/badge/DOI-YOUR NCAR DOI)</a></p>
-</section>
-<section id="why-would-i-want-a-doi">
-<h2>Why would I want a DOI?<a class="headerlink" href="#why-would-i-want-a-doi" title="Permalink to this headline">¶</a></h2>
-<p>DOI stands for “Digital Object Identifier” and serves as a permanent identifier of an article/document/or piece of software. Typically, it can be difficult to assign a DOI to software, especially since it can constantly be changing/evolving. Fortunately, through the NCAR Library, you can assign a DOI to your Github repository (although this is only available to NCAR produced and hosted software). The only requirements are the following</p>
-<ul class="simple">
-<li><p>Github repository link</p></li>
-<li><p>Minimum metadata</p>
-<ul>
-<li><p>Creators, such as name/lab</p></li>
-<li><p>Title of software</p></li>
-<li><p>Publisher (ex. NCAR Github organization)</p></li>
-<li><p>Publication year of software</p></li>
-</ul>
-</li>
-</ul>
-</section>
-<section id="how-do-i-mint-a-doi-for-my-repository-if-i-am-outside-the-ncar-organization">
-<h2>How do I mint a DOI for my repository if I am outside the NCAR organization?<a class="headerlink" href="#how-do-i-mint-a-doi-for-my-repository-if-i-am-outside-the-ncar-organization" title="Permalink to this headline">¶</a></h2>
-<p>Zenodo is a great option, and integrated within Github <a class="reference external" href="https://guides.github.com/activities/citable-code/">Zenodo Plugin</a>. This option can be good for people within the NCAR organization as well, especially if you would like to assign discrete DOIs to each of your releases.</p>
+                 <section id="using-dask-on-the-new-casper-pbs-scheduler">
+<h1>Using Dask on the New Casper PBS Scheduler<a class="headerlink" href="#using-dask-on-the-new-casper-pbs-scheduler" title="Permalink to this headline">¶</a></h1>
+<p>Starting April 7 2021, the <a class="reference external" href="https://jupyterhub.ucar.edu">NCAR Jupyterhub</a> will be updated and require users to utilize PBS instead of SLURM. This impacts the way Dask is spun up within notebooks… below is an example a configuration suitable for the new configuration.</p>
+<section id="example-using-new-casper-batch-login">
+<h2>Example using new Casper-batch login<a class="headerlink" href="#example-using-new-casper-batch-login" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import dask</span>
+<span class="kn">import</span> <span class="nn">dask</span>
+
+<span class="c1"># Use dask jobqueue</span>
+<span class="kn">from</span> <span class="nn">dask_jobqueue</span> <span class="kn">import</span> <span class="n">PBSCluster</span>
+
+<span class="c1"># Import a client</span>
+<span class="kn">from</span> <span class="nn">dask.distributed</span> <span class="kn">import</span> <span class="n">Client</span>
+
+<span class="c1"># Setup your PBSCluster</span>
+<span class="n">cluster</span> <span class="o">=</span> <span class="n">PBSCluster</span><span class="p">(</span>
+    <span class="n">cores</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="c1"># The number of cores you want</span>
+    <span class="n">memory</span><span class="o">=</span><span class="s1">&#39;10GB&#39;</span><span class="p">,</span> <span class="c1"># Amount of memory</span>
+    <span class="n">processes</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="c1"># How many processes</span>
+    <span class="n">queue</span><span class="o">=</span><span class="s1">&#39;casper&#39;</span><span class="p">,</span> <span class="c1"># The type of queue to utilize (/glade/u/apps/dav/opt/usr/bin/execcasper)</span>
+    <span class="n">local_directory</span><span class="o">=</span><span class="s1">&#39;$TMPDIR&#39;</span><span class="p">,</span> <span class="c1"># Use your local directory</span>
+    <span class="n">resource_spec</span><span class="o">=</span><span class="s1">&#39;select=1:ncpus=1:mem=10GB&#39;</span><span class="p">,</span> <span class="c1"># Specify resources</span>
+    <span class="n">project</span><span class="o">=</span><span class="s1">&#39;project_id&#39;</span><span class="p">,</span> <span class="c1"># Input your project ID here</span>
+    <span class="n">walltime</span><span class="o">=</span><span class="s1">&#39;02:00:00&#39;</span><span class="p">,</span> <span class="c1"># Amount of wall time</span>
+    <span class="n">interface</span><span class="o">=</span><span class="s1">&#39;ib0&#39;</span><span class="p">,</span> <span class="c1"># Interface to use</span>
+<span class="p">)</span>
+
+<span class="c1"># Scale up</span>
+<span class="n">cluster</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="c1"># Setup your client</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">cluster</span><span class="p">)</span>
+
+<span class="c1"># Change your url to the dask dashboard so you can see it</span>
+<span class="n">dask</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">set</span><span class="p">({</span><span class="s1">&#39;distributed.dashboard.link&#39;</span><span class="p">:</span><span class="s1">&#39;https://jupyterhub.hpc.ucar.edu/stable/user/</span><span class="si">{USER}</span><span class="s1">/proxy/</span><span class="si">{port}</span><span class="s1">/status&#39;</span><span class="p">})</span>
+</pre></div>
+</div>
+<p>Now, if you run just <code class="docutils literal notranslate"><span class="pre">client</span></code>, it should return information about your client and cluster, including the dashboard.</p>
+<p>There are a few parts of the <code class="docutils literal notranslate"><span class="pre">PBSCluster</span></code> object which are stored in <code class="docutils literal notranslate"><span class="pre">path/to/dask_jobqueue.yaml</span></code>, so you can shorten the cluster portion of the script to something like</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Setup your PBSCluster</span>
+<span class="n">cluster</span> <span class="o">=</span> <span class="n">PBSCluster</span><span class="p">(</span>
+    <span class="n">cores</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="c1"># The number of cores you want</span>
+    <span class="n">memory</span><span class="o">=</span><span class="s1">&#39;10GB&#39;</span><span class="p">,</span> <span class="c1"># Amount of memory</span>
+    <span class="n">processes</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="c1"># How many processes</span>
+    <span class="n">queue</span><span class="o">=</span><span class="s1">&#39;casper&#39;</span><span class="p">,</span> <span class="c1"># The type of queue to utilize (/glade/u/apps/dav/opt/usr/bin/execcasper)</span>
+    <span class="n">resource_spec</span><span class="o">=</span><span class="s1">&#39;select=1:ncpus=1:mem=10GB&#39;</span><span class="p">,</span> <span class="c1"># Specify resources</span>
+    <span class="n">project</span><span class="o">=</span><span class="s1">&#39;project_id&#39;</span><span class="p">,</span> <span class="c1"># Input your project ID here</span>
+    <span class="n">walltime</span><span class="o">=</span><span class="s1">&#39;02:00:00&#39;</span><span class="p">,</span> <span class="c1"># Amount of wall time</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>Now onto computing!</p>
 </section>
 </section>
 
 <div class="section">
-     
-<div class="section">
-  <span style="float: left">
-     
-    <a href="../esds-blog/">
-      <i class="fa fa-arrow-circle-left"></i> NCAR-CGD ESDS Town Hall
-    </a>
-    
-  </span>
-  <span>&nbsp;</span>
-  <span style="float: right">
-    
-  </span>
-</div>
-  
+   
 </div>
 
               </div>

@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
     <title>HiRes-CESM Interactive Dashboard Example &#8212; NCAR-ESDS 0.1 documentation</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
@@ -238,7 +239,7 @@ commentsRunWhenDOMLoaded(addUtterances);
           <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
               
               <div>
-                 <div class="section" id="hires-cesm-interactive-dashboard-example">
+                 <section id="hires-cesm-interactive-dashboard-example">
 <h1>HiRes-CESM Interactive Dashboard Example<a class="headerlink" href="#hires-cesm-interactive-dashboard-example" title="Permalink to this headline">¶</a></h1>
 <p>In this example, our goal is to create an interactive dashboard, using images already output on a remote server.</p>
 <p>We are specifically interested in looking at plots created using the <a class="reference external" href="https://github.com/marbl-ecosys/HiRes-CESM-analysis">HighRes-CESM-Analysis</a> repository.</p>
@@ -252,7 +253,7 @@ dashboard using <a class="reference external" href="https://github.com/andersy00
 </pre></div>
 </div>
 <hr class="docutils" />
-<div class="section" id="accessing-the-data-plots">
+<section id="accessing-the-data-plots">
 <h2>Accessing the Data (Plots)<a class="headerlink" href="#accessing-the-data-plots" title="Permalink to this headline">¶</a></h2>
 <p>The plots from this example are stored on the
 <a class="reference external" href="https://webext.cgd.ucar.edu/">CGD webext machine</a>, specifically from
@@ -264,7 +265,7 @@ which we use as the path.</p>
 <span class="p">)</span>
 </pre></div>
 </div>
-<div class="section" id="read-in-the-csv-file-containing-metadata">
+<section id="read-in-the-csv-file-containing-metadata">
 <h3>Read in the CSV File Containing Metadata<a class="headerlink" href="#read-in-the-csv-file-containing-metadata" title="Permalink to this headline">¶</a></h3>
 <p>We use pandas to remotely read in the data, dropping the Unnamed column, and
 merging the absolute path to the directory and the relative filepaths</p>
@@ -451,8 +452,8 @@ merging the absolute path to the directory and the relative filepaths</p>
 </table>
 <p>1969 rows × 9 columns</p>
 </div>
-</div>
-<div class="section" id="dealing-with-relative-vs-absolute-paths">
+</section>
+<section id="dealing-with-relative-vs-absolute-paths">
 <h3>Dealing with Relative vs. Absolute Paths<a class="headerlink" href="#dealing-with-relative-vs-absolute-paths" title="Permalink to this headline">¶</a></h3>
 <p>In the previous cell, we edited the filepaths… that is because the image filepaths are relative paths, but we would ideally like absolute paths. We make use of the dataframe path to assign the new absolute filepaths. An example is given below.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Original filepath: &quot;</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">filepath</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
@@ -467,9 +468,9 @@ merging the absolute path to the directory and the relative filepaths</p>
 New filepath  https://webext.cgd.ucar.edu/g.e22.G1850ECO_JRA_HR.TL319_t13.003/histogram/CaCO3_FLUX_100m.0001-01-01_0001-12-31.png
 </pre></div>
 </div>
-</div>
+</section>
 <hr class="docutils" />
-<div class="section" id="build-the-dashboard">
+<section id="build-the-dashboard">
 <h3>Build the Dashboard<a class="headerlink" href="#build-the-dashboard" title="Permalink to this headline">¶</a></h3>
 <p>First, we check which types of plots are included in the analysis.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">plot_type</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
@@ -522,8 +523,8 @@ New filepath  https://webext.cgd.ucar.edu/g.e22.G1850ECO_JRA_HR.TL319_t13.003/hi
 <span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="run-the-dashboard-inline">
+</section>
+<section id="run-the-dashboard-inline">
 <h3>Run the Dashboard Inline<a class="headerlink" href="#run-the-dashboard-inline" title="Permalink to this headline">¶</a></h3>
 <p>Now that we have built the dashboard, we run it within the notebook.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">hv_logo</span> <span class="o">=</span> <span class="s1">&#39;&lt;a href=&quot;https://holoviz.org&quot;&gt;&lt;img src=&quot;https://holoviz.org/assets/holoviz-logo-stacked.svg&quot; width=80&gt;&lt;/a&gt;&#39;</span>
@@ -547,9 +548,9 @@ New filepath  https://webext.cgd.ucar.edu/g.e22.G1850ECO_JRA_HR.TL319_t13.003/hi
 </div>
 <p>Since these plots are not rendered directly in this notebook online, here is the ouput deployed using Dokku/Heroku</p>
 <p><a class="reference external" href="https://hires-cesm-analysis.dokku.projectpythia.org/Interactive_Dashboard"><img alt="https://img.shields.io/badge/%E2%86%91_Deploy_to-Heroku-7056bf.svg" src="http://img.shields.io/badge/%E2%86%91_launch_dashboard_on-Heroku-7056bf.svg" /></a></p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 <div class="section">
      
