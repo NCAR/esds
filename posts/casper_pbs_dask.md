@@ -21,7 +21,7 @@ cluster = PBSCluster(
     processes=1, # How many processes
     queue='casper', # The type of queue to utilize (/glade/u/apps/dav/opt/usr/bin/execcasper)
     local_directory='$TMPDIR', # Use your local directory
-    resource_spec='select=1:ncpus=24:mem=100GB', # Specify resources
+    resource_spec='select=1:ncpus=1:mem=10GB', # Specify resources
     project='project_id', # Input your project ID here
     walltime='02:00:00', # Amount of wall time
     interface='ib0', # Interface to use
@@ -37,5 +37,20 @@ client = Client(cluster)
 dask.config.set({'distributed.dashboard.link':'https://jupyterhub.hpc.ucar.edu/stable/user/{USER}/proxy/{port}/status'})
 ```
 Now, if you run just `client`, it should return information about your client and cluster, including the dashboard.
+
+There are a few parts of the `PBSCluster` object which are stored in `path/to/dask_jobqueue.yaml`, so you can shorten the cluster portion of the script to something like
+
+```python
+# Setup your PBSCluster
+cluster = PBSCluster(
+    cores=1, # The number of cores you want
+    memory='10GB', # Amount of memory
+    processes=1, # How many processes
+    queue='casper', # The type of queue to utilize (/glade/u/apps/dav/opt/usr/bin/execcasper)
+    resource_spec='select=1:ncpus=1:mem=10GB', # Specify resources
+    project='project_id', # Input your project ID here
+    walltime='02:00:00', # Amount of wall time
+)
+```
 
 Now onto computing!
