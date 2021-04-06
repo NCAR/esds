@@ -1,3 +1,8 @@
+---
+author: Max Grover
+date: 2021-4-06
+tags: jupyterhub, dask
+---
 ## Using Dask on the New Casper PBS Scheduler
 
 Starting April 7 2021, the [NCAR Jupyterhub](https://jupyterhub.ucar.edu) will be updated and require users to utilize PBS instead of SLURM. This impacts the way Dask is spun up within notebooks... below is an example a configuration suitable for the new configuration.
