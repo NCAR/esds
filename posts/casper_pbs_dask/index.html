@@ -258,8 +258,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <p>Now, if you run just <code class="docutils literal notranslate"><span class="pre">client</span></code>, it should return information about your client and cluster, including the dashboard.</p>
 <p>There are a few parts of the <code class="docutils literal notranslate"><span class="pre">PBSCluster</span></code> object which are stored in <code class="docutils literal notranslate"><span class="pre">~/.config/dask/jobqueue.yaml</span></code>, so you can shorten the cluster portion of the script to something like</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Setup your PBSCluster</span>
-<span class="n">cluster</span> <span class="o">=</span> <span class="n">PBSCluster</span><span class="p">()</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Setup your PBSCluster - make sure that it uses the casper queue</span>
+<span class="n">cluster</span> <span class="o">=</span> <span class="n">PBSCluster</span><span class="p">(</span><span class="n">queue</span><span class="o">=</span><span class="s1">&#39;casper&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Now onto computing!</p>
