@@ -51,8 +51,8 @@ Now, if you run just `client`, it should return information about your client an
 There are a few parts of the `PBSCluster` object which are stored in `~/.config/dask/jobqueue.yaml`, so you can shorten the cluster portion of the script to something like
 
 ```python
-# Setup your PBSCluster
-cluster = PBSCluster()
+# Setup your PBSCluster - make sure that it uses the casper queue
+cluster = PBSCluster(queue='casper')
 ```
 
 Now onto computing!
