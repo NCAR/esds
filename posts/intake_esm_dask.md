@@ -158,7 +158,7 @@ Concatenate the datasets in time, i.e. 20C + RCP8.5 experiments.
 ordered_dsets_keys = ['ocn,20C,pop.h', 'ocn,RCP85,pop.h']
 #ordered_dsets_keys = ['ocn.20C.pop.h', 'ocn.RCP85.pop.h']
 ds = xr.concat(
-    [dsets2[exp] for exp in ordered_dsets_keys],
+    [dsets_100[exp] for exp in ordered_dsets_keys],
     dim='time',
     data_vars='minimal',
     #compat='override' ## added this
