@@ -146,7 +146,7 @@ Now apply this function to the dataset(s)
 
 ```python
 # compute top 100m temperature
-dsets2 = {key: compute_TEMP_100m(ds) for key, ds in dsets2.items()}
+dsets_100 = {key: compute_TEMP_100m(ds) for key, ds in dsets.items()}
 print('computed top 100m temp')
 ```
 
