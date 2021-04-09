@@ -161,7 +161,6 @@ ds = xr.concat(
     [dsets_100[exp] for exp in ordered_dsets_keys],
     dim='time',
     data_vars='minimal',
-    #compat='override' ## added this
 )
 time_encoding = dsets_100[ordered_dsets_keys[0]].time.encoding
 ```
