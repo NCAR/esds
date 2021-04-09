@@ -6,7 +6,7 @@ tags: dask, intake, cesm
 
 # An Example of Using Intake-ESM
 
-This past week, NCAR CISL updated the Casper Node to use PBS instead of Slurm for scheduling jobs. This led a post in which an example of spinning up dask clusters on the new configuration. This was also an opportunity to dig into dask, and try applying it to a sample task, specifically looking at Krill using CESM-LE data, using notebooks included in Matt Long's [krill-cesm-le repository](https://github.com/matt-long/krill-cesm-le), modified by Kristen Krumhardt.
+This past week, NCAR CISL updated the Casper Node to use PBS instead of Slurm for scheduling jobs. This led a post in which an example of spinning up dask clusters on the new configuration. This was also an opportunity to dig into dask, and try applying it to a sample task, specifically looking at ecosystem variables in the CESM-LE dataset, using notebooks included in Matt Long's [krill-cesm-le repository](https://github.com/matt-long/krill-cesm-le), modified by Kristen Krumhardt.
 
 ## Setting up the imports/dask
 
@@ -40,6 +40,8 @@ warnings.filterwarnings('ignore')
 ### Spin up Dask Cluster
 
 Here, we spin up our dask cluster. At first, running this notebook resulted in a `killed worker` error. After further expection, we noticed that additional resources would be needed to read in the notebook since the data are so large (on the order of ~1-2 TB). Increasing the individual worker to a higher amount (ex. 256 GB) solved the issue. Scale up to as many workers as you think are neccessary for the calculation (this may take some trial and error).
+
+You should base your chunks on your analysis - so in this case, we are interested in the top 100 m in the ocean, so chunking by `z_t`, the vertical coordinate, will help reduce the memory.
 
 Good general advice for working with dask is to check the dask graph (accessed via the url when you call the client). When there are "orange" regions within your task graph, this means your workers are getting close to maxing out on memory.
 
@@ -88,8 +90,7 @@ variables = ['TEMP', 'diatC']
 experiments = ['20C', 'RCP85']
 stream = 'pop.h'
 
-col = intake.open_esm_datastore(catalog_file, sep=',')
-col
+col = intake.open_esm_datastore(catalog_file)
 ```
 
 Now we search the collection for the ensemble members (unique `member_id`'s) that have a chlorophyll field (`diatChl`). This is necessary because the ocean biogeochemistry was corrupted in some members and the data were deleted.
@@ -122,7 +123,9 @@ print(col_sub)
 col_sub.df.head()
 ```
 
-Use `.to_dataset_dict` to read in the datasets as a dictionary, specifying the chunk size. This is also a point where it is recommended you take a look at the `chunksize` for the dask array, ensuring that it is a reasonable number (~100-200 mb). Test it out on one of the variables (ex. `TEMP`)
+Use `.to_dataset_dict` to read in the datasets as a dictionary, specifying the chunk size. This is also a point where it is recommended you take a look at the `chunksize` for the dask array, ensuring that it is a reasonable number (~100-200 mb). Test it out on one of the variables (ex. `TEMP`).
+
+Since we are only interested in the top 100 m, we can chunk by `z_t` which should reduce the memory usage.
 
 ```python
 dsets = col_sub.to_dataset_dict(cdf_kwargs={'chunks': {'time':5}, 'decode_times': False})
@@ -137,6 +140,7 @@ def compute_TEMP_100m(ds):
     """compute top 100m mean temperature"""
 
     ds['TEMP_100m_mean'] = ds.TEMP.isel(z_t=slice(0,10)).mean(dim='z_t')
+    ds.TEMP_100m_mean.attrs = ds.TEMP.attrs
     ds.TEMP_100m_mean.attrs['long_name'] = 'Mean temperature over top 100m'
 
     return ds.drop(['TEMP'])
@@ -146,7 +150,7 @@ Now apply this function to the dataset(s)
 
 ```python
 # compute top 100m temperature
-dsets_100 = {key: compute_TEMP_100m(ds) for key, ds in dsets.items()}
+dsets2 = {key: compute_TEMP_100m(ds) for key, ds in dsets2.items()}
 print('computed top 100m temp')
 ```
 
@@ -158,16 +162,17 @@ Concatenate the datasets in time, i.e. 20C + RCP8.5 experiments.
 ordered_dsets_keys = ['ocn,20C,pop.h', 'ocn,RCP85,pop.h']
 #ordered_dsets_keys = ['ocn.20C.pop.h', 'ocn.RCP85.pop.h']
 ds = xr.concat(
-    [dsets_100[exp] for exp in ordered_dsets_keys],
+    [dsets2[exp] for exp in ordered_dsets_keys],
     dim='time',
     data_vars='minimal',
+    #compat='override' ## added this
 )
-time_encoding = dsets_100[ordered_dsets_keys[0]].time.encoding
+time_encoding = dsets2[ordered_dsets_keys[0]].time.encoding
 ```
 
 ### Calculate an annual mean
 
-Create an annual mean for temperature, using a utilility function which deals with the times correctly.
+Create an annual mean for temperature, using a [utility function](https://github.com/matt-long/krill-cesm-le/blob/master/notebooks/util.py#L185) which deals with the times correctly.
 
 ```python
 ds_ann = util.ann_mean(ds, time_bnds_varname='time_bound', time_centered=True)
