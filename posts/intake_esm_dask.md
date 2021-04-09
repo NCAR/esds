@@ -128,7 +128,7 @@ Use `.to_dataset_dict` to read in the datasets as a dictionary, specifying the c
 Since we are only interested in the top 100 m, we can chunk by `z_t` which should reduce the memory usage.
 
 ```python
-dsets = col_sub.to_dataset_dict(cdf_kwargs={'chunks': {'time':5}, 'decode_times': False})
+dsets = col_sub.to_dataset_dict(cdf_kwargs={'chunks': {'time':5, 'z_t':-1}, 'decode_times': False})
 ```
 
 ## Apply an operation
