@@ -137,7 +137,6 @@ def compute_TEMP_100m(ds):
     """compute top 100m mean temperature"""
 
     ds['TEMP_100m_mean'] = ds.TEMP.isel(z_t=slice(0,10)).mean(dim='z_t')
-    ds.TEMP_100m_mean.attrs = ds.TEMP.attrs
     ds.TEMP_100m_mean.attrs['long_name'] = 'Mean temperature over top 100m'
 
     return ds.drop(['TEMP'])
