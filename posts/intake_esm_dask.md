@@ -163,7 +163,7 @@ ds = xr.concat(
     data_vars='minimal',
     #compat='override' ## added this
 )
-time_encoding = dsets2[ordered_dsets_keys[0]].time.encoding
+time_encoding = dsets_100[ordered_dsets_keys[0]].time.encoding
 ```
 
 ### Calculate an annual mean
