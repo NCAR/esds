@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2021-04-07T13:21:18.748366+00:00</updated>
+  <updated>2021-04-09T21:53:08.134480+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.17">ABlog</generator>
@@ -71,5 +71,22 @@
     <category term="jupyterhub" label="jupyterhub"/>
     <category term="dask" label="dask"/>
     <published>2021-04-06T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/intake_esm_dask/</id>
+    <title>An Example of Using Intake-ESM</title>
+    <updated>2021-04-09T00:00:00+00:00</updated>
+    <author>
+      <name>Max Grover</name>
+    </author>
+    <content type="html">&lt;p&gt;This past week, NCAR CISL updated the Casper Node to use PBS instead of Slurm for scheduling jobs. This led a post in which an example of spinning up dask clusters on the new configuration. This was also an opportunity to dig into dask, and try applying it to a sample task, specifically looking at ecosystem variables in the CESM-LE dataset, using notebooks included in Matt Long’s &lt;a class="reference external" href="https://github.com/matt-long/krill-cesm-le"&gt;krill-cesm-le repository&lt;/a&gt;, modified by Kristen Krumhardt.&lt;/p&gt;
+&lt;p&gt;Here, we spin up our dask cluster. At first, running this notebook resulted in a &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;killed&lt;/span&gt; &lt;span class="pre"&gt;worker&lt;/span&gt;&lt;/code&gt; error. After further expection, we noticed that additional resources would be needed to read in the notebook since the data are so large (on the order of ~1-2 TB). Increasing the individual worker to a higher amount (ex. 256 GB) solved the issue. Scale up to as many workers as you think are neccessary for the calculation (this may take some trial and error).&lt;/p&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/intake_esm_dask/" rel="alternate"/>
+    <summary>This past week, NCAR CISL updated the Casper Node to use PBS instead of Slurm for scheduling jobs. This led a post in which an example of spinning up dask clusters on the new configuration. This was also an opportunity to dig into dask, and try applying it to a sample task, specifically looking at ecosystem variables in the CESM-LE dataset, using notebooks included in Matt Long’s krill-cesm-le repository, modified by Kristen Krumhardt.Here, we spin up our dask cluster. At first, running this notebook resulted in a killed worker error. After further expection, we noticed that additional resources would be needed to read in the notebook since the data are so large (on the order of ~1-2 TB). Increasing the individual worker to a higher amount (ex. 256 GB) solved the issue. Scale up to as many workers as you think are neccessary for the calculation (this may take some trial and error).</summary>
+    <category term="dask" label="dask"/>
+    <category term="intake" label="intake"/>
+    <category term="cesm" label="cesm"/>
+    <published>2021-04-09T00:00:00+00:00</published>
   </entry>
 </feed>

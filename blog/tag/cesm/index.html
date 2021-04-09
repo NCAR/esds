@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Posts tagged cgd &#8212; NCAR-ESDS 0.1 documentation</title>
+    <title>Posts tagged cesm &#8212; NCAR-ESDS 0.1 documentation</title>
     
   <link href="../../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../../_static/css/index.ee6fb81b276d6fba8a971ad8e9b95dd9.css" rel="stylesheet" />
@@ -82,7 +82,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   rel="alternate"
   type="application/atom+xml"
   href="../../../blog/atom.xml"
-  title="Posts tagged cgd"
+  title="Posts tagged cesm"
 />
  
 <style type="text/css">
@@ -234,20 +234,20 @@ commentsRunWhenDOMLoaded(addUtterances);
                 
 <div class="section">
   <h1>
-     Posts tagged  cgd 
+     Posts tagged  cesm 
   </h1>
    
 
   <div class="section">
     <h2>
-      <a href="../../../posts/esds-blog/"
-        >NCAR-CGD ESDS Town Hall</a
+      <a href="../../../posts/intake_esm_dask/"
+        >An Example of Using Intake-ESM</a
       >
     </h2>
 
     <ul class="ablog-archive">
       <li>
-         <i class="fa fa-calendar"></i> 26 March 2021 
+         <i class="fa fa-calendar"></i> 09 April 2021 
       </li>
        
 <li id="author">
@@ -263,16 +263,16 @@ commentsRunWhenDOMLoaded(addUtterances);
     ><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="../townhall/">townhall</a>   
-  <a href="#">cgd</a>   
-  <a href="../questions/">questions</a>  
+  <a href="../dask/">dask</a>   
+  <a href="../intake/">intake</a>   
+  <a href="#">cesm</a>  
 </li>
  
     </ul>
-    <p>Last week, there was a town hall focused on gathering input on the Earth System Data Science initiative at NCAR. The meeting began with an introduction about the initiative, the vision, goals, and how the team is planning to start working toward these goals.</p>
-<p>The Question/Answer portion of the town hall was very informative and brought up some great topics for discussion. They have been collected from both the chat and Google Doc, sorted by category.</p>
+    <p>This past week, NCAR CISL updated the Casper Node to use PBS instead of Slurm for scheduling jobs. This led a post in which an example of spinning up dask clusters on the new configuration. This was also an opportunity to dig into dask, and try applying it to a sample task, specifically looking at ecosystem variables in the CESM-LE dataset, using notebooks included in Matt Long’s <a class="reference external" href="https://github.com/matt-long/krill-cesm-le">krill-cesm-le repository</a>, modified by Kristen Krumhardt.</p>
+<p>Here, we spin up our dask cluster. At first, running this notebook resulted in a <code class="docutils literal notranslate"><span class="pre">killed</span> <span class="pre">worker</span></code> error. After further expection, we noticed that additional resources would be needed to read in the notebook since the data are so large (on the order of ~1-2 TB). Increasing the individual worker to a higher amount (ex. 256 GB) solved the issue. Scale up to as many workers as you think are neccessary for the calculation (this may take some trial and error).</p>
 
-    <p><a href="../../../posts/esds-blog/">Read more ...</a></p>
+    <p><a href="../../../posts/intake_esm_dask/">Read more ...</a></p>
     <hr />
   </div>
    
