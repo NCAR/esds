@@ -125,10 +125,10 @@ col_sub.df.head()
 
 Use `.to_dataset_dict` to read in the datasets as a dictionary, specifying the chunk size. This is also a point where it is recommended you take a look at the `chunksize` for the dask array, ensuring that it is a reasonable number (~100-200 mb). Test it out on one of the variables (ex. `TEMP`).
 
-Since we are only interested in the top 100 m, we can chunk by `z_t` which should reduce the memory usage.
+Since we are only interested in the top 100 m, we can chunk by `z_t` by 10 which should reduce the memory usage.
 
 ```python
-dsets = col_sub.to_dataset_dict(cdf_kwargs={'chunks': {'time':5, 'z_t':-1}, 'decode_times': False})
+dsets = col_sub.to_dataset_dict(cdf_kwargs={'chunks': {'time':5, 'z_t':10}, 'decode_times': False})
 ```
 
 ## Apply an operation
