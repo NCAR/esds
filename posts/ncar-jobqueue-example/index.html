@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Using Dask on the New Casper PBS Scheduler &#8212; NCAR-ESDS 0.1 documentation</title>
+    <title>NCAR-Jobqueue &#8212; NCAR-ESDS 0.1 documentation</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.ee6fb81b276d6fba8a971ad8e9b95dd9.css" rel="stylesheet" />
@@ -217,8 +217,18 @@ commentsRunWhenDOMLoaded(addUtterances);
 <nav id="bd-toc-nav">
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#example-using-new-casper-batch-login">
-   Example using new Casper-batch login
+  <a class="reference internal nav-link" href="#how-can-i-use-the-new-updates-to-ncar-jobqueue">
+   How can I use the new updates to NCAR-jobqueue?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-is-ncar-jobqueue-different-than-dask-jobqueue">
+   How is NCAR-Jobqueue different than Dask-Jobqueue
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-would-i-use-this-on-within-my-workflow-on-casper">
+   How would I use this on within my workflow on Casper?
   </a>
  </li>
 </ul>
@@ -241,23 +251,28 @@ commentsRunWhenDOMLoaded(addUtterances);
           <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
               
               <div>
-                 <div class="section" id="using-dask-on-the-new-casper-pbs-scheduler">
-<h1>Using Dask on the New Casper PBS Scheduler<a class="headerlink" href="#using-dask-on-the-new-casper-pbs-scheduler" title="Permalink to this headline">¶</a></h1>
-<p>Casper will complete a transition from Slurm to the PBS Pro workload manager on April 7, 2021. This has implications for how to spin up a Dask cluster, including via the <a class="reference external" href="https://jupyterhub.ucar.edu">NCAR Jupyterhub</a>.</p>
-<p>Below is an example script suitable for the new configuration using the <code class="docutils literal notranslate"><span class="pre">PBSCluster</span></code> function from <code class="docutils literal notranslate"><span class="pre">dask_jobqueue</span></code>. Note that the <code class="docutils literal notranslate"><span class="pre">ncar_jobqueue</span></code> package <a class="reference external" href="https://github.com/NCAR/ncar-jobqueue/issues/40">requires updating</a> to work with the new configuration.</p>
-<div class="section" id="example-using-new-casper-batch-login">
-<h2>Example using new Casper-batch login<a class="headerlink" href="#example-using-new-casper-batch-login" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import dask</span>
-<span class="kn">import</span> <span class="nn">dask</span>
-
-<span class="c1"># Use dask jobqueue</span>
-<span class="kn">from</span> <span class="nn">dask_jobqueue</span> <span class="kn">import</span> <span class="n">PBSCluster</span>
-
-<span class="c1"># Import a client</span>
-<span class="kn">from</span> <span class="nn">dask.distributed</span> <span class="kn">import</span> <span class="n">Client</span>
-
-<span class="c1"># Setup your PBSCluster</span>
-<span class="n">cluster</span> <span class="o">=</span> <span class="n">PBSCluster</span><span class="p">(</span>
+                 <div class="section" id="ncar-jobqueue">
+<h1>NCAR-Jobqueue<a class="headerlink" href="#ncar-jobqueue" title="Permalink to this headline">¶</a></h1>
+<p>Last week, we added posts detailing how to configure <a class="reference external" href="https://docs.dask.org/en/latest/">Dask</a> using the new PBS scheduler on <a class="reference external" href="https://www2.cisl.ucar.edu/resources/computational-systems/casper">Casper</a>. In this week’s example, we provide an example of the recent updates to <a class="reference external" href="https://github.com/NCAR/ncar-jobqueue">ncar-jobqueue</a>, added by <a class="reference external" href="https://github.com/andersy005">Anderson Banihirwe</a>, which allow users to easily configure dask on Casper without having to add many extra steps.</p>
+<div class="section" id="how-can-i-use-the-new-updates-to-ncar-jobqueue">
+<h2>How can I use the new updates to NCAR-jobqueue?<a class="headerlink" href="#how-can-i-use-the-new-updates-to-ncar-jobqueue" title="Permalink to this headline">¶</a></h2>
+<p>You must update the package to use the newest updates. You can update using conda!</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">update</span> <span class="n">ncar</span><span class="o">-</span><span class="n">jobqueue</span>
+</pre></div>
+</div>
+<p>If you haven’t installed this package yet, replace the previous line with</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">ncar</span><span class="o">-</span><span class="n">jobqueue</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="how-is-ncar-jobqueue-different-than-dask-jobqueue">
+<h2>How is NCAR-Jobqueue different than Dask-Jobqueue<a class="headerlink" href="#how-is-ncar-jobqueue-different-than-dask-jobqueue" title="Permalink to this headline">¶</a></h2>
+<p>NCAR-jobqueue was created to easily interface Dask-Jobqueue, with the focus on using NCAR machines such as Casper or Cheyenne. NCAR-jobqueue sets up your PBS Cluster, using the same arguements as you would enter in the more general Dask-Jobqueue.</p>
+</div>
+<div class="section" id="how-would-i-use-this-on-within-my-workflow-on-casper">
+<h2>How would I use this on within my workflow on Casper?<a class="headerlink" href="#how-would-i-use-this-on-within-my-workflow-on-casper" title="Permalink to this headline">¶</a></h2>
+<p>The overall workflow is the same - you inport dask related packages, configure your cluster, the scale your job depending on the number of jobs you would like. In last week’s example, we used the following example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cluster</span> <span class="o">=</span> <span class="n">PBSCluster</span><span class="p">(</span>
     <span class="n">cores</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="c1"># The number of cores you want</span>
     <span class="n">memory</span><span class="o">=</span><span class="s1">&#39;10GB&#39;</span><span class="p">,</span> <span class="c1"># Amount of memory</span>
     <span class="n">processes</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="c1"># How many processes</span>
@@ -268,25 +283,26 @@ commentsRunWhenDOMLoaded(addUtterances);
     <span class="n">walltime</span><span class="o">=</span><span class="s1">&#39;02:00:00&#39;</span><span class="p">,</span> <span class="c1"># Amount of wall time</span>
     <span class="n">interface</span><span class="o">=</span><span class="s1">&#39;ib0&#39;</span><span class="p">,</span> <span class="c1"># Interface to use</span>
 <span class="p">)</span>
-
-<span class="c1"># Scale up</span>
-<span class="n">cluster</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-
-<span class="c1"># Change your url to the dask dashboard so you can see it</span>
+</pre></div>
+</div>
+<p>Where once you update <code class="docutils literal notranslate"><span class="pre">~/.config/dask/jobqueue.yaml</span></code> file with your desired parameters, you can use</p>
+<p><code class="docutils literal notranslate"><span class="pre">cluster</span> <span class="pre">=</span> <span class="pre">PBSCluster(queue='casper')</span></code></p>
+<p>Although, you would still need to port the Dask dashboard using this line</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Change your url to the dask dashboard so you can see it</span>
 <span class="n">dask</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">set</span><span class="p">({</span><span class="s1">&#39;distributed.dashboard.link&#39;</span><span class="p">:</span><span class="s1">&#39;https://jupyterhub.hpc.ucar.edu/stable/user/</span><span class="si">{USER}</span><span class="s1">/proxy/</span><span class="si">{port}</span><span class="s1">/status&#39;</span><span class="p">})</span>
-
-<span class="c1"># Setup your client</span>
+</pre></div>
+</div>
+<p>Instead, using ncar-jobqueue, we use the following:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ncar_jobqueue</span> <span class="kn">import</span> <span class="n">NCARCluster</span>
+<span class="kn">from</span> <span class="nn">dask.distributed</span> <span class="kn">import</span> <span class="n">Client</span>
+<span class="n">cluster</span> <span class="o">=</span> <span class="n">NCARCluster</span><span class="p">(</span><span class="n">project</span><span class="o">=</span><span class="s1">&#39;XXXXXXXX&#39;</span><span class="p">)</span>
+<span class="n">cluster</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="n">jobs</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">cluster</span><span class="p">)</span>
-
 </pre></div>
 </div>
-<p>Now, if you run just <code class="docutils literal notranslate"><span class="pre">client</span></code>, it should return information about your client and cluster, including the dashboard.</p>
-<p>There are a few parts of the <code class="docutils literal notranslate"><span class="pre">PBSCluster</span></code> object which are stored in <code class="docutils literal notranslate"><span class="pre">~/.config/dask/jobqueue.yaml</span></code>, so you can shorten the cluster portion of the script to something like</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Setup your PBSCluster - make sure that it uses the casper queue</span>
-<span class="n">cluster</span> <span class="o">=</span> <span class="n">PBSCluster</span><span class="p">(</span><span class="n">queue</span><span class="o">=</span><span class="s1">&#39;casper&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>Now onto computing!</p>
+<p>This sets up the scheduler, spins up the cluster, and edits Dask dashboard url so you can easily click it to view it. You are still able to configure arguements within <code class="docutils literal notranslate"><span class="pre">NCARCluster</span></code> as you would in <code class="docutils literal notranslate"><span class="pre">PBSCluster</span></code>, but ncar-jobqueue handles many of the system-specific defaults for you.</p>
+<p>While this example covers how to use it on Casper, this same ncar-jobqueue example could be used on Cheyenne, without having to change anything!</p>
+<p>Shoutout to Anderson for updating this package and making using Dask on Casper/Cheyenne much easier!</p>
 </div>
 </div>
 
@@ -295,20 +311,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="section">
   <span style="float: left">
      
-    <a href="../software-citation/">
-      <i class="fa fa-arrow-circle-left"></i> The Importance of Software Citation
+    <a href="../intake_esm_dask/">
+      <i class="fa fa-arrow-circle-left"></i> An Example of Using Intake-ESM
     </a>
     
   </span>
   <span>&nbsp;</span>
   <span style="float: right">
-     
-    <a href="../intake_esm_dask/">
-      An Example of Using Intake-ESM <i
-        class="fa fa-arrow-circle-right"
-      ></i
-      >
-    </a>
     
   </span>
 </div>

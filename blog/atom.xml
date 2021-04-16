@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2021-04-10T19:49:02.206717+00:00</updated>
+  <updated>2021-04-16T14:47:14.685616+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.17">ABlog</generator>
@@ -88,5 +88,22 @@
     <category term="intake" label="intake"/>
     <category term="cesm" label="cesm"/>
     <published>2021-04-09T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/ncar-jobqueue-example/</id>
+    <title>NCAR-Jobqueue</title>
+    <updated>2021-04-15T00:00:00+00:00</updated>
+    <author>
+      <name>Max Grover</name>
+    </author>
+    <content type="html">&lt;p&gt;Last week, we added posts detailing how to configure &lt;a class="reference external" href="https://docs.dask.org/en/latest/"&gt;Dask&lt;/a&gt; using the new PBS scheduler on &lt;a class="reference external" href="https://www2.cisl.ucar.edu/resources/computational-systems/casper"&gt;Casper&lt;/a&gt;. In this week’s example, we provide an example of the recent updates to &lt;a class="reference external" href="https://github.com/NCAR/ncar-jobqueue"&gt;ncar-jobqueue&lt;/a&gt;, added by &lt;a class="reference external" href="https://github.com/andersy005"&gt;Anderson Banihirwe&lt;/a&gt;, which allow users to easily configure dask on Casper without having to add many extra steps.&lt;/p&gt;
+&lt;p&gt;You must update the package to use the newest updates. You can update using conda!&lt;/p&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/ncar-jobqueue-example/" rel="alternate"/>
+    <summary>Last week, we added posts detailing how to configure Dask using the new PBS scheduler on Casper. In this week’s example, we provide an example of the recent updates to ncar-jobqueue, added by Anderson Banihirwe, which allow users to easily configure dask on Casper without having to add many extra steps.You must update the package to use the newest updates. You can update using conda!</summary>
+    <category term="jupyterhub" label="jupyterhub"/>
+    <category term="dask" label="dask"/>
+    <category term="ncar" label="ncar"/>
+    <published>2021-04-15T00:00:00+00:00</published>
   </entry>
 </feed>
