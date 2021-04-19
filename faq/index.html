@@ -297,6 +297,18 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
   </ul>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#github">
+   Github
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#setting-up-github-authentication">
+     Setting up Github Authentication
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
 </nav>
@@ -457,6 +469,17 @@ in a serial context.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">qstat</span> <span class="pre">-u</span> <span class="pre">&lt;my_username&gt;</span></code> on Cheyenne, and the same command will work on Casper after April 2021.</p></li>
 </ul>
 <p>If you see no pending worker jobs, then verify that you have called <code class="docutils literal notranslate"><span class="pre">cluster.scale()</span></code>.</p>
+</div>
+</div>
+<div class="section" id="github">
+<h2>Github<a class="headerlink" href="#github" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="setting-up-github-authentication">
+<h3>Setting up Github Authentication<a class="headerlink" href="#setting-up-github-authentication" title="Permalink to this headline">¶</a></h3>
+<p>Beginning August 13, 2021, Github will no longer accept account passwords when authenticating git operations. There are essentially two options, which Github provides proper documentation for getting setup:</p>
+<ol class="simple">
+<li><p><a class="reference external" href="https://docs.github.com/en/github/authenticating-to-github/securing-your-account-with-two-factor-authentication-2fa">Setup two-factor authentication</a></p></li>
+<li><p><a class="reference external" href="https://docs.github.com/en/github-ae&#64;latest/github/authenticating-to-github/connecting-to-github-with-ssh">Connect to Github via SSH</a></p></li>
+</ol>
 </div>
 </div>
 </div>

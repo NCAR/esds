@@ -139,3 +139,12 @@ Dask worker requests are added to the job queues on Casper and Cheyenne with the
 - `qstat -u <my_username>` on Cheyenne, and the same command will work on Casper after April 2021.
 
 If you see no pending worker jobs, then verify that you have called `cluster.scale()`.
+
+## Github
+
+### Setting up Github Authentication
+
+Beginning August 13, 2021, Github will no longer accept account passwords when authenticating git operations. There are essentially two options, which Github provides proper documentation for getting setup:
+
+1. [Setup two-factor authentication](https://docs.github.com/en/github/authenticating-to-github/securing-your-account-with-two-factor-authentication-2fa)
+1. [Connect to Github via SSH](https://docs.github.com/en/github-ae@latest/github/authenticating-to-github/connecting-to-github-with-ssh)
