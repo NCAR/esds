@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2021-04-19T19:52:40.307592+00:00</updated>
+  <updated>2021-04-23T19:54:32.501827+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.17">ABlog</generator>
@@ -105,5 +105,22 @@
     <category term="dask" label="dask"/>
     <category term="ncar" label="ncar"/>
     <published>2021-04-15T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/multiple_index_xarray_xoak/</id>
+    <title>Indexing unstructured grids with the Power of Xoak</title>
+    <updated>2021-04-23T00:00:00+00:00</updated>
+    <author>
+      <name>Max Grover</name>
+    </author>
+    <content type="html">&lt;p&gt;This week, there a post within the Zulip regarding how to deal with indexing &lt;a class="reference external" href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2017MS001257"&gt;CAM-SE&lt;/a&gt; data. The tricky part here is that is an unstructured grid, where there is only one column to the data, &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;ncol&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Here is an example of the dataset we are working with. Notice that both lat and lon have the same dimension, &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;ncol&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/multiple_index_xarray_xoak/" rel="alternate"/>
+    <summary>This week, there a post within the Zulip regarding how to deal with indexing CAM-SE data. The tricky part here is that is an unstructured grid, where there is only one column to the data, ncol.Here is an example of the dataset we are working with. Notice that both lat and lon have the same dimension, ncol.</summary>
+    <category term="xarray" label="xarray"/>
+    <category term="xoak" label="xoak"/>
+    <category term="index" label="index"/>
+    <published>2021-04-23T00:00:00+00:00</published>
   </entry>
 </feed>

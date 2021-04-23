@@ -249,6 +249,10 @@ including a variety of blog posts and resources for the community</p>
 <div class="section" id="recent-posts">
 <h2>Recent posts<a class="headerlink" href="#recent-posts" title="Permalink to this headline">¶</a></h2>
 <ul class="postlist-style-none postlist">
+<li><p>2021-04-23 - <a class="reference internal" href="posts/multiple_index_xarray_xoak/">Indexing unstructured grids with the Power of Xoak</a></p>
+<p>This week, there a post within the Zulip regarding how to deal with indexing <a class="reference external" href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2017MS001257">CAM-SE</a> data. The tricky part here is that is an unstructured grid, where there is only one column to the data, <code class="docutils literal notranslate"><span class="pre">ncol</span></code>.</p>
+<p>Here is an example of the dataset we are working with. Notice that both lat and lon have the same dimension, <code class="docutils literal notranslate"><span class="pre">ncol</span></code>.</p>
+</li>
 <li><p>2021-04-15 - <a class="reference internal" href="posts/ncar-jobqueue-example/">NCAR-Jobqueue</a></p>
 <p>Last week, we added posts detailing how to configure <a class="reference external" href="https://docs.dask.org/en/latest/">Dask</a> using the new PBS scheduler on <a class="reference external" href="https://www2.cisl.ucar.edu/resources/computational-systems/casper">Casper</a>. In this week’s example, we provide an example of the recent updates to <a class="reference external" href="https://github.com/NCAR/ncar-jobqueue">ncar-jobqueue</a>, added by <a class="reference external" href="https://github.com/andersy005">Anderson Banihirwe</a>, which allow users to easily configure dask on Casper without having to add many extra steps.</p>
 <p>You must update the package to use the newest updates. You can update using conda!</p>
