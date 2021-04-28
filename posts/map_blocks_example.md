@@ -1,6 +1,6 @@
 ---
-author: Matt Long
-date: 2021-4-22
+author: Matt Long, Max Grover
+date: 2021-4-28
 tags: xarray, dask, pop
 ---
 
@@ -75,11 +75,11 @@ def mld_dsigma(SALT, TEMP, dsigma=0.03, rho_chunks={'nlat': 16, 'nlon': 16}):
     assert dims_in == TEMP.dims, 'dimension mismatch'
     assert 'z_t' in SALT.coords, 'z_t not found in SALT coords'
 
-    # drop ancillary coordinates (this may not be necessary)
+    # drop ancillary coordinates
     SALT = SALT.reset_coords(drop=True)
     TEMP = TEMP.reset_coords(drop=True)
 
-    # compute density
+    # compute density - this is where there is a tradeoff in using a "core dimension" for chunking
     rho = pop_tools.eos(SALT.chunk({'z_t': 10}),
                         TEMP.chunk({'z_t': 10}),
                         depth=SALT.z_t * 0.).compute()
@@ -93,6 +93,7 @@ def mld_dsigma(SALT, TEMP, dsigma=0.03, rho_chunks={'nlat': 16, 'nlon': 16}):
             'nlon': xr.DataArray(np.arange(len(SALT.nlon)), dims=('nlon')),
         })
 
+    # Compute density - this will help the workflow from being "bogged down" with too many tasks
     rho = rho.chunk(rho_chunks).persist()
 
     # Setup a template
@@ -113,7 +114,7 @@ def mld_dsigma(SALT, TEMP, dsigma=0.03, rho_chunks={'nlat': 16, 'nlon': 16}):
 
 This function, `interp_mld_dsigma` is designed to be called within `xr.map_blocks`. It assumes that `rho_in` has a depth dimension, `z_t` and some number of unspecified other dimensions, `non_vertical_dims`.
 
-The non_vertical_dims are "stacked" using `xarray.stack` and the code loops over these dimensions, performing linear interpolation in `z_t` at each location.
+The `non_vertical_dims` are "stacked" using `xarray.stack` and the code loops over these dimensions, performing linear interpolation in `z_t` at each location.
 
 The data are returned unstacked with the dimensions ordered as they arrived in `rho_in`.
 
@@ -126,12 +127,12 @@ def interp_mld_dsigma(rho_in, dsigma=0.03):
     non_vertical_dims = [d for d in rho_in.dims if d not in ['z_t']]
     rho_stack = rho_in.stack(non_vertical_dims=non_vertical_dims)
     mld_stack = xr.full_like(rho_stack.isel(z_t=slice(0, 1)), fill_value=np.nan)
-    N = len(rho_stack.non_vertical_dims)
+    N = rho_stack.sizes["non_vertical_dims"]
     z_t = rho_in.z_t
 
     for i in range(N):
         # if all NaN, skip this column
-        if np.isnan(rho_stack[:, i]).all():
+        if rho_stack[:, i].isnull().all():
             continue
 
         # if the whole column has density less than the threshold, set MLD to deepest point
@@ -189,3 +190,5 @@ Now let's put everything together, running the `mld_dsigma` calculation on the "
 %%time
 mld = mld_dsigma(ds.SALT, ds.TEMP).compute()
 ```
+
+This process takes ~2 seconds. Currently, this implementation takes 18 minutes to compute `mld_sigma` for the entire spatial domain for a single ensemble member. Further posts will investigate using `xarray.apply_unfunc` in this context, comparing the performance and tradeoffs.
