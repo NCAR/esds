@@ -148,3 +148,73 @@ Beginning August 13, 2021, Github will no longer accept account passwords when a
 
 1. [Setup two-factor authentication](https://docs.github.com/en/github/authenticating-to-github/securing-your-account-with-two-factor-authentication-2fa)
 1. [Connect to Github via SSH](https://docs.github.com/en/github-ae@latest/github/authenticating-to-github/connecting-to-github-with-ssh)
+
+## CESM Data
+
+### Dealing with CESM monthly output - is there something wrong with time
+
+A well known issue of CESM data is that timestamps for fields saved as averages are placed at the end of the averaging period. For instance, in the following example, the `January/1920` average has a timestamp of `February/1920`:
+
+```python
+In [25]: filename = '/glade/collections/cdg/data/cesmLE/CESM-CAM5-BGC-LE/atm/proc/tseries/monthly/TS/b.e11.B20TRC5CNBDRD.f09_g16.011.cam.h0.TS.192001-200512.nc'
+
+In [33]: ds = xr.open_dataset(filename)
+
+In [34]: ds.time
+Out[34]:
+<xarray.DataArray 'time' (time: 1032)>
+array([cftime.DatetimeNoLeap(1920, 2, 1, 0, 0, 0, 0),
+       cftime.DatetimeNoLeap(1920, 3, 1, 0, 0, 0, 0),
+       cftime.DatetimeNoLeap(1920, 4, 1, 0, 0, 0, 0), ...,
+       cftime.DatetimeNoLeap(2005, 11, 1, 0, 0, 0, 0),
+       cftime.DatetimeNoLeap(2005, 12, 1, 0, 0, 0, 0),
+       cftime.DatetimeNoLeap(2006, 1, 1, 0, 0, 0, 0)], dtype=object)
+Coordinates:
+  * time     (time) object 1920-02-01 00:00:00 ... 2006-01-01 00:00:00
+Attributes:
+    long_name:  time
+    bounds:     time_bnds
+```
+
+A temporary workaround is to fix the issue ourselves by computing new time axis by averaging the time bounds:
+
+```python
+In [29]: import xarray as xr
+
+In [30]: import cf_xarray # use cf-xarray so that we can use CF attributes
+
+In [31]: filename = '/glade/collections/cdg/data/cesmLE/CESM-CAM5-BGC-LE/atm/proc/tseries/monthly/TS/b.e11.B20TRC5CNBDRD.f09_g16.011.cam.h0.TS.192001-200512.nc'
+
+In [32]: ds = xr.open_dataset(filename)
+
+In [34]: attrs, encoding = ds.time.attrs.copy(), ds.time.encoding.copy()
+
+In [36]: time_bounds = ds.cf.get_bounds('time')
+
+In [37]: time_bounds_dim_name = ds.cf.get_bounds_dim_name('time')
+
+In [38]: ds = ds.assign_coords(time=time_bounds.mean(time_bounds_dim_name))
+
+In [39]: ds.time.attrs, ds.time.encoding = attrs, encoding
+
+In [40]: ds.time
+Out[40]:
+<xarray.DataArray 'time' (time: 1032)>
+array([cftime.DatetimeNoLeap(1920, 1, 16, 12, 0, 0, 0),
+       cftime.DatetimeNoLeap(1920, 2, 15, 0, 0, 0, 0),
+       cftime.DatetimeNoLeap(1920, 3, 16, 12, 0, 0, 0), ...,
+       cftime.DatetimeNoLeap(2005, 10, 16, 12, 0, 0, 0),
+       cftime.DatetimeNoLeap(2005, 11, 16, 0, 0, 0, 0),
+       cftime.DatetimeNoLeap(2005, 12, 16, 12, 0, 0, 0)], dtype=object)
+Coordinates:
+  * time     (time) object 1920-01-16 12:00:00 ... 2005-12-16 12:00:00
+Attributes:
+    long_name:  time
+    bounds:     time_bnds
+```
+
+```{Note}
+
+cf-xarray can be installed via pip or conda. cf-xarray docs are available [here](https://cf-xarray.readthedocs.io/en/latest/).
+
+```
