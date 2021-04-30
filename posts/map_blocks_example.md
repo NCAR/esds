@@ -35,7 +35,7 @@ ds = xr.merge((
 ))
 
 
-ds = ds[['TEMP', 'SALT']]
+ds = ds[['TEMP', 'SALT']].persist()
 
 # subset for testing purposes
 ds = ds.isel(member_id=slice(0, 2), nlat=slice(2, 5), nlon=slice(1, 5))
