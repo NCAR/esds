@@ -132,7 +132,7 @@ Distributed writes to netCDF are hard.
 1. If you need to write to netCDF and your final dataset can fit in memory then use `dataset.load().to_netcdf(...)`.
 1. If you really must write a big dataset to netCDF try using `save_mfdataset` (see [here](https://ncar.github.io/xdev/posts/writing-multiple-netcdf-files-in-parallel-with-xarray-and-dask/)).
 
-### Fixing CESM monthly data time axis
+### Dealing with CESM monthly output - is there something wrong with time
 
 A well known issue of CESM data is that timestamps for fields saved as averages are placed at the end of the averaging period, and xarray does not treat this correctly when decoding the time axis. For instance, in the following example, the `January/1920` average has a timestamp of `February/1920`:
 
@@ -166,7 +166,7 @@ A temporary workaround is to fix the issue ourselves by:
 ```python
 In [35]: ds = xr.open_dataset(filename, decode_times=False)
 
-In [36]:  attrs = ds.time.attrs.copy() # Make sure to keep our original attributes
+In [36]: attrs = ds.time.attrs.copy() # Make sure to keep our original attributes
 
 In [37]: ds = ds.assign_coords(time= ds.time_bnds.mean('nbnd'))
 
@@ -189,6 +189,21 @@ Attributes:
     long_name:  time
     bounds:     time_bnds
 ```
+
+````{Note}
+
+Here's a shortcut that doesn't require decoding `time` ourselves:
+
+```python
+In [16]: ds = xr.open_dataset(filename)
+
+In [17]: attrs = ds.time.attrs
+
+In [18]: ds = ds.assign_coords(time=ds.time_bnds.mean('nbnd'))
+
+In [19]: ds.time.attrs = attrs
+```
+````
 
 ### My Dask workers are taking a long time to start. How can I monitor them?
 
