@@ -250,6 +250,11 @@ including a variety of blog posts and resources for the community</p>
 <div class="section" id="recent-posts">
 <h2>Recent posts<a class="headerlink" href="#recent-posts" title="Permalink to this headline">¶</a></h2>
 <ul class="postlist-style-none postlist">
+<li><p>2021-04-28 - <a class="reference internal" href="posts/map_blocks_example/">How to Use xarray.map_blocks for Vertical Interpolation of a 3D Field</a></p>
+<p>Within this example, we cover how to use <code class="docutils literal notranslate"><span class="pre">xarray.map_blocks</span></code> to calculate the mixed-layer depth within the CESM POP model output.</p>
+<p>This calculation is “embarassingly parallel” such that each calculation is done within a single a column. The calculation <strong><em>should</em></strong> be easily computed within each column across the model domain. This is where <code class="docutils literal notranslate"><span class="pre">map_blocks</span></code> can be used to improve the performance of this metric.</p>
+<img alt="MLD example plot" src="_images/mld_example_plot.png" />
+</li>
 <li><p>2021-04-23 - <a class="reference internal" href="posts/multiple_index_xarray_xoak/">Indexing unstructured grids with the Power of Xoak</a></p>
 <p>This week, there a post within the Zulip regarding how to deal with indexing <a class="reference external" href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2017MS001257">CAM-SE</a> data. The tricky part here is that is an unstructured grid, where there is only one column to the data, <code class="docutils literal notranslate"><span class="pre">ncol</span></code>.</p>
 <p>Here is an example of the dataset we are working with. Notice that both lat and lon have the same dimension, <code class="docutils literal notranslate"><span class="pre">ncol</span></code>.</p>

@@ -1,0 +1,585 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How to Use xarray.map_blocks for Vertical Interpolation of a 3D Field &#8212; NCAR-ESDS 0.1 documentation</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "NCAR/esds");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <link rel="author" title="About these documents" href="../../about/" />
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+     
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../blog/atom.xml"
+  title="NCAR ESDS"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+<a class="navbar-brand" href="../../">
+<p class="title">NCAR-ESDS</p>
+</a>
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../about/">
+  About Us
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../faq/">
+  Frequently Asked Questions
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../blog/">
+  Blog
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../communication/">
+  Communication
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/ncar/esds" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">  
+<h2>
+   <i class="fa fa-calendar"></i>
+  28 April 2021 
+</h2>
+
+<ul>
+   
+<li id="author">
+  <span
+    ><i class="fa-fw fa fa-user"></i></span
+  >
+   
+  <a href="../../blog/author/matt-long/">Matt Long</a>,   
+  <a href="../../blog/author/max-grover/">Max Grover</a>  
+</li>
+    
+<li id="tags">
+  <span
+    ><i class="fa-fw fa fa-tags"></i> </span
+  >
+   
+  <a href="../../blog/tag/xarray/">xarray</a>   
+  <a href="../../blog/tag/dask/">dask</a>   
+  <a href="../../blog/tag/pop/">pop</a>  
+</li>
+ 
+</ul>
+
+<h3>
+  <a href="../../blog/">Recent Posts</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="../multiple_index_xarray_xoak/"
+      >23 April - Indexing unstructured grids with the Power of Xoak</a
+    >
+  </li>
+  
+  <li>
+    <a href="../ncar-jobqueue-example/"
+      >15 April - NCAR-Jobqueue</a
+    >
+  </li>
+  
+  <li>
+    <a href="../intake_esm_dask/"
+      >09 April - An Example of Using Intake-ESM</a
+    >
+  </li>
+  
+  <li>
+    <a href="../casper_pbs_dask/"
+      >06 April - Using Dask on the New Casper PBS Scheduler</a
+    >
+  </li>
+  
+  <li>
+    <a href="../software-citation/"
+      >02 April - The Importance of Software Citation</a
+    >
+  </li>
+  
+</ul>
+
+<h3>
+  <a href="../../blog/archive/">Archives</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="../../blog/2021/">2021 (8)</a>
+  </li>
+   
+</ul>
+
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#imports-and-data-ingestion">
+   Imports and Data Ingestion
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-operation">
+   Data Operation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#applying-mixed-layer-depth-calculation">
+     Applying Mixed Layer Depth Calculation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#visualize-the-output">
+   Visualize the Output
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#running-this-on-the-entire-dataset">
+   Running this on the Entire Dataset
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#potential-opportunities-for-improvements">
+   Potential opportunities for improvements
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                 <div class="section" id="how-to-use-xarray-map-blocks-for-vertical-interpolation-of-a-3d-field">
+<h1>How to Use <code class="docutils literal notranslate"><span class="pre">xarray.map_blocks</span></code> for Vertical Interpolation of a 3D Field<a class="headerlink" href="#how-to-use-xarray-map-blocks-for-vertical-interpolation-of-a-3d-field" title="Permalink to this headline">¶</a></h1>
+<p>Within this example, we cover how to use <code class="docutils literal notranslate"><span class="pre">xarray.map_blocks</span></code> to calculate the mixed-layer depth within the CESM POP model output.</p>
+<p>This calculation is “embarassingly parallel” such that each calculation is done within a single a column. The calculation <strong><em>should</em></strong> be easily computed within each column across the model domain. This is where <code class="docutils literal notranslate"><span class="pre">map_blocks</span></code> can be used to improve the performance of this metric.</p>
+<div class="section" id="imports-and-data-ingestion">
+<h2>Imports and Data Ingestion<a class="headerlink" href="#imports-and-data-ingestion" title="Permalink to this headline">¶</a></h2>
+<p>We use the following libraries/packages within this example</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">interpolate</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="kn">import</span> <span class="nn">pop_tools</span>
+</pre></div>
+</div>
+<p>Next, we read in the data using <code class="docutils literal notranslate"><span class="pre">xarray</span></code> and subset for temperature and salinity, subsetting for a smaller portion of the domain for testing purposes</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">merge</span><span class="p">((</span>
+    <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;/glade/p/cgd/oce/projects/cesm2-marbl/xpersist_cache/3d_fields/TEMP-presentday-monclim.nc&#39;</span><span class="p">,</span> <span class="n">chunks</span><span class="o">=</span><span class="p">{}),</span>
+    <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;/glade/p/cgd/oce/projects/cesm2-marbl/xpersist_cache/3d_fields/SALT-presentday-monclim.nc&#39;</span><span class="p">,</span> <span class="n">chunks</span><span class="o">=</span><span class="p">{}),</span>
+<span class="p">))</span>
+
+
+<span class="n">ds</span> <span class="o">=</span> <span class="n">ds</span><span class="p">[[</span><span class="s1">&#39;TEMP&#39;</span><span class="p">,</span> <span class="s1">&#39;SALT&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">persist</span><span class="p">()</span>
+
+<span class="c1"># subset for testing purposes</span>
+<span class="n">ds</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">member_id</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">nlat</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">nlon</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="data-operation">
+<h2>Data Operation<a class="headerlink" href="#data-operation" title="Permalink to this headline">¶</a></h2>
+<p>Next, we setup a function to compute the mixed layer depth (MLD). The MLD is defined as the point in the water column where the potential density (<code class="docutils literal notranslate"><span class="pre">sigma</span></code>) exceeds the surface density by a specified threshold (<code class="docutils literal notranslate"><span class="pre">dsigma</span></code>).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">mld_dsigma</span><span class="p">(</span><span class="n">SALT</span><span class="p">,</span> <span class="n">TEMP</span><span class="p">,</span> <span class="n">dsigma</span><span class="o">=</span><span class="mf">0.03</span><span class="p">,</span> <span class="n">rho_chunks</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;nlat&#39;</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span> <span class="s1">&#39;nlon&#39;</span><span class="p">:</span> <span class="mi">16</span><span class="p">}):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Compute MLD based on ∆σ criterion. Uses xarray.map_blocks.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+
+<span class="sd">    SALT : xarray.DataArray</span>
+<span class="sd">      Salinity</span>
+<span class="sd">    TEMP : xarray.DataArray</span>
+<span class="sd">      Potential temperature</span>
+<span class="sd">    dsigma : float, optional</span>
+<span class="sd">      The value for ∆σ.</span>
+<span class="sd">    rho_chunks: dictionary, optional</span>
+<span class="sd">      Dimension chunk parameters to chunk rho by</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+
+<span class="sd">    MLD : xarray.DataArray</span>
+<span class="sd">      The MLD (m) defined as the point in the water column where</span>
+<span class="sd">      density exceeds rho[0] + dsigma.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># determine dimensionality</span>
+    <span class="n">dims_in</span> <span class="o">=</span> <span class="n">SALT</span><span class="o">.</span><span class="n">dims</span>
+    <span class="k">assert</span> <span class="n">dims_in</span> <span class="o">==</span> <span class="n">TEMP</span><span class="o">.</span><span class="n">dims</span><span class="p">,</span> <span class="s1">&#39;dimension mismatch&#39;</span>
+    <span class="k">assert</span> <span class="s1">&#39;z_t&#39;</span> <span class="ow">in</span> <span class="n">SALT</span><span class="o">.</span><span class="n">coords</span><span class="p">,</span> <span class="s1">&#39;z_t not found in SALT coords&#39;</span>
+
+    <span class="c1"># drop ancillary coordinates</span>
+    <span class="n">SALT</span> <span class="o">=</span> <span class="n">SALT</span><span class="o">.</span><span class="n">reset_coords</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">TEMP</span> <span class="o">=</span> <span class="n">TEMP</span><span class="o">.</span><span class="n">reset_coords</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="c1"># compute density - this is where there is a tradeoff in using a &quot;core dimension&quot; for chunking</span>
+    <span class="n">rho</span> <span class="o">=</span> <span class="n">pop_tools</span><span class="o">.</span><span class="n">eos</span><span class="p">(</span><span class="n">SALT</span><span class="o">.</span><span class="n">chunk</span><span class="p">({</span><span class="s1">&#39;z_t&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">}),</span>
+                        <span class="n">TEMP</span><span class="o">.</span><span class="n">chunk</span><span class="p">({</span><span class="s1">&#39;z_t&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">}),</span>
+                        <span class="n">depth</span><span class="o">=</span><span class="n">SALT</span><span class="o">.</span><span class="n">z_t</span> <span class="o">*</span> <span class="mf">0.</span><span class="p">)</span><span class="o">.</span><span class="n">compute</span><span class="p">()</span>
+
+    <span class="c1"># add these coordinates which creep in somewhere, I think when xarray does the unstack</span>
+    <span class="c1"># without these, I get an error: not expecting {&#39;nlat&#39;, &#39;nlon&#39;}</span>
+    <span class="c1"># chunking here is arbitrary and maybe suitable for the global POP_gx1v7 grid</span>
+    <span class="k">if</span> <span class="s1">&#39;nlat&#39;</span> <span class="ow">in</span> <span class="n">rho</span><span class="o">.</span><span class="n">dims</span> <span class="ow">and</span> <span class="s1">&#39;nlon&#39;</span> <span class="ow">in</span> <span class="n">rho</span><span class="o">.</span><span class="n">dims</span><span class="p">:</span>
+        <span class="n">rho</span> <span class="o">=</span> <span class="n">rho</span><span class="o">.</span><span class="n">assign_coords</span><span class="p">({</span>
+            <span class="s1">&#39;nlat&#39;</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">SALT</span><span class="o">.</span><span class="n">nlat</span><span class="p">)),</span> <span class="n">dims</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;nlat&#39;</span><span class="p">)),</span>
+            <span class="s1">&#39;nlon&#39;</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">SALT</span><span class="o">.</span><span class="n">nlon</span><span class="p">)),</span> <span class="n">dims</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;nlon&#39;</span><span class="p">)),</span>
+        <span class="p">})</span>
+
+    <span class="c1"># Compute density - this will help the workflow from being &quot;bogged down&quot; with too many tasks</span>
+    <span class="n">rho</span> <span class="o">=</span> <span class="n">rho</span><span class="o">.</span><span class="n">chunk</span><span class="p">(</span><span class="n">rho_chunks</span><span class="p">)</span><span class="o">.</span><span class="n">persist</span><span class="p">()</span>
+
+    <span class="c1"># Setup a template</span>
+    <span class="n">template</span> <span class="o">=</span> <span class="n">rho</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">z_t</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;z_t&#39;</span><span class="p">)</span>
+    <span class="n">template</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;long_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;MLD&#39;</span>
+    <span class="n">template</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;units&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">SALT</span><span class="o">.</span><span class="n">z_t</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;units&#39;</span><span class="p">]</span>
+    <span class="n">template</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;MLD&#39;</span>
+
+    <span class="c1"># compute and return MLD - this is where the parallelization comes in</span>
+    <span class="k">return</span> <span class="n">xr</span><span class="o">.</span><span class="n">map_blocks</span><span class="p">(</span>
+        <span class="n">interp_mld_dsigma</span><span class="p">,</span> <span class="n">rho</span><span class="p">,</span>
+        <span class="n">kwargs</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">dsigma</span><span class="o">=</span><span class="n">dsigma</span><span class="p">),</span>
+        <span class="n">template</span><span class="o">=</span><span class="n">template</span><span class="p">,</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+<div class="section" id="applying-mixed-layer-depth-calculation">
+<h3>Applying Mixed Layer Depth Calculation<a class="headerlink" href="#applying-mixed-layer-depth-calculation" title="Permalink to this headline">¶</a></h3>
+<p>This function, <code class="docutils literal notranslate"><span class="pre">interp_mld_dsigma</span></code> is designed to be called within <code class="docutils literal notranslate"><span class="pre">xr.map_blocks</span></code>. It assumes that <code class="docutils literal notranslate"><span class="pre">rho_in</span></code> has a depth dimension, <code class="docutils literal notranslate"><span class="pre">z_t</span></code> and some number of unspecified other dimensions, <code class="docutils literal notranslate"><span class="pre">non_vertical_dims</span></code>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">non_vertical_dims</span></code> are “stacked” using <code class="docutils literal notranslate"><span class="pre">xarray.stack</span></code> and the code loops over these dimensions, performing linear interpolation in <code class="docutils literal notranslate"><span class="pre">z_t</span></code> at each location.</p>
+<p>The data are returned unstacked with the dimensions ordered as they arrived in <code class="docutils literal notranslate"><span class="pre">rho_in</span></code>.</p>
+<p>We define the function here, then immediately call it to test it; arbitrarily, we’re calling it on TEMP rather than density.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">interp_mld_dsigma</span><span class="p">(</span><span class="n">rho_in</span><span class="p">,</span> <span class="n">dsigma</span><span class="o">=</span><span class="mf">0.03</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;compute MLD at point using interpolation&quot;&quot;&quot;</span>
+
+    <span class="n">non_vertical_dims</span> <span class="o">=</span> <span class="p">[</span><span class="n">d</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">rho_in</span><span class="o">.</span><span class="n">dims</span> <span class="k">if</span> <span class="n">d</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;z_t&#39;</span><span class="p">]]</span>
+    <span class="n">rho_stack</span> <span class="o">=</span> <span class="n">rho_in</span><span class="o">.</span><span class="n">stack</span><span class="p">(</span><span class="n">non_vertical_dims</span><span class="o">=</span><span class="n">non_vertical_dims</span><span class="p">)</span>
+    <span class="n">mld_stack</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">full_like</span><span class="p">(</span><span class="n">rho_stack</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">z_t</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)),</span> <span class="n">fill_value</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+    <span class="n">N</span> <span class="o">=</span> <span class="n">rho_stack</span><span class="o">.</span><span class="n">sizes</span><span class="p">[</span><span class="s2">&quot;non_vertical_dims&quot;</span><span class="p">]</span>
+    <span class="n">z_t</span> <span class="o">=</span> <span class="n">rho_in</span><span class="o">.</span><span class="n">z_t</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+        <span class="c1"># if all NaN, skip this column</span>
+        <span class="k">if</span> <span class="n">rho_stack</span><span class="p">[:,</span> <span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">all</span><span class="p">():</span>
+            <span class="k">continue</span>
+
+        <span class="c1"># if the whole column has density less than the threshold, set MLD to deepest point</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">rho_stack</span><span class="p">[:,</span> <span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">rho_stack</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">dsigma</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">():</span>
+            <span class="n">k</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">rho_stack</span><span class="p">[:,</span> <span class="n">i</span><span class="p">]))[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">mld_stack</span><span class="p">[:,</span> <span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">z_t</span><span class="p">[</span><span class="n">k</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span>
+
+        <span class="c1"># linearly interpolate</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">f</span> <span class="o">=</span> <span class="n">interpolate</span><span class="o">.</span><span class="n">interp1d</span><span class="p">(</span>
+                <span class="n">rho_stack</span><span class="p">[:,</span> <span class="n">i</span><span class="p">],</span> <span class="n">z_t</span><span class="p">,</span>
+                <span class="n">assume_sorted</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="n">mld_stack</span><span class="p">[:,</span> <span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">rho_stack</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">dsigma</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">mld_stack</span><span class="o">.</span><span class="n">unstack</span><span class="p">()</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">z_t</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="o">*</span><span class="n">non_vertical_dims</span><span class="p">)</span>
+
+<span class="c1"># simulate what happens in map_blocks</span>
+<span class="n">subset_to_singletons</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">nlat</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">nlon</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">member_id</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">month</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+
+<span class="n">dsigma</span><span class="o">=</span><span class="mf">0.5</span>
+<span class="n">temp_depth</span> <span class="o">=</span> <span class="n">interp_mld_dsigma</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">TEMP</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">subset_to_singletons</span><span class="p">)</span><span class="o">.</span><span class="n">reset_coords</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span> <span class="n">dsigma</span><span class="o">=</span><span class="n">dsigma</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="visualize-the-output">
+<h2>Visualize the Output<a class="headerlink" href="#visualize-the-output" title="Permalink to this headline">¶</a></h2>
+<p>Here’s a plot of the MLD diagnosed using TEMP by the linear interpolation method above.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+<span class="n">ds</span><span class="o">.</span><span class="n">TEMP</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">subset_to_singletons</span><span class="p">)</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="s1">&#39;z_t&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;profile&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">TEMP</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">subset_to_singletons</span><span class="p">)</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">z_t</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span>
+            <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;tab:red&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;surface&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">TEMP</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">subset_to_singletons</span><span class="p">)</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">z_t</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">+</span><span class="n">dsigma</span><span class="p">,</span>
+            <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;tab:blue&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;S at mld&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">temp_depth</span><span class="o">*</span><span class="mf">1e2</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;MLD&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="p">(</span><span class="mf">1.02</span><span class="p">,</span> <span class="mi">0</span><span class="p">));</span>
+<span class="n">ylm</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="n">ylm</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]);</span>
+</pre></div>
+</div>
+<p><img alt="MLD example plot" src="../../_images/mld_example_plot.png" /></p>
+</div>
+<div class="section" id="running-this-on-the-entire-dataset">
+<h2>Running this on the Entire Dataset<a class="headerlink" href="#running-this-on-the-entire-dataset" title="Permalink to this headline">¶</a></h2>
+<p>Now let’s put everything together, running the <code class="docutils literal notranslate"><span class="pre">mld_dsigma</span></code> calculation on the “full” dataset (note that it is still subset given the smaller domain mentioned previously).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="n">time</span>
+<span class="n">mld</span> <span class="o">=</span> <span class="n">mld_dsigma</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">SALT</span><span class="p">,</span> <span class="n">ds</span><span class="o">.</span><span class="n">TEMP</span><span class="p">)</span><span class="o">.</span><span class="n">compute</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>This process takes ~2 seconds. Currently, this implementation takes 18 minutes to compute <code class="docutils literal notranslate"><span class="pre">mld_sigma</span></code> for the entire spatial domain for a single ensemble member. Further posts will investigate using <code class="docutils literal notranslate"><span class="pre">xarray.apply_unfunc</span></code> in this context, comparing the performance and tradeoffs.</p>
+</div>
+<div class="section" id="potential-opportunities-for-improvements">
+<h2>Potential opportunities for improvements<a class="headerlink" href="#potential-opportunities-for-improvements" title="Permalink to this headline">¶</a></h2>
+<p>When working through these computations, it is important to use the dask dashboard to determine where there are bottlenecks within the analysis.</p>
+<p>Also, it can be helpful to understand the nature of the computation. In this case, this computation is considered to CPU heavy, so the key is increasing the number cores being utilized, using a line like this at the beginning:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Increase # of threads, more compute heavy</span>
+<span class="n">cluster</span> <span class="o">=</span> <span class="n">ncar_jobqueue</span><span class="o">.</span><span class="n">NCARCluster</span><span class="p">(</span><span class="n">cores</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">processes</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">memory</span><span class="o">=</span><span class="s1">&#39;80 GB&#39;</span><span class="p">,</span> <span class="n">project</span><span class="o">=</span><span class="s1">&#39;project_number&#39;</span><span class="p">)</span>
+<span class="n">cluster</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="n">jobs</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">cluster</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Another method of optimization could be increasing/decreasing the chunksize within the <code class="docutils literal notranslate"><span class="pre">mld</span></code> function</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mld</span> <span class="o">=</span> <span class="n">mld_dsigma</span><span class="p">(</span><span class="n">ds_whole</span><span class="o">.</span><span class="n">SALT</span><span class="p">,</span> <span class="n">ds_whole</span><span class="o">.</span><span class="n">TEMP</span><span class="p">,</span> <span class="n">rho_chunks</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;nlat&#39;</span><span class="p">:</span> <span class="mi">16</span><span class="o">*</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;nlon&#39;</span><span class="p">:</span> <span class="mi">16</span><span class="o">*</span><span class="mi">2</span><span class="p">})</span><span class="o">.</span><span class="n">compute</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>There are no clear correct answers here - it will depend on the specific use case, and the nature of the computation, but hopefully these starting points will help!</p>
+</div>
+</div>
+
+<div class="section">
+     
+<div class="section">
+  <span style="float: left">
+     
+    <a href="../multiple_index_xarray_xoak/">
+      <i class="fa fa-arrow-circle-left"></i> Indexing unstructured grids with the Power of Xoak
+    </a>
+    
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right">
+    
+  </span>
+</div>
+  
+</div>
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021, NCAR Earth System Data Science Team.<br/>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.4.<br/>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

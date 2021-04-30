@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2021-04-30T02:18:31.062421+00:00</updated>
+  <updated>2021-04-30T16:22:58.189944+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.18">ABlog</generator>
@@ -122,5 +122,23 @@
     <category term="xoak" label="xoak"/>
     <category term="index" label="index"/>
     <published>2021-04-23T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/map_blocks_example/</id>
+    <title>How to Use xarray.map_blocks for Vertical Interpolation of a 3D Field</title>
+    <updated>2021-04-28T00:00:00+00:00</updated>
+    <author>
+      <name>Max Grover</name>
+    </author>
+    <content type="html">&lt;p&gt;Within this example, we cover how to use &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;xarray.map_blocks&lt;/span&gt;&lt;/code&gt; to calculate the mixed-layer depth within the CESM POP model output.&lt;/p&gt;
+&lt;p&gt;This calculation is “embarassingly parallel” such that each calculation is done within a single a column. The calculation &lt;strong&gt;&lt;em&gt;should&lt;/em&gt;&lt;/strong&gt; be easily computed within each column across the model domain. This is where &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;map_blocks&lt;/span&gt;&lt;/code&gt; can be used to improve the performance of this metric.&lt;/p&gt;
+&lt;img alt="MLD example plot" src="../_images/mld_example_plot.png" /&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/map_blocks_example/" rel="alternate"/>
+    <summary>Within this example, we cover how to use xarray.map_blocks to calculate the mixed-layer depth within the CESM POP model output.This calculation is “embarassingly parallel” such that each calculation is done within a single a column. The calculation should be easily computed within each column across the model domain. This is where map_blocks can be used to improve the performance of this metric.MLD example plot</summary>
+    <category term="xarray" label="xarray"/>
+    <category term="dask" label="dask"/>
+    <category term="pop" label="pop"/>
+    <published>2021-04-28T00:00:00+00:00</published>
   </entry>
 </feed>
