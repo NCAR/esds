@@ -132,6 +132,64 @@ Distributed writes to netCDF are hard.
 1. If you need to write to netCDF and your final dataset can fit in memory then use `dataset.load().to_netcdf(...)`.
 1. If you really must write a big dataset to netCDF try using `save_mfdataset` (see [here](https://ncar.github.io/xdev/posts/writing-multiple-netcdf-files-in-parallel-with-xarray-and-dask/)).
 
+### Fixing CESM monthly data time axis
+
+A well known issue of CESM data is that timestamps for fields saved as averages are placed at the end of the averaging period, and xarray does not treat this correctly when decoding the time axis. For instance, in the following example, the `January/1920` average has a timestamp of `February/1920`:
+
+```python
+In [25]: filename = '/glade/collections/cdg/data/cesmLE/CESM-CAM5-BGC-LE/atm/proc/tseries/monthly/TS/b.e11.B20TRC5CNBDRD.f09_g16.011.cam.h0.TS.192001-200512.nc'
+
+In [33]: ds = xr.open_dataset(filename)
+
+In [34]: ds.time
+Out[34]:
+<xarray.DataArray 'time' (time: 1032)>
+array([cftime.DatetimeNoLeap(1920, 2, 1, 0, 0, 0, 0),
+       cftime.DatetimeNoLeap(1920, 3, 1, 0, 0, 0, 0),
+       cftime.DatetimeNoLeap(1920, 4, 1, 0, 0, 0, 0), ...,
+       cftime.DatetimeNoLeap(2005, 11, 1, 0, 0, 0, 0),
+       cftime.DatetimeNoLeap(2005, 12, 1, 0, 0, 0, 0),
+       cftime.DatetimeNoLeap(2006, 1, 1, 0, 0, 0, 0)], dtype=object)
+Coordinates:
+  * time     (time) object 1920-02-01 00:00:00 ... 2006-01-01 00:00:00
+Attributes:
+    long_name:  time
+    bounds:     time_bnds
+```
+
+A temporary workaround is to fix the issue ourselves by:
+
+1. instructing xarray not to decode the time via the `decode_times=False` option
+2. computing new time axis by averaging the time bounds
+3. manually decoding the newly computed time axis via `xr.decode_cf()`
+
+```python
+In [35]: ds = xr.open_dataset(filename, decode_times=False)
+
+In [36]:  attrs = ds.time.attrs.copy() # Make sure to keep our original attributes
+
+In [37]: ds = ds.assign_coords(time= ds.time_bnds.mean('nbnd'))
+
+In [38]: ds.time.attrs = attrs # Put the attributes back in. These are used to decode the time axis
+
+In [39]: ds = xr.decode_cf(ds)
+
+In [40]: ds.time
+Out[40]:
+<xarray.DataArray 'time' (time: 1032)>
+array([cftime.DatetimeNoLeap(1920, 1, 16, 12, 0, 0, 0),
+       cftime.DatetimeNoLeap(1920, 2, 15, 0, 0, 0, 0),
+       cftime.DatetimeNoLeap(1920, 3, 16, 12, 0, 0, 0), ...,
+       cftime.DatetimeNoLeap(2005, 10, 16, 12, 0, 0, 0),
+       cftime.DatetimeNoLeap(2005, 11, 16, 0, 0, 0, 0),
+       cftime.DatetimeNoLeap(2005, 12, 16, 12, 0, 0, 0)], dtype=object)
+Coordinates:
+  * time     (time) object 1920-01-16 12:00:00 ... 2005-12-16 12:00:00
+Attributes:
+    long_name:  time
+    bounds:     time_bnds
+```
+
 ### My Dask workers are taking a long time to start. How can I monitor them?
 
 Dask worker requests are added to the job queues on Casper and Cheyenne with the `cluster.scale()` method. After this method is called, you can verify that they are waiting in the queue with this command:
