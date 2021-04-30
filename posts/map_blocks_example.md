@@ -28,10 +28,10 @@ import pop_tools
 
 Next, we read in the data using `xarray` and subset for temperature and salinity, subsetting for a smaller portion of the domain for testing purposes
 
-```
+```python
 ds = xr.merge((
-    xr.open_dataset('/glade/p/cgd/oce/projects/cesm2-marbl/xpersist_cache/3d_fields/TEMP-presentday-monclim.nc'),
-    xr.open_dataset('/glade/p/cgd/oce/projects/cesm2-marbl/xpersist_cache/3d_fields/SALT-presentday-monclim.nc'),
+    xr.open_dataset('/glade/p/cgd/oce/projects/cesm2-marbl/xpersist_cache/3d_fields/TEMP-presentday-monclim.nc', chunks={}),
+    xr.open_dataset('/glade/p/cgd/oce/projects/cesm2-marbl/xpersist_cache/3d_fields/SALT-presentday-monclim.nc', chunks={}),
 ))
 
 
@@ -192,3 +192,24 @@ mld = mld_dsigma(ds.SALT, ds.TEMP).compute()
 ```
 
 This process takes ~2 seconds. Currently, this implementation takes 18 minutes to compute `mld_sigma` for the entire spatial domain for a single ensemble member. Further posts will investigate using `xarray.apply_unfunc` in this context, comparing the performance and tradeoffs.
+
+## Potential opportunities for improvements
+
+When working through these computations, it is important to use the dask dashboard to determine where there are bottlenecks within the analysis.
+
+Also, it can be helpful to understand the nature of the computation. In this case, this computation is considered to CPU heavy, so the key is increasing the number cores being utilized, using a line like this at the beginning:
+
+```python
+# Increase # of threads, more compute heavy
+cluster = ncar_jobqueue.NCARCluster(cores=8, processes=4, memory='80 GB', project='project_number')
+cluster.scale(jobs=10)
+client = Client(cluster)
+```
+
+Another method of optimization could be increasing/decreasing the chunksize within the `mld` function
+
+```python
+mld = mld_dsigma(ds_whole.SALT, ds_whole.TEMP, rho_chunks={'nlat': 16*2, 'nlon': 16*2}).compute()
+```
+
+There are no clear correct answers here - it will depend on the specific use case, and the nature of the computation, but hopefully these starting points will help!
