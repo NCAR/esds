@@ -157,22 +157,26 @@ Attributes:
     bounds:     time_bnds
 ```
 
-A temporary workaround is to fix the issue ourselves by:
-
-1. instructing xarray not to decode the time via the `decode_times=False` option
-2. computing new time axis by averaging the time bounds
-3. manually decoding the newly computed time axis via `xr.decode_cf()`
+A temporary workaround is to fix the issue ourselves by computing new time axis by averaging the time bounds:
 
 ```python
-In [35]: ds = xr.open_dataset(filename, decode_times=False)
+In [29]: import xarray as xr
 
-In [36]: attrs = ds.time.attrs.copy() # Make sure to keep our original attributes
+In [30]: import cf_xarray # use cf-xarray so that we can use CF attributes
 
-In [37]: ds = ds.assign_coords(time= ds.time_bnds.mean('nbnd'))
+In [31]: filename = '/glade/collections/cdg/data/cesmLE/CESM-CAM5-BGC-LE/atm/proc/tseries/monthly/TS/b.e11.B20TRC5CNBDRD.f09_g16.011.cam.h0.TS.192001-200512.nc'
 
-In [38]: ds.time.attrs = attrs # Put the attributes back in. These are used to decode the time axis
+In [32]: ds = xr.open_dataset(filename)
 
-In [39]: ds = xr.decode_cf(ds)
+In [34]: attrs = ds.time.attrs.copy()
+
+In [36]: time_bounds = ds.cf.get_bounds('time')
+
+In [37]: time_bounds_dim_name = ds.cf.get_bounds_dim_name('time')
+
+In [38]: ds = ds.assign_coords(time=time_bounds.mean(time_bounds_dim_name))
+
+In [39]: ds.time.attrs = attrs
 
 In [40]: ds.time
 Out[40]:
@@ -190,20 +194,11 @@ Attributes:
     bounds:     time_bnds
 ```
 
-````{Note}
+```{Note}
 
-Here's a shortcut that doesn't require decoding `time` ourselves:
+cf-xarray can be installed via pip or conda. cf-xarray docs are available [here](https://cf-xarray.readthedocs.io/en/latest/).
 
-```python
-In [16]: ds = xr.open_dataset(filename)
-
-In [17]: attrs = ds.time.attrs
-
-In [18]: ds = ds.assign_coords(time=ds.time_bnds.mean('nbnd'))
-
-In [19]: ds.time.attrs = attrs
 ```
-````
 
 ### My Dask workers are taking a long time to start. How can I monitor them?
 
