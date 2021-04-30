@@ -10,7 +10,7 @@ repos:
       - id: double-quote-string-fixer
 
   - repo: https://github.com/ambv/black
-    rev: 20.8b1
+    rev: 21.4b2
     hooks:
       - id: black
 
@@ -20,7 +20,7 @@ repos:
       - id: blackdoc
 
   - repo: https://gitlab.com/pycqa/flake8
-    rev: 3.9.0
+    rev: 3.9.1
     hooks:
       - id: flake8
 
@@ -37,26 +37,12 @@ repos:
     rev: v2.2.1
     hooks:
       - id: prettier
-  # - repo: https://github.com/deathbeds/prenotebook
-  #   rev: f5bdb72a400f1a56fe88109936c83aa12cc349fa
-  #   hooks:
-  #     - id: prenotebook
-  #       args:
-  #         [
-  #           '--keep-output',
-  #           '--keep-metadata',
-  #           '--keep-execution-count',
-  #           '--keep-empty',
-  #         ]
   - repo: https://github.com/nbQA-dev/nbQA
-    rev: 0.5.9
+    rev: 0.7.1
     hooks:
       - id: nbqa-black
-        additional_dependencies: [black==20.8b1]
-        exclude: posts/2021/function-expressions-in-js.ipynb
+        additional_dependencies: [black==21.4b2]
       - id: nbqa-pyupgrade
         additional_dependencies: [pyupgrade==2.7.3]
-        exclude: posts/2021/function-expressions-in-js.ipynb
       - id: nbqa-isort
-        additional_dependencies: [isort==5.7.0]
-        exclude: posts/2021/function-expressions-in-js.ipynb
+        additional_dependencies: [isort==5.8.0]
