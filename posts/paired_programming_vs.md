@@ -1,3 +1,9 @@
+---
+author: Max Grover
+date: 2021-5-6
+tags: editor, paired-programming, remote-access
+---
+
 # Paired Programming using VS Code
 
 A common task when developing notebooks or packages is collaborating with others. It can be challenging to do this when using JupyterHub since two people cannot access the same notebook at same time. One solution to this is to use Visual Studio Code (VS Code) to remotely access Casper/Cheyenne, use a virtual meeting plaform (Zoom, Google Meet), and interactively collaborate on development.
