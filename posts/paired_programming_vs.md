@@ -26,19 +26,15 @@ Once you download it, use Self Service to ensure you have the ability to install
 
 Once you have VS Code installed, you will need to install the [Remote Development Extension Pack](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack). These extensions are one of the aspects that make this editor so powerful.
 
-Open a terminal in VS Code after installing the extension, and type in the following (replacing `user` with your username and `machine` with `casper` or `cheyenne`):
+Open a terminal in VS Code after installing the extension, and type in the following :
 
-```
-ssh user@machine.ucar.edu
-```
-
-This step is to ensure that you are able to remotely access these machines.
-
-At the top of the VS Code window, select `Remote-SSH: Connect to Host` and type in:
+At the top of the VS Code window, select `Remote-SSH: Connect to Host` and enter:
 
 ```
 user@machine.ucar.edu
 ```
+
+Replace `user` with your username and `machine` with `casper` or `cheyenne`.
 
 Once you do this once, these settings will be saved, making it easier at a later point to use this login process.
 
@@ -71,6 +67,8 @@ Additional details about this extension can be [found here](https://code.visuals
 Launch your virtual meeting! You can use plaforms such as [Google Meet](https://meet.google.com) or [Zoom](https://zoom.us/)
 
 Once you launch your meeting with collaborators, share the link generated from the previous step (make sure they have followed the same steps, downloading VS Code with all the extensions mentioned).
+
+Within the Live extension pack, there is also an audio option if you prefer not using video services.
 
 ## 5. Collaborate!
 
