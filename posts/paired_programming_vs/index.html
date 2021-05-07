@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Importance of Software Citation &#8212; NCAR-ESDS 0.1 documentation</title>
+    <title>Paired Programming using VS Code &#8212; NCAR-ESDS 0.1 documentation</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -195,7 +195,7 @@ commentsRunWhenDOMLoaded(addUtterances);
             <div class="col-12 col-md-3 bd-sidebar">  
 <h2>
    <i class="fa fa-calendar"></i>
-  02 April 2021 
+  06 May 2021 
 </h2>
 
 <ul>
@@ -213,9 +213,9 @@ commentsRunWhenDOMLoaded(addUtterances);
     ><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="../../blog/tag/open-science/">open-science</a>   
-  <a href="../../blog/tag/citation/">citation</a>   
-  <a href="../../blog/tag/software/">software</a>  
+  <a href="../../blog/tag/editor/">editor</a>   
+  <a href="../../blog/tag/paired-programming/">paired-programming</a>   
+  <a href="../../blog/tag/remote-access/">remote-access</a>  
 </li>
  
 </ul>
@@ -225,12 +225,6 @@ commentsRunWhenDOMLoaded(addUtterances);
 </h3>
 <ul>
    
-  <li>
-    <a href="../paired_programming_vs/"
-      >06 May - Paired Programming using VS Code</a
-    >
-  </li>
-  
   <li>
     <a href="../map_blocks_example/"
       >28 April - How to Use xarray.map_blocks for Vertical Interpolation of a 3D Field</a
@@ -252,6 +246,12 @@ commentsRunWhenDOMLoaded(addUtterances);
   <li>
     <a href="../intake_esm_dask/"
       >09 April - An Example of Using Intake-ESM</a
+    >
+  </li>
+  
+  <li>
+    <a href="../casper_pbs_dask/"
+      >06 April - Using Dask on the New Casper PBS Scheduler</a
     >
   </li>
   
@@ -285,18 +285,28 @@ commentsRunWhenDOMLoaded(addUtterances);
 <nav id="bd-toc-nav">
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#how-else-should-i-make-sure-people-cite-my-software">
-   How else should I make sure people cite my software?
+  <a class="reference internal nav-link" href="#download-vs-code">
+   1. Download VS Code
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#why-would-i-want-a-doi">
-   Why would I want a DOI?
+  <a class="reference internal nav-link" href="#setup-remote-login">
+   2. Setup Remote Login
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#how-do-i-mint-a-doi-for-my-repository-if-i-am-outside-the-ncar-organization">
-   How do I mint a DOI for my repository if I am outside the NCAR organization?
+  <a class="reference internal nav-link" href="#enable-sharing">
+   3. Enable Sharing
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setup-your-virtual-meeting">
+   4. Setup Your Virtual Meeting
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#collaborate">
+   5. Collaborate!
   </a>
  </li>
 </ul>
@@ -319,37 +329,58 @@ commentsRunWhenDOMLoaded(addUtterances);
           <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
               
               <div>
-                 <div class="section" id="the-importance-of-software-citation">
-<h1>The Importance of Software Citation<a class="headerlink" href="#the-importance-of-software-citation" title="Permalink to this headline">¶</a></h1>
-<p>One of the questions that came up during the <a class="reference external" href="https://ncar.github.io/esds/posts/esds-blog/">ESDS Town Hall</a> was how do scientists/developers get credit toward their efforts in developing open-source code? Software that is used by the wider community should received the acknowledgment and recognition it deserves.</p>
-<p>Data and academic publication citations have become popular in the literature, but often times, software is not cited… which can be arguably just as important to the work as the data.</p>
-<p>The <a class="reference external" href="https://library.ucar.edu/">NCAR Library team</a> put together a website, detailing software citation best practices, based on evaluating the &gt;500 <a class="reference external" href="https://github.com/NCAR">NCAR Github Repositories</a></p>
-<p>Here, we provide an overview of these recommendations, but if you are interested in more of the details, be sure to check out <a class="reference external" href="https://ncar.github.io/software-citation/">the NCAR software citation documentation</a>.</p>
-<div class="section" id="how-else-should-i-make-sure-people-cite-my-software">
-<h2>How else should I make sure people cite my software?<a class="headerlink" href="#how-else-should-i-make-sure-people-cite-my-software" title="Permalink to this headline">¶</a></h2>
-<p>Within your <code class="docutils literal notranslate"><span class="pre">README.md</span></code> document, be sure to add how you would like others to cite your work. For example, if your repository is for a specific paper, then provide the citation to that paper. If you would like people to cite the software itself, then be sure to specify that.</p>
-<p>A great example of software citation instructions can be found on <a class="reference external" href="https://www.unidata.ucar.edu/community/index.html#acknowledge">Unidata’s website</a></p>
-<p>You can even add a DOI badge to your repository once you have one minted. An example is given below.</p>
-<p><a class="reference external" href="https://doi.org/YOUR_NCAR_DOI">![DOI](https://img.shields.io/badge/DOI-YOUR NCAR DOI)</a></p>
+                 <div class="section" id="paired-programming-using-vs-code">
+<h1>Paired Programming using VS Code<a class="headerlink" href="#paired-programming-using-vs-code" title="Permalink to this headline">¶</a></h1>
+<p>A common task when developing notebooks or packages is collaborating with others. It can be challenging to do this when using JupyterHub since two people cannot access the same notebook at same time. One solution to this is to use Visual Studio Code (VS Code) to remotely access Casper/Cheyenne, use a virtual meeting plaform (Zoom, Google Meet), and interactively collaborate on development.</p>
+<p>This process includes a few steps:</p>
+<ol class="simple">
+<li><p>Download VS Code</p></li>
+<li><p>Setup remote login (ssh)</p></li>
+<li><p>Enable sharing</p></li>
+<li><p>Open meeting, share the link</p></li>
+<li><p>Collaborate!</p></li>
+</ol>
+<div class="section" id="download-vs-code">
+<h2>1. Download VS Code<a class="headerlink" href="#download-vs-code" title="Permalink to this headline">¶</a></h2>
+<p>Visual studio code is free and openly available. You can find the documentation/download information for your <a class="reference external" href="https://code.visualstudio.com/">specific machine here</a></p>
+<p>Once you download it, use Self Service to ensure you have the ability to install the software, then open the application once it is installed.</p>
 </div>
-<div class="section" id="why-would-i-want-a-doi">
-<h2>Why would I want a DOI?<a class="headerlink" href="#why-would-i-want-a-doi" title="Permalink to this headline">¶</a></h2>
-<p>DOI stands for “Digital Object Identifier” and serves as a permanent identifier of an article/document/or piece of software. Typically, it can be difficult to assign a DOI to software, especially since it can constantly be changing/evolving. Fortunately, through the NCAR Library, you can assign a DOI to your Github repository (although this is only available to NCAR produced and hosted software). The only requirements are the following</p>
-<ul class="simple">
-<li><p>Github repository link</p></li>
-<li><p>Minimum metadata</p>
-<ul>
-<li><p>Creators, such as name/lab</p></li>
-<li><p>Title of software</p></li>
-<li><p>Publisher (ex. NCAR Github organization)</p></li>
-<li><p>Publication year of software</p></li>
-</ul>
-</li>
-</ul>
+<div class="section" id="setup-remote-login">
+<h2>2. Setup Remote Login<a class="headerlink" href="#setup-remote-login" title="Permalink to this headline">¶</a></h2>
+<p>Once you have VS Code installed, you will need to install the <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack">Remote Development Extension Pack</a>. These extensions are one of the aspects that make this editor so powerful.</p>
+<p>Open a terminal in VS Code after installing the extension, and type in the following :</p>
+<p>At the top of the VS Code window, select <code class="docutils literal notranslate"><span class="pre">Remote-SSH:</span> <span class="pre">Connect</span> <span class="pre">to</span> <span class="pre">Host</span></code> and enter:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">user</span><span class="nd">@machine</span><span class="o">.</span><span class="n">ucar</span><span class="o">.</span><span class="n">edu</span>
+</pre></div>
 </div>
-<div class="section" id="how-do-i-mint-a-doi-for-my-repository-if-i-am-outside-the-ncar-organization">
-<h2>How do I mint a DOI for my repository if I am outside the NCAR organization?<a class="headerlink" href="#how-do-i-mint-a-doi-for-my-repository-if-i-am-outside-the-ncar-organization" title="Permalink to this headline">¶</a></h2>
-<p>Zenodo is a great option, and integrated within Github <a class="reference external" href="https://guides.github.com/activities/citable-code/">Zenodo Plugin</a>. This option can be good for people within the NCAR organization as well, especially if you would like to assign discrete DOIs to each of your releases.</p>
+<p>Replace <code class="docutils literal notranslate"><span class="pre">user</span></code> with your username and <code class="docutils literal notranslate"><span class="pre">machine</span></code> with <code class="docutils literal notranslate"><span class="pre">casper</span></code> or <code class="docutils literal notranslate"><span class="pre">cheyenne</span></code>.</p>
+<p>Once you do this once, these settings will be saved, making it easier at a later point to use this login process.</p>
+<p>At this point, it will ask you for authentication which is when you will enter your password and follow the dual-authentication.</p>
+<p>In the bottom lefthand corner, you will see</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SSH</span><span class="p">:</span> <span class="n">machine</span><span class="o">.</span><span class="n">ucar</span><span class="o">.</span><span class="n">edu</span>
+</pre></div>
+</div>
+<p>which indicates that the remote login as worked!</p>
+<p>It will drop you into your home directory, where you can now enter the path you would like to access.</p>
+<p>For more details on this process, check out the official <a class="reference external" href="https://code.visualstudio.com/docs/remote/ssh">VS Code documentation</a></p>
+</div>
+<div class="section" id="enable-sharing">
+<h2>3. Enable Sharing<a class="headerlink" href="#enable-sharing" title="Permalink to this headline">¶</a></h2>
+<p>As mentioned previously, you can share your window interactively with collaborators! The extension that makes this possible is the <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare-pack">Live Share Extension Pack</a>.</p>
+<p>Once you install the extension, on the left side of the screen, you will see an arrow icon which is a shortcut to the Live Share tool. Click on that, and connect your Github account. Once you connect your Github account, it will copy the link to you shared session.</p>
+<p>At the bottom of the window, you will see your name with a lock next to it. Click on this to find additional sharing options - you can copy the link to the shared session again if you would like.</p>
+<p>Additional details about this extension can be <a class="reference external" href="https://code.visualstudio.com/learn/collaboration/live-share">found here</a>!</p>
+</div>
+<div class="section" id="setup-your-virtual-meeting">
+<h2>4. Setup Your Virtual Meeting<a class="headerlink" href="#setup-your-virtual-meeting" title="Permalink to this headline">¶</a></h2>
+<p>Launch your virtual meeting! You can use plaforms such as <a class="reference external" href="https://meet.google.com">Google Meet</a> or <a class="reference external" href="https://zoom.us/">Zoom</a></p>
+<p>Once you launch your meeting with collaborators, share the link generated from the previous step (make sure they have followed the same steps, downloading VS Code with all the extensions mentioned).</p>
+<p>Within the Live extension pack, there is also an audio option if you prefer not using video services.</p>
+</div>
+<div class="section" id="collaborate">
+<h2>5. Collaborate!<a class="headerlink" href="#collaborate" title="Permalink to this headline">¶</a></h2>
+<p>Once you have everything setup, get to work! You may need to double check the permissions for the sharing extension. Something else that may be helpful is th chat which can be found within the Live Share shortcut on the left side of the screen. Looking at the <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare-pack">documentation for Live Share</a> can be helpful!</p>
+<p>I hope this helps you get started using VS Code for paired-programming!</p>
 </div>
 </div>
 
@@ -358,20 +389,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="section">
   <span style="float: left">
      
-    <a href="../esds-blog/">
-      <i class="fa fa-arrow-circle-left"></i> NCAR-CGD ESDS Town Hall
+    <a href="../map_blocks_example/">
+      <i class="fa fa-arrow-circle-left"></i> How to Use xarray.map_blocks for Vertical Interpolation of a 3D Field
     </a>
     
   </span>
   <span>&nbsp;</span>
   <span style="float: right">
-     
-    <a href="../casper_pbs_dask/">
-      Using Dask on the New Casper PBS Scheduler <i
-        class="fa fa-arrow-circle-right"
-      ></i
-      >
-    </a>
     
   </span>
 </div>

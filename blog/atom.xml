@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2021-04-30T19:55:34.137661+00:00</updated>
+  <updated>2021-05-07T18:35:17.479533+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.18">ABlog</generator>
@@ -140,5 +140,22 @@
     <category term="dask" label="dask"/>
     <category term="pop" label="pop"/>
     <published>2021-04-28T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/paired_programming_vs/</id>
+    <title>Paired Programming using VS Code</title>
+    <updated>2021-05-06T00:00:00+00:00</updated>
+    <author>
+      <name>Max Grover</name>
+    </author>
+    <content type="html">&lt;p&gt;A common task when developing notebooks or packages is collaborating with others. It can be challenging to do this when using JupyterHub since two people cannot access the same notebook at same time. One solution to this is to use Visual Studio Code (VS Code) to remotely access Casper/Cheyenne, use a virtual meeting plaform (Zoom, Google Meet), and interactively collaborate on development.&lt;/p&gt;
+&lt;p&gt;This process includes a few steps:&lt;/p&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/paired_programming_vs/" rel="alternate"/>
+    <summary>A common task when developing notebooks or packages is collaborating with others. It can be challenging to do this when using JupyterHub since two people cannot access the same notebook at same time. One solution to this is to use Visual Studio Code (VS Code) to remotely access Casper/Cheyenne, use a virtual meeting plaform (Zoom, Google Meet), and interactively collaborate on development.This process includes a few steps:</summary>
+    <category term="editor" label="editor"/>
+    <category term="paired-programming" label="paired-programming"/>
+    <category term="remote-access" label="remote-access"/>
+    <published>2021-05-06T00:00:00+00:00</published>
   </entry>
 </feed>
