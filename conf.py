@@ -58,6 +58,7 @@ html_theme_options = {
     'github_url': 'https://github.com/ncar/esds',
     'search_bar_text': 'Search this site... ',
     'search_bar_position': 'navbar',
+    'google_analytics_id': 'G-B50ZRRN69X',
 }
 
 
