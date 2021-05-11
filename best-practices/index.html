@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index &#8212; NCAR-ESDS 0.1 documentation</title>
+    <title>Best Practices &#8212; NCAR-ESDS 0.1 documentation</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -73,11 +73,44 @@ commentsRunWhenDOMLoaded(addUtterances);
 </script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <link rel="author" title="About these documents" href="../about/" />
-    <link rel="index" title="Index" href="#" />
+    <link rel="index" title="Index" href="../genindex/" />
     <link rel="search" title="Search" href="../search/" />
+    <link rel="prev" title="Communication" href="../communication/" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
-    
+     
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../blog/atom.xml"
+  title="NCAR ESDS"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
     
@@ -130,8 +163,8 @@ commentsRunWhenDOMLoaded(addUtterances);
  </a>
 </li>
 
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../best-practices/">
+<li class="toctree-l1 current active nav-item">
+ <a class="current reference internal nav-link" href="#">
   Best Practices
  </a>
 </li>
@@ -181,6 +214,71 @@ commentsRunWhenDOMLoaded(addUtterances);
           
           <div class="d-none d-xl-block col-xl-2 bd-toc">
             
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#helpful-templates">
+   Helpful Templates
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#package-template">
+     Package Template
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#analysis-repository">
+     Analysis Repository
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#software-design">
+   Software Design
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#software-architecture-model">
+     4+1 Software Architecture Model
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#zen-of-scientific-computing">
+     Zen of Scientific Computing
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#managing-computational-resources">
+   Managing Computational Resources
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cisl-best-practices">
+     CISL Best Practices
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
           </div>
           
 
@@ -191,20 +289,50 @@ commentsRunWhenDOMLoaded(addUtterances);
           <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
               
               <div>
-                
-
-<h1 id="index">Index</h1>
-
-<div class="genindex-jumpbox">
- 
+                 <div class="section" id="best-practices">
+<h1>Best Practices<a class="headerlink" href="#best-practices" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="helpful-templates">
+<h2>Helpful Templates<a class="headerlink" href="#helpful-templates" title="Permalink to this headline">¶</a></h2>
+<p>Thinking about starting a new project? It can be helpful to use a template so you are not starting from scratch.</p>
+<div class="section" id="package-template">
+<h3><a class="reference external" href="https://github.com/andersy005/template">Package Template</a><a class="headerlink" href="#package-template" title="Permalink to this headline">¶</a></h3>
+<p>Anderson Banihirwe (<a class="reference external" href="https://github.com/andersy005">&#64;andersy005</a>) created a template repository for packages, which includes automated code-quality checkers. This can be a helpful place to start.</p>
+</div>
+<div class="section" id="analysis-repository">
+<h3><a class="reference external" href="https://github.com/jbusecke/cookiecutter-science-project">Analysis Repository</a><a class="headerlink" href="#analysis-repository" title="Permalink to this headline">¶</a></h3>
+<p>Within the Pangeo community, Julius Busecke (<a class="reference external" href="https://github.com/jbusecke">&#64;jbusecke</a>) created the “Cookiecutter-Science-Project” repository which serves as a template when you are working with Jupyter notebooks. This repository walks you through setting up your repository and syncing it up through Github.</p>
+</div>
+</div>
+<div class="section" id="software-design">
+<h2>Software Design<a class="headerlink" href="#software-design" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="software-architecture-model">
+<h3><a class="reference external" href="https://docs.google.com/presentation/d/1hVCuxtm0f8TzDqsy2kC5nnjqNt3rsz26qgcMQOnM0RY/edit?usp=sharing">4+1 Software Architecture Model</a><a class="headerlink" href="#software-architecture-model" title="Permalink to this headline">¶</a></h3>
+<p>Currently, the ESDS group is experimenting with design documents for the next generation of diagnostics package. This is an example of the “4+1 View Model of Software Architecture” with an application to the diagnostics workflow. Feel free to use this example as a template!</p>
+</div>
+<div class="section" id="zen-of-scientific-computing">
+<h3><a class="reference external" href="https://scicomp.aalto.fi/scicomp/zen-of-scicomp/">Zen of Scientific Computing</a><a class="headerlink" href="#zen-of-scientific-computing" title="Permalink to this headline">¶</a></h3>
+<p>A group of researchers and software engineers put together a helpful guide for developing scientific software, detailing the nuances of working Python stacks and the difference between daily use cases and more foundational libraries.</p>
+</div>
+</div>
+<div class="section" id="managing-computational-resources">
+<h2>Managing Computational Resources<a class="headerlink" href="#managing-computational-resources" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="cisl-best-practices">
+<h3><a class="reference external" href="https://www2.cisl.ucar.edu/user-support/cisl-best-practices">CISL Best Practices</a><a class="headerlink" href="#cisl-best-practices" title="Permalink to this headline">¶</a></h3>
+<p>If you are using NCAR Computational and Information Systems Lab (CISL) resources such as Casper/Cheyenne, this is a great place to start with learning more making the most of your computing and storage allocations.</p>
+</div>
+</div>
 </div>
 
+<div class="section">
+   
+</div>
 
               </div>
               
               
               <div class='prev-next-bottom'>
                 
+    <a class='left-prev' id="prev-link" href="../communication/" title="previous page">Communication</a>
 
               </div>
               
