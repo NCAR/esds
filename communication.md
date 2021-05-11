@@ -11,6 +11,8 @@ Discourse offers a community where users can ask questions and share progress on
 Zulip is an asynchronous messaging platform, run in-house at UCAR, which
 can be used for both private messages and messages seperated by topic. When posting in a specific "channel", the user must add a topic, which makes it easier to track various conversations and refer back to communications at a later time.
 
+We plan on making it easier to access in the future, but the platform is currently invite-only. Please reach out to Max Grover (mgrover@ucar.edu) for a link to join!
+
 ## [ESDS Github Repository](https://ncar.github.io/esds/)
 
 This repository and webpage is a space where we can post progress on this initiative, publish blog posts related to various workflows, document "best practices," in addition to serving as a resource/discussion spot via comments on pages and posts.
