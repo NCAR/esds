@@ -5,7 +5,7 @@ build:
   image: latest
 
 conda:
-  environment: requirements.txt
+  environment: ci/environment.yml
 
 sphinx:
   fail_on_warning: false
