@@ -2,7 +2,7 @@
 
 This post was motivated by a post from Steve Yeager [@sgyeager](https://github.com/sgyeager), who ran into an error when attempting to read in CMIP6 data via intake-esm.
 
-For those who are unfamiliar with intake-esm, be sure to read over [the documentation](https://intake-esm.readthedocs.io/en/latest/index.html)! The user guide even includes [an entire section](https://intake-esm.readthedocs.io/en/latest/user-guide/cmip6-tutorial.html) on looking at CMIP6 data. These resources would be a great place to start.
+For those who are unfamiliar with intake-esm, be sure to read over [the documentation](https://intake-esm.readthedocs.io/en/latest/index.html)! The user guide even includes [an entire portion of their site](https://intake-esm.readthedocs.io/en/latest/user-guide/cmip6-tutorial.html) on looking at CMIP6 data. These resources would be a great place to start.
 
 The specific workflow of using this package for reading in Sea Water Silinity (`so`) and
 Sea Water Potential Temperature (`thetao`) are given below
