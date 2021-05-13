@@ -1,3 +1,9 @@
+---
+author: Max Grover
+date: 2021-5-14
+tags: intake, cmip6, debug
+---
+
 # Debugging Intake-ESM Process for Reading in CMIP6
 
 This post was motivated by a post from Steve Yeager [@sgyeager](https://github.com/sgyeager), who ran into an error when attempting to read in CMIP6 data via intake-esm.
