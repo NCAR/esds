@@ -58,7 +58,7 @@ cat = col.search(
 dset_dict = cat.to_dataset_dict()
 ```
 
-But this returns an error\* of:
+But this returns an error of:
 
 ```
 AggregationError:
@@ -71,8 +71,6 @@ AggregationError:
 
         ********************************************
 ```
-
-\*this specific error could change in future releases of intake-esm
 
 ## Determining the Cause of the Error
 
@@ -98,7 +96,7 @@ Here, we focus on the `time_range` column - noticing that the last time step for
 
 Some of the files are missing here which is the fundamental issue.
 
-When `intake` attempts to concatenate these two datasets, it struggles and return an error, since it cannot merge datasets where the length of the time axis differs. There is missing data here - reading variables separately is workaround, although it should be noted that at the end of the day, the missing files are the core problem.
+When `intake` attempts to concatenate these two datasets, it struggles and return an error, since the data is missing on the system. There is missing data here - reading variables separately is workaround, although it should be noted that at the end of the day, the missing files are the core problem.
 
 ## Applying our "Workaround"
 
