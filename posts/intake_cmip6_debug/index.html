@@ -1,0 +1,488 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Debugging Intake-ESM Process for Reading in CMIP6 &#8212; NCAR-ESDS 0.1 documentation</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "NCAR/esds");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <link rel="author" title="About these documents" href="../../about/" />
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+     
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../blog/atom.xml"
+  title="NCAR ESDS"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+<a class="navbar-brand" href="../../">
+<p class="title">NCAR-ESDS</p>
+</a>
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../about/">
+  About Us
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../faq/">
+  Frequently Asked Questions
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../blog/">
+  Blog
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../communication/">
+  Communication
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../best-practices/">
+  Best Practices
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/ncar/esds" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">  
+<h2>
+   <i class="fa fa-calendar"></i>
+  14 May 2021 
+</h2>
+
+<ul>
+   
+<li id="author">
+  <span
+    ><i class="fa-fw fa fa-user"></i></span
+  >
+   
+  <a href="../../blog/author/max-grover/">Max Grover</a>  
+</li>
+    
+<li id="tags">
+  <span
+    ><i class="fa-fw fa fa-tags"></i> </span
+  >
+   
+  <a href="../../blog/tag/intake/">intake</a>   
+  <a href="../../blog/tag/cmip6/">cmip6</a>   
+  <a href="../../blog/tag/debug/">debug</a>  
+</li>
+ 
+</ul>
+
+<h3>
+  <a href="../../blog/">Recent Posts</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="../paired_programming_vs/"
+      >06 May - Paired Programming using VS Code</a
+    >
+  </li>
+  
+  <li>
+    <a href="../map_blocks_example/"
+      >28 April - How to Use xarray.map_blocks for Vertical Interpolation of a 3D Field</a
+    >
+  </li>
+  
+  <li>
+    <a href="../multiple_index_xarray_xoak/"
+      >23 April - Indexing unstructured grids with the Power of Xoak</a
+    >
+  </li>
+  
+  <li>
+    <a href="../ncar-jobqueue-example/"
+      >15 April - NCAR-Jobqueue</a
+    >
+  </li>
+  
+  <li>
+    <a href="../intake_esm_dask/"
+      >09 April - An Example of Using Intake-ESM</a
+    >
+  </li>
+  
+</ul>
+
+<h3>
+  <a href="../../blog/archive/">Archives</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="../../blog/2021/">2021 (10)</a>
+  </li>
+   
+</ul>
+
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reproducing-the-error">
+   Reproducing the Error
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#determining-the-cause-of-the-error">
+   Determining the Cause of the Error
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#applying-our-workaround">
+   Applying our “Workaround”
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                 <div class="section" id="debugging-intake-esm-process-for-reading-in-cmip6">
+<h1>Debugging Intake-ESM Process for Reading in CMIP6<a class="headerlink" href="#debugging-intake-esm-process-for-reading-in-cmip6" title="Permalink to this headline">¶</a></h1>
+<p>This post was motivated by a post from Steve Yeager <a class="reference external" href="https://github.com/sgyeager">&#64;sgyeager</a>, who ran into an error when attempting to read in CMIP6 data via intake-esm.</p>
+<p>For those who are unfamiliar with intake-esm, be sure to read over <a class="reference external" href="https://intake-esm.readthedocs.io/en/latest/index.html">the documentation</a>! The user guide even includes <a class="reference external" href="https://intake-esm.readthedocs.io/en/latest/user-guide/cmip6-tutorial.html">an entire portion of their site</a> on looking at CMIP6 data. These resources would be a great place to start.</p>
+<p>The specific workflow of using this package for reading in Sea Water Silinity (<code class="docutils literal notranslate"><span class="pre">so</span></code>) and
+Sea Water Potential Temperature (<code class="docutils literal notranslate"><span class="pre">thetao</span></code>) are given below</p>
+<div class="section" id="reproducing-the-error">
+<h2>Reproducing the Error<a class="headerlink" href="#reproducing-the-error" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">intake</span>
+</pre></div>
+</div>
+<p>Set a path to the CMIP catalog - in this case, since we using the glade file system, use this and open the catalog using the intake-esm extension.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set the path for the catalog file</span>
+<span class="n">catalog_file</span> <span class="o">=</span> <span class="s1">&#39;/glade/collections/cmip/catalog/intake-esm-datastore/catalogs/glade-cmip6.json&#39;</span>
+
+<span class="c1"># Open the catalog using intake</span>
+<span class="n">col</span> <span class="o">=</span> <span class="n">intake</span><span class="o">.</span><span class="n">open_esm_datastore</span><span class="p">(</span><span class="n">catalog_file</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Now, we set which experiment to use. In this case, we are interested in the Ocean Model Intercomparison Project (OMIP) since we are looking at ocean data, setting</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">experiment_id</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;omip1&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>In terms of the variables of interest, we are interested in Sea Water Silinity (<code class="docutils literal notranslate"><span class="pre">so</span></code>) and Sea Water Potential Temperature (<code class="docutils literal notranslate"><span class="pre">thetao</span></code>), so we set</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">variable_id</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;so&#39;</span><span class="p">,</span> <span class="s1">&#39;thetao&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>The last variable to change is the table_id which corresponds to the temporal frequency. Since we are interested in monthly data, we set</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">table_id</span> <span class="o">=</span> <span class="s1">&#39;Omon&#39;</span>
+</pre></div>
+</div>
+<p>Putting all that together, we setup the catalog and call <code class="docutils literal notranslate"><span class="pre">to_dataset_dict</span></code> which assembles a dictionary of datasets</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span> <span class="o">=</span> <span class="n">col</span><span class="o">.</span><span class="n">search</span><span class="p">(</span>
+    <span class="n">experiment_id</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;omip1&#39;</span><span class="p">],</span>
+    <span class="n">variable_id</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;thetao&#39;</span><span class="p">,</span> <span class="s1">&#39;so&#39;</span><span class="p">],</span>
+    <span class="n">table_id</span><span class="o">=</span><span class="s1">&#39;Omon&#39;</span>
+<span class="p">)</span>
+<span class="n">dset_dict</span> <span class="o">=</span> <span class="n">cat</span><span class="o">.</span><span class="n">to_dataset_dict</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>But this returns an error* of:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">AggregationError</span><span class="p">:</span>
+        <span class="n">Failed</span> <span class="n">to</span> <span class="n">merge</span> <span class="n">multiple</span> <span class="n">datasets</span> <span class="ow">in</span> <span class="n">group</span> <span class="k">with</span> <span class="n">key</span><span class="o">=</span><span class="n">OMIP</span><span class="o">.</span><span class="n">CNRM</span><span class="o">-</span><span class="n">CERFACS</span><span class="o">.</span><span class="n">CNRM</span><span class="o">-</span><span class="n">CM6</span><span class="o">-</span><span class="mf">1.</span><span class="n">omip1</span><span class="o">.</span><span class="n">Omon</span><span class="o">.</span><span class="n">gn</span> <span class="n">into</span> <span class="n">a</span> <span class="n">single</span> <span class="n">xarray</span> <span class="n">Dataset</span> <span class="k">as</span> <span class="n">variables</span><span class="o">.</span>
+
+        <span class="o">***</span> <span class="n">Arguments</span> <span class="n">passed</span> <span class="n">to</span> <span class="n">xarray</span><span class="o">.</span><span class="n">merge</span><span class="p">()</span> <span class="o">***</span><span class="p">:</span>
+
+        <span class="o">-</span> <span class="n">objs</span><span class="p">:</span> <span class="n">a</span> <span class="nb">list</span> <span class="n">of</span> <span class="mi">2</span> <span class="n">datasets</span>
+        <span class="o">-</span> <span class="n">kwargs</span><span class="p">:</span> <span class="p">{}</span>
+
+        <span class="o">********************************************</span>
+</pre></div>
+</div>
+<p>*this specific error could change in future releases of intake-esm</p>
+</div>
+<div class="section" id="determining-the-cause-of-the-error">
+<h2>Determining the Cause of the Error<a class="headerlink" href="#determining-the-cause-of-the-error" title="Permalink to this headline">¶</a></h2>
+<p>At this point, let’s go back and inspect the subset catalog we have, calling the <code class="docutils literal notranslate"><span class="pre">catalog.df</span></code></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span><span class="o">.</span><span class="n">df</span>
+</pre></div>
+</div>
+<p>Notice how in the error, the source_id which triggered the error is <code class="docutils literal notranslate"><span class="pre">CNRM-CM6-1</span></code>, so let’s subset for that and investigate the problem…</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="n">cat</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">source_id</span> <span class="o">==</span> <span class="s1">&#39;CNRM-CM6-1&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Another option for looking at the subset for problematic key would be (returns a pandas dataframe):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span><span class="p">[</span><span class="s1">&#39;OMIP.CNRM-CERFACS.CNRM-CM6-1.omip1.Omon.gn&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Here, we focus on the <code class="docutils literal notranslate"><span class="pre">time_range</span></code> column - noticing that the last time step for <code class="docutils literal notranslate"><span class="pre">so</span></code> is <code class="docutils literal notranslate"><span class="pre">194912</span></code> while the last timestep for datasets with <code class="docutils literal notranslate"><span class="pre">thetao</span></code> is <code class="docutils literal notranslate"><span class="pre">199912</span></code>, with the dates formatted <code class="docutils literal notranslate"><span class="pre">YYYYMM</span></code>.</p>
+<p>Some of the files are missing here which is the fundamental issue.</p>
+<p>When <code class="docutils literal notranslate"><span class="pre">intake</span></code> attempts to concatenate these two datasets, it struggles and return an error, since it cannot merge datasets where the length of the time axis differs. There is missing data here - reading variables separately is workaround, although it should be noted that at the end of the day, the missing files are the core problem.</p>
+</div>
+<div class="section" id="applying-our-workaround">
+<h2>Applying our “Workaround”<a class="headerlink" href="#applying-our-workaround" title="Permalink to this headline">¶</a></h2>
+<p>To work around this problem, If you would still like to work with the data, you will need to read in datasets using separate queries as shown below</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Search and read in dataset for so</span>
+<span class="n">cat_so</span> <span class="o">=</span> <span class="n">col</span><span class="o">.</span><span class="n">search</span><span class="p">(</span>
+    <span class="n">experiment_id</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;omip1&#39;</span><span class="p">],</span>
+    <span class="n">variable_id</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;so&#39;</span><span class="p">],</span>
+    <span class="n">table_id</span><span class="o">=</span><span class="s1">&#39;Omon&#39;</span>
+<span class="p">)</span>
+<span class="n">dset_dict_so</span> <span class="o">=</span> <span class="n">cat_so</span><span class="o">.</span><span class="n">to_dataset_dict</span><span class="p">()</span>
+
+<span class="c1"># Search and read in dataset for thetao</span>
+<span class="n">cat_thetao</span> <span class="o">=</span> <span class="n">col</span><span class="o">.</span><span class="n">search</span><span class="p">(</span>
+    <span class="n">experiment_id</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;omip1&#39;</span><span class="p">],</span>
+    <span class="n">variable_id</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;thetao&#39;</span><span class="p">],</span>
+    <span class="n">table_id</span><span class="o">=</span><span class="s1">&#39;Omon&#39;</span>
+<span class="p">)</span>
+<span class="n">dset_dict_thetao</span> <span class="o">=</span> <span class="n">cat_thetao</span><span class="o">.</span><span class="n">to_dataset_dict</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Another option is to turn off aggregation within <code class="docutils literal notranslate"><span class="pre">to_dataset_dict()</span></code>, using the following syntax</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">dsets</span> <span class="o">=</span> <span class="n">cat</span><span class="o">.</span><span class="n">to_dataset_dict</span><span class="p">(</span><span class="n">aggregate</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This will return a dataset for <strong>every</strong> file in the archive and the keys in <code class="docutils literal notranslate"><span class="pre">dset_dict</span></code> will be constructed using all the fields in the catalog.</p>
+<p>Since <code class="docutils literal notranslate"><span class="pre">aggregate=False</span></code> will yield a large number of individual datasets, it might be overwhelming and difficult to determine the problem.</p>
+</div>
+</div>
+
+<div class="section">
+     
+<div class="section">
+  <span style="float: left">
+     
+    <a href="../paired_programming_vs/">
+      <i class="fa fa-arrow-circle-left"></i> Paired Programming using VS Code
+    </a>
+    
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right">
+    
+  </span>
+</div>
+  
+</div>
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-B50ZRRN69X"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('config', 'G-B50ZRRN69X');
+                </script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021, NCAR Earth System Data Science Team.<br/>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.4.<br/>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

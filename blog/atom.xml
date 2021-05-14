@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2021-05-12T14:53:46.304806+00:00</updated>
+  <updated>2021-05-14T19:15:40.818600+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.18">ABlog</generator>
@@ -157,5 +157,22 @@
     <category term="paired-programming" label="paired-programming"/>
     <category term="remote-access" label="remote-access"/>
     <published>2021-05-06T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/intake_cmip6_debug/</id>
+    <title>Debugging Intake-ESM Process for Reading in CMIP6</title>
+    <updated>2021-05-14T00:00:00+00:00</updated>
+    <author>
+      <name>Max Grover</name>
+    </author>
+    <content type="html">&lt;p&gt;This post was motivated by a post from Steve Yeager &lt;a class="reference external" href="https://github.com/sgyeager"&gt;&amp;#64;sgyeager&lt;/a&gt;, who ran into an error when attempting to read in CMIP6 data via intake-esm.&lt;/p&gt;
+&lt;p&gt;For those who are unfamiliar with intake-esm, be sure to read over &lt;a class="reference external" href="https://intake-esm.readthedocs.io/en/latest/index.html"&gt;the documentation&lt;/a&gt;! The user guide even includes &lt;a class="reference external" href="https://intake-esm.readthedocs.io/en/latest/user-guide/cmip6-tutorial.html"&gt;an entire portion of their site&lt;/a&gt; on looking at CMIP6 data. These resources would be a great place to start.&lt;/p&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/intake_cmip6_debug/" rel="alternate"/>
+    <summary>This post was motivated by a post from Steve Yeager @sgyeager, who ran into an error when attempting to read in CMIP6 data via intake-esm.For those who are unfamiliar with intake-esm, be sure to read over the documentation! The user guide even includes an entire portion of their site on looking at CMIP6 data. These resources would be a great place to start.</summary>
+    <category term="intake" label="intake"/>
+    <category term="cmip6" label="cmip6"/>
+    <category term="debug" label="debug"/>
+    <published>2021-05-14T00:00:00+00:00</published>
   </entry>
 </feed>
