@@ -58,7 +58,7 @@ cat = col.search(
 dset_dict = cat.to_dataset_dict()
 ```
 
-But this returns an error of:
+But this returns an error\* of:
 
 ```
 AggregationError:
@@ -71,6 +71,8 @@ AggregationError:
 
         ********************************************
 ```
+
+\*this specific error could change in future releases of intake-esm
 
 ## Determining the Cause of the Error
 
@@ -86,13 +88,21 @@ Notice how in the error, the source_id which triggered the error is `CNRM-CM6-1`
 cat.df[cat.df.source_id == 'CNRM-CM6-1']
 ```
 
+Another option for looking at the subset for problematic key would be (returns a pandas dataframe):
+
+```python
+cat['OMIP.CNRM-CERFACS.CNRM-CM6-1.omip1.Omon.gn']
+```
+
 Here, we focus on the `time_range` column - noticing that the last time step for `so` is `194912` while the last timestep for datasets with `thetao` is `199912`, with the dates formatted `YYYYMM`.
 
-When intake attempts to concatentate these two datasets, with different times, it struggles and returns the error that it cannot merge them together since the length of the time axis differs.
+Some of the files are missing here which is the fundamental issue.
 
-## Applying our Solution
+When `intake` attempts to concatenate these two datasets, it struggles and return an error, since it cannot merge datasets where the length of the time axis differs. There is missing data here - reading variables separately is workaround, although it should be noted that at the end of the day, the missing files are the core problem.
 
-To fix this problem, If you would like to still work with the data, you will need to read in datasets using separate queries as shown below
+## Applying our "Workaround"
+
+To work around this problem, If you would still like to work with the data, you will need to read in datasets using separate queries as shown below
 
 ```python
 # Search and read in dataset for so
@@ -112,6 +122,12 @@ cat_thetao = col.search(
 dset_dict_thetao = cat_thetao.to_dataset_dict()
 ```
 
-Another option would have been to specify within .to_dataset_dict() to not aggregate the datasets, using the following syntax .to_dataset_dict(aggregate=False), but it can be difficult using this functionality with such a large number of ensemble members.
+Another option is to turn off aggregation within `to_dataset_dict()`, using the following syntax
 
-I hope this helps with your intake-esm usage! Happy computing!
+```python
+dsets = cat.to_dataset_dict(aggregate=False)
+```
+
+This will return a dataset for **every** file in the archive and the keys in `dset_dict` will be constructed using all the fields in the catalog.
+
+Since `aggregate=False` will yield a large number of individual datasets, it might be overwhelming and difficult to determine the problem.
