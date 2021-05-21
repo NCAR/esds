@@ -24,6 +24,23 @@ tags: dask, conference, open-science
 - STAC (spatio-temporal asset catalog) can be helpful when working with satellite imagery, making it easy to search for specific datasets
   - Similar to intake, able to search spatially as well
 
+### [Pangeo Session Talk Links](https://summit.dask.org/schedule/presentation/1/pangeo/)
+
+- Chelle: notebook can be found in folder AWS-notebooks
+  - [Jupyter Notebooks](https://github.com/pangeo-gallery/osm2020tutorial)
+- Julius:
+  - [Slides](https://speakerdeck.com/jbusecke/dask-and-the-ocean-death-zones-lessons-from-a-real-life-earth-science-workflow-with-a-fullish-pangeo-stack)
+  - [CMIP6 Prepocessing](https://github.com/jbusecke/cmip6_preprocessing)
+  - [Oxygen Minimum Zones Paper Preprint](https://www.essoar.org/doi/10.1002/essoar.10507050.1)
+- Rob
+  - [Info about STAC specification](https://stacspec.org)
+- Deepak:
+  - [Dask Groupby Repository](https://github.com/dcherian/dask_groupby)
+- Haiying:
+  - [Pangeo Benchmarking Repository](https://github.com/pangeo-data/benchmarking)
+- Damien:
+  - [Software Carpentries Lessons](https://github.com/carpentrieslab/python-aos-lesson)
+
 ## [Growth and History of Anaconda + Numpy + SciPy + Dask](https://zoom.us/rec/share/_KQiagnZBnW0xPIHAHZZs553JuFsJXfkQpdwUmTca7-QE91safAQCefSYr6-Kz3R.EDHHYf_864Dw3v8Q?startTime=1621515755000)
 
 This session was a keynote focused on how these packages + ecosystem grew
@@ -53,6 +70,40 @@ This session was a keynote focused on how these packages + ecosystem grew
 - **_Provide scope and build people_**
   - Move towards "grassroots" not so much top down
 
+## Xarray User Forum + Updates
+
+- Xarray now includes a backend api, allowing contributors to add new backends for reading + operating on datasets
+  - Including the `raw_indexing` method is important to enable lazy loading
+- Flexible indexing is coming to xarray soon
+  - Helps when dealing with irregular spaced data, working with projected coordinate systems, staggered grids
+  - Currently, Xarray uses pandas for indexing, which is problematic when wanting to do flexible indexing
+  - Current Xarray accessor - [Xoak](https://xoak.readthedocs.io/en/latest/)
+    - See [previous blog post on working with unstructured grids](https://ncar.github.io/esds/posts/multiple_index_xarray_xoak/)
+  - See the [design documents for flexible indexing in Xarray](https://github.com/pydata/xarray/blob/master/design_notes/flexible_indexes_notes.md)
+- Duck arrays are now supported in Xarray
+  - Helps when working with [pint](https://pint.readthedocs.io/en/stable/)
+  - **_Most_** of the xarray API supports duck arrays, few aspects that still don't
+
+### [Xarray User Forum Talk Links](https://summit.dask.org/schedule/presentation/51/xarray-user-forum/)
+
+- Aureliana Barghini’s Talk
+
+  - [New backend plugin infrastructure](https://github.com/aurghs/xarray-backend-tutorial)
+
+- Links from Benoit Bovy’s talk
+
+  - [Flexible indexes design notes](https://github.com/pydata/xarray/blob/master/design_notes/flexible_indexes_notes.md)
+  - [Explicit indexes project](https://github.com/pydata/xarray/projects/1)
+
+- Davis Bennett’s talk
+
+  - [Hierarchical storage data structure in xarray](https://github.com/pydata/xarray/issues/4118)
+
+- Ravi Kumar’s talk:
+  - [Using Xarray to store statistical diagnostic data](https://github.com/arviz-devs/arviz_misc/tree/master/xarray_user_forum_2021)
+- Jack’s talk:
+  - [Xarray Fusion Research](https://xyzpy.readthedocs.io/en/latest/)
+
 ## How can we tie this back to ESDS?
 
 Several of these sessions included speakers/organizers from within NCAR, such as Anderson Banihirwe [(@andersy005)](https://github.com/andersy005) and Deepak Cherian [(@dcherian)](https://github.com/dcherian). They, along with several others with NCAR, could be considered the "passionate few". They are core developers of upstream projects such as Xarray and Dask, which are critical components to the scientific python ecosystem, especially for geoscience. The key to ESDS is growing the userbase, moving toward the "productive many".
@@ -66,4 +117,4 @@ We should see the ESDS initiative as an opportunity to test out these ideas, and
 - Continue to explore moving toward cloud-native datasets
 - Focus efforts on training people, making them contributors
 
-We should continue to foster collaboration across NCAR, finding opportunities to share our workflows, find improved methods of sharing code, and move outside of our typical "silos", toward a more open, inclusive, and collaborative environment. We can build on the tools already available within the scientific Python ecosystem, such as Dask, to continue to gather insight from the daily "big data"
+We should continue to foster collaboration across NCAR, finding opportunities to share our workflows, find improved methods of sharing code, and move outside of our typical "silos", toward a more open, inclusive, and collaborative environment. We can build on the tools already available within the scientific Python ecosystem, such as Dask, to continue to gather insight from large datasets within the geoscience community.
