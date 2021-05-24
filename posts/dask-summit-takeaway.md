@@ -20,9 +20,12 @@ tags: dask, conference, open-science
   - It can tough to pin down specific parts of code which is causing workers to die
 - We should get more science workflows in the cloud
   - Ensure these workflows are documented, especially in relation to dask
+  - Document cases of Dask workers being killed and how to go about solving these issues
+    - "Dask worker serial killers"
 - Minimum reproducible examples don't always work - instead, curate domain-specific examples
 - STAC (spatio-temporal asset catalog) can be helpful when working with satellite imagery, making it easy to search for specific datasets
   - Similar to intake, able to search spatially as well
+  - Recent development of [StackStac](https://stackstac.readthedocs.io/en/latest/) allows for fast loading of STAC catalogs
 
 ### [Pangeo Session Talk Links](https://summit.dask.org/schedule/presentation/1/pangeo/)
 
@@ -51,11 +54,13 @@ This session was a keynote focused on how these packages + ecosystem grew
   - Dedicating full time employees to work on community dev projects
   - Build the community as you go - this is essential
     - Sometimes it takes a while to build up your product... that's okay!
+- Really successful projects limit scope and provide interfaces
+  - Maybe success means that a project becomes an interface and becomes an underlying layer for something else
 - Working code solves most arguements
   - At the end of the day, someone has to sit down and code something up.. if it works, great!
 - Great projects start with a need
   - The conceptual idea is not always important - specific use cases are more important
-- You need to solve **_something_**
+- Start by solving **_something_**
   - This may require shrinking the scope to a more manageable size
 - Let teams go and do their own thing
   - Taken scope -> give to others -> do that thing
@@ -67,6 +72,7 @@ This session was a keynote focused on how these packages + ecosystem grew
   - Key idea - **_there are more smart people outside of your organization than inside your organization_**
   - If you try to do everything, it will inevitably fail - need to make it more simple
   - Unlock the community - entrain users, become contributors
+- At some point, it transitions to where you ["give away your legos"](https://review.firstround.com/give-away-your-legos-and-other-commandments-for-scaling-startups)
 - **_Provide scope and build people_**
   - Move towards "grassroots" not so much top down
 
@@ -75,13 +81,17 @@ This session was a keynote focused on how these packages + ecosystem grew
 - Xarray now includes a backend api, allowing contributors to add new backends for reading + operating on datasets
   - Including the `raw_indexing` method is important to enable lazy loading
 - Flexible indexing is coming to xarray soon
-  - Helps when dealing with irregular spaced data, working with projected coordinate systems, staggered grids
-  - Currently, Xarray uses pandas for indexing, which is problematic when wanting to do flexible indexing
+  - Helps when dealing with irregular spaced data, working with projected coordinate systems, staggered grids (ex. 2D lat-lon coordinate variables)
+  - Currently, Xarray uses pandas for indexing, which is problematic when wanting to do flexible indexing, only supporting 1D in-memory indexes
   - Current Xarray accessor - [Xoak](https://xoak.readthedocs.io/en/latest/)
     - See [previous blog post on working with unstructured grids](https://ncar.github.io/esds/posts/multiple_index_xarray_xoak/)
   - See the [design documents for flexible indexing in Xarray](https://github.com/pydata/xarray/blob/master/design_notes/flexible_indexes_notes.md)
 - Duck arrays are now supported in Xarray
+  - Duck arrays are arrays that **_look_** like numpy arrays in the sense that they have a similar api, but are fundamentally different data types (Ex. a [pint](https://pint.readthedocs.io/en/stable/tutorial.html) array which looks like a numpy array)
   - Helps when working with [pint](https://pint.readthedocs.io/en/stable/)
+  - Other examples of duck arrays
+    - [SciPy Sparse Matrices](https://docs.scipy.org/doc/scipy/reference/sparse.html)
+    - [CuPy](https://docs.cupy.dev/en/stable/user_guide/basic.html)
   - **_Most_** of the xarray API supports duck arrays, few aspects that still don't
 
 ### [Xarray User Forum Talk Links](https://summit.dask.org/schedule/presentation/51/xarray-user-forum/)
@@ -102,7 +112,6 @@ This session was a keynote focused on how these packages + ecosystem grew
 - Ravi Kumar’s talk:
   - [Using Xarray to store statistical diagnostic data](https://github.com/arviz-devs/arviz_misc/tree/master/xarray_user_forum_2021)
 - Jack’s talk:
-  - [Xarray Fusion Research](https://xyzpy.readthedocs.io/en/latest/)
 
 ## How can we tie this back to ESDS?
 
