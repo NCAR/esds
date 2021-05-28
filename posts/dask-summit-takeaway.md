@@ -76,7 +76,7 @@ This session was a keynote focused on how these packages + ecosystem grew
 - **_Provide scope and build people_**
   - Move towards "grassroots" not so much top down
 
-## Xarray User Forum + Updates
+## [Xarray User Forum + Updates](https://zoom.us/rec/share/3AnbFtOiRIARD3A6MdM1F0PrMvpASQxJQNWbt6pppYpRrx33EFGQYy-wLQWVQZ-H.bl2gwN915ju9aidF?startTime=1621402478000)
 
 - Xarray now includes a backend api, allowing contributors to add new backends for reading + operating on datasets
   - Including the `raw_indexing` method is important to enable lazy loading
@@ -111,7 +111,21 @@ This session was a keynote focused on how these packages + ecosystem grew
 
 - Ravi Kumar’s talk:
   - [Using Xarray to store statistical diagnostic data](https://github.com/arviz-devs/arviz_misc/tree/master/xarray_user_forum_2021)
-- Jack’s talk:
+
+## [Dask on High Performance Computing Systems](https://zoom.us/rec/share/25oqsPdh_ZeZSFmvvbOLzJ0Sa8Q7py6GiLrVra8UHJmi0rZ1YLm69Jpt9NUiN4Cm.1MS7-WLlIPa3Ewku?startTime=1621519269000)
+
+- Dask-jobqueue provides a uniform api to spinning up dask-clusters, interfacing with scheduler
+- MPI-based communication with Dask shows promising results
+- We are fortunate to have the HPC system we have (Cheyenne/Casper)
+  - In terms of data access, integration of compute and login nodes
+  - [NCAR JupyterHub](jupyterhub.ucar.edu) which enables improved access to Jupyter environment
+
+### [Dask on HPC Talk Links](https://summit.dask.org/schedule/presentation/34/dask-in-hpc/)
+
+- Anderson
+  - [The Current State of Deploying Dask on HPC Systems](https://nbviewer.jupyter.org/github/andersy005/brouillons-quotidien/blob/main/dask/dask-cupy-multi-node-gpu.ipynb)
+- Tina
+  - [Real Time Monitoring of HPC Simulation Outputs using Dask and Xarray](https://github.com/It4innovations/rsds)
 
 ## How can we tie this back to ESDS?
 
