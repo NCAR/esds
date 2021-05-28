@@ -123,9 +123,12 @@ This session was a keynote focused on how these packages + ecosystem grew
 ### [Dask on HPC Talk Links](https://summit.dask.org/schedule/presentation/34/dask-in-hpc/)
 
 - Anderson
-  - [The Current State of Deploying Dask on HPC Systems](https://nbviewer.jupyter.org/github/andersy005/brouillons-quotidien/blob/main/dask/dask-cupy-multi-node-gpu.ipynb)
+  - The Current State of Deploying Dask on HPC Systems
+    - [Presentation](https://talks.andersonbanihirwe.dev/deploying-dask-on-hpc-dask-summit-2021.html)
+    - [Notebook example](https://nbviewer.jupyter.org/github/andersy005/brouillons-quotidien/blob/main/dask/dask-cupy-multi-node-gpu.ipynb)
 - Tina
-  - [Real Time Monitoring of HPC Simulation Outputs using Dask and Xarray](https://github.com/It4innovations/rsds)
+  - Real Time Monitoring of HPC Simulation Outputs using Dask and Xarray
+    - [Dask scheduler written in Rust](https://github.com/It4innovations/rsds)
 
 ## How can we tie this back to ESDS?
 
