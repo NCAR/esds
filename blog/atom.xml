@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2021-06-04T14:36:38.799870+00:00</updated>
+  <updated>2021-06-04T20:49:55.555469+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.19">ABlog</generator>
@@ -191,5 +191,21 @@
     <category term="conference" label="conference"/>
     <category term="open-science" label="open-science"/>
     <published>2021-05-28T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/ecgtools-history-files-example/</id>
+    <title>Building an Intake-esm catalog from CESM2 History Files</title>
+    <updated>2021-06-04T00:00:00+00:00</updated>
+    <author>
+      <name>Max Grover</name>
+    </author>
+    <content type="html">&lt;p&gt;As mentioned in a couple of ESDS posts (&lt;a class="reference external" href="https://ncar.github.io/esds/posts/intake_esm_dask/"&gt;intake-esm and Dask&lt;/a&gt;, &lt;a class="reference external" href="https://ncar.github.io/esds/posts/intake_cmip6_debug/"&gt;debugging intake-esm&lt;/a&gt;), &lt;a class="reference external" href="https://intake-esm.readthedocs.io/en/latest/"&gt;intake-esm&lt;/a&gt; can be a helpful tool to work with when dealing with model data, especially CESM. One of the requirements for using intake-esm is having a catalog which is comprised of two pieces:&lt;/p&gt;
+&lt;p&gt;A table of the relevant metadata (ex. file path, variable, stream, etc.)&lt;/p&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/ecgtools-history-files-example/" rel="alternate"/>
+    <summary>As mentioned in a couple of ESDS posts (intake-esm and Dask, debugging intake-esm), intake-esm can be a helpful tool to work with when dealing with model data, especially CESM. One of the requirements for using intake-esm is having a catalog which is comprised of two pieces:A table of the relevant metadata (ex. file path, variable, stream, etc.)</summary>
+    <category term="intake" label="intake"/>
+    <category term="cesm" label="cesm"/>
+    <published>2021-06-04T00:00:00+00:00</published>
   </entry>
 </feed>
