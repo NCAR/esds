@@ -38,6 +38,16 @@ See the xarray [ecosystem](https://xarray.pydata.org/en/latest/ecosystem.html) p
 1. pop-tools
 1. xskillscore
 
+## Conda Environments
+
+### General Advice
+
+Dealing with Python environments can be tricky... a good place to start is to checkout [this guide on dealing with Python environments](https://whiteboxml.com/blog/the-definitive-guide-to-python-virtual-environments-with-conda)
+
+### Conda Environments on JupyterHub
+
+The Computational and Information Systems Lab (CISL) at NCAR put together some [good documentation](https://www2.cisl.ucar.edu/resources/conda-environments) on dealing with environments on Casper/Cheyenne
+
 ## Xarray and Dask
 
 ### General tips
