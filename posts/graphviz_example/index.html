@@ -1,0 +1,974 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creating Visualizations of Intake-ESM Catalogs &#8212; NCAR-ESDS 0.1 documentation</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "NCAR/esds");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <link rel="author" title="About these documents" href="../../about/" />
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+     
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../blog/atom.xml"
+  title="NCAR ESDS"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+<a class="navbar-brand" href="../../">
+<p class="title">NCAR-ESDS</p>
+</a>
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../about/">
+  About Us
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../faq/">
+  Frequently Asked Questions
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../blog/">
+  Blog
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../communication/">
+  Communication
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../best-practices/">
+  Best Practices
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/ncar/esds" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">  
+<h2>
+   <i class="fa fa-calendar"></i>
+  11 June 2021 
+</h2>
+
+<ul>
+   
+<li id="author">
+  <span
+    ><i class="fa-fw fa fa-user"></i></span
+  >
+   
+  <a href="../../blog/author/max-grover/">Max Grover</a>  
+</li>
+    
+<li id="tags">
+  <span
+    ><i class="fa-fw fa fa-tags"></i> </span
+  >
+   
+  <a href="../../blog/tag/visualization/">visualization</a>   
+  <a href="../../blog/tag/intake/">intake</a>   
+  <a href="../../blog/tag/cesm/">cesm</a>  
+</li>
+ 
+</ul>
+
+<h3>
+  <a href="../../blog/">Recent Posts</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="../ecgtools-history-files-example/"
+      >04 June - Building an Intake-esm catalog from CESM2 History Files</a
+    >
+  </li>
+  
+  <li>
+    <a href="../dask-summit-takeaway/"
+      >28 May - Dask Distributed Summit 2021 Takeaways</a
+    >
+  </li>
+  
+  <li>
+    <a href="../intake_cmip6_debug/"
+      >14 May - Debugging Intake-ESM Process for Reading in CMIP6</a
+    >
+  </li>
+  
+  <li>
+    <a href="../paired_programming_vs/"
+      >06 May - Paired Programming using VS Code</a
+    >
+  </li>
+  
+  <li>
+    <a href="../map_blocks_example/"
+      >28 April - How to Use xarray.map_blocks for Vertical Interpolation of a 3D Field</a
+    >
+  </li>
+  
+</ul>
+
+<h3>
+  <a href="../../blog/archive/">Archives</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="../../blog/2021/">2021 (13)</a>
+  </li>
+   
+</ul>
+
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#imports">
+   Imports
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#read-in-intake-esm-catalog">
+   Read in intake-esm catalog
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-graphviz-in-a-jupyter-notebook">
+   Using Graphviz in a Jupyter Notebook
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#main-components-of-graphviz">
+     Main “components” of Graphviz
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-of-case-visualization">
+     Example of case visualization
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#looping-through-the-cesm-le-catalog">
+     Looping through the CESM-LE catalog
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusion">
+   Conclusion
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                 <div class="section" id="creating-visualizations-of-intake-esm-catalogs">
+<h1>Creating Visualizations of Intake-ESM Catalogs<a class="headerlink" href="#creating-visualizations-of-intake-esm-catalogs" title="Permalink to this headline">¶</a></h1>
+<p>A common initial task when working with a new dataset is figuring out what data is available. This is especially true when working with climate ensembles with several components and time-frequency output (ex. Community Earth System Model Large Ensemble, CESM-LE). Here, we will examine different methods of investigating this catalog</p>
+<div class="section" id="imports">
+<h2>Imports<a class="headerlink" href="#imports" title="Permalink to this headline">¶</a></h2>
+<p>Here, we will use <a class="reference external" href="https://intake-esm.readthedocs.io/en/latest/">intake-esm</a> and <a class="reference external" href="https://graphviz.readthedocs.io/en/stable/manual.html">graphviz</a>, which can be installed using the following (including jupyterlab too!)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">jupyterlab</span> <span class="n">intake</span><span class="o">-</span><span class="n">esm</span> <span class="n">graphviz</span>
+</pre></div>
+</div>
+<p>Once you install these packages, open jupyterlab!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">intake</span>
+<span class="kn">from</span> <span class="nn">graphviz</span> <span class="kn">import</span> <span class="n">Digraph</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="read-in-intake-esm-catalog">
+<h2>Read in intake-esm catalog<a class="headerlink" href="#read-in-intake-esm-catalog" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">col</span> <span class="o">=</span> <span class="n">intake</span><span class="o">.</span><span class="n">open_esm_datastore</span><span class="p">(</span>
+    <span class="s1">&#39;https://raw.githubusercontent.com/NCAR/cesm-lens-aws/master/intake-catalogs/aws-cesm1-le.json&#39;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Typically, the process is to read in the dataframe containing the metadata, but this can be tough to read/understand what data is all there</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">col</span><span class="o">.</span><span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>variable</th>
+      <th>long_name</th>
+      <th>component</th>
+      <th>experiment</th>
+      <th>frequency</th>
+      <th>vertical_levels</th>
+      <th>spatial_domain</th>
+      <th>units</th>
+      <th>start_time</th>
+      <th>end_time</th>
+      <th>path</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>FLNS</td>
+      <td>net longwave flux at surface</td>
+      <td>atm</td>
+      <td>20C</td>
+      <td>daily</td>
+      <td>1.0</td>
+      <td>global</td>
+      <td>W/m2</td>
+      <td>1920-01-01 12:00:00</td>
+      <td>2005-12-31 12:00:00</td>
+      <td>s3://ncar-cesm-lens/atm/daily/cesmLE-20C-FLNS....</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>FLNSC</td>
+      <td>clearsky net longwave flux at surface</td>
+      <td>atm</td>
+      <td>20C</td>
+      <td>daily</td>
+      <td>1.0</td>
+      <td>global</td>
+      <td>W/m2</td>
+      <td>1920-01-01 12:00:00</td>
+      <td>2005-12-31 12:00:00</td>
+      <td>s3://ncar-cesm-lens/atm/daily/cesmLE-20C-FLNSC...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>FLUT</td>
+      <td>upwelling longwave flux at top of model</td>
+      <td>atm</td>
+      <td>20C</td>
+      <td>daily</td>
+      <td>1.0</td>
+      <td>global</td>
+      <td>W/m2</td>
+      <td>1920-01-01 12:00:00</td>
+      <td>2005-12-31 12:00:00</td>
+      <td>s3://ncar-cesm-lens/atm/daily/cesmLE-20C-FLUT....</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>FSNS</td>
+      <td>net solar flux at surface</td>
+      <td>atm</td>
+      <td>20C</td>
+      <td>daily</td>
+      <td>1.0</td>
+      <td>global</td>
+      <td>W/m2</td>
+      <td>1920-01-01 12:00:00</td>
+      <td>2005-12-31 12:00:00</td>
+      <td>s3://ncar-cesm-lens/atm/daily/cesmLE-20C-FSNS....</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>FSNSC</td>
+      <td>clearsky net solar flux at surface</td>
+      <td>atm</td>
+      <td>20C</td>
+      <td>daily</td>
+      <td>1.0</td>
+      <td>global</td>
+      <td>W/m2</td>
+      <td>1920-01-01 12:00:00</td>
+      <td>2005-12-31 12:00:00</td>
+      <td>s3://ncar-cesm-lens/atm/daily/cesmLE-20C-FSNSC...</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>430</th>
+      <td>WVEL</td>
+      <td>vertical velocity</td>
+      <td>ocn</td>
+      <td>RCP85</td>
+      <td>monthly</td>
+      <td>60.0</td>
+      <td>global_ocean</td>
+      <td>centimeter/s</td>
+      <td>2006-01-16 12:00:00</td>
+      <td>2100-12-16 12:00:00</td>
+      <td>s3://ncar-cesm-lens/ocn/monthly/cesmLE-RCP85-W...</td>
+    </tr>
+    <tr>
+      <th>431</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>ocn</td>
+      <td>CTRL</td>
+      <td>static</td>
+      <td>NaN</td>
+      <td>global_ocean</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>s3://ncar-cesm-lens/ocn/static/grid.zarr</td>
+    </tr>
+    <tr>
+      <th>432</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>ocn</td>
+      <td>HIST</td>
+      <td>static</td>
+      <td>NaN</td>
+      <td>global_ocean</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>s3://ncar-cesm-lens/ocn/static/grid.zarr</td>
+    </tr>
+    <tr>
+      <th>433</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>ocn</td>
+      <td>RCP85</td>
+      <td>static</td>
+      <td>NaN</td>
+      <td>global_ocean</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>s3://ncar-cesm-lens/ocn/static/grid.zarr</td>
+    </tr>
+    <tr>
+      <th>434</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>ocn</td>
+      <td>20C</td>
+      <td>static</td>
+      <td>NaN</td>
+      <td>global_ocean</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>s3://ncar-cesm-lens/ocn/static/grid.zarr</td>
+    </tr>
+  </tbody>
+</table>
+<p>435 rows × 11 columns</p>
+</div></div></div>
+</div>
+<p>You can search via intake-esm, using the following syntax</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span> <span class="o">=</span> <span class="n">col</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">experiment</span><span class="o">=</span><span class="s1">&#39;20C&#39;</span><span class="p">,</span> <span class="n">frequency</span><span class="o">=</span><span class="s1">&#39;monthly&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here again, it is tough to see everything that is here, also it requires knowing which experiments are in the dataset, and which frequency you are looking for</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span><span class="o">.</span><span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>variable</th>
+      <th>long_name</th>
+      <th>component</th>
+      <th>experiment</th>
+      <th>frequency</th>
+      <th>vertical_levels</th>
+      <th>spatial_domain</th>
+      <th>units</th>
+      <th>start_time</th>
+      <th>end_time</th>
+      <th>path</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>FLNS</td>
+      <td>net longwave flux at surface</td>
+      <td>atm</td>
+      <td>20C</td>
+      <td>monthly</td>
+      <td>1.0</td>
+      <td>global</td>
+      <td>W/m2</td>
+      <td>1920-01-16 12:00:00</td>
+      <td>2005-12-16 12:00:00</td>
+      <td>s3://ncar-cesm-lens/atm/monthly/cesmLE-20C-FLN...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>FLNSC</td>
+      <td>clearsky net longwave flux at surface</td>
+      <td>atm</td>
+      <td>20C</td>
+      <td>monthly</td>
+      <td>1.0</td>
+      <td>global</td>
+      <td>W/m2</td>
+      <td>1920-01-16 12:00:00</td>
+      <td>2005-12-16 12:00:00</td>
+      <td>s3://ncar-cesm-lens/atm/monthly/cesmLE-20C-FLN...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>FLUT</td>
+      <td>upwelling longwave flux at top of model</td>
+      <td>atm</td>
+      <td>20C</td>
+      <td>monthly</td>
+      <td>1.0</td>
+      <td>global</td>
+      <td>W/m2</td>
+      <td>1920-01-16 12:00:00</td>
+      <td>2005-12-16 12:00:00</td>
+      <td>s3://ncar-cesm-lens/atm/monthly/cesmLE-20C-FLU...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>FSNS</td>
+      <td>net solar flux at surface</td>
+      <td>atm</td>
+      <td>20C</td>
+      <td>monthly</td>
+      <td>1.0</td>
+      <td>global</td>
+      <td>W/m2</td>
+      <td>1920-01-16 12:00:00</td>
+      <td>2005-12-16 12:00:00</td>
+      <td>s3://ncar-cesm-lens/atm/monthly/cesmLE-20C-FSN...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>FSNSC</td>
+      <td>clearsky net solar flux at surface</td>
+      <td>atm</td>
+      <td>20C</td>
+      <td>monthly</td>
+      <td>1.0</td>
+      <td>global</td>
+      <td>W/m2</td>
+      <td>1920-01-16 12:00:00</td>
+      <td>2005-12-16 12:00:00</td>
+      <td>s3://ncar-cesm-lens/atm/monthly/cesmLE-20C-FSN...</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>60</th>
+      <td>VNT</td>
+      <td>flux of heat in grid-y direction</td>
+      <td>ocn</td>
+      <td>20C</td>
+      <td>monthly</td>
+      <td>60.0</td>
+      <td>global_ocean</td>
+      <td>degC/s</td>
+      <td>1920-01-16 12:00:00</td>
+      <td>2005-12-16 12:00:00</td>
+      <td>s3://ncar-cesm-lens/ocn/monthly/cesmLE-20C-VNT...</td>
+    </tr>
+    <tr>
+      <th>61</th>
+      <td>VVEL</td>
+      <td>velocity in grid-y direction</td>
+      <td>ocn</td>
+      <td>20C</td>
+      <td>monthly</td>
+      <td>60.0</td>
+      <td>global_ocean</td>
+      <td>centimeter/s</td>
+      <td>1920-01-16 12:00:00</td>
+      <td>2005-12-16 12:00:00</td>
+      <td>s3://ncar-cesm-lens/ocn/monthly/cesmLE-20C-VVE...</td>
+    </tr>
+    <tr>
+      <th>62</th>
+      <td>WTS</td>
+      <td>salt flux across top face</td>
+      <td>ocn</td>
+      <td>20C</td>
+      <td>monthly</td>
+      <td>60.0</td>
+      <td>global_ocean</td>
+      <td>gram/kilogram/s</td>
+      <td>1920-01-16 12:00:00</td>
+      <td>2005-12-16 12:00:00</td>
+      <td>s3://ncar-cesm-lens/ocn/monthly/cesmLE-20C-WTS...</td>
+    </tr>
+    <tr>
+      <th>63</th>
+      <td>WTT</td>
+      <td>heat flux across top face</td>
+      <td>ocn</td>
+      <td>20C</td>
+      <td>monthly</td>
+      <td>60.0</td>
+      <td>global_ocean</td>
+      <td>degC/s</td>
+      <td>1920-01-16 12:00:00</td>
+      <td>2005-12-16 12:00:00</td>
+      <td>s3://ncar-cesm-lens/ocn/monthly/cesmLE-20C-WTT...</td>
+    </tr>
+    <tr>
+      <th>64</th>
+      <td>WVEL</td>
+      <td>vertical velocity</td>
+      <td>ocn</td>
+      <td>20C</td>
+      <td>monthly</td>
+      <td>60.0</td>
+      <td>global_ocean</td>
+      <td>centimeter/s</td>
+      <td>1920-01-16 12:00:00</td>
+      <td>2005-12-16 12:00:00</td>
+      <td>s3://ncar-cesm-lens/ocn/monthly/cesmLE-20C-WVE...</td>
+    </tr>
+  </tbody>
+</table>
+<p>65 rows × 11 columns</p>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="using-graphviz-in-a-jupyter-notebook">
+<h2>Using Graphviz in a Jupyter Notebook<a class="headerlink" href="#using-graphviz-in-a-jupyter-notebook" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://graphviz.readthedocs.io/en/stable/manual.html">Graphviz</a> offers an interface to create network graphs</p>
+<div class="section" id="main-components-of-graphviz">
+<h3>Main “components” of <a class="reference external" href="https://graphviz.readthedocs.io/en/stable/manual.html">Graphviz</a><a class="headerlink" href="#main-components-of-graphviz" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Digraph class</p>
+<ul>
+<li><p>This is the main class that is used to build the visualization - typically assign to a variable <code class="docutils literal notranslate"><span class="pre">dot</span></code>, but you can use any variable you like!</p></li>
+</ul>
+</li>
+<li><p>Node</p>
+<ul>
+<li><p>The “bubbles” which contain a numbered label (ex. ‘1’) and a label (ex. ‘HIST’)</p></li>
+<li><p>These can be connected together - the <strong>numbered label must be a unique integer</strong></p></li>
+</ul>
+</li>
+<li><p>Edge</p>
+<ul>
+<li><p>Edges connect the different nodes, using the numbered indices (ex. <code class="docutils literal notranslate"><span class="pre">.edge('1',</span> <span class="pre">'3')</span></code> would connect the first and third nodes</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="example-of-case-visualization">
+<h3>Example of case visualization<a class="headerlink" href="#example-of-case-visualization" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create Digraph object</span>
+<span class="n">dot</span> <span class="o">=</span> <span class="n">Digraph</span><span class="p">()</span>
+
+<span class="c1"># Create the first node which serves as the main parent</span>
+<span class="n">dot</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;HIST&#39;</span><span class="p">)</span>
+
+<span class="n">dot</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;ocn&#39;</span><span class="p">)</span>
+<span class="n">dot</span><span class="o">.</span><span class="n">edge</span><span class="p">(</span><span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="s1">&#39;2&#39;</span><span class="p">)</span>
+
+<span class="c1"># Add a monthly child from the ocn component parent</span>
+<span class="n">dot</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="s1">&#39;3&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;monthly&#39;</span><span class="p">)</span>
+<span class="n">dot</span><span class="o">.</span><span class="n">edge</span><span class="p">(</span><span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="s1">&#39;3&#39;</span><span class="p">)</span>
+
+<span class="c1"># Add a daily child from the ocn component parent</span>
+<span class="n">dot</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="s1">&#39;4&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;daily&#39;</span><span class="p">)</span>
+<span class="n">dot</span><span class="o">.</span><span class="n">edge</span><span class="p">(</span><span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="s1">&#39;4&#39;</span><span class="p">)</span>
+
+<span class="c1"># Add an atm component node and connect to experiment parent</span>
+<span class="n">dot</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="s1">&#39;5&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;atm&#39;</span><span class="p">)</span>
+<span class="n">dot</span><span class="o">.</span><span class="n">edge</span><span class="p">(</span><span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="s1">&#39;5&#39;</span><span class="p">)</span>
+
+<span class="c1"># Add a monthly child from the atm component parent</span>
+<span class="n">dot</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="s1">&#39;6&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;monthly&#39;</span><span class="p">)</span>
+<span class="n">dot</span><span class="o">.</span><span class="n">edge</span><span class="p">(</span><span class="s1">&#39;5&#39;</span><span class="p">,</span> <span class="s1">&#39;6&#39;</span><span class="p">)</span>
+
+<span class="c1"># Add a weekly child from the atm component parent</span>
+<span class="n">dot</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="s1">&#39;7&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;weekly&#39;</span><span class="p">)</span>
+<span class="n">dot</span><span class="o">.</span><span class="n">edge</span><span class="p">(</span><span class="s1">&#39;5&#39;</span><span class="p">,</span> <span class="s1">&#39;7&#39;</span><span class="p">)</span>
+
+<span class="c1"># Visualize the graph</span>
+<span class="n">dot</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/graphviz_example_14_0.svg" src="../../_images/graphviz_example_14_0.svg" /></div>
+</div>
+</div>
+<div class="section" id="looping-through-the-cesm-le-catalog">
+<h3>Looping through the CESM-LE catalog<a class="headerlink" href="#looping-through-the-cesm-le-catalog" title="Permalink to this headline">¶</a></h3>
+<p>Let’s apply this to our data catalog, assigning the dataframe with dataset attributes to <code class="docutils literal notranslate"><span class="pre">df</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">col</span><span class="o">.</span><span class="n">df</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create Digraph object - use the left to right orientation instead of vertical</span>
+<span class="n">dot</span> <span class="o">=</span> <span class="n">Digraph</span><span class="p">(</span><span class="n">graph_attr</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;rankdir&#39;</span><span class="p">:</span> <span class="s1">&#39;LR&#39;</span><span class="p">})</span>
+
+<span class="c1"># Start counting at one for node numbers</span>
+<span class="n">num_node</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="c1"># Loop through the different experiments</span>
+<span class="k">for</span> <span class="n">experiment</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">experiment</span><span class="o">.</span><span class="n">unique</span><span class="p">():</span>
+    <span class="n">exp_i</span> <span class="o">=</span> <span class="n">num_node</span>
+    <span class="n">dot</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">exp_i</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="n">experiment</span><span class="p">)</span>
+    <span class="n">num_node</span> <span class="o">+=</span> <span class="mi">1</span>
+
+    <span class="c1"># Loop through the different components in each experiment</span>
+    <span class="k">for</span> <span class="n">component</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">experiment</span> <span class="o">==</span> <span class="n">experiment</span><span class="p">]</span><span class="o">.</span><span class="n">component</span><span class="o">.</span><span class="n">unique</span><span class="p">():</span>
+        <span class="n">comp_i</span> <span class="o">=</span> <span class="n">num_node</span>
+        <span class="n">dot</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">comp_i</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="n">component</span><span class="p">)</span>
+        <span class="n">dot</span><span class="o">.</span><span class="n">edge</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">exp_i</span><span class="p">),</span> <span class="nb">str</span><span class="p">(</span><span class="n">comp_i</span><span class="p">))</span>
+        <span class="n">num_node</span> <span class="o">+=</span> <span class="mi">1</span>
+
+        <span class="c1"># Loop through the frequency in each component within each experiment</span>
+        <span class="k">for</span> <span class="n">frequency</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span>
+            <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">experiment</span> <span class="o">==</span> <span class="n">experiment</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">component</span> <span class="o">==</span> <span class="n">component</span><span class="p">)</span>
+        <span class="p">]</span><span class="o">.</span><span class="n">frequency</span><span class="o">.</span><span class="n">unique</span><span class="p">():</span>
+            <span class="n">freq_i</span> <span class="o">=</span> <span class="n">num_node</span>
+            <span class="n">dot</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">freq_i</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="n">frequency</span><span class="p">)</span>
+            <span class="n">dot</span><span class="o">.</span><span class="n">edge</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">comp_i</span><span class="p">),</span> <span class="nb">str</span><span class="p">(</span><span class="n">freq_i</span><span class="p">))</span>
+            <span class="n">num_node</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">comp_i</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">exp_i</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dot</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/graphviz_example_19_0.svg" src="../../_images/graphviz_example_19_0.svg" /></div>
+</div>
+</div>
+</div>
+<div class="section" id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://graphviz.readthedocs.io/en/stable/manual.html">Graphviz</a> can be a helpful tool when visualizing what data is within your data catalog - I hope this provides a good starting point in terms of using this with <a class="reference external" href="https://intake-esm.readthedocs.io/en/latest/">intake-esm</a> catalogs!</p>
+</div>
+</div>
+
+<div class="section">
+     
+<div class="section">
+  <span style="float: left">
+     
+    <a href="../ecgtools-history-files-example/">
+      <i class="fa fa-arrow-circle-left"></i> Building an Intake-esm catalog from CESM2 History Files
+    </a>
+    
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right">
+    
+  </span>
+</div>
+  
+</div>
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-B50ZRRN69X"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('config', 'G-B50ZRRN69X');
+                </script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021, NCAR Earth System Data Science Team.<br/>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.4.<br/>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

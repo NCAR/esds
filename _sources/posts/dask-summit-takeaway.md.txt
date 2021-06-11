@@ -48,7 +48,7 @@ tags: dask, conference, open-science
 
 This session was a keynote focused on how these packages + ecosystem grew
 
-- Key question - how do you get from a few passionate few to productive many?
+- Key question: how do you get from a few passionate few to productive many?
   - Keep your motivated few to less than 5 people
 - Where efforts should be focused
   - Dedicating full time employees to work on community dev projects

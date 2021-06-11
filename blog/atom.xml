@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2021-06-08T14:47:00.130632+00:00</updated>
+  <updated>2021-06-11T21:45:06.979600+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.19">ABlog</generator>
@@ -207,5 +207,22 @@
     <category term="intake" label="intake"/>
     <category term="cesm" label="cesm"/>
     <published>2021-06-04T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/graphviz_example/</id>
+    <title>Creating Visualizations of Intake-ESM Catalogs</title>
+    <updated>2021-06-11T00:00:00+00:00</updated>
+    <author>
+      <name>Max Grover</name>
+    </author>
+    <content type="html">&lt;p&gt;A common initial task when working with a new dataset is figuring out what data is available. This is especially true when working with climate ensembles with several components and time-frequency output (ex. Community Earth System Model Large Ensemble, CESM-LE). Here, we will examine different methods of investigating this catalog&lt;/p&gt;
+&lt;p&gt;Here, we will use &lt;a class="reference external" href="https://intake-esm.readthedocs.io/en/latest/"&gt;intake-esm&lt;/a&gt; and &lt;a class="reference external" href="https://graphviz.readthedocs.io/en/stable/manual.html"&gt;graphviz&lt;/a&gt;, which can be installed using the following (including jupyterlab too!)&lt;/p&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/graphviz_example/" rel="alternate"/>
+    <summary>A common initial task when working with a new dataset is figuring out what data is available. This is especially true when working with climate ensembles with several components and time-frequency output (ex. Community Earth System Model Large Ensemble, CESM-LE). Here, we will examine different methods of investigating this catalogHere, we will use intake-esm and graphviz, which can be installed using the following (including jupyterlab too!)</summary>
+    <category term="visualization" label="visualization"/>
+    <category term="intake" label="intake"/>
+    <category term="cesm" label="cesm"/>
+    <published>2021-06-11T00:00:00+00:00</published>
   </entry>
 </feed>
