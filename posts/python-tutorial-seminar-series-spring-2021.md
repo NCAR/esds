@@ -15,8 +15,6 @@ All events are at 1 PM Mountain
 _February 24, 2021_ - Jupyter Notebooks <br>
 An introduction to Jupyter Notebooks that will be fundamental for following many subsequent tutorials.
 
-<!-- TEASER_END -->
-
 _March 10, 2021_ - Numpy <br>
 An introduction to essential Numpy functionality.
 

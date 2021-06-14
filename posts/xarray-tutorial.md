@@ -14,8 +14,6 @@ The content for this tutorial is hosted on Anderson's [Xarray Tutorial Github Re
 
 - Check your conda install if this is the first tutorial in the series you are joining us for with `conda --version` and if necessary [install by following these instructions](https://docs.conda.io/en/latest/miniconda.html).
 
-<!-- TEASER_END -->
-
 - Navigate to Anderson's [Xarray Tutorial Github Repository](https://github.com/andersy005/xarray-tutorial).
 
 - Clone this repository by clicking the green "Code" button and copying the SSH address under the word "Clone". This can be done by clicking the clipboard icon.

@@ -14,8 +14,6 @@ The content for this tutorial is hosted on Austin's [oop_hrrr_tutorial GitHub re
 
 - Check your conda install if this is the first tutorial in the series you are joining us for with `conda --version` and if necessary [install by following these instructions](https://docs.conda.io/en/latest/miniconda.html).
 
-<!-- TEASER_END -->
-
 _These commands are to be run in the terminal_
 
 - Clone the GitHub repository locally with:

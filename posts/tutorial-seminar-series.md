@@ -8,8 +8,6 @@ tags: python-tutorial-series
 
 Because we are unable to host an in-person tutorial for this fall season, the Xdev team has decided to switch to a virtual seminar series. We will be hosting one hour tutorial sessions scheduled for the 2nd and 4th Wednesdays of each month at 1 PM Mountain starting in October. The first tutorial session, covering how to create your first Python script, will be on October 14th. Some tutorials will be 1-off seminars on specific topics, while others will span multiple seminar sessions.
 
-<!-- TEASER_END -->
-
 Remote tutorials offer their own challenges; no one from our team can walk around the room to notice if anyone needs technical help or one-on-one assistance during a challenging topic. We believe that one hour sessions make it easier for participants to reach out and get the help they need to catch up before the next session of a multi-part seminar, so that we can more effectively reach our education goals.
 
 We will begin by following through the [Xdev tutorial website](https://ncar.github.io/python-tutorial/), designed to introduce Python to scientists who already have a good deal of programming experience, albeit with a different language. If you are tired of reading tutorials that waste your time with things you already know about programming, or you are tired of tutorials that leap into advanced third-party packages without explaining why Python is unique, then this is the tutorial is for you!
