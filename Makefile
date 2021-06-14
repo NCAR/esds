@@ -12,6 +12,9 @@ BUILDDIR      = _build
 help:
 	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
+live:
+	sphinx-autobuild --ignore */.github/* --ignore */tmp/* "$(SOURCEDIR)" _build/dirhtml/ --port 9999
+
 .PHONY: help Makefile
 
 # Catch-all target: route all unknown targets to Sphinx using the new
