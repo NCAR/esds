@@ -4,13 +4,13 @@ date: 2021-4-06
 tags: jupyterhub, dask
 ---
 
-## Using Dask on the New Casper PBS Scheduler
+# Using Dask on the New Casper PBS Scheduler
 
 Casper will complete a transition from Slurm to the PBS Pro workload manager on April 7, 2021. This has implications for how to spin up a Dask cluster, including via the [NCAR Jupyterhub](https://jupyterhub.ucar.edu).
 
 Below is an example script suitable for the new configuration using the `PBSCluster` function from `dask_jobqueue`. Note that the `ncar_jobqueue` package [requires updating](https://github.com/NCAR/ncar-jobqueue/issues/40) to work with the new configuration.
 
-### Example using new Casper-batch login
+## Example using new Casper-batch login
 
 ```python
 # Import dask
