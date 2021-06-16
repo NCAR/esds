@@ -57,7 +57,6 @@ html_theme = 'pydata_sphinx_theme'
 html_theme_options = {
     'github_url': 'https://github.com/ncar/esds',
     'search_bar_text': 'Search this site... ',
-    'search_bar_position': 'navbar',
     'google_analytics_id': 'G-B50ZRRN69X',
 }
 
@@ -90,8 +89,9 @@ post_auto_excerpt = 2
 panels_add_bootstrap_css = False
 
 # MyST config
-myst_admonition_enable = True
-myst_deflist_enable = True
+myst_enable_extensions = ['amsmath', 'colon_fence', 'deflist', 'html_image']
+myst_url_schemes = ('http', 'https', 'mailto')
+
 
 # Temporarily stored as off until we fix it
 jupyter_execute_notebooks = 'off'
