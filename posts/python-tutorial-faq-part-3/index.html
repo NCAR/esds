@@ -1,0 +1,428 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Python Tutorial FAQ - Part 3 &#8212; NCAR-ESDS 0.1 documentation</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "NCAR/esds");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <link rel="author" title="About these documents" href="../../about/" />
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+     
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../blog/atom.xml"
+  title="NCAR ESDS"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+<a class="navbar-brand" href="../../">
+<p class="title">NCAR-ESDS</p>
+</a>
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../about/">
+  About Us
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../faq/">
+  Frequently Asked Questions
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../blog/">
+  Blog
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../communication/">
+  Communication
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../best-practices/">
+  Best Practices
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/ncar/esds" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">  
+<h2>
+   <i class="fa fa-calendar"></i>
+  18 November 2020 
+</h2>
+
+<ul>
+   
+<li id="author">
+  <span
+    ><i class="fa-fw fa fa-user"></i></span
+  >
+   
+  <a href="../../blog/author/julia-kent/">Julia Kent</a>  
+</li>
+    
+<li id="tags">
+  <span
+    ><i class="fa-fw fa fa-tags"></i> </span
+  >
+   
+  <a href="../../blog/tag/python-tutorial-series/">python-tutorial-series</a>   
+  <a href="../../blog/tag/faq/">faq</a>   
+  <a href="../../blog/tag/python/">python</a>  
+</li>
+ 
+</ul>
+
+<h3>
+  <a href="../../blog/">Recent Posts</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="../graphviz_example/"
+      >11 June - Creating Visualizations of Intake-ESM Catalogs</a
+    >
+  </li>
+  
+  <li>
+    <a href="../xarray-tutorial/"
+      >04 June - Xarray Tutorial</a
+    >
+  </li>
+  
+  <li>
+    <a href="../ecgtools-history-files-example/"
+      >04 June - Building an Intake-esm catalog from CESM2 History Files</a
+    >
+  </li>
+  
+  <li>
+    <a href="../dask-summit-takeaway/"
+      >28 May - Dask Distributed Summit 2021 Takeaways</a
+    >
+  </li>
+  
+  <li>
+    <a href="../pandas-tutorial/"
+      >19 May - Pandas Tutorial</a
+    >
+  </li>
+  
+</ul>
+
+<h3>
+  <a href="../../blog/archive/">Archives</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="../../blog/2021/">2021 (25)</a>
+  </li>
+    
+  <li>
+    <a href="../../blog/2020/">2020 (6)</a>
+  </li>
+    
+  <li>
+    <a href="../../blog/2019/">2019 (2)</a>
+  </li>
+   
+</ul>
+
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+
+<nav id="bd-toc-nav">
+    
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                 <div class="section" id="python-tutorial-faq-part-3">
+<h1>Python Tutorial FAQ - Part 3<a class="headerlink" href="#python-tutorial-faq-part-3" title="Permalink to this headline">¶</a></h1>
+<p>Here is a compilation of questions from the third session of the Python Tutorial Seminar Series which covered writing functions as well as f-string formatting.</p>
+<hr class="docutils" />
+<p><strong>Q.</strong> Seeing how <code class="docutils literal notranslate"><span class="pre">2/2</span></code> returns <code class="docutils literal notranslate"><span class="pre">1.0</span></code> instead of <code class="docutils literal notranslate"><span class="pre">1</span></code>, is the numeric type automatically determined from the inputs or do you have to force it?</p>
+<p><strong>A.</strong> The numeric type is inferred. <code class="docutils literal notranslate"><span class="pre">/</span></code> always returns a float for numeric types. <code class="docutils literal notranslate"><span class="pre">//</span></code> always returns an integer.</p>
+<p>One should note that Python 2 does not behave this way. In Python 2, the <code class="docutils literal notranslate"><span class="pre">//</span></code> operator does not exist and the <code class="docutils literal notranslate"><span class="pre">/</span></code> operator behaves like it does in other languages (i.e., division of two integers yields an integer and division with a float yields a float).</p>
+<hr class="docutils" />
+<p><strong>Q.</strong> Are the spaces necessary around operators or after commas?</p>
+<p><strong>A.</strong> No it is not necessary, but it is best practice.</p>
+<hr class="docutils" />
+<p><strong>Q.</strong> What happens if you don’t explicitly specify a return value?</p>
+<p><strong>A.</strong> If you don’t want to return anything you don’t need to have a <code class="docutils literal notranslate"><span class="pre">return</span></code> statement at the end of your function. By default, that means the function will return <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+<hr class="docutils" />
+<p><strong>Q.</strong> Do functions have a specific location in the file?</p>
+<p><strong>A.</strong> Functions can be defined in any order. If you have a function above that calls a function defined below, it will work. But if you just call the function above its definition, it will fail. We recommend having a separate file that contains all the functions or helper functions - we will cover this in the “Your First Python Package” section.</p>
+<hr class="docutils" />
+<p><strong>Q.</strong> Do I have to worry about name clashing in global vs function scope? Would there be a problem if we used <code class="docutils literal notranslate"><span class="pre">t</span></code> and <code class="docutils literal notranslate"><span class="pre">v</span></code> for the names of our iterator variables in the for loop as well as the time and windspeed variables within the function?</p>
+<p><strong>A.</strong> In general, yes. If you create a variable in your function scope that has the same name as a variable in global scope, you will not be able to access the global scope variable from within the function. But everything would be fine in global scope.
+In your example, however, it would be fine. The <code class="docutils literal notranslate"><span class="pre">t</span></code> and <code class="docutils literal notranslate"><span class="pre">v</span></code> variables in function scope will not overwrite the <code class="docutils literal notranslate"><span class="pre">t</span></code> and <code class="docutils literal notranslate"><span class="pre">v</span></code> (in your example) that are in global scope within the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop.
+You can access global scope variables from within a function.</p>
+<hr class="docutils" />
+<p><strong>Q.</strong> Will all the variables being created within a function still occupy the memory after the function was finished?</p>
+<p><strong>A.</strong> Python uses garbage collection for memory management. That means that those variables will no longer be referenced anywhere, so they will be cleaned up whenever garbage collection happens which is not necessarily after the function return or during the execution of your script as long as there is no reason to clear memory. Essentially garbage collection is complicated, and controlling memory with Python is a hard thing to do.</p>
+<hr class="docutils" />
+<p><strong>Q.</strong> In the <code class="docutils literal notranslate"><span class="pre">f-string</span></code> formatting (i.e., <code class="docutils literal notranslate"><span class="pre">f'string'</span></code>) is <code class="docutils literal notranslate"><span class="pre">f</span></code> a function?</p>
+<p><strong>A.</strong> No, it’s a special symbol before the string saying that it is an <code class="docutils literal notranslate"><span class="pre">f-string</span></code>. If you just had <code class="docutils literal notranslate"><span class="pre">‘’</span></code>, everything within the apostrophes would be a regular string. <code class="docutils literal notranslate"><span class="pre">f’’</span></code> is an <code class="docutils literal notranslate"><span class="pre">f-string</span></code>. <code class="docutils literal notranslate"><span class="pre">f-strings</span></code> in Python let you do nice string formatting.</p>
+<hr class="docutils" />
+<p><strong>Q.</strong> The <code class="docutils literal notranslate"><span class="pre">wc_data</span></code> and <code class="docutils literal notranslate"><span class="pre">wc_comp</span></code> are not defined. How does python know
+what they refer to?</p>
+<p><strong>A.</strong> They are defined in the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop and are returned from the <code class="docutils literal notranslate"><span class="pre">zip</span></code> function when it is iterated over.</p>
+<hr class="docutils" />
+<p><strong>Q.</strong> Can the loop <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">wc_data,</span> <span class="pre">wc_comp</span> <span class="pre">in</span> <span class="pre">X</span></code> cause a memory leak?</p>
+<p><strong>A.</strong> It’s hard to create a memory leak with pure Python. <code class="docutils literal notranslate"><span class="pre">wc_data</span></code> is re-assigned every loop, overwriting the previous value and taking up the same amount of memory.</p>
+<hr class="docutils" />
+<p><strong>Q.</strong> Is there a difference between <code class="docutils literal notranslate"><span class="pre">‘</span></code> and <code class="docutils literal notranslate"><span class="pre">“</span></code> in strings?</p>
+<p><strong>A.</strong> No. You can use either, but you must be consistent within a given string in how you start and end it. This allows you to use the <code class="docutils literal notranslate"><span class="pre">’</span></code> character within your string, for example: <code class="docutils literal notranslate"><span class="pre">string</span> <span class="pre">=</span> <span class="pre">“I’m</span> <span class="pre">a</span> <span class="pre">string”</span></code></p>
+<hr class="docutils" />
+<p><strong>Q.</strong> What is the meaning of <code class="docutils literal notranslate"><span class="pre">&gt;6</span></code> in the time <code class="docutils literal notranslate"><span class="pre">f-string</span></code> formatting?</p>
+<p><strong>A.</strong> It means 6 characters in length, right justified.</p>
+<hr class="docutils" />
+<p><strong>Q.</strong> What is the meaning of <code class="docutils literal notranslate"><span class="pre">&gt;6</span></code> in the time <code class="docutils literal notranslate"><span class="pre">f-string</span></code> formatting?</p>
+<p><strong>A.</strong> It means 6 characters in length, right justified.</p>
+<hr class="docutils" />
+</div>
+
+<div class="section">
+     
+<div class="section">
+  <span style="float: left">
+     
+    <a href="../python-tutorial-faq-part-2/">
+      <i class="fa fa-arrow-circle-left"></i> Python Tutorial FAQ - Part 2
+    </a>
+    
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right">
+     
+    <a href="../python-tutorial-seminar-series-spring-2021/">
+      Python Tutorial Seminar Series - Spring 2021 <i
+        class="fa fa-arrow-circle-right"
+      ></i
+      >
+    </a>
+    
+  </span>
+</div>
+  
+</div>
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-B50ZRRN69X"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('config', 'G-B50ZRRN69X');
+                </script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021, NCAR Earth System Data Science Team.<br/>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.4.<br/>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

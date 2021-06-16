@@ -1,0 +1,466 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Git and GitHub Tutorial &#8212; NCAR-ESDS 0.1 documentation</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "NCAR/esds");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <link rel="author" title="About these documents" href="../../about/" />
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+     
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../blog/atom.xml"
+  title="NCAR ESDS"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+<a class="navbar-brand" href="../../">
+<p class="title">NCAR-ESDS</p>
+</a>
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../about/">
+  About Us
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../faq/">
+  Frequently Asked Questions
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../blog/">
+  Blog
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../communication/">
+  Communication
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../best-practices/">
+  Best Practices
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/ncar/esds" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">  
+<h2>
+   <i class="fa fa-calendar"></i>
+  07 May 2021 
+</h2>
+
+<ul>
+   
+<li id="author">
+  <span
+    ><i class="fa-fw fa fa-user"></i></span
+  >
+   
+  <a href="../../blog/author/julia-kent/">Julia Kent</a>  
+</li>
+    
+<li id="tags">
+  <span
+    ><i
+      class="fa-fw fa fa-tag"
+    ></i
+    ></span
+  >
+   
+  <a href="../../blog/tag/python-tutorial-series/">python-tutorial-series</a>  
+</li>
+ 
+</ul>
+
+<h3>
+  <a href="../../blog/">Recent Posts</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="../graphviz_example/"
+      >11 June - Creating Visualizations of Intake-ESM Catalogs</a
+    >
+  </li>
+  
+  <li>
+    <a href="../xarray-tutorial/"
+      >04 June - Xarray Tutorial</a
+    >
+  </li>
+  
+  <li>
+    <a href="../ecgtools-history-files-example/"
+      >04 June - Building an Intake-esm catalog from CESM2 History Files</a
+    >
+  </li>
+  
+  <li>
+    <a href="../dask-summit-takeaway/"
+      >28 May - Dask Distributed Summit 2021 Takeaways</a
+    >
+  </li>
+  
+  <li>
+    <a href="../pandas-tutorial/"
+      >19 May - Pandas Tutorial</a
+    >
+  </li>
+  
+</ul>
+
+<h3>
+  <a href="../../blog/archive/">Archives</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="../../blog/2021/">2021 (25)</a>
+  </li>
+    
+  <li>
+    <a href="../../blog/2020/">2020 (6)</a>
+  </li>
+    
+  <li>
+    <a href="../../blog/2019/">2019 (2)</a>
+  </li>
+   
+</ul>
+
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#assumptions-of-past-git-experience">
+   Assumptions of past Git experience
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#covered-in-this-tutorial">
+   Covered in this tutorial
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#preparation-before-tutorial">
+   Preparation before tutorial
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sign-up">
+   Sign Up
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                 <div class="section" id="git-and-github-tutorial">
+<h1>Git and GitHub Tutorial<a class="headerlink" href="#git-and-github-tutorial" title="Permalink to this headline">¶</a></h1>
+<p>The NCAR/UCAR virtual Python Tutorial Seminar Series continues with an introduction to the Python package <code class="docutils literal notranslate"><span class="pre">Git</span></code> and <code class="docutils literal notranslate"><span class="pre">GitHub</span></code> on <strong>Wednesday, May 12th at 1 PM Mountain</strong>. This session will be led by Kevin Paul.</p>
+<p>The purpose of this seminar is to cover just some of the common content needed to understand and use git and GitHub for collaboration on software. This is not meant to be an introduction to git or GitHub.</p>
+<div class="section" id="assumptions-of-past-git-experience">
+<h2>Assumptions of past Git experience<a class="headerlink" href="#assumptions-of-past-git-experience" title="Permalink to this headline">¶</a></h2>
+<p>We assume that you understand these basic Git commands:</p>
+<ul class="simple">
+<li><p>Creating a git repository with “git init”</p></li>
+<li><p>Staging changes to a git repository with “git add”</p></li>
+<li><p>Committing staged changes to a git repository history with “git commit”</p></li>
+<li><p>Checking the status of a git repository with “git status”</p></li>
+<li><p>Looking at the commit history of a git repository with “git log”</p></li>
+</ul>
+<p>These commands let you create and make changes to a Git repository that are tracked so that previous versions of the repository can be retrieved.</p>
+<p>We also assume that you have a <strong>GitHub account</strong> and that you are familiar with the basic GitHub layout. We assume that you understand the following Git common commands for interacting with a GitHub repository:</p>
+<ul class="simple">
+<li><p>Cloning a GitHub repository with “git clone”</p></li>
+<li><p>Pulling new commits from a GitHub repository with “git pull”</p></li>
+<li><p>Pushing new commits to a GitHub repository with “git push”</p></li>
+</ul>
+<p>If you are not familiar with these commands, I recommend that you watch the “Your First” tutorial serial <a class="reference external" href="https://www.youtube.com/playlist?list=PLKIiv0El0aaFoz9L5eCf-fOrUJHxsYVff">videos</a> and/or follow along on our <a class="reference external" href="https://ncar.github.io/python-tutorial/tutorials/yourfirst.html">website</a>.</p>
+</div>
+<div class="section" id="covered-in-this-tutorial">
+<h2>Covered in this tutorial<a class="headerlink" href="#covered-in-this-tutorial" title="Permalink to this headline">¶</a></h2>
+<p>Since the goal of this tutorial is to teach how to collaborate on software with Git &amp; GitHub, we will cover the basics necessary for collaboration (beyond the basic commands detailed above). This means we will cover:</p>
+<ul class="simple">
+<li><p>Git branches:</p>
+<ul>
+<li><p>Creating a branch</p></li>
+<li><p>Merging one branch into another</p></li>
+<li><p>Deleting a branch</p></li>
+<li><p>Dealing with merge conflicts</p></li>
+</ul>
+</li>
+<li><p>GitHub fork-based workflow:</p>
+<ul>
+<li><p>Creating a fork of a GitHub repository</p></li>
+<li><p>Dealing with git remotes</p></li>
+<li><p>Pull Requests</p></li>
+<li><p>Code Reviews</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="preparation-before-tutorial">
+<h2>Preparation before tutorial<a class="headerlink" href="#preparation-before-tutorial" title="Permalink to this headline">¶</a></h2>
+<p>You do not need to do anything before the tutorial to prepare, though you will need a machine with <code class="docutils literal notranslate"><span class="pre">git</span></code> installed, a GitHub account, and the aforementioned understanding. If you want to be a little ahead of the game, please feel free to clone the following repository:</p>
+<p>https://github.com/NCAR/git-github-demo</p>
+<p>There will be many changes to this repository before the tutorial, so I recommend that you either wait to clone this repository or do a <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code> just before the tutorial begins.</p>
+</div>
+<div class="section" id="sign-up">
+<h2>Sign Up<a class="headerlink" href="#sign-up" title="Permalink to this headline">¶</a></h2>
+<p>If you would like join the <em>learnpython&#64;ucar.edu</em> Google group to be informed of updates and events in the seminar series, please do so by following this <a class="reference external" href="https://groups.google.com/a/ucar.edu/g/learnpython/about">link</a> and clicking “Join Group” next to the group name.</p>
+<iframe src="https://calendar.google.com/calendar/embed?src=c_krmtmqm6kb5u7ke6t5on9l0rus%40group.calendar.google.com" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+</div>
+</div>
+
+<div class="section">
+     
+<div class="section">
+  <span style="float: left">
+     
+    <a href="../paired_programming_vs/">
+      <i class="fa fa-arrow-circle-left"></i> Paired Programming using VS Code
+    </a>
+    
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right">
+     
+    <a href="../intake_cmip6_debug/">
+      Debugging Intake-ESM Process for Reading in CMIP6 <i
+        class="fa fa-arrow-circle-right"
+      ></i
+      >
+    </a>
+    
+  </span>
+</div>
+  
+</div>
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-B50ZRRN69X"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('config', 'G-B50ZRRN69X');
+                </script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021, NCAR Earth System Data Science Team.<br/>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.4.<br/>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

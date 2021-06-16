@@ -1,0 +1,1709 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Writing multiple netCDF files in parallel with xarray and dask &#8212; NCAR-ESDS 0.1 documentation</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "NCAR/esds");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <link rel="author" title="About these documents" href="../../about/" />
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+     
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../blog/atom.xml"
+  title="NCAR ESDS"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+<a class="navbar-brand" href="../../">
+<p class="title">NCAR-ESDS</p>
+</a>
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../about/">
+  About Us
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../faq/">
+  Frequently Asked Questions
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../blog/">
+  Blog
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../communication/">
+  Communication
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../best-practices/">
+  Best Practices
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/ncar/esds" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">  
+<h2>
+   <i class="fa fa-calendar"></i>
+  29 June 2020 
+</h2>
+
+<ul>
+   
+<li id="author">
+  <span
+    ><i class="fa-fw fa fa-user"></i></span
+  >
+   
+  <a href="../../blog/author/anderson-banihirwe/">Anderson Banihirwe</a>  
+</li>
+    
+<li id="tags">
+  <span
+    ><i class="fa-fw fa fa-tags"></i> </span
+  >
+   
+  <a href="../../blog/tag/python/">python</a>   
+  <a href="../../blog/tag/xarray/">xarray</a>   
+  <a href="../../blog/tag/netcdf/">netcdf</a>   
+  <a href="../../blog/tag/dask/">dask</a>  
+</li>
+ 
+</ul>
+
+<h3>
+  <a href="../../blog/">Recent Posts</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="../graphviz_example/"
+      >11 June - Creating Visualizations of Intake-ESM Catalogs</a
+    >
+  </li>
+  
+  <li>
+    <a href="../xarray-tutorial/"
+      >04 June - Xarray Tutorial</a
+    >
+  </li>
+  
+  <li>
+    <a href="../ecgtools-history-files-example/"
+      >04 June - Building an Intake-esm catalog from CESM2 History Files</a
+    >
+  </li>
+  
+  <li>
+    <a href="../dask-summit-takeaway/"
+      >28 May - Dask Distributed Summit 2021 Takeaways</a
+    >
+  </li>
+  
+  <li>
+    <a href="../pandas-tutorial/"
+      >19 May - Pandas Tutorial</a
+    >
+  </li>
+  
+</ul>
+
+<h3>
+  <a href="../../blog/archive/">Archives</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="../../blog/2021/">2021 (25)</a>
+  </li>
+    
+  <li>
+    <a href="../../blog/2020/">2020 (6)</a>
+  </li>
+    
+  <li>
+    <a href="../../blog/2019/">2019 (2)</a>
+  </li>
+   
+</ul>
+
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#please-show-me-the-code">
+   Please show me the code
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#package-imports">
+     Package imports
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#load-some-toy-dataset">
+     Load some toy dataset
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#perform-a-computation-on-input-dataset">
+     Perform a computation on input dataset
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-a-helper-function-to-split-a-dataset-into-sub-datasets">
+     Create a helper function to split a dataset into sub-datasets
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-a-helper-function-for-generating-a-filepath">
+     Create a helper function for generating a filepath
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#invoke-xr-save-mfdataset">
+     Invoke
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       xr.save_mfdataset()
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#confirm-that-the-output-files-were-properly-written">
+     Confirm that the output files were properly written
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusion">
+   Conclusion
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                 <div class="section" id="writing-multiple-netcdf-files-in-parallel-with-xarray-and-dask">
+<h1>Writing multiple netCDF files in parallel with xarray and dask<a class="headerlink" href="#writing-multiple-netcdf-files-in-parallel-with-xarray-and-dask" title="Permalink to this headline">¶</a></h1>
+<p>A typical computation workflow with xarray consists of:</p>
+<ol class="simple">
+<li><p>reading one or more netCDF files into an xarray dataset backed by dask using <code class="docutils literal notranslate"><span class="pre">xr.open_mfdataset()</span></code> or <code class="docutils literal notranslate"><span class="pre">xr.open_dataset(chunks=...)</span></code>,</p></li>
+<li><p>applying some transformation to the input dataset, and</p></li>
+<li><p>saving the resulting output to disk in a netCDF file using <code class="docutils literal notranslate"><span class="pre">xr.to_netcdf()</span></code>.</p></li>
+</ol>
+<p>The last step (3) can easily lead to a large netCDF file (&gt;=10GB in size). As a result, this step can take a very long time to complete (since it is run in serial), and sometimes may hang. So, to avoid these issues one can use one of the lesser-used but helpful xarray capabilities: the <a class="reference external" href="https://xarray.pydata.org/en/latest/generated/xarray.save_mfdataset.html"><code class="docutils literal notranslate"><span class="pre">xr.save_mfdataset()</span></code></a> function. This function allows users to write multiple datasets to disk as netCDF files simultaneously. The <code class="docutils literal notranslate"><span class="pre">xr.save_mfdataset()</span></code> function signature looks like this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">xr</span><span class="o">.</span><span class="n">save_mfdataset</span><span class="p">(</span>
+    <span class="n">datasets</span><span class="p">,</span>
+    <span class="n">paths</span><span class="p">,</span>
+    <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span>
+    <span class="nb">format</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">groups</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">engine</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">compute</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">Docstring</span><span class="p">:</span>
+<span class="n">Write</span> <span class="n">multiple</span> <span class="n">datasets</span> <span class="n">to</span> <span class="n">disk</span> <span class="k">as</span> <span class="n">netCDF</span> <span class="n">files</span> <span class="n">simultaneously</span><span class="o">.</span>
+</pre></div>
+</div>
+<div class="section" id="please-show-me-the-code">
+<h2>Please show me the code<a class="headerlink" href="#please-show-me-the-code" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="package-imports">
+<h3>Package imports<a class="headerlink" href="#package-imports" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+<span class="kn">from</span> <span class="nn">distributed</span> <span class="kn">import</span> <span class="n">Client</span><span class="p">,</span> <span class="n">performance_report</span>
+
+<span class="n">xr</span><span class="o">.</span><span class="n">__version__</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;0.15.1&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">()</span>
+<span class="n">client</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table style="border: 2px solid white;">
+<tr>
+<td style="vertical-align: top; border: 0px solid white">
+<h3 style="text-align: left;">Client</h3>
+<ul style="text-align: left; list-style: none; margin: 0; padding: 0;">
+  <li><b>Scheduler: </b>tcp://127.0.0.1:65328</li>
+  <li><b>Dashboard: </b><a href='http://127.0.0.1:8787/status' target='_blank'>http://127.0.0.1:8787/status</a></li>
+</ul>
+</td>
+<td style="vertical-align: top; border: 0px solid white">
+<h3 style="text-align: left;">Cluster</h3>
+<ul style="text-align: left; list-style:none; margin: 0; padding: 0;">
+  <li><b>Workers: </b>4</li>
+  <li><b>Cores: </b>8</li>
+  <li><b>Memory: </b>17.18 GB</li>
+</ul>
+</td>
+</tr>
+</table></div></div>
+</div>
+</div>
+<div class="section" id="load-some-toy-dataset">
+<h3>Load some toy dataset<a class="headerlink" href="#load-some-toy-dataset" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">tutorial</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;rasm&#39;</span><span class="p">,</span> <span class="n">chunks</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;time&#39;</span><span class="p">:</span> <span class="mi">12</span><span class="p">})</span>
+<span class="n">ds</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+<defs>
+<symbol id="icon-database" viewBox="0 0 32 32">
+<title>Show/Hide data repr</title>
+<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+</symbol>
+<symbol id="icon-file-text2" viewBox="0 0 32 32">
+<title>Show/Hide attributes</title>
+<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
+ *
+ */
+
+:root {
+  --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
+  --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
+  --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
+  --xr-border-color: var(--jp-border-color2, #e0e0e0);
+  --xr-disabled-color: var(--jp-layout-color3, #bdbdbd);
+  --xr-background-color: var(--jp-layout-color0, white);
+  --xr-background-color-row-even: var(--jp-layout-color1, white);
+  --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+}
+
+.xr-wrap {
+  min-width: 300px;
+  max-width: 700px;
+}
+
+.xr-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+  border-bottom: solid 1px var(--xr-border-color);
+}
+
+.xr-header > div,
+.xr-header > ul {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.xr-obj-type,
+.xr-array-name {
+  margin-left: 2px;
+  margin-right: 10px;
+}
+
+.xr-obj-type {
+  color: var(--xr-font-color2);
+}
+
+.xr-sections {
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 150px auto auto 1fr 20px 20px;
+}
+
+.xr-section-item {
+  display: contents;
+}
+
+.xr-section-item input {
+  display: none;
+}
+
+.xr-section-item input + label {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-item input:enabled + label {
+  cursor: pointer;
+  color: var(--xr-font-color2);
+}
+
+.xr-section-item input:enabled + label:hover {
+  color: var(--xr-font-color0);
+}
+
+.xr-section-summary {
+  grid-column: 1;
+  color: var(--xr-font-color2);
+  font-weight: 500;
+}
+
+.xr-section-summary > span {
+  display: inline-block;
+  padding-left: 0.5em;
+}
+
+.xr-section-summary-in:disabled + label {
+  color: var(--xr-font-color2);
+}
+
+.xr-section-summary-in + label:before {
+  display: inline-block;
+  content: '►';
+  font-size: 11px;
+  width: 15px;
+  text-align: center;
+}
+
+.xr-section-summary-in:disabled + label:before {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-summary-in:checked + label:before {
+  content: '▼';
+}
+
+.xr-section-summary-in:checked + label > span {
+  display: none;
+}
+
+.xr-section-summary,
+.xr-section-inline-details {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.xr-section-inline-details {
+  grid-column: 2 / -1;
+}
+
+.xr-section-details {
+  display: none;
+  grid-column: 1 / -1;
+  margin-bottom: 5px;
+}
+
+.xr-section-summary-in:checked ~ .xr-section-details {
+  display: contents;
+}
+
+.xr-array-wrap {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.xr-array-wrap > label {
+  grid-column: 1;
+  vertical-align: top;
+}
+
+.xr-preview {
+  color: var(--xr-font-color3);
+}
+
+.xr-array-preview,
+.xr-array-data {
+  padding: 0 5px !important;
+  grid-column: 2;
+}
+
+.xr-array-data,
+.xr-array-in:checked ~ .xr-array-preview {
+  display: none;
+}
+
+.xr-array-in:checked ~ .xr-array-data,
+.xr-array-preview {
+  display: inline-block;
+}
+
+.xr-dim-list {
+  display: inline-block !important;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.xr-dim-list li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.xr-dim-list:before {
+  content: '(';
+}
+
+.xr-dim-list:after {
+  content: ')';
+}
+
+.xr-dim-list li:not(:last-child):after {
+  content: ',';
+  padding-right: 5px;
+}
+
+.xr-has-index {
+  font-weight: bold;
+}
+
+.xr-var-list,
+.xr-var-item {
+  display: contents;
+}
+
+.xr-var-item > div,
+.xr-var-item label,
+.xr-var-item > .xr-var-name span {
+  background-color: var(--xr-background-color-row-even);
+  margin-bottom: 0;
+}
+
+.xr-var-item > .xr-var-name:hover span {
+  padding-right: 5px;
+}
+
+.xr-var-list > li:nth-child(odd) > div,
+.xr-var-list > li:nth-child(odd) > label,
+.xr-var-list > li:nth-child(odd) > .xr-var-name span {
+  background-color: var(--xr-background-color-row-odd);
+}
+
+.xr-var-name {
+  grid-column: 1;
+}
+
+.xr-var-dims {
+  grid-column: 2;
+}
+
+.xr-var-dtype {
+  grid-column: 3;
+  text-align: right;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-preview {
+  grid-column: 4;
+}
+
+.xr-var-name,
+.xr-var-dims,
+.xr-var-dtype,
+.xr-preview,
+.xr-attrs dt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.xr-var-name:hover,
+.xr-var-dims:hover,
+.xr-var-dtype:hover,
+.xr-attrs dt:hover {
+  overflow: visible;
+  width: auto;
+  z-index: 1;
+}
+
+.xr-var-attrs,
+.xr-var-data {
+  display: none;
+  background-color: var(--xr-background-color) !important;
+  padding-bottom: 5px !important;
+}
+
+.xr-var-attrs-in:checked ~ .xr-var-attrs,
+.xr-var-data-in:checked ~ .xr-var-data {
+  display: block;
+}
+
+.xr-var-data > table {
+  float: right;
+}
+
+.xr-var-name span,
+.xr-var-data,
+.xr-attrs {
+  padding-left: 25px !important;
+}
+
+.xr-attrs,
+.xr-var-attrs,
+.xr-var-data {
+  grid-column: 1 / -1;
+}
+
+dl.xr-attrs {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 125px auto;
+}
+
+.xr-attrs dt, dd {
+  padding: 0;
+  margin: 0;
+  float: left;
+  padding-right: 10px;
+  width: auto;
+}
+
+.xr-attrs dt {
+  font-weight: normal;
+  grid-column: 1;
+}
+
+.xr-attrs dt:hover span {
+  display: inline-block;
+  background: var(--xr-background-color);
+  padding-right: 10px;
+}
+
+.xr-attrs dd {
+  grid-column: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.xr-icon-database,
+.xr-icon-file-text2 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1.5em !important;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+</style><div class='xr-wrap'><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-57ae9cd2-1099-4000-9a19-acf89d5f3ff5' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-57ae9cd2-1099-4000-9a19-acf89d5f3ff5' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span class='xr-has-index'>time</span>: 36</li><li><span>x</span>: 275</li><li><span>y</span>: 205</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-1955e41e-3bd6-434c-9891-cf410ea3f95d' class='xr-section-summary-in' type='checkbox'  checked><label for='section-1955e41e-3bd6-434c-9891-cf410ea3f95d' class='xr-section-summary' >Coordinates: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>1980-09-16 12:00:00 ... 1983-08-17 00:00:00</div><input id='attrs-060f8562-6cbe-42ba-addd-b2406b9dd9e4' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-060f8562-6cbe-42ba-addd-b2406b9dd9e4' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-531a465e-1b1b-4510-9a34-bfd41964d693' class='xr-var-data-in' type='checkbox'><label for='data-531a465e-1b1b-4510-9a34-bfd41964d693' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>time</dd><dt><span>type_preferred :</span></dt><dd>int</dd></dl></div><pre class='xr-var-data'>array([cftime.DatetimeNoLeap(1980-09-16 12:00:00),
+       cftime.DatetimeNoLeap(1980-10-17 00:00:00),
+       cftime.DatetimeNoLeap(1980-11-16 12:00:00),
+       cftime.DatetimeNoLeap(1980-12-17 00:00:00),
+       cftime.DatetimeNoLeap(1981-01-17 00:00:00),
+       cftime.DatetimeNoLeap(1981-02-15 12:00:00),
+       cftime.DatetimeNoLeap(1981-03-17 00:00:00),
+       cftime.DatetimeNoLeap(1981-04-16 12:00:00),
+       cftime.DatetimeNoLeap(1981-05-17 00:00:00),
+       cftime.DatetimeNoLeap(1981-06-16 12:00:00),
+       cftime.DatetimeNoLeap(1981-07-17 00:00:00),
+       cftime.DatetimeNoLeap(1981-08-17 00:00:00),
+       cftime.DatetimeNoLeap(1981-09-16 12:00:00),
+       cftime.DatetimeNoLeap(1981-10-17 00:00:00),
+       cftime.DatetimeNoLeap(1981-11-16 12:00:00),
+       cftime.DatetimeNoLeap(1981-12-17 00:00:00),
+       cftime.DatetimeNoLeap(1982-01-17 00:00:00),
+       cftime.DatetimeNoLeap(1982-02-15 12:00:00),
+       cftime.DatetimeNoLeap(1982-03-17 00:00:00),
+       cftime.DatetimeNoLeap(1982-04-16 12:00:00),
+       cftime.DatetimeNoLeap(1982-05-17 00:00:00),
+       cftime.DatetimeNoLeap(1982-06-16 12:00:00),
+       cftime.DatetimeNoLeap(1982-07-17 00:00:00),
+       cftime.DatetimeNoLeap(1982-08-17 00:00:00),
+       cftime.DatetimeNoLeap(1982-09-16 12:00:00),
+       cftime.DatetimeNoLeap(1982-10-17 00:00:00),
+       cftime.DatetimeNoLeap(1982-11-16 12:00:00),
+       cftime.DatetimeNoLeap(1982-12-17 00:00:00),
+       cftime.DatetimeNoLeap(1983-01-17 00:00:00),
+       cftime.DatetimeNoLeap(1983-02-15 12:00:00),
+       cftime.DatetimeNoLeap(1983-03-17 00:00:00),
+       cftime.DatetimeNoLeap(1983-04-16 12:00:00),
+       cftime.DatetimeNoLeap(1983-05-17 00:00:00),
+       cftime.DatetimeNoLeap(1983-06-16 12:00:00),
+       cftime.DatetimeNoLeap(1983-07-17 00:00:00),
+       cftime.DatetimeNoLeap(1983-08-17 00:00:00)], dtype=object)</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>xc</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>dask.array&lt;chunksize=(205, 275), meta=np.ndarray&gt;</div><input id='attrs-54797172-2d51-42d4-bd16-cdaeb02cba91' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-54797172-2d51-42d4-bd16-cdaeb02cba91' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-7469a09f-998e-4d70-844d-df5a8c4d39f0' class='xr-var-data-in' type='checkbox'><label for='data-7469a09f-998e-4d70-844d-df5a8c4d39f0' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>longitude of grid cell center</dd><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>bounds :</span></dt><dd>xv</dd></dl></div><pre class='xr-var-data'><table>
+<tr>
+<td>
+<table>
+  <thead>
+    <tr><td> </td><th> Array </th><th> Chunk </th></tr>
+  </thead>
+  <tbody>
+    <tr><th> Bytes </th><td> 451.00 kB </td> <td> 451.00 kB </td></tr>
+    <tr><th> Shape </th><td> (205, 275) </td> <td> (205, 275) </td></tr>
+    <tr><th> Count </th><td> 2 Tasks </td><td> 1 Chunks </td></tr>
+    <tr><th> Type </th><td> float64 </td><td> numpy.ndarray </td></tr>
+  </tbody>
+</table>
+</td>
+<td>
+<svg width="170" height="139" style="stroke:rgb(0,0,0);stroke-width:1" >
+
+  <!-- Horizontal lines -->
+  <line x1="0" y1="0" x2="120" y2="0" style="stroke-width:2" />
+  <line x1="0" y1="89" x2="120" y2="89" style="stroke-width:2" />
+
+  <!-- Vertical lines -->
+  <line x1="0" y1="0" x2="0" y2="89" style="stroke-width:2" />
+  <line x1="120" y1="0" x2="120" y2="89" style="stroke-width:2" />
+
+  <!-- Colored Rectangle -->
+  <polygon points="0.000000,0.000000 120.000000,0.000000 120.000000,89.454545 0.000000,89.454545" style="fill:#ECB172A0;stroke-width:0"/>
+
+  <!-- Text -->
+  <text x="60.000000" y="109.454545" font-size="1.0rem" font-weight="100" text-anchor="middle" >275</text>
+  <text x="140.000000" y="44.727273" font-size="1.0rem" font-weight="100" text-anchor="middle" transform="rotate(-90,140.000000,44.727273)">205</text>
+</svg>
+</td>
+</tr>
+</table></pre></li><li class='xr-var-item'><div class='xr-var-name'><span>yc</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>dask.array&lt;chunksize=(205, 275), meta=np.ndarray&gt;</div><input id='attrs-92624f3a-8d53-4196-9de5-554056fb376e' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-92624f3a-8d53-4196-9de5-554056fb376e' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-963a7e01-f127-4a2c-82ad-7e7b31cb709b' class='xr-var-data-in' type='checkbox'><label for='data-963a7e01-f127-4a2c-82ad-7e7b31cb709b' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>latitude of grid cell center</dd><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>bounds :</span></dt><dd>yv</dd></dl></div><pre class='xr-var-data'><table>
+<tr>
+<td>
+<table>
+  <thead>
+    <tr><td> </td><th> Array </th><th> Chunk </th></tr>
+  </thead>
+  <tbody>
+    <tr><th> Bytes </th><td> 451.00 kB </td> <td> 451.00 kB </td></tr>
+    <tr><th> Shape </th><td> (205, 275) </td> <td> (205, 275) </td></tr>
+    <tr><th> Count </th><td> 2 Tasks </td><td> 1 Chunks </td></tr>
+    <tr><th> Type </th><td> float64 </td><td> numpy.ndarray </td></tr>
+  </tbody>
+</table>
+</td>
+<td>
+<svg width="170" height="139" style="stroke:rgb(0,0,0);stroke-width:1" >
+
+  <!-- Horizontal lines -->
+  <line x1="0" y1="0" x2="120" y2="0" style="stroke-width:2" />
+  <line x1="0" y1="89" x2="120" y2="89" style="stroke-width:2" />
+
+  <!-- Vertical lines -->
+  <line x1="0" y1="0" x2="0" y2="89" style="stroke-width:2" />
+  <line x1="120" y1="0" x2="120" y2="89" style="stroke-width:2" />
+
+  <!-- Colored Rectangle -->
+  <polygon points="0.000000,0.000000 120.000000,0.000000 120.000000,89.454545 0.000000,89.454545" style="fill:#ECB172A0;stroke-width:0"/>
+
+  <!-- Text -->
+  <text x="60.000000" y="109.454545" font-size="1.0rem" font-weight="100" text-anchor="middle" >275</text>
+  <text x="140.000000" y="44.727273" font-size="1.0rem" font-weight="100" text-anchor="middle" transform="rotate(-90,140.000000,44.727273)">205</text>
+</svg>
+</td>
+</tr>
+</table></pre></li></ul></div></li><li class='xr-section-item'><input id='section-a27db49f-602b-465d-a2e5-03b177321430' class='xr-section-summary-in' type='checkbox'  checked><label for='section-a27db49f-602b-465d-a2e5-03b177321430' class='xr-section-summary' >Data variables: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>Tair</span></div><div class='xr-var-dims'>(time, y, x)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>dask.array&lt;chunksize=(12, 205, 275), meta=np.ndarray&gt;</div><input id='attrs-6300ecc6-ec96-4325-b213-9fee1afc9965' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-6300ecc6-ec96-4325-b213-9fee1afc9965' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-8040f854-9bab-4294-aabc-fb751a0ffe51' class='xr-var-data-in' type='checkbox'><label for='data-8040f854-9bab-4294-aabc-fb751a0ffe51' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>C</dd><dt><span>long_name :</span></dt><dd>Surface air temperature</dd><dt><span>type_preferred :</span></dt><dd>double</dd><dt><span>time_rep :</span></dt><dd>instantaneous</dd></dl></div><pre class='xr-var-data'><table>
+<tr>
+<td>
+<table>
+  <thead>
+    <tr><td> </td><th> Array </th><th> Chunk </th></tr>
+  </thead>
+  <tbody>
+    <tr><th> Bytes </th><td> 16.24 MB </td> <td> 5.41 MB </td></tr>
+    <tr><th> Shape </th><td> (36, 205, 275) </td> <td> (12, 205, 275) </td></tr>
+    <tr><th> Count </th><td> 4 Tasks </td><td> 3 Chunks </td></tr>
+    <tr><th> Type </th><td> float64 </td><td> numpy.ndarray </td></tr>
+  </tbody>
+</table>
+</td>
+<td>
+<svg width="203" height="163" style="stroke:rgb(0,0,0);stroke-width:1" >
+
+  <!-- Horizontal lines -->
+  <line x1="10" y1="0" x2="33" y2="23" style="stroke-width:2" />
+  <line x1="10" y1="89" x2="33" y2="113" style="stroke-width:2" />
+
+  <!-- Vertical lines -->
+  <line x1="10" y1="0" x2="10" y2="89" style="stroke-width:2" />
+  <line x1="17" y1="7" x2="17" y2="97" />
+  <line x1="25" y1="15" x2="25" y2="105" />
+  <line x1="33" y1="23" x2="33" y2="113" style="stroke-width:2" />
+
+  <!-- Colored Rectangle -->
+  <polygon points="10.000000,0.000000 33.547663,23.547663 33.547663,113.002208 10.000000,89.454545" style="fill:#ECB172A0;stroke-width:0"/>
+
+  <!-- Horizontal lines -->
+  <line x1="10" y1="0" x2="130" y2="0" style="stroke-width:2" />
+  <line x1="17" y1="7" x2="137" y2="7" />
+  <line x1="25" y1="15" x2="145" y2="15" />
+  <line x1="33" y1="23" x2="153" y2="23" style="stroke-width:2" />
+
+  <!-- Vertical lines -->
+  <line x1="10" y1="0" x2="33" y2="23" style="stroke-width:2" />
+  <line x1="130" y1="0" x2="153" y2="23" style="stroke-width:2" />
+
+  <!-- Colored Rectangle -->
+  <polygon points="10.000000,0.000000 130.000000,0.000000 153.547663,23.547663 33.547663,23.547663" style="fill:#ECB172A0;stroke-width:0"/>
+
+  <!-- Horizontal lines -->
+  <line x1="33" y1="23" x2="153" y2="23" style="stroke-width:2" />
+  <line x1="33" y1="113" x2="153" y2="113" style="stroke-width:2" />
+
+  <!-- Vertical lines -->
+  <line x1="33" y1="23" x2="33" y2="113" style="stroke-width:2" />
+  <line x1="153" y1="23" x2="153" y2="113" style="stroke-width:2" />
+
+  <!-- Colored Rectangle -->
+  <polygon points="33.547663,23.547663 153.547663,23.547663 153.547663,113.002208 33.547663,113.002208" style="fill:#ECB172A0;stroke-width:0"/>
+
+  <!-- Text -->
+  <text x="93.547663" y="133.002208" font-size="1.0rem" font-weight="100" text-anchor="middle" >275</text>
+  <text x="173.547663" y="68.274935" font-size="1.0rem" font-weight="100" text-anchor="middle" transform="rotate(-90,173.547663,68.274935)">205</text>
+  <text x="11.773831" y="121.228377" font-size="1.0rem" font-weight="100" text-anchor="middle" transform="rotate(45,11.773831,121.228377)">36</text>
+</svg>
+</td>
+</tr>
+</table></pre></li></ul></div></li><li class='xr-section-item'><input id='section-4f4efaf1-bb76-40b2-a494-dfec6f6d0ced' class='xr-section-summary-in' type='checkbox'  ><label for='section-4f4efaf1-bb76-40b2-a494-dfec6f6d0ced' class='xr-section-summary' >Attributes: <span>(11)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>title :</span></dt><dd>/workspace/jhamman/processed/R1002RBRxaaa01a/lnd/temp/R1002RBRxaaa01a.vic.ha.1979-09-01.nc</dd><dt><span>institution :</span></dt><dd>U.W.</dd><dt><span>source :</span></dt><dd>RACM R1002RBRxaaa01a</dd><dt><span>output_frequency :</span></dt><dd>daily</dd><dt><span>output_mode :</span></dt><dd>averaged</dd><dt><span>convention :</span></dt><dd>CF-1.4</dd><dt><span>references :</span></dt><dd>Based on the initial model of Liang et al., 1994, JGR, 99, 14,415- 14,429.</dd><dt><span>comment :</span></dt><dd>Output from the Variable Infiltration Capacity (VIC) model.</dd><dt><span>nco_openmp_thread_number :</span></dt><dd>1</dd><dt><span>NCO :</span></dt><dd>&quot;4.6.0&quot;</dd><dt><span>history :</span></dt><dd>Tue Dec 27 14:15:22 2016: ncatted -a dimensions,,d,, rasm.nc rasm.nc
+Tue Dec 27 13:38:40 2016: ncks -3 rasm.nc rasm.nc
+history deleted for brevity</dd></dl></div></li></ul></div></div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span><span class="o">.</span><span class="n">Tair</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">visualize</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/writing-multiple-netcdf-files-in-parallel-with-xarray-and-dask_7_0.png" src="../../_images/writing-multiple-netcdf-files-in-parallel-with-xarray-and-dask_7_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="perform-a-computation-on-input-dataset">
+<h3>Perform a computation on input dataset<a class="headerlink" href="#perform-a-computation-on-input-dataset" title="Permalink to this headline">¶</a></h3>
+<p>As you can see, our input dataset is chunked along the <code class="docutils literal notranslate"><span class="pre">time</span></code> dimension. This produces an xarray dataset with 3 chunks. For illustrative purposes, let’s apply some arbitray computation on our dataset:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">ds</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">ds</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span><span class="o">.</span><span class="n">Tair</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">visualize</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/writing-multiple-netcdf-files-in-parallel-with-xarray-and-dask_11_0.png" src="../../_images/writing-multiple-netcdf-files-in-parallel-with-xarray-and-dask_11_0.png" />
+</div>
+</div>
+<p>Our resulting xarray dataset has the same dimensions and the same number of chunks as our input dataset.</p>
+</div>
+<div class="section" id="create-a-helper-function-to-split-a-dataset-into-sub-datasets">
+<h3>Create a helper function to split a dataset into sub-datasets<a class="headerlink" href="#create-a-helper-function-to-split-a-dataset-into-sub-datasets" title="Permalink to this headline">¶</a></h3>
+<p>Our main objective is to save this resulting dataset into multiple netCDF files by saving each chunk in its own netCDF file. To accomplish this, we need to create a function that allows us to split a dataset into sub-datasets for each chunk. The following code snippet was adapted from this <a class="reference external" href="https://github.com/pydata/xarray/issues/1093#issuecomment-259213382">comment</a> by <a class="reference external" href="https://github.com/shoyer">Stephan Hoyer</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">itertools</span>
+
+
+<span class="k">def</span> <span class="nf">split_by_chunks</span><span class="p">(</span><span class="n">dataset</span><span class="p">):</span>
+    <span class="n">chunk_slices</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">dim</span><span class="p">,</span> <span class="n">chunks</span> <span class="ow">in</span> <span class="n">dataset</span><span class="o">.</span><span class="n">chunks</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">slices</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">start</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">chunk</span> <span class="ow">in</span> <span class="n">chunks</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">start</span> <span class="o">&gt;=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">sizes</span><span class="p">[</span><span class="n">dim</span><span class="p">]:</span>
+                <span class="k">break</span>
+            <span class="n">stop</span> <span class="o">=</span> <span class="n">start</span> <span class="o">+</span> <span class="n">chunk</span>
+            <span class="n">slices</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">slice</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">stop</span><span class="p">))</span>
+            <span class="n">start</span> <span class="o">=</span> <span class="n">stop</span>
+        <span class="n">chunk_slices</span><span class="p">[</span><span class="n">dim</span><span class="p">]</span> <span class="o">=</span> <span class="n">slices</span>
+    <span class="k">for</span> <span class="n">slices</span> <span class="ow">in</span> <span class="n">itertools</span><span class="o">.</span><span class="n">product</span><span class="p">(</span><span class="o">*</span><span class="n">chunk_slices</span><span class="o">.</span><span class="n">values</span><span class="p">()):</span>
+        <span class="n">selection</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">chunk_slices</span><span class="o">.</span><span class="n">keys</span><span class="p">(),</span> <span class="n">slices</span><span class="p">))</span>
+        <span class="k">yield</span> <span class="n">dataset</span><span class="p">[</span><span class="n">selection</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datasets</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">split_by_chunks</span><span class="p">(</span><span class="n">result</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s confirm that we have three items corresponding to our three chunks:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">datasets</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+</pre></div>
+</div>
+</div>
+</div>
+<p>Each item in the returned list consists of an xarray dataset corresponding to each sliced chunk. Now that we have a list of datasets, we need another helper function that will generate a filepath for us when given an xarray dataset as input:</p>
+</div>
+<div class="section" id="create-a-helper-function-for-generating-a-filepath">
+<h3>Create a helper function for generating a filepath<a class="headerlink" href="#create-a-helper-function-for-generating-a-filepath" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">create_filepath</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span> <span class="n">prefix</span><span class="o">=</span><span class="s1">&#39;filename&#39;</span><span class="p">,</span> <span class="n">root_path</span><span class="o">=</span><span class="s2">&quot;.&quot;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Generate a filepath when given an xarray dataset</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">start</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y-%m-</span><span class="si">%d</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">end</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y-%m-</span><span class="si">%d</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">filepath</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">root_path</span><span class="si">}</span><span class="s1">/</span><span class="si">{</span><span class="n">prefix</span><span class="si">}</span><span class="s1">_</span><span class="si">{</span><span class="n">start</span><span class="si">}</span><span class="s1">_</span><span class="si">{</span><span class="n">end</span><span class="si">}</span><span class="s1">.nc&#39;</span>
+    <span class="k">return</span> <span class="n">filepath</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s run a small test to make sure this function is working as expected:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">create_filepath</span><span class="p">(</span><span class="n">datasets</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;./filename_1981-09-16_1982-08-17.nc&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s create a list of paths to which to save each corresponding dataset.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">paths</span> <span class="o">=</span> <span class="p">[</span><span class="n">create_filepath</span><span class="p">(</span><span class="n">ds</span><span class="p">)</span> <span class="k">for</span> <span class="n">ds</span> <span class="ow">in</span> <span class="n">datasets</span><span class="p">]</span>
+<span class="n">paths</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;./filename_1980-09-16_1981-08-17.nc&#39;,
+ &#39;./filename_1981-09-16_1982-08-17.nc&#39;,
+ &#39;./filename_1982-09-16_1983-08-17.nc&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="invoke-xr-save-mfdataset">
+<h3>Invoke <code class="docutils literal notranslate"><span class="pre">xr.save_mfdataset()</span></code><a class="headerlink" href="#invoke-xr-save-mfdataset" title="Permalink to this headline">¶</a></h3>
+<p>At this point we have two lists:</p>
+<ol class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">datasets</span></code>: List of datasets to save.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">paths</span></code>: List of paths to which to save each corresponding dataset.</p></li>
+</ol>
+<p>We are ready to invoke the <code class="docutils literal notranslate"><span class="pre">xr.save_mfdataset()</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xr</span><span class="o">.</span><span class="n">save_mfdataset</span><span class="p">(</span><span class="n">datasets</span><span class="o">=</span><span class="n">datasets</span><span class="p">,</span> <span class="n">paths</span><span class="o">=</span><span class="n">paths</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="confirm-that-the-output-files-were-properly-written">
+<h3>Confirm that the output files were properly written<a class="headerlink" href="#confirm-that-the-output-files-were-properly-written" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">new_ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_mfdataset</span><span class="p">(</span><span class="n">paths</span><span class="p">,</span> <span class="n">combine</span><span class="o">=</span><span class="s1">&#39;by_coords&#39;</span><span class="p">)</span>
+<span class="n">new_ds</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+<defs>
+<symbol id="icon-database" viewBox="0 0 32 32">
+<title>Show/Hide data repr</title>
+<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+</symbol>
+<symbol id="icon-file-text2" viewBox="0 0 32 32">
+<title>Show/Hide attributes</title>
+<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
+ *
+ */
+
+:root {
+  --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
+  --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
+  --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
+  --xr-border-color: var(--jp-border-color2, #e0e0e0);
+  --xr-disabled-color: var(--jp-layout-color3, #bdbdbd);
+  --xr-background-color: var(--jp-layout-color0, white);
+  --xr-background-color-row-even: var(--jp-layout-color1, white);
+  --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+}
+
+.xr-wrap {
+  min-width: 300px;
+  max-width: 700px;
+}
+
+.xr-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+  border-bottom: solid 1px var(--xr-border-color);
+}
+
+.xr-header > div,
+.xr-header > ul {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.xr-obj-type,
+.xr-array-name {
+  margin-left: 2px;
+  margin-right: 10px;
+}
+
+.xr-obj-type {
+  color: var(--xr-font-color2);
+}
+
+.xr-sections {
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 150px auto auto 1fr 20px 20px;
+}
+
+.xr-section-item {
+  display: contents;
+}
+
+.xr-section-item input {
+  display: none;
+}
+
+.xr-section-item input + label {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-item input:enabled + label {
+  cursor: pointer;
+  color: var(--xr-font-color2);
+}
+
+.xr-section-item input:enabled + label:hover {
+  color: var(--xr-font-color0);
+}
+
+.xr-section-summary {
+  grid-column: 1;
+  color: var(--xr-font-color2);
+  font-weight: 500;
+}
+
+.xr-section-summary > span {
+  display: inline-block;
+  padding-left: 0.5em;
+}
+
+.xr-section-summary-in:disabled + label {
+  color: var(--xr-font-color2);
+}
+
+.xr-section-summary-in + label:before {
+  display: inline-block;
+  content: '►';
+  font-size: 11px;
+  width: 15px;
+  text-align: center;
+}
+
+.xr-section-summary-in:disabled + label:before {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-summary-in:checked + label:before {
+  content: '▼';
+}
+
+.xr-section-summary-in:checked + label > span {
+  display: none;
+}
+
+.xr-section-summary,
+.xr-section-inline-details {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.xr-section-inline-details {
+  grid-column: 2 / -1;
+}
+
+.xr-section-details {
+  display: none;
+  grid-column: 1 / -1;
+  margin-bottom: 5px;
+}
+
+.xr-section-summary-in:checked ~ .xr-section-details {
+  display: contents;
+}
+
+.xr-array-wrap {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.xr-array-wrap > label {
+  grid-column: 1;
+  vertical-align: top;
+}
+
+.xr-preview {
+  color: var(--xr-font-color3);
+}
+
+.xr-array-preview,
+.xr-array-data {
+  padding: 0 5px !important;
+  grid-column: 2;
+}
+
+.xr-array-data,
+.xr-array-in:checked ~ .xr-array-preview {
+  display: none;
+}
+
+.xr-array-in:checked ~ .xr-array-data,
+.xr-array-preview {
+  display: inline-block;
+}
+
+.xr-dim-list {
+  display: inline-block !important;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.xr-dim-list li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.xr-dim-list:before {
+  content: '(';
+}
+
+.xr-dim-list:after {
+  content: ')';
+}
+
+.xr-dim-list li:not(:last-child):after {
+  content: ',';
+  padding-right: 5px;
+}
+
+.xr-has-index {
+  font-weight: bold;
+}
+
+.xr-var-list,
+.xr-var-item {
+  display: contents;
+}
+
+.xr-var-item > div,
+.xr-var-item label,
+.xr-var-item > .xr-var-name span {
+  background-color: var(--xr-background-color-row-even);
+  margin-bottom: 0;
+}
+
+.xr-var-item > .xr-var-name:hover span {
+  padding-right: 5px;
+}
+
+.xr-var-list > li:nth-child(odd) > div,
+.xr-var-list > li:nth-child(odd) > label,
+.xr-var-list > li:nth-child(odd) > .xr-var-name span {
+  background-color: var(--xr-background-color-row-odd);
+}
+
+.xr-var-name {
+  grid-column: 1;
+}
+
+.xr-var-dims {
+  grid-column: 2;
+}
+
+.xr-var-dtype {
+  grid-column: 3;
+  text-align: right;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-preview {
+  grid-column: 4;
+}
+
+.xr-var-name,
+.xr-var-dims,
+.xr-var-dtype,
+.xr-preview,
+.xr-attrs dt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.xr-var-name:hover,
+.xr-var-dims:hover,
+.xr-var-dtype:hover,
+.xr-attrs dt:hover {
+  overflow: visible;
+  width: auto;
+  z-index: 1;
+}
+
+.xr-var-attrs,
+.xr-var-data {
+  display: none;
+  background-color: var(--xr-background-color) !important;
+  padding-bottom: 5px !important;
+}
+
+.xr-var-attrs-in:checked ~ .xr-var-attrs,
+.xr-var-data-in:checked ~ .xr-var-data {
+  display: block;
+}
+
+.xr-var-data > table {
+  float: right;
+}
+
+.xr-var-name span,
+.xr-var-data,
+.xr-attrs {
+  padding-left: 25px !important;
+}
+
+.xr-attrs,
+.xr-var-attrs,
+.xr-var-data {
+  grid-column: 1 / -1;
+}
+
+dl.xr-attrs {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 125px auto;
+}
+
+.xr-attrs dt, dd {
+  padding: 0;
+  margin: 0;
+  float: left;
+  padding-right: 10px;
+  width: auto;
+}
+
+.xr-attrs dt {
+  font-weight: normal;
+  grid-column: 1;
+}
+
+.xr-attrs dt:hover span {
+  display: inline-block;
+  background: var(--xr-background-color);
+  padding-right: 10px;
+}
+
+.xr-attrs dd {
+  grid-column: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.xr-icon-database,
+.xr-icon-file-text2 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1.5em !important;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+</style><div class='xr-wrap'><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-77e69a7b-1ed0-4131-add2-89095a31071c' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-77e69a7b-1ed0-4131-add2-89095a31071c' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span class='xr-has-index'>time</span>: 36</li><li><span>x</span>: 275</li><li><span>y</span>: 205</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-0ff9dddf-7f08-4459-ac8b-f80f54d7b2d7' class='xr-section-summary-in' type='checkbox'  checked><label for='section-0ff9dddf-7f08-4459-ac8b-f80f54d7b2d7' class='xr-section-summary' >Coordinates: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>xc</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>dask.array&lt;chunksize=(205, 275), meta=np.ndarray&gt;</div><input id='attrs-12a00434-a045-470e-b77a-9b4d4e524e1e' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-12a00434-a045-470e-b77a-9b4d4e524e1e' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-5e2a5907-192f-4fd5-8b2c-bec093596c1f' class='xr-var-data-in' type='checkbox'><label for='data-5e2a5907-192f-4fd5-8b2c-bec093596c1f' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>longitude of grid cell center</dd><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>bounds :</span></dt><dd>xv</dd></dl></div><pre class='xr-var-data'><table>
+<tr>
+<td>
+<table>
+  <thead>
+    <tr><td> </td><th> Array </th><th> Chunk </th></tr>
+  </thead>
+  <tbody>
+    <tr><th> Bytes </th><td> 451.00 kB </td> <td> 451.00 kB </td></tr>
+    <tr><th> Shape </th><td> (205, 275) </td> <td> (205, 275) </td></tr>
+    <tr><th> Count </th><td> 10 Tasks </td><td> 1 Chunks </td></tr>
+    <tr><th> Type </th><td> float64 </td><td> numpy.ndarray </td></tr>
+  </tbody>
+</table>
+</td>
+<td>
+<svg width="170" height="139" style="stroke:rgb(0,0,0);stroke-width:1" >
+
+  <!-- Horizontal lines -->
+  <line x1="0" y1="0" x2="120" y2="0" style="stroke-width:2" />
+  <line x1="0" y1="89" x2="120" y2="89" style="stroke-width:2" />
+
+  <!-- Vertical lines -->
+  <line x1="0" y1="0" x2="0" y2="89" style="stroke-width:2" />
+  <line x1="120" y1="0" x2="120" y2="89" style="stroke-width:2" />
+
+  <!-- Colored Rectangle -->
+  <polygon points="0.000000,0.000000 120.000000,0.000000 120.000000,89.454545 0.000000,89.454545" style="fill:#ECB172A0;stroke-width:0"/>
+
+  <!-- Text -->
+  <text x="60.000000" y="109.454545" font-size="1.0rem" font-weight="100" text-anchor="middle" >275</text>
+  <text x="140.000000" y="44.727273" font-size="1.0rem" font-weight="100" text-anchor="middle" transform="rotate(-90,140.000000,44.727273)">205</text>
+</svg>
+</td>
+</tr>
+</table></pre></li><li class='xr-var-item'><div class='xr-var-name'><span>yc</span></div><div class='xr-var-dims'>(y, x)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>dask.array&lt;chunksize=(205, 275), meta=np.ndarray&gt;</div><input id='attrs-8c0f3380-f295-4d54-ad5e-fdb260022afd' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-8c0f3380-f295-4d54-ad5e-fdb260022afd' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-19513ebf-608b-48ae-8cc3-0416a365f42b' class='xr-var-data-in' type='checkbox'><label for='data-19513ebf-608b-48ae-8cc3-0416a365f42b' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>latitude of grid cell center</dd><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>bounds :</span></dt><dd>yv</dd></dl></div><pre class='xr-var-data'><table>
+<tr>
+<td>
+<table>
+  <thead>
+    <tr><td> </td><th> Array </th><th> Chunk </th></tr>
+  </thead>
+  <tbody>
+    <tr><th> Bytes </th><td> 451.00 kB </td> <td> 451.00 kB </td></tr>
+    <tr><th> Shape </th><td> (205, 275) </td> <td> (205, 275) </td></tr>
+    <tr><th> Count </th><td> 10 Tasks </td><td> 1 Chunks </td></tr>
+    <tr><th> Type </th><td> float64 </td><td> numpy.ndarray </td></tr>
+  </tbody>
+</table>
+</td>
+<td>
+<svg width="170" height="139" style="stroke:rgb(0,0,0);stroke-width:1" >
+
+  <!-- Horizontal lines -->
+  <line x1="0" y1="0" x2="120" y2="0" style="stroke-width:2" />
+  <line x1="0" y1="89" x2="120" y2="89" style="stroke-width:2" />
+
+  <!-- Vertical lines -->
+  <line x1="0" y1="0" x2="0" y2="89" style="stroke-width:2" />
+  <line x1="120" y1="0" x2="120" y2="89" style="stroke-width:2" />
+
+  <!-- Colored Rectangle -->
+  <polygon points="0.000000,0.000000 120.000000,0.000000 120.000000,89.454545 0.000000,89.454545" style="fill:#ECB172A0;stroke-width:0"/>
+
+  <!-- Text -->
+  <text x="60.000000" y="109.454545" font-size="1.0rem" font-weight="100" text-anchor="middle" >275</text>
+  <text x="140.000000" y="44.727273" font-size="1.0rem" font-weight="100" text-anchor="middle" transform="rotate(-90,140.000000,44.727273)">205</text>
+</svg>
+</td>
+</tr>
+</table></pre></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>1980-09-16 12:00:00 ... 1983-08-17 00:00:00</div><input id='attrs-4319bb27-6abf-40ed-8c20-baa06888a0d9' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-4319bb27-6abf-40ed-8c20-baa06888a0d9' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-af3790d8-091b-46a3-9995-4e8c7f50a26d' class='xr-var-data-in' type='checkbox'><label for='data-af3790d8-091b-46a3-9995-4e8c7f50a26d' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>time</dd><dt><span>type_preferred :</span></dt><dd>int</dd></dl></div><pre class='xr-var-data'>array([cftime.DatetimeNoLeap(1980-09-16 12:00:00),
+       cftime.DatetimeNoLeap(1980-10-17 00:00:00),
+       cftime.DatetimeNoLeap(1980-11-16 12:00:00),
+       cftime.DatetimeNoLeap(1980-12-17 00:00:00),
+       cftime.DatetimeNoLeap(1981-01-17 00:00:00),
+       cftime.DatetimeNoLeap(1981-02-15 12:00:00),
+       cftime.DatetimeNoLeap(1981-03-17 00:00:00),
+       cftime.DatetimeNoLeap(1981-04-16 12:00:00),
+       cftime.DatetimeNoLeap(1981-05-17 00:00:00),
+       cftime.DatetimeNoLeap(1981-06-16 12:00:00),
+       cftime.DatetimeNoLeap(1981-07-17 00:00:00),
+       cftime.DatetimeNoLeap(1981-08-17 00:00:00),
+       cftime.DatetimeNoLeap(1981-09-16 12:00:00),
+       cftime.DatetimeNoLeap(1981-10-17 00:00:00),
+       cftime.DatetimeNoLeap(1981-11-16 12:00:00),
+       cftime.DatetimeNoLeap(1981-12-17 00:00:00),
+       cftime.DatetimeNoLeap(1982-01-17 00:00:00),
+       cftime.DatetimeNoLeap(1982-02-15 12:00:00),
+       cftime.DatetimeNoLeap(1982-03-17 00:00:00),
+       cftime.DatetimeNoLeap(1982-04-16 12:00:00),
+       cftime.DatetimeNoLeap(1982-05-17 00:00:00),
+       cftime.DatetimeNoLeap(1982-06-16 12:00:00),
+       cftime.DatetimeNoLeap(1982-07-17 00:00:00),
+       cftime.DatetimeNoLeap(1982-08-17 00:00:00),
+       cftime.DatetimeNoLeap(1982-09-16 12:00:00),
+       cftime.DatetimeNoLeap(1982-10-17 00:00:00),
+       cftime.DatetimeNoLeap(1982-11-16 12:00:00),
+       cftime.DatetimeNoLeap(1982-12-17 00:00:00),
+       cftime.DatetimeNoLeap(1983-01-17 00:00:00),
+       cftime.DatetimeNoLeap(1983-02-15 12:00:00),
+       cftime.DatetimeNoLeap(1983-03-17 00:00:00),
+       cftime.DatetimeNoLeap(1983-04-16 12:00:00),
+       cftime.DatetimeNoLeap(1983-05-17 00:00:00),
+       cftime.DatetimeNoLeap(1983-06-16 12:00:00),
+       cftime.DatetimeNoLeap(1983-07-17 00:00:00),
+       cftime.DatetimeNoLeap(1983-08-17 00:00:00)], dtype=object)</pre></li></ul></div></li><li class='xr-section-item'><input id='section-2906ebf5-43db-4ffc-99c4-1d8409b23317' class='xr-section-summary-in' type='checkbox'  checked><label for='section-2906ebf5-43db-4ffc-99c4-1d8409b23317' class='xr-section-summary' >Data variables: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>Tair</span></div><div class='xr-var-dims'>(time, y, x)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>dask.array&lt;chunksize=(12, 205, 275), meta=np.ndarray&gt;</div><input id='attrs-300df9a2-0a61-42ec-9197-2250f5a4e218' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-300df9a2-0a61-42ec-9197-2250f5a4e218' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-61826679-4c43-4404-b1e9-0348154e6d1f' class='xr-var-data-in' type='checkbox'><label for='data-61826679-4c43-4404-b1e9-0348154e6d1f' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><pre class='xr-var-data'><table>
+<tr>
+<td>
+<table>
+  <thead>
+    <tr><td> </td><th> Array </th><th> Chunk </th></tr>
+  </thead>
+  <tbody>
+    <tr><th> Bytes </th><td> 16.24 MB </td> <td> 5.41 MB </td></tr>
+    <tr><th> Shape </th><td> (36, 205, 275) </td> <td> (12, 205, 275) </td></tr>
+    <tr><th> Count </th><td> 9 Tasks </td><td> 3 Chunks </td></tr>
+    <tr><th> Type </th><td> float64 </td><td> numpy.ndarray </td></tr>
+  </tbody>
+</table>
+</td>
+<td>
+<svg width="203" height="163" style="stroke:rgb(0,0,0);stroke-width:1" >
+
+  <!-- Horizontal lines -->
+  <line x1="10" y1="0" x2="33" y2="23" style="stroke-width:2" />
+  <line x1="10" y1="89" x2="33" y2="113" style="stroke-width:2" />
+
+  <!-- Vertical lines -->
+  <line x1="10" y1="0" x2="10" y2="89" style="stroke-width:2" />
+  <line x1="17" y1="7" x2="17" y2="97" />
+  <line x1="25" y1="15" x2="25" y2="105" />
+  <line x1="33" y1="23" x2="33" y2="113" style="stroke-width:2" />
+
+  <!-- Colored Rectangle -->
+  <polygon points="10.000000,0.000000 33.547663,23.547663 33.547663,113.002208 10.000000,89.454545" style="fill:#ECB172A0;stroke-width:0"/>
+
+  <!-- Horizontal lines -->
+  <line x1="10" y1="0" x2="130" y2="0" style="stroke-width:2" />
+  <line x1="17" y1="7" x2="137" y2="7" />
+  <line x1="25" y1="15" x2="145" y2="15" />
+  <line x1="33" y1="23" x2="153" y2="23" style="stroke-width:2" />
+
+  <!-- Vertical lines -->
+  <line x1="10" y1="0" x2="33" y2="23" style="stroke-width:2" />
+  <line x1="130" y1="0" x2="153" y2="23" style="stroke-width:2" />
+
+  <!-- Colored Rectangle -->
+  <polygon points="10.000000,0.000000 130.000000,0.000000 153.547663,23.547663 33.547663,23.547663" style="fill:#ECB172A0;stroke-width:0"/>
+
+  <!-- Horizontal lines -->
+  <line x1="33" y1="23" x2="153" y2="23" style="stroke-width:2" />
+  <line x1="33" y1="113" x2="153" y2="113" style="stroke-width:2" />
+
+  <!-- Vertical lines -->
+  <line x1="33" y1="23" x2="33" y2="113" style="stroke-width:2" />
+  <line x1="153" y1="23" x2="153" y2="113" style="stroke-width:2" />
+
+  <!-- Colored Rectangle -->
+  <polygon points="33.547663,23.547663 153.547663,23.547663 153.547663,113.002208 33.547663,113.002208" style="fill:#ECB172A0;stroke-width:0"/>
+
+  <!-- Text -->
+  <text x="93.547663" y="133.002208" font-size="1.0rem" font-weight="100" text-anchor="middle" >275</text>
+  <text x="173.547663" y="68.274935" font-size="1.0rem" font-weight="100" text-anchor="middle" transform="rotate(-90,173.547663,68.274935)">205</text>
+  <text x="11.773831" y="121.228377" font-size="1.0rem" font-weight="100" text-anchor="middle" transform="rotate(45,11.773831,121.228377)">36</text>
+</svg>
+</td>
+</tr>
+</table></pre></li></ul></div></li><li class='xr-section-item'><input id='section-7161ce36-934c-4a9a-8804-c2036d96a831' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-7161ce36-934c-4a9a-8804-c2036d96a831' class='xr-section-summary'  title='Expand/collapse section'>Attributes: <span>(0)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'></dl></div></li></ul></div></div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">xr</span><span class="o">.</span><span class="n">testing</span><span class="o">.</span><span class="n">assert_identical</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">new_ds</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">AssertionError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The datasets are not identical!&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The datasets are identical!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The datasets are identical!
+</pre></div>
+</div>
+</div>
+</div>
+<p>There you have it 🎉🎉🎉🎉</p>
+</div>
+</div>
+<div class="section" id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<p>This article was inspired by a problem that my colleague was running into. I thought it would be useful to document this fix in a blog post. Many thanks to <a class="reference external" href="https://github.com/dcherian">Deepak Cherian</a> for pointing me to some relevant xarray issues and to the <a class="reference external" href="https://github.com/orgs/NCAR/teams/xdev">&#64;NCAR/xdev</a> team for their valuable and critical feedback on drafts of this article along the way.</p>
+</div>
+</div>
+
+<div class="section">
+     
+<div class="section">
+  <span style="float: left">
+     
+    <a href="../templating-isnt-just-for-web-developers/">
+      <i class="fa fa-arrow-circle-left"></i> Templating isn’t just for Web Developers!
+    </a>
+    
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right">
+     
+    <a href="../tutorial-seminar-series/">
+      Tutorial Seminar Series <i
+        class="fa fa-arrow-circle-right"
+      ></i
+      >
+    </a>
+    
+  </span>
+</div>
+  
+</div>
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-B50ZRRN69X"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('config', 'G-B50ZRRN69X');
+                </script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021, NCAR Earth System Data Science Team.<br/>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.4.<br/>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

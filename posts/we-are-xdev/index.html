@@ -1,0 +1,441 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>We are Xdev! &#8212; NCAR-ESDS 0.1 documentation</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "NCAR/esds");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <link rel="author" title="About these documents" href="../../about/" />
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+     
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../blog/atom.xml"
+  title="NCAR ESDS"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+<a class="navbar-brand" href="../../">
+<p class="title">NCAR-ESDS</p>
+</a>
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../about/">
+  About Us
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../faq/">
+  Frequently Asked Questions
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../blog/">
+  Blog
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../communication/">
+  Communication
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../best-practices/">
+  Best Practices
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/ncar/esds" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">  
+<h2>
+   <i class="fa fa-calendar"></i>
+  09 December 2019 
+</h2>
+
+<ul>
+   
+<li id="author">
+  <span
+    ><i class="fa-fw fa fa-user"></i></span
+  >
+   
+  <a href="../../blog/author/kevin-paul/">Kevin Paul</a>  
+</li>
+    
+<li id="tags">
+  <span
+    ><i class="fa-fw fa fa-tags"></i> </span
+  >
+   
+  <a href="../../blog/tag/open-source/">open source</a>   
+  <a href="../../blog/tag/open-development/">open development</a>  
+</li>
+ 
+</ul>
+
+<h3>
+  <a href="../../blog/">Recent Posts</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="../graphviz_example/"
+      >11 June - Creating Visualizations of Intake-ESM Catalogs</a
+    >
+  </li>
+  
+  <li>
+    <a href="../xarray-tutorial/"
+      >04 June - Xarray Tutorial</a
+    >
+  </li>
+  
+  <li>
+    <a href="../ecgtools-history-files-example/"
+      >04 June - Building an Intake-esm catalog from CESM2 History Files</a
+    >
+  </li>
+  
+  <li>
+    <a href="../dask-summit-takeaway/"
+      >28 May - Dask Distributed Summit 2021 Takeaways</a
+    >
+  </li>
+  
+  <li>
+    <a href="../pandas-tutorial/"
+      >19 May - Pandas Tutorial</a
+    >
+  </li>
+  
+</ul>
+
+<h3>
+  <a href="../../blog/archive/">Archives</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="../../blog/2021/">2021 (25)</a>
+  </li>
+    
+  <li>
+    <a href="../../blog/2020/">2020 (6)</a>
+  </li>
+    
+  <li>
+    <a href="../../blog/2019/">2019 (2)</a>
+  </li>
+   
+</ul>
+
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+
+<nav id="bd-toc-nav">
+    
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                 <div class="section" id="we-are-xdev">
+<h1>We are Xdev!<a class="headerlink" href="#we-are-xdev" title="Permalink to this headline">¶</a></h1>
+<p>More than a year ago, <a class="reference external" href="http://www.cgd.ucar.edu/staff/mclong/">Matthew Long</a> and
+<a class="reference external" href="https://staff.ucar.edu/users/kpaul">I</a> started shopping around the idea that a
+lot of what we do here at <a class="reference external" href="https://ncar.ucar.edu/">NCAR</a>, as well as <em>how</em> we do
+it, needed a bit of a facelift. Our pitch was simple: As an institution that
+supports the geoscientific community by providing valuable datasets, supercomputing
+facilities, and computer models, NCAR needs to <em>exemplify</em> modern best practices
+in the <em>development</em> and <em>use</em> of these resources. We took inspiration from the
+remarkably effective <a class="reference external" href="https://pangeo.io">Pangeo</a> community, which continues to show
+enormous success with Open Source development when coupled with modern software
+best practices, and we started to develop a plan of how to help shift, albeit
+slowly, both NCAR and—though collaboration with the Pangeo community—the
+geoscience community toward a better future.</p>
+<p>To implement our plan, Matt and I started to see how much benefit to NCAR it could
+be to have a small, Agile team that was dedicated to prototyping new technologies
+for the benefit of the rest of the organization and the rest of the geoscience
+community, as a whole, like the <a class="reference external" href="https://www.metoffice.gov.uk/">UK Met Office</a>’s
+<a class="reference external" href="https://www.informaticslab.co.uk/">Informatics Lab</a>. However, instead of just
+churning out technology, this group would also serve as an example to the rest of
+NCAR on how (and why) to use modern best practices (GitHub, continuous integration,
+test-driven development, etc.) for scientific software development. …and for
+science itself!</p>
+<p>Matt and I dreamed big, and as usually happens when the reality of budgets collides
+with dreams, we were forced to scale back our vision of a ten-person team to small
+group of two. Two is still greater than zero, so we considered that a success, and
+the Experimental Development Team (Xdev) was born! In October of 2018,
+<a class="reference external" href="https://andersonbanihirwe.dev/">Anderson Banihirwe</a> joined the team as a member of
+NCAR’s <a class="reference external" href="https://www2.cisl.ucar.edu/">Computational &amp; Informatics Laboratory (CISL)</a>,
+and in January of 2019, <a class="reference external" href="https://staff.ucar.edu/users/jkent">Julia Kent</a> (CISL)
+joined us, too. By the fall of 2019, we were able to bolster our ranks with
+part-time support from <a class="reference external" href="https://staff.ucar.edu/users/bonnland">Brian Bonnlander</a>
+(CISL), <a class="reference external" href="https://staff.ucar.edu/users/mlevy">Michael Levy</a> (CGD), and
+<a class="reference external" href="https://staff.ucar.edu/users/mabouali">Mohammad Abouali</a> (CISL). Read more about
+us <a class="reference external" href="https://ncar.github.io/xdev/pages/about/">here</a>.</p>
+<p>Currently, the Xdev Team is working to make <em>curiousity-driven analysis</em> of “big”
+scientific data a day-to-day reality. This is a tall order! Not only does the
+technology need to advance to make such a dream a reality, but helping users
+(<em>i.e.</em>, scientists) fully understand this new paradigm is extremely challenging.
+We appreciate that many scientists do not want to become developers themselves,
+which means that we must promote technology that is <em>expressive</em>, letting the user
+do more science with less engineering. This means <em>abstracting</em> away computational
+details, such as parallelism (<em>e.g.</em>, with <a class="reference external" href="https://dask.org">Dask</a>) or I/O (<em>e.g.</em>,
+with <a class="reference external" href="https://xarray.pydata.org/en/stable/">Xarray</a>) or complex scientific
+functions, without abstracting away so much that the user can no longer problem
+solve when things go wrong. We believe that means using the Python programming
+language. Python is designed for rapid prototyping, which is the nature of most
+scientific programming for analysis purposes.</p>
+<p>Achieving this goal also means <em>teaching</em> scientists about a new way of performing
+and <em>thinking about</em> data analysis. And this means not only teaching scientists
+how to use the technology (<em>e.g.</em>, giving tutorials, providing online examples,
+<em>etc.</em>), but also how the technology can improve science (<em>e.g.</em>, by making their
+workflows reproducible or replicable, by letting scientists ask questions they
+couldn’t with unscalable legacy tools, <em>etc.</em>).</p>
+<p>So, the Xdev Teams works with scientists to develop new technology, promotes
+existing technology, and teaches scientists how to use this technology for the
+greatest good. This is who we are, and we are just beginning to scratch the
+surface on a very big problem.</p>
+</div>
+
+<div class="section">
+     
+<div class="section">
+  <span style="float: left">
+     
+    <a href="../Time/">
+      <i class="fa fa-arrow-circle-left"></i> The Significance of Time
+    </a>
+    
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right">
+     
+    <a href="../templating-isnt-just-for-web-developers/">
+      Templating isn’t just for Web Developers! <i
+        class="fa fa-arrow-circle-right"
+      ></i
+      >
+    </a>
+    
+  </span>
+</div>
+  
+</div>
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-B50ZRRN69X"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('config', 'G-B50ZRRN69X');
+                </script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021, NCAR Earth System Data Science Team.<br/>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.4.<br/>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

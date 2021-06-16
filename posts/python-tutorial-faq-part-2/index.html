@@ -1,0 +1,423 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Python Tutorial FAQ - Part 2 &#8212; NCAR-ESDS 0.1 documentation</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "NCAR/esds");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <link rel="author" title="About these documents" href="../../about/" />
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+     
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../blog/atom.xml"
+  title="NCAR ESDS"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+<a class="navbar-brand" href="../../">
+<p class="title">NCAR-ESDS</p>
+</a>
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../about/">
+  About Us
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../faq/">
+  Frequently Asked Questions
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../blog/">
+  Blog
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../communication/">
+  Communication
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../best-practices/">
+  Best Practices
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/ncar/esds" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">  
+<h2>
+   <i class="fa fa-calendar"></i>
+  05 November 2020 
+</h2>
+
+<ul>
+   
+<li id="author">
+  <span
+    ><i class="fa-fw fa fa-user"></i></span
+  >
+   
+  <a href="../../blog/author/julia-kent/">Julia Kent</a>  
+</li>
+    
+<li id="tags">
+  <span
+    ><i class="fa-fw fa fa-tags"></i> </span
+  >
+   
+  <a href="../../blog/tag/python-tutorial-series/">python-tutorial-series</a>   
+  <a href="../../blog/tag/faq/">faq</a>   
+  <a href="../../blog/tag/python/">python</a>  
+</li>
+ 
+</ul>
+
+<h3>
+  <a href="../../blog/">Recent Posts</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="../graphviz_example/"
+      >11 June - Creating Visualizations of Intake-ESM Catalogs</a
+    >
+  </li>
+  
+  <li>
+    <a href="../xarray-tutorial/"
+      >04 June - Xarray Tutorial</a
+    >
+  </li>
+  
+  <li>
+    <a href="../ecgtools-history-files-example/"
+      >04 June - Building an Intake-esm catalog from CESM2 History Files</a
+    >
+  </li>
+  
+  <li>
+    <a href="../dask-summit-takeaway/"
+      >28 May - Dask Distributed Summit 2021 Takeaways</a
+    >
+  </li>
+  
+  <li>
+    <a href="../pandas-tutorial/"
+      >19 May - Pandas Tutorial</a
+    >
+  </li>
+  
+</ul>
+
+<h3>
+  <a href="../../blog/archive/">Archives</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="../../blog/2021/">2021 (25)</a>
+  </li>
+    
+  <li>
+    <a href="../../blog/2020/">2020 (6)</a>
+  </li>
+    
+  <li>
+    <a href="../../blog/2019/">2019 (2)</a>
+  </li>
+   
+</ul>
+
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+
+<nav id="bd-toc-nav">
+    
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                 <div class="section" id="python-tutorial-faq-part-2">
+<h1>Python Tutorial FAQ - Part 2<a class="headerlink" href="#python-tutorial-faq-part-2" title="Permalink to this headline">¶</a></h1>
+<p>Here is a compilation of questions and issues that arose during the second session of the Python Tutorial Seminar Series, on creating a data dictionary. After this first short series, these FAQ sections will be added to the <a class="reference external" href="https://ncar.github.io/python-tutorial/">Xdev tutorial website</a></p>
+<hr class="docutils" />
+<p><strong>Q.</strong> Why is <code class="docutils literal notranslate"><span class="pre">list[0:10]</span></code> the first 10 elements, not 11?</p>
+<p><strong>A.</strong> In Python, “list slicing” uses square brackets with the syntax <code class="docutils literal notranslate"><span class="pre">[start:stop:step]</span></code>. The <code class="docutils literal notranslate"><span class="pre">start</span></code> is <em>inclusive</em>, while the <code class="docutils literal notranslate"><span class="pre">step</span></code> is <em>exclusive</em>. So, you read up to (but excluding) the <code class="docutils literal notranslate"><span class="pre">stop</span></code> index.</p>
+<hr class="docutils" />
+<p><strong>Q.</strong> Why do we not say <code class="docutils literal notranslate"><span class="pre">list[1,10]</span></code> to return the first 10 elements?</p>
+<p><strong>A.</strong> Python is 0-indexed, so index of 1 actually refers to the second element. Say our list was <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5,</span> <span class="pre">6,</span> <span class="pre">7,</span> <span class="pre">8,</span> <span class="pre">9,</span> <span class="pre">10,</span> <span class="pre">11]</span></code>, then <code class="docutils literal notranslate"><span class="pre">list[1,10]</span></code> would return <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5,</span> <span class="pre">6,</span> <span class="pre">7,</span> <span class="pre">8,</span> <span class="pre">9]</span></code> (which is missing the first element) and <code class="docutils literal notranslate"><span class="pre">list[0,10]</span></code> returns the desired <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5,</span> <span class="pre">6,</span> <span class="pre">7,</span> <span class="pre">8,</span> <span class="pre">9]</span></code> (Also, see the answer to the previous question).</p>
+<hr class="docutils" />
+<p><strong>Q.</strong> So <code class="docutils literal notranslate"><span class="pre">list[0:1]</span></code> is just one value, same as <code class="docutils literal notranslate"><span class="pre">list[0]</span></code>?</p>
+<p><strong>A.</strong> Actually not. <code class="docutils literal notranslate"><span class="pre">list[0:1]</span></code> returns a list, due to the slice indexing, with a value of <code class="docutils literal notranslate"><span class="pre">[0]</span></code>, whereas <code class="docutils literal notranslate"><span class="pre">list[0]</span></code> returns the 0th element, and has a value of <code class="docutils literal notranslate"><span class="pre">0</span></code>. Notice the square brackets or their absence!</p>
+<hr class="docutils" />
+<p><strong>Q.</strong> How do you read only the 1st, 4rd, 7th, 10th, … rows of a data?</p>
+<p><strong>A.</strong> Using <code class="docutils literal notranslate"><span class="pre">list[::3]</span></code></p>
+<hr class="docutils" />
+<p><strong>Q.</strong> Could you clarify how this part works again:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read the first three lines (header)</span>
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="n">datafile</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>A.</strong> <code class="docutils literal notranslate"><span class="pre">range(3)</span></code> is an iterator; it is equivalent to using the list <code class="docutils literal notranslate"><span class="pre">[0,1,2]</span></code>. Here we’re iterating over that 3-element list and using the value for each iteration as the value of the variable <code class="docutils literal notranslate"><span class="pre">_</span></code>. (We need to define the variable <code class="docutils literal notranslate"><span class="pre">_</span></code> in order to iterate through the for-loop, but we never use it, which is why we just call it <code class="docutils literal notranslate"><span class="pre">_</span></code>.). In every iteration, we call <code class="docutils literal notranslate"><span class="pre">datafile.readline()</span></code> which means we read 3 lines of text from the file <em>in total</em>, but since we aren’t saving those lines of text anywhere (i.e., in any variable) we are only reading and discarding them. (Note, anything that begins with an underscore is generally considered “discardable” by common practice, but there is no rule in Python about that.) This for-loop sets us up so the next <code class="docutils literal notranslate"><span class="pre">readline()</span></code> call is where the data values begin.</p>
+<hr class="docutils" />
+<p><strong>Q.</strong> Why is there no <code class="docutils literal notranslate"><span class="pre">end</span> <span class="pre">for</span></code> in a Python for-loop?\n”,</p>
+<p><strong>A.</strong> Python is sensitive to white space. Anything indented after the <code class="docutils literal notranslate"><span class="pre">for</span></code> statement is part of the for-block, everything else after that is after the for-loop has completed. There is no extra information that an <code class="docutils literal notranslate"><span class="pre">end</span> <span class="pre">for</span></code> line would be needed to convey.</p>
+<hr class="docutils" />
+<p><strong>Q.</strong> Why do we initialize data as an empty list with <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">=</span> <span class="pre">[]</span></code>?</p>
+<p><strong>A.</strong> If we want to use the <code class="docutils literal notranslate"><span class="pre">append</span></code> function to add elements to our list, the object to which we’re adding elements to has to be an <em>existing</em> (i.e., initialized) list.</p>
+<hr class="docutils" />
+<p><strong>Q.</strong> Why do you refer to the data dictionary elements using <code class="docutils literal notranslate"><span class="pre">[]</span></code> when it is not a list?</p>
+<p><strong>A.</strong> Square brackets, <code class="docutils literal notranslate"><span class="pre">[]</span></code>, are used in Python to <em>declare a list</em> and to <em>get an item</em>. In the “get item” usage, the square brackets must be preceded by the name of the variable from which the item is being retrieved. In the list declaration usage, the square brackets must exist <em>alone</em> (i.e., no variable name preceding it). For example, <code class="docutils literal notranslate"><span class="pre">x[0]</span></code> means “get element <code class="docutils literal notranslate"><span class="pre">0</span></code> from <code class="docutils literal notranslate"><span class="pre">x</span></code>” and <code class="docutils literal notranslate"><span class="pre">[0]</span></code> (i.e., without the <code class="docutils literal notranslate"><span class="pre">x</span></code> in front) means “create a list containing the element <code class="docutils literal notranslate"><span class="pre">0</span></code>”. The “declare a list” syntax is obviously <em>only</em> for creating a list, but the “get item” syntax can be used with <em>any container</em> (i.e., lists, dictionaries, sets, etc.). (<strong>NOTE:</strong> Slice notation, namely <code class="docutils literal notranslate"><span class="pre">x[start:stop:step]</span></code>, only works on lists, and it does not work with dictionaries or sets!)</p>
+<hr class="docutils" />
+<p><strong>Q.</strong> How do you print a single element from a variable, like <code class="docutils literal notranslate"><span class="pre">tempout</span></code>, from the data dictionary?</p>
+<p><strong>A.</strong> <code class="docutils literal notranslate"><span class="pre">data['tempout'][9]</span></code></p>
+<hr class="docutils" />
+<p><strong>Q.</strong> Could you explain more about function pointers?</p>
+<p><strong>A.</strong> Everything in Python is an object. You may be used to passing around variables by reference or value. In Python you can also pass around a function without calling it. In this session we passed in <code class="docutils literal notranslate"><span class="pre">float</span></code> which is a class of objects - and can also be used like a function. We stored the name of the function in the types dictionary so that we could use the function later on in the code.</p>
+<hr class="docutils" />
+</div>
+
+<div class="section">
+     
+<div class="section">
+  <span style="float: left">
+     
+    <a href="../python-tutorial-faq/">
+      <i class="fa fa-arrow-circle-left"></i> Python Tutorial FAQ
+    </a>
+    
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right">
+     
+    <a href="../python-tutorial-faq-part-3/">
+      Python Tutorial FAQ - Part 3 <i
+        class="fa fa-arrow-circle-right"
+      ></i
+      >
+    </a>
+    
+  </span>
+</div>
+  
+</div>
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-B50ZRRN69X"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('config', 'G-B50ZRRN69X');
+                </script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021, NCAR Earth System Data Science Team.<br/>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.4.<br/>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

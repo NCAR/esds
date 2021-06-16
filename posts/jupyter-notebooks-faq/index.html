@@ -1,0 +1,437 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jupyter Notebooks Tutorial FAQ &#8212; NCAR-ESDS 0.1 documentation</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "NCAR/esds");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <link rel="author" title="About these documents" href="../../about/" />
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+     
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../blog/atom.xml"
+  title="NCAR ESDS"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+<a class="navbar-brand" href="../../">
+<p class="title">NCAR-ESDS</p>
+</a>
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../about/">
+  About Us
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../faq/">
+  Frequently Asked Questions
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../blog/">
+  Blog
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../communication/">
+  Communication
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../best-practices/">
+  Best Practices
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/ncar/esds" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">  
+<h2>
+   <i class="fa fa-calendar"></i>
+  03 March 2021 
+</h2>
+
+<ul>
+   
+<li id="author">
+  <span
+    ><i class="fa-fw fa fa-user"></i></span
+  >
+   
+  <a href="../../blog/author/julia-kent/">Julia Kent</a>  
+</li>
+    
+<li id="tags">
+  <span
+    ><i class="fa-fw fa fa-tags"></i> </span
+  >
+   
+  <a href="../../blog/tag/python-tutorial-series/">python-tutorial-series</a>   
+  <a href="../../blog/tag/faq/">faq</a>   
+  <a href="../../blog/tag/jupyter/">jupyter</a>  
+</li>
+ 
+</ul>
+
+<h3>
+  <a href="../../blog/">Recent Posts</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="../graphviz_example/"
+      >11 June - Creating Visualizations of Intake-ESM Catalogs</a
+    >
+  </li>
+  
+  <li>
+    <a href="../xarray-tutorial/"
+      >04 June - Xarray Tutorial</a
+    >
+  </li>
+  
+  <li>
+    <a href="../ecgtools-history-files-example/"
+      >04 June - Building an Intake-esm catalog from CESM2 History Files</a
+    >
+  </li>
+  
+  <li>
+    <a href="../dask-summit-takeaway/"
+      >28 May - Dask Distributed Summit 2021 Takeaways</a
+    >
+  </li>
+  
+  <li>
+    <a href="../pandas-tutorial/"
+      >19 May - Pandas Tutorial</a
+    >
+  </li>
+  
+</ul>
+
+<h3>
+  <a href="../../blog/archive/">Archives</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="../../blog/2021/">2021 (25)</a>
+  </li>
+    
+  <li>
+    <a href="../../blog/2020/">2020 (6)</a>
+  </li>
+    
+  <li>
+    <a href="../../blog/2019/">2019 (2)</a>
+  </li>
+   
+</ul>
+
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+
+<nav id="bd-toc-nav">
+    
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                 <div class="section" id="jupyter-notebooks-tutorial-faq">
+<h1>Jupyter Notebooks Tutorial FAQ<a class="headerlink" href="#jupyter-notebooks-tutorial-faq" title="Permalink to this headline">¶</a></h1>
+<p>Here is a compilation of questions and issues that arose during the <a class="reference external" href="https://youtu.be/xSzXvwzFsDU">Jupyter Notebooks</a> session of the Python Tutorial Seminar Series.</p>
+<hr class="docutils" />
+<p><strong>Q.</strong> I installed Miniconda but it doesn’t seem to be working. <code class="docutils literal notranslate"><span class="pre">conda</span></code> is not a recognized command. What should I do?</p>
+<p><strong>A.</strong> This is possible if Miniconda is not visible from your workspace, according to the <a class="reference external" href="https://docs.anaconda.com/anaconda/user-guide/troubleshooting/#cannot-get-conda-to-run-after-installing">Conda trouble shooting site</a> this happens if you answered “NO” instead of “YES” when asked if you’d like to prepend the conda prompt to your path. You have two options:</p>
+<ol>
+<li><p>Manually edit your (hidden) <code class="docutils literal notranslate"><span class="pre">.baschrc</span></code> file to include the line:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>export PATH=/Users/your-username/anaconda3/bin:$PATH
+
+</pre></div>
+</div>
+</li>
+<li><p>Try uninstalling and re-installing Conda, making sure to answer “YES” this time,</p></li>
+</ol>
+<hr class="docutils" />
+<p><strong>Q.</strong> I executed <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">lab</span></code> and received the message, “Could not determine jupyterlab build status without nodejs”. Do I need to exit somehow and or fix something?</p>
+<p><strong>A.</strong> This is only a warning, not an error message. No fix is necessary.</p>
+<hr class="docutils" />
+<p><strong>Q.</strong> How do you specify what browser Jupyter opens with?</p>
+<p><strong>A.</strong> If you don’t want to use your default browser (which Jupyter will automatically open), you can specify a different one with <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">lab</span> <span class="pre">—browser=chrome</span></code> (e.g., for Chrome)</p>
+<hr class="docutils" />
+<p><strong>Q.</strong> Jupyter opens to my base environment, not the environment I launched <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">lab</span></code> from. Is this an error?</p>
+<p><strong>A.</strong> This is the expected behavior. You can double check your environment by typing <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">env</span> <span class="pre">list</span></code> from your Jupyter terminal to see all of your environments. The one with the asterisks next to it is your activated environment.</p>
+<hr class="docutils" />
+<p><strong>Q.</strong> The Jupyter workspace autocompletion of quotation marks and parenthesis is causing errors. Is there a way to disable this?</p>
+<p><strong>A.</strong> Yes according to this this <a class="reference external" href="https://stackoverflow.com/questions/44216326/how-to-disable-auto-quotes-and-auto-brackets-in-jupyter-5-0#:~:text=2%20Answers&amp;text=After%20executing%20the%20Python%20command,auto%2Dclosing%20quotes%20and%20brackets">stack overflow post</a>, in any code cell type:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">notebook.services.config</span> <span class="kn">import</span> <span class="n">ConfigManager</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">ConfigManager</span><span class="p">()</span>
+<span class="n">c</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="s1">&#39;notebook&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;CodeCell&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;cm_config&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;autoCloseBrackets&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">}}})</span>
+</pre></div>
+</div>
+<p>You may have to restart the Jupyter session for the changes to take effect.</p>
+<hr class="docutils" />
+<p><strong>Q.</strong> Is converting a cell from code to raw a good way to basically “comment out” an entire cell? Is that good practice or bad practice?</p>
+<p><strong>A.</strong> This is the easiest way to “comment out” a cell.</p>
+<hr class="docutils" />
+<p><strong>Q.</strong> How do I use Jupyter with an R kernel (instead of Python)?</p>
+<p><strong>A.</strong> You would need to create a new Conda environment with R and <code class="docutils literal notranslate"><span class="pre">jupyter</span></code> installed.</p>
+<hr class="docutils" />
+<p><strong>Q.</strong> Does Jupyter Lab care about being shut down gracefully? If I you just <code class="docutils literal notranslate"><span class="pre">ctrl-C</span></code> it from the command-line, does that do anything bad?</p>
+<p><strong>A.</strong> As long as your notebook is saved, <code class="docutils literal notranslate"><span class="pre">ctrl-C</span></code> is fine. Otherwise, you will lose the contents of your notebooks that weren’t saved before the shutdown.</p>
+<p>On a Mac you can double check that your Jupyter Notebook isn’t still running in the background, type <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">notebook</span> <span class="pre">list</span></code> in the terminal to list all active sessions.</p>
+<hr class="docutils" />
+<p><strong>Q.</strong> How do different environments affect resource usage in virtual environments?</p>
+<p><strong>A.</strong> Running code uses resources, different environments use disc space. It is possible to have a ton of duplication (e.g., every single user of the virtual environment has installed <code class="docutils literal notranslate"><span class="pre">numpy</span></code>) but this gives you a lot of control over your own software versioning. You can prune unused virtual environments to save disc space with the command <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">env</span> <span class="pre">remove</span> <span class="pre">—name</span> <span class="pre">my_env</span></code>, or try <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">clean</span> <span class="pre">-a</span></code> to clean up any cached downloaded packages.</p>
+<hr class="docutils" />
+<p><strong>Q.</strong> Where are the packages physically installed in a virtual environment?</p>
+<p><strong>A.</strong> In the directory where miniconda was installed, you will see a directory called <code class="docutils literal notranslate"><span class="pre">envs</span></code>, and every single named environment will be put into that directory.</p>
+<hr class="docutils" />
+<p><strong>Q.</strong> Why do we install Miniconda instead of Anaconda?</p>
+<p><strong>A.</strong> Miniconda is much more lightweight than Anaconda. It contains fewer packages and takes up less disc space.</p>
+<hr class="docutils" />
+</div>
+
+<div class="section">
+     
+<div class="section">
+  <span style="float: left">
+     
+    <a href="../numpy-tutorial/">
+      <i class="fa fa-arrow-circle-left"></i> Numpy Tutorial
+    </a>
+    
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right">
+     
+    <a href="../Interactive_Dashboard/">
+      HiRes-CESM Interactive Dashboard Example <i
+        class="fa fa-arrow-circle-right"
+      ></i
+      >
+    </a>
+    
+  </span>
+</div>
+  
+</div>
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-B50ZRRN69X"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('config', 'G-B50ZRRN69X');
+                </script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021, NCAR Earth System Data Science Team.<br/>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.4.<br/>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

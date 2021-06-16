@@ -1,0 +1,487 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Python Tutorial FAQ &#8212; NCAR-ESDS 0.1 documentation</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "NCAR/esds");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <link rel="author" title="About these documents" href="../../about/" />
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+     
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../blog/atom.xml"
+  title="NCAR ESDS"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+<a class="navbar-brand" href="../../">
+<p class="title">NCAR-ESDS</p>
+</a>
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../about/">
+  About Us
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../faq/">
+  Frequently Asked Questions
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../blog/">
+  Blog
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../communication/">
+  Communication
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../best-practices/">
+  Best Practices
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/ncar/esds" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">  
+<h2>
+   <i class="fa fa-calendar"></i>
+  20 October 2020 
+</h2>
+
+<ul>
+   
+<li id="author">
+  <span
+    ><i class="fa-fw fa fa-user"></i></span
+  >
+   
+  <a href="../../blog/author/julia-kent/">Julia Kent</a>  
+</li>
+    
+<li id="tags">
+  <span
+    ><i class="fa-fw fa fa-tags"></i> </span
+  >
+   
+  <a href="../../blog/tag/python-tutorial-series/">python-tutorial-series</a>   
+  <a href="../../blog/tag/faq/">faq</a>   
+  <a href="../../blog/tag/python/">python</a>  
+</li>
+ 
+</ul>
+
+<h3>
+  <a href="../../blog/">Recent Posts</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="../graphviz_example/"
+      >11 June - Creating Visualizations of Intake-ESM Catalogs</a
+    >
+  </li>
+  
+  <li>
+    <a href="../xarray-tutorial/"
+      >04 June - Xarray Tutorial</a
+    >
+  </li>
+  
+  <li>
+    <a href="../ecgtools-history-files-example/"
+      >04 June - Building an Intake-esm catalog from CESM2 History Files</a
+    >
+  </li>
+  
+  <li>
+    <a href="../dask-summit-takeaway/"
+      >28 May - Dask Distributed Summit 2021 Takeaways</a
+    >
+  </li>
+  
+  <li>
+    <a href="../pandas-tutorial/"
+      >19 May - Pandas Tutorial</a
+    >
+  </li>
+  
+</ul>
+
+<h3>
+  <a href="../../blog/archive/">Archives</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="../../blog/2021/">2021 (25)</a>
+  </li>
+    
+  <li>
+    <a href="../../blog/2020/">2020 (6)</a>
+  </li>
+    
+  <li>
+    <a href="../../blog/2019/">2019 (2)</a>
+  </li>
+   
+</ul>
+
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+
+<nav id="bd-toc-nav">
+    
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                 <div class="section" id="python-tutorial-faq">
+<h1>Python Tutorial FAQ<a class="headerlink" href="#python-tutorial-faq" title="Permalink to this headline">¶</a></h1>
+<p>Here is a compilation of questions and issues that arose during the first session of the Python Tutorial Seminar Series. Hopefully all attendees feel that their issues are addressed here.</p>
+<hr class="docutils" />
+<p><strong>Q.</strong> I am having issues running the command:
+<code class="docutils literal notranslate"><span class="pre">curl</span> <span class="pre">-kO</span> <span class="pre">https://sundowner.colorado.edu/weather/atoc8/wxobs20170821.txt</span></code>.
+What should I do?</p>
+<p><strong>A.</strong> If that was your case, try running the above command without the “-kO” option, or try using “wget” instead:
+<code class="docutils literal notranslate"><span class="pre">wget</span> <span class="pre">--no-check-certificate</span> <span class="pre">https://sundowner.colorado.edu/weather/atoc8/wxobs20170821.txt</span></code>.</p>
+<p>If you are on Windows and have curl, try:
+<code class="docutils literal notranslate"><span class="pre">curl</span> <span class="pre">https://sundowner.colorado.edu/weather/atoc8/wxobs20170821.txt</span> <span class="pre">-OutFile</span> <span class="pre">wxobs20170821.txt</span></code>.</p>
+<hr class="docutils" />
+<p><strong>Q.</strong> Can you explain the advantages of each method we just went through?</p>
+<p><strong>A.</strong> In the tutorial part 1 “Opening a .txt File,” we covered 3 different methods of reading in the datafile.
+The first used the Python function <code class="docutils literal notranslate"><span class="pre">readline()</span></code> this function only reads a single line from the function and each time you use it, the next line is read. The advantage of this method is that you get to quickly see just the header of the function which is useful for determining how the data is organized.
+The second method was to use the Python <code class="docutils literal notranslate"><span class="pre">read()</span></code> function, this reads the entire datafile at once, this is preferred over using method 1 for every single line of the file if you in fact want to read in the entire datafile..
+And the third method was the same as the second but using the <code class="docutils literal notranslate"><span class="pre">with</span></code> context manager. The advantage of the third method is that when the with-block is completed the file is automatically closed, making for easier clean up and memory usage throughout the script.</p>
+<hr class="docutils" />
+<p>Q. When I create the environment, it downloads lots of packages. Are those “python”, or extra things?</p>
+<p>A: Yes these are built in packages necessary for Python.</p>
+<hr class="docutils" />
+<p><strong>Q.</strong> <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">init</span> <span class="pre">.</span></code> does not work on windows computers. What to do if I neeed to open a git prompt?</p>
+<p><strong>A.</strong> Go inside the YourProject folder, right click and choose Git Bash Here.
+On the command line write <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">init</span></code></p>
+<hr class="docutils" />
+<p><strong>Q.</strong> I had an error at the activate: about initializing my shell, the init command suggested failed as I don’t have sudo, what should I do?</p>
+<p><strong>A.</strong> Run <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">init</span></code>, Conda will detect the type of shell and write init scripts into the shell’s configuration file. If that doesn’t work try <code class="docutils literal notranslate"><span class="pre">activate</span> <span class="pre">env_name</span></code> or run from Anaconda command prompt.</p>
+<hr class="docutils" />
+<p><strong>Q.</strong> <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">python_tutorial</span></code> does not work. I get the following error:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>     CommandNotFoundError: Your shell has not been properly configured to use &#39;conda activate&#39;.
+     To initialize your shell, run
+      $ conda init &lt;SHELL_NAME&gt;
+      Currently supported shells are:
+      - bash
+      - fish
+</pre></div>
+</div>
+<p>What should I do?</p>
+<p><strong>A.</strong> Run <code class="docutils literal notranslate"><span class="pre">activate</span> <span class="pre">env_name</span></code> instead of <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">env_name</span></code></p>
+<hr class="docutils" />
+<p><strong>Q.</strong> <code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">/Users/hmw/anaconda3/bin/activate</span></code> produces the following error:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">_CONDA_ROOT</span><span class="o">=/</span><span class="n">Users</span><span class="o">/</span><span class="n">hmw</span><span class="o">/</span><span class="n">anaconda3</span><span class="p">:</span> <span class="n">Command</span> <span class="ow">not</span> <span class="n">found</span><span class="o">.</span>
+    <span class="n">_CONDA_ROOT</span><span class="p">:</span> <span class="n">Undefined</span> <span class="n">variable</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>What should I do?</p>
+<p><strong>A.</strong> Run <code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">activate</span></code> instead.</p>
+<hr class="docutils" />
+<p><strong>Q.</strong> <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> produces the following error:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>        <span class="n">fatal</span><span class="p">:</span> <span class="n">Not</span> <span class="n">a</span> <span class="n">git</span> <span class="n">repository</span> <span class="p">(</span><span class="ow">or</span> <span class="nb">any</span> <span class="n">parent</span> <span class="n">up</span> <span class="n">to</span> <span class="n">mount</span> <span class="n">point</span> <span class="o">/</span><span class="n">home</span><span class="p">)</span>
+        <span class="n">Stopping</span> <span class="n">at</span> <span class="n">filesystem</span> <span class="n">boundary</span> <span class="p">(</span><span class="n">GIT_DISCOVERY_ACROSS_FILESYSTEM</span> <span class="ow">not</span> <span class="nb">set</span><span class="p">)</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>What should I do?</p>
+<p><strong>A.</strong> You need to run <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">init</span> <span class="pre">.</span></code> before you can run <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code></p>
+<hr class="docutils" />
+<p><strong>Q.</strong> I see the following message:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>        <span class="o">***</span> <span class="n">Please</span> <span class="n">tell</span> <span class="n">me</span> <span class="n">who</span> <span class="n">you</span> <span class="n">are</span><span class="o">.</span>
+         <span class="n">Run</span>
+         <span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">user</span><span class="o">.</span><span class="n">email</span> <span class="s2">&quot;you@example.com&quot;</span>
+         <span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">user</span><span class="o">.</span><span class="n">name</span> <span class="s2">&quot;Your Name&quot;</span>
+
+         <span class="n">to</span> <span class="nb">set</span> <span class="n">your</span> <span class="n">account</span><span class="s1">&#39;s default identity.</span>
+         <span class="n">Omit</span> <span class="o">--</span><span class="k">global</span> <span class="n">to</span> <span class="nb">set</span> <span class="n">the</span> <span class="n">identity</span> <span class="n">only</span> <span class="ow">in</span> <span class="n">this</span> <span class="n">repository</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>What should I do?</p>
+<p><strong>A.</strong> This message typically appears the first time you use <code class="docutils literal notranslate"><span class="pre">git</span></code> on a computer. When you make changes in the repository, <code class="docutils literal notranslate"><span class="pre">git</span></code> will track those changes as well as who made them - and to do that, it needs to know your name and email address. Run the two lines mentioned in the error, replacing <code class="docutils literal notranslate"><span class="pre">you&#64;example.com</span></code> with your actual email address and <code class="docutils literal notranslate"><span class="pre">Your</span> <span class="pre">Name</span></code> with your name:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>        <span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">user</span><span class="o">.</span><span class="n">email</span> <span class="s2">&quot;you@example.com&quot;</span>
+        <span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">user</span><span class="o">.</span><span class="n">name</span> <span class="s2">&quot;Your Name&quot;</span>
+</pre></div>
+</div>
+<p>And then re-run the <code class="docutils literal notranslate"><span class="pre">git</span></code> command that returned the error.</p>
+<p>If this is your first time using <code class="docutils literal notranslate"><span class="pre">git</span></code>, we recommend reading the first two chapters of <a class="reference external" href="https://git-scm.com/book/en/v2">Pro Git</a> to learn more about it. <a class="reference external" href="https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup">Chapter 1.6</a> covers this first-time setup step.</p>
+<hr class="docutils" />
+<p><strong>Q.</strong> How did you save and exit an editor?</p>
+<p><strong>A.</strong> In vim, it will be <code class="docutils literal notranslate"><span class="pre">:wq</span></code>. In nano it is <code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">X</span></code></p>
+<hr class="docutils" />
+<p><strong>Q.</strong> Could you explain the logic behind where <code class="docutils literal notranslate"><span class="pre">()</span></code>’s go? We used <code class="docutils literal notranslate"><span class="pre">datafile</span> <span class="pre">=</span> <span class="pre">open(filename)</span></code> and later <code class="docutils literal notranslate"><span class="pre">datafile.close()</span></code> as opposed to <code class="docutils literal notranslate"><span class="pre">close(datafile)</span></code>. What is the meaning of the <code class="docutils literal notranslate"><span class="pre">()</span></code> after <code class="docutils literal notranslate"><span class="pre">datafile.close</span></code>?</p>
+<p><strong>A.</strong> <code class="docutils literal notranslate"><span class="pre">open</span></code> acts like a built in function in Python. <code class="docutils literal notranslate"><span class="pre">()</span></code> always follow functions. The left hand side <code class="docutils literal notranslate"><span class="pre">datafile</span></code> is defined as a new Python object. Python objects have methods associated with them. One of the functions associated with this object is <code class="docutils literal notranslate"><span class="pre">close</span></code>. So we are accessing the function <code class="docutils literal notranslate"><span class="pre">close()</span></code> from the object <code class="docutils literal notranslate"><span class="pre">datafile</span></code>.</p>
+<hr class="docutils" />
+<p><strong>Q.</strong> Are there any good guidelines on when to make something a function vs an object method?</p>
+<p><strong>A.</strong> If you have a collection of functions and those functions all take the mostly same arguments, it is good practice to create an object that holds those shared arguments. We will cover more of this moving forward.</p>
+<hr class="docutils" />
+<p><strong>Q.</strong> Can you talk more about how python manages memory when we read data files or create variables within a function?</p>
+<p><strong>A.</strong> Memory management is done through a “garbage collection system” and “instance counting” in Python. The first time you create something in Python, memory is allocated for that thing. Every time you access that variable, it counts how many times there are pointers to that object. Once something is no longer pointed to, Python deletes it from memory.</p>
+<hr class="docutils" />
+<p><strong>Q.</strong> In zsh, after running <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">init</span></code>, I get an error saying conda is not found…even if I start new zsh shell. What should I do?</p>
+<p><strong>A.</strong> You should be able to get conda to work in zsh directly, if you are comfortable with zsh. It turns out that to do this all you need to do is look inside your “~/.bash_profile” file for a section of code that starts with the line:
+<code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">&gt;&gt;&gt;</span> <span class="pre">conda</span> <span class="pre">initialize</span> <span class="pre">&gt;&gt;&gt;</span></code></p>
+<p>and ends with the line:
+<code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">&lt;&lt;&lt;</span> <span class="pre">conda</span> <span class="pre">initialize</span> <span class="pre">&lt;&lt;&lt;</span></code></p>
+<p>If you copy these lines and paste them into a file called “~/.zshrc”, then conda will work with zsh.</p>
+<hr class="docutils" />
+<p><strong>Some other tips for success:</strong></p>
+<ul class="simple">
+<li><p>For non mac users, git and conda have 2 different shell environment</p></li>
+<li><p>You need to use a text editor - for example nano, vim, or nedit. If you are unfamiliar with text editors pick one</p></li>
+<li><p>If the commands at the bottom of the screen are hidden by your Zoom toolbar or meeting controls, you need to change the Zoom settings on your display.</p></li>
+<li><p>Here is a video about installing miniconda on windows 10: <a class="reference external" href="https://www.youtube.com/watch?v=tXgPY4lc6fo">Install Miniconda and Python 3.7 on Windows 10</a></p></li>
+<li><p>Here is a video about installing anaconda on windows 10: <a class="reference external" href="https://www.youtube.com/watch?v=5mDYijMfSzs">Install Anaconda Python, Jupyter Notebook And Spyder on Windows 10</a></p></li>
+<li><p>Here is a video about installing git and configure git and github on windows: <a class="reference external" href="https://www.youtube.com/watch?v=J_Clau1bYco">How to Install and Configure Git and GitHub on Windows</a></p></li>
+</ul>
+</div>
+
+<div class="section">
+     
+<div class="section">
+  <span style="float: left">
+     
+    <a href="../tutorial-seminar-series/">
+      <i class="fa fa-arrow-circle-left"></i> Tutorial Seminar Series
+    </a>
+    
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right">
+     
+    <a href="../python-tutorial-faq-part-2/">
+      Python Tutorial FAQ - Part 2 <i
+        class="fa fa-arrow-circle-right"
+      ></i
+      >
+    </a>
+    
+  </span>
+</div>
+  
+</div>
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-B50ZRRN69X"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('config', 'G-B50ZRRN69X');
+                </script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021, NCAR Earth System Data Science Team.<br/>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.4.<br/>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

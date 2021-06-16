@@ -2,10 +2,270 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2021-06-11T21:45:06.979600+00:00</updated>
+  <updated>2021-06-16T12:03:31.139288+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.19">ABlog</generator>
+  <entry>
+    <id>ncar.github.io/esds/posts/Time/</id>
+    <title>The Significance of Time</title>
+    <updated>2019-08-28T00:00:00+00:00</updated>
+    <author>
+      <name>Julia Kent</name>
+    </author>
+    <content type="html">&lt;p&gt;Time is relative, as my coworker Anderson likes to remind me every time manipulating this coordinate proves to be relatively difficult.&lt;/p&gt;
+&lt;p&gt;This post is to be the first in a series of my struggles coming from an atmospheric science background and transitioning into software. My hope is that if I detail pain points and headaches I encounter along my journey, you won’t have to.&lt;/p&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/Time/" rel="alternate"/>
+    <summary>Time is relative, as my coworker Anderson likes to remind me every time manipulating this coordinate proves to be relatively difficult.This post is to be the first in a series of my struggles coming from an atmospheric science background and transitioning into software. My hope is that if I detail pain points and headaches I encounter along my journey, you won’t have to.</summary>
+    <category term="xarray" label="xarray"/>
+    <category term="cftime" label="cftime"/>
+    <category term="calendars" label="calendars"/>
+    <published>2019-08-28T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/we-are-xdev/</id>
+    <title>We are Xdev!</title>
+    <updated>2019-12-09T00:00:00+00:00</updated>
+    <author>
+      <name>Kevin Paul</name>
+    </author>
+    <content type="html">&lt;p&gt;More than a year ago, &lt;a class="reference external" href="http://www.cgd.ucar.edu/staff/mclong/"&gt;Matthew Long&lt;/a&gt; and
+&lt;a class="reference external" href="https://staff.ucar.edu/users/kpaul"&gt;I&lt;/a&gt; started shopping around the idea that a
+lot of what we do here at &lt;a class="reference external" href="https://ncar.ucar.edu/"&gt;NCAR&lt;/a&gt;, as well as &lt;em&gt;how&lt;/em&gt; we do
+it, needed a bit of a facelift. Our pitch was simple: As an institution that
+supports the geoscientific community by providing valuable datasets, supercomputing
+facilities, and computer models, NCAR needs to &lt;em&gt;exemplify&lt;/em&gt; modern best practices
+in the &lt;em&gt;development&lt;/em&gt; and &lt;em&gt;use&lt;/em&gt; of these resources. We took inspiration from the
+remarkably effective &lt;a class="reference external" href="https://pangeo.io"&gt;Pangeo&lt;/a&gt; community, which continues to show
+enormous success with Open Source development when coupled with modern software
+best practices, and we started to develop a plan of how to help shift, albeit
+slowly, both NCAR and—though collaboration with the Pangeo community—the
+geoscience community toward a better future.&lt;/p&gt;
+&lt;p&gt;To implement our plan, Matt and I started to see how much benefit to NCAR it could
+be to have a small, Agile team that was dedicated to prototyping new technologies
+for the benefit of the rest of the organization and the rest of the geoscience
+community, as a whole, like the &lt;a class="reference external" href="https://www.metoffice.gov.uk/"&gt;UK Met Office&lt;/a&gt;’s
+&lt;a class="reference external" href="https://www.informaticslab.co.uk/"&gt;Informatics Lab&lt;/a&gt;. However, instead of just
+churning out technology, this group would also serve as an example to the rest of
+NCAR on how (and why) to use modern best practices (GitHub, continuous integration,
+test-driven development, etc.) for scientific software development. …and for
+science itself!&lt;/p&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/we-are-xdev/" rel="alternate"/>
+    <summary>More than a year ago, Matthew Long and
+I started shopping around the idea that a
+lot of what we do here at NCAR, as well as how we do
+it, needed a bit of a facelift. Our pitch was simple: As an institution that
+supports the geoscientific community by providing valuable datasets, supercomputing
+facilities, and computer models, NCAR needs to exemplify modern best practices
+in the development and use of these resources. We took inspiration from the
+remarkably effective Pangeo community, which continues to show
+enormous success with Open Source development when coupled with modern software
+best practices, and we started to develop a plan of how to help shift, albeit
+slowly, both NCAR and—though collaboration with the Pangeo community—the
+geoscience community toward a better future.To implement our plan, Matt and I started to see how much benefit to NCAR it could
+be to have a small, Agile team that was dedicated to prototyping new technologies
+for the benefit of the rest of the organization and the rest of the geoscience
+community, as a whole, like the UK Met Office’s
+Informatics Lab. However, instead of just
+churning out technology, this group would also serve as an example to the rest of
+NCAR on how (and why) to use modern best practices (GitHub, continuous integration,
+test-driven development, etc.) for scientific software development. …and for
+science itself!</summary>
+    <category term="opensource" label="open source"/>
+    <category term="opendevelopment" label="open development"/>
+    <published>2019-12-09T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/templating-isnt-just-for-web-developers/</id>
+    <title>Templating isn’t just for Web Developers!</title>
+    <updated>2020-05-08T00:00:00+00:00</updated>
+    <author>
+      <name>Kevin Paul</name>
+    </author>
+    <content type="html">&lt;p&gt;Recently, I found myself rambling on in an unprepared attempt to
+explain templating to a colleague of mine who had no prior experience
+with frontend design. It didn’t take me long to realize that my
+explanation was convoluted and confusing, not that I stopped talking,
+mind you. Attribute that to being unprepared, or sleep deprived (i.e.,
+child &lt;em&gt;still&lt;/em&gt; not sleeping through the night!), or just a bad teacher.&lt;/p&gt;
+&lt;p&gt;Regardless, I decided to point them to a tutorial online that
+&lt;em&gt;certainly must exist&lt;/em&gt;, but after a brief Google search (which you
+should read as, “I didn’t find anything in the first page of search
+results!”), all I could find were tutorials for frontend developers.
+And if you aren’t an HTML expert, or already have experience with
+Flask or Django, teaching templating in those contexts can actually
+be more confusing than illuminating.&lt;/p&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/templating-isnt-just-for-web-developers/" rel="alternate"/>
+    <summary>Recently, I found myself rambling on in an unprepared attempt to
+explain templating to a colleague of mine who had no prior experience
+with frontend design. It didn’t take me long to realize that my
+explanation was convoluted and confusing, not that I stopped talking,
+mind you. Attribute that to being unprepared, or sleep deprived (i.e.,
+child still not sleeping through the night!), or just a bad teacher.Regardless, I decided to point them to a tutorial online that
+certainly must exist, but after a brief Google search (which you
+should read as, “I didn’t find anything in the first page of search
+results!”), all I could find were tutorials for frontend developers.
+And if you aren’t an HTML expert, or already have experience with
+Flask or Django, teaching templating in those contexts can actually
+be more confusing than illuminating.</summary>
+    <category term="templating" label="templating"/>
+    <category term="jinja2" label="jinja2"/>
+    <published>2020-05-08T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/writing-multiple-netcdf-files-in-parallel-with-xarray-and-dask/</id>
+    <title>Writing multiple netCDF files in parallel with xarray and dask</title>
+    <updated>2020-06-29T00:00:00+00:00</updated>
+    <author>
+      <name>Anderson Banihirwe</name>
+    </author>
+    <content type="html">&lt;p&gt;A typical computation workflow with xarray consists of:&lt;/p&gt;
+&lt;p&gt;reading one or more netCDF files into an xarray dataset backed by dask using &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;xr.open_mfdataset()&lt;/span&gt;&lt;/code&gt; or &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;xr.open_dataset(chunks=...)&lt;/span&gt;&lt;/code&gt;,&lt;/p&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/writing-multiple-netcdf-files-in-parallel-with-xarray-and-dask/" rel="alternate"/>
+    <summary>A typical computation workflow with xarray consists of:reading one or more netCDF files into an xarray dataset backed by dask using xr.open_mfdataset() or xr.open_dataset(chunks=...),</summary>
+    <category term="python" label="python"/>
+    <category term="xarray" label="xarray"/>
+    <category term="netcdf" label="netcdf"/>
+    <category term="dask" label="dask"/>
+    <published>2020-06-29T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/tutorial-seminar-series/</id>
+    <title>Tutorial Seminar Series</title>
+    <updated>2020-09-18T00:00:00+00:00</updated>
+    <author>
+      <name>Julia Kent</name>
+    </author>
+    <content type="html">&lt;p&gt;Because we are unable to host an in-person tutorial for this fall season, the Xdev team has decided to switch to a virtual seminar series. We will be hosting one hour tutorial sessions scheduled for the 2nd and 4th Wednesdays of each month at 1 PM Mountain starting in October. The first tutorial session, covering how to create your first Python script, will be on October 14th. Some tutorials will be 1-off seminars on specific topics, while others will span multiple seminar sessions.&lt;/p&gt;
+&lt;p&gt;Remote tutorials offer their own challenges; no one from our team can walk around the room to notice if anyone needs technical help or one-on-one assistance during a challenging topic. We believe that one hour sessions make it easier for participants to reach out and get the help they need to catch up before the next session of a multi-part seminar, so that we can more effectively reach our education goals.&lt;/p&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/tutorial-seminar-series/" rel="alternate"/>
+    <summary>Because we are unable to host an in-person tutorial for this fall season, the Xdev team has decided to switch to a virtual seminar series. We will be hosting one hour tutorial sessions scheduled for the 2nd and 4th Wednesdays of each month at 1 PM Mountain starting in October. The first tutorial session, covering how to create your first Python script, will be on October 14th. Some tutorials will be 1-off seminars on specific topics, while others will span multiple seminar sessions.Remote tutorials offer their own challenges; no one from our team can walk around the room to notice if anyone needs technical help or one-on-one assistance during a challenging topic. We believe that one hour sessions make it easier for participants to reach out and get the help they need to catch up before the next session of a multi-part seminar, so that we can more effectively reach our education goals.</summary>
+    <category term="python-tutorial-series" label="python-tutorial-series"/>
+    <published>2020-09-18T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/python-tutorial-faq/</id>
+    <title>Python Tutorial FAQ</title>
+    <updated>2020-10-20T00:00:00+00:00</updated>
+    <author>
+      <name>Julia Kent</name>
+    </author>
+    <content type="html">&lt;p&gt;Here is a compilation of questions and issues that arose during the first session of the Python Tutorial Seminar Series. Hopefully all attendees feel that their issues are addressed here.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Q.&lt;/strong&gt; I am having issues running the command:
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;curl&lt;/span&gt; &lt;span class="pre"&gt;-kO&lt;/span&gt; &lt;span class="pre"&gt;https://sundowner.colorado.edu/weather/atoc8/wxobs20170821.txt&lt;/span&gt;&lt;/code&gt;.
+What should I do?&lt;/p&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/python-tutorial-faq/" rel="alternate"/>
+    <summary>Here is a compilation of questions and issues that arose during the first session of the Python Tutorial Seminar Series. Hopefully all attendees feel that their issues are addressed here.Q. I am having issues running the command:
+curl -kO https://sundowner.colorado.edu/weather/atoc8/wxobs20170821.txt.
+What should I do?</summary>
+    <category term="python-tutorial-series" label="python-tutorial-series"/>
+    <category term="faq" label="faq"/>
+    <category term="python" label="python"/>
+    <published>2020-10-20T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/python-tutorial-faq-part-2/</id>
+    <title>Python Tutorial FAQ - Part 2</title>
+    <updated>2020-11-05T00:00:00+00:00</updated>
+    <author>
+      <name>Julia Kent</name>
+    </author>
+    <content type="html">&lt;p&gt;Here is a compilation of questions and issues that arose during the second session of the Python Tutorial Seminar Series, on creating a data dictionary. After this first short series, these FAQ sections will be added to the &lt;a class="reference external" href="https://ncar.github.io/python-tutorial/"&gt;Xdev tutorial website&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Q.&lt;/strong&gt; Why is &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;list[0:10]&lt;/span&gt;&lt;/code&gt; the first 10 elements, not 11?&lt;/p&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/python-tutorial-faq-part-2/" rel="alternate"/>
+    <summary>Here is a compilation of questions and issues that arose during the second session of the Python Tutorial Seminar Series, on creating a data dictionary. After this first short series, these FAQ sections will be added to the Xdev tutorial websiteQ. Why is list[0:10] the first 10 elements, not 11?</summary>
+    <category term="python-tutorial-series" label="python-tutorial-series"/>
+    <category term="faq" label="faq"/>
+    <category term="python" label="python"/>
+    <published>2020-11-05T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/python-tutorial-faq-part-3/</id>
+    <title>Python Tutorial FAQ - Part 3</title>
+    <updated>2020-11-18T00:00:00+00:00</updated>
+    <author>
+      <name>Julia Kent</name>
+    </author>
+    <content type="html">&lt;p&gt;Here is a compilation of questions from the third session of the Python Tutorial Seminar Series which covered writing functions as well as f-string formatting.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Q.&lt;/strong&gt; Seeing how &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;2/2&lt;/span&gt;&lt;/code&gt; returns &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;1.0&lt;/span&gt;&lt;/code&gt; instead of &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;1&lt;/span&gt;&lt;/code&gt;, is the numeric type automatically determined from the inputs or do you have to force it?&lt;/p&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/python-tutorial-faq-part-3/" rel="alternate"/>
+    <summary>Here is a compilation of questions from the third session of the Python Tutorial Seminar Series which covered writing functions as well as f-string formatting.Q. Seeing how 2/2 returns 1.0 instead of 1, is the numeric type automatically determined from the inputs or do you have to force it?</summary>
+    <category term="python-tutorial-series" label="python-tutorial-series"/>
+    <category term="faq" label="faq"/>
+    <category term="python" label="python"/>
+    <published>2020-11-18T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/python-tutorial-seminar-series-spring-2021/</id>
+    <title>Python Tutorial Seminar Series - Spring 2021</title>
+    <updated>2021-02-16T00:00:00+00:00</updated>
+    <author>
+      <name>Julia Kent</name>
+    </author>
+    <content type="html">&lt;p&gt;The “Your First” Python Tutorial Series is over, but the tutorial seminar series continues.&lt;/p&gt;
+&lt;p&gt;All events are at 1 PM Mountain&lt;/p&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/python-tutorial-seminar-series-spring-2021/" rel="alternate"/>
+    <summary>The “Your First” Python Tutorial Series is over, but the tutorial seminar series continues.All events are at 1 PM Mountain</summary>
+    <category term="python-tutorial-series" label="python-tutorial-series"/>
+    <published>2021-02-16T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/your-first-package-python-tutorial-faq/</id>
+    <title>Your First Package Python Tutorial FAQ</title>
+    <updated>2021-02-19T00:00:00+00:00</updated>
+    <author>
+      <name>Julia Kent</name>
+    </author>
+    <content type="html">&lt;p&gt;Here is a compilation of questions from the fourth and fifth sessions (&lt;a class="reference external" href="https://ncar.github.io/python-tutorial/tutorials/yourfirst.html#first-python-package"&gt;“Your First Package”&lt;/a&gt;) of the Python Tutorial Seminar Series which covered refactoring code into seperate modules and packages, using an external built-in module (&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;math&lt;/span&gt;&lt;/code&gt;), and how to publish your package&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Q.&lt;/strong&gt; Should we add &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;__init__.py&lt;/span&gt;&lt;/code&gt; to &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;.gitignore&lt;/span&gt;&lt;/code&gt;?&lt;/p&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/your-first-package-python-tutorial-faq/" rel="alternate"/>
+    <summary>Here is a compilation of questions from the fourth and fifth sessions (“Your First Package”) of the Python Tutorial Seminar Series which covered refactoring code into seperate modules and packages, using an external built-in module (math), and how to publish your packageQ. Should we add __init__.py to .gitignore?</summary>
+    <category term="python-tutorial-series" label="python-tutorial-series"/>
+    <category term="faq" label="faq"/>
+    <published>2021-02-19T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/numpy-tutorial/</id>
+    <title>Numpy Tutorial</title>
+    <updated>2021-02-26T00:00:00+00:00</updated>
+    <author>
+      <name>Julia Kent</name>
+    </author>
+    <content type="html">&lt;p&gt;The NCAR/UCAR virtual Python Tutorial Seminar Series continues with an introduction to the Python package &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;numpy&lt;/span&gt;&lt;/code&gt; on &lt;strong&gt;Wednesday, March 10th at 1 PM Mountain&lt;/strong&gt;. This session will be led by Austin Kootz.&lt;/p&gt;
+&lt;p&gt;Check your conda install if this is the first tutorial in the series you are joining us for with &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;conda&lt;/span&gt; &lt;span class="pre"&gt;--version&lt;/span&gt;&lt;/code&gt; and if necessary &lt;a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html"&gt;install by following these instructions&lt;/a&gt;&lt;/p&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/numpy-tutorial/" rel="alternate"/>
+    <summary>The NCAR/UCAR virtual Python Tutorial Seminar Series continues with an introduction to the Python package numpy on Wednesday, March 10th at 1 PM Mountain. This session will be led by Austin Kootz.Check your conda install if this is the first tutorial in the series you are joining us for with conda --version and if necessary install by following these instructions</summary>
+    <category term="python-tutorial-series" label="python-tutorial-series"/>
+    <published>2021-02-26T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/jupyter-notebooks-faq/</id>
+    <title>Jupyter Notebooks Tutorial FAQ</title>
+    <updated>2021-03-03T00:00:00+00:00</updated>
+    <author>
+      <name>Julia Kent</name>
+    </author>
+    <content type="html">&lt;p&gt;Here is a compilation of questions and issues that arose during the &lt;a class="reference external" href="https://youtu.be/xSzXvwzFsDU"&gt;Jupyter Notebooks&lt;/a&gt; session of the Python Tutorial Seminar Series.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Q.&lt;/strong&gt; I installed Miniconda but it doesn’t seem to be working. &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;conda&lt;/span&gt;&lt;/code&gt; is not a recognized command. What should I do?&lt;/p&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/jupyter-notebooks-faq/" rel="alternate"/>
+    <summary>Here is a compilation of questions and issues that arose during the Jupyter Notebooks session of the Python Tutorial Seminar Series.Q. I installed Miniconda but it doesn’t seem to be working. conda is not a recognized command. What should I do?</summary>
+    <category term="python-tutorial-series" label="python-tutorial-series"/>
+    <category term="faq" label="faq"/>
+    <category term="jupyter" label="jupyter"/>
+    <published>2021-03-03T00:00:00+00:00</published>
+  </entry>
   <entry>
     <id>ncar.github.io/esds/posts/Interactive_Dashboard/</id>
     <title>HiRes-CESM Interactive Dashboard Example</title>
@@ -20,6 +280,38 @@
     <summary>In this example, our goal is to create an interactive dashboard, using images already output on a remote server.We are specifically interested in looking at plots created using the HighRes-CESM-Analysis repository.https://img.shields.io/badge/%E2%86%91_Deploy_to-Heroku-7056bf.svg</summary>
     <category term="dashboard" label="dashboard"/>
     <category term="jupyter" label="jupyter"/>
+    <published>2021-03-19T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/matplotlib-tutorial/</id>
+    <title>Matplotlib Tutorial</title>
+    <updated>2021-03-19T00:00:00+00:00</updated>
+    <author>
+      <name>Julia Kent</name>
+    </author>
+    <content type="html">&lt;p&gt;The NCAR/UCAR virtual Python Tutorial Seminar Series continues with an introduction to the Python package &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;matplotlib&lt;/span&gt;&lt;/code&gt; on &lt;strong&gt;Wednesday, March 24th at 1 PM Mountain&lt;/strong&gt;. This session will be led by Anissa Zacharias.&lt;/p&gt;
+&lt;p&gt;The content for this tutorial is hosted on Anissa’s &lt;a class="reference external" href="https://github.com/anissa111/matplotlib-tutorial"&gt;matplotlib-tutorial GitHub repository&lt;/a&gt;. Primarily direct your attention to the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;matplotlib-tutorial.ipynb&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/matplotlib-tutorial/" rel="alternate"/>
+    <summary>The NCAR/UCAR virtual Python Tutorial Seminar Series continues with an introduction to the Python package matplotlib on Wednesday, March 24th at 1 PM Mountain. This session will be led by Anissa Zacharias.The content for this tutorial is hosted on Anissa’s matplotlib-tutorial GitHub repository. Primarily direct your attention to the matplotlib-tutorial.ipynb.</summary>
+    <category term="python-tutorial-series" label="python-tutorial-series"/>
+    <published>2021-03-19T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/numpy-faq/</id>
+    <title>NumPy Tutorial FAQ</title>
+    <updated>2021-03-19T00:00:00+00:00</updated>
+    <author>
+      <name>Julia Kent</name>
+    </author>
+    <content type="html">&lt;p&gt;Here is a compilation of questions and issues that arose during the &lt;a class="reference external" href="https://colab.research.google.com/drive/1zcjaGXofLzUXkQzJKnANE9Z3yFUt0q7E?usp=sharing"&gt;Numpy&lt;/a&gt; session of the Python Tutorial Seminar Series.&lt;/p&gt;
+&lt;p&gt;The live video recording of this content can be found &lt;a class="reference external" href="https://www.youtube.com/watch?v=kstc-6uz7AQ&amp;amp;t=10s"&gt;here&lt;/a&gt;.&lt;/p&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/numpy-faq/" rel="alternate"/>
+    <summary>Here is a compilation of questions and issues that arose during the Numpy session of the Python Tutorial Seminar Series.The live video recording of this content can be found here.</summary>
+    <category term="python-tutorial-series" label="python-tutorial-series"/>
+    <category term="faq" label="faq"/>
+    <category term="numpy" label="numpy"/>
     <published>2021-03-19T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -38,6 +330,23 @@
     <category term="cgd" label="cgd"/>
     <category term="questions" label="questions"/>
     <published>2021-03-26T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/matplotlib-faq/</id>
+    <title>Matplotlib Tutorial FAQ</title>
+    <updated>2021-03-30T00:00:00+00:00</updated>
+    <author>
+      <name>Julia Kent</name>
+    </author>
+    <content type="html">&lt;p&gt;Here is a compilation of questions and issues that arose during the &lt;a class="reference external" href="https://www.youtube.com/watch?v=EiPRIdHQEmE"&gt;Matplotlib&lt;/a&gt; session of the Python Tutorial Seminar Series.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Q.&lt;/strong&gt; Are all the colormaps perceptually ordered?&lt;/p&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/matplotlib-faq/" rel="alternate"/>
+    <summary>Here is a compilation of questions and issues that arose during the Matplotlib session of the Python Tutorial Seminar Series.Q. Are all the colormaps perceptually ordered?</summary>
+    <category term="python-tutorial-series" label="python-tutorial-series"/>
+    <category term="faq" label="faq"/>
+    <category term="matplotlib" label="matplotlib"/>
+    <published>2021-03-30T00:00:00+00:00</published>
   </entry>
   <entry>
     <id>ncar.github.io/esds/posts/software-citation/</id>
@@ -63,11 +372,11 @@
     <author>
       <name>Max Grover</name>
     </author>
-    <content type="html">&lt;p&gt;Non-consecutive header level increase; 0 to 2 [myst.header]&lt;/p&gt;
-&lt;p&gt;Casper will complete a transition from Slurm to the PBS Pro workload manager on April 7, 2021. This has implications for how to spin up a Dask cluster, including via the &lt;a class="reference external" href="https://jupyterhub.ucar.edu"&gt;NCAR Jupyterhub&lt;/a&gt;.&lt;/p&gt;
+    <content type="html">&lt;p&gt;Casper will complete a transition from Slurm to the PBS Pro workload manager on April 7, 2021. This has implications for how to spin up a Dask cluster, including via the &lt;a class="reference external" href="https://jupyterhub.ucar.edu"&gt;NCAR Jupyterhub&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Below is an example script suitable for the new configuration using the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;PBSCluster&lt;/span&gt;&lt;/code&gt; function from &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;dask_jobqueue&lt;/span&gt;&lt;/code&gt;. Note that the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;ncar_jobqueue&lt;/span&gt;&lt;/code&gt; package &lt;a class="reference external" href="https://github.com/NCAR/ncar-jobqueue/issues/40"&gt;requires updating&lt;/a&gt; to work with the new configuration.&lt;/p&gt;
 </content>
     <link href="ncar.github.io/esds/posts/casper_pbs_dask/" rel="alternate"/>
-    <summary>Non-consecutive header level increase; 0 to 2 [myst.header]Casper will complete a transition from Slurm to the PBS Pro workload manager on April 7, 2021. This has implications for how to spin up a Dask cluster, including via the NCAR Jupyterhub.</summary>
+    <summary>Casper will complete a transition from Slurm to the PBS Pro workload manager on April 7, 2021. This has implications for how to spin up a Dask cluster, including via the NCAR Jupyterhub.Below is an example script suitable for the new configuration using the PBSCluster function from dask_jobqueue. Note that the ncar_jobqueue package requires updating to work with the new configuration.</summary>
     <category term="jupyterhub" label="jupyterhub"/>
     <category term="dask" label="dask"/>
     <published>2021-04-06T00:00:00+00:00</published>
@@ -87,6 +396,21 @@
     <category term="dask" label="dask"/>
     <category term="intake" label="intake"/>
     <category term="cesm" label="cesm"/>
+    <published>2021-04-09T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/object-oriented-programming-tutorial/</id>
+    <title>Object Oriented Programming Tutorial</title>
+    <updated>2021-04-09T00:00:00+00:00</updated>
+    <author>
+      <name>Julia Kent</name>
+    </author>
+    <content type="html">&lt;p&gt;The NCAR/UCAR virtual Python Tutorial Seminar Series continues with an introduction to Object Oriented Programming on &lt;strong&gt;Wednesday, April 14th at 1 PM Mountain&lt;/strong&gt;. This session will be led by Austin Kootz.&lt;/p&gt;
+&lt;p&gt;The content for this tutorial is hosted on Austin’s &lt;a class="reference external" href="https://github.com/pilotchute/oop_hrrr_tutorial"&gt;oop_hrrr_tutorial GitHub repository&lt;/a&gt;.&lt;/p&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/object-oriented-programming-tutorial/" rel="alternate"/>
+    <summary>The NCAR/UCAR virtual Python Tutorial Seminar Series continues with an introduction to Object Oriented Programming on Wednesday, April 14th at 1 PM Mountain. This session will be led by Austin Kootz.The content for this tutorial is hosted on Austin’s oop_hrrr_tutorial GitHub repository.</summary>
+    <category term="python-tutorial-series" label="python-tutorial-series"/>
     <published>2021-04-09T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -124,6 +448,21 @@
     <published>2021-04-23T00:00:00+00:00</published>
   </entry>
   <entry>
+    <id>ncar.github.io/esds/posts/cartopy-tutorial/</id>
+    <title>Cartopy Tutorial</title>
+    <updated>2021-04-26T00:00:00+00:00</updated>
+    <author>
+      <name>Julia Kent</name>
+    </author>
+    <content type="html">&lt;p&gt;The NCAR/UCAR virtual Python Tutorial Seminar Series continues with an introduction to the Python package &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;cartopy&lt;/span&gt;&lt;/code&gt; on &lt;strong&gt;Wednesday, April 28th at 1 PM Mountain&lt;/strong&gt;. This session will be led by Michaela Sizemore.&lt;/p&gt;
+&lt;p&gt;The content for this tutorial is hosted on Michaelsa’s &lt;a class="reference external" href="https://github.com/michaelavs/cartopy_tutorial"&gt;Cartopy Tutorial Github Repository&lt;/a&gt;&lt;/p&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/cartopy-tutorial/" rel="alternate"/>
+    <summary>The NCAR/UCAR virtual Python Tutorial Seminar Series continues with an introduction to the Python package cartopy on Wednesday, April 28th at 1 PM Mountain. This session will be led by Michaela Sizemore.The content for this tutorial is hosted on Michaelsa’s Cartopy Tutorial Github Repository</summary>
+    <category term="python-tutorial-series" label="python-tutorial-series"/>
+    <published>2021-04-26T00:00:00+00:00</published>
+  </entry>
+  <entry>
     <id>ncar.github.io/esds/posts/map_blocks_example/</id>
     <title>How to Use xarray.map_blocks for Vertical Interpolation of a 3D Field</title>
     <updated>2021-04-28T00:00:00+00:00</updated>
@@ -159,6 +498,21 @@
     <published>2021-05-06T00:00:00+00:00</published>
   </entry>
   <entry>
+    <id>ncar.github.io/esds/posts/git-and-github-tutorial/</id>
+    <title>Git and GitHub Tutorial</title>
+    <updated>2021-05-07T00:00:00+00:00</updated>
+    <author>
+      <name>Julia Kent</name>
+    </author>
+    <content type="html">&lt;p&gt;The NCAR/UCAR virtual Python Tutorial Seminar Series continues with an introduction to the Python package &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;Git&lt;/span&gt;&lt;/code&gt; and &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;GitHub&lt;/span&gt;&lt;/code&gt; on &lt;strong&gt;Wednesday, May 12th at 1 PM Mountain&lt;/strong&gt;. This session will be led by Kevin Paul.&lt;/p&gt;
+&lt;p&gt;The purpose of this seminar is to cover just some of the common content needed to understand and use git and GitHub for collaboration on software. This is not meant to be an introduction to git or GitHub.&lt;/p&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/git-and-github-tutorial/" rel="alternate"/>
+    <summary>The NCAR/UCAR virtual Python Tutorial Seminar Series continues with an introduction to the Python package Git and GitHub on Wednesday, May 12th at 1 PM Mountain. This session will be led by Kevin Paul.The purpose of this seminar is to cover just some of the common content needed to understand and use git and GitHub for collaboration on software. This is not meant to be an introduction to git or GitHub.</summary>
+    <category term="python-tutorial-series" label="python-tutorial-series"/>
+    <published>2021-05-07T00:00:00+00:00</published>
+  </entry>
+  <entry>
     <id>ncar.github.io/esds/posts/intake_cmip6_debug/</id>
     <title>Debugging Intake-ESM Process for Reading in CMIP6</title>
     <updated>2021-05-14T00:00:00+00:00</updated>
@@ -174,6 +528,21 @@
     <category term="cmip6" label="cmip6"/>
     <category term="debug" label="debug"/>
     <published>2021-05-14T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/pandas-tutorial/</id>
+    <title>Pandas Tutorial</title>
+    <updated>2021-05-19T00:00:00+00:00</updated>
+    <author>
+      <name>Julia Kent</name>
+    </author>
+    <content type="html">&lt;p&gt;The NCAR/UCAR virtual Python Tutorial Seminar Series continues with an introduction to the Python package &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;pandas&lt;/span&gt;&lt;/code&gt; on &lt;strong&gt;Wednesday, May 26th at 1 PM Mountain&lt;/strong&gt;. This session will be led by Drew Camron and Max Grover.&lt;/p&gt;
+&lt;p&gt;The content for this tutorial is hosted on Max’s &lt;a class="reference external" href="https://github.com/mgrover1/ncar_pandas_tutorial"&gt;NCAR Pandas Tutorial Github Repository&lt;/a&gt;&lt;/p&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/pandas-tutorial/" rel="alternate"/>
+    <summary>The NCAR/UCAR virtual Python Tutorial Seminar Series continues with an introduction to the Python package pandas on Wednesday, May 26th at 1 PM Mountain. This session will be led by Drew Camron and Max Grover.The content for this tutorial is hosted on Max’s NCAR Pandas Tutorial Github Repository</summary>
+    <category term="python-tutorial-series" label="python-tutorial-series"/>
+    <published>2021-05-19T00:00:00+00:00</published>
   </entry>
   <entry>
     <id>ncar.github.io/esds/posts/dask-summit-takeaway/</id>
@@ -206,6 +575,21 @@
     <summary>As mentioned in a couple of ESDS posts (intake-esm and Dask, debugging intake-esm), intake-esm can be a helpful tool to work with when dealing with model data, especially CESM. One of the requirements for using intake-esm is having a catalog which is comprised of two pieces:A table of the relevant metadata (ex. file path, variable, stream, etc.)</summary>
     <category term="intake" label="intake"/>
     <category term="cesm" label="cesm"/>
+    <published>2021-06-04T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/xarray-tutorial/</id>
+    <title>Xarray Tutorial</title>
+    <updated>2021-06-04T00:00:00+00:00</updated>
+    <author>
+      <name>Julia Kent</name>
+    </author>
+    <content type="html">&lt;p&gt;The NCAR/UCAR virtual Python Tutorial Seminar Series continues with a 2-part introduction to the Python package &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;xarray&lt;/span&gt;&lt;/code&gt; on &lt;strong&gt;Wednesday, June 9th&lt;/strong&gt; and &lt;strong&gt;June 23rd at 1 PM Mountain Daylight Time&lt;/strong&gt;. These sessions will be led by Anderson Banihirwe.&lt;/p&gt;
+&lt;p&gt;The content for this tutorial is hosted on Anderson’s &lt;a class="reference external" href="https://github.com/andersy005/xarray-tutorial"&gt;Xarray Tutorial Github Repository&lt;/a&gt;. However, since final edits are being made to these notebooks we ask that you please wait until after 1 PM MDT on June 8 to download the materials (the Tuesday before the first session). This will ensure that you have the latest version of the notebooks.&lt;/p&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/xarray-tutorial/" rel="alternate"/>
+    <summary>The NCAR/UCAR virtual Python Tutorial Seminar Series continues with a 2-part introduction to the Python package xarray on Wednesday, June 9th and June 23rd at 1 PM Mountain Daylight Time. These sessions will be led by Anderson Banihirwe.The content for this tutorial is hosted on Anderson’s Xarray Tutorial Github Repository. However, since final edits are being made to these notebooks we ask that you please wait until after 1 PM MDT on June 8 to download the materials (the Tuesday before the first session). This will ensure that you have the latest version of the notebooks.</summary>
+    <category term="python-tutorial-series" label="python-tutorial-series"/>
     <published>2021-06-04T00:00:00+00:00</published>
   </entry>
   <entry>

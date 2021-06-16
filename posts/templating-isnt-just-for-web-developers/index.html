@@ -1,0 +1,762 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Templating isn’t just for Web Developers! &#8212; NCAR-ESDS 0.1 documentation</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "NCAR/esds");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <link rel="author" title="About these documents" href="../../about/" />
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+     
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../blog/atom.xml"
+  title="NCAR ESDS"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+<a class="navbar-brand" href="../../">
+<p class="title">NCAR-ESDS</p>
+</a>
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../about/">
+  About Us
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../faq/">
+  Frequently Asked Questions
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../blog/">
+  Blog
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../communication/">
+  Communication
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../best-practices/">
+  Best Practices
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/ncar/esds" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">  
+<h2>
+   <i class="fa fa-calendar"></i>
+  08 May 2020 
+</h2>
+
+<ul>
+   
+<li id="author">
+  <span
+    ><i class="fa-fw fa fa-user"></i></span
+  >
+   
+  <a href="../../blog/author/kevin-paul/">Kevin Paul</a>  
+</li>
+    
+<li id="tags">
+  <span
+    ><i class="fa-fw fa fa-tags"></i> </span
+  >
+   
+  <a href="../../blog/tag/templating/">templating</a>   
+  <a href="../../blog/tag/jinja2/">jinja2</a>  
+</li>
+ 
+</ul>
+
+<h3>
+  <a href="../../blog/">Recent Posts</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="../graphviz_example/"
+      >11 June - Creating Visualizations of Intake-ESM Catalogs</a
+    >
+  </li>
+  
+  <li>
+    <a href="../xarray-tutorial/"
+      >04 June - Xarray Tutorial</a
+    >
+  </li>
+  
+  <li>
+    <a href="../ecgtools-history-files-example/"
+      >04 June - Building an Intake-esm catalog from CESM2 History Files</a
+    >
+  </li>
+  
+  <li>
+    <a href="../dask-summit-takeaway/"
+      >28 May - Dask Distributed Summit 2021 Takeaways</a
+    >
+  </li>
+  
+  <li>
+    <a href="../pandas-tutorial/"
+      >19 May - Pandas Tutorial</a
+    >
+  </li>
+  
+</ul>
+
+<h3>
+  <a href="../../blog/archive/">Archives</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="../../blog/2021/">2021 (25)</a>
+  </li>
+    
+  <li>
+    <a href="../../blog/2020/">2020 (6)</a>
+  </li>
+    
+  <li>
+    <a href="../../blog/2019/">2019 (2)</a>
+  </li>
+   
+</ul>
+
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#jinja2">
+   Jinja2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-use-case">
+   The Use Case
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-letter">
+   The Letter
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-jinja2-template">
+   The Jinja2 Template
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#jinja2-statements">
+   Jinja2 Statements
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#inheritance">
+   Inheritance
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                 <div class="section" id="templating-isn-t-just-for-web-developers">
+<h1>Templating isn’t just for Web Developers!<a class="headerlink" href="#templating-isn-t-just-for-web-developers" title="Permalink to this headline">¶</a></h1>
+<p>Recently, I found myself rambling on in an unprepared attempt to
+explain templating to a colleague of mine who had no prior experience
+with frontend design. It didn’t take me long to realize that my
+explanation was convoluted and confusing, not that I stopped talking,
+mind you. Attribute that to being unprepared, or sleep deprived (i.e.,
+child <em>still</em> not sleeping through the night!), or just a bad teacher.</p>
+<p>Regardless, I decided to point them to a tutorial online that
+<em>certainly must exist</em>, but after a brief Google search (which you
+should read as, “I didn’t find anything in the first page of search
+results!”), all I could find were tutorials for frontend developers.
+And if you aren’t an HTML expert, or already have experience with
+Flask or Django, teaching templating in those contexts can actually
+be more confusing than illuminating.</p>
+<p>So, as I always do when I find myself struggling with something that
+I think should be easy, I ask my wife for advise. I tried to explain
+the concept of templating to my wife, who is not a software developer
+<em>at all</em>. My wife looked at me with this look that said, “What’s not
+to get?” Then she said, “You mean filling out a form letter
+automatically…”</p>
+<p>Yes. Exactly. And while my palm was hitting my forehead, it occurred
+to me that I should write a templating tutorial for those who really
+don’t have any prior experience with frontend development and who
+might even be scared when they read “less-than-h-t-m-l-greater-than”.
+Today, we’ll learn Jinja2 templating through an example use case where
+we want to generate a form letter for a number of different addressees.</p>
+<div class="section" id="jinja2">
+<h2>Jinja2<a class="headerlink" href="#jinja2" title="Permalink to this headline">¶</a></h2>
+<p>I’ll be using Jinja2 for this tutorial. It’s extremely popular and
+widespread in the Python developer community, and it has very good
+documentation… except for the fact that all of their documentation
+is almost entirely geared toward frontend designers.</p>
+<p>You can install Jinja2 with <code class="docutils literal notranslate"><span class="pre">pip</span></code> or <code class="docutils literal notranslate"><span class="pre">conda</span></code> as follows:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ pip install Jinja2
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda install jinja2
+</pre></div>
+</div>
+<p>That’s it. You should now be set up with an environment that
+has (at least) python3 and jinja2 installed in it.</p>
+</div>
+<div class="section" id="the-use-case">
+<h2>The Use Case<a class="headerlink" href="#the-use-case" title="Permalink to this headline">¶</a></h2>
+<p>Imagine that you are the attorney for an oil tycoon with $4.5M
+held in the Bank of <a class="reference external" href="https://en.wikipedia.org/wiki/Duck_Soup_(1933_film)">Freedonia</a>.
+With tensions mounting between Freedonia and neighboring Sylvania,
+and war looming on the horizon, your client has authorized you to
+move these assets to another bank outside of Freedonia. Clearly,
+your only course of action is to email as many people for whom
+you can find addresses to ask them if they would be willing to
+hold the assets in their account for the duration of the conflict.
+Obviously, you will need to pay them for their kind services, and
+the oil tycoon has agreed to authorize you to gift 20% of the assets
+to whomever holds them, as payment for their kindness. You just
+need some personal information from them and some bank routine
+information. That’s all. You have obtained your list of addressees
+from a kind person working for the humanitarian WikiLeaks “Foundation,”
+and now you must craft an email to send to all of these addressees.</p>
+<p>So, there is your entirely believable, totally serious, and extremely
+common scenario motivating your need to learn templating.</p>
+</div>
+<div class="section" id="the-letter">
+<h2>The Letter<a class="headerlink" href="#the-letter" title="Permalink to this headline">¶</a></h2>
+<p>Fortunately, you already have a “template” for a formal <em>written</em> business
+letter sitting around on your hard drive. It looks like this:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>[Your Address]
+
+[Date]
+
+[Recipient Name]
+[Recipient Title]
+[Recipient Company]
+[Recipient Address]
+
+[Greeting] [Recipient Name]:
+
+[Letter Body]
+
+[Closing],
+
+[Your Name]
+[Your Title]
+</pre></div>
+</div>
+<p>Each element in this “template” that is enclosed in <code class="docutils literal notranslate"><span class="pre">[]</span></code>-brackets is
+just a placeholder for some other text. Some of that text is short,
+like names, titles, or greeting or closing text. Some of that text
+will me multi-line input, such as the letter’s body and the addresses.
+In Python, all you would want to do is something like string
+substitution, for example replacing <code class="docutils literal notranslate"><span class="pre">[Your</span> <span class="pre">Name]</span></code> with <code class="docutils literal notranslate"><span class="pre">Jane</span> <span class="pre">Smith</span></code>.</p>
+<p>This is exactly what “templating” is all about. It is, essentially,
+just string substitution…but with a touch more sophistication.</p>
+</div>
+<div class="section" id="the-jinja2-template">
+<h2>The Jinja2 Template<a class="headerlink" href="#the-jinja2-template" title="Permalink to this headline">¶</a></h2>
+<p>So, to start out, we are going to convert this text template into a
+Jinja2 template. To do so, the easiest first step would be to just
+replace every <code class="docutils literal notranslate"><span class="pre">[]</span></code>-bracketted item with a Jinja2 <em>expressions</em>,
+which are represented with <code class="docutils literal notranslate"><span class="pre">{{}}</span></code>-brackets:</p>
+<div class="highlight-jinja notranslate"><div class="highlight"><pre><span></span><span class="cp">{{</span> <span class="nv">your_address</span> <span class="cp">}}</span><span class="x"></span>
+
+<span class="cp">{{</span> <span class="nv">date</span> <span class="cp">}}</span><span class="x"></span>
+
+<span class="cp">{{</span> <span class="nv">recipient_name</span> <span class="cp">}}</span><span class="x"></span>
+<span class="cp">{{</span> <span class="nv">recipient_title</span> <span class="cp">}}</span><span class="x"></span>
+<span class="cp">{{</span> <span class="nv">recipient_company</span> <span class="cp">}}</span><span class="x"></span>
+<span class="cp">{{</span> <span class="nv">recipient_address</span> <span class="cp">}}</span><span class="x"></span>
+
+<span class="cp">{{</span> <span class="nv">greeting</span> <span class="cp">}}</span><span class="x"> </span><span class="cp">{{</span> <span class="nv">recipient_name</span> <span class="cp">}}</span><span class="x">:</span>
+
+<span class="cp">{{</span> <span class="nv">letter_body</span> <span class="cp">}}</span><span class="x"></span>
+
+<span class="cp">{{</span> <span class="nv">closing</span> <span class="cp">}}</span><span class="x">,</span>
+
+<span class="cp">{{</span> <span class="nv">your_name</span> <span class="cp">}}</span><span class="x"></span>
+<span class="cp">{{</span> <span class="nv">your_title</span> <span class="cp">}}</span><span class="x"></span>
+</pre></div>
+</div>
+<p>Also, notice that I have converted the text labels inside the
+<code class="docutils literal notranslate"><span class="pre">[]</span></code>-brackets into valid Python variable names. Let’s assume
+that this new <em>template file</em> is called <code class="docutils literal notranslate"><span class="pre">letter.j2</span></code> (where
+the <code class="docutils literal notranslate"><span class="pre">.j2</span></code> means it is a Jinja2 template, but Jinja2 does not
+care what extension the file actually has).</p>
+<p>We can now “write” this letter using Python variables from a
+Python script. First, let’s start writing a Python script that
+can “render” this Jinja2 template:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">jinja2</span> <span class="kn">import</span> <span class="n">Environment</span><span class="p">,</span> <span class="n">FileSystemLoader</span>
+
+<span class="n">env</span> <span class="o">=</span> <span class="n">Environment</span><span class="p">(</span><span class="n">loader</span><span class="o">=</span><span class="n">FileSystemLoader</span><span class="p">(</span><span class="s1">&#39;./&#39;</span><span class="p">))</span>
+<span class="n">template</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">get_template</span><span class="p">(</span><span class="s1">&#39;letter.j2&#39;</span><span class="p">)</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">template</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="o">**</span><span class="n">data</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>If you were to run this script as it current exists, you would
+get a lot of blank lines, and some “floating” punctuation.
+Something like this:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span> :
+
+
+
+,
+</pre></div>
+</div>
+<p>This is because the <code class="docutils literal notranslate"><span class="pre">data</span></code> variable is empty. In other words,
+all of those <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">var_name</span> <span class="pre">}}</span></code> template variables <em>never got defined!</em>
+Jinja2 assumes that anything that isn’t defined is an empty string.</p>
+<p>So, if we were to fill in the <code class="docutils literal notranslate"><span class="pre">data</span></code> dictionary with some data
+with keys matching the template variables, we should see something
+different.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;your_name&#39;</span><span class="p">:</span> <span class="s2">&quot;Jane Smith&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;your_title&#39;</span><span class="p">:</span> <span class="s2">&quot;Attorney at Law&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;your_address&#39;</span><span class="p">:</span> <span class="s2">&quot;&quot;&quot;1234 Somewhere Street</span>
+<span class="s2">Atown, XY  12345&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;date&#39;</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y %B </span><span class="si">%d</span><span class="s2">&quot;</span><span class="p">),</span>
+    <span class="s1">&#39;recipient_name&#39;</span><span class="p">:</span> <span class="s2">&quot;Joe Smith&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;recipient_title&#39;</span><span class="p">:</span> <span class="s2">&quot;Head of Marketing&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;recipient_company&#39;</span><span class="p">:</span> <span class="s2">&quot;Better Stuff, Inc.&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;recipient_address&#39;</span><span class="p">:</span> <span class="s2">&quot;&quot;&quot;5678 Nowhere Drive</span>
+<span class="s2">Someberg, YZ  56789&quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;greeting&#39;</span><span class="p">:</span> <span class="s1">&#39;Dear&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;closing&#39;</span><span class="p">:</span> <span class="s1">&#39;Sincerely&#39;</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>And with that change, the output should now look like:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>1234 Somewhere Street
+Atown, XY  12345
+
+2020 May 11
+
+Joe Smith
+Head of Marketing
+Better Stuff, Inc.
+5678 Nowhere Drive
+Someberg, YZ  56789
+
+Dear Joe Smith:
+
+
+
+Sincerely,
+
+Jane Smith
+Attorney at Law
+</pre></div>
+</div>
+<p>Does it make sense? Let’s explain what’s going on here.</p>
+<p>In our Python code, we are creating some data (literally <code class="docutils literal notranslate"><span class="pre">data</span></code>)
+that we want to hand off to the “template engine” to insert into
+the template, itself. The template engine (<code class="docutils literal notranslate"><span class="pre">jinja2</span></code>) searches
+through the template document for all occurrences of <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">key</span> <span class="pre">}}</span></code>
+for each <code class="docutils literal notranslate"><span class="pre">key</span></code> in the <code class="docutils literal notranslate"><span class="pre">data</span></code> dictionary (or each keyward argument
+in the <code class="docutils literal notranslate"><span class="pre">render()</span></code> function). And it does simple substition of
+the string <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">key</span> <span class="pre">}}</span></code> with <code class="docutils literal notranslate"><span class="pre">data[key]</span></code>. Any <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">key</span> <span class="pre">}}</span></code>
+not found in the <code class="docutils literal notranslate"><span class="pre">data</span></code> dictionary will be replaced with an
+empty string, and any <code class="docutils literal notranslate"><span class="pre">key</span></code> in the <code class="docutils literal notranslate"><span class="pre">data</span></code> dictionary <em>not</em> found
+in the template document will be ignored.</p>
+<p>That’s it. That’s a <em>lot</em> of what templating is all about.</p>
+<p>But not everything.</p>
+</div>
+<div class="section" id="jinja2-statements">
+<h2>Jinja2 Statements<a class="headerlink" href="#jinja2-statements" title="Permalink to this headline">¶</a></h2>
+<p>This letter template is nice, but we want to send out <em>emails</em>,
+not actual postage. You don’t have time for snail mail!</p>
+<p>So, we <em>could</em> write another template for an email, but for the
+sake of edification, let’s just modify our existing template
+to be <em>dual purpose</em>. In particular, some of the template
+variables are just not used when writing emails (<code class="docutils literal notranslate"><span class="pre">your_address</span></code>,
+<code class="docutils literal notranslate"><span class="pre">date</span></code>, <code class="docutils literal notranslate"><span class="pre">recipient_name</span></code>, <code class="docutils literal notranslate"><span class="pre">recipient_title</span></code>, <code class="docutils literal notranslate"><span class="pre">recipient_company</span></code>,
+<code class="docutils literal notranslate"><span class="pre">recipient_address</span></code>). But if we leave these variables undeclared,
+then there will be odd whitespace at the top of our email. So,
+we will add another template variable for the sole purpose of
+specifying if the document we are writing is a letter or an
+email. We’ll label this variable <code class="docutils literal notranslate"><span class="pre">is_letter</span></code>, and we’ll
+insert it into our template document with some <code class="docutils literal notranslate"><span class="pre">if</span></code> <em>statements</em>,
+like so:</p>
+<div class="highlight-jinja notranslate"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">is_letter</span> <span class="cp">%}</span><span class="x"></span>
+<span class="cp">{{</span> <span class="nv">your_address</span> <span class="cp">}}</span><span class="x"></span>
+
+<span class="cp">{{</span> <span class="nv">date</span> <span class="cp">}}</span><span class="x"></span>
+
+<span class="cp">{{</span> <span class="nv">recipient_name</span> <span class="cp">}}</span><span class="x"></span>
+<span class="cp">{{</span> <span class="nv">recipient_title</span> <span class="cp">}}</span><span class="x"></span>
+<span class="cp">{{</span> <span class="nv">recipient_company</span> <span class="cp">}}</span><span class="x"></span>
+<span class="cp">{{</span> <span class="nv">recipient_address</span> <span class="cp">}}</span><span class="x"></span>
+
+<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
+<span class="cp">{{</span> <span class="nv">greeting</span> <span class="cp">}}</span><span class="x"> </span><span class="cp">{{</span> <span class="nv">recipient_name</span> <span class="cp">}}</span><span class="x">:</span>
+
+<span class="cp">{{</span> <span class="nv">letter_body</span> <span class="cp">}}</span><span class="x"></span>
+
+<span class="cp">{{</span> <span class="nv">closing</span> <span class="cp">}}</span><span class="x">,</span>
+
+<span class="cp">{{</span> <span class="nv">your_name</span> <span class="cp">}}</span><span class="x"></span>
+<span class="cp">{{</span> <span class="nv">your_title</span> <span class="cp">}}</span><span class="x"></span>
+</pre></div>
+</div>
+<p>By default, if we don’t specify <code class="docutils literal notranslate"><span class="pre">is_letter</span></code> in the
+<code class="docutils literal notranslate"><span class="pre">data</span></code> variable in our Python script, it will default
+to an empty string. And in Python, that evaluates
+to <code class="docutils literal notranslate"><span class="pre">False</span></code> in a boolean check. So, the top part
+of our template will not be displayed if <code class="docutils literal notranslate"><span class="pre">is_letter</span></code>
+is <code class="docutils literal notranslate"><span class="pre">False</span></code> or unset. That is, you must explicitly
+<em>set</em> <code class="docutils literal notranslate"><span class="pre">is_letter</span></code> or it will assume it is an email.</p>
+<p>There are a lot more kinds of <em>statements</em> (<code class="docutils literal notranslate"><span class="pre">{%</span> <span class="pre">%}</span></code>-syntax)
+you can place in your templates, but this is just a
+simple example of what you can do.</p>
+<p>Note also that these template variables are all native
+Python data types, which means you can declare a template
+variable to be a <code class="docutils literal notranslate"><span class="pre">list</span></code>, for example, and index into that
+list in the template itself.</p>
+</div>
+<div class="section" id="inheritance">
+<h2>Inheritance<a class="headerlink" href="#inheritance" title="Permalink to this headline">¶</a></h2>
+<p>The last thing to explain that is useful with templating
+is <em>inheritance</em>. If we wanted to print out the same
+letter for every recipient, we <em>could</em> just as easily
+write the <code class="docutils literal notranslate"><span class="pre">letter_body</span></code> in the Python script, itself.
+However, since the <code class="docutils literal notranslate"><span class="pre">letter_body</span></code> could be quite long,
+we will put it in <em>another</em> template file. One that
+inherits from the original.</p>
+<p>To do this, we will first change the <code class="docutils literal notranslate"><span class="pre">letter_body</span></code> from
+a template <em>variable</em> to a template <em>block</em> in our
+<code class="docutils literal notranslate"><span class="pre">letter.j2</span></code> template file, like so:</p>
+<div class="highlight-jinja2 notranslate"><div class="highlight"><pre><span></span>{% if is_letter %}
+{{ your_address }}
+
+{{ date }}
+
+{{ recipient_name }}
+{{ recipient_title }}
+{{ recipient_company }}
+{{ recipient_address }}
+
+{% endif %}
+{{ greeting }} {{ recipient_name }}:
+
+{% block letter_body %}
+{% endblock %}
+
+{{ closing }},
+
+{{ your_name }}
+{{ your_title }}
+</pre></div>
+</div>
+<p>And then we will write a second template file
+(called, for example, <code class="docutils literal notranslate"><span class="pre">scam.j2</span></code>), that looks like this:</p>
+<div class="highlight-jinja2 notranslate"><div class="highlight"><pre><span></span>{% extends &quot;letter.j2&quot; %}
+
+{% block letter_body %}
+(...contents of my letter...)
+{% endblock %}
+</pre></div>
+</div>
+<p>Now, change our script to render the <code class="docutils literal notranslate"><span class="pre">scam.j2</span></code>
+template instead of the <code class="docutils literal notranslate"><span class="pre">letter.j2</span></code> template and
+see what it outputs. You should get something like
+this:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Dear Joe Smith:
+
+
+...contents of my letter...
+
+
+Sincerely,
+
+Jane Smith
+Attorney at Law
+</pre></div>
+</div>
+<p>and if you want to remove those extraneous blank
+lines, you might want to set <code class="docutils literal notranslate"><span class="pre">trim_blocks=True</span></code> in
+the <code class="docutils literal notranslate"><span class="pre">Environment</span></code> declaration. Then, you should
+see something like this:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Dear Joe Smith:
+
+...contents of my letter...
+
+Sincerely,
+
+Jane Smith
+Attorney at Law
+</pre></div>
+</div>
+<p>And that’s it! Now, you are an expert in templating
+with Jinja2! Feel free to attempt your own Spanish
+Prisoner con. (<strong><em>Not advised!</em></strong>)</p>
+<p>Well, maybe not an <em>expert</em>. There’s a lot I didn’t
+talk about that you can read about in the Jinja2
+<a class="reference external" href="https://jinja.palletsprojects.com/">documentation</a>.
+Hopefully, though, you can see how something like this
+can be <em>extremely useful</em> when generating HTML pages
+for a website.</p>
+</div>
+</div>
+
+<div class="section">
+     
+<div class="section">
+  <span style="float: left">
+     
+    <a href="../we-are-xdev/">
+      <i class="fa fa-arrow-circle-left"></i> We are Xdev!
+    </a>
+    
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right">
+     
+    <a href="../writing-multiple-netcdf-files-in-parallel-with-xarray-and-dask/">
+      Writing multiple netCDF files in parallel with xarray and dask <i
+        class="fa fa-arrow-circle-right"
+      ></i
+      >
+    </a>
+    
+  </span>
+</div>
+  
+</div>
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-B50ZRRN69X"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('config', 'G-B50ZRRN69X');
+                </script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021, NCAR Earth System Data Science Team.<br/>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.4.<br/>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>
