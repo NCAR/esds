@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2021-06-16T12:03:31.139288+00:00</updated>
+  <updated>2021-06-18T14:08:42.222185+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.19">ABlog</generator>
@@ -608,5 +608,22 @@ What should I do?</summary>
     <category term="intake" label="intake"/>
     <category term="cesm" label="cesm"/>
     <published>2021-06-11T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/cesm-workshop-2021-diagnostics/</id>
+    <title>CESM Diagnostics Discussion</title>
+    <updated>2021-06-17T00:00:00+00:00</updated>
+    <author>
+      <name>Max Grover</name>
+    </author>
+    <content type="html">&lt;p&gt;Every year, NCAR holds the &lt;a class="reference external" href="https://www.cesm.ucar.edu/events/workshops/2021/"&gt;Community Earth System Model (CESM) Workshop&lt;/a&gt; which brings together the CESM community to discuss relavant updates from the &lt;a class="reference external" href="https://www.cesm.ucar.edu/working_groups/"&gt;working groups&lt;/a&gt; as well as featured speakers and cross-working group discussions.&lt;/p&gt;
+&lt;p&gt;During the Software Engineering Working Group (SEWG) session, following a variety of talks, there was an open discussion regarding the current state of CESM diagnostics and future plans for collaboration.&lt;/p&gt;
+&lt;img alt="diagnostics_image" src="../_images/cesm-diagnostics.svg" /&gt;</content>
+    <link href="ncar.github.io/esds/posts/cesm-workshop-2021-diagnostics/" rel="alternate"/>
+    <summary>Every year, NCAR holds the Community Earth System Model (CESM) Workshop which brings together the CESM community to discuss relavant updates from the working groups as well as featured speakers and cross-working group discussions.During the Software Engineering Working Group (SEWG) session, following a variety of talks, there was an open discussion regarding the current state of CESM diagnostics and future plans for collaboration.diagnostics_image</summary>
+    <category term="cesm" label="cesm"/>
+    <category term="diagnostics" label="diagnostics"/>
+    <category term="conference" label="conference"/>
+    <published>2021-06-17T00:00:00+00:00</published>
   </entry>
 </feed>
