@@ -514,7 +514,6 @@ Builder<span class=" -Color -Color-Blue">(</span>
     extension<span class=" -Color -Color-Blue">:</span> str <span class=" -Color -Color-Blue">=</span> <span class=" -Color -Color-Blue">&#39;.nc&#39;,</span>
     depth<span class=" -Color -Color-Blue">:</span> int <span class=" -Color -Color-Blue">=</span> <span class=" -Color -Color-Cyan">0</span><span class=" -Color -Color-Blue">,</span>
     exclude_patterns<span class=" -Color -Color-Blue">:</span> List<span class=" -Color -Color-Blue">[</span>str<span class=" -Color -Color-Blue">]</span> <span class=" -Color -Color-Blue">=</span> <span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">,</span>
-    parsing_func<span class=" -Color -Color-Blue">:</span> Callable <span class=" -Color -Color-Blue">=</span> <span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">,</span>
     njobs<span class=" -Color -Color-Blue">:</span> int <span class=" -Color -Color-Blue">=</span> <span class=" -Color -Color-Blue">-</span><span class=" -Color -Color-Cyan">1</span><span class=" -Color -Color-Blue">,</span>
 <span class=" -Color -Color-Blue">)</span> <span class=" -Color -Color-Blue">-&gt;</span> <span class=" -Color -Color-Green">None</span>
 <span class=" -Color -Color-Red">Docstring:</span>     
@@ -528,27 +527,30 @@ extension : str, optional
     File extension, by default None. If None, the builder will look for files with
     &quot;*.nc&quot; extension.
 depth : int, optional
-    Recursion depth. Recursively crawl `root_path` up to a specified depth, by default None
+    Recursion depth. Recursively crawl `root_path` up to a specified depth, by default 0
 exclude_patterns : list, optional
-    Directory, file patterns to exclude during catalog generation, by default None
+    Directory, file patterns to exclude during catalog generation.
+    These could be substring or regular expressions. by default None
 njobs : int, optional
-    The maximum number of concurrently running jobs, by default 25
-<span class=" -Color -Color-Red">File:</span>           ~/git_repos/ecgtools/ecgtools/builder.py
+    The maximum number of concurrently running jobs,
+    by default -1 meaning all CPUs are used.
+<span class=" -Color -Color-Red">File:</span>           /glade/work/mgrover/git_repos/ecgtools/ecgtools/builder.py
 <span class=" -Color -Color-Red">Type:</span>           type
 <span class=" -Color -Color-Red">Subclasses:</span>     
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
+<div class="admonition alert alert-info">
+    <p class="admonition-title" style="font-weight:bold">Info</p>
+    Note that as of 21 June, 2021, the <code>parsing_func</code> parameter is now used in the <code>.build()</code> method!
+</div><div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="n">Builder</span><span class="p">(</span>
     <span class="c1"># Directory with the output</span>
     <span class="s2">&quot;/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/&quot;</span><span class="p">,</span>
     <span class="c1"># Depth of 1 since we are sending it to the case output directory</span>
     <span class="n">depth</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
-    <span class="c1"># Use the parse_cesm_history parsing function</span>
-    <span class="n">parsing_func</span><span class="o">=</span><span class="n">parse_cesm_history</span><span class="p">,</span>
     <span class="c1"># Exclude the timeseries and restart directories</span>
     <span class="n">exclude_patterns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;*/tseries/*&quot;</span><span class="p">,</span> <span class="s2">&quot;*/rest/*&quot;</span><span class="p">],</span>
     <span class="c1"># Number of jobs to execute - should be equal to # threads you are using</span>
@@ -566,15 +568,15 @@ njobs : int, optional
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Builder(root_path=PosixPath(&#39;/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test&#39;), extension=&#39;.nc&#39;, depth=1, exclude_patterns=[&#39;*/tseries/*&#39;, &#39;*/rest/*&#39;], parsing_func=&lt;function parse_cesm_history at 0x2b8d347c8b00&gt;, njobs=5)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Builder(root_path=PosixPath(&#39;/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test&#39;), extension=&#39;.nc&#39;, depth=1, exclude_patterns=[&#39;*/tseries/*&#39;, &#39;*/rest/*&#39;], njobs=5)
 </pre></div>
 </div>
 </div>
 </div>
-<p>We are good to go! Let’s build the catalog by calling <code class="docutils literal notranslate"><span class="pre">.build()</span></code> on the object! By default, it will use the <code class="docutils literal notranslate"><span class="pre">LokyBackend</span></code> which is described in the <a class="reference external" href="https://joblib.readthedocs.io/en/latest/parallel.html">Joblib documentation</a>. Essentially,</p>
+<p>We are good to go! Let’s build the catalog by calling <code class="docutils literal notranslate"><span class="pre">.build()</span></code> on the object, passing in the <code class="docutils literal notranslate"><span class="pre">parse_cesm_history</span></code> parser! By default, it will use the <code class="docutils literal notranslate"><span class="pre">LokyBackend</span></code> which is described in the <a class="reference external" href="https://joblib.readthedocs.io/en/latest/parallel.html">Joblib documentation</a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="o">.</span><span class="n">build</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="o">.</span><span class="n">build</span><span class="p">(</span><span class="n">parse_cesm_history</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -585,10 +587,12 @@ njobs : int, optional
 [Parallel(n_jobs=5)]: Done  12 out of  12 | elapsed:    0.2s remaining:    0.0s
 [Parallel(n_jobs=5)]: Done  12 out of  12 | elapsed:    0.2s finished
 [Parallel(n_jobs=5)]: Using backend LokyBackend with 5 concurrent workers.
-[Parallel(n_jobs=5)]: Done   8 tasks      | elapsed:    1.8s
-[Parallel(n_jobs=5)]: Done  62 tasks      | elapsed:    5.5s
-[Parallel(n_jobs=5)]: Done 152 tasks      | elapsed:   11.5s
-[Parallel(n_jobs=5)]: Done 264 out of 264 | elapsed:   15.7s finished
+[Parallel(n_jobs=5)]: Done   8 tasks      | elapsed:    1.6s
+[Parallel(n_jobs=5)]: Done  62 tasks      | elapsed:    4.5s
+[Parallel(n_jobs=5)]: Done 152 tasks      | elapsed:   11.4s
+[Parallel(n_jobs=5)]: Done 264 out of 264 | elapsed:   15.1s finished
+/glade/work/mgrover/git_repos/ecgtools/ecgtools/builder.py:180: UserWarning: Unable to parse 5 assets/files. A list of these assets can be found in `.invalid_assets` attribute.
+  parsing_func, parsing_func_kwargs
 </pre></div>
 </div>
 </div>
@@ -1012,6 +1016,9 @@ njobs : int, optional
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Saved catalog location: /glade/work/mgrover/cesm-hist-test.json and /glade/work/mgrover/cesm-hist-test.csv
 </pre></div>
 </div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/glade/u/home/mgrover/miniconda3/envs/hires-marbl/lib/python3.7/site-packages/ipykernel_launcher.py:17: UserWarning: Unable to parse 5 assets/files. A list of these assets can be found in /glade/work/mgrover/invalid_assets_cesm-hist-test.csv.
+</pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -1214,17 +1221,17 @@ njobs : int, optional
  Data variables:
      TEMP     (time, z_t, nlat, nlon) float32 dask.array&lt;chunksize=(1, 60, 384, 320), meta=np.ndarray&gt;
  Attributes:
-     revision:                $Id$
-     model_doi_url:           https://doi.org/10.5065/D67H1H0V
-     title:                   b.e20.B1850.f19_g17.test
-     cell_methods:            cell_methods = time: mean ==&gt; the variable value...
-     time_period_freq:        month_1
      intake_esm_varname:      [&#39;TEMP&#39;]
-     history:                 none
-     Conventions:             CF-1.0; http://www.cgd.ucar.edu/cms/eaton/netcdf...
-     contents:                Diagnostic and Prognostic Variables
      source:                  CCSM POP2, the CCSM Ocean Component
+     time_period_freq:        month_1
      calendar:                All years have exactly  365 days.
+     revision:                $Id$
+     history:                 none
+     model_doi_url:           https://doi.org/10.5065/D67H1H0V
+     contents:                Diagnostic and Prognostic Variables
+     cell_methods:            cell_methods = time: mean ==&gt; the variable value...
+     Conventions:             CF-1.0; http://www.cgd.ucar.edu/cms/eaton/netcdf...
+     title:                   b.e20.B1850.f19_g17.test
      intake_esm_dataset_key:  ocn/pop.h/b.e20.B1850.f19_g17.test}
 </pre></div>
 </div>
@@ -1238,7 +1245,7 @@ njobs : int, optional
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/ecgtools-history-files-example_37_0.png" src="../../_images/ecgtools-history-files-example_37_0.png" />
+<img alt="../../_images/ecgtools-history-files-example_38_0.png" src="../../_images/ecgtools-history-files-example_38_0.png" />
 </div>
 </div>
 </div>
