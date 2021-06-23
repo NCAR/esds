@@ -46,7 +46,13 @@ Dealing with Python environments can be tricky... a good place to start is to ch
 
 ### Conda is taking too long to solve environment: use mamba
 
-This is a very common issue, and can be addressed by [`mamba`](https://mamba.readthedocs.io/en/latest/user_guide/concepts.html) which is a drop-in replacement for conda. Mamba aims to greately speed up and improve conda functionality such as solving environment, installing packages, etc...
+This is a very common issue when installing a new package or trying to update a package in an existing conda environment. This issue is usually manifested in a conda message along these lines:
+
+```bash
+environment Solving environment: failed with initial frozen solve. Retrying with flexible solve.
+```
+
+One solution to this issue is to use [`mamba`](https://mamba.readthedocs.io/en/latest/user_guide/concepts.html) which is a drop-in replacement for conda. Mamba aims to greately speed up and improve conda functionality such as solving environment, installing packages, etc...
 
 - Installing Mamba
 
@@ -61,13 +67,13 @@ conda config --add channels nodefaults
 conda config --add channels conda-forge
 ```
 
-To install a package with mamba, you just run
+- To install a package with mamba, you just run
 
 ```bash
 mamba install package_name
 ```
 
-To create/update an environment from an environment file, run:
+- To create/update an environment from an environment file, run:
 
 ```bash
 mamba env update -f environment.yml
