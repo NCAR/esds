@@ -258,6 +258,11 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conda-is-taking-too-long-to-solve-environment-use-mamba">
+     Conda is taking too long to solve environment: use mamba
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#conda-environments-on-jupyterhub">
      Conda Environments on JupyterHub
     </a>
@@ -410,6 +415,40 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="section" id="general-advice">
 <h3>General Advice<a class="headerlink" href="#general-advice" title="Permalink to this headline">¶</a></h3>
 <p>Dealing with Python environments can be tricky… a good place to start is to checkout <a class="reference external" href="https://whiteboxml.com/blog/the-definitive-guide-to-python-virtual-environments-with-conda">this guide on dealing with Python environments</a></p>
+</div>
+<div class="section" id="conda-is-taking-too-long-to-solve-environment-use-mamba">
+<h3>Conda is taking too long to solve environment: use mamba<a class="headerlink" href="#conda-is-taking-too-long-to-solve-environment-use-mamba" title="Permalink to this headline">¶</a></h3>
+<p>This is a very common issue when installing a new package or trying to update a package in an existing conda environment. This issue is usually manifested in a conda message along these lines:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>environment Solving environment: failed with initial frozen solve. Retrying with flexible solve.
+</pre></div>
+</div>
+<p>One solution to this issue is to use <a class="reference external" href="https://mamba.readthedocs.io/en/latest/user_guide/concepts.html"><code class="docutils literal notranslate"><span class="pre">mamba</span></code></a> which is a drop-in replacement for conda. Mamba aims to greately speed up and improve conda functionality such as solving environment, installing packages, etc…</p>
+<ul class="simple">
+<li><p>Installing Mamba</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda install -n base -c conda-forge mamba
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Set <code class="docutils literal notranslate"><span class="pre">conda-forge</span></code> and <code class="docutils literal notranslate"><span class="pre">nodefaults</span></code> channels</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda config --add channels nodefaults
+conda config --add channels conda-forge
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>To install a package with mamba, you just run</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mamba install package_name
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>To create/update an environment from an environment file, run:</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mamba env update -f environment.yml
+</pre></div>
+</div>
+<p>See <a class="reference external" href="https://mamba.readthedocs.io/en/latest/index.html">mamba documentation</a> for more.</p>
 </div>
 <div class="section" id="conda-environments-on-jupyterhub">
 <h3>Conda Environments on JupyterHub<a class="headerlink" href="#conda-environments-on-jupyterhub" title="Permalink to this headline">¶</a></h3>
