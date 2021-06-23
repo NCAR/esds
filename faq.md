@@ -44,6 +44,37 @@ See the xarray [ecosystem](https://xarray.pydata.org/en/latest/ecosystem.html) p
 
 Dealing with Python environments can be tricky... a good place to start is to checkout [this guide on dealing with Python environments](https://whiteboxml.com/blog/the-definitive-guide-to-python-virtual-environments-with-conda)
 
+### Conda is taking too long to solve environment: use mamba
+
+This is a very common issue, and can be addressed by [`mamba`](https://mamba.readthedocs.io/en/latest/user_guide/concepts.html) which is a drop-in replacement for conda. Mamba aims to greately speed up and improve conda functionality such as solving environment, installing packages, etc...
+
+- Installing Mamba
+
+```bash
+conda install -n base -c conda-forge mamba
+```
+
+- Set `conda-forge` and `nodefaults` channels
+
+```bash
+conda config --add channels nodefaults
+conda config --add channels conda-forge
+```
+
+To install a package with mamba, you just run
+
+```bash
+mamba install package_name
+```
+
+To create/update an environment from an environment file, run:
+
+```bash
+mamba env update -f environment.yml
+```
+
+See [mamba documentation](https://mamba.readthedocs.io/en/latest/index.html) for more.
+
 ### Conda Environments on JupyterHub
 
 The Computational and Information Systems Lab (CISL) at NCAR put together some [good documentation](https://www2.cisl.ucar.edu/resources/conda-environments) on dealing with environments on Casper/Cheyenne
