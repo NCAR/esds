@@ -600,20 +600,6 @@ pip install ecgtools
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">4</span><span class="o">-</span><span class="n">a0e8a7bef214</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Create Digraph object - use the left to right orientation instead of vertical</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">dot</span> <span class="o">=</span> <span class="n">Digraph</span><span class="p">(</span><span class="n">graph_attr</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;rankdir&#39;</span><span class="p">:</span> <span class="s1">&#39;LR&#39;</span><span class="p">})</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">dot</span><span class="o">.</span><span class="n">format</span> <span class="o">=</span> <span class="s1">&#39;pdf&#39;</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> 
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1"># Start counting at one for node numbers</span>
-
-<span class="ne">NameError</span>: name &#39;Digraph&#39; is not defined
-</pre></div>
-</div>
-</div>
 </div>
 <p>Now visualize it in inline by running a cell with just the <code class="docutils literal notranslate"><span class="pre">dot</span></code> object</p>
 <div class="cell docutils container">
@@ -622,6 +608,8 @@ pip install ecgtools
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../../_images/model_documentation_jupyterbook_16_0.svg" src="../../_images/model_documentation_jupyterbook_16_0.svg" /></div>
 </div>
 </div>
 <div class="section" id="save-the-visualization">
@@ -631,6 +619,11 @@ pip install ecgtools
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dot</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="s1">&#39;cesm_test_catalog&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;cesm_test_catalog.pdf&#39;
 </pre></div>
 </div>
 </div>
