@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2021-06-23T18:40:40.650208+00:00</updated>
+  <updated>2021-06-25T20:30:41.072801+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.19">ABlog</generator>
@@ -625,5 +625,24 @@ What should I do?</summary>
     <category term="diagnostics" label="diagnostics"/>
     <category term="conference" label="conference"/>
     <published>2021-06-17T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/model_documentation_jupyterbook/</id>
+    <title>Creating Model Documentation Using Jupyterbook and Intake-esm</title>
+    <updated>2021-06-25T00:00:00+00:00</updated>
+    <author>
+      <name>Max Grover</name>
+    </author>
+    <content type="html">&lt;p&gt;A common step to any project is documenting your data and your data workflow. Fortunately, open tools in the scientific python ecosystem make that much easier! In this example, we will cover creating your github repo, creating the catalog, visualizing the catalog, and generating a static webpage you can share with collaborators!&lt;/p&gt;
+&lt;p&gt;This week’s post is quite detailed, so just a warning! If you would like to look at the finished product, check out the following&lt;/p&gt;
+&lt;img alt="CESM book page" src="../_images/cesm_book_page.png" /&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/model_documentation_jupyterbook/" rel="alternate"/>
+    <summary>A common step to any project is documenting your data and your data workflow. Fortunately, open tools in the scientific python ecosystem make that much easier! In this example, we will cover creating your github repo, creating the catalog, visualizing the catalog, and generating a static webpage you can share with collaborators!This week’s post is quite detailed, so just a warning! If you would like to look at the finished product, check out the followingCESM book page</summary>
+    <category term="jupyter" label="jupyter"/>
+    <category term="cesm" label="cesm"/>
+    <category term="intake" label="intake"/>
+    <category term="documentation" label="documentation"/>
+    <published>2021-06-25T00:00:00+00:00</published>
   </entry>
 </feed>

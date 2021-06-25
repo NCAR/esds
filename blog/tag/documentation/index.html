@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Posts tagged cesm &#8212; NCAR-ESDS 0.1 documentation</title>
+    <title>Posts tagged documentation &#8212; NCAR-ESDS 0.1 documentation</title>
     
   <link href="../../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -82,7 +82,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   rel="alternate"
   type="application/atom+xml"
   href="../../../blog/atom.xml"
-  title="Posts tagged cesm"
+  title="Posts tagged documentation"
 />
  
 <style type="text/css">
@@ -226,7 +226,7 @@ commentsRunWhenDOMLoaded(addUtterances);
                 
 <div class="section">
   <h1>
-     Posts tagged  cesm 
+     Posts tagged  documentation 
   </h1>
    
 
@@ -256,9 +256,9 @@ commentsRunWhenDOMLoaded(addUtterances);
   >
    
   <a href="../jupyter/">jupyter</a>   
-  <a href="#">cesm</a>   
+  <a href="../cesm/">cesm</a>   
   <a href="../intake/">intake</a>   
-  <a href="../documentation/">documentation</a>  
+  <a href="#">documentation</a>  
 </li>
  
     </ul>
@@ -267,161 +267,6 @@ commentsRunWhenDOMLoaded(addUtterances);
 <img alt="CESM book page" src="../../../_images/cesm_book_page.png" />
 
     <p><a href="../../../posts/model_documentation_jupyterbook/">Read more ...</a></p>
-    <hr />
-  </div>
-  
-
-  <div class="section">
-    <h2>
-      <a href="../../../posts/cesm-workshop-2021-diagnostics/"
-        >CESM Diagnostics Discussion</a
-      >
-    </h2>
-
-    <ul class="ablog-archive">
-      <li>
-         <i class="fa fa-calendar"></i> 17 June 2021 
-      </li>
-       
-<li id="author">
-  <span
-    ><i class="fa-fw fa fa-user"></i></span
-  >
-   
-  <a href="../../author/max-grover/">Max Grover</a>  
-</li>
-    
-<li id="tags">
-  <span
-    ><i class="fa-fw fa fa-tags"></i> </span
-  >
-   
-  <a href="#">cesm</a>   
-  <a href="../diagnostics/">diagnostics</a>   
-  <a href="../conference/">conference</a>  
-</li>
- 
-    </ul>
-    <p>Every year, NCAR holds the <a class="reference external" href="https://www.cesm.ucar.edu/events/workshops/2021/">Community Earth System Model (CESM) Workshop</a> which brings together the CESM community to discuss relavant updates from the <a class="reference external" href="https://www.cesm.ucar.edu/working_groups/">working groups</a> as well as featured speakers and cross-working group discussions.</p>
-<p>During the Software Engineering Working Group (SEWG) session, following a variety of talks, there was an open discussion regarding the current state of CESM diagnostics and future plans for collaboration.</p>
-<img alt="diagnostics_image" src="../../../_images/cesm-diagnostics.svg" />
-    <p><a href="../../../posts/cesm-workshop-2021-diagnostics/">Read more ...</a></p>
-    <hr />
-  </div>
-  
-
-  <div class="section">
-    <h2>
-      <a href="../../../posts/graphviz_example/"
-        >Creating Visualizations of Intake-ESM Catalogs</a
-      >
-    </h2>
-
-    <ul class="ablog-archive">
-      <li>
-         <i class="fa fa-calendar"></i> 11 June 2021 
-      </li>
-       
-<li id="author">
-  <span
-    ><i class="fa-fw fa fa-user"></i></span
-  >
-   
-  <a href="../../author/max-grover/">Max Grover</a>  
-</li>
-    
-<li id="tags">
-  <span
-    ><i class="fa-fw fa fa-tags"></i> </span
-  >
-   
-  <a href="../visualization/">visualization</a>   
-  <a href="../intake/">intake</a>   
-  <a href="#">cesm</a>  
-</li>
- 
-    </ul>
-    <p>A common initial task when working with a new dataset is figuring out what data is available. This is especially true when working with climate ensembles with several components and time-frequency output (ex. Community Earth System Model Large Ensemble, CESM-LE). Here, we will examine different methods of investigating this catalog</p>
-<p>Here, we will use <a class="reference external" href="https://intake-esm.readthedocs.io/en/latest/">intake-esm</a> and <a class="reference external" href="https://graphviz.readthedocs.io/en/stable/manual.html">graphviz</a>, which can be installed using the following (including jupyterlab too!)</p>
-
-    <p><a href="../../../posts/graphviz_example/">Read more ...</a></p>
-    <hr />
-  </div>
-  
-
-  <div class="section">
-    <h2>
-      <a href="../../../posts/ecgtools-history-files-example/"
-        >Building an Intake-esm catalog from CESM2 History Files</a
-      >
-    </h2>
-
-    <ul class="ablog-archive">
-      <li>
-         <i class="fa fa-calendar"></i> 04 June 2021 
-      </li>
-       
-<li id="author">
-  <span
-    ><i class="fa-fw fa fa-user"></i></span
-  >
-   
-  <a href="../../author/max-grover/">Max Grover</a>  
-</li>
-    
-<li id="tags">
-  <span
-    ><i class="fa-fw fa fa-tags"></i> </span
-  >
-   
-  <a href="../intake/">intake</a>   
-  <a href="#">cesm</a>  
-</li>
- 
-    </ul>
-    <p>As mentioned in a couple of ESDS posts (<a class="reference external" href="https://ncar.github.io/esds/posts/intake_esm_dask/">intake-esm and Dask</a>, <a class="reference external" href="https://ncar.github.io/esds/posts/intake_cmip6_debug/">debugging intake-esm</a>), <a class="reference external" href="https://intake-esm.readthedocs.io/en/latest/">intake-esm</a> can be a helpful tool to work with when dealing with model data, especially CESM. One of the requirements for using intake-esm is having a catalog which is comprised of two pieces:</p>
-<p>A table of the relevant metadata (ex. file path, variable, stream, etc.)</p>
-
-    <p><a href="../../../posts/ecgtools-history-files-example/">Read more ...</a></p>
-    <hr />
-  </div>
-  
-
-  <div class="section">
-    <h2>
-      <a href="../../../posts/intake_esm_dask/"
-        >An Example of Using Intake-ESM</a
-      >
-    </h2>
-
-    <ul class="ablog-archive">
-      <li>
-         <i class="fa fa-calendar"></i> 09 April 2021 
-      </li>
-       
-<li id="author">
-  <span
-    ><i class="fa-fw fa fa-user"></i></span
-  >
-   
-  <a href="../../author/max-grover/">Max Grover</a>  
-</li>
-    
-<li id="tags">
-  <span
-    ><i class="fa-fw fa fa-tags"></i> </span
-  >
-   
-  <a href="../dask/">dask</a>   
-  <a href="../intake/">intake</a>   
-  <a href="#">cesm</a>  
-</li>
- 
-    </ul>
-    <p>This past week, NCAR CISL updated the Casper Node to use PBS instead of Slurm for scheduling jobs. This led a post in which an example of spinning up dask clusters on the new configuration. This was also an opportunity to dig into dask, and try applying it to a sample task, specifically looking at ecosystem variables in the CESM-LE dataset, using notebooks included in Matt Long’s <a class="reference external" href="https://github.com/matt-long/krill-cesm-le">krill-cesm-le repository</a>, modified by Kristen Krumhardt.</p>
-<p>Here, we spin up our dask cluster. At first, running this notebook resulted in a <code class="docutils literal notranslate"><span class="pre">killed</span> <span class="pre">worker</span></code> error. After further expection, we noticed that additional resources would be needed to read in the notebook since the data are so large (on the order of ~1-2 TB). Increasing the individual worker to a higher amount (ex. 256 GB) solved the issue. Scale up to as many workers as you think are neccessary for the calculation (this may take some trial and error).</p>
-
-    <p><a href="../../../posts/intake_esm_dask/">Read more ...</a></p>
     <hr />
   </div>
    

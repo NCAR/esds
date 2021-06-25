@@ -1,0 +1,798 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creating Model Documentation Using Jupyterbook and Intake-esm &#8212; NCAR-ESDS 0.1 documentation</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "NCAR/esds");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <link rel="author" title="About these documents" href="../../about/" />
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+     
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../blog/atom.xml"
+  title="NCAR ESDS"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+<a class="navbar-brand" href="../../">
+<p class="title">NCAR-ESDS</p>
+</a>
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../about/">
+  About Us
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../faq/">
+  Frequently Asked Questions
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../blog/">
+  Blog
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../communication/">
+  Communication
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../best-practices/">
+  Best Practices
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/ncar/esds" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">  
+<h2>
+   <i class="fa fa-calendar"></i>
+  25 June 2021 
+</h2>
+
+<ul>
+   
+<li id="author">
+  <span
+    ><i class="fa-fw fa fa-user"></i></span
+  >
+   
+  <a href="../../blog/author/max-grover/">Max Grover</a>  
+</li>
+    
+<li id="tags">
+  <span
+    ><i class="fa-fw fa fa-tags"></i> </span
+  >
+   
+  <a href="../../blog/tag/jupyter/">jupyter</a>   
+  <a href="../../blog/tag/cesm/">cesm</a>   
+  <a href="../../blog/tag/intake/">intake</a>   
+  <a href="../../blog/tag/documentation/">documentation</a>  
+</li>
+ 
+</ul>
+
+<h3>
+  <a href="../../blog/">Recent Posts</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="../cesm-workshop-2021-diagnostics/"
+      >17 June - CESM Diagnostics Discussion</a
+    >
+  </li>
+  
+  <li>
+    <a href="../graphviz_example/"
+      >11 June - Creating Visualizations of Intake-ESM Catalogs</a
+    >
+  </li>
+  
+  <li>
+    <a href="../xarray-tutorial/"
+      >04 June - Xarray Tutorial</a
+    >
+  </li>
+  
+  <li>
+    <a href="../ecgtools-history-files-example/"
+      >04 June - Building an Intake-esm catalog from CESM2 History Files</a
+    >
+  </li>
+  
+  <li>
+    <a href="../dask-summit-takeaway/"
+      >28 May - Dask Distributed Summit 2021 Takeaways</a
+    >
+  </li>
+  
+</ul>
+
+<h3>
+  <a href="../../blog/archive/">Archives</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="../../blog/2021/">2021 (27)</a>
+  </li>
+    
+  <li>
+    <a href="../../blog/2020/">2020 (6)</a>
+  </li>
+    
+  <li>
+    <a href="../../blog/2019/">2019 (2)</a>
+  </li>
+   
+</ul>
+
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fair-warning">
+   Fair Warning
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-your-github-repository">
+   Create your Github Repository
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#clone-your-repository">
+   Clone your Repository
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#copy-the-link-from-github">
+     Copy the link from Github
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#clone-to-your-machine">
+     Clone to your machine!
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-a-docs-directory">
+   Create a docs directory
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#build-your-catalog">
+   Build your Catalog
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#read-the-catalog-and-visualize-the-components-and-frequency">
+   Read the Catalog and Visualize the Components and Frequency
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#imports">
+     Imports
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#read-in-the-test-history-catalog">
+     Read in the Test History Catalog
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#visualize-the-catalog">
+     Visualize the Catalog
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#save-the-visualization">
+     Save the Visualization
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#add-jupyterbook-files">
+   Add Jupyterbook files
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#download-a-sample-cesm-logo">
+     Download a sample CESM logo
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#adding-to-your-config-config-yml-file">
+     Adding to your Config (
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       _config.yml
+      </span>
+     </code>
+     ) file
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#add-to-your-table-of-contents-toc-yml-file">
+     Add to your Table of Contents (
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       _toc.yml
+      </span>
+     </code>
+     ) file
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#build-your-book">
+   Build your Book!
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#view-the-book-on-github">
+   View the Book on Github
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#install-github-pages-import">
+     Install Github Pages Import
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#build-the-book-and-push-to-your-github-pages-branch">
+     Build the book and push to your Github Pages branch
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rebuilding-your-book">
+     Rebuilding your book
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#go-checkout-your-book">
+   Go checkout your book!
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusion">
+   Conclusion
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                 <div class="section" id="creating-model-documentation-using-jupyterbook-and-intake-esm">
+<h1>Creating Model Documentation Using Jupyterbook and Intake-esm<a class="headerlink" href="#creating-model-documentation-using-jupyterbook-and-intake-esm" title="Permalink to this headline">¶</a></h1>
+<p>A common step to any project is documenting your data and your data workflow. Fortunately, open tools in the scientific python ecosystem make that much easier! In this example, we will cover creating your github repo, creating the catalog, visualizing the catalog, and generating a static webpage you can share with collaborators!</p>
+<div class="section" id="fair-warning">
+<h2>Fair Warning<a class="headerlink" href="#fair-warning" title="Permalink to this headline">¶</a></h2>
+<p>This week’s post is quite detailed, so just a warning! If you would like to look at the finished product, check out the following</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/mgrover1/cesm-test-data">Github repository with the content built here</a></p></li>
+<li><p><a class="reference external" href="https://mgrover1.github.io/cesm-test-data/">Finished website with content</a></p></li>
+</ul>
+<p>By the end of this post, we will cover how to build a webpage that looks like this
+<img alt="CESM book page" src="../../_images/cesm_book_page.png" /></p>
+</div>
+<div class="section" id="create-your-github-repository">
+<h2>Create your Github Repository<a class="headerlink" href="#create-your-github-repository" title="Permalink to this headline">¶</a></h2>
+<p>Go to <a class="reference external" href="https://github.com/">Github</a> and select “New” in the top lefthand corner next to “Repositories” - this will pull up the following window. Once you are here, go ahead and name your repository!</p>
+<p>Be sure to add:</p>
+<ul class="simple">
+<li><p>Repository name</p></li>
+<li><p>Description</p></li>
+<li><p>README</p></li>
+<li><p>Gitignore (use the python template)</p></li>
+<li><p>Choose a license</p></li>
+</ul>
+<p><img alt="screen_grab" src="../../_images/github_screen_grab.png" /></p>
+</div>
+<div class="section" id="clone-your-repository">
+<h2>Clone your Repository<a class="headerlink" href="#clone-your-repository" title="Permalink to this headline">¶</a></h2>
+<p>At this point, you can go ahead and clone your repository! You can either clone to your local machine, or to some Jupyterhub (such as the <a class="reference external" href="https://jupyterhub.ucar.edu">NCAR Jupyterhub</a>), which will do in this case.</p>
+<div class="section" id="copy-the-link-from-github">
+<h3>Copy the link from Github<a class="headerlink" href="#copy-the-link-from-github" title="Permalink to this headline">¶</a></h3>
+<p>Copy the link from Github by clicking on the green “Code” button
+<img alt="Github Clone Link" src="../../_images/github_clone_link.png" /></p>
+</div>
+<div class="section" id="clone-to-your-machine">
+<h3>Clone to your machine!<a class="headerlink" href="#clone-to-your-machine" title="Permalink to this headline">¶</a></h3>
+<p>We want to clone to the repository within the <a class="reference external" href="https://jupyterhub.ucar.edu">Jupyterhub</a>, so once logging on, we open a terminal and paste the link using the following syntax</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/mgrover1/cesm-test-data.git
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="create-a-docs-directory">
+<h2>Create a docs directory<a class="headerlink" href="#create-a-docs-directory" title="Permalink to this headline">¶</a></h2>
+<p>Now that you cloned the repository, move into it and create a <code class="docutils literal notranslate"><span class="pre">docs</span></code> directory using the following</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> cesm-test-data
+mkdir docs
+</pre></div>
+</div>
+</div>
+<div class="section" id="build-your-catalog">
+<h2>Build your Catalog<a class="headerlink" href="#build-your-catalog" title="Permalink to this headline">¶</a></h2>
+<p>Open a new Jupyter Notebook called <code class="docutils literal notranslate"><span class="pre">model_documentation.ipynb</span></code> within the <code class="docutils literal notranslate"><span class="pre">docs</span></code> directory and select a development environment which includes the following:</p>
+<ul class="simple">
+<li><p>jupyter-book</p></li>
+<li><p>ecgtools</p></li>
+</ul>
+<p>If you haven’t installed these yet, you can use conda and pip (ecgtools is not yet on conda-forge)</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda install -c conda-forge jupyter-book intake-esm graphviz
+pip install ecgtools
+</pre></div>
+</div>
+<p>In this case, follow the instructions in the <a class="reference external" href="https://ncar.github.io/esds/posts/ecgtools-history-files-example/">Building an Intake-esm catalog from CESM2 History Files</a> post provides the instructions for building the data catalog</p>
+</div>
+<div class="section" id="read-the-catalog-and-visualize-the-components-and-frequency">
+<h2>Read the Catalog and Visualize the Components and Frequency<a class="headerlink" href="#read-the-catalog-and-visualize-the-components-and-frequency" title="Permalink to this headline">¶</a></h2>
+<p>A couple weeks ago, we covered <a class="reference external" href="https://ncar.github.io/esds/posts/graphviz_example/">Creating Visualizations of Intake-ESM Catalogs</a> which is helpful for understanding how <a class="reference external" href="https://graphviz.readthedocs.io/en/stable/manual.html"><code class="docutils literal notranslate"><span class="pre">Graphviz</span></code></a> works!</p>
+<div class="section" id="imports">
+<h3>Imports<a class="headerlink" href="#imports" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">intake</span>
+<span class="kn">from</span> <span class="nn">graphviz</span> <span class="kn">import</span> <span class="n">Digraph</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="read-in-the-test-history-catalog">
+<h3>Read in the Test History Catalog<a class="headerlink" href="#read-in-the-test-history-catalog" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">col</span> <span class="o">=</span> <span class="n">intake</span><span class="o">.</span><span class="n">open_esm_datastore</span><span class="p">(</span><span class="s1">&#39;/glade/work/mgrover/cesm-hist-test.json&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We will assign the dataframe from the catalog to its own variable</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">col</span><span class="o">.</span><span class="n">df</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="visualize-the-catalog">
+<h3>Visualize the Catalog<a class="headerlink" href="#visualize-the-catalog" title="Permalink to this headline">¶</a></h3>
+<p>Using the <code class="docutils literal notranslate"><span class="pre">Diagraph</span></code> object from the <a class="reference external" href="https://graphviz.readthedocs.io/en/stable/manual.html"><code class="docutils literal notranslate"><span class="pre">Graphviz</span></code> library</a>, we setup a loop to create the visualization using the three categories</p>
+<ul class="simple">
+<li><p>Case</p></li>
+<li><p>Component</p></li>
+<li><p>Frequency</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create Digraph object - use the left to right orientation instead of vertical</span>
+<span class="n">dot</span> <span class="o">=</span> <span class="n">Digraph</span><span class="p">(</span><span class="n">graph_attr</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;rankdir&#39;</span><span class="p">:</span> <span class="s1">&#39;LR&#39;</span><span class="p">})</span>
+
+<span class="c1"># Save the catalog as a pdf</span>
+<span class="n">dot</span><span class="o">.</span><span class="n">format</span> <span class="o">=</span> <span class="s1">&#39;pdf&#39;</span>
+
+<span class="c1"># Start counting at one for node numbers</span>
+<span class="n">num_node</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="c1"># Loop through the different cases</span>
+<span class="k">for</span> <span class="n">case</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">case</span><span class="o">.</span><span class="n">unique</span><span class="p">():</span>
+    <span class="n">case_i</span> <span class="o">=</span> <span class="n">num_node</span>
+    <span class="n">dot</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">case_i</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="n">case</span><span class="p">)</span>
+    <span class="n">num_node</span> <span class="o">+=</span> <span class="mi">1</span>
+
+    <span class="c1"># Loop through the different components in each case</span>
+    <span class="k">for</span> <span class="n">component</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">case</span> <span class="o">==</span> <span class="n">case</span><span class="p">]</span><span class="o">.</span><span class="n">component</span><span class="o">.</span><span class="n">unique</span><span class="p">():</span>
+        <span class="n">comp_i</span> <span class="o">=</span> <span class="n">num_node</span>
+        <span class="n">dot</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">comp_i</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="n">component</span><span class="p">)</span>
+        <span class="n">dot</span><span class="o">.</span><span class="n">edge</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">case_i</span><span class="p">),</span> <span class="nb">str</span><span class="p">(</span><span class="n">comp_i</span><span class="p">))</span>
+        <span class="n">num_node</span> <span class="o">+=</span> <span class="mi">1</span>
+
+        <span class="c1"># Loop through the frequency in each component within each experiment</span>
+        <span class="k">for</span> <span class="n">frequency</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">df</span><span class="o">.</span><span class="n">case</span> <span class="o">==</span> <span class="n">case</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">component</span> <span class="o">==</span> <span class="n">component</span><span class="p">)]</span><span class="o">.</span><span class="n">frequency</span><span class="o">.</span><span class="n">unique</span><span class="p">():</span>
+            <span class="n">freq_i</span> <span class="o">=</span> <span class="n">num_node</span>
+
+            <span class="c1"># Pull out the the stream information</span>
+            <span class="n">stream</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span>
+                <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">case</span> <span class="o">==</span> <span class="n">case</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">component</span> <span class="o">==</span> <span class="n">component</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">frequency</span> <span class="o">==</span> <span class="n">frequency</span><span class="p">)</span>
+            <span class="p">]</span><span class="o">.</span><span class="n">stream</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+            <span class="c1"># Add both stream and frequency information to these bubbles</span>
+            <span class="n">dot</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">freq_i</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;stream: </span><span class="si">{</span><span class="n">stream</span><span class="si">}</span><span class="s1"> </span><span class="se">\n</span><span class="s1"> frequency: </span><span class="si">{</span><span class="n">frequency</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+            <span class="n">dot</span><span class="o">.</span><span class="n">edge</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">comp_i</span><span class="p">),</span> <span class="nb">str</span><span class="p">(</span><span class="n">freq_i</span><span class="p">))</span>
+            <span class="n">num_node</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">comp_i</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">case_i</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">4</span><span class="o">-</span><span class="n">a0e8a7bef214</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Create Digraph object - use the left to right orientation instead of vertical</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">dot</span> <span class="o">=</span> <span class="n">Digraph</span><span class="p">(</span><span class="n">graph_attr</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;rankdir&#39;</span><span class="p">:</span> <span class="s1">&#39;LR&#39;</span><span class="p">})</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">dot</span><span class="o">.</span><span class="n">format</span> <span class="o">=</span> <span class="s1">&#39;pdf&#39;</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> 
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1"># Start counting at one for node numbers</span>
+
+<span class="ne">NameError</span>: name &#39;Digraph&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now visualize it in inline by running a cell with just the <code class="docutils literal notranslate"><span class="pre">dot</span></code> object</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dot</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="save-the-visualization">
+<h3>Save the Visualization<a class="headerlink" href="#save-the-visualization" title="Permalink to this headline">¶</a></h3>
+<p>In the block of code above, we specified <code class="docutils literal notranslate"><span class="pre">dot.format</span> <span class="pre">=</span> <span class="pre">'pdf'</span></code> which will ensure that when we save the graph, it is in PDF format. Other options include (but not limited to) <code class="docutils literal notranslate"><span class="pre">svg</span></code> and <code class="docutils literal notranslate"><span class="pre">png</span></code>!</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">Diagraph</span></code> method for saving is <code class="docutils literal notranslate"><span class="pre">.render()</span></code> with the filename in the argument (within the parentheses)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dot</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="s1">&#39;cesm_test_catalog&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>This saved a file within your directory called <code class="docutils literal notranslate"><span class="pre">cesm_test_catalog.pdf</span></code>! You can double click this within your file browser to take a look</p>
+</div>
+</div>
+<div class="section" id="add-jupyterbook-files">
+<h2>Add Jupyterbook files<a class="headerlink" href="#add-jupyterbook-files" title="Permalink to this headline">¶</a></h2>
+<p>If you are curious about <a class="reference external" href="https://jupyterbook.org/intro.html">Jupyterbook</a>, be sure to checkout their <a class="reference external" href="https://jupyterbook.org/intro.html">official documentation</a>, specifically their <a class="reference external" href="https://jupyterbook.org/start/your-first-book.html">building your first book</a> tutorial!</p>
+<p>The main two files we need now are</p>
+<ul class="simple">
+<li><p>The table of contents (<code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code>)</p></li>
+<li><p>The config file (<code class="docutils literal notranslate"><span class="pre">_config.yml</span></code>)</p></li>
+</ul>
+<p>Go ahead and create text files with your docs directory using those identical filenames</p>
+<div class="section" id="download-a-sample-cesm-logo">
+<h3>Download a sample CESM logo<a class="headerlink" href="#download-a-sample-cesm-logo" title="Permalink to this headline">¶</a></h3>
+<p>I copied over a copy of the CESM logo to Github, which can be downloaded using the following (be sure to save to an an <code class="docutils literal notranslate"><span class="pre">image</span></code> directory in <code class="docutils literal notranslate"><span class="pre">docs</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget https://raw.githubusercontent.com/mgrover1/cesm-workflow/main/images/cesm.jpg
+</pre></div>
+</div>
+</div>
+<div class="section" id="adding-to-your-config-config-yml-file">
+<h3>Adding to your Config (<code class="docutils literal notranslate"><span class="pre">_config.yml</span></code>) file<a class="headerlink" href="#adding-to-your-config-config-yml-file" title="Permalink to this headline">¶</a></h3>
+<p>Within your <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> file, input the following</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>title: <span class="s2">&quot;CESM Test Data&quot;</span>
+logo: images/cesm.jpg
+execute:
+  execute_notebooks: <span class="s2">&quot;off&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="add-to-your-table-of-contents-toc-yml-file">
+<h3>Add to your Table of Contents (<code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code>) file<a class="headerlink" href="#add-to-your-table-of-contents-toc-yml-file" title="Permalink to this headline">¶</a></h3>
+<p>This is where you place your content - in this case, the <code class="docutils literal notranslate"><span class="pre">model_documentation.ipynb</span></code> notebook. Jupyterbook does not require you specify the file type here - so leave off the <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>- file: model_documentation
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="build-your-book">
+<h2>Build your Book!<a class="headerlink" href="#build-your-book" title="Permalink to this headline">¶</a></h2>
+<p>Now that you have your content, config file, and table of contents, it’s time to build the book. Make sure you are in your repository root directory, and run the following</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book build docs
+</pre></div>
+</div>
+<p>If it built correctly, you should see the following</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">===============================================================================</span>
+
+<span class="n">Finished</span> <span class="n">generating</span> <span class="n">HTML</span> <span class="k">for</span> <span class="n">book</span><span class="o">.</span>
+<span class="n">Your</span> <span class="n">book</span><span class="s1">&#39;s HTML pages are here:</span>
+    <span class="n">docs</span><span class="o">/</span><span class="n">_build</span><span class="o">/</span><span class="n">html</span><span class="o">/</span>
+<span class="n">You</span> <span class="n">can</span> <span class="n">look</span> <span class="n">at</span> <span class="n">your</span> <span class="n">book</span> <span class="n">by</span> <span class="n">opening</span> <span class="n">this</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">browser</span><span class="p">:</span>
+    <span class="n">docs</span><span class="o">/</span><span class="n">_build</span><span class="o">/</span><span class="n">html</span><span class="o">/</span><span class="n">index</span><span class="o">.</span><span class="n">html</span>
+<span class="n">Or</span> <span class="n">paste</span> <span class="n">this</span> <span class="n">line</span> <span class="n">directly</span> <span class="n">into</span> <span class="n">your</span> <span class="n">browser</span> <span class="n">bar</span><span class="p">:</span>
+    <span class="n">file</span><span class="p">:</span><span class="o">///</span><span class="n">glade</span><span class="o">/</span><span class="n">work</span><span class="o">/</span><span class="n">mgrover</span><span class="o">/</span><span class="n">git_repos</span><span class="o">/</span><span class="n">cesm</span><span class="o">-</span><span class="n">test</span><span class="o">-</span><span class="n">data</span><span class="o">/</span><span class="n">docs</span><span class="o">/</span><span class="n">_build</span><span class="o">/</span><span class="n">html</span><span class="o">/</span><span class="n">index</span><span class="o">.</span><span class="n">html</span>            
+
+<span class="o">===============================================================================</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="view-the-book-on-github">
+<h2>View the Book on Github<a class="headerlink" href="#view-the-book-on-github" title="Permalink to this headline">¶</a></h2>
+<p>It can be difficult to view the book on the Jupyterhub, but fortunately we can use Github for publishing this online!</p>
+<p>The <a class="reference external" href="https://jupyterbook.org/start/publish.html">Jupyterbook publish your book online</a> docs are helpful here, so we use the second part here <a class="reference external" href="https://jupyterbook.org/start/publish.html#publish-your-book-online-with-github-pages">describing using Github Pages</a></p>
+<div class="section" id="install-github-pages-import">
+<h3>Install Github Pages Import<a class="headerlink" href="#install-github-pages-import" title="Permalink to this headline">¶</a></h3>
+<p>If you have not done so already, install the following</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install ghp-import
+</pre></div>
+</div>
+</div>
+<div class="section" id="build-the-book-and-push-to-your-github-pages-branch">
+<h3>Build the book and push to your Github Pages branch<a class="headerlink" href="#build-the-book-and-push-to-your-github-pages-branch" title="Permalink to this headline">¶</a></h3>
+<p>Move to your docs directory again, and run the following (after building your book)</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ghp-import -n -p -f _build/html
+</pre></div>
+</div>
+</div>
+<div class="section" id="rebuilding-your-book">
+<h3>Rebuilding your book<a class="headerlink" href="#rebuilding-your-book" title="Permalink to this headline">¶</a></h3>
+<p>If you make changes to your notebook or want to rebuild your book, run the following within your project root directory</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book build docs
+</pre></div>
+</div>
+<p>and this within your <code class="docutils literal notranslate"><span class="pre">docs</span></code> directory</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ghp-import -n -p -f _build/html
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="go-checkout-your-book">
+<h2>Go checkout your book!<a class="headerlink" href="#go-checkout-your-book" title="Permalink to this headline">¶</a></h2>
+<p>Your book will be published along the following url structure</p>
+<p><code class="docutils literal notranslate"><span class="pre">{github_username}.github.io/{repository_name}</span></code></p>
+<p>For this example, the book can be found here</p>
+<p><a class="reference external" href="https://mgrover1.github.io/cesm-test-data/"><strong>https://mgrover1.github.io/cesm-test-data/</strong></a></p>
+</div>
+<div class="section" id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<p>This was a fairly in-depth post which covered content from previous <a class="reference external" href="https://ncar.github.io/esds/blog/">ESDS blog posts</a>, but I hope this provides a starting point for documentation your data, visualizing the data available, and sharing your data documentation with others!</p>
+</div>
+</div>
+
+<div class="section">
+     
+<div class="section">
+  <span style="float: left">
+     
+    <a href="../cesm-workshop-2021-diagnostics/">
+      <i class="fa fa-arrow-circle-left"></i> CESM Diagnostics Discussion
+    </a>
+    
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right">
+    
+  </span>
+</div>
+  
+</div>
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-B50ZRRN69X"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('config', 'G-B50ZRRN69X');
+                </script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021, NCAR Earth System Data Science Team.<br/>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.4.<br/>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>
