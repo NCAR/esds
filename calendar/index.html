@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Communication &#8212; NCAR-ESDS 0.1 documentation</title>
+    <title>Calendar &#8212; NCAR-ESDS 0.1 documentation</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -75,8 +75,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     <link rel="author" title="About these documents" href="../about/" />
     <link rel="index" title="Index" href="../genindex/" />
     <link rel="search" title="Search" href="../search/" />
-    <link rel="next" title="Best Practices" href="../best-practices/" />
-    <link rel="prev" title="Blog" href="../blog/" /> 
+    <link rel="prev" title="Best Practices" href="../best-practices/" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
      
@@ -158,8 +157,8 @@ commentsRunWhenDOMLoaded(addUtterances);
  </a>
 </li>
 
-<li class="toctree-l1 current active nav-item">
- <a class="current reference internal nav-link" href="#">
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../communication/">
   Communication
  </a>
 </li>
@@ -170,8 +169,8 @@ commentsRunWhenDOMLoaded(addUtterances);
  </a>
 </li>
 
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../calendar/">
+<li class="toctree-l1 current active nav-item">
+ <a class="current reference internal nav-link" href="#">
   Calendar
  </a>
 </li>
@@ -206,15 +205,14 @@ commentsRunWhenDOMLoaded(addUtterances);
           
             
             <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar"><div class="bio-info">
-  <div class="name">Earth System Data Science initiative at NCAR</div>
-
-  <div class="whatido">
-    Building an inclusive sociotechnical network to promote effective synthesis
-    and interpretation of data relevant to solving problems in Earth system
-    science and supporting decisions within stakeholder communities.
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../search/" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this site... " aria-label="Search this site... " autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    
   </div>
-</div>
+</nav>
             </div>
             
           
@@ -232,23 +230,25 @@ commentsRunWhenDOMLoaded(addUtterances);
 <nav id="bd-toc-nav">
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#discourse">
-   Discourse
+  <a class="reference internal nav-link" href="#esds-activities">
+   ESDS Activities
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#work-in-progress-wip-talks">
+     Work-in-Progress (WIP) Talks
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#xdev-office-hours">
+     Xdev Office Hours
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#zulip">
-   Zulip
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#esds-github-repository">
-   ESDS Github Repository
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#esds-work-in-progress-meetings">
-   ESDS Work in Progress Meetings
+  <a class="reference internal nav-link" href="#python-training">
+   Python Training
   </a>
  </li>
 </ul>
@@ -271,26 +271,33 @@ commentsRunWhenDOMLoaded(addUtterances);
           <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
               
               <div>
-                 <div class="section" id="communication">
-<h1>Communication<a class="headerlink" href="#communication" title="Permalink to this headline">¶</a></h1>
-<p>We use three primary platforms for communicating and collaborating. They include:</p>
-<div class="section" id="discourse">
-<h2><a class="reference external" href="https://discourse-nsa.ucar.edu/">Discourse</a><a class="headerlink" href="#discourse" title="Permalink to this headline">¶</a></h2>
-<p>Discourse offers a community where users can ask questions and share progress on various projects. It is setup similarly to the <a class="reference external" href="https://discourse.pangeo.io/">Pangeo discourse</a>. You will need to register for an account, but once registered and logged on, be sure to follow the ESDS channel on this platform.</p>
+                 <div class="section" id="calendar">
+<h1>Calendar<a class="headerlink" href="#calendar" title="Permalink to this headline">¶</a></h1>
+<p>Currently, we have a few different ways to give involved with the ESDS effort.</p>
+<div class="section" id="esds-activities">
+<h2>ESDS Activities<a class="headerlink" href="#esds-activities" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="work-in-progress-wip-talks">
+<h3>Work-in-Progress (WIP) Talks<a class="headerlink" href="#work-in-progress-wip-talks" title="Permalink to this headline">¶</a></h3>
+<p>Every other Monday, we hold WIP talks which are forums to present on a variety topics! Examples include:</p>
+<ul class="simple">
+<li><p>Workflow demos</p></li>
+<li><p>Overview of some package</p></li>
+<li><p>Focused discussions on some new effort</p></li>
+</ul>
+<p>This is a great place to discuss progress on your project, and get feedback from the community!</p>
 </div>
-<div class="section" id="zulip">
-<h2><a class="reference external" href="https://zulip.ucar.edu/">Zulip</a><a class="headerlink" href="#zulip" title="Permalink to this headline">¶</a></h2>
-<p>Zulip is an asynchronous messaging platform, run in-house at UCAR, which
-can be used for both private messages and messages seperated by topic. When posting in a specific “channel”, the user must add a topic, which makes it easier to track various conversations and refer back to communications at a later time.</p>
-<p>We plan on making it easier to access in the future, but the platform is currently invite-only. Please reach out to Max Grover (mgrover&#64;ucar.edu) for a link to join!</p>
+<div class="section" id="xdev-office-hours">
+<h3>Xdev Office Hours<a class="headerlink" href="#xdev-office-hours" title="Permalink to this headline">¶</a></h3>
+<p>Have a question about Python issues? Looking to get feedback on some project? Stop by our office hours!</p>
+<p>If you would like join the esds&#64;ucar.edu Google group to be informed of updates and events about these meetings and question/answer opportunties, please do so by following <a class="reference external" href="https://groups.google.com/a/ucar.edu/g/esds/about?pli=1">this link</a> and clicking “Join Group” next to the group name.</p>
+<iframe src="https://calendar.google.com/calendar/embed?src=c_nhpphc0mm0mhmpi7mibjh2t5dc%40group.calendar.google.com&ctz=America%2FDenver" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 </div>
-<div class="section" id="esds-github-repository">
-<h2><a class="reference external" href="https://ncar.github.io/esds/">ESDS Github Repository</a><a class="headerlink" href="#esds-github-repository" title="Permalink to this headline">¶</a></h2>
-<p>This repository and webpage is a space where we can post progress on this initiative, publish blog posts related to various workflows, document “best practices,” in addition to serving as a resource/discussion spot via comments on pages and posts.</p>
 </div>
-<div class="section" id="esds-work-in-progress-meetings">
-<h2><a class="reference external" href="https://docs.google.com/document/d/e/2PACX-1vQeHIGSSz_8A8gZVL87xDjYXEwqB4CkRk85yf0TACb-rVgubjb3ukiulEYuUwHZGVXhgYNpaRC2SNAt/pub">ESDS Work in Progress Meetings</a><a class="headerlink" href="#esds-work-in-progress-meetings" title="Permalink to this headline">¶</a></h2>
-<p>We have weekly meetings featuring presentations and discussions related to this project. If you are interested in the notes from these meetings, please check out <a class="reference external" href="https://docs.google.com/document/d/e/2PACX-1vQeHIGSSz_8A8gZVL87xDjYXEwqB4CkRk85yf0TACb-rVgubjb3ukiulEYuUwHZGVXhgYNpaRC2SNAt/pub">the agenda</a>!</p>
+<div class="section" id="python-training">
+<h2>Python Training<a class="headerlink" href="#python-training" title="Permalink to this headline">¶</a></h2>
+<p>The NCAR Python Tutorial Series is a biweekly tutorial series, detailing various aspects of the Python ecosystem! Be sure to check out these tutorials!</p>
+<p>If you would like join the learnpython&#64;ucar.edu Google group to be informed of updates and events in the seminar series, please do so by following <a class="reference external" href="https://groups.google.com/a/ucar.edu/g/learnpython/about?pli=1">this link</a> and clicking “Join Group” next to the group name.</p>
+<iframe src="https://calendar.google.com/calendar/embed?src=c_krmtmqm6kb5u7ke6t5on9l0rus%40group.calendar.google.com" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 </div>
 </div>
 
@@ -303,8 +310,7 @@ can be used for both private messages and messages seperated by topic. When post
               
               <div class='prev-next-bottom'>
                 
-    <a class='left-prev' id="prev-link" href="../blog/" title="previous page">Blog</a>
-    <a class='right-next' id="next-link" href="../best-practices/" title="next page">Best Practices</a>
+    <a class='left-prev' id="prev-link" href="../best-practices/" title="previous page">Best Practices</a>
 
               </div>
               
