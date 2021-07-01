@@ -114,8 +114,4 @@ Here, we break down the main highlights from each question prompted to the group
 
 ## Main Takeaways from the Discussion
 
-<<<<<<< HEAD
-During this session, we gathered some valuable from those within the NCAR community, as well as more general CESM community regarding the current state, use, and future directions of CESM diagnostics. It is clear that there needs to more coordination around these efforts moving forward, with an emphasis on finding support to ensure we move beyond the older, NCL-based diagnostic packages and toward more scalable and shareable workflows utilizing the python ecosystem. We need to continue to leverage expertise from the [GeoCAT](https://geocat.ucar.edu/), [XDev](https://ncar.github.io/xdev/), and [ESDS](https://ncar.github.io/esds/) teams to accomplish these shared goals of creating the next generation of CESM diagnostics.
-=======
 During this session, we gathered some valuable from those within the NCAR community, as well as more general CESM community regarding the current state, use, and future directions of CESM diagnostics. It is clear that there needs to more coordination around these efforts moving forward, with an emphasis on finding support to ensure we move beyond the older, NCL-based diagnostic packages and toward more scalable and shareable workflows utilizing the python ecosystem. We need to continue to leverage expertise from the [GeoCAT](https://geocat.ucar.edu/), [Xdev](https://ncar.github.io/xdev/), and [ESDS](https://ncar.github.io/esds/) teams to accomplish these shared goals of creating the next generation of CESM diagnostics.
->>>>>>> 3d6f4915033d4fc49c2e18c145bedea3c4f181e6
