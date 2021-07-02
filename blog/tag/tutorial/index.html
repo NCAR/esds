@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Posts tagged dask &#8212; NCAR-ESDS 0.1 documentation</title>
+    <title>Posts tagged tutorial &#8212; NCAR-ESDS 0.1 documentation</title>
     
   <link href="../../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -82,7 +82,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   rel="alternate"
   type="application/atom+xml"
   href="../../../blog/atom.xml"
-  title="Posts tagged dask"
+  title="Posts tagged tutorial"
 />
  
 <style type="text/css">
@@ -232,7 +232,7 @@ commentsRunWhenDOMLoaded(addUtterances);
                 
 <div class="section">
   <h1>
-     Posts tagged  dask 
+     Posts tagged  tutorial 
   </h1>
    
 
@@ -261,8 +261,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     ><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="#">dask</a>   
-  <a href="../tutorial/">tutorial</a>  
+  <a href="../dask/">dask</a>   
+  <a href="#">tutorial</a>  
 </li>
  
     </ul>
@@ -271,242 +271,6 @@ commentsRunWhenDOMLoaded(addUtterances);
 <img alt="NCARCluster view" src="../../../_images/ncar_cluster.png" />
 
     <p><a href="../../../posts/scaling-with-dask-class-takeaways/">Read more ...</a></p>
-    <hr />
-  </div>
-  
-
-  <div class="section">
-    <h2>
-      <a href="../../../posts/dask-summit-takeaway/"
-        >Dask Distributed Summit 2021 Takeaways</a
-      >
-    </h2>
-
-    <ul class="ablog-archive">
-      <li>
-         <i class="fa fa-calendar"></i> 28 May 2021 
-      </li>
-       
-<li id="author">
-  <span
-    ><i class="fa-fw fa fa-user"></i></span
-  >
-   
-  <a href="../../author/max-grover/">Max Grover</a>  
-</li>
-    
-<li id="tags">
-  <span
-    ><i class="fa-fw fa fa-tags"></i> </span
-  >
-   
-  <a href="#">dask</a>   
-  <a href="../conference/">conference</a>   
-  <a href="../open-science/">open-science</a>  
-</li>
- 
-    </ul>
-    <p>Cloud optimized datasets help improve speed of analysis</p>
-<p>Entire 4 TB datasets open up in a few seconds</p>
-
-    <p><a href="../../../posts/dask-summit-takeaway/">Read more ...</a></p>
-    <hr />
-  </div>
-  
-
-  <div class="section">
-    <h2>
-      <a href="../../../posts/map_blocks_example/"
-        >How to Use xarray.map_blocks for Vertical Interpolation of a 3D Field</a
-      >
-    </h2>
-
-    <ul class="ablog-archive">
-      <li>
-         <i class="fa fa-calendar"></i> 28 April 2021 
-      </li>
-       
-<li id="author">
-  <span
-    ><i class="fa-fw fa fa-user"></i></span
-  >
-   
-  <a href="../../author/matt-long/">Matt Long</a>,   
-  <a href="../../author/max-grover/">Max Grover</a>  
-</li>
-    
-<li id="tags">
-  <span
-    ><i class="fa-fw fa fa-tags"></i> </span
-  >
-   
-  <a href="../xarray/">xarray</a>   
-  <a href="#">dask</a>   
-  <a href="../pop/">pop</a>  
-</li>
- 
-    </ul>
-    <p>Within this example, we cover how to use <code class="docutils literal notranslate"><span class="pre">xarray.map_blocks</span></code> to calculate the mixed-layer depth within the CESM POP model output.</p>
-<p>This calculation is “embarassingly parallel” such that each calculation is done within a single a column. The calculation <strong><em>should</em></strong> be easily computed within each column across the model domain. This is where <code class="docutils literal notranslate"><span class="pre">map_blocks</span></code> can be used to improve the performance of this metric.</p>
-<img alt="MLD example plot" src="../../../_images/mld_example_plot.png" />
-
-    <p><a href="../../../posts/map_blocks_example/">Read more ...</a></p>
-    <hr />
-  </div>
-  
-
-  <div class="section">
-    <h2>
-      <a href="../../../posts/ncar-jobqueue-example/"
-        >NCAR-Jobqueue</a
-      >
-    </h2>
-
-    <ul class="ablog-archive">
-      <li>
-         <i class="fa fa-calendar"></i> 15 April 2021 
-      </li>
-       
-<li id="author">
-  <span
-    ><i class="fa-fw fa fa-user"></i></span
-  >
-   
-  <a href="../../author/max-grover/">Max Grover</a>  
-</li>
-    
-<li id="tags">
-  <span
-    ><i class="fa-fw fa fa-tags"></i> </span
-  >
-   
-  <a href="../jupyterhub/">jupyterhub</a>   
-  <a href="#">dask</a>   
-  <a href="../ncar/">ncar</a>  
-</li>
- 
-    </ul>
-    <p>Last week, we added posts detailing how to configure <a class="reference external" href="https://docs.dask.org/en/latest/">Dask</a> using the new PBS scheduler on <a class="reference external" href="https://www2.cisl.ucar.edu/resources/computational-systems/casper">Casper</a>. In this week’s example, we provide an example of the recent updates to <a class="reference external" href="https://github.com/NCAR/ncar-jobqueue">ncar-jobqueue</a>, added by <a class="reference external" href="https://github.com/andersy005">Anderson Banihirwe</a>, which allow users to easily configure dask on Casper without having to add many extra steps.</p>
-<p>You must update the package to use the newest updates. You can update using conda!</p>
-
-    <p><a href="../../../posts/ncar-jobqueue-example/">Read more ...</a></p>
-    <hr />
-  </div>
-  
-
-  <div class="section">
-    <h2>
-      <a href="../../../posts/intake_esm_dask/"
-        >An Example of Using Intake-ESM</a
-      >
-    </h2>
-
-    <ul class="ablog-archive">
-      <li>
-         <i class="fa fa-calendar"></i> 09 April 2021 
-      </li>
-       
-<li id="author">
-  <span
-    ><i class="fa-fw fa fa-user"></i></span
-  >
-   
-  <a href="../../author/max-grover/">Max Grover</a>  
-</li>
-    
-<li id="tags">
-  <span
-    ><i class="fa-fw fa fa-tags"></i> </span
-  >
-   
-  <a href="#">dask</a>   
-  <a href="../intake/">intake</a>   
-  <a href="../cesm/">cesm</a>  
-</li>
- 
-    </ul>
-    <p>This past week, NCAR CISL updated the Casper Node to use PBS instead of Slurm for scheduling jobs. This led a post in which an example of spinning up dask clusters on the new configuration. This was also an opportunity to dig into dask, and try applying it to a sample task, specifically looking at ecosystem variables in the CESM-LE dataset, using notebooks included in Matt Long’s <a class="reference external" href="https://github.com/matt-long/krill-cesm-le">krill-cesm-le repository</a>, modified by Kristen Krumhardt.</p>
-<p>Here, we spin up our dask cluster. At first, running this notebook resulted in a <code class="docutils literal notranslate"><span class="pre">killed</span> <span class="pre">worker</span></code> error. After further expection, we noticed that additional resources would be needed to read in the notebook since the data are so large (on the order of ~1-2 TB). Increasing the individual worker to a higher amount (ex. 256 GB) solved the issue. Scale up to as many workers as you think are neccessary for the calculation (this may take some trial and error).</p>
-
-    <p><a href="../../../posts/intake_esm_dask/">Read more ...</a></p>
-    <hr />
-  </div>
-  
-
-  <div class="section">
-    <h2>
-      <a href="../../../posts/casper_pbs_dask/"
-        >Using Dask on the New Casper PBS Scheduler</a
-      >
-    </h2>
-
-    <ul class="ablog-archive">
-      <li>
-         <i class="fa fa-calendar"></i> 06 April 2021 
-      </li>
-       
-<li id="author">
-  <span
-    ><i class="fa-fw fa fa-user"></i></span
-  >
-   
-  <a href="../../author/max-grover/">Max Grover</a>  
-</li>
-    
-<li id="tags">
-  <span
-    ><i class="fa-fw fa fa-tags"></i> </span
-  >
-   
-  <a href="../jupyterhub/">jupyterhub</a>   
-  <a href="#">dask</a>  
-</li>
- 
-    </ul>
-    <p>Casper will complete a transition from Slurm to the PBS Pro workload manager on April 7, 2021. This has implications for how to spin up a Dask cluster, including via the <a class="reference external" href="https://jupyterhub.ucar.edu">NCAR Jupyterhub</a>.</p>
-<p>Below is an example script suitable for the new configuration using the <code class="docutils literal notranslate"><span class="pre">PBSCluster</span></code> function from <code class="docutils literal notranslate"><span class="pre">dask_jobqueue</span></code>. Note that the <code class="docutils literal notranslate"><span class="pre">ncar_jobqueue</span></code> package <a class="reference external" href="https://github.com/NCAR/ncar-jobqueue/issues/40">requires updating</a> to work with the new configuration.</p>
-
-    <p><a href="../../../posts/casper_pbs_dask/">Read more ...</a></p>
-    <hr />
-  </div>
-  
-
-  <div class="section">
-    <h2>
-      <a href="../../../posts/writing-multiple-netcdf-files-in-parallel-with-xarray-and-dask/"
-        >Writing multiple netCDF files in parallel with xarray and dask</a
-      >
-    </h2>
-
-    <ul class="ablog-archive">
-      <li>
-         <i class="fa fa-calendar"></i> 29 June 2020 
-      </li>
-       
-<li id="author">
-  <span
-    ><i class="fa-fw fa fa-user"></i></span
-  >
-   
-  <a href="../../author/anderson-banihirwe/">Anderson Banihirwe</a>  
-</li>
-    
-<li id="tags">
-  <span
-    ><i class="fa-fw fa fa-tags"></i> </span
-  >
-   
-  <a href="../python/">python</a>   
-  <a href="../xarray/">xarray</a>   
-  <a href="../netcdf/">netcdf</a>   
-  <a href="#">dask</a>  
-</li>
- 
-    </ul>
-    <p>A typical computation workflow with xarray consists of:</p>
-<p>reading one or more netCDF files into an xarray dataset backed by dask using <code class="docutils literal notranslate"><span class="pre">xr.open_mfdataset()</span></code> or <code class="docutils literal notranslate"><span class="pre">xr.open_dataset(chunks=...)</span></code>,</p>
-
-    <p><a href="../../../posts/writing-multiple-netcdf-files-in-parallel-with-xarray-and-dask/">Read more ...</a></p>
     <hr />
   </div>
    

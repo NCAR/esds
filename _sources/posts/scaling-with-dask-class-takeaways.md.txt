@@ -1,3 +1,9 @@
+---
+author: Max Grover
+date: 2021-7-02
+tags: dask, tutorial
+---
+
 # Scaling Python with Dask Class Takeaways
 
 This week, I had the opportunity to attend the [Scaling Python with Dask](https://coiled.io/scaling-python-with-dask/) class offered by [Coiled](https://coiled.io/). The class provided an overview of a variety of topics, including:

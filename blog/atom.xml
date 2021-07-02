@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2021-07-02T21:07:42.622439+00:00</updated>
+  <updated>2021-07-02T21:15:04.114120+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.19">ABlog</generator>
@@ -644,5 +644,22 @@ What should I do?</summary>
     <category term="intake" label="intake"/>
     <category term="documentation" label="documentation"/>
     <published>2021-06-25T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/scaling-with-dask-class-takeaways/</id>
+    <title>Scaling Python with Dask Class Takeaways</title>
+    <updated>2021-07-02T00:00:00+00:00</updated>
+    <author>
+      <name>Max Grover</name>
+    </author>
+    <content type="html">&lt;p&gt;This week, I had the opportunity to attend the &lt;a class="reference external" href="https://coiled.io/scaling-python-with-dask/"&gt;Scaling Python with Dask&lt;/a&gt; class offered by &lt;a class="reference external" href="https://coiled.io/"&gt;Coiled&lt;/a&gt;. The class provided an overview of a variety of topics, including:&lt;/p&gt;
+&lt;p&gt;Parellelizing Python Code&lt;/p&gt;
+&lt;img alt="NCARCluster view" src="../_images/ncar_cluster.png" /&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/scaling-with-dask-class-takeaways/" rel="alternate"/>
+    <summary>This week, I had the opportunity to attend the Scaling Python with Dask class offered by Coiled. The class provided an overview of a variety of topics, including:Parellelizing Python CodeNCARCluster view</summary>
+    <category term="dask" label="dask"/>
+    <category term="tutorial" label="tutorial"/>
+    <published>2021-07-02T00:00:00+00:00</published>
   </entry>
 </feed>
