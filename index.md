@@ -19,4 +19,5 @@ faq
 blog
 communication
 best-practices
+calendar
 ```
