@@ -1,0 +1,517 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scaling Python with Dask Class Takeaways &#8212; NCAR-ESDS 0.1 documentation</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "NCAR/esds");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <link rel="author" title="About these documents" href="../../about/" />
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+     
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../blog/atom.xml"
+  title="NCAR ESDS"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+<a class="navbar-brand" href="../../">
+<p class="title">NCAR-ESDS</p>
+</a>
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../about/">
+  About Us
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../faq/">
+  Frequently Asked Questions
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../blog/">
+  Blog
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../communication/">
+  Communication
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../best-practices/">
+  Best Practices
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../calendar/">
+  Calendar
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/ncar/esds" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">
+<h3>
+  <a href="../../blog/">Recent Posts</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="../model_documentation_jupyterbook/"
+      >25 June - Creating Model Documentation Using Jupyterbook and Intake-esm</a
+    >
+  </li>
+  
+  <li>
+    <a href="../cesm-workshop-2021-diagnostics/"
+      >17 June - CESM Diagnostics Discussion</a
+    >
+  </li>
+  
+  <li>
+    <a href="../graphviz_example/"
+      >11 June - Creating Visualizations of Intake-ESM Catalogs</a
+    >
+  </li>
+  
+  <li>
+    <a href="../xarray-tutorial/"
+      >04 June - Xarray Tutorial</a
+    >
+  </li>
+  
+  <li>
+    <a href="../ecgtools-history-files-example/"
+      >04 June - Building an Intake-esm catalog from CESM2 History Files</a
+    >
+  </li>
+  
+</ul>
+
+<h3>
+  <a href="../../blog/archive/">Archives</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="../../blog/2021/">2021 (27)</a>
+  </li>
+    
+  <li>
+    <a href="../../blog/2020/">2020 (6)</a>
+  </li>
+    
+  <li>
+    <a href="../../blog/2019/">2019 (2)</a>
+  </li>
+   
+</ul>
+
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview-of-dask-and-dashboards">
+   Overview of Dask and Dashboards
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#introduction-what-why-dask">
+     Introduction + What/Why Dask
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#overview-of-the-cluster">
+     Overview of the Cluster
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#looking-at-the-dashboard">
+     Looking at the Dashboard
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction-to-distributed-computing">
+   Introduction to Distributed Computing
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#best-practices">
+   Best Practices
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#xarray-dask-best-practices">
+     Xarray + Dask Best Practices
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#saving-data">
+     Saving data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusion">
+   Conclusion
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                 <div class="section" id="scaling-python-with-dask-class-takeaways">
+<h1>Scaling Python with Dask Class Takeaways<a class="headerlink" href="#scaling-python-with-dask-class-takeaways" title="Permalink to this headline">¶</a></h1>
+<p>This week, I had the opportunity to attend the <a class="reference external" href="https://coiled.io/scaling-python-with-dask/">Scaling Python with Dask</a> class offered by <a class="reference external" href="https://coiled.io/">Coiled</a>. The class provided an overview of a variety of topics, including:</p>
+<ul class="simple">
+<li><p>Parellelizing Python Code</p></li>
+<li><p>Dask Dataframe</p></li>
+<li><p>Dask Array</p></li>
+<li><p>Scaling Your Own Code</p></li>
+<li><p>Graphical User Interfaces - dashboards!</p></li>
+<li><p>Machine Learning Applications</p></li>
+<li><p>Distributed Dask</p></li>
+<li><p>Basic Operation of Dask Clusters</p></li>
+<li><p>Tasks</p></li>
+<li><p>Distributed Data</p></li>
+<li><p>Resource Usage and Resilience</p></li>
+<li><p>Debugging</p></li>
+<li><p>A Use Case Example using Machine Learning</p></li>
+<li><p>Best Practices</p></li>
+</ul>
+<p>The class was structured such that each day, we used the JupyterLab interface and resources on AWS to interact with the different notebooks (where the content was all presented). The class was four hours long per day, with four days of instruction.</p>
+<div class="section" id="overview-of-dask-and-dashboards">
+<h2>Overview of Dask and Dashboards<a class="headerlink" href="#overview-of-dask-and-dashboards" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="introduction-what-why-dask">
+<h3>Introduction + What/Why Dask<a class="headerlink" href="#introduction-what-why-dask" title="Permalink to this headline">¶</a></h3>
+<p>The first day of the tutorial provided an overview of the class, and what we would cover during the week. Our instructor, <a class="reference external" href="https://github.com/adbreind">Adam Briendel</a>, mentioned the history of scaling systems, specifically in the context of distributed systems.</p>
+<ul class="simple">
+<li><p>Through the end of the 1900s, processors continued to improve speed, but recently, processor speed has flatlined</p>
+<ul>
+<li><p>Instead, we look to add more processors</p></li>
+</ul>
+</li>
+<li><p>An issue has come up though - what if your dataset is too large to fit into memory (ex. multiple terabyte climate model output)</p></li>
+</ul>
+<p>This is where <a class="reference external" href="https://dask.org">Dask</a> comes in - embedded within the Python ecosystem, especially the Scientific Python ecosystem, Dask works to simplify the complex process that is distributed computing!</p>
+<p>It may be helpful to read more documentation on <a class="reference external" href="https://docs.dask.org/en/latest/why.html">why Dask</a> within their docs!</p>
+</div>
+<div class="section" id="overview-of-the-cluster">
+<h3>Overview of the Cluster<a class="headerlink" href="#overview-of-the-cluster" title="Permalink to this headline">¶</a></h3>
+<p>The two main components of setting up up dask are your <code class="docutils literal notranslate"><span class="pre">Cleint</span></code> which is the main API within <code class="docutils literal notranslate"><span class="pre">dask-distributed</span></code>, and the <code class="docutils literal notranslate"><span class="pre">Cluster</span></code>, which has a generally <strong>weak</strong> definition, since there are numerous <code class="docutils literal notranslate"><span class="pre">Cluster</span></code>s you could use including</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/NCAR/ncar-jobqueue"><strong><code class="docutils literal notranslate"><span class="pre">NCARCluster</span></code></strong></a> - Easiest to use on NCAR Computing Resources</p>
+<ul>
+<li><p>Utilizes <span class="xref myst"><code class="docutils literal notranslate"><span class="pre">dask-jobqueue</span></code></span> underneath</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://jobqueue.dask.org/en/latest/generated/dask_jobqueue.PBSCluster.html"><strong><code class="docutils literal notranslate"><span class="pre">PBSCluster</span></code></strong></a></p>
+<ul>
+<li><p>Which is one <code class="docutils literal notranslate"><span class="pre">Cluster</span></code> from <a class="reference external" href="https://jobqueue.dask.org/en/latest/index.html"><code class="docutils literal notranslate"><span class="pre">dask-jobqueue</span></code></a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://yarn.dask.org/en/latest/"><code class="docutils literal notranslate"><span class="pre">YarnCluster</span></code></a></p></li>
+<li><p><a class="reference external" href="https://kubernetes.dask.org/en/latest/"><code class="docutils literal notranslate"><span class="pre">KubeCluster</span></code></a></p></li>
+</ul>
+<p>Once you spin up your cluster, you wrap it in the <code class="docutils literal notranslate"><span class="pre">Cluster</span></code> (ex. <code class="docutils literal notranslate"><span class="pre">Cluster(cluster)</span></code>), since the <code class="docutils literal notranslate"><span class="pre">Client</span></code> is what works as the interface between your code and the cluster</p>
+<p>A typical block of code on Casper would look like:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ncar_jobqueue</span> <span class="kn">import</span> <span class="n">NCARCluster</span>
+<span class="kn">from</span> <span class="nn">dask.distributed</span> <span class="kn">import</span> <span class="n">Client</span>
+
+<span class="n">cluster</span> <span class="o">=</span> <span class="n">NCARCluster</span><span class="p">(</span><span class="n">memory</span><span class="o">=</span><span class="s1">&#39;2GB&#39;</span><span class="p">,</span> <span class="n">processes</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">cluster</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">cluster</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="looking-at-the-dashboard">
+<h3>Looking at the Dashboard<a class="headerlink" href="#looking-at-the-dashboard" title="Permalink to this headline">¶</a></h3>
+<p>Once the <code class="docutils literal notranslate"><span class="pre">Cluster</span></code> and <code class="docutils literal notranslate"><span class="pre">Client</span></code> are setup, you can view the dashboard for your setup. This can be accessed by clicking the link next to <code class="docutils literal notranslate"><span class="pre">Dashboard</span></code> as shown below</p>
+<p><img alt="NCARCluster view" src="../../_images/ncar_cluster.png" /></p>
+<p>There are a few default graphs you can look at, including the two main</p>
+<ul class="simple">
+<li><p>Task stream (each row is a worker, the colors represent specific tasks)</p></li>
+<li><p>Progress (overview of tasks that are scheduled, which are completed)</p></li>
+<li><p>Bytes per worker (how much data is stored on each worker, lighter shades represent “spilled to disk”)</p></li>
+</ul>
+<p>If you are interested in other graphs, check out the <a class="reference external" href="https://distributed.dask.org/en/latest/http_services.html">full list of options on the Dask documentation</a></p>
+<p>One that I found particularly helpful during the week was <code class="docutils literal notranslate"><span class="pre">individual-aggregate-time-per-action</span></code>, which is accessible by adding “individual-aggregate-time-per-action” to the end of your dashboard</p>
+<ul class="simple">
+<li><p>ex. <code class="docutils literal notranslate"><span class="pre">https://jupyterhub.hpc.ucar.edu/stable/user/mgrover/proxy/8787/individual-aggregate-time-per-action</span></code></p></li>
+</ul>
+<p>This dashboard shows a comparison between compute vs. transfer, which can be helpful when optimizing the time spent computing vs. moving data around</p>
+<p>An “idealized” case is shown below where most of the time is spent computing</p>
+<p><img alt="example aggregate time per action" src="../../_images/agg_time_per_action.png" /></p>
+</div>
+</div>
+<div class="section" id="introduction-to-distributed-computing">
+<h2>Introduction to Distributed Computing<a class="headerlink" href="#introduction-to-distributed-computing" title="Permalink to this headline">¶</a></h2>
+<p>One of the most valuable components of this class was the overview of distributed computing, with a deep dive into <a class="reference external" href="https://distributed.dask.org/en/latest/journey.html">the journey of a task</a></p>
+<p>This is a piece that is often missing in “best practices” documentation. While it is not important for all users to be an expert in distributed computing practices, or the theory of it, it is important to have a general understanding of what it is, and how it useful for your own data.</p>
+<p>Often times, a person’s first introduction to Dask is simply importing, and applying to your code. It is <strong>essential</strong> to have a general understanding of how tasks are scheduled, and how the different components talk with each other. The main components include:</p>
+<ul class="simple">
+<li><p>Client - what the user interfaces with</p>
+<ul>
+<li><p>Takes in your code (individual tasks)</p></li>
+</ul>
+</li>
+<li><p>Cluster - includes the following</p>
+<ul>
+<li><p>Scheduler - what schedules the individual tasks (sends to the workers)</p></li>
+<li><p>Workers - the virtual machines that actually run the work (viewable within the dashboard)</p></li>
+<li><p>Nanny - look over the workers, make sure that if one of them dies, they are restarted</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="best-practices">
+<h2>Best Practices<a class="headerlink" href="#best-practices" title="Permalink to this headline">¶</a></h2>
+<p>Best practices can be difficult to define, since data workflows vary substantially depending on the discipline. One of the main lessons learned throughout the week was how to use the dashboard to check on your code and see where things could be inefficient.</p>
+<div class="section" id="xarray-dask-best-practices">
+<h3>Xarray + Dask Best Practices<a class="headerlink" href="#xarray-dask-best-practices" title="Permalink to this headline">¶</a></h3>
+<p>The Xarray community has put together <a class="reference external" href="https://xarray.pydata.org/en/stable/user-guide/dask.html#optimization-tips">some fanastic documentation</a> on Dask optimization, which is a common place people in the geoscience community interface with Dask</p>
+<p>A good thing to keep in mind is making sure that you are optimizing the <code class="docutils literal notranslate"><span class="pre">chunks</span></code> (dask arrays) or <code class="docutils literal notranslate"><span class="pre">partitions</span></code> (dask dataframes) for your data. You want to make sure that your chunks are not too big such that they take up too much memory in your workers, while also making them large enough such that you do not have too many tasks which can lead to “task scheduling overhead”.</p>
+</div>
+<div class="section" id="saving-data">
+<h3>Saving data<a class="headerlink" href="#saving-data" title="Permalink to this headline">¶</a></h3>
+<p>It is recommended that you save data in “chunking” friendly formats (ex. <code class="docutils literal notranslate"><span class="pre">zarr</span></code>, <code class="docutils literal notranslate"><span class="pre">hdf5</span></code>) to allow for parallel writing/reading. One of the largest pieces of slowdown/inefficiency is not reading data in parallel at the beginning of your workflow, as well as chunking your data properly. These data formats help to solve this issue!</p>
+</div>
+</div>
+<div class="section" id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<p>This class was fantastic. This deep dive into Dask and distributed computing in general provided a deeper understanding that one can struggle to gather from typical online documentation. If you have any questions about it, be sure to reach out to the <a class="reference external" href="https://coiled.io/">Coiled team</a> about other course offerings or <a class="reference external" href="https://mgrover1.github.io/">myself</a> if have specific questions about my experience taking the class.</p>
+</div>
+</div>
+
+<div class="section">
+   
+</div>
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-B50ZRRN69X"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('config', 'G-B50ZRRN69X');
+                </script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021, NCAR Earth System Data Science Team.<br/>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.4.<br/>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>
