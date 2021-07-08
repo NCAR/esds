@@ -6,7 +6,7 @@ tags: python-tutorial-series
 
 # Dask Tutorial
 
-The NCAR/UCAR virtual Python Tutorial Seminar Series continues with a 2-part introduction to the Python package `dask` on **Wednesday, July 14th** and **June 23rd at 1 PM Mountain Daylight Time**. These sessions will be led by Anderson Banihirwe.
+The NCAR/UCAR virtual Python Tutorial Seminar Series continues with a 2-part introduction to the Python package `dask` on **Wednesday, July 14th** and **August 11th at 1 PM Mountain Daylight Time**. These sessions will be led by Anderson Banihirwe.
 
 The content for this tutorial is hosted on Anderson's [Xarray Tutorial Github Repository](https://github.com/andersy005/xarray-tutorial). This is the same repository as the previous Xarray tutorials.
 
