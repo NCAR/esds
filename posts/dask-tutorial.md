@@ -26,9 +26,7 @@ If you did not attend the Xarray tutorials:
 
 - Navigate to Anderson's [Xarray Tutorial Github Repository](https://github.com/andersy005/xarray-tutorial).
 
-- Clone this repository by clicking the green "Code" button and copying the SSH address under the word "Clone". This can be done by clicking the clipboard icon.
-
-- In your terminal, type `git clone PASTE` where you paste the SSH address you just copied (`git clone git@github.com:andersy005/xarray-tutorial.git`)
+- Clone this repository by running `git clone https://github.com/andersy005/xarray-tutorial`
 
 - Create a Conda environment from the `binder/environment.yml` file with the terminal by first moving into the `xarray-tutorial` directory with `cd xarray-tutorial` and then typing `conda env update --file binder/environment.yml`
 
