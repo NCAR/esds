@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2021-07-02T21:22:22.070704+00:00</updated>
+  <updated>2021-07-09T05:00:02.715826+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.19">ABlog</generator>
@@ -661,5 +661,20 @@ What should I do?</summary>
     <category term="dask" label="dask"/>
     <category term="tutorial" label="tutorial"/>
     <published>2021-07-02T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/dask-tutorial/</id>
+    <title>Dask Tutorial</title>
+    <updated>2021-07-08T00:00:00+00:00</updated>
+    <author>
+      <name>Julia Kent</name>
+    </author>
+    <content type="html">&lt;p&gt;The NCAR/UCAR virtual Python Tutorial Seminar Series continues with a 2-part introduction to the Python package &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;dask&lt;/span&gt;&lt;/code&gt; on &lt;strong&gt;Wednesday, July 14th&lt;/strong&gt; and &lt;strong&gt;August 11th at 1 PM Mountain Daylight Time&lt;/strong&gt;. These sessions will be led by Anderson Banihirwe.&lt;/p&gt;
+&lt;p&gt;The content for this tutorial is hosted on Anderson’s &lt;a class="reference external" href="https://github.com/andersy005/xarray-tutorial"&gt;Xarray Tutorial Github Repository&lt;/a&gt;. This is the same repository as the previous Xarray tutorials.&lt;/p&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/dask-tutorial/" rel="alternate"/>
+    <summary>The NCAR/UCAR virtual Python Tutorial Seminar Series continues with a 2-part introduction to the Python package dask on Wednesday, July 14th and August 11th at 1 PM Mountain Daylight Time. These sessions will be led by Anderson Banihirwe.The content for this tutorial is hosted on Anderson’s Xarray Tutorial Github Repository. This is the same repository as the previous Xarray tutorials.</summary>
+    <category term="python-tutorial-series" label="python-tutorial-series"/>
+    <published>2021-07-08T00:00:00+00:00</published>
   </entry>
 </feed>
