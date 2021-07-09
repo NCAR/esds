@@ -12,7 +12,7 @@ The content for this tutorial is hosted on Anderson's [Xarray Tutorial Github Re
 
 ## Preparation
 
-If you did attend the Xarray tutorials (and have cloned this repository before:
+If you did attend the Xarray tutorials (and have cloned this repository before):
 
 - Stash their local changes with `git add .` and `git stash`
 
