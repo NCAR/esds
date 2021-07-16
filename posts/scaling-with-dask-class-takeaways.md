@@ -29,7 +29,7 @@ The class was structured such that each day, we used the JupyterLab interface an
 
 ### Introduction + What/Why Dask
 
-The first day of the tutorial provided an overview of the class, and what we would cover during the week. Our instructor, [Adam Breindel](https://github.com/adbreind), mentioned the history of scaling systems, specifically in the context of distributed systems.
+The first day of the tutorial provided an overview of the class, and what we would cover during the week. Our instructor, [Adam Briendel](https://github.com/adbreind), mentioned the history of scaling systems, specifically in the context of distributed systems.
 
 - Through the end of the 1900s, processors continued to improve speed, but recently, processor speed has flatlined
   - Instead, we look to add more processors
