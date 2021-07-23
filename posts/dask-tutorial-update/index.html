@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Matplotlib Tutorial FAQ &#8212; NCAR-ESDS 0.1 documentation</title>
+    <title>Dask Tutorial UPDATED DATES &#8212; NCAR-ESDS 0.1 documentation</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -207,7 +207,7 @@ commentsRunWhenDOMLoaded(addUtterances);
             <div class="col-12 col-md-3 bd-sidebar">  
 <h2>
    <i class="fa fa-calendar"></i>
-  30 March 2021 
+  23 July 2021 
 </h2>
 
 <ul>
@@ -222,12 +222,13 @@ commentsRunWhenDOMLoaded(addUtterances);
     
 <li id="tags">
   <span
-    ><i class="fa-fw fa fa-tags"></i> </span
+    ><i
+      class="fa-fw fa fa-tag"
+    ></i
+    ></span
   >
    
-  <a href="../../blog/tag/python-tutorial-series/">python-tutorial-series</a>   
-  <a href="../../blog/tag/faq/">faq</a>   
-  <a href="../../blog/tag/matplotlib/">matplotlib</a>  
+  <a href="../../blog/tag/python-tutorial-series/">python-tutorial-series</a>  
 </li>
  
 </ul>
@@ -237,12 +238,6 @@ commentsRunWhenDOMLoaded(addUtterances);
 </h3>
 <ul>
    
-  <li>
-    <a href="../dask-tutorial-update/"
-      >23 July - Dask Tutorial UPDATED DATES</a
-    >
-  </li>
-  
   <li>
     <a href="../dask-tutorial/"
       >08 July - Dask Tutorial</a
@@ -264,6 +259,12 @@ commentsRunWhenDOMLoaded(addUtterances);
   <li>
     <a href="../cesm-workshop-2021-diagnostics/"
       >17 June - CESM Diagnostics Discussion</a
+    >
+  </li>
+  
+  <li>
+    <a href="../graphviz_example/"
+      >11 June - Creating Visualizations of Intake-ESM Catalogs</a
     >
   </li>
   
@@ -298,9 +299,24 @@ commentsRunWhenDOMLoaded(addUtterances);
               
               <div class="toc-item">
                 
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
 
 <nav id="bd-toc-nav">
-    
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#preparation">
+   Preparation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sign-up">
+   Sign Up
+  </a>
+ </li>
+</ul>
+
 </nav>
               </div>
               
@@ -319,25 +335,34 @@ commentsRunWhenDOMLoaded(addUtterances);
           <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
               
               <div>
-                 <div class="section" id="matplotlib-tutorial-faq">
-<h1>Matplotlib Tutorial FAQ<a class="headerlink" href="#matplotlib-tutorial-faq" title="Permalink to this headline">¶</a></h1>
-<p>Here is a compilation of questions and issues that arose during the <a class="reference external" href="https://www.youtube.com/watch?v=EiPRIdHQEmE">Matplotlib</a> session of the Python Tutorial Seminar Series.</p>
-<hr class="docutils" />
-<p><strong>Q.</strong> Are all the colormaps perceptually ordered?</p>
-<p><strong>A.</strong> They are not all perceptually ordered. Any color map you can think of exists or can be made. The <a class="reference external" href="https://matplotlib.org/stable/tutorials/colors/colormaps.html">Matplotlib Documentation</a> has a good guide for choosing colormaps.</p>
-<hr class="docutils" />
-<p><strong>Q.</strong> How do you set the x-axis boundary to remove the padding left and right of where the data begins/ends?</p>
-<p><strong>A.</strong> You would use <code class="docutils literal notranslate"><span class="pre">ax.set_xlim</span></code> and provide the minimum and maximum x-values as input. You can infer these from your <code class="docutils literal notranslate"><span class="pre">x</span></code> data with the full command <code class="docutils literal notranslate"><span class="pre">ax.set_xlim([min(x),</span> <span class="pre">max(x)])</span></code>.</p>
-<hr class="docutils" />
-<p><strong>Q.</strong> How do you create a .png from a notebook?</p>
-<p><strong>A.</strong> You can save a figure by running <code class="docutils literal notranslate"><span class="pre">plt.savefig(‘filename.png’)</span></code> in the cell you plotted the figure. The file type is inferred from the filename. <code class="docutils literal notranslate"><span class="pre">png</span></code>, <code class="docutils literal notranslate"><span class="pre">pdf</span></code>, <code class="docutils literal notranslate"><span class="pre">ps</span></code>, <code class="docutils literal notranslate"><span class="pre">eps</span></code>, <code class="docutils literal notranslate"><span class="pre">jpg</span></code>, and <code class="docutils literal notranslate"><span class="pre">svg</span></code> are all supported image formats on most backends.</p>
-<hr class="docutils" />
-<p><strong>Q.</strong> How can we set resolution (dpi) when saving plots?</p>
-<p><strong>A.</strong> <code class="docutils literal notranslate"><span class="pre">dpi</span></code> is a keyword argument to <code class="docutils literal notranslate"><span class="pre">savefig</span></code>. So you can call <code class="docutils literal notranslate"><span class="pre">plt.savefig(FIGURENAME.EXT,</span> <span class="pre">dpi=FLOAT)</span></code> where you specify your desired dots per inch as a float.</p>
-<hr class="docutils" />
-<p><strong>Q.</strong> How can I add a shared colorbar for the subplots?</p>
-<p><strong>A.</strong> There are many of examples of how to do this in the GeoCAT-examples documentation. <a class="reference external" href="https://geocat-examples.readthedocs.io/en/latest/gallery/Contours/NCL_eof_1_1.html#sphx-glr-gallery-contours-ncl-eof-1-1-py">Here</a> is an example that does so while plotting EOFs of the Sea Level Pressure over the North Atlantic. The <a class="reference external" href="https://matplotlib.org/stable/gallery/subplots_axes_and_figures/colorbar_placement.html">Matplotlib documentation</a> also has great instructions on how to manipulate colorbars.</p>
-<hr class="docutils" />
+                 <div class="section" id="dask-tutorial-updated-dates">
+<h1>Dask Tutorial UPDATED DATES<a class="headerlink" href="#dask-tutorial-updated-dates" title="Permalink to this headline">¶</a></h1>
+<p>The NCAR/UCAR virtual Python Tutorial Seminar Series continues with a 2-part introduction to the Python package <code class="docutils literal notranslate"><span class="pre">dask</span></code> on <strong>Wednesday, July 28th</strong> and <strong>August 11th at 1 PM Mountain Daylight Time</strong>. These sessions will be led by Anderson Banihirwe.</p>
+<p><strong>Note:</strong> These dates have changed from the previous Dask Tutorial announcement.</p>
+<p>The content for this tutorial is hosted on Anderson’s <a class="reference external" href="https://github.com/andersy005/xarray-tutorial">Xarray Tutorial Github Repository</a>. This is the same repository as the previous Xarray tutorials.</p>
+<div class="section" id="preparation">
+<h2>Preparation<a class="headerlink" href="#preparation" title="Permalink to this headline">¶</a></h2>
+<p>If you did attend the Xarray tutorials (and have cloned this repository before):</p>
+<ul class="simple">
+<li><p>Stash their local changes with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">.</span></code> and <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">stash</span></code></p></li>
+<li><p>Pull in upstream changes to the repository with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code></p></li>
+<li><p>Update the conda environment with <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">env</span> <span class="pre">update</span> <span class="pre">-f</span> <span class="pre">binder/environment.yml</span></code></p></li>
+</ul>
+<p>If you did not attend the Xarray tutorials:</p>
+<ul class="simple">
+<li><p>Check your conda install if this is the first tutorial in the series you are joining us for with <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">--version</span></code> and if necessary <a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">install by following these instructions</a>.</p></li>
+<li><p>Navigate to Anderson’s <a class="reference external" href="https://github.com/andersy005/xarray-tutorial">Xarray Tutorial Github Repository</a>.</p></li>
+<li><p>Clone this repository by running <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/andersy005/xarray-tutorial</span></code></p></li>
+<li><p>Create a Conda environment from the <code class="docutils literal notranslate"><span class="pre">binder/environment.yml</span></code> file with the terminal by first moving into the <code class="docutils literal notranslate"><span class="pre">xarray-tutorial</span></code> directory with <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">xarray-tutorial</span></code> and then typing <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">env</span> <span class="pre">update</span> <span class="pre">--file</span> <span class="pre">binder/environment.yml</span></code></p></li>
+<li><p>Activate your environment in the terminal with <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">xarray-tutorial</span></code>.</p></li>
+<li><p>Test your installation by launching JupyterLab with <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">lab</span></code>.</p></li>
+</ul>
+</div>
+<div class="section" id="sign-up">
+<h2>Sign Up<a class="headerlink" href="#sign-up" title="Permalink to this headline">¶</a></h2>
+<p>If you would like join the <em>learnpython&#64;ucar.edu</em> Google group to be informed of updates and events in the seminar series, please do so by following this <a class="reference external" href="https://groups.google.com/a/ucar.edu/g/learnpython/about">link</a> and clicking “Join Group” next to the group name.</p>
+<iframe src="https://calendar.google.com/calendar/embed?src=c_krmtmqm6kb5u7ke6t5on9l0rus%40group.calendar.google.com" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+</div>
 </div>
 
 <div class="section">
@@ -345,20 +370,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="section">
   <span style="float: left">
      
-    <a href="../esds-blog/">
-      <i class="fa fa-arrow-circle-left"></i> NCAR-CGD ESDS Town Hall
+    <a href="../dask-tutorial/">
+      <i class="fa fa-arrow-circle-left"></i> Dask Tutorial
     </a>
     
   </span>
   <span>&nbsp;</span>
   <span style="float: right">
-     
-    <a href="../software-citation/">
-      The Importance of Software Citation <i
-        class="fa fa-arrow-circle-right"
-      ></i
-      >
-    </a>
     
   </span>
 </div>
