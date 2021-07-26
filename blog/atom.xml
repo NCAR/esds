@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2021-07-23T18:14:54.661149+00:00</updated>
+  <updated>2021-07-26T22:49:05.105499+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.19">ABlog</generator>
@@ -691,5 +691,22 @@ What should I do?</summary>
     <summary>The NCAR/UCAR virtual Python Tutorial Seminar Series continues with a 2-part introduction to the Python package dask on Wednesday, July 28th and August 11th at 1 PM Mountain Daylight Time. These sessions will be led by Anderson Banihirwe.Note: These dates have changed from the previous Dask Tutorial announcement.</summary>
     <category term="python-tutorial-series" label="python-tutorial-series"/>
     <published>2021-07-23T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/scipy-2021-takeaways/</id>
+    <title>SciPy Conference 2021 Takeaways</title>
+    <updated>2021-07-26T00:00:00+00:00</updated>
+    <author>
+      <name>Max Grover</name>
+    </author>
+    <content type="html">&lt;p&gt;A couple weeks ago, I had an opportunity to (virtually) attend the Scientific Computing with Python (SciPy) Conference! The conference consisted of three primary sections:&lt;/p&gt;
+&lt;p&gt;Tutorials (Monday/Tuesday)&lt;/p&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/scipy-2021-takeaways/" rel="alternate"/>
+    <summary>A couple weeks ago, I had an opportunity to (virtually) attend the Scientific Computing with Python (SciPy) Conference! The conference consisted of three primary sections:Tutorials (Monday/Tuesday)</summary>
+    <category term="conference" label="conference"/>
+    <category term="scipy" label="scipy"/>
+    <category term="open-source" label="open-source"/>
+    <published>2021-07-26T00:00:00+00:00</published>
   </entry>
 </feed>
