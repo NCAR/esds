@@ -6,7 +6,7 @@ tags: conference, scipy, open-source
 
 # SciPy Conference 2021 Takeaways
 
-This week, I had an opportunity to (virtually) attend the Scientific Computing with Python (SciPy) Conference! The conference consisted of three primary sections:
+A couple weeks ago, I had an opportunity to (virtually) attend the Scientific Computing with Python (SciPy) Conference! The conference consisted of three primary sections:
 
 - Tutorials (Monday/Tuesday)
 - Talks (Wednesday - Friday)
@@ -16,33 +16,42 @@ Tutorial topics ranged from machine learning, interactive dashboards, to distrib
 
 The talks included keynote addresses at the beginning of the day, followed by various tracks, typically including some "scientific-focused" session (ex. "Earth, Ocean, Geo, and Atmospheric Science"), a machine learning track, and maintainer track. The variety of tracks offer an opportunity to group into more focused disciplines/groups. Personally, my favorite session was the Earth, Ocean, Geo and Atmospheric Science session, which was held Friday morning through afternoon (Central time)
 
+In the next few sections, I include notes from a few of the sessions I attending, primarily related to keynote presentations and the Earth, Ocean, Geo, and Atmospheric Science portion of the conference.
+
+All the talks were recorded, with the links to invidual talks included within the headers. If you are interested in talks not covered in this post, check out the following links:
+
+- [SciPy Tutorials](https://www.youtube.com/watch?v=9dz1fmBUF8U&list=PLYx7XA2nY5Geb1XY6mZU-35lgIfkDqaem)
+- [SciPy Talks](https://www.youtube.com/playlist?list=PLYx7XA2nY5GesARqNMImG3NnX3_bWq-lT)
+- [Earth, Ocean, Geo, and Atmospheric Science Talks](https://www.youtube.com/watch?v=riiIStImmk8&list=PLYx7XA2nY5GfwiluGRNprGK-jNBfIzgWY)
+
 ## Keynote - Fernando Perez - SciPy and Open Source Toolsin Sicence: Challenges and Successes
+
+[Recorded presentation](https://www.youtube.com/watch?v=Wpz79_S9KmM)
 
 ### Background
 
-- iPython - an afernoon hack in October 2001
+- iPython started with an afernoon hack in October 2001
   - Collaborative effort from the beginning
   - Announced iPython in 2001
-- Other things in 2001
+- Other things in the Python world that started in 2001
   - Enthought
-  - iPython
-- wouldn't be here without this community
+- Key part of Python - the community
 - So far - mostly white men - need to move toward more diversity in the field
   - Grant to push for more diversity - led by group at CU Boulder
-- It takes a village
+- In order to build, it takes a village
   - Large variety of packages + tools
   - 2015 - black holes - first figure was plotted in Python
-  - 2019 - first image of black hole - cited numpy and scipy
+  - 2019 - first image of black hole - cited NumPy and SciPy
     - 23,000 people contributed to the code behind this
 - 10 most influential code bases
   - IPython/Jupyter - really a lot of the packages that go into this
 - Students at UC Berkely
   - Most students using Jupyter, organize a national data science workshop now
 
-## Open dev model
+### Comments on the Open Development Model
 
 - Too much ad-hoc volunteer work - only those who volunteer can participate
-- Structural funding?
+- Can there be structural funding for:
   - Maintenance
   - Documentation
   - Community dev
@@ -51,6 +60,9 @@ The talks included keynote addresses at the beginning of the day, followed by va
 - Academic careers?
   - Postdocs, students, RSEs, faculty
 - Industry ("big tech"?)
+
+  - What is their role in all of this?
+
 - **Software is more than papers and code**
   - Services and content - impact
   - Software
@@ -112,7 +124,10 @@ The talks included keynote addresses at the beginning of the day, followed by va
 - Now have enough for success, but have a much larger need now
   - Other agencies thinking about this - get resources on foundational side
 
-## [Atmospheric data Community Toolkit](https://github.com/ARM-DOE/ACT)
+## Atmospheric data Community Toolkit
+
+[Recorded presentation](https://www.youtube.com/watch?v=wp9VvjNleNE&list=PLYx7XA2nY5GfwiluGRNprGK-jNBfIzgWY&index=4)
+[Github repo](https://github.com/ARM-DOE/ACT)
 
 - Framing the problem
   - Didn't really have CS incoporated into curriculum
@@ -200,7 +215,10 @@ The talks included keynote addresses at the beginning of the day, followed by va
   - Convince that the wider community is using, addint to it
   - Worked with ARM group to get this going
 
-## [OCEtrac - Ocetrac: morphological image processing for monitoring marine heatwaves](https://github.com/ocetrac/scipy2021-talk)
+## OCEtrac - Ocetrac: morphological image processing for monitoring marine heatwaves
+
+[Recorded Presentation](https://www.youtube.com/watch?v=It4L242fPZ4&list=PLYx7XA2nY5GfwiluGRNprGK-jNBfIzgWY&index=2)
+[Github repo](https://github.com/ocetrac/scipy2021-talk)
 
 - See warming trend in the oceans...
   - Lots of variability on top of this
@@ -225,7 +243,7 @@ The talks included keynote addresses at the beginning of the day, followed by va
   - Extract only 90th percentile of SST anoms
   - NOAA OISST data - on s3 object storage
     - use pangeo forge to convert from netcdf to zarr
-- running notebook
+- Running notebook
   - get your dask cluster
   - Do some preprocessing
     - Need to do this before feeding in
@@ -250,12 +268,10 @@ The talks included keynote addresses at the beginning of the day, followed by va
 - Load in data array
 - Set radius to number of grid points
 - Minimum size quartile - threshold for object areas
-- xdim, ydim
-- Tracker object
-
+- Set variables such as `xdim`, `ydim`
+- Set up the Tracker object
   - Feed in data array, mask, radius, min*size*
-
-- Each color on there is a different heavwave
+- Each color on there is a different heatwave
   - Can see size and shape of these
   - Can zoom into single events
 - Can look at more stats using regional properties
@@ -269,4 +285,4 @@ The talks included keynote addresses at the beginning of the day, followed by va
 - Marine heatwaves split and merge, connected in space and time
 - Can track any ocean variables you want
 - Dealing with the 180 degree seam
-  - Something they had to add on...
+  - Something they had to add on... but it's there now!
