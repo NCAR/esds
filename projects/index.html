@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Communication &#8212; NCAR-ESDS 0.1 documentation</title>
+    <title>Projects &#8212; NCAR-ESDS 0.1 documentation</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -75,8 +75,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     <link rel="author" title="About these documents" href="../about/" />
     <link rel="index" title="Index" href="../genindex/" />
     <link rel="search" title="Search" href="../search/" />
-    <link rel="next" title="Best Practices" href="../best-practices/" />
-    <link rel="prev" title="Blog" href="../blog/" /> 
+    <link rel="prev" title="Calendar" href="../calendar/" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
      
@@ -158,8 +157,8 @@ commentsRunWhenDOMLoaded(addUtterances);
  </a>
 </li>
 
-<li class="toctree-l1 current active nav-item">
- <a class="current reference internal nav-link" href="#">
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../communication/">
   Communication
  </a>
 </li>
@@ -176,8 +175,8 @@ commentsRunWhenDOMLoaded(addUtterances);
  </a>
 </li>
 
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../projects/">
+<li class="toctree-l1 current active nav-item">
+ <a class="current reference internal nav-link" href="#">
   Projects
  </a>
 </li>
@@ -212,15 +211,14 @@ commentsRunWhenDOMLoaded(addUtterances);
           
             
             <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar"><div class="bio-info">
-  <div class="name">Earth System Data Science initiative at NCAR</div>
-
-  <div class="whatido">
-    Building an inclusive sociotechnical network to promote effective synthesis
-    and interpretation of data relevant to solving problems in Earth system
-    science and supporting decisions within stakeholder communities.
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../search/" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this site... " aria-label="Search this site... " autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    
   </div>
-</div>
+</nav>
             </div>
             
           
@@ -238,24 +236,63 @@ commentsRunWhenDOMLoaded(addUtterances);
 <nav id="bd-toc-nav">
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#discourse">
-   Discourse
+  <a class="reference internal nav-link" href="#geocat">
+   GeoCAT
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#geocat-comp">
+     GeoCAT-comp
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#geocat-viz">
+     GeoCAT-viz
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#geocat-examples">
+     GeoCAT-examples
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#zulip">
-   Zulip
+  <a class="reference internal nav-link" href="#diagnostic-efforts">
+   Diagnostic Efforts
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#esds-github-repository">
-   ESDS Github Repository
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#esds-work-in-progress-meetings">
-   ESDS Work in Progress Meetings
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#amp-diagnostics">
+     AMP Diagnostics
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#community-terrestrial-systems-model-ctsm-python-gallery">
+     Community Terrestrial Systems Model (CTSM) Python Gallery
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#parallel-ocean-program-pop-tools">
+     Parallel Ocean Program (POP)-tools
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#intake-esm">
+     Intake-esm
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#earth-system-model-catalog-generation-tools-ecgtools">
+     Earth system model Catalog Generation Tools (ecgtools)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#funnel">
+     Funnel
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -277,26 +314,54 @@ commentsRunWhenDOMLoaded(addUtterances);
           <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
               
               <div>
-                 <div class="section" id="communication">
-<h1>Communication<a class="headerlink" href="#communication" title="Permalink to this headline">¶</a></h1>
-<p>We use three primary platforms for communicating and collaborating. They include:</p>
-<div class="section" id="discourse">
-<h2><a class="reference external" href="https://discourse-nsa.ucar.edu/">Discourse</a><a class="headerlink" href="#discourse" title="Permalink to this headline">¶</a></h2>
-<p>Discourse offers a community where users can ask questions and share progress on various projects. It is setup similarly to the <a class="reference external" href="https://discourse.pangeo.io/">Pangeo discourse</a>. You will need to register for an account, but once registered and logged on, be sure to follow the ESDS channel on this platform.</p>
+                 <div class="section" id="projects">
+<h1>Projects<a class="headerlink" href="#projects" title="Permalink to this headline">¶</a></h1>
+<p>This page includes a list of ongoing projects related to the ESDS initiative!</p>
+<div class="section" id="geocat">
+<h2><a class="reference external" href="https://geocat.ucar.edu/">GeoCAT</a><a class="headerlink" href="#geocat" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="geocat-comp">
+<h3><a class="reference external" href="https://geocat-comp.readthedocs.io/en/latest/">GeoCAT-comp</a><a class="headerlink" href="#geocat-comp" title="Permalink to this headline">¶</a></h3>
+<p>GeoCAT-comp is computational component of the GeoCAT project. GeoCAT-comp provides implementations of computational functions for operating on geosciences data. Many of these functions originated in NCL and were translated into Python with the help of GeoCAT-comp; however, developers are welcome to come up with novel computational functions for geosciences data.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/NCAR/geocat-comp/projects/1">Version 1.0 Roadmap</a></p></li>
+<li><p><a class="reference external" href="https://github.com/NCAR/geocat-comp/projects/2">Version 1.1 Roadmap</a></p></li>
+</ul>
 </div>
-<div class="section" id="zulip">
-<h2><a class="reference external" href="https://zulip.ucar.edu/">Zulip</a><a class="headerlink" href="#zulip" title="Permalink to this headline">¶</a></h2>
-<p>Zulip is an asynchronous messaging platform, run in-house at UCAR, which
-can be used for both private messages and messages seperated by topic. When posting in a specific “channel”, the user must add a topic, which makes it easier to track various conversations and refer back to communications at a later time.</p>
-<p>We plan on making it easier to access in the future, but the platform is currently invite-only. Please reach out to Max Grover (mgrover&#64;ucar.edu) for a link to join!</p>
+<div class="section" id="geocat-viz">
+<h3><a class="reference external" href="https://geocat-viz.readthedocs.io/en/latest/">GeoCAT-viz</a><a class="headerlink" href="#geocat-viz" title="Permalink to this headline">¶</a></h3>
+<p>The GeoCAT-viz repo contains tools to help plot data, including convenience and plotting functions that are used to facilitate plotting geosciences data with Matplotlib, Cartopy, and possibly other Python ecosystem plotting packages.</p>
 </div>
-<div class="section" id="esds-github-repository">
-<h2><a class="reference external" href="https://ncar.github.io/esds/">ESDS Github Repository</a><a class="headerlink" href="#esds-github-repository" title="Permalink to this headline">¶</a></h2>
-<p>This repository and webpage is a space where we can post progress on this initiative, publish blog posts related to various workflows, document “best practices,” in addition to serving as a resource/discussion spot via comments on pages and posts.</p>
+<div class="section" id="geocat-examples">
+<h3><a class="reference external" href="https://geocat-examples.readthedocs.io/en/latest/">GeoCAT-examples</a><a class="headerlink" href="#geocat-examples" title="Permalink to this headline">¶</a></h3>
+<p>This gallery contains visualization examples from many plotting categories of geosciences data (under the Gallery tab) and usage examples for the functions of the GeoCAT computational component, GeoCAT-comp (under the GeoCAT-comp Examples tab).</p>
 </div>
-<div class="section" id="esds-work-in-progress-meetings">
-<h2><a class="reference external" href="https://docs.google.com/document/d/e/2PACX-1vQeHIGSSz_8A8gZVL87xDjYXEwqB4CkRk85yf0TACb-rVgubjb3ukiulEYuUwHZGVXhgYNpaRC2SNAt/pub">ESDS Work in Progress Meetings</a><a class="headerlink" href="#esds-work-in-progress-meetings" title="Permalink to this headline">¶</a></h2>
-<p>We have weekly meetings featuring presentations and discussions related to this project. If you are interested in the notes from these meetings, please check out <a class="reference external" href="https://docs.google.com/document/d/e/2PACX-1vQeHIGSSz_8A8gZVL87xDjYXEwqB4CkRk85yf0TACb-rVgubjb3ukiulEYuUwHZGVXhgYNpaRC2SNAt/pub">the agenda</a>!</p>
+</div>
+<div class="section" id="diagnostic-efforts">
+<h2>Diagnostic Efforts<a class="headerlink" href="#diagnostic-efforts" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="amp-diagnostics">
+<h3><a class="reference external" href="https://github.com/NCAR/CAM_diagnostics">AMP Diagnostics</a><a class="headerlink" href="#amp-diagnostics" title="Permalink to this headline">¶</a></h3>
+<p>Python-based diagnostics focused on evaluation of the atmospheric component of CESM. Produces time series and climatology files, seasonal and annual mean maps and zonal averages, global mean statistics, and an optional static website.</p>
+</div>
+<div class="section" id="community-terrestrial-systems-model-ctsm-python-gallery">
+<h3><a class="reference external" href="https://github.com/NCAR/ctsm_python_gallery">Community Terrestrial Systems Model (CTSM) Python Gallery</a><a class="headerlink" href="#community-terrestrial-systems-model-ctsm-python-gallery" title="Permalink to this headline">¶</a></h3>
+<p>A place to put sample workflows and tools that use CTSM model output.</p>
+</div>
+<div class="section" id="parallel-ocean-program-pop-tools">
+<h3><a class="reference external" href="https://github.com/NCAR/pop-tools">Parallel Ocean Program (POP)-tools</a><a class="headerlink" href="#parallel-ocean-program-pop-tools" title="Permalink to this headline">¶</a></h3>
+<p>Tools to support analysis of POP2-CESM model solutions.</p>
+</div>
+<div class="section" id="intake-esm">
+<h3><a class="reference external" href="https://github.com/intake/intake-esm">Intake-esm</a><a class="headerlink" href="#intake-esm" title="Permalink to this headline">¶</a></h3>
+<p>An intake plugin for parsing an Earth System Model (ESM) catalog and loading assets into xarray datasets.</p>
+</div>
+<div class="section" id="earth-system-model-catalog-generation-tools-ecgtools">
+<h3><a class="reference external" href="https://github.com/NCAR/ecgtools">Earth system model Catalog Generation Tools (ecgtools)</a><a class="headerlink" href="#earth-system-model-catalog-generation-tools-ecgtools" title="Permalink to this headline">¶</a></h3>
+<p>Tool which enables one to build intake-esm catalogs.</p>
+</div>
+<div class="section" id="funnel">
+<h3><a class="reference external" href="https://github.com/NCAR/esds-funnel">Funnel</a><a class="headerlink" href="#funnel" title="Permalink to this headline">¶</a></h3>
+<p>Package which enables extensible diagnostic workflows, connecting intake-esm catalogs with operators and derived variables.</p>
+</div>
 </div>
 </div>
 
@@ -309,8 +374,7 @@ can be used for both private messages and messages seperated by topic. When post
               
               <div class='prev-next-bottom'>
                 
-    <a class='left-prev' id="prev-link" href="../blog/" title="previous page">Blog</a>
-    <a class='right-next' id="next-link" href="../best-practices/" title="next page">Best Practices</a>
+    <a class='left-prev' id="prev-link" href="../calendar/" title="previous page">Calendar</a>
 
               </div>
               
