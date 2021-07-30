@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2021-07-29T22:00:14.732262+00:00</updated>
+  <updated>2021-07-30T17:02:33.268002+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.19">ABlog</generator>
@@ -708,5 +708,23 @@ What should I do?</summary>
     <category term="scipy" label="scipy"/>
     <category term="open-source" label="open-source"/>
     <published>2021-07-26T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/project-pythia-overview/</id>
+    <title>Project Pythia Portal Overview</title>
+    <updated>2021-07-30T00:00:00+00:00</updated>
+    <author>
+      <name>Max Grover</name>
+    </author>
+    <content type="html">&lt;p&gt;Last year, the Project Pythia team was formed to “provide a public, web-accessible training resource that will help educate current, and aspiring, earth scientists to more effectively use both the Scientific Python Ecosystem and Cloud Computing to make sense of huge volumes of numerical scientific data.”&lt;/p&gt;
+&lt;p&gt;The team is formally a collaboration between three main organizations, although contributors come from throughout the scientific Python community:&lt;/p&gt;
+&lt;img alt="Pythia Portal" src="../_images/pythia_portal.png" /&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/project-pythia-overview/" rel="alternate"/>
+    <summary>Last year, the Project Pythia team was formed to “provide a public, web-accessible training resource that will help educate current, and aspiring, earth scientists to more effectively use both the Scientific Python Ecosystem and Cloud Computing to make sense of huge volumes of numerical scientific data.”The team is formally a collaboration between three main organizations, although contributors come from throughout the scientific Python community:Pythia Portal</summary>
+    <category term="pythia" label="pythia"/>
+    <category term="training" label="training"/>
+    <category term="education" label="education"/>
+    <published>2021-07-30T00:00:00+00:00</published>
   </entry>
 </feed>

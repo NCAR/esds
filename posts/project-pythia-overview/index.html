@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Importance of Software Citation &#8212; NCAR-ESDS 0.1 documentation</title>
+    <title>Project Pythia Portal Overview &#8212; NCAR-ESDS 0.1 documentation</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -213,7 +213,7 @@ commentsRunWhenDOMLoaded(addUtterances);
             <div class="col-12 col-md-3 bd-sidebar">  
 <h2>
    <i class="fa fa-calendar"></i>
-  02 April 2021 
+  30 July 2021 
 </h2>
 
 <ul>
@@ -231,9 +231,9 @@ commentsRunWhenDOMLoaded(addUtterances);
     ><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="../../blog/tag/open-science/">open-science</a>   
-  <a href="../../blog/tag/citation/">citation</a>   
-  <a href="../../blog/tag/software/">software</a>  
+  <a href="../../blog/tag/pythia/">pythia</a>   
+  <a href="../../blog/tag/training/">training</a>   
+  <a href="../../blog/tag/education/">education</a>  
 </li>
  
 </ul>
@@ -243,12 +243,6 @@ commentsRunWhenDOMLoaded(addUtterances);
 </h3>
 <ul>
    
-  <li>
-    <a href="../project-pythia-overview/"
-      >30 July - Project Pythia Portal Overview</a
-    >
-  </li>
-  
   <li>
     <a href="../scipy-2021-takeaways/"
       >26 July - SciPy Conference 2021 Takeaways</a
@@ -270,6 +264,12 @@ commentsRunWhenDOMLoaded(addUtterances);
   <li>
     <a href="../scaling-with-dask-class-takeaways/"
       >02 July - Scaling Python with Dask Class Takeaways</a
+    >
+  </li>
+  
+  <li>
+    <a href="../model_documentation_jupyterbook/"
+      >25 June - Creating Model Documentation Using Jupyterbook and Intake-esm</a
     >
   </li>
   
@@ -311,19 +311,28 @@ commentsRunWhenDOMLoaded(addUtterances);
 <nav id="bd-toc-nav">
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#how-else-should-i-make-sure-people-cite-my-software">
-   How else should I make sure people cite my software?
+  <a class="reference internal nav-link" href="#the-pythia-portal">
+   The Pythia Portal
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#why-would-i-want-a-doi">
-   Why would I want a DOI?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#how-do-i-mint-a-doi-for-my-repository-if-i-am-outside-the-ncar-organization">
-   How do I mint a DOI for my repository if I am outside the NCAR organization?
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#start-learning">
+     Start Learning
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#foundations-book">
+       Foundations Book
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#resource-gallery">
+       Resource Gallery
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -345,37 +354,58 @@ commentsRunWhenDOMLoaded(addUtterances);
           <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
               
               <div>
-                 <div class="section" id="the-importance-of-software-citation">
-<h1>The Importance of Software Citation<a class="headerlink" href="#the-importance-of-software-citation" title="Permalink to this headline">¶</a></h1>
-<p>One of the questions that came up during the <a class="reference external" href="https://ncar.github.io/esds/posts/esds-blog/">ESDS Town Hall</a> was how do scientists/developers get credit toward their efforts in developing open-source code? Software that is used by the wider community should received the acknowledgment and recognition it deserves.</p>
-<p>Data and academic publication citations have become popular in the literature, but often times, software is not cited… which can be arguably just as important to the work as the data.</p>
-<p>The <a class="reference external" href="https://library.ucar.edu/">NCAR Library team</a> put together a website, detailing software citation best practices, based on evaluating the &gt;500 <a class="reference external" href="https://github.com/NCAR">NCAR Github Repositories</a></p>
-<p>Here, we provide an overview of these recommendations, but if you are interested in more of the details, be sure to check out <a class="reference external" href="https://ncar.github.io/software-citation/">the NCAR software citation documentation</a>.</p>
-<div class="section" id="how-else-should-i-make-sure-people-cite-my-software">
-<h2>How else should I make sure people cite my software?<a class="headerlink" href="#how-else-should-i-make-sure-people-cite-my-software" title="Permalink to this headline">¶</a></h2>
-<p>Within your <code class="docutils literal notranslate"><span class="pre">README.md</span></code> document, be sure to add how you would like others to cite your work. For example, if your repository is for a specific paper, then provide the citation to that paper. If you would like people to cite the software itself, then be sure to specify that.</p>
-<p>A great example of software citation instructions can be found on <a class="reference external" href="https://www.unidata.ucar.edu/community/index.html#acknowledge">Unidata’s website</a></p>
-<p>You can even add a DOI badge to your repository once you have one minted. An example is given below.</p>
-<p><a class="reference external" href="https://doi.org/YOUR_NCAR_DOI">![DOI](https://img.shields.io/badge/DOI-YOUR NCAR DOI)</a></p>
-</div>
-<div class="section" id="why-would-i-want-a-doi">
-<h2>Why would I want a DOI?<a class="headerlink" href="#why-would-i-want-a-doi" title="Permalink to this headline">¶</a></h2>
-<p>DOI stands for “Digital Object Identifier” and serves as a permanent identifier of an article/document/or piece of software. Typically, it can be difficult to assign a DOI to software, especially since it can constantly be changing/evolving. Fortunately, through the NCAR Library, you can assign a DOI to your Github repository (although this is only available to NCAR produced and hosted software). The only requirements are the following</p>
+                 <div class="section" id="project-pythia-portal-overview">
+<h1>Project Pythia Portal Overview<a class="headerlink" href="#project-pythia-portal-overview" title="Permalink to this headline">¶</a></h1>
+<p>Last year, the Project Pythia team was formed to “provide a public, web-accessible training resource that will help educate current, and aspiring, earth scientists to more effectively use both the Scientific Python Ecosystem and Cloud Computing to make sense of huge volumes of numerical scientific data.”</p>
+<p>The team is formally a collaboration between three main organizations, although contributors come from throughout the scientific Python community:</p>
 <ul class="simple">
-<li><p>Github repository link</p></li>
-<li><p>Minimum metadata</p>
-<ul>
-<li><p>Creators, such as name/lab</p></li>
-<li><p>Title of software</p></li>
-<li><p>Publisher (ex. NCAR Github organization)</p></li>
-<li><p>Publication year of software</p></li>
+<li><p><a class="reference external" href="https://ncar.ucar.edu/">The National Center for Atmospheric Research (NCAR)</a></p></li>
+<li><p><a class="reference external" href="https://www.unidata.ucar.edu/">Unidata</a></p></li>
+<li><p><a class="reference external" href="https://www.albany.edu/daes">University at Albany</a></p></li>
 </ul>
-</li>
+<p>Last month, the <a class="reference external" href="https://projectpythia.org/index.html#the-project-pythia-team">Project Pythia Team</a> presented progress on the project at the Earthcube Annual Meeting, the major milestones being the development of the <a class="reference external" href="https://foundations.projectpythia.org/landing-page.html">Foundations Book</a> and the <a class="reference external" href="https://projectpythia.org/gallery.html">Resource Gallery</a>.</p>
+<div class="section" id="the-pythia-portal">
+<h2>The Pythia Portal<a class="headerlink" href="#the-pythia-portal" title="Permalink to this headline">¶</a></h2>
+<p>The main landing page for Project Pythia is known as the <a class="reference external" href="https://projectpythia.org/index.html">“Pythia Portal”</a>.</p>
+<p><img alt="Pythia Portal" src="../../_images/pythia_portal.png" /></p>
+<p>The main page provides an overview of the project, including the motivation and a summary of what the goals of this project are. What you will see on the Portal is described below.</p>
+<div class="section" id="start-learning">
+<h3>Start Learning<a class="headerlink" href="#start-learning" title="Permalink to this headline">¶</a></h3>
+<p>The next section is <a class="reference external" href="https://projectpythia.org/index.html#start-learning">“Start Learning”</a>, from which both the <a class="reference external" href="https://foundations.projectpythia.org/landing-page.html">Foundations Book</a> and the <a class="reference external" href="https://projectpythia.org/gallery.html">Resource Gallery</a> can be accessed.</p>
+<div class="section" id="foundations-book">
+<h4><a class="reference external" href="https://foundations.projectpythia.org/landing-page.html">Foundations Book</a><a class="headerlink" href="#foundations-book" title="Permalink to this headline">¶</a></h4>
+<p>The <a class="reference external" href="https://foundations.projectpythia.org/landing-page.html">Foundations Book</a> is one of the major milestones that the Project Pythia team has accomplished thus far. This is the place to go if you are looking for content related to foundational Python for the Geosciences.</p>
+<p>Clicking on the link on the Pythia Portal will take you to the JupyterBook containing the instructional material - this can also be accessed using <a class="reference external" href="https://foundations.projectpythia.org/landing-page.html">foundations.projectpythia.org</a>.</p>
+<p><img alt="foundations link" src="../../_images/pythia_foundations_link.png" /></p>
+<p>Once within the <a class="reference external" href="https://foundations.projectpythia.org/landing-page.html">Foundations Book</a>, you will see the typical <a class="reference external" href="https://jupyterbook.org/intro.html">Jupyterbook</a> interface with a few primary sections.</p>
+<p><img alt="foundations sections" src="../../_images/foundations_diagram.png" /></p>
+<p>Each notebook is its own “page”, separated into sections outlined in the table of contents which can be found along the left sidebar. On the right side of the page is the table of contents for a single notebook, which is determined using the header information in each notebook. This can be useful when wanting to navigate to specific section of a notebook.</p>
+<p>These notebooks are executable - which is what makes this <a class="reference external" href="https://jupyterbook.org/intro.html">Jupyterbook</a> interface so useful! If you select the space ship button near the top of the page, the notebook will open up on <a class="reference external" href="https://mybinder.org/">binder</a> which enables you to interactively run the Jupyter Notebook on the cloud.</p>
+<p>If you would like to download a local copy of the notebook, select the download button in the top right corner, and select whether to download as a <code class="docutils literal notranslate"><span class="pre">PDF</span></code> or <code class="docutils literal notranslate"><span class="pre">ipynb</span></code> (notebook).</p>
+<p><img alt="pandas example" src="../../_images/pythia_pandas.png" /></p>
+<p>Within the foundational content notebooks, you will find that each notebook follows the same format, including the following sections:</p>
+<ul class="simple">
+<li><p><strong>Overview</strong> - a brief overview of what is covered in that notebook</p></li>
+<li><p><strong>Prerequisites</strong> - what material is required before diving into the content</p></li>
+<li><p><strong>Desired experience level</strong> - the difficulty level of the notebook</p></li>
+<li><p><strong>Time to learn</strong> - estimated time to complete notebook</p></li>
+<li><p><em>The actual content</em> - which often includes imports, and several headings (ex. <code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">Pandas</span> <span class="pre">Dataframe</span></code>)</p></li>
+<li><p><strong>Summary</strong> - main takeaways from the notebook</p></li>
+<li><p><strong>What’s next</strong> - what is covered in additional notebooks in that section</p></li>
+<li><p><strong>Resources and references</strong> - data references, where to find more resources</p></li>
 </ul>
 </div>
-<div class="section" id="how-do-i-mint-a-doi-for-my-repository-if-i-am-outside-the-ncar-organization">
-<h2>How do I mint a DOI for my repository if I am outside the NCAR organization?<a class="headerlink" href="#how-do-i-mint-a-doi-for-my-repository-if-i-am-outside-the-ncar-organization" title="Permalink to this headline">¶</a></h2>
-<p>Zenodo is a great option, and integrated within Github <a class="reference external" href="https://guides.github.com/activities/citable-code/">Zenodo Plugin</a>. This option can be good for people within the NCAR organization as well, especially if you would like to assign discrete DOIs to each of your releases.</p>
+<div class="section" id="resource-gallery">
+<h4><a class="reference external" href="https://projectpythia.org/gallery.html">Resource Gallery</a><a class="headerlink" href="#resource-gallery" title="Permalink to this headline">¶</a></h4>
+<p>The <a class="reference external" href="https://projectpythia.org/gallery.html">Resource Gallery</a> includes links to a variety of external (to Project Pythia) material that is useful to the Geoscience community! This is a great place to go if you are looking for additional training or reference materials or more specific examples or galleries.</p>
+<p><img alt="pandas example" src="../../_images/pythia_resource_gallery.png" /></p>
+<p>If you continue scrolling down the page, you will find various ways to contribute and engage with the project, including via <a class="reference external" href="https://github.com/ProjectPythia/projectpythia.github.io/discussions">Github Discussions</a> and by <a class="reference external" href="https://projectpythia.org/contributing.html">contributing</a>!</p>
+<p><img alt="Pythia Portal" src="../../_images/pythia_contribute.png" /></p>
+<p>If you are interested in being involved with this project, I encourage you to check out our weekly meetings, separated by working groups, which include an Education Working Group, and an Infrastructure Working Group.</p>
+<p><img alt="Pythia Calendar" src="../../_images/pythia_calendar.png" /></p>
+<p>We look forward to continuing to make progress on this project, and gather input from the community on how to improve our content, and entrain other contributors.</p>
+</div>
+</div>
 </div>
 </div>
 
@@ -384,20 +414,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="section">
   <span style="float: left">
      
-    <a href="../matplotlib-faq/">
-      <i class="fa fa-arrow-circle-left"></i> Matplotlib Tutorial FAQ
+    <a href="../scipy-2021-takeaways/">
+      <i class="fa fa-arrow-circle-left"></i> SciPy Conference 2021 Takeaways
     </a>
     
   </span>
   <span>&nbsp;</span>
   <span style="float: right">
-     
-    <a href="../casper_pbs_dask/">
-      Using Dask on the New Casper PBS Scheduler <i
-        class="fa fa-arrow-circle-right"
-      ></i
-      >
-    </a>
     
   </span>
 </div>
