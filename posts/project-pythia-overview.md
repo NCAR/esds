@@ -10,9 +10,9 @@ Last year, the Project Pythia team was formed to "provide a public, web-accessib
 
 The team is formally a collaboration between three main organizations, although contributors come from throughout the scientific Python community:
 
-- The National Center for Atmospheric Research (NCAR)
-- University at Albany
-- Unidata
+- [The National Center for Atmospheric Research (NCAR)](https://ncar.ucar.edu/)
+- [Unidata](https://www.unidata.ucar.edu/)
+- [University at Albany](https://www.albany.edu/daes)
 
 Last month, the [Project Pythia Team](https://projectpythia.org/index.html#the-project-pythia-team) presented progress on the project at the Earthcube Annual Meeting, the major milestones being the development of the [Foundations Book](https://foundations.projectpythia.org/landing-page.html) and the [Resource Gallery](https://projectpythia.org/gallery.html).
 
@@ -68,3 +68,9 @@ The [Resource Gallery](https://projectpythia.org/gallery.html) includes links to
 If you continue scrolling down the page, you will find various ways to contribute and engage with the project, including via [Github Discussions](https://github.com/ProjectPythia/projectpythia.github.io/discussions) and by [contributing](https://projectpythia.org/contributing.html)!
 
 ![Pythia Portal](images/pythia_contribute.png)
+
+If you are interested in being involved with this project, I encourage you to check out our weekly meetings, separated by working groups, which include an Education Working Group, and an Infrastructure Working Group.
+
+![Pythia Calendar](images/pythia_calendar.png)
+
+We look forward to continuing to make progress on this project, and gather input from the community on how to improve our content, and entrain other contributors.
