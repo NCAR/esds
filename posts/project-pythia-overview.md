@@ -65,7 +65,7 @@ The [Resource Gallery](https://projectpythia.org/gallery.html) includes links to
 
 ![pandas example](images/pythia_resource_gallery.png)
 
-If you continue scrolling down the page, you will find various ways to contribute and engage with the project, including via [Github Discussions](https://github.com/ProjectPythia/projectpythia.github.io/discussions) and by [contributing](https://projectpythia.org/contributing.html)!
+If you continue scrolling down the page, you will find various ways to engage with the project, including via [Github Discussions](https://github.com/ProjectPythia/projectpythia.github.io/discussions) or by checking to the resource gallery or foundations book, using the [contributor's guide](https://projectpythia.org/contributing.html) as a reference.
 
 ![Pythia Portal](images/pythia_contribute.png)
 
