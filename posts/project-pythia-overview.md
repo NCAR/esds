@@ -22,7 +22,7 @@ The main landing page for Project Pythia is known as the ["Pythia Portal"](https
 
 ![Pythia Portal](images/pythia_portal.png)
 
-The main page provides an overview of the project, including the motivation and a summary of what the goals of this project are.  What you will see on the Portal is described below.
+The main page provides an overview of the project, including the motivation and a summary of what the goals of this project are. What you will see on the Portal is described below.
 
 ### Start Learning
 
@@ -54,7 +54,7 @@ Within the foundational content notebooks, you will find that each notebook foll
 - **Prerequisites** - what material is required before diving into the content
 - **Desired experience level** - the difficulty level of the notebook
 - **Time to learn** - estimated time to complete notebook
-- *The actual content* - which often includes imports, and several headings (ex. `The Pandas Dataframe`)
+- _The actual content_ - which often includes imports, and several headings (ex. `The Pandas Dataframe`)
 - **Summary** - main takeaways from the notebook
 - **What's next** - what is covered in additional notebooks in that section
 - **Resources and references** - data references, where to find more resources
