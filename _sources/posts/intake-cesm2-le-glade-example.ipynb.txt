@@ -828,9 +828,7 @@
     "### Querying for our desired variable\n",
     "In this case, we are interested in the surface temperature in Boulder, Colorado. There are **numerous** temperature variables in the dataset, we can search for all the `long_names` from atmospheric output.\n",
     "\n",
-    "We setup a function to loop through and see which variables include 'temperature' in the `long_name`\n",
-    "\n",
-    "We can use the wildcard here `*` to look for where both captial and lowercase `temperature` show up"
+    "We can use the wildcard here `*` to look for where both captial and lowercase `temperature` show up in the `long_name`"
    ]
   },
   {
@@ -880,7 +878,7 @@
    "metadata": {},
    "source": [
     "### Query and Subset our Catalog\n",
-    "Let's go with `Lowest model level temperature` since this represents the closest to the surface without being at the **actuall** surface of the earth. We pass the `component` and `long_name` into the query, which reduces the number of datasets to 8!"
+    "Let's go with `Lowest model level temperature` since this represents the closest to the surface without being at the **actual** surface of the earth. We pass the `component` and `long_name` into the query, which reduces the number of datasets to 8!"
    ]
   },
   {
