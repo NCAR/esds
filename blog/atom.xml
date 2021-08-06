@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2021-07-30T20:27:47.045913+00:00</updated>
+  <updated>2021-08-06T22:02:59.985766+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.19">ABlog</generator>
@@ -726,5 +726,23 @@ What should I do?</summary>
     <category term="training" label="training"/>
     <category term="education" label="education"/>
     <published>2021-07-30T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/intake-cesm2-le-glade-example/</id>
+    <title>Using Intake-ESM to Analyze Data from CESM2-LE</title>
+    <updated>2021-08-06T00:00:00+00:00</updated>
+    <author>
+      <name>Max Grover</name>
+    </author>
+    <content type="html">&lt;p&gt;In mid June, the &lt;a class="reference external" href="https://www.cesm.ucar.edu/projects/community-projects/LENS2/"&gt;CESM2 Large Ensemble&lt;/a&gt; dataset was made available to the public. This model was run in collaboration with the &lt;a class="reference external" href="https://ibsclimate.org/"&gt;IBS Center for Climate Physics&lt;/a&gt; and the &lt;a class="reference external" href="https://ncar.ucar.edu/"&gt;National Center for Atmospheric Research&lt;/a&gt; This dataset includes 100 ensemble members, at one degree spatial resolution, with each ensemble member including data from 1850 to 2100. If you are interested in learning more about how this ensemble was setup, be sure to check out &lt;a class="reference external" href="https://www.cesm.ucar.edu/projects/community-projects/LENS2/"&gt;the main webpage&lt;/a&gt; or read the pre-print of &lt;a class="reference external" href="https://esd.copernicus.org/preprints/esd-2021-50/"&gt;Rodgers et al. 2021&lt;/a&gt; which describes this dataset in detail.&lt;/p&gt;
+&lt;p&gt;One of these challenges with this dataset is dealing with the massive amount of output. The data are available through the &lt;a class="reference external" href="https://www.cesm.ucar.edu/projects/community-projects/LENS2/data-sets.html"&gt;NCAR Climate Data Gateway&lt;/a&gt; and via the &lt;a class="reference external" href="https://climatedata.ibs.re.kr/data/cesm2-lens"&gt;IBS OpenDAP Server&lt;/a&gt;. There is also a subset of the dataset available on the GLADE file system on NCAR HPC resources available within the directory &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;/glade/campaign/cgd/cesm/CESM2-LE/timeseries/&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;img alt="intake-esm catalogs" src="../_images/intake_esm_catalogs.png" /&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/intake-cesm2-le-glade-example/" rel="alternate"/>
+    <summary>In mid June, the CESM2 Large Ensemble dataset was made available to the public. This model was run in collaboration with the IBS Center for Climate Physics and the National Center for Atmospheric Research This dataset includes 100 ensemble members, at one degree spatial resolution, with each ensemble member including data from 1850 to 2100. If you are interested in learning more about how this ensemble was setup, be sure to check out the main webpage or read the pre-print of Rodgers et al. 2021 which describes this dataset in detail.One of these challenges with this dataset is dealing with the massive amount of output. The data are available through the NCAR Climate Data Gateway and via the IBS OpenDAP Server. There is also a subset of the dataset available on the GLADE file system on NCAR HPC resources available within the directory /glade/campaign/cgd/cesm/CESM2-LE/timeseries/.intake-esm catalogs</summary>
+    <category term="intake" label="intake"/>
+    <category term="cesm" label="cesm"/>
+    <category term="cesm2-le" label="cesm2-le"/>
+    <published>2021-08-06T00:00:00+00:00</published>
   </entry>
 </feed>

@@ -1,0 +1,1514 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Using Intake-ESM to Analyze Data from CESM2-LE &#8212; NCAR-ESDS 0.1 documentation</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "NCAR/esds");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <link rel="author" title="About these documents" href="../../about/" />
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+     
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../blog/atom.xml"
+  title="NCAR ESDS"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+<a class="navbar-brand" href="../../">
+<p class="title">NCAR-ESDS</p>
+</a>
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../about/">
+  About Us
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../faq/">
+  Frequently Asked Questions
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../blog/">
+  Blog
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../communication/">
+  Communication
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../best-practices/">
+  Best Practices
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../calendar/">
+  Calendar
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../projects/">
+  Projects
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/ncar/esds" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">  
+<h2>
+   <i class="fa fa-calendar"></i>
+  06 August 2021 
+</h2>
+
+<ul>
+   
+<li id="author">
+  <span
+    ><i class="fa-fw fa fa-user"></i></span
+  >
+   
+  <a href="../../blog/author/max-grover/">Max Grover</a>  
+</li>
+    
+<li id="tags">
+  <span
+    ><i class="fa-fw fa fa-tags"></i> </span
+  >
+   
+  <a href="../../blog/tag/intake/">intake</a>   
+  <a href="../../blog/tag/cesm/">cesm</a>   
+  <a href="../../blog/tag/cesm2-le/">cesm2-le</a>  
+</li>
+ 
+</ul>
+
+<h3>
+  <a href="../../blog/">Recent Posts</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="../project-pythia-overview/"
+      >30 July - Project Pythia Portal Overview</a
+    >
+  </li>
+  
+  <li>
+    <a href="../scipy-2021-takeaways/"
+      >26 July - SciPy Conference 2021 Takeaways</a
+    >
+  </li>
+  
+  <li>
+    <a href="../dask-tutorial-update/"
+      >23 July - Dask Tutorial UPDATED DATES</a
+    >
+  </li>
+  
+  <li>
+    <a href="../dask-tutorial/"
+      >08 July - Dask Tutorial</a
+    >
+  </li>
+  
+  <li>
+    <a href="../scaling-with-dask-class-takeaways/"
+      >02 July - Scaling Python with Dask Class Takeaways</a
+    >
+  </li>
+  
+</ul>
+
+<h3>
+  <a href="../../blog/archive/">Archives</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="../../blog/2021/">2021 (33)</a>
+  </li>
+    
+  <li>
+    <a href="../../blog/2020/">2020 (6)</a>
+  </li>
+    
+  <li>
+    <a href="../../blog/2019/">2019 (2)</a>
+  </li>
+   
+</ul>
+
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#main-challenge">
+   Main Challenge
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-the-catalog">
+   Using the Catalog
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#imports">
+     Imports
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#spin-up-our-dask-cluster">
+     Spin up our Dask Cluster
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#read-in-the-data-catalog">
+     Read in the data catalog
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#querying-for-our-desired-variable">
+     Querying for our desired variable
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#query-and-subset-our-catalog">
+     Query and Subset our Catalog
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#read-in-using-to-dataset-dict">
+   Read in using
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     .to_dataset_dict()
+    </span>
+   </code>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#define-a-helper-function-which-subsets-the-data-groups-by-year-and-returns-the-data-array">
+     Define a helper function which subsets the data, groups by year, and returns the data array
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#look-at-one-of-the-datasets">
+       Look at one of the datasets
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#apply-our-function">
+       Apply our function
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plot-our-results">
+     Plot our Results!
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusion">
+   Conclusion
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                 <div class="section" id="using-intake-esm-to-analyze-data-from-cesm2-le">
+<h1>Using Intake-ESM to Analyze Data from CESM2-LE<a class="headerlink" href="#using-intake-esm-to-analyze-data-from-cesm2-le" title="Permalink to this headline">¶</a></h1>
+<p>In mid June, the <a class="reference external" href="https://www.cesm.ucar.edu/projects/community-projects/LENS2/">CESM2 Large Ensemble</a> dataset was made available to the public. This model was run in collaboration with the <a class="reference external" href="https://ibsclimate.org/">IBS Center for Climate Physics</a> and the <a class="reference external" href="https://ncar.ucar.edu/">National Center for Atmospheric Research</a> This dataset includes 100 ensemble members, at one degree spatial resolution, with each ensemble member including data from 1850 to 2100. If you are interested in learning more about how this ensemble was setup, be sure to check out <a class="reference external" href="https://www.cesm.ucar.edu/projects/community-projects/LENS2/">the main webpage</a> or read the pre-print of <a class="reference external" href="https://esd.copernicus.org/preprints/esd-2021-50/">Rodgers et al. 2021</a> which describes this dataset in detail.</p>
+<div class="section" id="main-challenge">
+<h2>Main Challenge<a class="headerlink" href="#main-challenge" title="Permalink to this headline">¶</a></h2>
+<p>One of these challenges with this dataset is dealing with the massive amount of output. The data are available through the <a class="reference external" href="https://www.cesm.ucar.edu/projects/community-projects/LENS2/data-sets.html">NCAR Climate Data Gateway</a> and via the <a class="reference external" href="https://climatedata.ibs.re.kr/data/cesm2-lens">IBS OpenDAP Server</a>. There is also a subset of the dataset available on the GLADE file system on NCAR HPC resources available within the directory <code class="docutils literal notranslate"><span class="pre">/glade/campaign/cgd/cesm/CESM2-LE/timeseries/</span></code>.</p>
+<p>Through these traditional file-access methods, one would need to scroll through and find one or a few of the <strong>millions</strong> of files produced by the model. Fortunately, this dataset has been catalogued, available using the <a class="reference external" href="https://intake-esm.readthedocs.io/en/latest/"><code class="docutils literal notranslate"><span class="pre">Intake-esm</span></code></a> package, which enables one to query the data, and read into a dictionary of <code class="docutils literal notranslate"><span class="pre">xarray.Datasets</span></code>, preventing the user from having to setup the concatenation and file search themselves.</p>
+<p>Within the <a class="reference external" href="https://intake-esm.readthedocs.io/en/latest/supplemental-guide/faq.html">intake-esm FAQ</a> section, there is a list of existing catalogs, as shown below:</p>
+<p><img alt="intake-esm catalogs" src="../../_images/intake_esm_catalogs.png" /></p>
+<p>At the top of the <a class="reference external" href="https://intake-esm.readthedocs.io/en/latest/supplemental-guide/faq.html">“Is there a list of existing catalogs”</a> section, you can see the <code class="docutils literal notranslate"><span class="pre">CMIP6-GLADE</span></code> catalog, which includes:</p>
+<ul class="simple">
+<li><p>Description of the catalog</p></li>
+<li><p>Platform</p></li>
+<li><p>Catalog path or url</p></li>
+<li><p>Data format</p></li>
+<li><p>Documentation page</p></li>
+</ul>
+<hr class="docutils" />
+<p>For the CESM2-LE Catalog, we see:</p>
+<p><strong>CESM2-LE-GLADE</strong></p>
+<ul class="simple">
+<li><p>Description: ESM collection for the CESM2 LENS data stored on GLADE in /glade/campaign/cgd/cesm/CESM2-LE/timeseries</p></li>
+<li><p>Platform: NCAR-GLADE</p></li>
+<li><p>Catalog path or url: /glade/collections/cmip/catalog/intake-esm-datastore/catalogs/glade-cesm2-le.json</p></li>
+<li><p>Data Format: netCDF</p></li>
+<li><p>Documentation Page: https://www.cesm.ucar.edu/projects/community-projects/LENS2/</p></li>
+</ul>
+<p>We are <strong>most interested</strong> in the catalog path here</p>
+</div>
+<div class="section" id="using-the-catalog">
+<h2>Using the Catalog<a class="headerlink" href="#using-the-catalog" title="Permalink to this headline">¶</a></h2>
+<p>Now that we found the catalog file, and see that it is the dataset we are interested in, we can start our analysis!</p>
+<div class="section" id="imports">
+<h3>Imports<a class="headerlink" href="#imports" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">intake</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+<span class="kn">from</span> <span class="nn">distributed</span> <span class="kn">import</span> <span class="n">Client</span>
+<span class="kn">from</span> <span class="nn">ncar_jobqueue</span> <span class="kn">import</span> <span class="n">NCARCluster</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="spin-up-our-dask-cluster">
+<h3>Spin up our Dask Cluster<a class="headerlink" href="#spin-up-our-dask-cluster" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create our NCAR Cluster - which uses PBSCluster under the hood</span>
+<span class="n">cluster</span> <span class="o">=</span> <span class="n">NCARCluster</span><span class="p">()</span>
+
+<span class="c1"># Spin up 20 workers</span>
+<span class="n">cluster</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+
+<span class="c1"># Assign the cluster to our Client</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">cluster</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">client</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+    <div>
+        <div style="
+            width: 24px;
+            height: 24px;
+            background-color: #e1e1e1;
+            border: 3px solid #9D9D9D;
+            border-radius: 5px;
+            position: absolute;"> </div>
+        <div style="margin-left: 48px;">
+            <h3 style="margin-bottom: 0px;">Client</h3>
+            <p style="color: #9D9D9D; margin-bottom: 0px;">Client-2ab787b8-f6f0-11eb-abf7-87719d972cea</p>
+            <table style="width: 100%; text-align: left;">
+
+        <tr>
+            <td style="text-align: left;"><strong>Connection method:</strong> Cluster object</td>
+            <td style="text-align: left;"><strong>Cluster type:</strong> PBSCluster</td>
+        </tr>
+
+        <tr>
+            <td style="text-align: left;">
+                <strong>Dashboard: </strong>
+                <a href="https://jupyterhub.hpc.ucar.edu/stable/user/mgrover/proxy/8787/status">https://jupyterhub.hpc.ucar.edu/stable/user/mgrover/proxy/8787/status</a>
+            </td>
+            <td style="text-align: left;"></td>
+        </tr>
+
+            </table>
+
+        <details>
+        <summary style="margin-bottom: 20px;"><h3 style="display: inline;">Cluster Info</h3></summary>
+
+    <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-mod-trusted jp-OutputArea-output">
+        <div style="
+            width: 24px;
+            height: 24px;
+            background-color: #e1e1e1;
+            border: 3px solid #9D9D9D;
+            border-radius: 5px;
+            position: absolute;"> </div>
+        <div style="margin-left: 48px;">
+            <h3 style="margin-bottom: 0px; margin-top: 0px;">PBSCluster</h3>
+            <p style="color: #9D9D9D; margin-bottom: 0px;">05789642</p>
+            <table style="width: 100%; text-align: left;">
+
+    <tr>
+        <td style="text-align: left;">
+            <strong>Dashboard:</strong> <a href="https://jupyterhub.hpc.ucar.edu/stable/user/mgrover/proxy/8787/status">https://jupyterhub.hpc.ucar.edu/stable/user/mgrover/proxy/8787/status</a>
+        </td>
+        <td style="text-align: left;"><strong>Workers:</strong> 10</td>
+    </tr>
+    <tr>
+        <td style="text-align: left;">
+            <strong>Total threads:</strong>
+            20
+        </td>
+        <td style="text-align: left;">
+            <strong>Total memory:</strong>
+            232.80 GiB
+        </td>
+    </tr>
+
+            </table>
+            <details>
+            <summary style="margin-bottom: 20px;"><h3 style="display: inline;">Scheduler Info</h3></summary>
+
+<div style="">
+
+    <div>
+        <div style="
+            width: 24px;
+            height: 24px;
+            background-color: #FFF7E5;
+            border: 3px solid #FF6132;
+            border-radius: 5px;
+            position: absolute;"> </div>
+        <div style="margin-left: 48px;">
+            <h3 style="margin-bottom: 0px;">Scheduler</h3>
+            <p style="color: #9D9D9D; margin-bottom: 0px;">Scheduler-2afb02c0-5d3f-44e3-b8ab-bcb991af9ed1</p>
+            <table style="width: 100%; text-align: left;">
+                <tr>
+                    <td style="text-align: left;"><strong>Comm:</strong> tcp://10.12.206.59:39383</td>
+                    <td style="text-align: left;"><strong>Workers:</strong> 10</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;">
+                        <strong>Dashboard:</strong> <a href="https://jupyterhub.hpc.ucar.edu/stable/user/mgrover/proxy/8787/status">https://jupyterhub.hpc.ucar.edu/stable/user/mgrover/proxy/8787/status</a>
+                    </td>
+                    <td style="text-align: left;">
+                        <strong>Total threads:</strong>
+                        20
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;">
+                        <strong>Started:</strong>
+                        Just now
+                    </td>
+                    <td style="text-align: left;">
+                        <strong>Total memory:</strong>
+                        232.80 GiB
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <details style="margin-left: 48px;">
+    <summary style="margin-bottom: 20px;"><h3 style="display: inline;">Workers</h3></summary>
+
+    <div style="margin-bottom: 20px;">
+        <div style="width: 24px;
+                    height: 24px;
+                    background-color: #DBF5FF;
+                    border: 3px solid #4CC9FF;
+                    border-radius: 5px;
+                    position: absolute;"> </div>
+        <div style="margin-left: 48px;">
+        <details>
+            <summary>
+                <h4 style="margin-bottom: 0px; display: inline;">Worker: 1</h4>
+            </summary>
+            <table style="width: 100%; text-align: left;">
+                <tr>
+                    <td style="text-align: left;"><strong>Comm: </strong> tcp://10.12.206.40:42132</td>
+                    <td style="text-align: left;"><strong>Total threads: </strong> 2</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;">
+                        <strong>Dashboard: </strong>
+                        <a href="https://jupyterhub.hpc.ucar.edu/stable/user/mgrover/proxy/39517/status">https://jupyterhub.hpc.ucar.edu/stable/user/mgrover/proxy/39517/status</a>
+                    </td>
+                    <td style="text-align: left;">
+                        <strong>Memory: </strong>
+                        23.28 GiB
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;"><strong>Nanny: </strong> tcp://10.12.206.40:32794</td>
+                    <td style="text-align: left;"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: left;">
+                        <strong>Local directory: </strong>
+                        /glade/scratch/mgrover/dask/casper-dav/local-dir/dask-worker-space/worker-71_v5oc_
+                    </td>
+                </tr>
+
+
+            </table>
+        </details>
+        </div>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+        <div style="width: 24px;
+                    height: 24px;
+                    background-color: #DBF5FF;
+                    border: 3px solid #4CC9FF;
+                    border-radius: 5px;
+                    position: absolute;"> </div>
+        <div style="margin-left: 48px;">
+        <details>
+            <summary>
+                <h4 style="margin-bottom: 0px; display: inline;">Worker: 4</h4>
+            </summary>
+            <table style="width: 100%; text-align: left;">
+                <tr>
+                    <td style="text-align: left;"><strong>Comm: </strong> tcp://10.12.206.60:36759</td>
+                    <td style="text-align: left;"><strong>Total threads: </strong> 2</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;">
+                        <strong>Dashboard: </strong>
+                        <a href="https://jupyterhub.hpc.ucar.edu/stable/user/mgrover/proxy/36674/status">https://jupyterhub.hpc.ucar.edu/stable/user/mgrover/proxy/36674/status</a>
+                    </td>
+                    <td style="text-align: left;">
+                        <strong>Memory: </strong>
+                        23.28 GiB
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;"><strong>Nanny: </strong> tcp://10.12.206.60:40729</td>
+                    <td style="text-align: left;"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: left;">
+                        <strong>Local directory: </strong>
+                        /glade/scratch/mgrover/dask/casper-dav/local-dir/dask-worker-space/worker-5mt6p9na
+                    </td>
+                </tr>
+
+
+            </table>
+        </details>
+        </div>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+        <div style="width: 24px;
+                    height: 24px;
+                    background-color: #DBF5FF;
+                    border: 3px solid #4CC9FF;
+                    border-radius: 5px;
+                    position: absolute;"> </div>
+        <div style="margin-left: 48px;">
+        <details>
+            <summary>
+                <h4 style="margin-bottom: 0px; display: inline;">Worker: 5</h4>
+            </summary>
+            <table style="width: 100%; text-align: left;">
+                <tr>
+                    <td style="text-align: left;"><strong>Comm: </strong> tcp://10.12.206.56:40939</td>
+                    <td style="text-align: left;"><strong>Total threads: </strong> 2</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;">
+                        <strong>Dashboard: </strong>
+                        <a href="https://jupyterhub.hpc.ucar.edu/stable/user/mgrover/proxy/35324/status">https://jupyterhub.hpc.ucar.edu/stable/user/mgrover/proxy/35324/status</a>
+                    </td>
+                    <td style="text-align: left;">
+                        <strong>Memory: </strong>
+                        23.28 GiB
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;"><strong>Nanny: </strong> tcp://10.12.206.56:36870</td>
+                    <td style="text-align: left;"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: left;">
+                        <strong>Local directory: </strong>
+                        /glade/scratch/mgrover/dask/casper-dav/local-dir/dask-worker-space/worker-10b0k7vx
+                    </td>
+                </tr>
+
+
+            </table>
+        </details>
+        </div>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+        <div style="width: 24px;
+                    height: 24px;
+                    background-color: #DBF5FF;
+                    border: 3px solid #4CC9FF;
+                    border-radius: 5px;
+                    position: absolute;"> </div>
+        <div style="margin-left: 48px;">
+        <details>
+            <summary>
+                <h4 style="margin-bottom: 0px; display: inline;">Worker: 8</h4>
+            </summary>
+            <table style="width: 100%; text-align: left;">
+                <tr>
+                    <td style="text-align: left;"><strong>Comm: </strong> tcp://10.12.206.34:46147</td>
+                    <td style="text-align: left;"><strong>Total threads: </strong> 2</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;">
+                        <strong>Dashboard: </strong>
+                        <a href="https://jupyterhub.hpc.ucar.edu/stable/user/mgrover/proxy/37601/status">https://jupyterhub.hpc.ucar.edu/stable/user/mgrover/proxy/37601/status</a>
+                    </td>
+                    <td style="text-align: left;">
+                        <strong>Memory: </strong>
+                        23.28 GiB
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;"><strong>Nanny: </strong> tcp://10.12.206.34:40662</td>
+                    <td style="text-align: left;"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: left;">
+                        <strong>Local directory: </strong>
+                        /glade/scratch/mgrover/dask/casper-dav/local-dir/dask-worker-space/worker-1gwrko6h
+                    </td>
+                </tr>
+
+
+            </table>
+        </details>
+        </div>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+        <div style="width: 24px;
+                    height: 24px;
+                    background-color: #DBF5FF;
+                    border: 3px solid #4CC9FF;
+                    border-radius: 5px;
+                    position: absolute;"> </div>
+        <div style="margin-left: 48px;">
+        <details>
+            <summary>
+                <h4 style="margin-bottom: 0px; display: inline;">Worker: 11</h4>
+            </summary>
+            <table style="width: 100%; text-align: left;">
+                <tr>
+                    <td style="text-align: left;"><strong>Comm: </strong> tcp://10.12.206.40:41383</td>
+                    <td style="text-align: left;"><strong>Total threads: </strong> 2</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;">
+                        <strong>Dashboard: </strong>
+                        <a href="https://jupyterhub.hpc.ucar.edu/stable/user/mgrover/proxy/35934/status">https://jupyterhub.hpc.ucar.edu/stable/user/mgrover/proxy/35934/status</a>
+                    </td>
+                    <td style="text-align: left;">
+                        <strong>Memory: </strong>
+                        23.28 GiB
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;"><strong>Nanny: </strong> tcp://10.12.206.40:40213</td>
+                    <td style="text-align: left;"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: left;">
+                        <strong>Local directory: </strong>
+                        /glade/scratch/mgrover/dask/casper-dav/local-dir/dask-worker-space/worker-v2pl2gv5
+                    </td>
+                </tr>
+
+
+            </table>
+        </details>
+        </div>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+        <div style="width: 24px;
+                    height: 24px;
+                    background-color: #DBF5FF;
+                    border: 3px solid #4CC9FF;
+                    border-radius: 5px;
+                    position: absolute;"> </div>
+        <div style="margin-left: 48px;">
+        <details>
+            <summary>
+                <h4 style="margin-bottom: 0px; display: inline;">Worker: 12</h4>
+            </summary>
+            <table style="width: 100%; text-align: left;">
+                <tr>
+                    <td style="text-align: left;"><strong>Comm: </strong> tcp://10.12.206.59:40121</td>
+                    <td style="text-align: left;"><strong>Total threads: </strong> 2</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;">
+                        <strong>Dashboard: </strong>
+                        <a href="https://jupyterhub.hpc.ucar.edu/stable/user/mgrover/proxy/37861/status">https://jupyterhub.hpc.ucar.edu/stable/user/mgrover/proxy/37861/status</a>
+                    </td>
+                    <td style="text-align: left;">
+                        <strong>Memory: </strong>
+                        23.28 GiB
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;"><strong>Nanny: </strong> tcp://10.12.206.59:45250</td>
+                    <td style="text-align: left;"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: left;">
+                        <strong>Local directory: </strong>
+                        /glade/scratch/mgrover/dask/casper-dav/local-dir/dask-worker-space/worker-zwk0f96c
+                    </td>
+                </tr>
+
+
+            </table>
+        </details>
+        </div>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+        <div style="width: 24px;
+                    height: 24px;
+                    background-color: #DBF5FF;
+                    border: 3px solid #4CC9FF;
+                    border-radius: 5px;
+                    position: absolute;"> </div>
+        <div style="margin-left: 48px;">
+        <details>
+            <summary>
+                <h4 style="margin-bottom: 0px; display: inline;">Worker: 13</h4>
+            </summary>
+            <table style="width: 100%; text-align: left;">
+                <tr>
+                    <td style="text-align: left;"><strong>Comm: </strong> tcp://10.12.206.40:36750</td>
+                    <td style="text-align: left;"><strong>Total threads: </strong> 2</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;">
+                        <strong>Dashboard: </strong>
+                        <a href="https://jupyterhub.hpc.ucar.edu/stable/user/mgrover/proxy/32855/status">https://jupyterhub.hpc.ucar.edu/stable/user/mgrover/proxy/32855/status</a>
+                    </td>
+                    <td style="text-align: left;">
+                        <strong>Memory: </strong>
+                        23.28 GiB
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;"><strong>Nanny: </strong> tcp://10.12.206.40:40586</td>
+                    <td style="text-align: left;"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: left;">
+                        <strong>Local directory: </strong>
+                        /glade/scratch/mgrover/dask/casper-dav/local-dir/dask-worker-space/worker-mi2rvi7_
+                    </td>
+                </tr>
+
+
+            </table>
+        </details>
+        </div>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+        <div style="width: 24px;
+                    height: 24px;
+                    background-color: #DBF5FF;
+                    border: 3px solid #4CC9FF;
+                    border-radius: 5px;
+                    position: absolute;"> </div>
+        <div style="margin-left: 48px;">
+        <details>
+            <summary>
+                <h4 style="margin-bottom: 0px; display: inline;">Worker: 17</h4>
+            </summary>
+            <table style="width: 100%; text-align: left;">
+                <tr>
+                    <td style="text-align: left;"><strong>Comm: </strong> tcp://10.12.206.56:42324</td>
+                    <td style="text-align: left;"><strong>Total threads: </strong> 2</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;">
+                        <strong>Dashboard: </strong>
+                        <a href="https://jupyterhub.hpc.ucar.edu/stable/user/mgrover/proxy/42710/status">https://jupyterhub.hpc.ucar.edu/stable/user/mgrover/proxy/42710/status</a>
+                    </td>
+                    <td style="text-align: left;">
+                        <strong>Memory: </strong>
+                        23.28 GiB
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;"><strong>Nanny: </strong> tcp://10.12.206.56:41805</td>
+                    <td style="text-align: left;"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: left;">
+                        <strong>Local directory: </strong>
+                        /glade/scratch/mgrover/dask/casper-dav/local-dir/dask-worker-space/worker-fpzptb2f
+                    </td>
+                </tr>
+
+
+            </table>
+        </details>
+        </div>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+        <div style="width: 24px;
+                    height: 24px;
+                    background-color: #DBF5FF;
+                    border: 3px solid #4CC9FF;
+                    border-radius: 5px;
+                    position: absolute;"> </div>
+        <div style="margin-left: 48px;">
+        <details>
+            <summary>
+                <h4 style="margin-bottom: 0px; display: inline;">Worker: 18</h4>
+            </summary>
+            <table style="width: 100%; text-align: left;">
+                <tr>
+                    <td style="text-align: left;"><strong>Comm: </strong> tcp://10.12.206.37:38592</td>
+                    <td style="text-align: left;"><strong>Total threads: </strong> 2</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;">
+                        <strong>Dashboard: </strong>
+                        <a href="https://jupyterhub.hpc.ucar.edu/stable/user/mgrover/proxy/40979/status">https://jupyterhub.hpc.ucar.edu/stable/user/mgrover/proxy/40979/status</a>
+                    </td>
+                    <td style="text-align: left;">
+                        <strong>Memory: </strong>
+                        23.28 GiB
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;"><strong>Nanny: </strong> tcp://10.12.206.37:44954</td>
+                    <td style="text-align: left;"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: left;">
+                        <strong>Local directory: </strong>
+                        /glade/scratch/mgrover/dask/casper-dav/local-dir/dask-worker-space/worker-h_taqxfo
+                    </td>
+                </tr>
+
+
+            </table>
+        </details>
+        </div>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+        <div style="width: 24px;
+                    height: 24px;
+                    background-color: #DBF5FF;
+                    border: 3px solid #4CC9FF;
+                    border-radius: 5px;
+                    position: absolute;"> </div>
+        <div style="margin-left: 48px;">
+        <details>
+            <summary>
+                <h4 style="margin-bottom: 0px; display: inline;">Worker: 19</h4>
+            </summary>
+            <table style="width: 100%; text-align: left;">
+                <tr>
+                    <td style="text-align: left;"><strong>Comm: </strong> tcp://10.12.206.37:42880</td>
+                    <td style="text-align: left;"><strong>Total threads: </strong> 2</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;">
+                        <strong>Dashboard: </strong>
+                        <a href="https://jupyterhub.hpc.ucar.edu/stable/user/mgrover/proxy/39893/status">https://jupyterhub.hpc.ucar.edu/stable/user/mgrover/proxy/39893/status</a>
+                    </td>
+                    <td style="text-align: left;">
+                        <strong>Memory: </strong>
+                        23.28 GiB
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;"><strong>Nanny: </strong> tcp://10.12.206.37:39854</td>
+                    <td style="text-align: left;"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: left;">
+                        <strong>Local directory: </strong>
+                        /glade/scratch/mgrover/dask/casper-dav/local-dir/dask-worker-space/worker-7z53ezhl
+                    </td>
+                </tr>
+
+
+            </table>
+        </details>
+        </div>
+    </div>
+
+    </details>
+</div>
+
+            </details>
+        </div>
+    </div>
+
+        </details>
+
+        </div>
+    </div>
+</div></div>
+</div>
+</div>
+<div class="section" id="read-in-the-data-catalog">
+<h3>Read in the data catalog<a class="headerlink" href="#read-in-the-data-catalog" title="Permalink to this headline">¶</a></h3>
+<p>As mentioned before, we use the catalog path <code class="docutils literal notranslate"><span class="pre">/glade/collections/cmip/catalog/intake-esm-datastore/catalogs/glade-cesm2-le.json</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span> <span class="o">=</span> <span class="n">intake</span><span class="o">.</span><span class="n">open_esm_datastore</span><span class="p">(</span>
+    <span class="s1">&#39;/glade/collections/cmip/catalog/intake-esm-datastore/catalogs/glade-cesm2-le.json&#39;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/glade/u/home/mgrover/miniconda3/envs/hires-marbl/lib/python3.7/site-packages/IPython/core/interactiveshell.py:3437: DtypeWarning: Columns (8,9) have mixed types.Specify dtype option on import or set low_memory=False.
+  exec(code_obj, self.user_global_ns, self.user_ns)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s take a second to investigate the catalog - each file on disk represents an <code class="docutils literal notranslate"><span class="pre">asset</span></code>, which means that there are over 4 <strong>million</strong> files within the <code class="docutils literal notranslate"><span class="pre">/glade/campaign/cgd/cesm/CESM2-LE/timeseries/</span></code> directory</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><p><strong>glade-cesm2-le catalog with 72114 dataset(s) from 4751677 asset(s)</strong>:</p> <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>unique</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>component</th>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>stream</th>
+      <td>25</td>
+    </tr>
+    <tr>
+      <th>case</th>
+      <td>36</td>
+    </tr>
+    <tr>
+      <th>member_id</th>
+      <td>90</td>
+    </tr>
+    <tr>
+      <th>experiment</th>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>forcing_variant</th>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>control_branch_year</th>
+      <td>14</td>
+    </tr>
+    <tr>
+      <th>variable</th>
+      <td>1868</td>
+    </tr>
+    <tr>
+      <th>start_time</th>
+      <td>184</td>
+    </tr>
+    <tr>
+      <th>end_time</th>
+      <td>185</td>
+    </tr>
+    <tr>
+      <th>time_range</th>
+      <td>192</td>
+    </tr>
+    <tr>
+      <th>long_name</th>
+      <td>1721</td>
+    </tr>
+    <tr>
+      <th>units</th>
+      <td>181</td>
+    </tr>
+    <tr>
+      <th>vertical_levels</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>frequency</th>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>path</th>
+      <td>4751677</td>
+    </tr>
+    <tr>
+      <th>experiment_id</th>
+      <td>180</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="querying-for-our-desired-variable">
+<h3>Querying for our desired variable<a class="headerlink" href="#querying-for-our-desired-variable" title="Permalink to this headline">¶</a></h3>
+<p>In this case, we are interested in the surface temperature in Boulder, Colorado. There are <strong>numerous</strong> temperature variables in the dataset, we can search for all the <code class="docutils literal notranslate"><span class="pre">long_names</span></code> from atmospheric output.</p>
+<p>We setup a function to loop through and see which variables include ‘temperature’ in the <code class="docutils literal notranslate"><span class="pre">long_name</span></code></p>
+<p>We can use the wildcard here <code class="docutils literal notranslate"><span class="pre">*</span></code> to look for where both captial and lowercase <code class="docutils literal notranslate"><span class="pre">temperature</span></code> show up</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">component</span><span class="o">=</span><span class="s1">&#39;atm&#39;</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;temperature*&#39;</span><span class="p">,</span> <span class="s1">&#39;Temperature*&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">long_name</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;sea surface temperature&#39;,
+       &#39;Minimum reference height temperature over output period&#39;,
+       &#39;Tropopause Temperature&#39;, &#39;Reference height temperature&#39;,
+       &#39;Total temperature tendency&#39;,
+       &#39;Minimum surface temperature over output period&#39;,
+       &#39;Temperature tendency&#39;,
+       &#39;Maximum reference height temperature over output period&#39;,
+       &#39;Temperature&#39;, &#39;Maximum surface temperature over output period&#39;,
+       &#39;Potential Temperature&#39;, &#39;Temperature Variance&#39;,
+       &#39;Surface temperature (radiative)&#39;,
+       &#39;Temperature at  700 mbar pressure surface&#39;,
+       &#39;Temperature at 700 mbar pressure surface&#39;,
+       &#39;Temperature at 200 mbar pressure surface&#39;,
+       &#39;Temperature at  200 mbar pressure surface&#39;,
+       &#39;Temperature at 1000 mbar pressure surface&#39;,
+       &#39;Temperature at  100 mbar pressure surface&#39;,
+       &#39;Temperature at   50 mbar pressure surface&#39;,
+       &#39;Temperature at 500 mbar pressure surface&#39;,
+       &#39;Temperature at  500 mbar pressure surface&#39;,
+       &#39;Lowest model level temperature&#39;,
+       &#39;Temperature at   10 mbar pressure surface&#39;,
+       &#39;Temperature at 850 mbar pressure surface&#39;,
+       &#39;Temperature at  850 mbar pressure surface&#39;], dtype=object)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="query-and-subset-our-catalog">
+<h3>Query and Subset our Catalog<a class="headerlink" href="#query-and-subset-our-catalog" title="Permalink to this headline">¶</a></h3>
+<p>Let’s go with <code class="docutils literal notranslate"><span class="pre">Lowest</span> <span class="pre">model</span> <span class="pre">level</span> <span class="pre">temperature</span></code> since this represents the closest to the surface without being at the <strong>actuall</strong> surface of the earth. We pass the <code class="docutils literal notranslate"><span class="pre">component</span></code> and <code class="docutils literal notranslate"><span class="pre">long_name</span></code> into the query, which reduces the number of datasets to 8!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">subset</span> <span class="o">=</span> <span class="n">cat</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">component</span><span class="o">=</span><span class="s1">&#39;atm&#39;</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;Lowest model level temperature&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">subset</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><p><strong>glade-cesm2-le catalog with 8 dataset(s) from 1032 asset(s)</strong>:</p> <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>unique</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>component</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>stream</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>case</th>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>member_id</th>
+      <td>40</td>
+    </tr>
+    <tr>
+      <th>experiment</th>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>forcing_variant</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>control_branch_year</th>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>variable</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>start_time</th>
+      <td>26</td>
+    </tr>
+    <tr>
+      <th>end_time</th>
+      <td>26</td>
+    </tr>
+    <tr>
+      <th>time_range</th>
+      <td>26</td>
+    </tr>
+    <tr>
+      <th>long_name</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>units</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>vertical_levels</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>frequency</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>path</th>
+      <td>1032</td>
+    </tr>
+    <tr>
+      <th>experiment_id</th>
+      <td>80</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+</div>
+<div class="section" id="read-in-using-to-dataset-dict">
+<h2>Read in using <code class="docutils literal notranslate"><span class="pre">.to_dataset_dict()</span></code><a class="headerlink" href="#read-in-using-to-dataset-dict" title="Permalink to this headline">¶</a></h2>
+<p>We include the additional <code class="docutils literal notranslate"><span class="pre">dask.config.set()</span></code> to help with splitting up large chunks when reading in</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">dask</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="o">**</span><span class="p">{</span><span class="s1">&#39;array.slicing.split_large_chunks&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">}):</span>
+    <span class="n">dsets</span> <span class="o">=</span> <span class="n">subset</span><span class="o">.</span><span class="n">to_dataset_dict</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--&gt; The keys in the returned dictionary of datasets are constructed as follows:
+	&#39;component.experiment.stream.forcing_variant.control_branch_year.variable&#39;
+</pre></div>
+</div>
+<div class="output text_html">
+<div>
+    <style>
+        /* Turns off some styling */
+        progress {
+            /* gets rid of default border in Firefox and Opera. */
+            border: none;
+            /* Needs to be in here for Safari polyfill so background images work as expected. */
+            background-size: auto;
+        }
+        .progress-bar-interrupted, .progress-bar-interrupted::-webkit-progress-bar {
+            background: #F44336;
+        }
+    </style>
+  <progress value='8' class='' max='8' style='width:300px; height:20px; vertical-align: middle;'></progress>
+  100.00% [8/8 00:35<00:00]
+</div>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dsets</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_keys([&#39;atm.historical.cam.h1.smbb.1231.TBOT&#39;, &#39;atm.historical.cam.h1.smbb.1251.TBOT&#39;, &#39;atm.ssp370.cam.h1.smbb.1281.TBOT&#39;, &#39;atm.historical.cam.h1.smbb.1301.TBOT&#39;, &#39;atm.ssp370.cam.h1.smbb.1251.TBOT&#39;, &#39;atm.ssp370.cam.h1.smbb.1301.TBOT&#39;, &#39;atm.historical.cam.h1.smbb.1281.TBOT&#39;, &#39;atm.ssp370.cam.h1.smbb.1231.TBOT&#39;])
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s take a look at the keys - these are defined by the <code class="docutils literal notranslate"><span class="pre">groupby</span></code> attributes in the catalog. The groupby attributes in this case are:</p>
+<p><code class="docutils literal notranslate"><span class="pre">component.experiment.stream.forcing_variant.control_branch_year.variable</span></code></p>
+<ul class="simple">
+<li><p>Component - which component this output is from (ex. atm represents the atmosphere)</p></li>
+<li><p>Experiment - which experiment this is from, in this case, this is <code class="docutils literal notranslate"><span class="pre">ssp370</span></code> which is one of the CMIP6 future experiments</p></li>
+<li><p>Stream - which stream this output is from, in this case, this is <code class="docutils literal notranslate"><span class="pre">cam.h1</span></code>, which represents daily output</p></li>
+<li><p>Control Branch Year - which year the ensemble branched off from, these are described within the <a class="reference external" href="https://www.cesm.ucar.edu/projects/community-projects/LENS2/">CESM2-LE documentation page</a></p></li>
+<li><p>Variable - which variable you are working with</p></li>
+</ul>
+<div class="section" id="define-a-helper-function-which-subsets-the-data-groups-by-year-and-returns-the-data-array">
+<h3>Define a helper function which subsets the data, groups by year, and returns the data array<a class="headerlink" href="#define-a-helper-function-which-subsets-the-data-groups-by-year-and-returns-the-data-array" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">subset_ds</span><span class="p">(</span><span class="n">ds</span><span class="p">):</span>
+    <span class="c1"># Subset for TBOT and choose Boulder, Colorado&#39;s lat and lon and convert to degC</span>
+    <span class="n">da</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">TBOT</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">lat</span><span class="o">=</span><span class="mf">40.015</span><span class="p">,</span> <span class="n">lon</span><span class="o">=-</span><span class="mf">105.2705</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">)</span> <span class="o">-</span> <span class="mf">273.15</span>
+    <span class="n">da</span> <span class="o">=</span> <span class="n">da</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;time.year&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+    <span class="c1"># Make sure that time is the format of a string</span>
+    <span class="n">da</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">da</span><span class="o">.</span><span class="n">year</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">da</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="look-at-one-of-the-datasets">
+<h4>Look at one of the datasets<a class="headerlink" href="#look-at-one-of-the-datasets" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span> <span class="o">=</span> <span class="n">dsets</span><span class="p">[</span><span class="s1">&#39;atm.ssp370.cam.h1.smbb.1301.TBOT&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="apply-our-function">
+<h4>Apply our function<a class="headerlink" href="#apply-our-function" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">da</span> <span class="o">=</span> <span class="n">subset_ds</span><span class="p">(</span><span class="n">ds</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="plot-our-results">
+<h3>Plot our Results!<a class="headerlink" href="#plot-our-results" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Setup the figure</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
+
+<span class="c1"># Loop through and plot each member_id</span>
+<span class="k">for</span> <span class="n">member_id</span> <span class="ow">in</span> <span class="n">da</span><span class="o">.</span><span class="n">member_id</span><span class="o">.</span><span class="n">values</span><span class="p">:</span>
+    <span class="n">da</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">member_id</span><span class="o">=</span><span class="n">member_id</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">member_id</span><span class="p">)</span>
+
+<span class="c1"># Limit the axis from 2015 to 2100</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">2015</span><span class="p">,</span> <span class="mi">2100</span><span class="p">)</span>
+
+<span class="c1"># Increase the ticksize</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+
+<span class="c1"># Add some labels and increase the size</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Temperature (degC)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+
+<span class="c1"># Add a legend</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Member IDs&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+
+<span class="c1"># Add a title</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span>
+    <span class="s1">&#39;Experiment: SSP370 </span><span class="se">\n</span><span class="s1"> Forcing Variant: Smoothed Biomass </span><span class="se">\n</span><span class="s1"> Control Branch Year: 1301 </span><span class="se">\n</span><span class="s1"> 2015 - 2100&#39;</span><span class="p">,</span>
+    <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/intake-cesm2-le-glade-example_26_0.png" src="../../_images/intake-cesm2-le-glade-example_26_0.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<p>While this was a generally simple analysis, I hope this helps you see how powerful <code class="docutils literal notranslate"><span class="pre">intake-esm</span></code> can be when working with large datasets such as the CESM2-Large Ensemble!</p>
+</div>
+</div>
+
+<div class="section">
+     
+<div class="section">
+  <span style="float: left">
+     
+    <a href="../project-pythia-overview/">
+      <i class="fa fa-arrow-circle-left"></i> Project Pythia Portal Overview
+    </a>
+    
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right">
+    
+  </span>
+</div>
+  
+</div>
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-B50ZRRN69X"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('config', 'G-B50ZRRN69X');
+                </script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021, NCAR Earth System Data Science Team.<br/>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.4.<br/>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>
