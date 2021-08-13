@@ -72,6 +72,8 @@ var addUtterances = () => {
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="author" title="About these documents" href="../../about/" />
     <link rel="index" title="Index" href="../../genindex/" />
     <link rel="search" title="Search" href="../../search/" /> 
@@ -2483,9 +2485,9 @@ Wall time: 6.74 s
 <li><p>Transform to a <code class="docutils literal notranslate"><span class="pre">Robinson</span></code> projection</p></li>
 </ul>
 <p>After we set those options for the <code class="docutils literal notranslate"><span class="pre">Trimesh</span></code> object, we use <code class="docutils literal notranslate"><span class="pre">geoviews.features</span></code> to add in coastlines and borders</p>
-<p>The result is an interactive$^1$ map! Feel free to use the <code class="docutils literal notranslate"><span class="pre">Bokeh</span></code> toolbar on the right to zoom in, move around, and examine the dataset</p>
+<p>The result is an interactive<span class="math notranslate nohighlight">\(^1\)</span> map! Feel free to use the <code class="docutils literal notranslate"><span class="pre">Bokeh</span></code> toolbar on the right to zoom in, move around, and examine the dataset</p>
 <hr class="docutils" />
-<p>$^1$Within the static webpage rendered on this blog, you can scroll around the map, but it will <strong>not</strong> read in additional data required to increase the resolution at finer scales</p>
+<p><span class="math notranslate nohighlight">\(^1\)</span>Within the static webpage rendered on this blog, you can scroll around the map, but it will <strong>not</strong> read in additional data required to increase the resolution at finer scales</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
