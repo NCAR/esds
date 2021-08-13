@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2021-08-09T17:48:30.631747+00:00</updated>
+  <updated>2021-08-13T21:24:24.131638+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.19">ABlog</generator>
@@ -744,5 +744,22 @@ What should I do?</summary>
     <category term="cesm" label="cesm"/>
     <category term="cesm2-le" label="cesm2-le"/>
     <published>2021-08-06T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/cesm-datashader/</id>
+    <title>Plotting CESM Data on an Unstructured Grid using Geoviews and Datashader</title>
+    <updated>2021-08-13T00:00:00+00:00</updated>
+    <author>
+      <name>Max Grover</name>
+    </author>
+    <content type="html">&lt;p&gt;This week, during Xdev office hours, &lt;a class="reference external" href="https://staff.ucar.edu/users/yeager"&gt;Steve Yeager&lt;/a&gt; raised a question regarding plotting unstructured grid data within Python. He was interested in plotting output from the &lt;a class="reference external" href="https://www.cesm.ucar.edu/models/atm-cam/#:~:text=The%20Community%20Earth%20System%20Model,Department%20of%20Energy%20(DOE)."&gt;Community Atmosphere Model&lt;/a&gt;, which supports unstructured grids, essentially a combination of triangles allowing for higher resolution in certain parts of the domain. This can be adventageous when wanting to achieve the benefits of high resolution within the primary domain, while maintaining the global scale of the model. This week, &lt;a class="reference external" href="https://twitter.com/NCAR_Science/status/1425583582819483652?s=20"&gt;NCAR Science&lt;/a&gt; tweeted a great explanation of how revolutionary this capability is in the context of resolving processes over Greenland.&lt;/p&gt;
+&lt;p&gt;Unstructured grids can be difficult to plot directly within Python since they do not follow the typical &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;lat&lt;/span&gt;&lt;/code&gt;, &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;lon&lt;/span&gt;&lt;/code&gt; (x, y) convention. There is some preprocessing that needs to be applied before plotting.&lt;/p&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/cesm-datashader/" rel="alternate"/>
+    <summary>This week, during Xdev office hours, Steve Yeager raised a question regarding plotting unstructured grid data within Python. He was interested in plotting output from the Community Atmosphere Model, which supports unstructured grids, essentially a combination of triangles allowing for higher resolution in certain parts of the domain. This can be adventageous when wanting to achieve the benefits of high resolution within the primary domain, while maintaining the global scale of the model. This week, NCAR Science tweeted a great explanation of how revolutionary this capability is in the context of resolving processes over Greenland.Unstructured grids can be difficult to plot directly within Python since they do not follow the typical lat, lon (x, y) convention. There is some preprocessing that needs to be applied before plotting.</summary>
+    <category term="unstructuredgrids" label="unstructured grids"/>
+    <category term="cesm" label="cesm"/>
+    <category term="visualization" label="visualization"/>
+    <published>2021-08-13T00:00:00+00:00</published>
   </entry>
 </feed>
