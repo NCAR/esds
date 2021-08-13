@@ -86,7 +86,7 @@ post_auto_excerpt = 2
 panels_add_bootstrap_css = False
 
 # MyST config
-myst_enable_extensions = ['amsmath', 'colon_fence', 'deflist', 'html_image']
+myst_enable_extensions = ['amsmath', 'colon_fence', 'deflist', 'html_image', 'dollarmath']
 myst_url_schemes = ('http', 'https', 'mailto')
 
 
