@@ -27,5 +27,6 @@ dependencies:
   - sphinx-panels
   - sphinxcontrib-bibtex<2.0.0
   - xarray>=0.18.2
+  - sphinxext-rediraffe
   - pip:
       - sphinxext-opengraph
