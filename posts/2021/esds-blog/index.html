@@ -1,0 +1,584 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NCAR-CGD ESDS Town Hall &#8212; NCAR-ESDS 0.1 documentation</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "NCAR/esds");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <link rel="author" title="About these documents" href="../../../about/" />
+    <link rel="index" title="Index" href="../../../genindex/" />
+    <link rel="search" title="Search" href="../../../search/" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+     
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../../blog/atom.xml"
+  title="NCAR ESDS"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+<a class="navbar-brand" href="../../../">
+<p class="title">NCAR-ESDS</p>
+</a>
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../about/">
+  About Us
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../faq/">
+  Frequently Asked Questions
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../blog/">
+  Blog
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../communication/">
+  Communication
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../best-practices/">
+  Best Practices
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../calendar/">
+  Calendar
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../projects/">
+  Projects
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/ncar/esds" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">  
+<h2>
+   <i class="fa fa-calendar"></i>
+  26 March 2021 
+</h2>
+
+<ul>
+   
+<li id="author">
+  <span
+    ><i class="fa-fw fa fa-user"></i></span
+  >
+   
+  <a href="../../../blog/author/max-grover/">Max Grover</a>  
+</li>
+    
+<li id="tags">
+  <span
+    ><i class="fa-fw fa fa-tags"></i> </span
+  >
+   
+  <a href="../../../blog/tag/townhall/">townhall</a>   
+  <a href="../../../blog/tag/cgd/">cgd</a>   
+  <a href="../../../blog/tag/questions/">questions</a>  
+</li>
+ 
+</ul>
+
+<h3>
+  <a href="../../../blog/">Recent Posts</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="../cesm-datashader/"
+      >13 August - Plotting CESM Data on an Unstructured Grid using Geoviews and Datashader</a
+    >
+  </li>
+  
+  <li>
+    <a href="../intake-cesm2-le-glade-example/"
+      >06 August - Using Intake-ESM to Analyze Data from CESM2-LE</a
+    >
+  </li>
+  
+  <li>
+    <a href="../project-pythia-overview/"
+      >30 July - Project Pythia Portal Overview</a
+    >
+  </li>
+  
+  <li>
+    <a href="../scipy-2021-takeaways/"
+      >26 July - SciPy Conference 2021 Takeaways</a
+    >
+  </li>
+  
+  <li>
+    <a href="../dask-tutorial-update/"
+      >23 July - Dask Tutorial UPDATED DATES</a
+    >
+  </li>
+  
+</ul>
+
+<h3>
+  <a href="../../../blog/archive/">Archives</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="../../../blog/2021/">2021 (34)</a>
+  </li>
+    
+  <li>
+    <a href="../../../blog/2020/">2020 (6)</a>
+  </li>
+    
+  <li>
+    <a href="../../../blog/2019/">2019 (2)</a>
+  </li>
+   
+</ul>
+
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-and-answer-portion">
+   Question and Answer Portion
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#asking-questions">
+     Asking Questions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dask">
+     Dask
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#publications-and-citations">
+     Publications and Citations
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-do-we-find-these-projects">
+     How do we find these projects?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#funding">
+     Funding
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#diagnostic-packages">
+     Diagnostic Packages
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#overall-design">
+     Overall Design
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#transparency-of-models-and-data">
+     Transparency of Models and Data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#interactive-computing">
+     Interactive Computing
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#usability-of-tools">
+     Usability of Tools
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pop-tools">
+     Pop-Tools
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#parallel-writing-zarr">
+     Parallel Writing/Zarr
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#shifting-landscape-of-technical-tools">
+     Shifting Landscape of Technical Tools
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                 <div class="section" id="ncar-cgd-esds-town-hall">
+<h1>NCAR-CGD ESDS Town Hall<a class="headerlink" href="#ncar-cgd-esds-town-hall" title="Permalink to this headline">¶</a></h1>
+<p>Last week, there was a town hall focused on gathering input on the Earth System Data Science initiative at NCAR. The meeting began with an introduction about the initiative, the vision, goals, and how the team is planning to start working toward these goals.</p>
+<p>The Question/Answer portion of the town hall was very informative and brought up some great topics for discussion. They have been collected from both the chat and Google Doc, sorted by category.</p>
+<p>While there are tentative “answers” under each question, these are by no means absolute answers - but rather a starting point to answer these questions. We look forward to further collaboration and development of this initiative.</p>
+<div class="section" id="question-and-answer-portion">
+<h2>Question and Answer Portion<a class="headerlink" href="#question-and-answer-portion" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="asking-questions">
+<h3>Asking Questions<a class="headerlink" href="#asking-questions" title="Permalink to this headline">¶</a></h3>
+<p>Can there be technology-mentors which can help answer questions outside of the WIP meetings?</p>
+<ul class="simple">
+<li><p>One-on-one interaction is great, but doesn’t scale - in order to address this, we suggest having “code-clinics” where people interested in assistance can pair with a mentor. In addition to this, people can ask for help in various channels on Zulip, where questions can be “binned” into FAQs, which become blog posts (ex. How to use Dask on Cheyenne/Casper)</p></li>
+<li><p>The focus will be on providing both spaces for people to ask one-on-one questions, and providing better documentation through examples/blog posts</p></li>
+</ul>
+</div>
+<div class="section" id="dask">
+<h3>Dask<a class="headerlink" href="#dask" title="Permalink to this headline">¶</a></h3>
+<p>How do we promote best practices with Dask?</p>
+<ul class="simple">
+<li><p>Build community resources for Dask</p></li>
+<li><p>Offer a simple, containerized tutorial and apply this to a real workflow</p></li>
+<li><p>Cover best practices, how to scale, etc.</p></li>
+<li><p>Offer in conjunction with XDev</p></li>
+<li><p>Collaborate with GeoCAT team, Project Pythia for training and examples</p></li>
+</ul>
+</div>
+<div class="section" id="publications-and-citations">
+<h3>Publications and Citations<a class="headerlink" href="#publications-and-citations" title="Permalink to this headline">¶</a></h3>
+<p>For packages specific to publications, how do they work into the ecosystem?</p>
+<ul class="simple">
+<li><p>Publication specific publications build on the ecosystem, can be archived through Zenodo or through working with the NCAR library to add a DOI</p></li>
+</ul>
+</div>
+<div class="section" id="how-do-we-find-these-projects">
+<h3>How do we find these projects?<a class="headerlink" href="#how-do-we-find-these-projects" title="Permalink to this headline">¶</a></h3>
+<p>Come up with list of projects associated with a dataset and or repository (helping to prevent from reinventing the wheel)</p>
+<ul class="simple">
+<li><p><em>Potential collaboration with RDA?</em></p></li>
+</ul>
+</div>
+<div class="section" id="funding">
+<h3>Funding<a class="headerlink" href="#funding" title="Permalink to this headline">¶</a></h3>
+<p>Many CGD people are on soft money and using the easiest and fastest method is typically preferred, but if you want something more broadly usable with best practices and documentation, that takes longer and requires more resources. How do we address this issue?</p>
+<ul class="simple">
+<li><p>Leverage the expertise of key users, adding more requirements and increasing standards may help push away from quick, easy approach.</p></li>
+<li><p>Community work should be budgeted in even if you are on soft money, recognizing these efforts as just as important</p></li>
+<li><p>Software engineering tasks should be factored into grant/proposal application itself</p></li>
+</ul>
+</div>
+<div class="section" id="diagnostic-packages">
+<h3>Diagnostic Packages<a class="headerlink" href="#diagnostic-packages" title="Permalink to this headline">¶</a></h3>
+<p>Will ESDS be herding the existing diagnostic package development? How will ESDS bring these packages together?</p>
+<ul class="simple">
+<li><p>We will run the evolution backwards, and see how they coalesce, avoiding duplication of effort though communicating with each other about what we have done, challenges we face.</p></li>
+<li><p>An example of this is pop-tools, which provides a framework for other groups to follow.</p></li>
+</ul>
+</div>
+<div class="section" id="overall-design">
+<h3>Overall Design<a class="headerlink" href="#overall-design" title="Permalink to this headline">¶</a></h3>
+<p>What was the original motivation and design of the Pangeo Projection and how does that relate to the design of this initiative?</p>
+<ul class="simple">
+<li><p>The goal was to enable a new form of scientific inquiry, taking away the toil of data processing and management and to allow scientists to explore and use data more efficiently. The focus has been on enabling scalable, reproducible, and open tools for working with geoscientific data</p></li>
+<li><p>Yes, there will be some growing pains an associated learning curve, but the curve is typically quick and efficiency gains are real</p></li>
+</ul>
+</div>
+<div class="section" id="transparency-of-models-and-data">
+<h3>Transparency of Models and Data<a class="headerlink" href="#transparency-of-models-and-data" title="Permalink to this headline">¶</a></h3>
+<p>If we keep abstracting further from the underlying data and models, aren’t we in a real danger of disconnecting from what the models and data actually mean? Don’t we view the world simply through the world through the lens of the tools and libraries that have been written by other people? Is there a way in which we can ensure that the limitation of models, data, and analysis methods being provided can be explicit and transparent to researchers using them?</p>
+</div>
+<div class="section" id="interactive-computing">
+<h3>Interactive Computing<a class="headerlink" href="#interactive-computing" title="Permalink to this headline">¶</a></h3>
+<p>What is 2i2c?</p>
+<ul class="simple">
+<li><p>Check out the website! <a class="reference external" href="http://2i2c.org/">2i2c site</a></p></li>
+</ul>
+</div>
+<div class="section" id="usability-of-tools">
+<h3>Usability of Tools<a class="headerlink" href="#usability-of-tools" title="Permalink to this headline">¶</a></h3>
+<p>How do we make tools such as dask, xarray, etc. available to people in a simple way? Previous experience suggeests that you could have a great tool but it is not used easily and requires lots of complex dependencies to start.</p>
+<ul class="simple">
+<li><p>There are default conda environments that include the Pangeo stack in the CESM-container, as well as on Casper/Cheyenne</p></li>
+<li><p>Make sure that tutorials are setup in a containerized, simple environment</p></li>
+<li><p>A more detailed tutorial on setting up your own environment on Cheyenne/Casper is needed</p></li>
+</ul>
+</div>
+<div class="section" id="pop-tools">
+<h3>Pop-Tools<a class="headerlink" href="#pop-tools" title="Permalink to this headline">¶</a></h3>
+<p>What data format does pop-tools work with?</p>
+<ul class="simple">
+<li><p>Supports Xarray input - so anything that Xarray supports (ex. netCDF, HDF, etc.)</p></li>
+<li><p>Xaray also provides an abstraction of the data, so all 100s+ GB/TB of data are not read in at a single time, making it scalable</p></li>
+</ul>
+</div>
+<div class="section" id="parallel-writing-zarr">
+<h3>Parallel Writing/Zarr<a class="headerlink" href="#parallel-writing-zarr" title="Permalink to this headline">¶</a></h3>
+<p>Dask/Xarray can be a pain to use when writing files and can be slow. Is there a parallel writing ability?</p>
+<ul class="simple">
+<li><p>Writing in parallel to netCDF can be a pain due to HDF5, writing to zarr then converting to netcdf is preferred.</p></li>
+<li><p>Moving to Zarr in the future will be the way to go - it is much faster, especially on cloud computing platforms</p></li>
+</ul>
+</div>
+<div class="section" id="shifting-landscape-of-technical-tools">
+<h3>Shifting Landscape of Technical Tools<a class="headerlink" href="#shifting-landscape-of-technical-tools" title="Permalink to this headline">¶</a></h3>
+<p>What happens in 5 years when Julia or Ruby becomes the language de jour?</p>
+<ul class="simple">
+<li><p>We can make decision in 5 years</p></li>
+<li><p>We do a lot of numerical work and analysis. In terms of this framework, programming languages and analysis tools are our lab equipment. Lab equipment gets upgraded, and scientists worldwide need to keep up.</p></li>
+</ul>
+<p>Additional questions? Feel free to submit an issue on <a class="reference external" href="https://github.com/NCAR/esds/issues">Github</a></p>
+</div>
+</div>
+</div>
+
+<div class="section">
+     
+<div class="section">
+  <span style="float: left">
+     
+    <a href="../numpy-faq/">
+      <i class="fa fa-arrow-circle-left"></i> NumPy Tutorial FAQ
+    </a>
+    
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right">
+     
+    <a href="../matplotlib-faq/">
+      Matplotlib Tutorial FAQ <i
+        class="fa fa-arrow-circle-right"
+      ></i
+      >
+    </a>
+    
+  </span>
+</div>
+  
+</div>
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-B50ZRRN69X"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('config', 'G-B50ZRRN69X');
+                </script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021, NCAR Earth System Data Science Team.<br/>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.4.<br/>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

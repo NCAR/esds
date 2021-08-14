@@ -1,0 +1,622 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>An Example of Using Intake-ESM &#8212; NCAR-ESDS 0.1 documentation</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "NCAR/esds");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <link rel="author" title="About these documents" href="../../../about/" />
+    <link rel="index" title="Index" href="../../../genindex/" />
+    <link rel="search" title="Search" href="../../../search/" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+     
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../../blog/atom.xml"
+  title="NCAR ESDS"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+<a class="navbar-brand" href="../../../">
+<p class="title">NCAR-ESDS</p>
+</a>
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../about/">
+  About Us
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../faq/">
+  Frequently Asked Questions
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../blog/">
+  Blog
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../communication/">
+  Communication
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../best-practices/">
+  Best Practices
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../calendar/">
+  Calendar
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../projects/">
+  Projects
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/ncar/esds" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">  
+<h2>
+   <i class="fa fa-calendar"></i>
+  09 April 2021 
+</h2>
+
+<ul>
+   
+<li id="author">
+  <span
+    ><i class="fa-fw fa fa-user"></i></span
+  >
+   
+  <a href="../../../blog/author/max-grover/">Max Grover</a>  
+</li>
+    
+<li id="tags">
+  <span
+    ><i class="fa-fw fa fa-tags"></i> </span
+  >
+   
+  <a href="../../../blog/tag/dask/">dask</a>   
+  <a href="../../../blog/tag/intake/">intake</a>   
+  <a href="../../../blog/tag/cesm/">cesm</a>  
+</li>
+ 
+</ul>
+
+<h3>
+  <a href="../../../blog/">Recent Posts</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="../cesm-datashader/"
+      >13 August - Plotting CESM Data on an Unstructured Grid using Geoviews and Datashader</a
+    >
+  </li>
+  
+  <li>
+    <a href="../intake-cesm2-le-glade-example/"
+      >06 August - Using Intake-ESM to Analyze Data from CESM2-LE</a
+    >
+  </li>
+  
+  <li>
+    <a href="../project-pythia-overview/"
+      >30 July - Project Pythia Portal Overview</a
+    >
+  </li>
+  
+  <li>
+    <a href="../scipy-2021-takeaways/"
+      >26 July - SciPy Conference 2021 Takeaways</a
+    >
+  </li>
+  
+  <li>
+    <a href="../dask-tutorial-update/"
+      >23 July - Dask Tutorial UPDATED DATES</a
+    >
+  </li>
+  
+</ul>
+
+<h3>
+  <a href="../../../blog/archive/">Archives</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="../../../blog/2021/">2021 (34)</a>
+  </li>
+    
+  <li>
+    <a href="../../../blog/2020/">2020 (6)</a>
+  </li>
+    
+  <li>
+    <a href="../../../blog/2019/">2019 (2)</a>
+  </li>
+   
+</ul>
+
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setting-up-the-imports-dask">
+   Setting up the imports/dask
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#spin-up-dask-cluster">
+     Spin up Dask Cluster
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#read-the-cesm-le-data">
+   Read the CESM-LE data
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#apply-the-search-for-data">
+     Apply the search for data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#apply-an-operation">
+   Apply an operation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#combine-the-datasets">
+     Combine the datasets
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#calculate-an-annual-mean">
+     Calculate an annual mean
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#write-the-dataset-to-disk">
+   Write the dataset to disk
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                 <div class="section" id="an-example-of-using-intake-esm">
+<h1>An Example of Using Intake-ESM<a class="headerlink" href="#an-example-of-using-intake-esm" title="Permalink to this headline">¶</a></h1>
+<p>This past week, NCAR CISL updated the Casper Node to use PBS instead of Slurm for scheduling jobs. This led a post in which an example of spinning up dask clusters on the new configuration. This was also an opportunity to dig into dask, and try applying it to a sample task, specifically looking at ecosystem variables in the CESM-LE dataset, using notebooks included in Matt Long’s <a class="reference external" href="https://github.com/matt-long/krill-cesm-le">krill-cesm-le repository</a>, modified by Kristen Krumhardt.</p>
+<div class="section" id="setting-up-the-imports-dask">
+<h2>Setting up the imports/dask<a class="headerlink" href="#setting-up-the-imports-dask" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">shutil</span>
+
+<span class="kn">from</span> <span class="nn">glob</span> <span class="kn">import</span> <span class="n">glob</span>
+
+<span class="kn">import</span> <span class="nn">cftime</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">matplotlib.colors</span> <span class="k">as</span> <span class="nn">colors</span>
+
+<span class="kn">import</span> <span class="nn">cartopy.crs</span> <span class="k">as</span> <span class="nn">ccrs</span>
+<span class="kn">from</span> <span class="nn">cartopy.util</span> <span class="kn">import</span> <span class="n">add_cyclic_point</span>
+
+<span class="kn">import</span> <span class="nn">intake</span>
+<span class="kn">import</span> <span class="nn">pop_tools</span>
+<span class="kn">import</span> <span class="nn">esmlab</span>
+<span class="kn">import</span> <span class="nn">util</span>
+
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="section" id="spin-up-dask-cluster">
+<h3>Spin up Dask Cluster<a class="headerlink" href="#spin-up-dask-cluster" title="Permalink to this headline">¶</a></h3>
+<p>Here, we spin up our dask cluster. At first, running this notebook resulted in a <code class="docutils literal notranslate"><span class="pre">killed</span> <span class="pre">worker</span></code> error. After further expection, we noticed that additional resources would be needed to read in the notebook since the data are so large (on the order of ~1-2 TB). Increasing the individual worker to a higher amount (ex. 256 GB) solved the issue. Scale up to as many workers as you think are neccessary for the calculation (this may take some trial and error).</p>
+<p>You should base your chunks on your analysis - so in this case, we are interested in the top 100 m in the ocean, so chunking by <code class="docutils literal notranslate"><span class="pre">z_t</span></code>, the vertical coordinate, will help reduce the memory.</p>
+<p>Good general advice for working with dask is to check the dask graph (accessed via the url when you call the client). When there are “orange” regions within your task graph, this means your workers are getting close to maxing out on memory.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">dask</span>
+
+<span class="c1"># Use dask jobqueue</span>
+<span class="kn">from</span> <span class="nn">dask_jobqueue</span> <span class="kn">import</span> <span class="n">PBSCluster</span>
+
+<span class="c1"># Import a client</span>
+<span class="kn">from</span> <span class="nn">dask.distributed</span> <span class="kn">import</span> <span class="n">Client</span>
+
+<span class="c1"># Setup your PBSCluster</span>
+<span class="n">cluster</span> <span class="o">=</span> <span class="n">PBSCluster</span><span class="p">(</span>
+    <span class="n">cores</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="c1"># The number of cores you want</span>
+    <span class="n">memory</span><span class="o">=</span><span class="s1">&#39;256 GB&#39;</span><span class="p">,</span> <span class="c1"># Amount of memory</span>
+    <span class="n">processes</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="c1"># How many processes</span>
+    <span class="n">queue</span><span class="o">=</span><span class="s1">&#39;casper&#39;</span><span class="p">,</span> <span class="c1"># The type of queue to utilize (/glade/u/apps/dav/opt/usr/bin/execcasper)</span>
+    <span class="n">local_directory</span><span class="o">=</span><span class="s1">&#39;$TMPDIR&#39;</span><span class="p">,</span> <span class="c1"># Use your local directory</span>
+    <span class="n">resource_spec</span><span class="o">=</span><span class="s1">&#39;select=1:ncpus=2:mem=256GB&#39;</span><span class="p">,</span> <span class="c1"># Specify resources</span>
+    <span class="n">project</span><span class="o">=</span><span class="s1">&#39;project_id&#39;</span><span class="p">,</span> <span class="c1"># Input your project ID here</span>
+    <span class="n">walltime</span><span class="o">=</span><span class="s1">&#39;02:00:00&#39;</span><span class="p">,</span> <span class="c1"># Amount of wall time</span>
+    <span class="n">interface</span><span class="o">=</span><span class="s1">&#39;ib0&#39;</span><span class="p">,</span> <span class="c1"># Interface to use</span>
+<span class="p">)</span>
+<span class="c1"># Scale up</span>
+<span class="n">cluster</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+
+<span class="c1"># Change your url to the dask dashboard so you can see it</span>
+<span class="n">dask</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">set</span><span class="p">({</span><span class="s1">&#39;distributed.dashboard.link&#39;</span><span class="p">:</span><span class="s1">&#39;https://jupyterhub.hpc.ucar.edu/stable/user/</span><span class="si">{USER}</span><span class="s1">/proxy/</span><span class="si">{port}</span><span class="s1">/status&#39;</span><span class="p">})</span>
+
+<span class="c1"># Setup your client</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">cluster</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="read-the-cesm-le-data">
+<h2>Read the CESM-LE data<a class="headerlink" href="#read-the-cesm-le-data" title="Permalink to this headline">¶</a></h2>
+<p>We will use <a class="reference external" href="https://intake-esm.readthedocs.io/en/latest/"><code class="docutils literal notranslate"><span class="pre">intake-esm</span></code></a>, which is a data catalog tool.
+It enables querying a database for the files we want, then loading those directly as an <code class="docutils literal notranslate"><span class="pre">xarray.Dataset</span></code>.</p>
+<p>First step is to set the “collection” for the CESM-LE, which depends on a json file conforming to the <a class="reference external" href="https://github.com/NCAR/esm-collection-spec">ESM Catalog Specification</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">catalog_file</span> <span class="o">=</span> <span class="s1">&#39;/glade/u/home/kristenk/TTE_CESM-LE/krill-cesm-le/notebooks/data/glade-cesm1-le.json&#39;</span>
+<span class="n">variables</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;TEMP&#39;</span><span class="p">,</span> <span class="s1">&#39;diatC&#39;</span><span class="p">]</span>
+
+<span class="n">experiments</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;20C&#39;</span><span class="p">,</span> <span class="s1">&#39;RCP85&#39;</span><span class="p">]</span>
+<span class="n">stream</span> <span class="o">=</span> <span class="s1">&#39;pop.h&#39;</span>
+
+<span class="n">col</span> <span class="o">=</span> <span class="n">intake</span><span class="o">.</span><span class="n">open_esm_datastore</span><span class="p">(</span><span class="n">catalog_file</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Now we search the collection for the ensemble members (unique <code class="docutils literal notranslate"><span class="pre">member_id</span></code>’s) that have a chlorophyll field (<code class="docutils literal notranslate"><span class="pre">diatChl</span></code>). This is necessary because the ocean biogeochemistry was corrupted in some members and the data were deleted.</p>
+<p>In this cell, <code class="docutils literal notranslate"><span class="pre">member_id</span></code> is a list of the ensemble members we want to operate on.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">col_sub</span> <span class="o">=</span> <span class="n">col</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">experiment</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;20C&#39;</span><span class="p">],</span>
+                     <span class="n">stream</span><span class="o">=</span><span class="s1">&#39;pop.h&#39;</span><span class="p">,</span>
+                     <span class="n">variable</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;diatChl&#39;</span><span class="p">])</span>
+
+<span class="n">member_id</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">col_sub</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">member_id</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">member_id</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="section" id="apply-the-search-for-data">
+<h3>Apply the search for data<a class="headerlink" href="#apply-the-search-for-data" title="Permalink to this headline">¶</a></h3>
+<p>Specify a list of variables and perform a search. Under the hood, the <code class="docutils literal notranslate"><span class="pre">search</span></code> functionality uses <a class="reference external" href="https://pandas.pydata.org/"><code class="docutils literal notranslate"><span class="pre">pandas</span></code></a> data frames. We can view that frame here using the <code class="docutils literal notranslate"><span class="pre">.df</span></code> syntax.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">col_sub</span> <span class="o">=</span> <span class="n">col</span><span class="o">.</span><span class="n">search</span><span class="p">(</span>
+    <span class="n">experiment</span><span class="o">=</span><span class="n">experiments</span><span class="p">,</span>
+    <span class="n">stream</span><span class="o">=</span><span class="n">stream</span><span class="p">,</span>
+    <span class="n">variable</span><span class="o">=</span><span class="n">variables</span><span class="p">,</span>
+    <span class="n">member_id</span><span class="o">=</span><span class="n">member_id</span><span class="p">,</span>
+    <span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">col_sub</span><span class="p">)</span>
+
+<span class="n">col_sub</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Use <code class="docutils literal notranslate"><span class="pre">.to_dataset_dict</span></code> to read in the datasets as a dictionary, specifying the chunk size. This is also a point where it is recommended you take a look at the <code class="docutils literal notranslate"><span class="pre">chunksize</span></code> for the dask array, ensuring that it is a reasonable number (~100-200 mb). Test it out on one of the variables (ex. <code class="docutils literal notranslate"><span class="pre">TEMP</span></code>).</p>
+<p>Since we are only interested in the top 100 m, we can chunk by <code class="docutils literal notranslate"><span class="pre">z_t</span></code> by 10 which should reduce the memory usage.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">dsets</span> <span class="o">=</span> <span class="n">col_sub</span><span class="o">.</span><span class="n">to_dataset_dict</span><span class="p">(</span><span class="n">cdf_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;chunks&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;time&#39;</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;z_t&#39;</span><span class="p">:</span><span class="mi">10</span><span class="p">},</span> <span class="s1">&#39;decode_times&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="apply-an-operation">
+<h2>Apply an operation<a class="headerlink" href="#apply-an-operation" title="Permalink to this headline">¶</a></h2>
+<p>Apply a calculation. In this case, we are calculating the average temperature within the top 100 m of the ocean.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">compute_TEMP_100m</span><span class="p">(</span><span class="n">ds</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;compute top 100m mean temperature&quot;&quot;&quot;</span>
+
+    <span class="n">ds</span><span class="p">[</span><span class="s1">&#39;TEMP_100m_mean&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">TEMP</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">z_t</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s1">&#39;z_t&#39;</span><span class="p">)</span>
+    <span class="n">ds</span><span class="o">.</span><span class="n">TEMP_100m_mean</span><span class="o">.</span><span class="n">attrs</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">TEMP</span><span class="o">.</span><span class="n">attrs</span>
+    <span class="n">ds</span><span class="o">.</span><span class="n">TEMP_100m_mean</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;long_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Mean temperature over top 100m&#39;</span>
+
+    <span class="k">return</span> <span class="n">ds</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;TEMP&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Now apply this function to the dataset(s)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># compute top 100m temperature</span>
+<span class="n">dsets2</span> <span class="o">=</span> <span class="p">{</span><span class="n">key</span><span class="p">:</span> <span class="n">compute_TEMP_100m</span><span class="p">(</span><span class="n">ds</span><span class="p">)</span> <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">ds</span> <span class="ow">in</span> <span class="n">dsets2</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;computed top 100m temp&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="section" id="combine-the-datasets">
+<h3>Combine the datasets<a class="headerlink" href="#combine-the-datasets" title="Permalink to this headline">¶</a></h3>
+<p>Concatenate the datasets in time, i.e. 20C + RCP8.5 experiments.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ordered_dsets_keys</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;ocn,20C,pop.h&#39;</span><span class="p">,</span> <span class="s1">&#39;ocn,RCP85,pop.h&#39;</span><span class="p">]</span>
+<span class="c1">#ordered_dsets_keys = [&#39;ocn.20C.pop.h&#39;, &#39;ocn.RCP85.pop.h&#39;]</span>
+<span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span>
+    <span class="p">[</span><span class="n">dsets2</span><span class="p">[</span><span class="n">exp</span><span class="p">]</span> <span class="k">for</span> <span class="n">exp</span> <span class="ow">in</span> <span class="n">ordered_dsets_keys</span><span class="p">],</span>
+    <span class="n">dim</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">,</span>
+    <span class="n">data_vars</span><span class="o">=</span><span class="s1">&#39;minimal&#39;</span><span class="p">,</span>
+    <span class="c1">#compat=&#39;override&#39; ## added this</span>
+<span class="p">)</span>
+<span class="n">time_encoding</span> <span class="o">=</span> <span class="n">dsets2</span><span class="p">[</span><span class="n">ordered_dsets_keys</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">encoding</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="calculate-an-annual-mean">
+<h3>Calculate an annual mean<a class="headerlink" href="#calculate-an-annual-mean" title="Permalink to this headline">¶</a></h3>
+<p>Create an annual mean for temperature, using a <a class="reference external" href="https://github.com/matt-long/krill-cesm-le/blob/master/notebooks/util.py#L185">utility function</a> which deals with the times correctly.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ds_ann</span> <span class="o">=</span> <span class="n">util</span><span class="o">.</span><span class="n">ann_mean</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span> <span class="n">time_bnds_varname</span><span class="o">=</span><span class="s1">&#39;time_bound&#39;</span><span class="p">,</span> <span class="n">time_centered</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="write-the-dataset-to-disk">
+<h2>Write the dataset to disk<a class="headerlink" href="#write-the-dataset-to-disk" title="Permalink to this headline">¶</a></h2>
+<p>Here, we are just looking to write out a few of the variables.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="c1"># Create a list of variables to write out</span>
+<span class="n">keep_vars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;time_bound&#39;</span><span class="p">,</span> <span class="s1">&#39;TAREA&#39;</span><span class="p">,</span> <span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;dz&#39;</span><span class="p">,</span> <span class="s1">&#39;KMT&#39;</span><span class="p">,</span> <span class="s1">&#39;member_id&#39;</span><span class="p">,</span> <span class="s1">&#39;TLAT&#39;</span><span class="p">,</span> <span class="s1">&#39;TLONG&#39;</span><span class="p">,</span> <span class="s1">&#39;TEMP_100m_mean&#39;</span><span class="p">]</span>
+
+<span class="c1"># Subset for these variables</span>
+<span class="n">ds_out</span> <span class="o">=</span> <span class="n">ds_ann</span><span class="p">[</span><span class="n">keep_vars</span><span class="p">])</span>
+
+<span class="c1"># Run the computations</span>
+<span class="n">ds_out</span><span class="o">.</span><span class="n">compute</span><span class="p">()</span>
+
+<span class="c1"># Write out to scratch since this is likely a large file</span>
+<span class="n">ds_out</span><span class="o">.</span><span class="n">to_netcdf</span><span class="p">(</span><span class="s1">&#39;/glade/scratch/username/CESM-LE-output/CESM-LE-TEMP_100m_mean.nc&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>While this is a rather specific example, I hope this illustrates how useful <a class="reference external" href="https://github.com/intake/intake-esm">intake-esm</a> can be and the power of <a class="reference external" href="https://docs.dask.org/en/latest/">dask</a> for computing these computationally expensive calculations on large datasets.</p>
+</div>
+</div>
+
+<div class="section">
+     
+<div class="section">
+  <span style="float: left">
+     
+    <a href="../casper_pbs_dask/">
+      <i class="fa fa-arrow-circle-left"></i> Using Dask on the New Casper PBS Scheduler
+    </a>
+    
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right">
+     
+    <a href="../object-oriented-programming-tutorial/">
+      Object Oriented Programming Tutorial <i
+        class="fa fa-arrow-circle-right"
+      ></i
+      >
+    </a>
+    
+  </span>
+</div>
+  
+</div>
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-B50ZRRN69X"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('config', 'G-B50ZRRN69X');
+                </script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021, NCAR Earth System Data Science Team.<br/>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.4.<br/>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

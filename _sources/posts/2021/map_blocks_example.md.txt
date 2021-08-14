@@ -180,7 +180,7 @@ ylm = plt.ylim()
 plt.ylim(ylm[::-1]);
 ```
 
-![MLD example plot](images/mld_example_plot.png)
+![MLD example plot](../images/mld_example_plot.png)
 
 ## Running this on the Entire Dataset
 

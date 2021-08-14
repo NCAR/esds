@@ -2,12 +2,12 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2021-08-13T21:48:14.597544+00:00</updated>
+  <updated>2021-08-14T03:10:06.898020+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.19">ABlog</generator>
   <entry>
-    <id>ncar.github.io/esds/posts/Time/</id>
+    <id>ncar.github.io/esds/posts/2020/Time/</id>
     <title>The Significance of Time</title>
     <updated>2019-08-28T00:00:00+00:00</updated>
     <author>
@@ -16,7 +16,7 @@
     <content type="html">&lt;p&gt;Time is relative, as my coworker Anderson likes to remind me every time manipulating this coordinate proves to be relatively difficult.&lt;/p&gt;
 &lt;p&gt;This post is to be the first in a series of my struggles coming from an atmospheric science background and transitioning into software. My hope is that if I detail pain points and headaches I encounter along my journey, you won’t have to.&lt;/p&gt;
 </content>
-    <link href="ncar.github.io/esds/posts/Time/" rel="alternate"/>
+    <link href="ncar.github.io/esds/posts/2020/Time/" rel="alternate"/>
     <summary>Time is relative, as my coworker Anderson likes to remind me every time manipulating this coordinate proves to be relatively difficult.This post is to be the first in a series of my struggles coming from an atmospheric science background and transitioning into software. My hope is that if I detail pain points and headaches I encounter along my journey, you won’t have to.</summary>
     <category term="xarray" label="xarray"/>
     <category term="cftime" label="cftime"/>
@@ -24,7 +24,7 @@
     <published>2019-08-28T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>ncar.github.io/esds/posts/we-are-xdev/</id>
+    <id>ncar.github.io/esds/posts/2019/we-are-xdev/</id>
     <title>We are Xdev!</title>
     <updated>2019-12-09T00:00:00+00:00</updated>
     <author>
@@ -52,7 +52,7 @@ NCAR on how (and why) to use modern best practices (GitHub, continuous integrati
 test-driven development, etc.) for scientific software development. …and for
 science itself!&lt;/p&gt;
 </content>
-    <link href="ncar.github.io/esds/posts/we-are-xdev/" rel="alternate"/>
+    <link href="ncar.github.io/esds/posts/2019/we-are-xdev/" rel="alternate"/>
     <summary>More than a year ago, Matthew Long and
 I started shopping around the idea that a
 lot of what we do here at NCAR, as well as how we do
@@ -78,7 +78,7 @@ science itself!</summary>
     <published>2019-12-09T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>ncar.github.io/esds/posts/templating-isnt-just-for-web-developers/</id>
+    <id>ncar.github.io/esds/posts/2020/templating-isnt-just-for-web-developers/</id>
     <title>Templating isn’t just for Web Developers!</title>
     <updated>2020-05-08T00:00:00+00:00</updated>
     <author>
@@ -98,7 +98,7 @@ And if you aren’t an HTML expert, or already have experience with
 Flask or Django, teaching templating in those contexts can actually
 be more confusing than illuminating.&lt;/p&gt;
 </content>
-    <link href="ncar.github.io/esds/posts/templating-isnt-just-for-web-developers/" rel="alternate"/>
+    <link href="ncar.github.io/esds/posts/2020/templating-isnt-just-for-web-developers/" rel="alternate"/>
     <summary>Recently, I found myself rambling on in an unprepared attempt to
 explain templating to a colleague of mine who had no prior experience
 with frontend design. It didn’t take me long to realize that my
@@ -116,7 +116,7 @@ be more confusing than illuminating.</summary>
     <published>2020-05-08T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>ncar.github.io/esds/posts/writing-multiple-netcdf-files-in-parallel-with-xarray-and-dask/</id>
+    <id>ncar.github.io/esds/posts/2020/writing-multiple-netcdf-files-in-parallel-with-xarray-and-dask/</id>
     <title>Writing multiple netCDF files in parallel with xarray and dask</title>
     <updated>2020-06-29T00:00:00+00:00</updated>
     <author>
@@ -125,7 +125,7 @@ be more confusing than illuminating.</summary>
     <content type="html">&lt;p&gt;A typical computation workflow with xarray consists of:&lt;/p&gt;
 &lt;p&gt;reading one or more netCDF files into an xarray dataset backed by dask using &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;xr.open_mfdataset()&lt;/span&gt;&lt;/code&gt; or &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;xr.open_dataset(chunks=...)&lt;/span&gt;&lt;/code&gt;,&lt;/p&gt;
 </content>
-    <link href="ncar.github.io/esds/posts/writing-multiple-netcdf-files-in-parallel-with-xarray-and-dask/" rel="alternate"/>
+    <link href="ncar.github.io/esds/posts/2020/writing-multiple-netcdf-files-in-parallel-with-xarray-and-dask/" rel="alternate"/>
     <summary>A typical computation workflow with xarray consists of:reading one or more netCDF files into an xarray dataset backed by dask using xr.open_mfdataset() or xr.open_dataset(chunks=...),</summary>
     <category term="python" label="python"/>
     <category term="xarray" label="xarray"/>
@@ -134,7 +134,7 @@ be more confusing than illuminating.</summary>
     <published>2020-06-29T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>ncar.github.io/esds/posts/tutorial-seminar-series/</id>
+    <id>ncar.github.io/esds/posts/2020/tutorial-seminar-series/</id>
     <title>Tutorial Seminar Series</title>
     <updated>2020-09-18T00:00:00+00:00</updated>
     <author>
@@ -143,13 +143,13 @@ be more confusing than illuminating.</summary>
     <content type="html">&lt;p&gt;Because we are unable to host an in-person tutorial for this fall season, the Xdev team has decided to switch to a virtual seminar series. We will be hosting one hour tutorial sessions scheduled for the 2nd and 4th Wednesdays of each month at 1 PM Mountain starting in October. The first tutorial session, covering how to create your first Python script, will be on October 14th. Some tutorials will be 1-off seminars on specific topics, while others will span multiple seminar sessions.&lt;/p&gt;
 &lt;p&gt;Remote tutorials offer their own challenges; no one from our team can walk around the room to notice if anyone needs technical help or one-on-one assistance during a challenging topic. We believe that one hour sessions make it easier for participants to reach out and get the help they need to catch up before the next session of a multi-part seminar, so that we can more effectively reach our education goals.&lt;/p&gt;
 </content>
-    <link href="ncar.github.io/esds/posts/tutorial-seminar-series/" rel="alternate"/>
+    <link href="ncar.github.io/esds/posts/2020/tutorial-seminar-series/" rel="alternate"/>
     <summary>Because we are unable to host an in-person tutorial for this fall season, the Xdev team has decided to switch to a virtual seminar series. We will be hosting one hour tutorial sessions scheduled for the 2nd and 4th Wednesdays of each month at 1 PM Mountain starting in October. The first tutorial session, covering how to create your first Python script, will be on October 14th. Some tutorials will be 1-off seminars on specific topics, while others will span multiple seminar sessions.Remote tutorials offer their own challenges; no one from our team can walk around the room to notice if anyone needs technical help or one-on-one assistance during a challenging topic. We believe that one hour sessions make it easier for participants to reach out and get the help they need to catch up before the next session of a multi-part seminar, so that we can more effectively reach our education goals.</summary>
     <category term="python-tutorial-series" label="python-tutorial-series"/>
     <published>2020-09-18T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>ncar.github.io/esds/posts/python-tutorial-faq/</id>
+    <id>ncar.github.io/esds/posts/2020/python-tutorial-faq/</id>
     <title>Python Tutorial FAQ</title>
     <updated>2020-10-20T00:00:00+00:00</updated>
     <author>
@@ -160,7 +160,7 @@ be more confusing than illuminating.</summary>
 &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;curl&lt;/span&gt; &lt;span class="pre"&gt;-kO&lt;/span&gt; &lt;span class="pre"&gt;https://sundowner.colorado.edu/weather/atoc8/wxobs20170821.txt&lt;/span&gt;&lt;/code&gt;.
 What should I do?&lt;/p&gt;
 </content>
-    <link href="ncar.github.io/esds/posts/python-tutorial-faq/" rel="alternate"/>
+    <link href="ncar.github.io/esds/posts/2020/python-tutorial-faq/" rel="alternate"/>
     <summary>Here is a compilation of questions and issues that arose during the first session of the Python Tutorial Seminar Series. Hopefully all attendees feel that their issues are addressed here.Q. I am having issues running the command:
 curl -kO https://sundowner.colorado.edu/weather/atoc8/wxobs20170821.txt.
 What should I do?</summary>
@@ -170,7 +170,7 @@ What should I do?</summary>
     <published>2020-10-20T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>ncar.github.io/esds/posts/python-tutorial-faq-part-2/</id>
+    <id>ncar.github.io/esds/posts/2020/python-tutorial-faq-part-2/</id>
     <title>Python Tutorial FAQ - Part 2</title>
     <updated>2020-11-05T00:00:00+00:00</updated>
     <author>
@@ -179,7 +179,7 @@ What should I do?</summary>
     <content type="html">&lt;p&gt;Here is a compilation of questions and issues that arose during the second session of the Python Tutorial Seminar Series, on creating a data dictionary. After this first short series, these FAQ sections will be added to the &lt;a class="reference external" href="https://ncar.github.io/python-tutorial/"&gt;Xdev tutorial website&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Q.&lt;/strong&gt; Why is &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;list[0:10]&lt;/span&gt;&lt;/code&gt; the first 10 elements, not 11?&lt;/p&gt;
 </content>
-    <link href="ncar.github.io/esds/posts/python-tutorial-faq-part-2/" rel="alternate"/>
+    <link href="ncar.github.io/esds/posts/2020/python-tutorial-faq-part-2/" rel="alternate"/>
     <summary>Here is a compilation of questions and issues that arose during the second session of the Python Tutorial Seminar Series, on creating a data dictionary. After this first short series, these FAQ sections will be added to the Xdev tutorial websiteQ. Why is list[0:10] the first 10 elements, not 11?</summary>
     <category term="python-tutorial-series" label="python-tutorial-series"/>
     <category term="faq" label="faq"/>
@@ -187,7 +187,7 @@ What should I do?</summary>
     <published>2020-11-05T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>ncar.github.io/esds/posts/python-tutorial-faq-part-3/</id>
+    <id>ncar.github.io/esds/posts/2020/python-tutorial-faq-part-3/</id>
     <title>Python Tutorial FAQ - Part 3</title>
     <updated>2020-11-18T00:00:00+00:00</updated>
     <author>
@@ -196,7 +196,7 @@ What should I do?</summary>
     <content type="html">&lt;p&gt;Here is a compilation of questions from the third session of the Python Tutorial Seminar Series which covered writing functions as well as f-string formatting.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Q.&lt;/strong&gt; Seeing how &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;2/2&lt;/span&gt;&lt;/code&gt; returns &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;1.0&lt;/span&gt;&lt;/code&gt; instead of &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;1&lt;/span&gt;&lt;/code&gt;, is the numeric type automatically determined from the inputs or do you have to force it?&lt;/p&gt;
 </content>
-    <link href="ncar.github.io/esds/posts/python-tutorial-faq-part-3/" rel="alternate"/>
+    <link href="ncar.github.io/esds/posts/2020/python-tutorial-faq-part-3/" rel="alternate"/>
     <summary>Here is a compilation of questions from the third session of the Python Tutorial Seminar Series which covered writing functions as well as f-string formatting.Q. Seeing how 2/2 returns 1.0 instead of 1, is the numeric type automatically determined from the inputs or do you have to force it?</summary>
     <category term="python-tutorial-series" label="python-tutorial-series"/>
     <category term="faq" label="faq"/>
@@ -204,7 +204,7 @@ What should I do?</summary>
     <published>2020-11-18T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>ncar.github.io/esds/posts/python-tutorial-seminar-series-spring-2021/</id>
+    <id>ncar.github.io/esds/posts/2021/python-tutorial-seminar-series-spring-2021/</id>
     <title>Python Tutorial Seminar Series - Spring 2021</title>
     <updated>2021-02-16T00:00:00+00:00</updated>
     <author>
@@ -213,13 +213,13 @@ What should I do?</summary>
     <content type="html">&lt;p&gt;The “Your First” Python Tutorial Series is over, but the tutorial seminar series continues.&lt;/p&gt;
 &lt;p&gt;All events are at 1 PM Mountain&lt;/p&gt;
 </content>
-    <link href="ncar.github.io/esds/posts/python-tutorial-seminar-series-spring-2021/" rel="alternate"/>
+    <link href="ncar.github.io/esds/posts/2021/python-tutorial-seminar-series-spring-2021/" rel="alternate"/>
     <summary>The “Your First” Python Tutorial Series is over, but the tutorial seminar series continues.All events are at 1 PM Mountain</summary>
     <category term="python-tutorial-series" label="python-tutorial-series"/>
     <published>2021-02-16T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>ncar.github.io/esds/posts/your-first-package-python-tutorial-faq/</id>
+    <id>ncar.github.io/esds/posts/2021/your-first-package-python-tutorial-faq/</id>
     <title>Your First Package Python Tutorial FAQ</title>
     <updated>2021-02-19T00:00:00+00:00</updated>
     <author>
@@ -228,14 +228,14 @@ What should I do?</summary>
     <content type="html">&lt;p&gt;Here is a compilation of questions from the fourth and fifth sessions (&lt;a class="reference external" href="https://ncar.github.io/python-tutorial/tutorials/yourfirst.html#first-python-package"&gt;“Your First Package”&lt;/a&gt;) of the Python Tutorial Seminar Series which covered refactoring code into seperate modules and packages, using an external built-in module (&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;math&lt;/span&gt;&lt;/code&gt;), and how to publish your package&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Q.&lt;/strong&gt; Should we add &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;__init__.py&lt;/span&gt;&lt;/code&gt; to &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;.gitignore&lt;/span&gt;&lt;/code&gt;?&lt;/p&gt;
 </content>
-    <link href="ncar.github.io/esds/posts/your-first-package-python-tutorial-faq/" rel="alternate"/>
+    <link href="ncar.github.io/esds/posts/2021/your-first-package-python-tutorial-faq/" rel="alternate"/>
     <summary>Here is a compilation of questions from the fourth and fifth sessions (“Your First Package”) of the Python Tutorial Seminar Series which covered refactoring code into seperate modules and packages, using an external built-in module (math), and how to publish your packageQ. Should we add __init__.py to .gitignore?</summary>
     <category term="python-tutorial-series" label="python-tutorial-series"/>
     <category term="faq" label="faq"/>
     <published>2021-02-19T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>ncar.github.io/esds/posts/numpy-tutorial/</id>
+    <id>ncar.github.io/esds/posts/2021/numpy-tutorial/</id>
     <title>Numpy Tutorial</title>
     <updated>2021-02-26T00:00:00+00:00</updated>
     <author>
@@ -244,13 +244,13 @@ What should I do?</summary>
     <content type="html">&lt;p&gt;The NCAR/UCAR virtual Python Tutorial Seminar Series continues with an introduction to the Python package &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;numpy&lt;/span&gt;&lt;/code&gt; on &lt;strong&gt;Wednesday, March 10th at 1 PM Mountain&lt;/strong&gt;. This session will be led by Austin Kootz.&lt;/p&gt;
 &lt;p&gt;Check your conda install if this is the first tutorial in the series you are joining us for with &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;conda&lt;/span&gt; &lt;span class="pre"&gt;--version&lt;/span&gt;&lt;/code&gt; and if necessary &lt;a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html"&gt;install by following these instructions&lt;/a&gt;&lt;/p&gt;
 </content>
-    <link href="ncar.github.io/esds/posts/numpy-tutorial/" rel="alternate"/>
+    <link href="ncar.github.io/esds/posts/2021/numpy-tutorial/" rel="alternate"/>
     <summary>The NCAR/UCAR virtual Python Tutorial Seminar Series continues with an introduction to the Python package numpy on Wednesday, March 10th at 1 PM Mountain. This session will be led by Austin Kootz.Check your conda install if this is the first tutorial in the series you are joining us for with conda --version and if necessary install by following these instructions</summary>
     <category term="python-tutorial-series" label="python-tutorial-series"/>
     <published>2021-02-26T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>ncar.github.io/esds/posts/jupyter-notebooks-faq/</id>
+    <id>ncar.github.io/esds/posts/2021/jupyter-notebooks-faq/</id>
     <title>Jupyter Notebooks Tutorial FAQ</title>
     <updated>2021-03-03T00:00:00+00:00</updated>
     <author>
@@ -259,7 +259,7 @@ What should I do?</summary>
     <content type="html">&lt;p&gt;Here is a compilation of questions and issues that arose during the &lt;a class="reference external" href="https://youtu.be/xSzXvwzFsDU"&gt;Jupyter Notebooks&lt;/a&gt; session of the Python Tutorial Seminar Series.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Q.&lt;/strong&gt; I installed Miniconda but it doesn’t seem to be working. &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;conda&lt;/span&gt;&lt;/code&gt; is not a recognized command. What should I do?&lt;/p&gt;
 </content>
-    <link href="ncar.github.io/esds/posts/jupyter-notebooks-faq/" rel="alternate"/>
+    <link href="ncar.github.io/esds/posts/2021/jupyter-notebooks-faq/" rel="alternate"/>
     <summary>Here is a compilation of questions and issues that arose during the Jupyter Notebooks session of the Python Tutorial Seminar Series.Q. I installed Miniconda but it doesn’t seem to be working. conda is not a recognized command. What should I do?</summary>
     <category term="python-tutorial-series" label="python-tutorial-series"/>
     <category term="faq" label="faq"/>
@@ -267,7 +267,7 @@ What should I do?</summary>
     <published>2021-03-03T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>ncar.github.io/esds/posts/Interactive_Dashboard/</id>
+    <id>ncar.github.io/esds/posts/2021/Interactive_Dashboard/</id>
     <title>HiRes-CESM Interactive Dashboard Example</title>
     <updated>2021-03-19T00:00:00+00:00</updated>
     <author>
@@ -276,14 +276,14 @@ What should I do?</summary>
     <content type="html">&lt;p&gt;In this example, our goal is to create an interactive dashboard, using images already output on a remote server.&lt;/p&gt;
 &lt;p&gt;We are specifically interested in looking at plots created using the &lt;a class="reference external" href="https://github.com/marbl-ecosys/HiRes-CESM-analysis"&gt;HighRes-CESM-Analysis&lt;/a&gt; repository.&lt;/p&gt;
 &lt;img alt="https://img.shields.io/badge/%E2%86%91_Deploy_to-Heroku-7056bf.svg" src="http://img.shields.io/badge/%E2%86%91_launch_dashboard_on-Heroku-7056bf.svg" /&gt;</content>
-    <link href="ncar.github.io/esds/posts/Interactive_Dashboard/" rel="alternate"/>
+    <link href="ncar.github.io/esds/posts/2021/Interactive_Dashboard/" rel="alternate"/>
     <summary>In this example, our goal is to create an interactive dashboard, using images already output on a remote server.We are specifically interested in looking at plots created using the HighRes-CESM-Analysis repository.https://img.shields.io/badge/%E2%86%91_Deploy_to-Heroku-7056bf.svg</summary>
     <category term="dashboard" label="dashboard"/>
     <category term="jupyter" label="jupyter"/>
     <published>2021-03-19T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>ncar.github.io/esds/posts/matplotlib-tutorial/</id>
+    <id>ncar.github.io/esds/posts/2021/matplotlib-tutorial/</id>
     <title>Matplotlib Tutorial</title>
     <updated>2021-03-19T00:00:00+00:00</updated>
     <author>
@@ -292,13 +292,13 @@ What should I do?</summary>
     <content type="html">&lt;p&gt;The NCAR/UCAR virtual Python Tutorial Seminar Series continues with an introduction to the Python package &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;matplotlib&lt;/span&gt;&lt;/code&gt; on &lt;strong&gt;Wednesday, March 24th at 1 PM Mountain&lt;/strong&gt;. This session will be led by Anissa Zacharias.&lt;/p&gt;
 &lt;p&gt;The content for this tutorial is hosted on Anissa’s &lt;a class="reference external" href="https://github.com/anissa111/matplotlib-tutorial"&gt;matplotlib-tutorial GitHub repository&lt;/a&gt;. Primarily direct your attention to the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;matplotlib-tutorial.ipynb&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
 </content>
-    <link href="ncar.github.io/esds/posts/matplotlib-tutorial/" rel="alternate"/>
+    <link href="ncar.github.io/esds/posts/2021/matplotlib-tutorial/" rel="alternate"/>
     <summary>The NCAR/UCAR virtual Python Tutorial Seminar Series continues with an introduction to the Python package matplotlib on Wednesday, March 24th at 1 PM Mountain. This session will be led by Anissa Zacharias.The content for this tutorial is hosted on Anissa’s matplotlib-tutorial GitHub repository. Primarily direct your attention to the matplotlib-tutorial.ipynb.</summary>
     <category term="python-tutorial-series" label="python-tutorial-series"/>
     <published>2021-03-19T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>ncar.github.io/esds/posts/numpy-faq/</id>
+    <id>ncar.github.io/esds/posts/2021/numpy-faq/</id>
     <title>NumPy Tutorial FAQ</title>
     <updated>2021-03-19T00:00:00+00:00</updated>
     <author>
@@ -307,7 +307,7 @@ What should I do?</summary>
     <content type="html">&lt;p&gt;Here is a compilation of questions and issues that arose during the &lt;a class="reference external" href="https://colab.research.google.com/drive/1zcjaGXofLzUXkQzJKnANE9Z3yFUt0q7E?usp=sharing"&gt;Numpy&lt;/a&gt; session of the Python Tutorial Seminar Series.&lt;/p&gt;
 &lt;p&gt;The live video recording of this content can be found &lt;a class="reference external" href="https://www.youtube.com/watch?v=kstc-6uz7AQ&amp;amp;t=10s"&gt;here&lt;/a&gt;.&lt;/p&gt;
 </content>
-    <link href="ncar.github.io/esds/posts/numpy-faq/" rel="alternate"/>
+    <link href="ncar.github.io/esds/posts/2021/numpy-faq/" rel="alternate"/>
     <summary>Here is a compilation of questions and issues that arose during the Numpy session of the Python Tutorial Seminar Series.The live video recording of this content can be found here.</summary>
     <category term="python-tutorial-series" label="python-tutorial-series"/>
     <category term="faq" label="faq"/>
@@ -315,7 +315,7 @@ What should I do?</summary>
     <published>2021-03-19T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>ncar.github.io/esds/posts/esds-blog/</id>
+    <id>ncar.github.io/esds/posts/2021/esds-blog/</id>
     <title>NCAR-CGD ESDS Town Hall</title>
     <updated>2021-03-26T00:00:00+00:00</updated>
     <author>
@@ -324,7 +324,7 @@ What should I do?</summary>
     <content type="html">&lt;p&gt;Last week, there was a town hall focused on gathering input on the Earth System Data Science initiative at NCAR. The meeting began with an introduction about the initiative, the vision, goals, and how the team is planning to start working toward these goals.&lt;/p&gt;
 &lt;p&gt;The Question/Answer portion of the town hall was very informative and brought up some great topics for discussion. They have been collected from both the chat and Google Doc, sorted by category.&lt;/p&gt;
 </content>
-    <link href="ncar.github.io/esds/posts/esds-blog/" rel="alternate"/>
+    <link href="ncar.github.io/esds/posts/2021/esds-blog/" rel="alternate"/>
     <summary>Last week, there was a town hall focused on gathering input on the Earth System Data Science initiative at NCAR. The meeting began with an introduction about the initiative, the vision, goals, and how the team is planning to start working toward these goals.The Question/Answer portion of the town hall was very informative and brought up some great topics for discussion. They have been collected from both the chat and Google Doc, sorted by category.</summary>
     <category term="townhall" label="townhall"/>
     <category term="cgd" label="cgd"/>
@@ -332,7 +332,7 @@ What should I do?</summary>
     <published>2021-03-26T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>ncar.github.io/esds/posts/matplotlib-faq/</id>
+    <id>ncar.github.io/esds/posts/2021/matplotlib-faq/</id>
     <title>Matplotlib Tutorial FAQ</title>
     <updated>2021-03-30T00:00:00+00:00</updated>
     <author>
@@ -341,7 +341,7 @@ What should I do?</summary>
     <content type="html">&lt;p&gt;Here is a compilation of questions and issues that arose during the &lt;a class="reference external" href="https://www.youtube.com/watch?v=EiPRIdHQEmE"&gt;Matplotlib&lt;/a&gt; session of the Python Tutorial Seminar Series.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Q.&lt;/strong&gt; Are all the colormaps perceptually ordered?&lt;/p&gt;
 </content>
-    <link href="ncar.github.io/esds/posts/matplotlib-faq/" rel="alternate"/>
+    <link href="ncar.github.io/esds/posts/2021/matplotlib-faq/" rel="alternate"/>
     <summary>Here is a compilation of questions and issues that arose during the Matplotlib session of the Python Tutorial Seminar Series.Q. Are all the colormaps perceptually ordered?</summary>
     <category term="python-tutorial-series" label="python-tutorial-series"/>
     <category term="faq" label="faq"/>
@@ -349,7 +349,7 @@ What should I do?</summary>
     <published>2021-03-30T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>ncar.github.io/esds/posts/software-citation/</id>
+    <id>ncar.github.io/esds/posts/2021/software-citation/</id>
     <title>The Importance of Software Citation</title>
     <updated>2021-04-02T00:00:00+00:00</updated>
     <author>
@@ -358,7 +358,7 @@ What should I do?</summary>
     <content type="html">&lt;p&gt;One of the questions that came up during the &lt;a class="reference external" href="https://ncar.github.io/esds/posts/esds-blog/"&gt;ESDS Town Hall&lt;/a&gt; was how do scientists/developers get credit toward their efforts in developing open-source code? Software that is used by the wider community should received the acknowledgment and recognition it deserves.&lt;/p&gt;
 &lt;p&gt;Data and academic publication citations have become popular in the literature, but often times, software is not cited… which can be arguably just as important to the work as the data.&lt;/p&gt;
 </content>
-    <link href="ncar.github.io/esds/posts/software-citation/" rel="alternate"/>
+    <link href="ncar.github.io/esds/posts/2021/software-citation/" rel="alternate"/>
     <summary>One of the questions that came up during the ESDS Town Hall was how do scientists/developers get credit toward their efforts in developing open-source code? Software that is used by the wider community should received the acknowledgment and recognition it deserves.Data and academic publication citations have become popular in the literature, but often times, software is not cited… which can be arguably just as important to the work as the data.</summary>
     <category term="open-science" label="open-science"/>
     <category term="citation" label="citation"/>
@@ -366,7 +366,7 @@ What should I do?</summary>
     <published>2021-04-02T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>ncar.github.io/esds/posts/casper_pbs_dask/</id>
+    <id>ncar.github.io/esds/posts/2021/casper_pbs_dask/</id>
     <title>Using Dask on the New Casper PBS Scheduler</title>
     <updated>2021-04-06T00:00:00+00:00</updated>
     <author>
@@ -375,14 +375,14 @@ What should I do?</summary>
     <content type="html">&lt;p&gt;Casper will complete a transition from Slurm to the PBS Pro workload manager on April 7, 2021. This has implications for how to spin up a Dask cluster, including via the &lt;a class="reference external" href="https://jupyterhub.ucar.edu"&gt;NCAR Jupyterhub&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Below is an example script suitable for the new configuration using the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;PBSCluster&lt;/span&gt;&lt;/code&gt; function from &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;dask_jobqueue&lt;/span&gt;&lt;/code&gt;. Note that the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;ncar_jobqueue&lt;/span&gt;&lt;/code&gt; package &lt;a class="reference external" href="https://github.com/NCAR/ncar-jobqueue/issues/40"&gt;requires updating&lt;/a&gt; to work with the new configuration.&lt;/p&gt;
 </content>
-    <link href="ncar.github.io/esds/posts/casper_pbs_dask/" rel="alternate"/>
+    <link href="ncar.github.io/esds/posts/2021/casper_pbs_dask/" rel="alternate"/>
     <summary>Casper will complete a transition from Slurm to the PBS Pro workload manager on April 7, 2021. This has implications for how to spin up a Dask cluster, including via the NCAR Jupyterhub.Below is an example script suitable for the new configuration using the PBSCluster function from dask_jobqueue. Note that the ncar_jobqueue package requires updating to work with the new configuration.</summary>
     <category term="jupyterhub" label="jupyterhub"/>
     <category term="dask" label="dask"/>
     <published>2021-04-06T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>ncar.github.io/esds/posts/intake_esm_dask/</id>
+    <id>ncar.github.io/esds/posts/2021/intake_esm_dask/</id>
     <title>An Example of Using Intake-ESM</title>
     <updated>2021-04-09T00:00:00+00:00</updated>
     <author>
@@ -391,7 +391,7 @@ What should I do?</summary>
     <content type="html">&lt;p&gt;This past week, NCAR CISL updated the Casper Node to use PBS instead of Slurm for scheduling jobs. This led a post in which an example of spinning up dask clusters on the new configuration. This was also an opportunity to dig into dask, and try applying it to a sample task, specifically looking at ecosystem variables in the CESM-LE dataset, using notebooks included in Matt Long’s &lt;a class="reference external" href="https://github.com/matt-long/krill-cesm-le"&gt;krill-cesm-le repository&lt;/a&gt;, modified by Kristen Krumhardt.&lt;/p&gt;
 &lt;p&gt;Here, we spin up our dask cluster. At first, running this notebook resulted in a &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;killed&lt;/span&gt; &lt;span class="pre"&gt;worker&lt;/span&gt;&lt;/code&gt; error. After further expection, we noticed that additional resources would be needed to read in the notebook since the data are so large (on the order of ~1-2 TB). Increasing the individual worker to a higher amount (ex. 256 GB) solved the issue. Scale up to as many workers as you think are neccessary for the calculation (this may take some trial and error).&lt;/p&gt;
 </content>
-    <link href="ncar.github.io/esds/posts/intake_esm_dask/" rel="alternate"/>
+    <link href="ncar.github.io/esds/posts/2021/intake_esm_dask/" rel="alternate"/>
     <summary>This past week, NCAR CISL updated the Casper Node to use PBS instead of Slurm for scheduling jobs. This led a post in which an example of spinning up dask clusters on the new configuration. This was also an opportunity to dig into dask, and try applying it to a sample task, specifically looking at ecosystem variables in the CESM-LE dataset, using notebooks included in Matt Long’s krill-cesm-le repository, modified by Kristen Krumhardt.Here, we spin up our dask cluster. At first, running this notebook resulted in a killed worker error. After further expection, we noticed that additional resources would be needed to read in the notebook since the data are so large (on the order of ~1-2 TB). Increasing the individual worker to a higher amount (ex. 256 GB) solved the issue. Scale up to as many workers as you think are neccessary for the calculation (this may take some trial and error).</summary>
     <category term="dask" label="dask"/>
     <category term="intake" label="intake"/>
@@ -399,7 +399,7 @@ What should I do?</summary>
     <published>2021-04-09T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>ncar.github.io/esds/posts/object-oriented-programming-tutorial/</id>
+    <id>ncar.github.io/esds/posts/2021/object-oriented-programming-tutorial/</id>
     <title>Object Oriented Programming Tutorial</title>
     <updated>2021-04-09T00:00:00+00:00</updated>
     <author>
@@ -408,13 +408,13 @@ What should I do?</summary>
     <content type="html">&lt;p&gt;The NCAR/UCAR virtual Python Tutorial Seminar Series continues with an introduction to Object Oriented Programming on &lt;strong&gt;Wednesday, April 14th at 1 PM Mountain&lt;/strong&gt;. This session will be led by Austin Kootz.&lt;/p&gt;
 &lt;p&gt;The content for this tutorial is hosted on Austin’s &lt;a class="reference external" href="https://github.com/pilotchute/oop_hrrr_tutorial"&gt;oop_hrrr_tutorial GitHub repository&lt;/a&gt;.&lt;/p&gt;
 </content>
-    <link href="ncar.github.io/esds/posts/object-oriented-programming-tutorial/" rel="alternate"/>
+    <link href="ncar.github.io/esds/posts/2021/object-oriented-programming-tutorial/" rel="alternate"/>
     <summary>The NCAR/UCAR virtual Python Tutorial Seminar Series continues with an introduction to Object Oriented Programming on Wednesday, April 14th at 1 PM Mountain. This session will be led by Austin Kootz.The content for this tutorial is hosted on Austin’s oop_hrrr_tutorial GitHub repository.</summary>
     <category term="python-tutorial-series" label="python-tutorial-series"/>
     <published>2021-04-09T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>ncar.github.io/esds/posts/ncar-jobqueue-example/</id>
+    <id>ncar.github.io/esds/posts/2021/ncar-jobqueue-example/</id>
     <title>NCAR-Jobqueue</title>
     <updated>2021-04-15T00:00:00+00:00</updated>
     <author>
@@ -423,7 +423,7 @@ What should I do?</summary>
     <content type="html">&lt;p&gt;Last week, we added posts detailing how to configure &lt;a class="reference external" href="https://docs.dask.org/en/latest/"&gt;Dask&lt;/a&gt; using the new PBS scheduler on &lt;a class="reference external" href="https://www2.cisl.ucar.edu/resources/computational-systems/casper"&gt;Casper&lt;/a&gt;. In this week’s example, we provide an example of the recent updates to &lt;a class="reference external" href="https://github.com/NCAR/ncar-jobqueue"&gt;ncar-jobqueue&lt;/a&gt;, added by &lt;a class="reference external" href="https://github.com/andersy005"&gt;Anderson Banihirwe&lt;/a&gt;, which allow users to easily configure dask on Casper without having to add many extra steps.&lt;/p&gt;
 &lt;p&gt;You must update the package to use the newest updates. You can update using conda!&lt;/p&gt;
 </content>
-    <link href="ncar.github.io/esds/posts/ncar-jobqueue-example/" rel="alternate"/>
+    <link href="ncar.github.io/esds/posts/2021/ncar-jobqueue-example/" rel="alternate"/>
     <summary>Last week, we added posts detailing how to configure Dask using the new PBS scheduler on Casper. In this week’s example, we provide an example of the recent updates to ncar-jobqueue, added by Anderson Banihirwe, which allow users to easily configure dask on Casper without having to add many extra steps.You must update the package to use the newest updates. You can update using conda!</summary>
     <category term="jupyterhub" label="jupyterhub"/>
     <category term="dask" label="dask"/>
@@ -431,7 +431,7 @@ What should I do?</summary>
     <published>2021-04-15T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>ncar.github.io/esds/posts/multiple_index_xarray_xoak/</id>
+    <id>ncar.github.io/esds/posts/2021/multiple_index_xarray_xoak/</id>
     <title>Indexing unstructured grids with the Power of Xoak</title>
     <updated>2021-04-23T00:00:00+00:00</updated>
     <author>
@@ -440,7 +440,7 @@ What should I do?</summary>
     <content type="html">&lt;p&gt;This week, there a post within the Zulip regarding how to deal with indexing &lt;a class="reference external" href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2017MS001257"&gt;CAM-SE&lt;/a&gt; data. The tricky part here is that is an unstructured grid, where there is only one column to the data, &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;ncol&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Here is an example of the dataset we are working with. Notice that both lat and lon have the same dimension, &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;ncol&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
 </content>
-    <link href="ncar.github.io/esds/posts/multiple_index_xarray_xoak/" rel="alternate"/>
+    <link href="ncar.github.io/esds/posts/2021/multiple_index_xarray_xoak/" rel="alternate"/>
     <summary>This week, there a post within the Zulip regarding how to deal with indexing CAM-SE data. The tricky part here is that is an unstructured grid, where there is only one column to the data, ncol.Here is an example of the dataset we are working with. Notice that both lat and lon have the same dimension, ncol.</summary>
     <category term="xarray" label="xarray"/>
     <category term="xoak" label="xoak"/>
@@ -448,7 +448,7 @@ What should I do?</summary>
     <published>2021-04-23T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>ncar.github.io/esds/posts/cartopy-tutorial/</id>
+    <id>ncar.github.io/esds/posts/2021/cartopy-tutorial/</id>
     <title>Cartopy Tutorial</title>
     <updated>2021-04-26T00:00:00+00:00</updated>
     <author>
@@ -457,13 +457,13 @@ What should I do?</summary>
     <content type="html">&lt;p&gt;The NCAR/UCAR virtual Python Tutorial Seminar Series continues with an introduction to the Python package &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;cartopy&lt;/span&gt;&lt;/code&gt; on &lt;strong&gt;Wednesday, April 28th at 1 PM Mountain&lt;/strong&gt;. This session will be led by Michaela Sizemore.&lt;/p&gt;
 &lt;p&gt;The content for this tutorial is hosted on Michaelsa’s &lt;a class="reference external" href="https://github.com/michaelavs/cartopy_tutorial"&gt;Cartopy Tutorial Github Repository&lt;/a&gt;&lt;/p&gt;
 </content>
-    <link href="ncar.github.io/esds/posts/cartopy-tutorial/" rel="alternate"/>
+    <link href="ncar.github.io/esds/posts/2021/cartopy-tutorial/" rel="alternate"/>
     <summary>The NCAR/UCAR virtual Python Tutorial Seminar Series continues with an introduction to the Python package cartopy on Wednesday, April 28th at 1 PM Mountain. This session will be led by Michaela Sizemore.The content for this tutorial is hosted on Michaelsa’s Cartopy Tutorial Github Repository</summary>
     <category term="python-tutorial-series" label="python-tutorial-series"/>
     <published>2021-04-26T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>ncar.github.io/esds/posts/map_blocks_example/</id>
+    <id>ncar.github.io/esds/posts/2021/map_blocks_example/</id>
     <title>How to Use xarray.map_blocks for Vertical Interpolation of a 3D Field</title>
     <updated>2021-04-28T00:00:00+00:00</updated>
     <author>
@@ -473,7 +473,7 @@ What should I do?</summary>
 &lt;p&gt;This calculation is “embarassingly parallel” such that each calculation is done within a single a column. The calculation &lt;strong&gt;&lt;em&gt;should&lt;/em&gt;&lt;/strong&gt; be easily computed within each column across the model domain. This is where &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;map_blocks&lt;/span&gt;&lt;/code&gt; can be used to improve the performance of this metric.&lt;/p&gt;
 &lt;img alt="MLD example plot" src="../_images/mld_example_plot.png" /&gt;
 </content>
-    <link href="ncar.github.io/esds/posts/map_blocks_example/" rel="alternate"/>
+    <link href="ncar.github.io/esds/posts/2021/map_blocks_example/" rel="alternate"/>
     <summary>Within this example, we cover how to use xarray.map_blocks to calculate the mixed-layer depth within the CESM POP model output.This calculation is “embarassingly parallel” such that each calculation is done within a single a column. The calculation should be easily computed within each column across the model domain. This is where map_blocks can be used to improve the performance of this metric.MLD example plot</summary>
     <category term="xarray" label="xarray"/>
     <category term="dask" label="dask"/>
@@ -481,7 +481,7 @@ What should I do?</summary>
     <published>2021-04-28T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>ncar.github.io/esds/posts/paired_programming_vs/</id>
+    <id>ncar.github.io/esds/posts/2021/paired_programming_vs/</id>
     <title>Paired Programming using VS Code</title>
     <updated>2021-05-06T00:00:00+00:00</updated>
     <author>
@@ -490,7 +490,7 @@ What should I do?</summary>
     <content type="html">&lt;p&gt;A common task when developing notebooks or packages is collaborating with others. It can be challenging to do this when using JupyterHub since two people cannot access the same notebook at same time. One solution to this is to use Visual Studio Code (VS Code) to remotely access Casper/Cheyenne, use a virtual meeting plaform (Zoom, Google Meet), and interactively collaborate on development.&lt;/p&gt;
 &lt;p&gt;This process includes a few steps:&lt;/p&gt;
 </content>
-    <link href="ncar.github.io/esds/posts/paired_programming_vs/" rel="alternate"/>
+    <link href="ncar.github.io/esds/posts/2021/paired_programming_vs/" rel="alternate"/>
     <summary>A common task when developing notebooks or packages is collaborating with others. It can be challenging to do this when using JupyterHub since two people cannot access the same notebook at same time. One solution to this is to use Visual Studio Code (VS Code) to remotely access Casper/Cheyenne, use a virtual meeting plaform (Zoom, Google Meet), and interactively collaborate on development.This process includes a few steps:</summary>
     <category term="editor" label="editor"/>
     <category term="paired-programming" label="paired-programming"/>
@@ -498,7 +498,7 @@ What should I do?</summary>
     <published>2021-05-06T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>ncar.github.io/esds/posts/git-and-github-tutorial/</id>
+    <id>ncar.github.io/esds/posts/2021/git-and-github-tutorial/</id>
     <title>Git and GitHub Tutorial</title>
     <updated>2021-05-07T00:00:00+00:00</updated>
     <author>
@@ -507,13 +507,13 @@ What should I do?</summary>
     <content type="html">&lt;p&gt;The NCAR/UCAR virtual Python Tutorial Seminar Series continues with an introduction to the Python package &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;Git&lt;/span&gt;&lt;/code&gt; and &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;GitHub&lt;/span&gt;&lt;/code&gt; on &lt;strong&gt;Wednesday, May 12th at 1 PM Mountain&lt;/strong&gt;. This session will be led by Kevin Paul.&lt;/p&gt;
 &lt;p&gt;The purpose of this seminar is to cover just some of the common content needed to understand and use git and GitHub for collaboration on software. This is not meant to be an introduction to git or GitHub.&lt;/p&gt;
 </content>
-    <link href="ncar.github.io/esds/posts/git-and-github-tutorial/" rel="alternate"/>
+    <link href="ncar.github.io/esds/posts/2021/git-and-github-tutorial/" rel="alternate"/>
     <summary>The NCAR/UCAR virtual Python Tutorial Seminar Series continues with an introduction to the Python package Git and GitHub on Wednesday, May 12th at 1 PM Mountain. This session will be led by Kevin Paul.The purpose of this seminar is to cover just some of the common content needed to understand and use git and GitHub for collaboration on software. This is not meant to be an introduction to git or GitHub.</summary>
     <category term="python-tutorial-series" label="python-tutorial-series"/>
     <published>2021-05-07T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>ncar.github.io/esds/posts/intake_cmip6_debug/</id>
+    <id>ncar.github.io/esds/posts/2021/intake_cmip6_debug/</id>
     <title>Debugging Intake-ESM Process for Reading in CMIP6</title>
     <updated>2021-05-14T00:00:00+00:00</updated>
     <author>
@@ -522,7 +522,7 @@ What should I do?</summary>
     <content type="html">&lt;p&gt;This post was motivated by a post from Steve Yeager &lt;a class="reference external" href="https://github.com/sgyeager"&gt;&amp;#64;sgyeager&lt;/a&gt;, who ran into an error when attempting to read in CMIP6 data via intake-esm.&lt;/p&gt;
 &lt;p&gt;For those who are unfamiliar with intake-esm, be sure to read over &lt;a class="reference external" href="https://intake-esm.readthedocs.io/en/latest/index.html"&gt;the documentation&lt;/a&gt;! The user guide even includes &lt;a class="reference external" href="https://intake-esm.readthedocs.io/en/latest/user-guide/cmip6-tutorial.html"&gt;an entire portion of their site&lt;/a&gt; on looking at CMIP6 data. These resources would be a great place to start.&lt;/p&gt;
 </content>
-    <link href="ncar.github.io/esds/posts/intake_cmip6_debug/" rel="alternate"/>
+    <link href="ncar.github.io/esds/posts/2021/intake_cmip6_debug/" rel="alternate"/>
     <summary>This post was motivated by a post from Steve Yeager @sgyeager, who ran into an error when attempting to read in CMIP6 data via intake-esm.For those who are unfamiliar with intake-esm, be sure to read over the documentation! The user guide even includes an entire portion of their site on looking at CMIP6 data. These resources would be a great place to start.</summary>
     <category term="intake" label="intake"/>
     <category term="cmip6" label="cmip6"/>
@@ -530,7 +530,7 @@ What should I do?</summary>
     <published>2021-05-14T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>ncar.github.io/esds/posts/pandas-tutorial/</id>
+    <id>ncar.github.io/esds/posts/2021/pandas-tutorial/</id>
     <title>Pandas Tutorial</title>
     <updated>2021-05-19T00:00:00+00:00</updated>
     <author>
@@ -539,13 +539,13 @@ What should I do?</summary>
     <content type="html">&lt;p&gt;The NCAR/UCAR virtual Python Tutorial Seminar Series continues with an introduction to the Python package &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;pandas&lt;/span&gt;&lt;/code&gt; on &lt;strong&gt;Wednesday, May 26th at 1 PM Mountain&lt;/strong&gt;. This session will be led by Drew Camron and Max Grover.&lt;/p&gt;
 &lt;p&gt;The content for this tutorial is hosted on Max’s &lt;a class="reference external" href="https://github.com/mgrover1/ncar_pandas_tutorial"&gt;NCAR Pandas Tutorial Github Repository&lt;/a&gt;&lt;/p&gt;
 </content>
-    <link href="ncar.github.io/esds/posts/pandas-tutorial/" rel="alternate"/>
+    <link href="ncar.github.io/esds/posts/2021/pandas-tutorial/" rel="alternate"/>
     <summary>The NCAR/UCAR virtual Python Tutorial Seminar Series continues with an introduction to the Python package pandas on Wednesday, May 26th at 1 PM Mountain. This session will be led by Drew Camron and Max Grover.The content for this tutorial is hosted on Max’s NCAR Pandas Tutorial Github Repository</summary>
     <category term="python-tutorial-series" label="python-tutorial-series"/>
     <published>2021-05-19T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>ncar.github.io/esds/posts/dask-summit-takeaway/</id>
+    <id>ncar.github.io/esds/posts/2021/dask-summit-takeaway/</id>
     <title>Dask Distributed Summit 2021 Takeaways</title>
     <updated>2021-05-28T00:00:00+00:00</updated>
     <author>
@@ -554,7 +554,7 @@ What should I do?</summary>
     <content type="html">&lt;p&gt;Cloud optimized datasets help improve speed of analysis&lt;/p&gt;
 &lt;p&gt;Entire 4 TB datasets open up in a few seconds&lt;/p&gt;
 </content>
-    <link href="ncar.github.io/esds/posts/dask-summit-takeaway/" rel="alternate"/>
+    <link href="ncar.github.io/esds/posts/2021/dask-summit-takeaway/" rel="alternate"/>
     <summary>Cloud optimized datasets help improve speed of analysisEntire 4 TB datasets open up in a few seconds</summary>
     <category term="dask" label="dask"/>
     <category term="conference" label="conference"/>
@@ -562,7 +562,7 @@ What should I do?</summary>
     <published>2021-05-28T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>ncar.github.io/esds/posts/ecgtools-history-files-example/</id>
+    <id>ncar.github.io/esds/posts/2021/ecgtools-history-files-example/</id>
     <title>Building an Intake-esm catalog from CESM2 History Files</title>
     <updated>2021-06-04T00:00:00+00:00</updated>
     <author>
@@ -571,14 +571,14 @@ What should I do?</summary>
     <content type="html">&lt;p&gt;As mentioned in a couple of ESDS posts (&lt;a class="reference external" href="https://ncar.github.io/esds/posts/intake_esm_dask/"&gt;intake-esm and Dask&lt;/a&gt;, &lt;a class="reference external" href="https://ncar.github.io/esds/posts/intake_cmip6_debug/"&gt;debugging intake-esm&lt;/a&gt;), &lt;a class="reference external" href="https://intake-esm.readthedocs.io/en/latest/"&gt;intake-esm&lt;/a&gt; can be a helpful tool to work with when dealing with model data, especially CESM. One of the requirements for using intake-esm is having a catalog which is comprised of two pieces:&lt;/p&gt;
 &lt;p&gt;A table of the relevant metadata (ex. file path, variable, stream, etc.)&lt;/p&gt;
 </content>
-    <link href="ncar.github.io/esds/posts/ecgtools-history-files-example/" rel="alternate"/>
+    <link href="ncar.github.io/esds/posts/2021/ecgtools-history-files-example/" rel="alternate"/>
     <summary>As mentioned in a couple of ESDS posts (intake-esm and Dask, debugging intake-esm), intake-esm can be a helpful tool to work with when dealing with model data, especially CESM. One of the requirements for using intake-esm is having a catalog which is comprised of two pieces:A table of the relevant metadata (ex. file path, variable, stream, etc.)</summary>
     <category term="intake" label="intake"/>
     <category term="cesm" label="cesm"/>
     <published>2021-06-04T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>ncar.github.io/esds/posts/xarray-tutorial/</id>
+    <id>ncar.github.io/esds/posts/2021/xarray-tutorial/</id>
     <title>Xarray Tutorial</title>
     <updated>2021-06-04T00:00:00+00:00</updated>
     <author>
@@ -587,13 +587,13 @@ What should I do?</summary>
     <content type="html">&lt;p&gt;The NCAR/UCAR virtual Python Tutorial Seminar Series continues with a 2-part introduction to the Python package &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;xarray&lt;/span&gt;&lt;/code&gt; on &lt;strong&gt;Wednesday, June 9th&lt;/strong&gt; and &lt;strong&gt;June 23rd at 1 PM Mountain Daylight Time&lt;/strong&gt;. These sessions will be led by Anderson Banihirwe.&lt;/p&gt;
 &lt;p&gt;The content for this tutorial is hosted on Anderson’s &lt;a class="reference external" href="https://github.com/andersy005/xarray-tutorial"&gt;Xarray Tutorial Github Repository&lt;/a&gt;. However, since final edits are being made to these notebooks we ask that you please wait until after 1 PM MDT on June 8 to download the materials (the Tuesday before the first session). This will ensure that you have the latest version of the notebooks.&lt;/p&gt;
 </content>
-    <link href="ncar.github.io/esds/posts/xarray-tutorial/" rel="alternate"/>
+    <link href="ncar.github.io/esds/posts/2021/xarray-tutorial/" rel="alternate"/>
     <summary>The NCAR/UCAR virtual Python Tutorial Seminar Series continues with a 2-part introduction to the Python package xarray on Wednesday, June 9th and June 23rd at 1 PM Mountain Daylight Time. These sessions will be led by Anderson Banihirwe.The content for this tutorial is hosted on Anderson’s Xarray Tutorial Github Repository. However, since final edits are being made to these notebooks we ask that you please wait until after 1 PM MDT on June 8 to download the materials (the Tuesday before the first session). This will ensure that you have the latest version of the notebooks.</summary>
     <category term="python-tutorial-series" label="python-tutorial-series"/>
     <published>2021-06-04T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>ncar.github.io/esds/posts/graphviz_example/</id>
+    <id>ncar.github.io/esds/posts/2021/graphviz_example/</id>
     <title>Creating Visualizations of Intake-ESM Catalogs</title>
     <updated>2021-06-11T00:00:00+00:00</updated>
     <author>
@@ -602,7 +602,7 @@ What should I do?</summary>
     <content type="html">&lt;p&gt;A common initial task when working with a new dataset is figuring out what data is available. This is especially true when working with climate ensembles with several components and time-frequency output (ex. Community Earth System Model Large Ensemble, CESM-LE). Here, we will examine different methods of investigating this catalog&lt;/p&gt;
 &lt;p&gt;Here, we will use &lt;a class="reference external" href="https://intake-esm.readthedocs.io/en/latest/"&gt;intake-esm&lt;/a&gt; and &lt;a class="reference external" href="https://graphviz.readthedocs.io/en/stable/manual.html"&gt;graphviz&lt;/a&gt;, which can be installed using the following (including jupyterlab too!)&lt;/p&gt;
 </content>
-    <link href="ncar.github.io/esds/posts/graphviz_example/" rel="alternate"/>
+    <link href="ncar.github.io/esds/posts/2021/graphviz_example/" rel="alternate"/>
     <summary>A common initial task when working with a new dataset is figuring out what data is available. This is especially true when working with climate ensembles with several components and time-frequency output (ex. Community Earth System Model Large Ensemble, CESM-LE). Here, we will examine different methods of investigating this catalogHere, we will use intake-esm and graphviz, which can be installed using the following (including jupyterlab too!)</summary>
     <category term="visualization" label="visualization"/>
     <category term="intake" label="intake"/>
@@ -610,7 +610,7 @@ What should I do?</summary>
     <published>2021-06-11T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>ncar.github.io/esds/posts/cesm-workshop-2021-diagnostics/</id>
+    <id>ncar.github.io/esds/posts/2021/cesm-workshop-2021-diagnostics/</id>
     <title>CESM Diagnostics Discussion</title>
     <updated>2021-06-17T00:00:00+00:00</updated>
     <author>
@@ -618,8 +618,8 @@ What should I do?</summary>
     </author>
     <content type="html">&lt;p&gt;Every year, NCAR holds the &lt;a class="reference external" href="https://www.cesm.ucar.edu/events/workshops/2021/"&gt;Community Earth System Model (CESM) Workshop&lt;/a&gt; which brings together the CESM community to discuss relavant updates from the &lt;a class="reference external" href="https://www.cesm.ucar.edu/working_groups/"&gt;working groups&lt;/a&gt; as well as featured speakers and cross-working group discussions.&lt;/p&gt;
 &lt;p&gt;During the Software Engineering Working Group (SEWG) session, following a variety of talks, there was an open discussion regarding the current state of CESM diagnostics and future plans for collaboration.&lt;/p&gt;
-&lt;img alt="diagnostics_image" src="../_images/cesm-diagnostics.svg" /&gt;</content>
-    <link href="ncar.github.io/esds/posts/cesm-workshop-2021-diagnostics/" rel="alternate"/>
+&lt;img alt="diagnostics_image" src="posts/images/cesm-diagnostics.svg" /&gt;</content>
+    <link href="ncar.github.io/esds/posts/2021/cesm-workshop-2021-diagnostics/" rel="alternate"/>
     <summary>Every year, NCAR holds the Community Earth System Model (CESM) Workshop which brings together the CESM community to discuss relavant updates from the working groups as well as featured speakers and cross-working group discussions.During the Software Engineering Working Group (SEWG) session, following a variety of talks, there was an open discussion regarding the current state of CESM diagnostics and future plans for collaboration.diagnostics_image</summary>
     <category term="cesm" label="cesm"/>
     <category term="diagnostics" label="diagnostics"/>
@@ -627,7 +627,7 @@ What should I do?</summary>
     <published>2021-06-17T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>ncar.github.io/esds/posts/model_documentation_jupyterbook/</id>
+    <id>ncar.github.io/esds/posts/2021/model_documentation_jupyterbook/</id>
     <title>Creating Model Documentation Using Jupyterbook and Intake-esm</title>
     <updated>2021-06-25T00:00:00+00:00</updated>
     <author>
@@ -637,7 +637,7 @@ What should I do?</summary>
 &lt;p&gt;This week’s post is quite detailed, so just a warning! If you would like to look at the finished product, check out the following&lt;/p&gt;
 &lt;img alt="CESM book page" src="../_images/cesm_book_page.png" /&gt;
 </content>
-    <link href="ncar.github.io/esds/posts/model_documentation_jupyterbook/" rel="alternate"/>
+    <link href="ncar.github.io/esds/posts/2021/model_documentation_jupyterbook/" rel="alternate"/>
     <summary>A common step to any project is documenting your data and your data workflow. Fortunately, open tools in the scientific python ecosystem make that much easier! In this example, we will cover creating your github repo, creating the catalog, visualizing the catalog, and generating a static webpage you can share with collaborators!This week’s post is quite detailed, so just a warning! If you would like to look at the finished product, check out the followingCESM book page</summary>
     <category term="jupyter" label="jupyter"/>
     <category term="cesm" label="cesm"/>
@@ -646,7 +646,7 @@ What should I do?</summary>
     <published>2021-06-25T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>ncar.github.io/esds/posts/scaling-with-dask-class-takeaways/</id>
+    <id>ncar.github.io/esds/posts/2021/scaling-with-dask-class-takeaways/</id>
     <title>Scaling Python with Dask Class Takeaways</title>
     <updated>2021-07-02T00:00:00+00:00</updated>
     <author>
@@ -656,14 +656,14 @@ What should I do?</summary>
 &lt;p&gt;Parellelizing Python Code&lt;/p&gt;
 &lt;img alt="NCARCluster view" src="../_images/ncar_cluster.png" /&gt;
 </content>
-    <link href="ncar.github.io/esds/posts/scaling-with-dask-class-takeaways/" rel="alternate"/>
+    <link href="ncar.github.io/esds/posts/2021/scaling-with-dask-class-takeaways/" rel="alternate"/>
     <summary>This week, I had the opportunity to attend the Scaling Python with Dask class offered by Coiled. The class provided an overview of a variety of topics, including:Parellelizing Python CodeNCARCluster view</summary>
     <category term="dask" label="dask"/>
     <category term="tutorial" label="tutorial"/>
     <published>2021-07-02T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>ncar.github.io/esds/posts/dask-tutorial/</id>
+    <id>ncar.github.io/esds/posts/2021/dask-tutorial/</id>
     <title>Dask Tutorial</title>
     <updated>2021-07-08T00:00:00+00:00</updated>
     <author>
@@ -672,13 +672,13 @@ What should I do?</summary>
     <content type="html">&lt;p&gt;The NCAR/UCAR virtual Python Tutorial Seminar Series continues with a 2-part introduction to the Python package &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;dask&lt;/span&gt;&lt;/code&gt; on &lt;strong&gt;Wednesday, July 14th&lt;/strong&gt; and &lt;strong&gt;August 11th at 1 PM Mountain Daylight Time&lt;/strong&gt;. These sessions will be led by Anderson Banihirwe.&lt;/p&gt;
 &lt;p&gt;The content for this tutorial is hosted on Anderson’s &lt;a class="reference external" href="https://github.com/andersy005/xarray-tutorial"&gt;Xarray Tutorial Github Repository&lt;/a&gt;. This is the same repository as the previous Xarray tutorials.&lt;/p&gt;
 </content>
-    <link href="ncar.github.io/esds/posts/dask-tutorial/" rel="alternate"/>
+    <link href="ncar.github.io/esds/posts/2021/dask-tutorial/" rel="alternate"/>
     <summary>The NCAR/UCAR virtual Python Tutorial Seminar Series continues with a 2-part introduction to the Python package dask on Wednesday, July 14th and August 11th at 1 PM Mountain Daylight Time. These sessions will be led by Anderson Banihirwe.The content for this tutorial is hosted on Anderson’s Xarray Tutorial Github Repository. This is the same repository as the previous Xarray tutorials.</summary>
     <category term="python-tutorial-series" label="python-tutorial-series"/>
     <published>2021-07-08T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>ncar.github.io/esds/posts/dask-tutorial-update/</id>
+    <id>ncar.github.io/esds/posts/2021/dask-tutorial-update/</id>
     <title>Dask Tutorial UPDATED DATES</title>
     <updated>2021-07-23T00:00:00+00:00</updated>
     <author>
@@ -687,13 +687,13 @@ What should I do?</summary>
     <content type="html">&lt;p&gt;The NCAR/UCAR virtual Python Tutorial Seminar Series continues with a 2-part introduction to the Python package &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;dask&lt;/span&gt;&lt;/code&gt; on &lt;strong&gt;Wednesday, July 28th&lt;/strong&gt; and &lt;strong&gt;August 11th at 1 PM Mountain Daylight Time&lt;/strong&gt;. These sessions will be led by Anderson Banihirwe.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; These dates have changed from the previous Dask Tutorial announcement.&lt;/p&gt;
 </content>
-    <link href="ncar.github.io/esds/posts/dask-tutorial-update/" rel="alternate"/>
+    <link href="ncar.github.io/esds/posts/2021/dask-tutorial-update/" rel="alternate"/>
     <summary>The NCAR/UCAR virtual Python Tutorial Seminar Series continues with a 2-part introduction to the Python package dask on Wednesday, July 28th and August 11th at 1 PM Mountain Daylight Time. These sessions will be led by Anderson Banihirwe.Note: These dates have changed from the previous Dask Tutorial announcement.</summary>
     <category term="python-tutorial-series" label="python-tutorial-series"/>
     <published>2021-07-23T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>ncar.github.io/esds/posts/scipy-2021-takeaways/</id>
+    <id>ncar.github.io/esds/posts/2021/scipy-2021-takeaways/</id>
     <title>SciPy Conference 2021 Takeaways</title>
     <updated>2021-07-26T00:00:00+00:00</updated>
     <author>
@@ -702,7 +702,7 @@ What should I do?</summary>
     <content type="html">&lt;p&gt;A couple weeks ago, I had an opportunity to (virtually) attend the Scientific Computing with Python (SciPy) Conference! The conference consisted of three primary sections:&lt;/p&gt;
 &lt;p&gt;Tutorials (Monday/Tuesday)&lt;/p&gt;
 </content>
-    <link href="ncar.github.io/esds/posts/scipy-2021-takeaways/" rel="alternate"/>
+    <link href="ncar.github.io/esds/posts/2021/scipy-2021-takeaways/" rel="alternate"/>
     <summary>A couple weeks ago, I had an opportunity to (virtually) attend the Scientific Computing with Python (SciPy) Conference! The conference consisted of three primary sections:Tutorials (Monday/Tuesday)</summary>
     <category term="conference" label="conference"/>
     <category term="scipy" label="scipy"/>
@@ -710,7 +710,7 @@ What should I do?</summary>
     <published>2021-07-26T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>ncar.github.io/esds/posts/project-pythia-overview/</id>
+    <id>ncar.github.io/esds/posts/2021/project-pythia-overview/</id>
     <title>Project Pythia Portal Overview</title>
     <updated>2021-07-30T00:00:00+00:00</updated>
     <author>
@@ -720,7 +720,7 @@ What should I do?</summary>
 &lt;p&gt;The team is formally a collaboration between three main organizations, although contributors come from throughout the scientific Python community:&lt;/p&gt;
 &lt;img alt="Pythia Portal" src="../_images/pythia_portal.png" /&gt;
 </content>
-    <link href="ncar.github.io/esds/posts/project-pythia-overview/" rel="alternate"/>
+    <link href="ncar.github.io/esds/posts/2021/project-pythia-overview/" rel="alternate"/>
     <summary>Last year, the Project Pythia team was formed to “provide a public, web-accessible training resource that will help educate current, and aspiring, earth scientists to more effectively use both the Scientific Python Ecosystem and Cloud Computing to make sense of huge volumes of numerical scientific data.”The team is formally a collaboration between three main organizations, although contributors come from throughout the scientific Python community:Pythia Portal</summary>
     <category term="pythia" label="pythia"/>
     <category term="training" label="training"/>
@@ -728,7 +728,7 @@ What should I do?</summary>
     <published>2021-07-30T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>ncar.github.io/esds/posts/intake-cesm2-le-glade-example/</id>
+    <id>ncar.github.io/esds/posts/2021/intake-cesm2-le-glade-example/</id>
     <title>Using Intake-ESM to Analyze Data from CESM2-LE</title>
     <updated>2021-08-06T00:00:00+00:00</updated>
     <author>
@@ -738,7 +738,7 @@ What should I do?</summary>
 &lt;p&gt;One of these challenges with this dataset is dealing with the massive amount of output. The data are available through the &lt;a class="reference external" href="https://www.cesm.ucar.edu/projects/community-projects/LENS2/data-sets.html"&gt;NCAR Climate Data Gateway&lt;/a&gt; and via the &lt;a class="reference external" href="https://climatedata.ibs.re.kr/data/cesm2-lens"&gt;IBS OpenDAP Server&lt;/a&gt;. There is also a subset of the dataset available on the GLADE file system on NCAR HPC resources available within the directory &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;/glade/campaign/cgd/cesm/CESM2-LE/timeseries/&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
 &lt;img alt="intake-esm catalogs" src="../_images/intake_esm_catalogs.png" /&gt;
 </content>
-    <link href="ncar.github.io/esds/posts/intake-cesm2-le-glade-example/" rel="alternate"/>
+    <link href="ncar.github.io/esds/posts/2021/intake-cesm2-le-glade-example/" rel="alternate"/>
     <summary>In mid June, the CESM2 Large Ensemble dataset was made available to the public. This model was run in collaboration with the IBS Center for Climate Physics and the National Center for Atmospheric Research This dataset includes 100 ensemble members, at one degree spatial resolution, with each ensemble member including data from 1850 to 2100. If you are interested in learning more about how this ensemble was setup, be sure to check out the main webpage or read the pre-print of Rodgers et al. 2021 which describes this dataset in detail.One of these challenges with this dataset is dealing with the massive amount of output. The data are available through the NCAR Climate Data Gateway and via the IBS OpenDAP Server. There is also a subset of the dataset available on the GLADE file system on NCAR HPC resources available within the directory /glade/campaign/cgd/cesm/CESM2-LE/timeseries/.intake-esm catalogs</summary>
     <category term="intake" label="intake"/>
     <category term="cesm" label="cesm"/>
@@ -746,7 +746,7 @@ What should I do?</summary>
     <published>2021-08-06T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>ncar.github.io/esds/posts/cesm-datashader/</id>
+    <id>ncar.github.io/esds/posts/2021/cesm-datashader/</id>
     <title>Plotting CESM Data on an Unstructured Grid using Geoviews and Datashader</title>
     <updated>2021-08-13T00:00:00+00:00</updated>
     <author>
@@ -755,7 +755,7 @@ What should I do?</summary>
     <content type="html">&lt;p&gt;This week, during Xdev office hours, &lt;a class="reference external" href="https://staff.ucar.edu/users/yeager"&gt;Steve Yeager&lt;/a&gt; raised a question regarding plotting unstructured grid data within Python. He was interested in plotting output from the &lt;a class="reference external" href="https://www.cesm.ucar.edu/models/atm-cam/#:~:text=The%20Community%20Earth%20System%20Model,Department%20of%20Energy%20(DOE)."&gt;Community Atmosphere Model&lt;/a&gt;, which supports unstructured grids, essentially a combination of triangles allowing for higher resolution in certain parts of the domain. This can be adventageous when wanting to achieve the benefits of high resolution within the primary domain, while maintaining the global scale of the model. This week, &lt;a class="reference external" href="https://twitter.com/NCAR_Science/status/1425583582819483652?s=20"&gt;NCAR Science&lt;/a&gt; tweeted a great explanation of how revolutionary this capability is in the context of resolving processes over Greenland.&lt;/p&gt;
 &lt;p&gt;Unstructured grids can be difficult to plot directly within Python since they do not follow the typical &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;lat&lt;/span&gt;&lt;/code&gt;, &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;lon&lt;/span&gt;&lt;/code&gt; (x, y) convention. There is some preprocessing that needs to be applied before plotting.&lt;/p&gt;
 </content>
-    <link href="ncar.github.io/esds/posts/cesm-datashader/" rel="alternate"/>
+    <link href="ncar.github.io/esds/posts/2021/cesm-datashader/" rel="alternate"/>
     <summary>This week, during Xdev office hours, Steve Yeager raised a question regarding plotting unstructured grid data within Python. He was interested in plotting output from the Community Atmosphere Model, which supports unstructured grids, essentially a combination of triangles allowing for higher resolution in certain parts of the domain. This can be adventageous when wanting to achieve the benefits of high resolution within the primary domain, while maintaining the global scale of the model. This week, NCAR Science tweeted a great explanation of how revolutionary this capability is in the context of resolving processes over Greenland.Unstructured grids can be difficult to plot directly within Python since they do not follow the typical lat, lon (x, y) convention. There is some preprocessing that needs to be applied before plotting.</summary>
     <category term="unstructuredgrids" label="unstructured grids"/>
     <category term="cesm" label="cesm"/>

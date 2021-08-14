@@ -1,0 +1,738 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HiRes-CESM Interactive Dashboard Example &#8212; NCAR-ESDS 0.1 documentation</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "NCAR/esds");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <link rel="author" title="About these documents" href="../../../about/" />
+    <link rel="index" title="Index" href="../../../genindex/" />
+    <link rel="search" title="Search" href="../../../search/" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+     
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../../blog/atom.xml"
+  title="NCAR ESDS"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+<a class="navbar-brand" href="../../../">
+<p class="title">NCAR-ESDS</p>
+</a>
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../about/">
+  About Us
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../faq/">
+  Frequently Asked Questions
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../blog/">
+  Blog
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../communication/">
+  Communication
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../best-practices/">
+  Best Practices
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../calendar/">
+  Calendar
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../projects/">
+  Projects
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/ncar/esds" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">  
+<h2>
+   <i class="fa fa-calendar"></i>
+  19 March 2021 
+</h2>
+
+<ul>
+   
+<li id="author">
+  <span
+    ><i class="fa-fw fa fa-user"></i></span
+  >
+   
+  <a href="../../../blog/author/max-grover/">Max Grover</a>  
+</li>
+    
+<li id="tags">
+  <span
+    ><i class="fa-fw fa fa-tags"></i> </span
+  >
+   
+  <a href="../../../blog/tag/dashboard/">dashboard</a>   
+  <a href="../../../blog/tag/jupyter/">jupyter</a>  
+</li>
+ 
+</ul>
+
+<h3>
+  <a href="../../../blog/">Recent Posts</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="../cesm-datashader/"
+      >13 August - Plotting CESM Data on an Unstructured Grid using Geoviews and Datashader</a
+    >
+  </li>
+  
+  <li>
+    <a href="../intake-cesm2-le-glade-example/"
+      >06 August - Using Intake-ESM to Analyze Data from CESM2-LE</a
+    >
+  </li>
+  
+  <li>
+    <a href="../project-pythia-overview/"
+      >30 July - Project Pythia Portal Overview</a
+    >
+  </li>
+  
+  <li>
+    <a href="../scipy-2021-takeaways/"
+      >26 July - SciPy Conference 2021 Takeaways</a
+    >
+  </li>
+  
+  <li>
+    <a href="../dask-tutorial-update/"
+      >23 July - Dask Tutorial UPDATED DATES</a
+    >
+  </li>
+  
+</ul>
+
+<h3>
+  <a href="../../../blog/archive/">Archives</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="../../../blog/2021/">2021 (34)</a>
+  </li>
+    
+  <li>
+    <a href="../../../blog/2020/">2020 (6)</a>
+  </li>
+    
+  <li>
+    <a href="../../../blog/2019/">2019 (2)</a>
+  </li>
+   
+</ul>
+
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#accessing-the-data-plots">
+   Accessing the Data (Plots)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#read-in-the-csv-file-containing-metadata">
+     Read in the CSV File Containing Metadata
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dealing-with-relative-vs-absolute-paths">
+     Dealing with Relative vs. Absolute Paths
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#build-the-dashboard">
+     Build the Dashboard
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#run-the-dashboard-inline">
+     Run the Dashboard Inline
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                 <div class="section" id="hires-cesm-interactive-dashboard-example">
+<h1>HiRes-CESM Interactive Dashboard Example<a class="headerlink" href="#hires-cesm-interactive-dashboard-example" title="Permalink to this headline">¶</a></h1>
+<p>In this example, our goal is to create an interactive dashboard, using images already output on a remote server.</p>
+<p>We are specifically interested in looking at plots created using the <a class="reference external" href="https://github.com/marbl-ecosys/HiRes-CESM-analysis">HighRes-CESM-Analysis</a> repository.</p>
+<p>Images created by this package can be visualized through an interactive
+dashboard using <a class="reference external" href="https://github.com/andersy005/panelify">Panelify</a></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">panel</span> <span class="k">as</span> <span class="nn">pn</span>
+<span class="kn">import</span> <span class="nn">panelify</span>
+
+<span class="n">pn</span><span class="o">.</span><span class="n">extension</span><span class="p">()</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<div class="section" id="accessing-the-data-plots">
+<h2>Accessing the Data (Plots)<a class="headerlink" href="#accessing-the-data-plots" title="Permalink to this headline">¶</a></h2>
+<p>The plots from this example are stored on the
+<a class="reference external" href="https://webext.cgd.ucar.edu/">CGD webext machine</a>, specifically from
+<a class="reference external" href="https://webext.cgd.ucar.edu/g.e22b05.G1850ECOIAF_JRA.TL319_g17.cocco.001/">this specific case</a>,
+which we use as the path.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">paths</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;https://webext.cgd.ucar.edu/g.e22.G1850ECO_JRA_HR.TL319_t13.004/&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;https://webext.cgd.ucar.edu/g.e22.G1850ECO_JRA_HR.TL319_t13.003/&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<div class="section" id="read-in-the-csv-file-containing-metadata">
+<h3>Read in the CSV File Containing Metadata<a class="headerlink" href="#read-in-the-csv-file-containing-metadata" title="Permalink to this headline">¶</a></h3>
+<p>We use pandas to remotely read in the data, dropping the Unnamed column, and
+merging the absolute path to the directory and the relative filepaths</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">path</span> <span class="ow">in</span> <span class="n">paths</span><span class="p">:</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2">png_catalog.csv&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="s2">&quot;Unnamed: 0&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Convert the relative filepaths to absolute filepaths</span>
+    <span class="n">df</span><span class="p">[</span><span class="s2">&quot;absolute_filepath&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">path</span> <span class="o">+</span> <span class="n">df</span><span class="o">.</span><span class="n">filepath</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+
+    <span class="n">df_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+
+<span class="c1"># Merge the dataframes</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">df_list</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span>
+</pre></div>
+</div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</pre></div>
+</div>
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>plot_type</th>
+      <th>varname</th>
+      <th>casename</th>
+      <th>apply_log10</th>
+      <th>time_period</th>
+      <th>isel_dict</th>
+      <th>filepath</th>
+      <th>date</th>
+      <th>absolute_filepath</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>histogram</td>
+      <td>CaCO3_FLUX_100m</td>
+      <td>g.e22.G1850ECO_JRA_HR.TL319_t13.004</td>
+      <td>False</td>
+      <td>0001-01-01_0001-12-31</td>
+      <td>{}</td>
+      <td>histogram/CaCO3_FLUX_100m.0001-01-01_0001-12-3...</td>
+      <td>NaN</td>
+      <td>https://webext.cgd.ucar.edu/g.e22.G1850ECO_JRA...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>histogram</td>
+      <td>CaCO3_FLUX_100m</td>
+      <td>g.e22.G1850ECO_JRA_HR.TL319_t13.004</td>
+      <td>True</td>
+      <td>0001-01-01_0001-12-31</td>
+      <td>{}</td>
+      <td>histogram/CaCO3_FLUX_100m.0001-01-01_0001-12-3...</td>
+      <td>NaN</td>
+      <td>https://webext.cgd.ucar.edu/g.e22.G1850ECO_JRA...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>histogram</td>
+      <td>CaCO3_FLUX_100m</td>
+      <td>g.e22.G1850ECO_JRA_HR.TL319_t13.004</td>
+      <td>False</td>
+      <td>0002-01-01_0002-12-31</td>
+      <td>{}</td>
+      <td>histogram/CaCO3_FLUX_100m.0002-01-01_0002-12-3...</td>
+      <td>NaN</td>
+      <td>https://webext.cgd.ucar.edu/g.e22.G1850ECO_JRA...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>histogram</td>
+      <td>CaCO3_FLUX_100m</td>
+      <td>g.e22.G1850ECO_JRA_HR.TL319_t13.004</td>
+      <td>True</td>
+      <td>0002-01-01_0002-12-31</td>
+      <td>{}</td>
+      <td>histogram/CaCO3_FLUX_100m.0002-01-01_0002-12-3...</td>
+      <td>NaN</td>
+      <td>https://webext.cgd.ucar.edu/g.e22.G1850ECO_JRA...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>histogram</td>
+      <td>CaCO3_FLUX_100m</td>
+      <td>g.e22.G1850ECO_JRA_HR.TL319_t13.004</td>
+      <td>False</td>
+      <td>0003-01-01_0003-12-31</td>
+      <td>{}</td>
+      <td>histogram/CaCO3_FLUX_100m.0003-01-01_0003-12-3...</td>
+      <td>NaN</td>
+      <td>https://webext.cgd.ucar.edu/g.e22.G1850ECO_JRA...</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>719</th>
+      <td>trend_map</td>
+      <td>SiO3</td>
+      <td>g.e22.G1850ECO_JRA_HR.TL319_t13.003</td>
+      <td>NaN</td>
+      <td>0002-01-01_0004-12-31</td>
+      <td>{'z_t': 0}</td>
+      <td>trend_map/SiO3.0002-01-01_0004-12-31.z_t--3510...</td>
+      <td>NaN</td>
+      <td>https://webext.cgd.ucar.edu/g.e22.G1850ECO_JRA...</td>
+    </tr>
+    <tr>
+      <th>720</th>
+      <td>trend_map</td>
+      <td>SiO3</td>
+      <td>g.e22.G1850ECO_JRA_HR.TL319_t13.003</td>
+      <td>NaN</td>
+      <td>0003-01-01_0004-12-31</td>
+      <td>{'basins': 0}</td>
+      <td>trend_map/SiO3.0003-01-01_0004-12-31.basins--A...</td>
+      <td>NaN</td>
+      <td>https://webext.cgd.ucar.edu/g.e22.G1850ECO_JRA...</td>
+    </tr>
+    <tr>
+      <th>721</th>
+      <td>trend_map</td>
+      <td>SiO3</td>
+      <td>g.e22.G1850ECO_JRA_HR.TL319_t13.003</td>
+      <td>NaN</td>
+      <td>0003-01-01_0004-12-31</td>
+      <td>{'basins': 0}</td>
+      <td>trend_map/SiO3.0003-01-01_0004-12-31.basins--G...</td>
+      <td>NaN</td>
+      <td>https://webext.cgd.ucar.edu/g.e22.G1850ECO_JRA...</td>
+    </tr>
+    <tr>
+      <th>722</th>
+      <td>trend_map</td>
+      <td>SiO3</td>
+      <td>g.e22.G1850ECO_JRA_HR.TL319_t13.003</td>
+      <td>NaN</td>
+      <td>0003-01-01_0004-12-31</td>
+      <td>{'basins': 0}</td>
+      <td>trend_map/SiO3.0003-01-01_0004-12-31.basins--I...</td>
+      <td>NaN</td>
+      <td>https://webext.cgd.ucar.edu/g.e22.G1850ECO_JRA...</td>
+    </tr>
+    <tr>
+      <th>723</th>
+      <td>trend_map</td>
+      <td>SiO3</td>
+      <td>g.e22.G1850ECO_JRA_HR.TL319_t13.003</td>
+      <td>NaN</td>
+      <td>0003-01-01_0004-12-31</td>
+      <td>{'basins': 0}</td>
+      <td>trend_map/SiO3.0003-01-01_0004-12-31.basins--P...</td>
+      <td>NaN</td>
+      <td>https://webext.cgd.ucar.edu/g.e22.G1850ECO_JRA...</td>
+    </tr>
+  </tbody>
+</table>
+<p>1969 rows × 9 columns</p>
+</div>
+</div>
+<div class="section" id="dealing-with-relative-vs-absolute-paths">
+<h3>Dealing with Relative vs. Absolute Paths<a class="headerlink" href="#dealing-with-relative-vs-absolute-paths" title="Permalink to this headline">¶</a></h3>
+<p>In the previous cell, we edited the filepaths… that is because the image filepaths are relative paths, but we would ideally like absolute paths. We make use of the dataframe path to assign the new absolute filepaths. An example is given below.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Original filepath: &quot;</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">filepath</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="c1"># Convert the relative filepaths to absolute filepaths</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;filepath&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">path</span> <span class="o">+</span> <span class="n">df</span><span class="o">.</span><span class="n">filepath</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;New filepath &quot;</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">filepath</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Original filepath:  histogram/CaCO3_FLUX_100m.0001-01-01_0001-12-31.png
+New filepath  https://webext.cgd.ucar.edu/g.e22.G1850ECO_JRA_HR.TL319_t13.003/histogram/CaCO3_FLUX_100m.0001-01-01_0001-12-31.png
+</pre></div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="build-the-dashboard">
+<h3>Build the Dashboard<a class="headerlink" href="#build-the-dashboard" title="Permalink to this headline">¶</a></h3>
+<p>First, we check which types of plots are included in the analysis.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">plot_type</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>array([&#39;histogram&#39;, &#39;summary_map&#39;, &#39;time_series&#39;, &#39;trend_hist&#39;,
+       &#39;trend_map&#39;], dtype=object)
+</pre></div>
+</div>
+<p>Although there are five different plot types, we focus on the first three.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Since we are using https, we leave this dictionary empty</span>
+<span class="n">storage_options</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="c1"># Create the timestep dashboard</span>
+<span class="n">summary_map</span> <span class="o">=</span> <span class="n">panelify</span><span class="o">.</span><span class="n">create_dashboard</span><span class="p">(</span>
+    <span class="n">keys</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;casename&quot;</span><span class="p">,</span> <span class="s2">&quot;varname&quot;</span><span class="p">,</span> <span class="s2">&quot;date&quot;</span><span class="p">,</span> <span class="s2">&quot;apply_log10&quot;</span><span class="p">],</span>
+    <span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">plot_type</span> <span class="o">==</span> <span class="s2">&quot;summary_map&quot;</span><span class="p">],</span>
+    <span class="n">path_column</span><span class="o">=</span><span class="s2">&quot;absolute_filepath&quot;</span><span class="p">,</span>
+    <span class="n">storage_options</span><span class="o">=</span><span class="n">storage_options</span><span class="p">,</span>
+    <span class="n">column_widget_types</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;date&quot;</span><span class="p">:</span> <span class="s2">&quot;discrete_slider&quot;</span><span class="p">},</span>
+<span class="p">)</span>
+
+<span class="c1"># Create the timeseries dashboard</span>
+<span class="n">time_series</span> <span class="o">=</span> <span class="n">panelify</span><span class="o">.</span><span class="n">create_dashboard</span><span class="p">(</span>
+    <span class="n">keys</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;casename&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;varname&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">plot_type</span> <span class="o">==</span> <span class="s2">&quot;time_series&quot;</span><span class="p">],</span>
+    <span class="n">path_column</span><span class="o">=</span><span class="s2">&quot;absolute_filepath&quot;</span><span class="p">,</span>
+    <span class="n">storage_options</span><span class="o">=</span><span class="n">storage_options</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="c1"># Create the histogram dashboard</span>
+<span class="n">histogram</span> <span class="o">=</span> <span class="n">panelify</span><span class="o">.</span><span class="n">create_dashboard</span><span class="p">(</span>
+    <span class="n">keys</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;casename&quot;</span><span class="p">,</span> <span class="s2">&quot;varname&quot;</span><span class="p">,</span> <span class="s2">&quot;time_period&quot;</span><span class="p">,</span> <span class="s2">&quot;apply_log10&quot;</span><span class="p">],</span>
+    <span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">plot_type</span> <span class="o">==</span> <span class="s2">&quot;histogram&quot;</span><span class="p">],</span>
+    <span class="n">path_column</span><span class="o">=</span><span class="s2">&quot;absolute_filepath&quot;</span><span class="p">,</span>
+    <span class="n">storage_options</span><span class="o">=</span><span class="n">storage_options</span><span class="p">,</span>
+    <span class="n">column_widget_types</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;time_period&quot;</span><span class="p">:</span> <span class="s2">&quot;discrete_slider&quot;</span><span class="p">},</span>
+<span class="p">)</span>
+
+<span class="c1"># Bring the various dashboard components into a single canvas</span>
+<span class="n">canvas</span> <span class="o">=</span> <span class="n">panelify</span><span class="o">.</span><span class="n">Canvas</span><span class="p">(</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;Summary Map&quot;</span><span class="p">:</span> <span class="n">summary_map</span><span class="o">.</span><span class="n">view</span><span class="p">,</span>
+        <span class="s2">&quot;Time Series&quot;</span><span class="p">:</span> <span class="n">time_series</span><span class="o">.</span><span class="n">view</span><span class="p">,</span>
+        <span class="s2">&quot;Histogram&quot;</span><span class="p">:</span> <span class="n">histogram</span><span class="o">.</span><span class="n">view</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="run-the-dashboard-inline">
+<h3>Run the Dashboard Inline<a class="headerlink" href="#run-the-dashboard-inline" title="Permalink to this headline">¶</a></h3>
+<p>Now that we have built the dashboard, we run it within the notebook.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">hv_logo</span> <span class="o">=</span> <span class="s1">&#39;&lt;a href=&quot;https://holoviz.org&quot;&gt;&lt;img src=&quot;https://holoviz.org/assets/holoviz-logo-stacked.svg&quot; width=80&gt;&lt;/a&gt;&#39;</span>
+<span class="n">thumbnail</span> <span class="o">=</span> <span class="s1">&#39;&lt;a href=&quot;https://github.com/marbl-ecosys/&quot;&gt;&lt;img src=&quot;https://raw.githubusercontent.com/NCAR/cesm-lens-aws/master/thumbnail.png&quot; width=80 height=80&gt;&lt;/a&gt;&#39;</span>
+<span class="n">menu_background</span> <span class="o">=</span> <span class="s2">&quot;#659dbd&quot;</span>
+<span class="n">menu_text</span> <span class="o">=</span> <span class="s2">&quot;&lt;div&gt;&lt;p&gt;0.1 degree POP / CICE run with ocean BGC&lt;/p&gt;&lt;br&gt;&lt;br&gt;&lt;p&gt;&lt;a href=&#39;https://github.com/marbl-ecosys/HiRes-CESM-analysis&#39;&gt;HiRes-CESM analysis repo&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&#39;https://github.com/andersy005/HiRes-CESM-dashboard&#39;&gt;HiRes-CESM dashboard repo&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;&quot;</span>
+<span class="n">menu</span> <span class="o">=</span> <span class="n">pn</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span>
+    <span class="n">menu_text</span><span class="p">,</span>
+    <span class="n">pn</span><span class="o">.</span><span class="n">Row</span><span class="p">(</span>
+        <span class="n">pn</span><span class="o">.</span><span class="n">Spacer</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">10</span><span class="p">),</span>
+        <span class="n">pn</span><span class="o">.</span><span class="n">Pane</span><span class="p">(</span><span class="n">thumbnail</span><span class="p">),</span>
+        <span class="n">pn</span><span class="o">.</span><span class="n">Spacer</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">10</span><span class="p">),</span>
+        <span class="n">pn</span><span class="o">.</span><span class="n">Pane</span><span class="p">(</span><span class="n">hv_logo</span><span class="p">),</span>
+    <span class="p">),</span>
+    <span class="n">background</span><span class="o">=</span><span class="n">menu_background</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">dashboard</span> <span class="o">=</span> <span class="n">pn</span><span class="o">.</span><span class="n">Row</span><span class="p">(</span><span class="n">menu</span><span class="p">,</span> <span class="n">canvas</span><span class="o">.</span><span class="n">show</span><span class="p">())</span>
+<span class="n">dashboard</span><span class="o">.</span><span class="n">servable</span><span class="p">(</span><span class="s2">&quot;HiRes-CESM Diagnostics Dashboard&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Since these plots are not rendered directly in this notebook online, here is the ouput deployed using Dokku/Heroku</p>
+<p><a class="reference external" href="https://hires-cesm-analysis.dokku.projectpythia.org/Interactive_Dashboard"><img alt="https://img.shields.io/badge/%E2%86%91_Deploy_to-Heroku-7056bf.svg" src="http://img.shields.io/badge/%E2%86%91_launch_dashboard_on-Heroku-7056bf.svg" /></a></p>
+</div>
+</div>
+</div>
+
+<div class="section">
+     
+<div class="section">
+  <span style="float: left">
+     
+    <a href="../jupyter-notebooks-faq/">
+      <i class="fa fa-arrow-circle-left"></i> Jupyter Notebooks Tutorial FAQ
+    </a>
+    
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right">
+     
+    <a href="../matplotlib-tutorial/">
+      Matplotlib Tutorial <i
+        class="fa fa-arrow-circle-right"
+      ></i
+      >
+    </a>
+    
+  </span>
+</div>
+  
+</div>
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-B50ZRRN69X"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('config', 'G-B50ZRRN69X');
+                </script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021, NCAR Earth System Data Science Team.<br/>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.4.<br/>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

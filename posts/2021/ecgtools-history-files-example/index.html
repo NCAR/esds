@@ -1,0 +1,1337 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Building an Intake-esm catalog from CESM2 History Files &#8212; NCAR-ESDS 0.1 documentation</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "NCAR/esds");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <link rel="author" title="About these documents" href="../../../about/" />
+    <link rel="index" title="Index" href="../../../genindex/" />
+    <link rel="search" title="Search" href="../../../search/" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+     
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../../blog/atom.xml"
+  title="NCAR ESDS"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+<a class="navbar-brand" href="../../../">
+<p class="title">NCAR-ESDS</p>
+</a>
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../about/">
+  About Us
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../faq/">
+  Frequently Asked Questions
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../blog/">
+  Blog
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../communication/">
+  Communication
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../best-practices/">
+  Best Practices
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../calendar/">
+  Calendar
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../projects/">
+  Projects
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/ncar/esds" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">  
+<h2>
+   <i class="fa fa-calendar"></i>
+  04 June 2021 
+</h2>
+
+<ul>
+   
+<li id="author">
+  <span
+    ><i class="fa-fw fa fa-user"></i></span
+  >
+   
+  <a href="../../../blog/author/max-grover/">Max Grover</a>  
+</li>
+    
+<li id="tags">
+  <span
+    ><i class="fa-fw fa fa-tags"></i> </span
+  >
+   
+  <a href="../../../blog/tag/intake/">intake</a>   
+  <a href="../../../blog/tag/cesm/">cesm</a>  
+</li>
+ 
+</ul>
+
+<h3>
+  <a href="../../../blog/">Recent Posts</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="../cesm-datashader/"
+      >13 August - Plotting CESM Data on an Unstructured Grid using Geoviews and Datashader</a
+    >
+  </li>
+  
+  <li>
+    <a href="../intake-cesm2-le-glade-example/"
+      >06 August - Using Intake-ESM to Analyze Data from CESM2-LE</a
+    >
+  </li>
+  
+  <li>
+    <a href="../project-pythia-overview/"
+      >30 July - Project Pythia Portal Overview</a
+    >
+  </li>
+  
+  <li>
+    <a href="../scipy-2021-takeaways/"
+      >26 July - SciPy Conference 2021 Takeaways</a
+    >
+  </li>
+  
+  <li>
+    <a href="../dask-tutorial-update/"
+      >23 July - Dask Tutorial UPDATED DATES</a
+    >
+  </li>
+  
+</ul>
+
+<h3>
+  <a href="../../../blog/archive/">Archives</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="../../../blog/2021/">2021 (34)</a>
+  </li>
+    
+  <li>
+    <a href="../../../blog/2020/">2020 (6)</a>
+  </li>
+    
+  <li>
+    <a href="../../../blog/2019/">2019 (2)</a>
+  </li>
+   
+</ul>
+
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-s-a-history-file">
+   What’s a “history” file?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#downloading-the-beta-version-of-ecgtools">
+   Downloading the beta version of ecgtools
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#imports">
+   Imports
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#understanding-the-directory-structure">
+     Understanding the Directory Structure
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#build-the-catalog">
+   Build the catalog!
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#inspect-the-catalog">
+   Inspect the Catalog
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#save-the-catalog">
+   Save the Catalog
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-the-catalog">
+   Using the Catalog
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#additional-imports">
+     Additional Imports
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#use-the-catalog-to-read-in-data">
+     Use the catalog to read in data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusion">
+   Conclusion
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                 <div class="section" id="building-an-intake-esm-catalog-from-cesm2-history-files">
+<h1>Building an Intake-esm catalog from CESM2 History Files<a class="headerlink" href="#building-an-intake-esm-catalog-from-cesm2-history-files" title="Permalink to this headline">¶</a></h1>
+<p>As mentioned in a couple of ESDS posts (<a class="reference external" href="https://ncar.github.io/esds/posts/intake_esm_dask/">intake-esm and Dask</a>, <a class="reference external" href="https://ncar.github.io/esds/posts/intake_cmip6_debug/">debugging intake-esm</a>), <a class="reference external" href="https://intake-esm.readthedocs.io/en/latest/">intake-esm</a> can be a helpful tool to work with when dealing with model data, especially CESM. One of the requirements for using intake-esm is having a catalog which is comprised of two pieces:</p>
+<ul class="simple">
+<li><p>A table of the relevant metadata (ex. file path, variable, stream, etc.)</p></li>
+<li><p>A json describing the dataset, including how to aggregate the variables</p></li>
+</ul>
+<p>Typically, these pieces are constructed “manually” using information within the file path, on a very ad-hoc basis. Also, these catalogs are typically only created for “larger”, community datasets, not neccessarily used within smaller model runs/daily workflows. A new package (currently a prototype), called <a class="reference external" href="https://ecgtools.readthedocs.io/en/latest/">ecgtools</a> works to solve the issues of generating these intake-esm catalogs. Ecgtools stands for Earth System Model (ESM) Catalog Generation tools. The current catalog generation tools supported are:</p>
+<ul class="simple">
+<li><p>CMIP6 models</p></li>
+<li><p>CESM “history” files</p></li>
+<li><p>CESM “timeseries” files</p></li>
+</ul>
+<p>This package has not officially been release yet on <a class="reference external" href="https://pypi.org/">pypi</a> or <a class="reference external" href="https://conda-forge.org/">conda-forge</a>, but this release will likely happen soon. This post will give an overview of using <a class="reference external" href="https://ecgtools.readthedocs.io/en/latest/">ecgtools</a> for parsing CESM history file model output, and reading in the data using
+<a class="reference external" href="https://intake-esm.readthedocs.io/en/latest/">intake-esm</a>. In this example, we use model output using the default component-set (compset) detailed in the <a class="reference external" href="https://escomp.github.io/CESM/versions/cesm2.1/html/">CESM Quickstart Guide</a>.</p>
+<div class="section" id="what-s-a-history-file">
+<h2>What’s a “history” file?<a class="headerlink" href="#what-s-a-history-file" title="Permalink to this headline">¶</a></h2>
+<p>A history file is the default output from CESM, where each file is a single time “slice” with every variable from the component of interest. These types of files can be difficult to work with, since often times one is interested in a time series of a single variable. Building a catalog can be helpful in accessing your data, querying for certain variables, and potentially creating timeseries files later down the road.</p>
+<p>Let’s get started!</p>
+</div>
+<div class="section" id="downloading-the-beta-version-of-ecgtools">
+<h2>Downloading the beta version of ecgtools<a class="headerlink" href="#downloading-the-beta-version-of-ecgtools" title="Permalink to this headline">¶</a></h2>
+<p>In order to access this in its current state, you will need to clone the repository from github. On the machine with the data you are planning on creating a catalog for, run the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">NCAR</span><span class="o">/</span><span class="n">ecgtools</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+<p>This will create a clone of the repository on your machine. After you clone the respository, run</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">e</span> <span class="n">ecgtools</span>
+</pre></div>
+</div>
+<p>This will install the package into the python environment you currently activated (for more on dealing with conda environments, check out the <a class="reference external" href="https://ncar.github.io/esds/faq/#conda-environments">faq page</a></p>
+<p>You will also want to install intake-esm, which you can install using <code class="docutils literal notranslate"><span class="pre">conda-forge</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">intake</span><span class="o">-</span><span class="n">esm</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="imports">
+<h2>Imports<a class="headerlink" href="#imports" title="Permalink to this headline">¶</a></h2>
+<p>The only parts of ecgtools we need are the <code class="docutils literal notranslate"><span class="pre">Builder</span></code> object and the <code class="docutils literal notranslate"><span class="pre">parse_cesm_history</span></code> parser from the CESM parsers! We import <code class="docutils literal notranslate"><span class="pre">glob</span></code> to take a look at the files we are parsing.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">glob</span>
+
+<span class="kn">from</span> <span class="nn">ecgtools</span> <span class="kn">import</span> <span class="n">Builder</span>
+<span class="kn">from</span> <span class="nn">ecgtools.parsers.cesm</span> <span class="kn">import</span> <span class="n">parse_cesm_history</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="understanding-the-directory-structure">
+<h3>Understanding the Directory Structure<a class="headerlink" href="#understanding-the-directory-structure" title="Permalink to this headline">¶</a></h3>
+<p>The first step to setting up the <code class="docutils literal notranslate"><span class="pre">Builder</span></code> object is determining where your files are stored. As mentioned previously, we have a sample dataset of CESM2 model output, which is stored in <code class="docutils literal notranslate"><span class="pre">/glade/work/mgrover/cesm_test_data/</span></code></p>
+<p>Taking a look at that directory, we see that there is a single case <code class="docutils literal notranslate"><span class="pre">b.e20.B1850.f19_g17.test</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s1">&#39;/glade/work/mgrover/cesm_test_data/*&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Once we go into that directory, we see all the different components, including the atmosphere (atm), ocean (ocn), and land (lnd)!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s1">&#39;/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/*&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/logs&#39;,
+ &#39;/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/cpl&#39;,
+ &#39;/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/atm&#39;,
+ &#39;/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/ocn&#39;,
+ &#39;/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/lnd&#39;,
+ &#39;/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/esp&#39;,
+ &#39;/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/glc&#39;,
+ &#39;/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/rof&#39;,
+ &#39;/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/rest&#39;,
+ &#39;/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/wav&#39;,
+ &#39;/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/ice&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>If we go one step further, we notice that within each component, is a <code class="docutils literal notranslate"><span class="pre">hist</span></code> directory which contains the model output</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s1">&#39;/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/atm/*/*.nc&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/atm/hist/b.e20.B1850.f19_g17.test.cam.h0.0002-08.nc&#39;,
+ &#39;/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/atm/hist/b.e20.B1850.f19_g17.test.cam.h0.0001-09.nc&#39;,
+ &#39;/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/atm/hist/b.e20.B1850.f19_g17.test.cam.h0.0002-07.nc&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>If we take a look at the <code class="docutils literal notranslate"><span class="pre">ocn</span></code> component though, we notice that there are a few timeseries files in there…</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s1">&#39;/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/ocn/*/*.nc&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/ocn/tseries/b.e20.B1850.f19_g17.test.pop.h.pCO2SURF.000101-001012.nc&#39;,
+ &#39;/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/ocn/tseries/b.e20.B1850.f19_g17.test.pop.h.SiO3_RIV_FLUX.000101-001012.nc&#39;,
+ &#39;/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/ocn/tseries/b.e20.B1850.f19_g17.test.pop.h.graze_sp_zootot.000101-001012.nc&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>When we setup our catalog builder, we will need to specify not including the timeseries (tseries) and restart (rest) directories!</p>
+<p>Now that we understand the directory structure, let’s make the catalog.</p>
+</div>
+</div>
+<div class="section" id="build-the-catalog">
+<h2>Build the catalog!<a class="headerlink" href="#build-the-catalog" title="Permalink to this headline">¶</a></h2>
+<p>Let’s start by inspecting the builder object</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>Builder<span class="o">?</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">Init signature:</span>
+Builder<span class=" -Color -Color-Blue">(</span>
+    root_path<span class=" -Color -Color-Blue">:</span> pydantic<span class=" -Color -Color-Blue">.</span>types<span class=" -Color -Color-Blue">.</span>DirectoryPath<span class=" -Color -Color-Blue">,</span>
+    extension<span class=" -Color -Color-Blue">:</span> str <span class=" -Color -Color-Blue">=</span> <span class=" -Color -Color-Blue">&#39;.nc&#39;,</span>
+    depth<span class=" -Color -Color-Blue">:</span> int <span class=" -Color -Color-Blue">=</span> <span class=" -Color -Color-Cyan">0</span><span class=" -Color -Color-Blue">,</span>
+    exclude_patterns<span class=" -Color -Color-Blue">:</span> List<span class=" -Color -Color-Blue">[</span>str<span class=" -Color -Color-Blue">]</span> <span class=" -Color -Color-Blue">=</span> <span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">,</span>
+    njobs<span class=" -Color -Color-Blue">:</span> int <span class=" -Color -Color-Blue">=</span> <span class=" -Color -Color-Blue">-</span><span class=" -Color -Color-Cyan">1</span><span class=" -Color -Color-Blue">,</span>
+<span class=" -Color -Color-Blue">)</span> <span class=" -Color -Color-Blue">-&gt;</span> <span class=" -Color -Color-Green">None</span>
+<span class=" -Color -Color-Red">Docstring:</span>     
+Generates a catalog from a list of files.
+
+Parameters
+----------
+root_path : str
+    Path of root directory.
+extension : str, optional
+    File extension, by default None. If None, the builder will look for files with
+    &quot;*.nc&quot; extension.
+depth : int, optional
+    Recursion depth. Recursively crawl `root_path` up to a specified depth, by default 0
+exclude_patterns : list, optional
+    Directory, file patterns to exclude during catalog generation.
+    These could be substring or regular expressions. by default None
+njobs : int, optional
+    The maximum number of concurrently running jobs,
+    by default -1 meaning all CPUs are used.
+<span class=" -Color -Color-Red">File:</span>           /glade/work/mgrover/git_repos/ecgtools/ecgtools/builder.py
+<span class=" -Color -Color-Red">Type:</span>           type
+<span class=" -Color -Color-Red">Subclasses:</span>     
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition alert alert-info">
+    <p class="admonition-title" style="font-weight:bold">Info</p>
+    Note that as of 21 June, 2021, the <code>parsing_func</code> parameter is now used in the <code>.build()</code> method!
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="n">Builder</span><span class="p">(</span>
+    <span class="c1"># Directory with the output</span>
+    <span class="s2">&quot;/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/&quot;</span><span class="p">,</span>
+    <span class="c1"># Depth of 1 since we are sending it to the case output directory</span>
+    <span class="n">depth</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="c1"># Exclude the timeseries and restart directories</span>
+    <span class="n">exclude_patterns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;*/tseries/*&quot;</span><span class="p">,</span> <span class="s2">&quot;*/rest/*&quot;</span><span class="p">],</span>
+    <span class="c1"># Number of jobs to execute - should be equal to # threads you are using</span>
+    <span class="n">njobs</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Double check the object is set up…</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Builder(root_path=PosixPath(&#39;/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test&#39;), extension=&#39;.nc&#39;, depth=1, exclude_patterns=[&#39;*/tseries/*&#39;, &#39;*/rest/*&#39;], njobs=5)
+</pre></div>
+</div>
+</div>
+</div>
+<p>We are good to go! Let’s build the catalog by calling <code class="docutils literal notranslate"><span class="pre">.build()</span></code> on the object, passing in the <code class="docutils literal notranslate"><span class="pre">parse_cesm_history</span></code> parser! By default, it will use the <code class="docutils literal notranslate"><span class="pre">LokyBackend</span></code> which is described in the <a class="reference external" href="https://joblib.readthedocs.io/en/latest/parallel.html">Joblib documentation</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="o">.</span><span class="n">build</span><span class="p">(</span><span class="n">parse_cesm_history</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Parallel(n_jobs=5)]: Using backend LokyBackend with 5 concurrent workers.
+[Parallel(n_jobs=5)]: Done   6 out of  12 | elapsed:    0.2s remaining:    0.2s
+[Parallel(n_jobs=5)]: Done   9 out of  12 | elapsed:    0.2s remaining:    0.1s
+[Parallel(n_jobs=5)]: Done  12 out of  12 | elapsed:    0.2s remaining:    0.0s
+[Parallel(n_jobs=5)]: Done  12 out of  12 | elapsed:    0.2s finished
+[Parallel(n_jobs=5)]: Using backend LokyBackend with 5 concurrent workers.
+[Parallel(n_jobs=5)]: Done   8 tasks      | elapsed:    1.6s
+[Parallel(n_jobs=5)]: Done  62 tasks      | elapsed:    4.5s
+[Parallel(n_jobs=5)]: Done 152 tasks      | elapsed:   11.4s
+[Parallel(n_jobs=5)]: Done 264 out of 264 | elapsed:   15.1s finished
+/glade/work/mgrover/git_repos/ecgtools/ecgtools/builder.py:180: UserWarning: Unable to parse 5 assets/files. A list of these assets can be found in `.invalid_assets` attribute.
+  parsing_func, parsing_func_kwargs
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="inspect-the-catalog">
+<h2>Inspect the Catalog<a class="headerlink" href="#inspect-the-catalog" title="Permalink to this headline">¶</a></h2>
+<p>Now that the catalog is built, we can inspect the dataframe which is used to create the catalog by calling <code class="docutils literal notranslate"><span class="pre">.df</span></code> on the builder object</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span><span class="o">.</span><span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>component</th>
+      <th>stream</th>
+      <th>case</th>
+      <th>date</th>
+      <th>frequency</th>
+      <th>variables</th>
+      <th>path</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>atm</td>
+      <td>cam.h0</td>
+      <td>b.e20.B1850.f19_g17.test</td>
+      <td>0002-08</td>
+      <td>month_1</td>
+      <td>[date, datesec, date_written, time_written, nd...</td>
+      <td>/glade/work/mgrover/cesm_test_data/b.e20.B1850...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>atm</td>
+      <td>cam.h0</td>
+      <td>b.e20.B1850.f19_g17.test</td>
+      <td>0001-09</td>
+      <td>month_1</td>
+      <td>[date, datesec, date_written, time_written, nd...</td>
+      <td>/glade/work/mgrover/cesm_test_data/b.e20.B1850...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>atm</td>
+      <td>cam.h0</td>
+      <td>b.e20.B1850.f19_g17.test</td>
+      <td>0002-07</td>
+      <td>month_1</td>
+      <td>[date, datesec, date_written, time_written, nd...</td>
+      <td>/glade/work/mgrover/cesm_test_data/b.e20.B1850...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>atm</td>
+      <td>cam.h0</td>
+      <td>b.e20.B1850.f19_g17.test</td>
+      <td>0003-05</td>
+      <td>month_1</td>
+      <td>[date, datesec, date_written, time_written, nd...</td>
+      <td>/glade/work/mgrover/cesm_test_data/b.e20.B1850...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>atm</td>
+      <td>cam.h0</td>
+      <td>b.e20.B1850.f19_g17.test</td>
+      <td>0002-01</td>
+      <td>month_1</td>
+      <td>[date, datesec, date_written, time_written, nd...</td>
+      <td>/glade/work/mgrover/cesm_test_data/b.e20.B1850...</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>259</th>
+      <td>ice</td>
+      <td>cice.h</td>
+      <td>b.e20.B1850.f19_g17.test</td>
+      <td>0001-08</td>
+      <td>month_1</td>
+      <td>[hi, hs, snowfrac, Tsfc, aice, uvel, vvel, uat...</td>
+      <td>/glade/work/mgrover/cesm_test_data/b.e20.B1850...</td>
+    </tr>
+    <tr>
+      <th>260</th>
+      <td>ice</td>
+      <td>cice.h</td>
+      <td>b.e20.B1850.f19_g17.test</td>
+      <td>0001-03</td>
+      <td>month_1</td>
+      <td>[hi, hs, snowfrac, Tsfc, aice, uvel, vvel, uat...</td>
+      <td>/glade/work/mgrover/cesm_test_data/b.e20.B1850...</td>
+    </tr>
+    <tr>
+      <th>261</th>
+      <td>ice</td>
+      <td>cice.h</td>
+      <td>b.e20.B1850.f19_g17.test</td>
+      <td>0002-11</td>
+      <td>month_1</td>
+      <td>[hi, hs, snowfrac, Tsfc, aice, uvel, vvel, uat...</td>
+      <td>/glade/work/mgrover/cesm_test_data/b.e20.B1850...</td>
+    </tr>
+    <tr>
+      <th>262</th>
+      <td>ice</td>
+      <td>cice.h</td>
+      <td>b.e20.B1850.f19_g17.test</td>
+      <td>0002-10</td>
+      <td>month_1</td>
+      <td>[hi, hs, snowfrac, Tsfc, aice, uvel, vvel, uat...</td>
+      <td>/glade/work/mgrover/cesm_test_data/b.e20.B1850...</td>
+    </tr>
+    <tr>
+      <th>263</th>
+      <td>ice</td>
+      <td>cice.h</td>
+      <td>b.e20.B1850.f19_g17.test</td>
+      <td>0003-12</td>
+      <td>month_1</td>
+      <td>[hi, hs, snowfrac, Tsfc, aice, uvel, vvel, uat...</td>
+      <td>/glade/work/mgrover/cesm_test_data/b.e20.B1850...</td>
+    </tr>
+  </tbody>
+</table>
+<p>259 rows × 7 columns</p>
+</div></div></div>
+</div>
+<p>The resultant dataframe includes the:</p>
+<ul class="simple">
+<li><p>Component</p></li>
+<li><p>Stream</p></li>
+<li><p>Case</p></li>
+<li><p>Date</p></li>
+<li><p>Frequency</p></li>
+<li><p>Variables</p></li>
+<li><p>Path</p></li>
+</ul>
+<p>We can also check to see which files <em><strong>were not</strong></em> parsed by calling <code class="docutils literal notranslate"><span class="pre">.invalid_assets</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span><span class="o">.</span><span class="n">invalid_assets</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>INVALID_ASSET</th>
+      <th>TRACEBACK</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>15</th>
+      <td>/glade/work/mgrover/cesm_test_data/b.e20.B1850...</td>
+      <td>Traceback (most recent call last):\n  File "/g...</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>/glade/work/mgrover/cesm_test_data/b.e20.B1850...</td>
+      <td>Traceback (most recent call last):\n  File "/g...</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td>/glade/work/mgrover/cesm_test_data/b.e20.B1850...</td>
+      <td>Traceback (most recent call last):\n  File "/g...</td>
+    </tr>
+    <tr>
+      <th>130</th>
+      <td>/glade/work/mgrover/cesm_test_data/b.e20.B1850...</td>
+      <td>Traceback (most recent call last):\n  File "/g...</td>
+    </tr>
+    <tr>
+      <th>191</th>
+      <td>/glade/work/mgrover/cesm_test_data/b.e20.B1850...</td>
+      <td>Traceback (most recent call last):\n  File "/g...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span><span class="o">.</span><span class="n">invalid_assets</span><span class="o">.</span><span class="n">INVALID_ASSET</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PosixPath(&#39;/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/atm/hist/b.e20.B1850.f19_g17.test.cam.i.0002-01-01-00000.nc&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span><span class="o">.</span><span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>component</th>
+      <th>stream</th>
+      <th>case</th>
+      <th>date</th>
+      <th>frequency</th>
+      <th>variables</th>
+      <th>path</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>atm</td>
+      <td>cam.h0</td>
+      <td>b.e20.B1850.f19_g17.test</td>
+      <td>0002-08</td>
+      <td>month_1</td>
+      <td>[date, datesec, date_written, time_written, nd...</td>
+      <td>/glade/work/mgrover/cesm_test_data/b.e20.B1850...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>atm</td>
+      <td>cam.h0</td>
+      <td>b.e20.B1850.f19_g17.test</td>
+      <td>0001-09</td>
+      <td>month_1</td>
+      <td>[date, datesec, date_written, time_written, nd...</td>
+      <td>/glade/work/mgrover/cesm_test_data/b.e20.B1850...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>atm</td>
+      <td>cam.h0</td>
+      <td>b.e20.B1850.f19_g17.test</td>
+      <td>0002-07</td>
+      <td>month_1</td>
+      <td>[date, datesec, date_written, time_written, nd...</td>
+      <td>/glade/work/mgrover/cesm_test_data/b.e20.B1850...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>atm</td>
+      <td>cam.h0</td>
+      <td>b.e20.B1850.f19_g17.test</td>
+      <td>0003-05</td>
+      <td>month_1</td>
+      <td>[date, datesec, date_written, time_written, nd...</td>
+      <td>/glade/work/mgrover/cesm_test_data/b.e20.B1850...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>atm</td>
+      <td>cam.h0</td>
+      <td>b.e20.B1850.f19_g17.test</td>
+      <td>0002-01</td>
+      <td>month_1</td>
+      <td>[date, datesec, date_written, time_written, nd...</td>
+      <td>/glade/work/mgrover/cesm_test_data/b.e20.B1850...</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>259</th>
+      <td>ice</td>
+      <td>cice.h</td>
+      <td>b.e20.B1850.f19_g17.test</td>
+      <td>0001-08</td>
+      <td>month_1</td>
+      <td>[hi, hs, snowfrac, Tsfc, aice, uvel, vvel, uat...</td>
+      <td>/glade/work/mgrover/cesm_test_data/b.e20.B1850...</td>
+    </tr>
+    <tr>
+      <th>260</th>
+      <td>ice</td>
+      <td>cice.h</td>
+      <td>b.e20.B1850.f19_g17.test</td>
+      <td>0001-03</td>
+      <td>month_1</td>
+      <td>[hi, hs, snowfrac, Tsfc, aice, uvel, vvel, uat...</td>
+      <td>/glade/work/mgrover/cesm_test_data/b.e20.B1850...</td>
+    </tr>
+    <tr>
+      <th>261</th>
+      <td>ice</td>
+      <td>cice.h</td>
+      <td>b.e20.B1850.f19_g17.test</td>
+      <td>0002-11</td>
+      <td>month_1</td>
+      <td>[hi, hs, snowfrac, Tsfc, aice, uvel, vvel, uat...</td>
+      <td>/glade/work/mgrover/cesm_test_data/b.e20.B1850...</td>
+    </tr>
+    <tr>
+      <th>262</th>
+      <td>ice</td>
+      <td>cice.h</td>
+      <td>b.e20.B1850.f19_g17.test</td>
+      <td>0002-10</td>
+      <td>month_1</td>
+      <td>[hi, hs, snowfrac, Tsfc, aice, uvel, vvel, uat...</td>
+      <td>/glade/work/mgrover/cesm_test_data/b.e20.B1850...</td>
+    </tr>
+    <tr>
+      <th>263</th>
+      <td>ice</td>
+      <td>cice.h</td>
+      <td>b.e20.B1850.f19_g17.test</td>
+      <td>0003-12</td>
+      <td>month_1</td>
+      <td>[hi, hs, snowfrac, Tsfc, aice, uvel, vvel, uat...</td>
+      <td>/glade/work/mgrover/cesm_test_data/b.e20.B1850...</td>
+    </tr>
+  </tbody>
+</table>
+<p>259 rows × 7 columns</p>
+</div></div></div>
+</div>
+<p>It appears that one of the invalid assets is a <code class="docutils literal notranslate"><span class="pre">pop.hv</span></code> stream, which is a time-invariant dataset we would not neccessarily be interested in looking at. If there is a file you think <em><strong>should</strong></em> be included in the resultant catalog but isn’t, be sure to add it to the <code class="docutils literal notranslate"><span class="pre">_STREAMS_DICT</span></code> used in the <a class="reference external" href="https://github.com/NCAR/ecgtools/blob/main/ecgtools/parsers/cesm.py">parsing tool</a>!</p>
+</div>
+<div class="section" id="save-the-catalog">
+<h2>Save the Catalog<a class="headerlink" href="#save-the-catalog" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span><span class="o">.</span><span class="n">save</span><span class="p">(</span>
+    <span class="c1"># File path - could save as .csv (uncompressed csv) or .csv.gz (compressed csv)</span>
+    <span class="s2">&quot;/glade/work/mgrover/cesm-hist-test.csv&quot;</span><span class="p">,</span>
+    <span class="c1"># Column name including filepath</span>
+    <span class="n">path_column_name</span><span class="o">=</span><span class="s1">&#39;path&#39;</span><span class="p">,</span>
+    <span class="c1"># Column name including variables</span>
+    <span class="n">variable_column_name</span><span class="o">=</span><span class="s1">&#39;variables&#39;</span><span class="p">,</span>
+    <span class="c1"># Data file format - could be netcdf or zarr (in this case, netcdf)</span>
+    <span class="n">data_format</span><span class="o">=</span><span class="s2">&quot;netcdf&quot;</span><span class="p">,</span>
+    <span class="c1"># Which attributes to groupby when reading in variables using intake-esm</span>
+    <span class="n">groupby_attrs</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;component&quot;</span><span class="p">,</span> <span class="s2">&quot;stream&quot;</span><span class="p">,</span> <span class="s2">&quot;case&quot;</span><span class="p">],</span>
+    <span class="c1"># Aggregations which are fed into xarray when reading in data using intake</span>
+    <span class="n">aggregations</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;join_existing&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;attribute_name&quot;</span><span class="p">:</span> <span class="s2">&quot;date&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;options&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;dim&quot;</span><span class="p">:</span> <span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="s2">&quot;coords&quot;</span><span class="p">:</span> <span class="s2">&quot;minimal&quot;</span><span class="p">,</span> <span class="s2">&quot;compat&quot;</span><span class="p">:</span> <span class="s2">&quot;override&quot;</span><span class="p">},</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Saved catalog location: /glade/work/mgrover/cesm-hist-test.json and /glade/work/mgrover/cesm-hist-test.csv
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/glade/u/home/mgrover/miniconda3/envs/hires-marbl/lib/python3.7/site-packages/ipykernel_launcher.py:17: UserWarning: Unable to parse 5 assets/files. A list of these assets can be found in /glade/work/mgrover/invalid_assets_cesm-hist-test.csv.
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="using-the-catalog">
+<h2>Using the Catalog<a class="headerlink" href="#using-the-catalog" title="Permalink to this headline">¶</a></h2>
+<p>You’ll notice the resultant filepaths are output when calling <code class="docutils literal notranslate"><span class="pre">.save</span></code> - which you could use within your intake-esm <code class="docutils literal notranslate"><span class="pre">open_esm_datastore</span></code> function.</p>
+<div class="section" id="additional-imports">
+<h3>Additional Imports<a class="headerlink" href="#additional-imports" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import ast which helps with parsing the list of variables</span>
+<span class="kn">import</span> <span class="nn">ast</span>
+
+<span class="c1"># Import intake-esm</span>
+<span class="kn">import</span> <span class="nn">intake</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="use-the-catalog-to-read-in-data">
+<h3>Use the catalog to read in data<a class="headerlink" href="#use-the-catalog-to-read-in-data" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">col</span> <span class="o">=</span> <span class="n">intake</span><span class="o">.</span><span class="n">open_esm_datastore</span><span class="p">(</span>
+    <span class="s2">&quot;/glade/work/mgrover/cesm-hist-test.json&quot;</span><span class="p">,</span>
+    <span class="n">csv_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;converters&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;variables&quot;</span><span class="p">:</span> <span class="n">ast</span><span class="o">.</span><span class="n">literal_eval</span><span class="p">}},</span>
+    <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;/&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">col</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><p><strong>None catalog with 9 dataset(s) from 259 asset(s)</strong>:</p> <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>unique</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>component</th>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>stream</th>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>case</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>date</th>
+      <td>79</td>
+    </tr>
+    <tr>
+      <th>frequency</th>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>variables</th>
+      <td>1447</td>
+    </tr>
+    <tr>
+      <th>path</th>
+      <td>259</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span> <span class="o">=</span> <span class="n">col</span><span class="o">.</span><span class="n">search</span><span class="p">(</span>
+    <span class="n">variables</span><span class="o">=</span><span class="s1">&#39;TEMP&#39;</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">cat</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><p><strong>None catalog with 1 dataset(s) from 36 asset(s)</strong>:</p> <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>unique</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>component</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>stream</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>case</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>date</th>
+      <td>36</td>
+    </tr>
+    <tr>
+      <th>frequency</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>variables</th>
+      <td>434</td>
+    </tr>
+    <tr>
+      <th>path</th>
+      <td>36</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dsets</span> <span class="o">=</span> <span class="n">cat</span><span class="o">.</span><span class="n">to_dataset_dict</span><span class="p">(</span><span class="n">cdf_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;use_cftime&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s1">&#39;chunks&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;time&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">}})</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--&gt; The keys in the returned dictionary of datasets are constructed as follows:
+	&#39;component/stream/case&#39;
+</pre></div>
+</div>
+<div class="output text_html">
+<div>
+    <style>
+        /* Turns off some styling */
+        progress {
+            /* gets rid of default border in Firefox and Opera. */
+            border: none;
+            /* Needs to be in here for Safari polyfill so background images work as expected. */
+            background-size: auto;
+        }
+        .progress-bar-interrupted, .progress-bar-interrupted::-webkit-progress-bar {
+            background: #F44336;
+        }
+    </style>
+  <progress value='1' class='' max='1' style='width:300px; height:20px; vertical-align: middle;'></progress>
+  100.00% [1/1 00:00<00:00]
+</div>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dsets</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;ocn/pop.h/b.e20.B1850.f19_g17.test&#39;: &lt;xarray.Dataset&gt;
+ Dimensions:  (nlat: 384, nlon: 320, time: 36, z_t: 60)
+ Coordinates:
+   * time     (time) object 0004-01-01 00:00:00 ... 0002-03-01 00:00:00
+   * z_t      (z_t) float32 500.0 1.5e+03 2.5e+03 ... 5.125e+05 5.375e+05
+     ULONG    (nlat, nlon) float64 dask.array&lt;chunksize=(384, 320), meta=np.ndarray&gt;
+     ULAT     (nlat, nlon) float64 dask.array&lt;chunksize=(384, 320), meta=np.ndarray&gt;
+     TLONG    (nlat, nlon) float64 dask.array&lt;chunksize=(384, 320), meta=np.ndarray&gt;
+     TLAT     (nlat, nlon) float64 dask.array&lt;chunksize=(384, 320), meta=np.ndarray&gt;
+ Dimensions without coordinates: nlat, nlon
+ Data variables:
+     TEMP     (time, z_t, nlat, nlon) float32 dask.array&lt;chunksize=(1, 60, 384, 320), meta=np.ndarray&gt;
+ Attributes:
+     intake_esm_varname:      [&#39;TEMP&#39;]
+     source:                  CCSM POP2, the CCSM Ocean Component
+     time_period_freq:        month_1
+     calendar:                All years have exactly  365 days.
+     revision:                $Id$
+     history:                 none
+     model_doi_url:           https://doi.org/10.5065/D67H1H0V
+     contents:                Diagnostic and Prognostic Variables
+     cell_methods:            cell_methods = time: mean ==&gt; the variable value...
+     Conventions:             CF-1.0; http://www.cgd.ucar.edu/cms/eaton/netcdf...
+     title:                   b.e20.B1850.f19_g17.test
+     intake_esm_dataset_key:  ocn/pop.h/b.e20.B1850.f19_g17.test}
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s plot a quick figure from the dataset!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dsets</span><span class="p">[</span><span class="s1">&#39;ocn/pop.h/b.e20.B1850.f19_g17.test&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">TEMP</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">z_t</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/ecgtools-history-files-example_38_0.png" src="../../../_images/ecgtools-history-files-example_38_0.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<p>Having the ability to easily create intake-esm catalogs from history files can be a powerful tool in your analysis toolkit. These data can be read in relatively quickly, easing the ability to quickly take a look at model output or even share your data with others! For more updates on <a class="reference external" href="https://github.com/NCAR/ecgtools">ecgtools</a>, be sure to follow <a class="reference external" href="https://github.com/NCAR/ecgtools">the ecgtools repository</a> on Github! Have an idea for another helpful parser? Submit an issue!</p>
+</div>
+</div>
+
+<div class="section">
+     
+<div class="section">
+  <span style="float: left">
+     
+    <a href="../dask-summit-takeaway/">
+      <i class="fa fa-arrow-circle-left"></i> Dask Distributed Summit 2021 Takeaways
+    </a>
+    
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right">
+     
+    <a href="../xarray-tutorial/">
+      Xarray Tutorial <i
+        class="fa fa-arrow-circle-right"
+      ></i
+      >
+    </a>
+    
+  </span>
+</div>
+  
+</div>
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-B50ZRRN69X"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('config', 'G-B50ZRRN69X');
+                </script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021, NCAR Earth System Data Science Team.<br/>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.4.<br/>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>
