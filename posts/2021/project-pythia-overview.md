@@ -20,7 +20,7 @@ Last month, the [Project Pythia Team](https://projectpythia.org/index.html#the-p
 
 The main landing page for Project Pythia is known as the ["Pythia Portal"](https://projectpythia.org/index.html#).
 
-![Pythia Portal](images/pythia_portal.png)
+![Pythia Portal](../images/pythia_portal.png)
 
 The main page provides an overview of the project, including the motivation and a summary of what the goals of this project are. What you will see on the Portal is described below.
 
@@ -34,11 +34,11 @@ The [Foundations Book](https://foundations.projectpythia.org/landing-page.html) 
 
 Clicking on the link on the Pythia Portal will take you to the JupyterBook containing the instructional material - this can also be accessed using [foundations.projectpythia.org](https://foundations.projectpythia.org/landing-page.html).
 
-![foundations link](images/pythia_foundations_link.png)
+![foundations link](../images/pythia_foundations_link.png)
 
 Once within the [Foundations Book](https://foundations.projectpythia.org/landing-page.html), you will see the typical [Jupyterbook](https://jupyterbook.org/intro.html) interface with a few primary sections.
 
-![foundations sections](images/foundations_diagram.png)
+![foundations sections](../images/foundations_diagram.png)
 
 Each notebook is its own "page", separated into sections outlined in the table of contents which can be found along the left sidebar. On the right side of the page is the table of contents for a single notebook, which is determined using the header information in each notebook. This can be useful when wanting to navigate to specific section of a notebook.
 
@@ -46,7 +46,7 @@ These notebooks are executable - which is what makes this [Jupyterbook](https://
 
 If you would like to download a local copy of the notebook, select the download button in the top right corner, and select whether to download as a `PDF` or `ipynb` (notebook).
 
-![pandas example](images/pythia_pandas.png)
+![pandas example](../images/pythia_pandas.png)
 
 Within the foundational content notebooks, you will find that each notebook follows the same format, including the following sections:
 
@@ -63,14 +63,14 @@ Within the foundational content notebooks, you will find that each notebook foll
 
 The [Resource Gallery](https://projectpythia.org/gallery.html) includes links to a variety of external (to Project Pythia) material that is useful to the Geoscience community! This is a great place to go if you are looking for additional training or reference materials or more specific examples or galleries.
 
-![pandas example](images/pythia_resource_gallery.png)
+![pandas example](../images/pythia_resource_gallery.png)
 
 If you continue scrolling down the page, you will find various ways to engage with the project, including via [Github Discussions](https://github.com/ProjectPythia/projectpythia.github.io/discussions) or by checking to the resource gallery or foundations book, using the [contributor's guide](https://projectpythia.org/contributing.html) as a reference.
 
-![Pythia Portal](images/pythia_contribute.png)
+![Pythia Portal](../images/pythia_contribute.png)
 
 If you are interested in being involved with this project, I encourage you to check out our weekly meetings, separated by working groups, which include an Education Working Group, and an Infrastructure Working Group.
 
-![Pythia Calendar](images/pythia_calendar.png)
+![Pythia Calendar](../images/pythia_calendar.png)
 
 We look forward to continuing to make progress on this project, and gather input from the community on how to improve our content, and entrain other contributors.

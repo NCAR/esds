@@ -67,7 +67,7 @@ client = Client(cluster)
 
 Once the `Cluster` and `Client` are setup, you can view the dashboard for your setup. This can be accessed by clicking the link next to `Dashboard` as shown below
 
-![NCARCluster view](images/ncar_cluster.png)
+![NCARCluster view](../images/ncar_cluster.png)
 
 There are a few default graphs you can look at, including the two main
 
@@ -85,7 +85,7 @@ This dashboard shows a comparison between compute vs. transfer, which can be hel
 
 An "idealized" case is shown below where most of the time is spent computing
 
-![example aggregate time per action](images/agg_time_per_action.png)
+![example aggregate time per action](../images/agg_time_per_action.png)
 
 ## Introduction to Distributed Computing
 
