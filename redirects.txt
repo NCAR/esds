@@ -39,3 +39,4 @@
 'posts/software-citation.md' 'posts/2021/software-citation.md'
 'posts/xarray-tutorial.md' 'posts/2021/xarray-tutorial.md'
 'posts/your-first-package-python-tutorial-faq.md' 'posts/2021/your-first-package-python-tutorial-faq.md'
+'posts/cesm-datashader.md' 'posts/2021/cesm-datashader.md'
