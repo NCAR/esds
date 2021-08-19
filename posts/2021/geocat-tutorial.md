@@ -4,11 +4,11 @@ date: 2021-08-19
 tags: python-tutorial-series
 ---
 
-# GeoCAT-Viz Tutorial
+# Plotting with GeoCAT Tutorial
 
-The NCAR/UCAR virtual Python Tutorial Seminar Series continues with two sessions highlighting the functionality developed by NCAR's GeoCAT team: 1) Advanced Plotting with `GeoCAT-viz` on **Wednesday, August 25th** led by Anissa Zacharias and 2) `GeoCAT-comp`**September 8th at 1 PM Mountain Daylight Time** led by Alea Kootz. More information on the `GeoCAT-comp` tutorial TBA.
+The NCAR/UCAR virtual Python Tutorial Seminar Series continues with two sessions highlighting the functionality developed by NCAR's GeoCAT team: 1) Plotting with GeoCAT on **Wednesday, August 25th** led by Anissa Zacharias and 2) `GeoCAT-comp`**September 8th at 1 PM Mountain Daylight Time** led by Alea Kootz. More information on the `GeoCAT-comp` tutorial TBA.
 
-The content for the GeoCAT-Viz tutorial is hosted on Anissa's [Plotting with GeoCAT Tutorial Repository](https://github.com/anissa111/plotting-with-geocat-tutorial).
+The content for the Plotting with GeoCAT tutorial is hosted on Anissa's [Plotting with GeoCAT Tutorial Repository](https://github.com/anissa111/plotting-with-geocat-tutorial).
 
 ## Preparation
 
