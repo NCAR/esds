@@ -30,12 +30,7 @@ release = '0.1'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = [
-    'myst_nb',
-    'ablog',
-    'sphinx_panels',
-    'sphinx_comments',
-]
+extensions = ['myst_nb', 'ablog', 'sphinx_panels', 'sphinx_comments', 'sphinxext.rediraffe']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -60,6 +55,8 @@ html_theme_options = {
     'google_analytics_id': 'G-B50ZRRN69X',
 }
 
+rediraffe_redirects = 'redirects.txt'
+
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -80,7 +77,7 @@ blog_baseurl = 'ncar.github.io/esds/'
 blog_title = 'NCAR ESDS'
 blog_path = 'blog'
 fontawesome_included = True
-blog_post_pattern = 'posts/*'
+blog_post_pattern = 'posts/*/*'
 post_redirect_refresh = 1
 post_auto_image = 1
 post_auto_excerpt = 2
@@ -89,7 +86,7 @@ post_auto_excerpt = 2
 panels_add_bootstrap_css = False
 
 # MyST config
-myst_enable_extensions = ['amsmath', 'colon_fence', 'deflist', 'html_image']
+myst_enable_extensions = ['amsmath', 'colon_fence', 'deflist', 'html_image', 'dollarmath']
 myst_url_schemes = ('http', 'https', 'mailto')
 
 
