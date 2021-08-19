@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2021-08-14T03:10:06.898020+00:00</updated>
+  <updated>2021-08-19T22:42:25.110712+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.19">ABlog</generator>
@@ -761,5 +761,20 @@ What should I do?</summary>
     <category term="cesm" label="cesm"/>
     <category term="visualization" label="visualization"/>
     <published>2021-08-13T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/2021/geocat-tutorial/</id>
+    <title>Plotting with GeoCAT Tutorial</title>
+    <updated>2021-08-19T00:00:00+00:00</updated>
+    <author>
+      <name>Julia Kent</name>
+    </author>
+    <content type="html">&lt;p&gt;The NCAR/UCAR virtual Python Tutorial Seminar Series continues with two sessions highlighting the functionality developed by NCAR’s GeoCAT team: 1) Plotting with GeoCAT on &lt;strong&gt;Wednesday, August 25th&lt;/strong&gt; led by Anissa Zacharias and 2) &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;GeoCAT-comp&lt;/span&gt;&lt;/code&gt;&lt;strong&gt;September 8th at 1 PM Mountain Daylight Time&lt;/strong&gt; led by Alea Kootz. More information on the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;GeoCAT-comp&lt;/span&gt;&lt;/code&gt; tutorial TBA.&lt;/p&gt;
+&lt;p&gt;The content for the Plotting with GeoCAT tutorial is hosted on Anissa’s &lt;a class="reference external" href="https://github.com/anissa111/plotting-with-geocat-tutorial"&gt;Plotting with GeoCAT Tutorial Repository&lt;/a&gt;.&lt;/p&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/2021/geocat-tutorial/" rel="alternate"/>
+    <summary>The NCAR/UCAR virtual Python Tutorial Seminar Series continues with two sessions highlighting the functionality developed by NCAR’s GeoCAT team: 1) Plotting with GeoCAT on Wednesday, August 25th led by Anissa Zacharias and 2) GeoCAT-compSeptember 8th at 1 PM Mountain Daylight Time led by Alea Kootz. More information on the GeoCAT-comp tutorial TBA.The content for the Plotting with GeoCAT tutorial is hosted on Anissa’s Plotting with GeoCAT Tutorial Repository.</summary>
+    <category term="python-tutorial-series" label="python-tutorial-series"/>
+    <published>2021-08-19T00:00:00+00:00</published>
   </entry>
 </feed>
