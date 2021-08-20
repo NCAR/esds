@@ -22,6 +22,8 @@ The content for the Plotting with GeoCAT tutorial is hosted on Anissa's [Plottin
 
 Alternatively, click on the "launch binder" button in the `README` on the repository
 
+You may find it useful to refress your Python plotting techniques, as covered in Anissa's [Matplotlib Tutorial](https://youtu.be/EiPRIdHQEmE).
+
 ## Sign Up
 
 If you would like join the *learnpython@ucar.edu* Google group to be informed of updates and events in the seminar series, please do so by following this [link](https://groups.google.com/a/ucar.edu/g/learnpython/about) and clicking "Join Group" next to the group name.
