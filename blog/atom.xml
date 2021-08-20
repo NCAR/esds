@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2021-08-20T14:55:57.070296+00:00</updated>
+  <updated>2021-08-20T22:23:11.598303+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.19">ABlog</generator>
@@ -776,5 +776,23 @@ What should I do?</summary>
     <summary>The NCAR/UCAR virtual Python Tutorial Seminar Series continues with two sessions highlighting the functionality developed by NCAR’s GeoCAT team: 1) Plotting with GeoCAT on Wednesday, August 25th led by Anissa Zacharias and 2) GeoCAT-comp September 8th at 1 PM Mountain Daylight Time led by Alea Kootz. More information on the GeoCAT-comp tutorial TBA.The content for the Plotting with GeoCAT tutorial is hosted on Anissa’s Plotting with GeoCAT Tutorial Repository.</summary>
     <category term="python-tutorial-series" label="python-tutorial-series"/>
     <published>2021-08-19T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/2021/intake-esm-holoviews-diagnostics/</id>
+    <title>Examining Diagnostics Using Intake-ESM and hvPlot</title>
+    <updated>2021-08-20T00:00:00+00:00</updated>
+    <author>
+      <name>Max Grover</name>
+    </author>
+    <content type="html">&lt;p&gt;In previous weeks, we have looked at &lt;a class="reference external" href="https://ncar.github.io/esds/posts/2021/ecgtools-history-files-example/"&gt;building Intake-ESM catalogs from history files&lt;/a&gt; and &lt;a class="reference external" href="https://ncar.github.io/esds/posts/2021/cesm-datashader/"&gt;visualizing CESM output using Holoviews and Datashader&lt;/a&gt;, but this week we are putting together a few of those pieces to visualize a comparison between model runs.&lt;/p&gt;
+&lt;p&gt;One of the first ESDS blog posts looked at &lt;a class="reference external" href="https://ncar.github.io/esds/posts/2021/Interactive_Dashboard/"&gt;building an interactive dashboard to look at plots&lt;/a&gt;, using high resolution ocean model output as the dataset. One of the limitations of that approach is that the images are static - we are pulling in &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;png&lt;/span&gt;&lt;/code&gt;s, and rending on the page, as opposed to more interactive options. In this example, we will read in data generated from &lt;a class="reference external" href="https://ecgtools.readthedocs.io/en/latest/"&gt;ecgtools&lt;/a&gt;, from a directory only accessible via NCAR’s high performance computing center.&lt;/p&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/2021/intake-esm-holoviews-diagnostics/" rel="alternate"/>
+    <summary>In previous weeks, we have looked at building Intake-ESM catalogs from history files and visualizing CESM output using Holoviews and Datashader, but this week we are putting together a few of those pieces to visualize a comparison between model runs.One of the first ESDS blog posts looked at building an interactive dashboard to look at plots, using high resolution ocean model output as the dataset. One of the limitations of that approach is that the images are static - we are pulling in pngs, and rending on the page, as opposed to more interactive options. In this example, we will read in data generated from ecgtools, from a directory only accessible via NCAR’s high performance computing center.</summary>
+    <category term="cesm" label="cesm"/>
+    <category term="intake" label="intake"/>
+    <category term="visualization" label="visualization"/>
+    <category term="diagnostics" label="diagnostics"/>
+    <published>2021-08-20T00:00:00+00:00</published>
   </entry>
 </feed>
