@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2021-08-20T22:23:11.598303+00:00</updated>
+  <updated>2021-08-27T22:12:32.406528+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.19">ABlog</generator>
@@ -794,5 +794,22 @@ What should I do?</summary>
     <category term="visualization" label="visualization"/>
     <category term="diagnostics" label="diagnostics"/>
     <published>2021-08-20T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/2021/intake-obs-cesm2le-comparison/</id>
+    <title>Comparing Atmospheric Model Output with Observations Using Intake-ESM</title>
+    <updated>2021-08-27T00:00:00+00:00</updated>
+    <author>
+      <name>Max Grover</name>
+    </author>
+    <content type="html">&lt;p&gt;Comparing models and observations is a critical component of climate diagnostic packages. This process can be challenging though - given the number of observational datasets to compare against, and the difference in spatiotemporal resolutions. In the previous iteration of the diagnostics package used for atmospheric data from the Community Earth System Model (CESM), they used pre-computed, observational datasets stored in a directory on the GLADE filesystem (&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;/glade/p/cesm/amwg/amwg_diagnostics/obs_data&lt;/span&gt;&lt;/code&gt;)&lt;/p&gt;
+&lt;p&gt;Within this example, we walk though generating an &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;intake-esm&lt;/span&gt;&lt;/code&gt; catalog from the observational data, reading in CESM data, and compare models and observations&lt;/p&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/2021/intake-obs-cesm2le-comparison/" rel="alternate"/>
+    <summary>Comparing models and observations is a critical component of climate diagnostic packages. This process can be challenging though - given the number of observational datasets to compare against, and the difference in spatiotemporal resolutions. In the previous iteration of the diagnostics package used for atmospheric data from the Community Earth System Model (CESM), they used pre-computed, observational datasets stored in a directory on the GLADE filesystem (/glade/p/cesm/amwg/amwg_diagnostics/obs_data)Within this example, we walk though generating an intake-esm catalog from the observational data, reading in CESM data, and compare models and observations</summary>
+    <category term="intake" label="intake"/>
+    <category term="observations" label="observations"/>
+    <category term="cesm2-le" label="cesm2-le"/>
+    <published>2021-08-27T00:00:00+00:00</published>
   </entry>
 </feed>
