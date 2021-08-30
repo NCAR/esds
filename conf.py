@@ -52,7 +52,7 @@ html_theme = 'pydata_sphinx_theme'
 html_theme_options = {
     'github_url': 'https://github.com/ncar/esds',
     'search_bar_text': 'Search this site... ',
-    'google_analytics_id': 'G-B50ZRRN69X',
+    'google_analytics_id': 'UA-196809533-1',
 }
 
 rediraffe_redirects = 'redirects.txt'
