@@ -12,7 +12,7 @@ The content for the GeoCAT-Viz tutorial is hosted on Alea's [GeoCAT-Comp Tutoria
 
 ## Preparation
 
-- Clone the repository with `git clone https://github.com/pilotchute/geocat_comp_tutorial`
+- Clone the repository with `git clone git@github.com:pilotchute/geocat_comp_tutorial`
 
 - Create a conda environment from the `environment.yml` by first navigating into the repository with `cd geocat_comp_tutorial` and then running `conda env create -f environment.yml`
 
