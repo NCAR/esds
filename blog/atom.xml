@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2021-09-03T15:12:34.833082+00:00</updated>
+  <updated>2021-09-03T15:14:29.701310+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.19">ABlog</generator>
@@ -814,16 +814,16 @@ What should I do?</summary>
   </entry>
   <entry>
     <id>ncar.github.io/esds/posts/2021/geocat-comp-tutorial/</id>
-    <title>GeoCAT-Viz Tutorial</title>
+    <title>GeoCAT-Comp Tutorial</title>
     <updated>2021-09-03T00:00:00+00:00</updated>
     <author>
       <name>Julia Kent</name>
     </author>
     <content type="html">&lt;p&gt;The NCAR/UCAR virtual Python Tutorial Seminar Series continues highlighting the functionality developed by NCAR’s GeoCAT team with &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;GeoCAT-comp&lt;/span&gt;&lt;/code&gt; on &lt;strong&gt;September 8th at 1 PM Mountain Daylight Time&lt;/strong&gt; led by Alea Kootz.&lt;/p&gt;
-&lt;p&gt;The content for the GeoCAT-Viz tutorial is hosted on Alea’s &lt;a class="reference external" href="https://github.com/pilotchute/geocat_comp_tutorial"&gt;GeoCAT-COMP Tutorial Repository&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The content for the GeoCAT-Viz tutorial is hosted on Alea’s &lt;a class="reference external" href="https://github.com/pilotchute/geocat_comp_tutorial"&gt;GeoCAT-Comp Tutorial Repository&lt;/a&gt;.&lt;/p&gt;
 </content>
     <link href="ncar.github.io/esds/posts/2021/geocat-comp-tutorial/" rel="alternate"/>
-    <summary>The NCAR/UCAR virtual Python Tutorial Seminar Series continues highlighting the functionality developed by NCAR’s GeoCAT team with GeoCAT-comp on September 8th at 1 PM Mountain Daylight Time led by Alea Kootz.The content for the GeoCAT-Viz tutorial is hosted on Alea’s GeoCAT-COMP Tutorial Repository.</summary>
+    <summary>The NCAR/UCAR virtual Python Tutorial Seminar Series continues highlighting the functionality developed by NCAR’s GeoCAT team with GeoCAT-comp on September 8th at 1 PM Mountain Daylight Time led by Alea Kootz.The content for the GeoCAT-Viz tutorial is hosted on Alea’s GeoCAT-Comp Tutorial Repository.</summary>
     <category term="python-tutorial-series" label="python-tutorial-series"/>
     <published>2021-09-03T00:00:00+00:00</published>
   </entry>

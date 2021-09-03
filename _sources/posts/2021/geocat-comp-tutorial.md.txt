@@ -4,11 +4,11 @@ date: 2021-09-03
 tags: python-tutorial-series
 ---
 
-# GeoCAT-Viz Tutorial
+# GeoCAT-Comp Tutorial
 
 The NCAR/UCAR virtual Python Tutorial Seminar Series continues highlighting the functionality developed by NCAR's GeoCAT team with `GeoCAT-comp` on **September 8th at 1 PM Mountain Daylight Time** led by Alea Kootz.
 
-The content for the GeoCAT-Viz tutorial is hosted on Alea's [GeoCAT-COMP Tutorial Repository](https://github.com/pilotchute/geocat_comp_tutorial).
+The content for the GeoCAT-Viz tutorial is hosted on Alea's [GeoCAT-Comp Tutorial Repository](https://github.com/pilotchute/geocat_comp_tutorial).
 
 ## Preparation
 
