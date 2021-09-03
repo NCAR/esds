@@ -8,15 +8,15 @@ tags: python-tutorial-series
 
 The NCAR/UCAR virtual Python Tutorial Seminar Series continues highlighting the functionality developed by NCAR's GeoCAT team with `GeoCAT-comp` on **September 8th at 1 PM Mountain Daylight Time** led by Alea Kootz.
 
-The content for the GeoCAT-Viz tutorial is hosted on Alea's [GeoCAT-COMP Tutorial Repository](XXX).
+The content for the GeoCAT-Viz tutorial is hosted on Alea's [GeoCAT-COMP Tutorial Repository](https://github.com/pilotchute/geocat_comp_tutorial).
 
 ## Preparation
 
-- Clone the repository with `git clone XXX`
+- Clone the repository with `git clone https://github.com/pilotchute/geocat_comp_tutorial`
 
-- Create a conda environment from the `environment.yml` by first navigating into the repository with `cd geocat-comp-tutorial` and then running `conda env create -f environment.yml`
+- Create a conda environment from the `environment.yml` by first navigating into the repository with `cd geocat_comp_tutorial` and then running `conda env create -f environment.yml`
 
-- Activate the environment by running `conda activate geocat-comp-tutorial`
+- Activate the environment by running `conda activate geocat-comp_tutorial`
 
 - Launch JupyterLab by running `jupyter lab`.
 
