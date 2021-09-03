@@ -16,7 +16,7 @@ The content for the Plotting with GeoCAT tutorial is hosted on Anissa's [Plottin
 
 - Create a conda environment from the `environment.yml` by first navigating into the repository with `cd plotting-with-geocat-tutorial` and then running `conda env create -f environment.yml`
 
-- Activate the environment by running `conda activate geocat-viz-tutorial`
+- Activate the environment by running `conda activate plotting-with-geocat-tutorial`
 
 - Launch JupyterLab by running `jupyter lab`.
 
