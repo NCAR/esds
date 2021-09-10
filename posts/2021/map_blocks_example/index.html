@@ -245,6 +245,12 @@ commentsRunWhenDOMLoaded(addUtterances);
 <ul>
    
   <li>
+    <a href="../regrid-observations-pop-grid/"
+      >10 September - Regridding High Resolution Observations to a High Resolution Model Grid</a
+    >
+  </li>
+  
+  <li>
     <a href="../geocat-comp-tutorial/"
       >03 September - GeoCAT-Comp Tutorial</a
     >
@@ -268,12 +274,6 @@ commentsRunWhenDOMLoaded(addUtterances);
     >
   </li>
   
-  <li>
-    <a href="../cesm-datashader/"
-      >13 August - Plotting CESM Data on an Unstructured Grid using Geoviews and Datashader</a
-    >
-  </li>
-  
 </ul>
 
 <h3>
@@ -282,7 +282,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <ul>
    
   <li>
-    <a href="../../../blog/2021/">2021 (38)</a>
+    <a href="../../../blog/2021/">2021 (39)</a>
   </li>
     
   <li>
@@ -363,7 +363,7 @@ commentsRunWhenDOMLoaded(addUtterances);
           <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
               
               <div>
-                 <div class="section" id="how-to-use-xarray-map-blocks-for-vertical-interpolation-of-a-3d-field">
+                 <div class="tex2jax_ignore mathjax_ignore section" id="how-to-use-xarray-map-blocks-for-vertical-interpolation-of-a-3d-field">
 <h1>How to Use <code class="docutils literal notranslate"><span class="pre">xarray.map_blocks</span></code> for Vertical Interpolation of a 3D Field<a class="headerlink" href="#how-to-use-xarray-map-blocks-for-vertical-interpolation-of-a-3d-field" title="Permalink to this headline">¶</a></h1>
 <p>Within this example, we cover how to use <code class="docutils literal notranslate"><span class="pre">xarray.map_blocks</span></code> to calculate the mixed-layer depth within the CESM POP model output.</p>
 <p>This calculation is “embarassingly parallel” such that each calculation is done within a single a column. The calculation <strong><em>should</em></strong> be easily computed within each column across the model domain. This is where <code class="docutils literal notranslate"><span class="pre">map_blocks</span></code> can be used to improve the performance of this metric.</p>

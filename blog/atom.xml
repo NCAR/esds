@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2021-09-03T15:17:35.545915+00:00</updated>
+  <updated>2021-09-10T17:25:03.187311+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.19">ABlog</generator>
@@ -826,5 +826,23 @@ What should I do?</summary>
     <summary>The NCAR/UCAR virtual Python Tutorial Seminar Series continues highlighting the functionality developed by NCAR’s GeoCAT team with GeoCAT-comp on September 8th at 1 PM Mountain Daylight Time led by Alea Kootz.The content for the GeoCAT-Viz tutorial is hosted on Alea’s GeoCAT-Comp Tutorial Repository.</summary>
     <category term="python-tutorial-series" label="python-tutorial-series"/>
     <published>2021-09-03T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/2021/regrid-observations-pop-grid/</id>
+    <title>Regridding High Resolution Observations to a High Resolution Model Grid</title>
+    <updated>2021-09-10T00:00:00+00:00</updated>
+    <author>
+      <name>Max Grover</name>
+    </author>
+    <content type="html">&lt;p&gt;In this example, we will cover how to leverage a useful package from the &lt;a class="reference external" href="http://www.pangeo.io"&gt;Pangeo Ecosystem&lt;/a&gt;, &lt;a class="reference external" href="https://pangeo-xesmf.readthedocs.io/en/latest/"&gt;xESMF&lt;/a&gt;. One important note when using this package, is &lt;strong&gt;make sure you are using the most up-to-date documentation/version&lt;/strong&gt;, a few years ago, development moved to the &lt;a class="reference external" href="https://github.com/pangeo-data/xESMF"&gt;pangeo-data&lt;/a&gt; branch of the package, installable using the following:&lt;/p&gt;
+&lt;p&gt;For this example, we will download a file from the &lt;a class="reference external" href="https://www.ncei.noaa.gov/products/world-ocean-atlas"&gt;World Ocean Atlas&lt;/a&gt;, which includes a variety of ocean observations assembled from the World Ocean Database.&lt;/p&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/2021/regrid-observations-pop-grid/" rel="alternate"/>
+    <summary>In this example, we will cover how to leverage a useful package from the Pangeo Ecosystem, xESMF. One important note when using this package, is make sure you are using the most up-to-date documentation/version, a few years ago, development moved to the pangeo-data branch of the package, installable using the following:For this example, we will download a file from the World Ocean Atlas, which includes a variety of ocean observations assembled from the World Ocean Database.</summary>
+    <category term="diagnostics" label="diagnostics"/>
+    <category term="observations" label="observations"/>
+    <category term="cesm" label="cesm"/>
+    <category term="intake" label="intake"/>
+    <published>2021-09-10T00:00:00+00:00</published>
   </entry>
 </feed>

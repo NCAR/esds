@@ -243,6 +243,12 @@ commentsRunWhenDOMLoaded(addUtterances);
 <ul>
    
   <li>
+    <a href="../regrid-observations-pop-grid/"
+      >10 September - Regridding High Resolution Observations to a High Resolution Model Grid</a
+    >
+  </li>
+  
+  <li>
     <a href="../geocat-comp-tutorial/"
       >03 September - GeoCAT-Comp Tutorial</a
     >
@@ -266,12 +272,6 @@ commentsRunWhenDOMLoaded(addUtterances);
     >
   </li>
   
-  <li>
-    <a href="../cesm-datashader/"
-      >13 August - Plotting CESM Data on an Unstructured Grid using Geoviews and Datashader</a
-    >
-  </li>
-  
 </ul>
 
 <h3>
@@ -280,7 +280,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <ul>
    
   <li>
-    <a href="../../../blog/2021/">2021 (38)</a>
+    <a href="../../../blog/2021/">2021 (39)</a>
   </li>
     
   <li>
@@ -334,7 +334,7 @@ commentsRunWhenDOMLoaded(addUtterances);
           <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
               
               <div>
-                 <div class="section" id="using-dask-on-the-new-casper-pbs-scheduler">
+                 <div class="tex2jax_ignore mathjax_ignore section" id="using-dask-on-the-new-casper-pbs-scheduler">
 <h1>Using Dask on the New Casper PBS Scheduler<a class="headerlink" href="#using-dask-on-the-new-casper-pbs-scheduler" title="Permalink to this headline">¶</a></h1>
 <p>Casper will complete a transition from Slurm to the PBS Pro workload manager on April 7, 2021. This has implications for how to spin up a Dask cluster, including via the <a class="reference external" href="https://jupyterhub.ucar.edu">NCAR Jupyterhub</a>.</p>
 <p>Below is an example script suitable for the new configuration using the <code class="docutils literal notranslate"><span class="pre">PBSCluster</span></code> function from <code class="docutils literal notranslate"><span class="pre">dask_jobqueue</span></code>. Note that the <code class="docutils literal notranslate"><span class="pre">ncar_jobqueue</span></code> package <a class="reference external" href="https://github.com/NCAR/ncar-jobqueue/issues/40">requires updating</a> to work with the new configuration.</p>

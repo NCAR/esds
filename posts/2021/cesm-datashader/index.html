@@ -73,7 +73,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
     <link rel="author" title="About these documents" href="../../../about/" />
     <link rel="index" title="Index" href="../../../genindex/" />
     <link rel="search" title="Search" href="../../../search/" /> 
@@ -246,6 +246,12 @@ commentsRunWhenDOMLoaded(addUtterances);
 <ul>
    
   <li>
+    <a href="../regrid-observations-pop-grid/"
+      >10 September - Regridding High Resolution Observations to a High Resolution Model Grid</a
+    >
+  </li>
+  
+  <li>
     <a href="../geocat-comp-tutorial/"
       >03 September - GeoCAT-Comp Tutorial</a
     >
@@ -269,12 +275,6 @@ commentsRunWhenDOMLoaded(addUtterances);
     >
   </li>
   
-  <li>
-    <a href="../intake-cesm2-le-glade-example/"
-      >06 August - Using Intake-ESM to Analyze Data from CESM2-LE</a
-    >
-  </li>
-  
 </ul>
 
 <h3>
@@ -283,7 +283,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <ul>
    
   <li>
-    <a href="../../../blog/2021/">2021 (38)</a>
+    <a href="../../../blog/2021/">2021 (39)</a>
   </li>
     
   <li>
@@ -410,7 +410,7 @@ commentsRunWhenDOMLoaded(addUtterances);
           <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
               
               <div>
-                 <div class="section" id="plotting-cesm-data-on-an-unstructured-grid-using-geoviews-and-datashader">
+                 <div class="tex2jax_ignore mathjax_ignore section" id="plotting-cesm-data-on-an-unstructured-grid-using-geoviews-and-datashader">
 <h1>Plotting CESM Data on an Unstructured Grid using <code class="docutils literal notranslate"><span class="pre">Geoviews</span></code> and <code class="docutils literal notranslate"><span class="pre">Datashader</span></code><a class="headerlink" href="#plotting-cesm-data-on-an-unstructured-grid-using-geoviews-and-datashader" title="Permalink to this headline">¶</a></h1>
 <p>This week, during Xdev office hours, <a class="reference external" href="https://staff.ucar.edu/users/yeager">Steve Yeager</a> raised a question regarding plotting unstructured grid data within Python. He was interested in plotting output from the <a class="reference external" href="https://www.cesm.ucar.edu/models/atm-cam/#:~:text=The%20Community%20Earth%20System%20Model,Department%20of%20Energy%20(DOE).">Community Atmosphere Model</a>, which supports unstructured grids, essentially a combination of triangles allowing for higher resolution in certain parts of the domain. This can be adventageous when wanting to achieve the benefits of high resolution within the primary domain, while maintaining the global scale of the model. This week, <a class="reference external" href="https://twitter.com/NCAR_Science/status/1425583582819483652?s=20">NCAR Science</a> tweeted a great explanation of how revolutionary this capability is in the context of resolving processes over Greenland.</p>
 <p>Unstructured grids can be difficult to plot directly within Python since they do not follow the typical <code class="docutils literal notranslate"><span class="pre">lat</span></code>, <code class="docutils literal notranslate"><span class="pre">lon</span></code> (x, y) convention. There is some preprocessing that needs to be applied before plotting.</p>
