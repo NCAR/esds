@@ -70,15 +70,15 @@ You may want to move past just your base environment, and create a new conda env
 
    if you have an environment file (ex. `environment.yml`), use the following:
 
-```bash
-conda env create -f environment.yml
-```
+   ```bash
+   conda env create -f environment.yml
+   ```
 
 2. Accessing your conda environment
 
    This process will change depending on whether you are using an interactive Jupyter environment - I encourage you to check out the video which Anderson Banihirwe put together describing this process on NCAR HPC resources
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/W4Jb6rY1w1w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/W4Jb6rY1w1w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Conda is taking too long to solve environment: use mamba
 
