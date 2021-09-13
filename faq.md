@@ -45,7 +45,9 @@ See the xarray [ecosystem](https://xarray.pydata.org/en/latest/ecosystem.html) p
 Dealing with Python environments can be tricky... a good place to start is to checkout [this guide on dealing with Python environments](https://whiteboxml.com/blog/the-definitive-guide-to-python-virtual-environments-with-conda)
 
 ### Installing conda on NCAR HPC resources
+
 There are two main steps of installing `conda` (miniconda in this case) on NCAR HPC resources
+
 1. Download [miniconda](https://docs.conda.io/en/latest/miniconda.html) within your work directory
 1. Install and activate your installation
 
@@ -54,16 +56,21 @@ There are a few videos which Anderson Banihirwe put together walking through thi
 <iframe width="560" height="315" src="https://www.youtube.com/embed/GGxUgjlmW2A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Creating and accessing a new conda environment
+
 You may want to move past just your base environment, and create a new conda environment! There are a few primary steps to this process:
+
 1. Create the environment
 
 If you are creating an environment from scratch, use the following:
+
 ```bash
 conda create --name
 ```
+
 where `name` is the name of your environment
 
 if you have an environment file (ex. `environment.yml`), use the following:
+
 ```bash
 conda env create -f environment.yml
 ```
