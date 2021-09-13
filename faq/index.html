@@ -270,6 +270,16 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#installing-conda-on-ncar-hpc-resources">
+     Installing conda on NCAR HPC resources
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#creating-and-accessing-a-new-conda-environment">
+     Creating and accessing a new conda environment
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#conda-is-taking-too-long-to-solve-environment-use-mamba">
      Conda is taking too long to solve environment: use mamba
     </a>
@@ -427,6 +437,37 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="section" id="general-advice">
 <h3>General Advice<a class="headerlink" href="#general-advice" title="Permalink to this headline">¶</a></h3>
 <p>Dealing with Python environments can be tricky… a good place to start is to checkout <a class="reference external" href="https://whiteboxml.com/blog/the-definitive-guide-to-python-virtual-environments-with-conda">this guide on dealing with Python environments</a></p>
+</div>
+<div class="section" id="installing-conda-on-ncar-hpc-resources">
+<h3>Installing conda on NCAR HPC resources<a class="headerlink" href="#installing-conda-on-ncar-hpc-resources" title="Permalink to this headline">¶</a></h3>
+<p>There are two main steps of installing <code class="docutils literal notranslate"><span class="pre">conda</span></code> (miniconda in this case) on NCAR HPC resources</p>
+<ol class="simple">
+<li><p>Download <a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">miniconda</a> within your work directory</p></li>
+<li><p>Install and activate your installation</p></li>
+</ol>
+<p>There are a few videos which Anderson Banihirwe put together walking through this process - they are embedded below!</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/GGxUgjlmW2A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<div class="section" id="creating-and-accessing-a-new-conda-environment">
+<h3>Creating and accessing a new conda environment<a class="headerlink" href="#creating-and-accessing-a-new-conda-environment" title="Permalink to this headline">¶</a></h3>
+<p>You may want to move past just your base environment, and create a new conda environment! There are a few primary steps to this process:</p>
+<ol>
+<li><p>Create the environment
+If you are creating an environment from scratch, use the following:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda create --name
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">name</span></code> is the name of your environment</p>
+<p>if you have an environment file (ex. <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code>), use the following:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda env create -f environment.yml
+</pre></div>
+</div>
+</li>
+<li><p>Accessing your conda environment</p>
+<p>This process will change depending on whether you are using an interactive Jupyter environment - I encourage you to check out the video which Anderson Banihirwe put together describing this process on NCAR HPC resources</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/W4Jb6rY1w1w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</li>
+</ol>
 </div>
 <div class="section" id="conda-is-taking-too-long-to-solve-environment-use-mamba">
 <h3>Conda is taking too long to solve environment: use mamba<a class="headerlink" href="#conda-is-taking-too-long-to-solve-environment-use-mamba" title="Permalink to this headline">¶</a></h3>
