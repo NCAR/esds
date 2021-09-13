@@ -60,16 +60,15 @@ There are a few videos which Anderson Banihirwe put together walking through thi
 You may want to move past just your base environment, and create a new conda environment! There are a few primary steps to this process:
 
 1. Create the environment
+   If you are creating an environment from scratch, use the following:
 
-If you are creating an environment from scratch, use the following:
+   ```bash
+   conda create --name
+   ```
 
-```bash
-conda create --name
-```
+   where `name` is the name of your environment
 
-where `name` is the name of your environment
-
-if you have an environment file (ex. `environment.yml`), use the following:
+   if you have an environment file (ex. `environment.yml`), use the following:
 
 ```bash
 conda env create -f environment.yml
@@ -77,7 +76,7 @@ conda env create -f environment.yml
 
 2. Accessing your conda environment
 
-This process will change depending on whether you are using an interactive Jupyter environment - I encourage you to check out the video which Anderson Banihirwe put together describing this process on NCAR HPC resources
+   This process will change depending on whether you are using an interactive Jupyter environment - I encourage you to check out the video which Anderson Banihirwe put together describing this process on NCAR HPC resources
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/W4Jb6rY1w1w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
