@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2021-09-20T20:36:04.244297+00:00</updated>
+  <updated>2021-09-21T16:42:09.232047+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.19">ABlog</generator>
@@ -844,5 +844,24 @@ What should I do?</summary>
     <category term="cesm" label="cesm"/>
     <category term="intake" label="intake"/>
     <published>2021-09-10T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/2021/benchmarking-history-timeseries-intake/</id>
+    <title>Benchmarking Performance of History vs. Timeseries Files</title>
+    <updated>2021-09-17T00:00:00+00:00</updated>
+    <author>
+      <name>Max Grover</name>
+    </author>
+    <content type="html">&lt;p&gt;In this example, we will look at how long reading data from the Community Earth System Model (CESM), applying calculations, and visualizing the output takes using the following packages:&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://ecgtools.readthedocs.io/en/latest/"&gt;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;ecgtools&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/2021/benchmarking-history-timeseries-intake/" rel="alternate"/>
+    <summary>In this example, we will look at how long reading data from the Community Earth System Model (CESM), applying calculations, and visualizing the output takes using the following packages:ecgtools</summary>
+    <category term="ecgtools" label="ecgtools"/>
+    <category term="intake" label="intake"/>
+    <category term="dask" label="dask"/>
+    <category term="cesm" label="cesm"/>
+    <category term="benchmark" label="benchmark"/>
+    <published>2021-09-17T00:00:00+00:00</published>
   </entry>
 </feed>
