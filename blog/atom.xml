@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2021-09-24T16:51:52.974751+00:00</updated>
+  <updated>2021-09-24T19:27:07.858031+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.19">ABlog</generator>
@@ -863,5 +863,25 @@ What should I do?</summary>
     <category term="cesm" label="cesm"/>
     <category term="benchmark" label="benchmark"/>
     <published>2021-09-17T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/2021/jupyter-based-diagnostics-overview/</id>
+    <title>Reimagining Diagnostics Through the Use of the Jupyter Ecosystem</title>
+    <updated>2021-09-24T00:00:00+00:00</updated>
+    <author>
+      <name>Max Grover</name>
+    </author>
+    <content type="html">&lt;p&gt;Typically, diagnostics packages are written with following structure, using script-based workflows&lt;/p&gt;
+&lt;p&gt;Read files and do some preprocessing&lt;/p&gt;
+&lt;img alt="cesm-marbl-book-overview" src="../_images/cesm_marbl_book_overview.png" /&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/2021/jupyter-based-diagnostics-overview/" rel="alternate"/>
+    <summary>Typically, diagnostics packages are written with following structure, using script-based workflowsRead files and do some preprocessingcesm-marbl-book-overview</summary>
+    <category term="diagnostics" label="diagnostics"/>
+    <category term="jupyter" label="jupyter"/>
+    <category term="intake" label="intake"/>
+    <category term="cesm" label="cesm"/>
+    <category term="visualization" label="visualization"/>
+    <published>2021-09-24T00:00:00+00:00</published>
   </entry>
 </feed>
