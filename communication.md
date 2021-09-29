@@ -2,7 +2,7 @@
 
 We use three primary platforms for communicating and collaborating. They include:
 
-## [Discourse](https://discourse-nsa.ucar.edu/)
+## [NSA Discourse](https://discourse-nsa.ucar.edu/)
 
 Discourse offers a community where users can ask questions and share progress on various projects. It is setup similarly to the [Pangeo discourse](https://discourse.pangeo.io/). You will need to register for an account, but once registered and logged on, be sure to follow the ESDS channel on this platform.
 
@@ -17,6 +17,6 @@ We plan on making it easier to access in the future, but the platform is current
 
 This repository and webpage is a space where we can post progress on this initiative, publish blog posts related to various workflows, document "best practices," in addition to serving as a resource/discussion spot via comments on pages and posts.
 
-## [ESDS Work in Progress Meetings](https://docs.google.com/document/d/e/2PACX-1vQeHIGSSz_8A8gZVL87xDjYXEwqB4CkRk85yf0TACb-rVgubjb3ukiulEYuUwHZGVXhgYNpaRC2SNAt/pub)
+## [ESDS Forum](https://docs.google.com/document/d/e/2PACX-1vQeHIGSSz_8A8gZVL87xDjYXEwqB4CkRk85yf0TACb-rVgubjb3ukiulEYuUwHZGVXhgYNpaRC2SNAt/pub)
 
 We have weekly meetings featuring presentations and discussions related to this project. If you are interested in the notes from these meetings, please check out [the agenda](https://docs.google.com/document/d/e/2PACX-1vQeHIGSSz_8A8gZVL87xDjYXEwqB4CkRk85yf0TACb-rVgubjb3ukiulEYuUwHZGVXhgYNpaRC2SNAt/pub)!
