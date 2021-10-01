@@ -44,11 +44,11 @@ In addition to the educational content mentioned above, we have been offering we
 
 We have had a total of **23 attendees** so far, with the most common topics being Xarray, Matplotlib, and Dask.
 
-![xdev office hours attendance](../images/office_hours_attendance.png)
-
-Recently, we have a had a slight decline in attendance, so if you are interested in finding help with your Python-oriented workflow, be sure to stop by on Mondays at 3 PM MT!
-
 ![office hours questions](../images/office_hours_questions.png)
+
+Recently, we have a had a slight decline in attendance, so if you are interested in finding help with your Python-oriented workflow, be sure to stop by on **Mondays at 3 PM MT**!
+
+![xdev office hours attendance](../images/office_hours_attendance.png)
 
 ## Blog Posts
 
