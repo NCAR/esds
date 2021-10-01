@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2021-09-29T11:06:53.560209+00:00</updated>
+  <updated>2021-10-01T12:02:03.895438+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.19">ABlog</generator>
@@ -883,5 +883,21 @@ What should I do?</summary>
     <category term="cesm" label="cesm"/>
     <category term="visualization" label="visualization"/>
     <published>2021-09-24T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/2021/esds-update-september-2021/</id>
+    <title>ESDS Progress Over the Past Few Months</title>
+    <updated>2021-10-01T00:00:00+00:00</updated>
+    <author>
+      <name>Max Grover</name>
+    </author>
+    <content type="html">&lt;p&gt;The first ESDS “meeting” took place in mid March 2021, with the kickoff event being the CGD town hall (&lt;a class="reference external" href="https://ncar.github.io/esds/posts/2021/esds-blog/"&gt;here is the blog post detailing the topics at that meeting&lt;/a&gt;). Since that meeting, we have moved forward, holding a variety of Work in Progress talks, partnering with Xdev to offer Python Tutorials, and publish a series of blog posts aimed at documenting scientific workflows here at NCAR.&lt;/p&gt;
+&lt;p&gt;Most of our blog posts thus far have been focused on Python tutorials, workflow examples, or conference summaries. One &lt;strong&gt;&lt;em&gt;new type of post&lt;/em&gt;&lt;/strong&gt; we will be posting now are monthly summaries on ESDS activities. Since we have not posted one yet, we grouped up all of our activities since early March. Going forward, we will post on a monthly basis!&lt;/p&gt;
+&lt;img alt="office hours questions" src="../_images/office_hours_questions.png" /&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/2021/esds-update-september-2021/" rel="alternate"/>
+    <summary>The first ESDS “meeting” took place in mid March 2021, with the kickoff event being the CGD town hall (here is the blog post detailing the topics at that meeting). Since that meeting, we have moved forward, holding a variety of Work in Progress talks, partnering with Xdev to offer Python Tutorials, and publish a series of blog posts aimed at documenting scientific workflows here at NCAR.Most of our blog posts thus far have been focused on Python tutorials, workflow examples, or conference summaries. One new type of post we will be posting now are monthly summaries on ESDS activities. Since we have not posted one yet, we grouped up all of our activities since early March. Going forward, we will post on a monthly basis!office hours questions</summary>
+    <category term="update" label="update"/>
+    <published>2021-10-01T00:00:00+00:00</published>
   </entry>
 </feed>

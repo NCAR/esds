@@ -1,0 +1,695 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ESDS Progress Over the Past Few Months &#8212; NCAR-ESDS 0.1 documentation</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "NCAR/esds");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <link rel="author" title="About these documents" href="../../../about/" />
+    <link rel="index" title="Index" href="../../../genindex/" />
+    <link rel="search" title="Search" href="../../../search/" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+     
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../../blog/atom.xml"
+  title="NCAR ESDS"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+<a class="navbar-brand" href="../../../">
+<p class="title">NCAR-ESDS</p>
+</a>
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../about/">
+  About Us
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../faq/">
+  Frequently Asked Questions
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../blog/">
+  Blog
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../communication/">
+  Communication
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../best-practices/">
+  Best Practices
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../calendar/">
+  Calendar
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../projects/">
+  Projects
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/ncar/esds" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">  
+<h2>
+   <i class="fa fa-calendar"></i>
+  01 October 2021 
+</h2>
+
+<ul>
+   
+<li id="author">
+  <span
+    ><i class="fa-fw fa fa-user"></i></span
+  >
+   
+  <a href="../../../blog/author/max-grover/">Max Grover</a>  
+</li>
+    
+<li id="tags">
+  <span
+    ><i
+      class="fa-fw fa fa-tag"
+    ></i
+    ></span
+  >
+   
+  <a href="../../../blog/tag/update/">update</a>  
+</li>
+ 
+</ul>
+
+<h3>
+  <a href="../../../blog/">Recent Posts</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="../jupyter-based-diagnostics-overview/"
+      >24 September - Reimagining Diagnostics Through the Use of the Jupyter Ecosystem</a
+    >
+  </li>
+  
+  <li>
+    <a href="../benchmarking-history-timeseries-intake/"
+      >17 September - Benchmarking Performance of History vs. Timeseries Files</a
+    >
+  </li>
+  
+  <li>
+    <a href="../regrid-observations-pop-grid/"
+      >10 September - Regridding High Resolution Observations to a High Resolution Model Grid</a
+    >
+  </li>
+  
+  <li>
+    <a href="../geocat-comp-tutorial/"
+      >03 September - GeoCAT-Comp Tutorial</a
+    >
+  </li>
+  
+  <li>
+    <a href="../intake-obs-cesm2le-comparison/"
+      >27 August - Comparing Atmospheric Model Output with Observations Using Intake-ESM</a
+    >
+  </li>
+  
+</ul>
+
+<h3>
+  <a href="../../../blog/archive/">Archives</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="../../../blog/2021/">2021 (42)</a>
+  </li>
+    
+  <li>
+    <a href="../../../blog/2020/">2020 (6)</a>
+  </li>
+    
+  <li>
+    <a href="../../../blog/2019/">2019 (2)</a>
+  </li>
+   
+</ul>
+
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#work-in-progress-talks">
+   Work in Progress Talks
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#workflow-examples">
+     Workflow Examples
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#python-package-overviews">
+     Python Package Overviews
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#office-hours">
+   Office Hours
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#blog-posts">
+   Blog Posts
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#documentation-and-citations">
+     Documentation and Citations
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-access">
+     Data Access
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-computation">
+     Data Computation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-visualization">
+     Data Visualization
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#end-to-end-workflow">
+     End to End Workflow
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conference-summaries-discussions-and-resources">
+     Conference Summaries, Discussions, and Resources
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-tutorials">
+   Python Tutorials
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#numpy-tutorial-10-march-2021">
+     Numpy Tutorial (10 March 2021)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#matplotlib-tutorial-24-march-2021">
+     Matplotlib Tutorial (24 March 2021)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#object-oriented-programming-tutorial-09-april-2021">
+     Object Oriented Programming Tutorial (09 April 2021)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cartopy-tutorial-26-april-2021">
+     Cartopy Tutorial (26 April 2021)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#git-and-github-tutorial-12-may-2021">
+     Git and Github Tutorial (12 May 2021)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pandas-tutorial-26-may-2021">
+     Pandas Tutorial (26 May 2021)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#xarray-tutorial-09-and-23-june-2021">
+     Xarray Tutorial (09 and 23 June 2021)
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#part-1">
+       Part 1
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#part-2">
+       Part 2
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dask-tutorial-14-july-and-11-august-2021">
+     Dask Tutorial (14 July and 11 August 2021)
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       Part 1
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id2">
+       Part 2
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#geocat-viz-tutorial-25-august-2021">
+     GeoCAT Viz Tutorial (25 August 2021)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#geocat-comp-tutorial-08-september-2021">
+     GeoCAT Comp Tutorial (08 September 2021)
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                 <div class="tex2jax_ignore mathjax_ignore section" id="esds-progress-over-the-past-few-months">
+<h1>ESDS Progress Over the Past Few Months<a class="headerlink" href="#esds-progress-over-the-past-few-months" title="Permalink to this headline">¶</a></h1>
+<p>The first ESDS “meeting” took place in mid March 2021, with the kickoff event being the CGD town hall (<a class="reference external" href="https://ncar.github.io/esds/posts/2021/esds-blog/">here is the blog post detailing the topics at that meeting</a>). Since that meeting, we have moved forward, holding a variety of Work in Progress talks, partnering with Xdev to offer Python Tutorials, and publish a series of blog posts aimed at documenting scientific workflows here at NCAR.</p>
+<p>Most of our blog posts thus far have been focused on Python tutorials, workflow examples, or conference summaries. One <strong><em>new type of post</em></strong> we will be posting now are monthly summaries on ESDS activities. Since we have not posted one yet, we grouped up all of our activities since early March. Going forward, we will post on a monthly basis!</p>
+<p>We outline some of the key points of progress over the past few months below! We also have update our vision, values, and near-term goals, accessible on our <a class="reference external" href="https://ncar.github.io/esds/about/">about us</a> page. If you are interested in more of the details, be sure to check out the <a class="reference external" href="https://docs.google.com/document/d/1hwl-3QpFlR8tGrLxdxZrC9edT3CeLTG9dqy6_8KupYg/edit?usp=sharing">ESDS Vision Whitepaper</a>.</p>
+<div class="section" id="work-in-progress-talks">
+<h2>Work in Progress Talks<a class="headerlink" href="#work-in-progress-talks" title="Permalink to this headline">¶</a></h2>
+<p>If you are interested in the links to these talks, or the discussion points, check out the <a class="reference external" href="https://docs.google.com/document/d/13lpcxSWmcdeguchuGxmAG895w1HMQRexCGIxjxDZ8YQ/edit?usp=sharing">agenda using this link</a>!</p>
+<div class="section" id="workflow-examples">
+<h3>Workflow Examples<a class="headerlink" href="#workflow-examples" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>HiRes CESM MARBL repo (5 April 2021) - Mike Levy</p></li>
+<li><p>SMYLE Analysis (19 April 2021) - Steve Yeager</p></li>
+<li><p>Data Preprocessing and Workflows for Machine Learning (12 July 2021) - Maria Molina</p></li>
+<li><p>Machine Learning at NCAR (9 August 2021) - David John Gagne</p></li>
+<li><p>Oxygen Minimum Zone Analysis with Pangeo (23 August 2021) - Julius Busecke (LDEO)</p></li>
+<li><p>Fast parallel access to existing netCDF file collections with Zarr (20 September 2021) - Lucas Sterzinger</p></li>
+</ul>
+</div>
+<div class="section" id="python-package-overviews">
+<h3>Python Package Overviews<a class="headerlink" href="#python-package-overviews" title="Permalink to this headline">¶</a></h3>
+<p>We include links to the respective packages below!</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/NCAR/CAM_diagnostics">CAM Diagnostics</a> (5 April 2021) - Brian Medeiros</p></li>
+<li><p><a class="reference external" href="https://geocat-examples.readthedocs.io/en/latest/gallery/index.html">An Overview of GeoCAT</a> (12 April 2021) - Orhan Eroglu</p></li>
+<li><p><a class="reference external" href="https://cf-xarray.readthedocs.io/en/latest/">An Overview of CF-Xarray</a> (12 April 2021) - Deepak Cherian</p></li>
+<li><p><a class="reference external" href="https://intake-esm.readthedocs.io/en/latest/">Intake-ESM</a> (10 May 2021) - Anderson Banihirwe</p></li>
+<li><p><a class="reference external" href="https://ecgtools.readthedocs.io/en/latest/">ecgtools</a> (7 June 2021) - Max Grover</p></li>
+<li><p><a class="reference external" href="https://github.com/hCraker/calendar_average_demo">GeoCAT Temporal Averaging</a> (7 June 2021) - Heather Craker</p></li>
+<li><p><a class="reference external" href="https://github.com/NCAR/esds-funnel">Funnel: a prototype supporting extensible diagnostics</a> (26 July 2021) - Matt Long</p></li>
+<li><p><a class="reference external" href="https://unidata.github.io/MetPy/latest/devel/CONTRIBUTING.html">An Overview of MetPy</a> (9 August 2021) - Ryan May and Drew Camron</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="office-hours">
+<h2>Office Hours<a class="headerlink" href="#office-hours" title="Permalink to this headline">¶</a></h2>
+<p>In addition to the educational content mentioned above, we have been offering weekly office hours, staffed by Xdev members.</p>
+<p>We have had a total of <strong>23 attendees</strong> so far, with the most common topics being Xarray, Matplotlib, and Dask.</p>
+<p><img alt="office hours questions" src="../../../_images/office_hours_questions.png" /></p>
+<p>Recently, we have a had a slight decline in attendance, so if you are interested in finding help with your Python-oriented workflow, be sure to stop by on <strong>Mondays at 3 PM MT</strong>!</p>
+<p><img alt="xdev office hours attendance" src="../../../_images/office_hours_attendance.png" /></p>
+</div>
+<div class="section" id="blog-posts">
+<h2>Blog Posts<a class="headerlink" href="#blog-posts" title="Permalink to this headline">¶</a></h2>
+<p>Over the course of the last few months, we posted a total of 23 blog posts, <strong>not including posts related to Python tutorials</strong>.</p>
+<div class="section" id="documentation-and-citations">
+<h3>Documentation and Citations<a class="headerlink" href="#documentation-and-citations" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://ncar.github.io/esds/posts/2021/software-citation/">The Importance of Software Citation (02 April 2021)</a></p></li>
+<li><p><a class="reference external" href="https://ncar.github.io/esds/posts/2021/paired_programming_vs/">Paired Programming using VS Code (06 May 2021)</a></p></li>
+<li><p><a class="reference external" href="https://ncar.github.io/esds/posts/2021/model_documentation_jupyterbook/">Creating Model Documentation Using Jupyterbook and Intake-esm (25 June 2021)</a></p></li>
+</ul>
+</div>
+<div class="section" id="data-access">
+<h3>Data Access<a class="headerlink" href="#data-access" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://ncar.github.io/esds/posts/2021/intake_esm_dask/">An Example of Using Intake-ESM (09 April 2021)</a></p></li>
+<li><p><a class="reference external" href="https://ncar.github.io/esds/posts/2021/intake_cmip6_debug/">Debugging Intake-ESM Process for Reading in CMIP6 (14 May 2021)</a></p></li>
+<li><p><a class="reference external" href="https://ncar.github.io/esds/posts/2021/ecgtools-history-files-example/">Building an Intake-esm catalog from CESM2 History Files (04 June 2021)</a></p></li>
+<li><p><a class="reference external" href="https://ncar.github.io/esds/posts/2021/benchmarking-history-timeseries-intake/">Benchmarking Performance of History vs. Timeseries Files with <code class="docutils literal notranslate"><span class="pre">ecgtools</span></code>, <code class="docutils literal notranslate"><span class="pre">Intake-ESM</span></code>, and <code class="docutils literal notranslate"><span class="pre">Dask</span></code> (17 September 2021)</a></p></li>
+</ul>
+</div>
+<div class="section" id="data-computation">
+<h3>Data Computation<a class="headerlink" href="#data-computation" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://ncar.github.io/esds/posts/2021/ncar-jobqueue-example/">NCAR Jobqueue (15 April 2021)</a></p></li>
+<li><p><a class="reference external" href="https://ncar.github.io/esds/posts/2021/casper_pbs_dask/">Using Dask on the New Casper PBS Scheduler(06 April 2021)</a></p></li>
+<li><p><a class="reference external" href="https://ncar.github.io/esds/posts/2021/map_blocks_example/">How to Use <code class="docutils literal notranslate"><span class="pre">xarray.map_blocks</span></code> for Vertical Interpolation of a 3D Field (28 April 2021)</a></p></li>
+</ul>
+</div>
+<div class="section" id="data-visualization">
+<h3>Data Visualization<a class="headerlink" href="#data-visualization" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://ncar.github.io/esds/posts/2021/graphviz_example/">Creating Visualizations of Intake-ESM Catalogs (11 June 2021)</a></p></li>
+<li><p><a class="reference external" href="https://ncar.github.io/esds/posts/2021/cesm-datashader/">Plotting CESM Data on an Unstructured Grid using <code class="docutils literal notranslate"><span class="pre">Geoviews</span></code> and <code class="docutils literal notranslate"><span class="pre">Datashader</span></code> (13 August 2021)</a></p></li>
+<li><p><a class="reference external" href="https://ncar.github.io/esds/posts/2021/intake-esm-holoviews-diagnostics/">Examining Diagnotics Using <code class="docutils literal notranslate"><span class="pre">Intake-ESM</span></code> and <code class="docutils literal notranslate"><span class="pre">hvPlot</span></code> (20 August 2021)</a></p></li>
+<li><p><a class="reference external" href="https://ncar.github.io/esds/posts/2021/regrid-observations-pop-grid/">Regridding High Resolution Observations to a High Resolution Model Grid (10 September 2021)</a></p></li>
+</ul>
+</div>
+<div class="section" id="end-to-end-workflow">
+<h3>End to End Workflow<a class="headerlink" href="#end-to-end-workflow" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://ncar.github.io/esds/posts/2021/multiple_index_xarray_xoak/#indexing-unstructured-grids-with-the-power-of-xoak">Indexing unstructured grids with the Power of Xoak (23 April 2021)</a></p></li>
+<li><p><a class="reference external" href="https://ncar.github.io/esds/posts/2021/intake-cesm2-le-glade-example/">Using Intake-ESM to Analyze Data from CESM2-LE (06 August 2021)</a></p></li>
+<li><p><a class="reference external" href="https://ncar.github.io/esds/posts/2021/intake-obs-cesm2le-comparison/">Comparing Atmospheric Model Output with Observations Using <code class="docutils literal notranslate"><span class="pre">Intake-ESM</span></code> (27 August 2021)</a></p></li>
+<li><p><a class="reference external" href="https://ncar.github.io/esds/posts/2021/jupyter-based-diagnostics-overview/">Reimagining Diagnostics Through the Use of the Jupyter Ecosystem (24 September 2021)</a></p></li>
+</ul>
+</div>
+<div class="section" id="conference-summaries-discussions-and-resources">
+<h3>Conference Summaries, Discussions, and Resources<a class="headerlink" href="#conference-summaries-discussions-and-resources" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://ncar.github.io/esds/posts/2021/dask-summit-takeaway/">Dask Distributed Summit 2021 Takeaways (28 May 2021)</a></p></li>
+<li><p><a class="reference external" href="https://ncar.github.io/esds/posts/2021/cesm-workshop-2021-diagnostics/">CESM Diagnostics Discussion (17 June 2021)</a></p></li>
+<li><p><a class="reference external" href="https://ncar.github.io/esds/posts/2021/scaling-with-dask-class-takeaways/">Scaling Python with Dask Class Takeaways (02 July 2021)</a></p></li>
+<li><p><a class="reference external" href="https://ncar.github.io/esds/posts/2021/scipy-2021-takeaways/">SciPy Conference 2021 Takeaways (26 July 2021)</a></p></li>
+<li><p><a class="reference external" href="https://ncar.github.io/esds/posts/2021/project-pythia-overview/">Pythia Portal Overview (30 July 2021)</a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="python-tutorials">
+<h2>Python Tutorials<a class="headerlink" href="#python-tutorials" title="Permalink to this headline">¶</a></h2>
+<p>As mentioned previously, the Python Tutorial series has been on ongoing training resource, led by Julia Kent and fellow Xdevers. Below is a list of the tutorial blog posts and associated videos.</p>
+<div class="section" id="numpy-tutorial-10-march-2021">
+<h3><a class="reference external" href="https://ncar.github.io/esds/posts/2021/numpy-tutorial/">Numpy Tutorial (10 March 2021)</a><a class="headerlink" href="#numpy-tutorial-10-march-2021" title="Permalink to this headline">¶</a></h3>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/v=kstc-6uz7AQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<div class="section" id="matplotlib-tutorial-24-march-2021">
+<h3><a class="reference external" href="https://ncar.github.io/esds/posts/2021/matplotlib-tutorial/">Matplotlib Tutorial (24 March 2021)</a><a class="headerlink" href="#matplotlib-tutorial-24-march-2021" title="Permalink to this headline">¶</a></h3>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EiPRIdHQEmE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<div class="section" id="object-oriented-programming-tutorial-09-april-2021">
+<h3><a class="reference external" href="https://ncar.github.io/esds/posts/2021/object-oriented-programming-tutorial/">Object Oriented Programming Tutorial (09 April 2021)</a><a class="headerlink" href="#object-oriented-programming-tutorial-09-april-2021" title="Permalink to this headline">¶</a></h3>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/GEFnL8C62u8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<div class="section" id="cartopy-tutorial-26-april-2021">
+<h3><a class="reference external" href="https://ncar.github.io/esds/posts/2021/cartopy-tutorial/">Cartopy Tutorial (26 April 2021)</a><a class="headerlink" href="#cartopy-tutorial-26-april-2021" title="Permalink to this headline">¶</a></h3>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ivmd3RluMiw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<div class="section" id="git-and-github-tutorial-12-may-2021">
+<h3><a class="reference external" href="https://ncar.github.io/esds/posts/2021/git-and-github-tutorial/">Git and Github Tutorial (12 May 2021)</a><a class="headerlink" href="#git-and-github-tutorial-12-may-2021" title="Permalink to this headline">¶</a></h3>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fYkPn0Nttlg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<div class="section" id="pandas-tutorial-26-may-2021">
+<h3><a class="reference external" href="https://ncar.github.io/esds/posts/2021/pandas-tutorial/">Pandas Tutorial (26 May 2021)</a><a class="headerlink" href="#pandas-tutorial-26-may-2021" title="Permalink to this headline">¶</a></h3>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BsV3ek7qsiM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<div class="section" id="xarray-tutorial-09-and-23-june-2021">
+<h3><a class="reference external" href="https://ncar.github.io/esds/posts/2021/xarray-tutorial/">Xarray Tutorial (09 and 23 June 2021)</a><a class="headerlink" href="#xarray-tutorial-09-and-23-june-2021" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="part-1">
+<h4>Part 1<a class="headerlink" href="#part-1" title="Permalink to this headline">¶</a></h4>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Ss4ryKukhi4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<div class="section" id="part-2">
+<h4>Part 2<a class="headerlink" href="#part-2" title="Permalink to this headline">¶</a></h4>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2H_4drBwORY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</div>
+<div class="section" id="dask-tutorial-14-july-and-11-august-2021">
+<h3><a class="reference external" href="https://ncar.github.io/esds/posts/2021/dask-tutorial/">Dask Tutorial (14 July and 11 August 2021)</a><a class="headerlink" href="#dask-tutorial-14-july-and-11-august-2021" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id1">
+<h4>Part 1<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wn-QM6QUB_U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<div class="section" id="id2">
+<h4>Part 2<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yn4_-1pHC5k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</div>
+<div class="section" id="geocat-viz-tutorial-25-august-2021">
+<h3><a class="reference external" href="https://ncar.github.io/esds/posts/2021/geocat-tutorial/">GeoCAT Viz Tutorial (25 August 2021)</a><a class="headerlink" href="#geocat-viz-tutorial-25-august-2021" title="Permalink to this headline">¶</a></h3>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/It231le1fAU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<div class="section" id="geocat-comp-tutorial-08-september-2021">
+<h3><a class="reference external" href="https://ncar.github.io/esds/posts/2021/geocat-comp-tutorial/">GeoCAT Comp Tutorial (08 September 2021)</a><a class="headerlink" href="#geocat-comp-tutorial-08-september-2021" title="Permalink to this headline">¶</a></h3>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/uiWDQKI8YTQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</div>
+</div>
+
+<div class="section">
+     
+<div class="section">
+  <span style="float: left">
+     
+    <a href="../jupyter-based-diagnostics-overview/">
+      <i class="fa fa-arrow-circle-left"></i> Reimagining Diagnostics Through the Use of the Jupyter Ecosystem
+    </a>
+    
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right">
+    
+  </span>
+</div>
+  
+</div>
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-196809533-1', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021, NCAR Earth System Data Science Team.<br/>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br/>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>
