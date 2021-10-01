@@ -18,25 +18,25 @@ If you are interested in the links to these talks, or the discussion points, che
 
 ### Workflow Examples
 
-- HiRes CESM MARBL repo (5 April 2021) - Mike Levy
-- SMYLE Analysis (19 April 2021) - Steve Yeager
-- Data Preprocessing and Workflows for Machine Learning (12 July 2021) - Maria Molina
-- Machine Learning at NCAR (9 August 2021) - David John Gagne
-- Oxygen Minimum Zone Analysis with Pangeo (23 August 2021) - Julius Busecke (LDEO)
-- Fast parallel access to existing netCDF file collections with Zarr (20 September 2021) - Lucas Sterzinger
+- HiRes CESM MARBL repo (5 April 2021) - Mike Levy (CGD)
+- SMYLE Analysis (19 April 2021) - Steve Yeager (CGD)
+- Data Preprocessing and Workflows for Machine Learning (12 July 2021) - Maria Molina (CGD)
+- Machine Learning at NCAR (9 August 2021) - David John Gagne (CISL)
+- Oxygen Minimum Zone Analysis with Pangeo (23 August 2021) - Julius Busecke (Columbia LDEO)
+- Fast parallel access to existing netCDF file collections with Zarr (20 September 2021) - Lucas Sterzinger (CISL)
 
 ### Python Package Overviews
 
 We include links to the respective packages below!
 
-- [CAM Diagnostics](https://github.com/NCAR/CAM_diagnostics) (5 April 2021) - Brian Medeiros
-- [An Overview of GeoCAT](https://geocat-examples.readthedocs.io/en/latest/gallery/index.html) (12 April 2021) - Orhan Eroglu
-- [An Overview of CF-Xarray](https://cf-xarray.readthedocs.io/en/latest/) (12 April 2021) - Deepak Cherian
-- [Intake-ESM](https://intake-esm.readthedocs.io/en/latest/) (10 May 2021) - Anderson Banihirwe
-- [ecgtools](https://ecgtools.readthedocs.io/en/latest/) (7 June 2021) - Max Grover
-- [GeoCAT Temporal Averaging](https://github.com/hCraker/calendar_average_demo) (7 June 2021) - Heather Craker
-- [Funnel: a prototype supporting extensible diagnostics](https://github.com/NCAR/esds-funnel) (26 July 2021) - Matt Long
-- [An Overview of MetPy](https://unidata.github.io/MetPy/latest/devel/CONTRIBUTING.html) (9 August 2021) - Ryan May and Drew Camron
+- [CAM Diagnostics](https://github.com/NCAR/CAM_diagnostics) (5 April 2021) - Brian Medeiros (CGD)
+- [An Overview of GeoCAT](https://geocat-examples.readthedocs.io/en/latest/gallery/index.html) (12 April 2021) - Orhan Eroglu (CISL)
+- [An Overview of CF-Xarray](https://cf-xarray.readthedocs.io/en/latest/) (12 April 2021) - Deepak Cherian (CGD)
+- [Intake-ESM](https://intake-esm.readthedocs.io/en/latest/) (10 May 2021) - Anderson Banihirwe (CISL)
+- [ecgtools](https://ecgtools.readthedocs.io/en/latest/) (7 June 2021) - Max Grover (CGD)
+- [GeoCAT Temporal Averaging](https://github.com/hCraker/calendar_average_demo) (7 June 2021) - Heather Craker (CISL)
+- [Funnel: a prototype supporting extensible diagnostics](https://github.com/NCAR/esds-funnel) (26 July 2021) - Matt Long (CGD)
+- [An Overview of MetPy](https://unidata.github.io/MetPy/latest/devel/CONTRIBUTING.html) (9 August 2021) - Ryan May and Drew Camron (Unidata)
 
 ## Office Hours
 
