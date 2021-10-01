@@ -101,52 +101,52 @@ As mentioned previously, the Python Tutorial series has been on ongoing training
 
 #### [Numpy Tutorial (10 March 2021)](https://ncar.github.io/esds/posts/2021/numpy-tutorial/)
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/kstc-6uz7AQ/0.jpg)](https://www.youtube.com/watch?v=kstc-6uz7AQ)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/v=kstc-6uz7AQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 #### [Matplotlib Tutorial (24 March 2021)](https://ncar.github.io/esds/posts/2021/matplotlib-tutorial/)
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/EiPRIdHQEmE/0.jpg)](https://www.youtube.com/watch?v=EiPRIdHQEmE)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EiPRIdHQEmE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 #### [Object Oriented Programming Tutorial (09 April 2021)](https://ncar.github.io/esds/posts/2021/object-oriented-programming-tutorial/)
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/GEFnL8C62u8/0.jpg)](https://www.youtube.com/watch?v=GEFnL8C62u8)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/GEFnL8C62u8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 #### [Cartopy Tutorial (26 April 2021)](https://ncar.github.io/esds/posts/2021/cartopy-tutorial/)
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/ivmd3RluMiw/0.jpg)](https://www.youtube.com/watch?v=ivmd3RluMiw)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ivmd3RluMiw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 #### [Git and Github Tutorial (12 May 2021)](https://ncar.github.io/esds/posts/2021/git-and-github-tutorial/)
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/fYkPn0Nttlg/0.jpg)](https://www.youtube.com/watch?v=fYkPn0Nttlg)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fYkPn0Nttlg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 #### [Pandas Tutorial (26 May 2021)](https://ncar.github.io/esds/posts/2021/pandas-tutorial/)
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/BsV3ek7qsiM/0.jpg)](https://www.youtube.com/watch?v=BsV3ek7qsiM)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BsV3ek7qsiM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 #### [Xarray Tutorial (09 and 23 June 2021)](https://ncar.github.io/esds/posts/2021/xarray-tutorial/)
 
 ##### Part 1
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/Ss4ryKukhi4/0.jpg)](https://www.youtube.com/watch?v=Ss4ryKukhi4)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Ss4ryKukhi4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ##### Part 2
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/2H_4drBwORY/0.jpg)](https://www.youtube.com/watch?v=2H_4drBwORY)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2H_4drBwORY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 #### [Dask Tutorial (14 July and 11 August 2021)](https://ncar.github.io/esds/posts/2021/dask-tutorial/)
 
 ##### Part 1
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/wn-QM6QUB_U/0.jpg)](https://www.youtube.com/watch?v=wn-QM6QUB_U)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wn-QM6QUB_U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ##### Part 2
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/yn4_-1pHC5k/0.jpg)](https://www.youtube.com/watch?v=yn4_-1pHC5k)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yn4_-1pHC5k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 #### [GeoCAT Viz Tutorial (25 August 2021)](https://ncar.github.io/esds/posts/2021/geocat-tutorial/)
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/It231le1fAU/0.jpg)](https://www.youtube.com/watch?v=It231le1fAU)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/It231le1fAU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 #### [GeoCAT Comp Tutorial (08 September 2021)](https://ncar.github.io/esds/posts/2021/geocat-comp-tutorial/)
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/uiWDQKI8YTQ/0.jpg)](https://www.youtube.com/watch?v=uiWDQKI8YTQ)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/uiWDQKI8YTQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
