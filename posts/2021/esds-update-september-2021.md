@@ -1,3 +1,9 @@
+---
+author: Max Grover
+date: 2021-10-01
+tags: update
+---
+
 # ESDS Progress Over the Past Few Months
 
 The first ESDS "meeting" took place in mid March 2021, with the kickoff event being the CGD town hall ([here is the blog post detailing the topics at that meeting](https://ncar.github.io/esds/posts/2021/esds-blog/)). Since that meeting, we have moved forward, holding a variety of Work in Progress talks, partnering with Xdev to offer Python Tutorials, and publish a series of blog posts aimed at documenting scientific workflows here at NCAR.
