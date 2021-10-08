@@ -4,11 +4,12 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Using Intake-ESM to Analyze Data from CESM2-LE &#8212; NCAR-ESDS 0.1 documentation</title>
     
-  <link href="../../../_static/css/theme.css" rel="stylesheet" />
-  <link href="../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -23,14 +24,14 @@
 
     
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../../../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
@@ -76,8 +77,21 @@ commentsRunWhenDOMLoaded(addUtterances);
     <link rel="index" title="Index" href="../../../genindex/" />
     <link rel="search" title="Search" href="../../../search/" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
-     
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-196809533-1', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+ 
 <link
   rel="alternate"
   type="application/atom+xml"
@@ -244,6 +258,12 @@ commentsRunWhenDOMLoaded(addUtterances);
 <ul>
    
   <li>
+    <a href="../kay-et-al-cesm2-le/"
+      >08 October - CESM2-Large Ensemble Reproduction of a Figure from Kay et al. 2015 Using Intake-ESM and hvPlot</a
+    >
+  </li>
+  
+  <li>
     <a href="../esds-update-september-2021/"
       >01 October - ESDS Progress Over the Past Few Months</a
     >
@@ -267,12 +287,6 @@ commentsRunWhenDOMLoaded(addUtterances);
     >
   </li>
   
-  <li>
-    <a href="../geocat-comp-tutorial/"
-      >03 September - GeoCAT-Comp Tutorial</a
-    >
-  </li>
-  
 </ul>
 
 <h3>
@@ -281,7 +295,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <ul>
    
   <li>
-    <a href="../../../blog/2021/">2021 (42)</a>
+    <a href="../../../blog/2021/">2021 (43)</a>
   </li>
     
   <li>
@@ -406,10 +420,10 @@ commentsRunWhenDOMLoaded(addUtterances);
           <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
               
               <div>
-                 <div class="tex2jax_ignore mathjax_ignore section" id="using-intake-esm-to-analyze-data-from-cesm2-le">
+                 <section class="tex2jax_ignore mathjax_ignore" id="using-intake-esm-to-analyze-data-from-cesm2-le">
 <h1>Using Intake-ESM to Analyze Data from CESM2-LE<a class="headerlink" href="#using-intake-esm-to-analyze-data-from-cesm2-le" title="Permalink to this headline">¶</a></h1>
 <p>In mid June, the <a class="reference external" href="https://www.cesm.ucar.edu/projects/community-projects/LENS2/">CESM2 Large Ensemble</a> dataset was made available to the public. This model was run in collaboration with the <a class="reference external" href="https://ibsclimate.org/">IBS Center for Climate Physics</a> and the <a class="reference external" href="https://ncar.ucar.edu/">National Center for Atmospheric Research</a> This dataset includes 100 ensemble members, at one degree spatial resolution, with each ensemble member including data from 1850 to 2100. If you are interested in learning more about how this ensemble was setup, be sure to check out <a class="reference external" href="https://www.cesm.ucar.edu/projects/community-projects/LENS2/">the main webpage</a> or read the pre-print of <a class="reference external" href="https://esd.copernicus.org/preprints/esd-2021-50/">Rodgers et al. 2021</a> which describes this dataset in detail.</p>
-<div class="section" id="main-challenge">
+<section id="main-challenge">
 <h2>Main Challenge<a class="headerlink" href="#main-challenge" title="Permalink to this headline">¶</a></h2>
 <p>One of these challenges with this dataset is dealing with the massive amount of output. The data are available through the <a class="reference external" href="https://www.cesm.ucar.edu/projects/community-projects/LENS2/data-sets.html">NCAR Climate Data Gateway</a> and via the <a class="reference external" href="https://climatedata.ibs.re.kr/data/cesm2-lens">IBS OpenDAP Server</a>. There is also a subset of the dataset available on the GLADE file system on NCAR HPC resources available within the directory <code class="docutils literal notranslate"><span class="pre">/glade/campaign/cgd/cesm/CESM2-LE/timeseries/</span></code>.</p>
 <p>Through these traditional file-access methods, one would need to scroll through and find one or a few of the <strong>millions</strong> of files produced by the model. Fortunately, this dataset has been catalogued, available using the <a class="reference external" href="https://intake-esm.readthedocs.io/en/latest/"><code class="docutils literal notranslate"><span class="pre">Intake-esm</span></code></a> package, which enables one to query the data, and read into a dictionary of <code class="docutils literal notranslate"><span class="pre">xarray.Datasets</span></code>, preventing the user from having to setup the concatenation and file search themselves.</p>
@@ -434,11 +448,11 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li><p>Documentation Page: https://www.cesm.ucar.edu/projects/community-projects/LENS2/</p></li>
 </ul>
 <p>We are <strong>most interested</strong> in the catalog path here</p>
-</div>
-<div class="section" id="using-the-catalog">
+</section>
+<section id="using-the-catalog">
 <h2>Using the Catalog<a class="headerlink" href="#using-the-catalog" title="Permalink to this headline">¶</a></h2>
 <p>Now that we found the catalog file, and see that it is the dataset we are interested in, we can start our analysis!</p>
-<div class="section" id="imports">
+<section id="imports">
 <h3>Imports<a class="headerlink" href="#imports" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -451,8 +465,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="spin-up-our-dask-cluster">
+</section>
+<section id="spin-up-our-dask-cluster">
 <h3>Spin up our Dask Cluster<a class="headerlink" href="#spin-up-our-dask-cluster" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1038,8 +1052,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     </div>
 </div></div>
 </div>
-</div>
-<div class="section" id="read-in-the-data-catalog">
+</section>
+<section id="read-in-the-data-catalog">
 <h3>Read in the data catalog<a class="headerlink" href="#read-in-the-data-catalog" title="Permalink to this headline">¶</a></h3>
 <p>As mentioned before, we use the catalog path <code class="docutils literal notranslate"><span class="pre">/glade/collections/cmip/catalog/intake-esm-datastore/catalogs/glade-cesm2-le.json</span></code></p>
 <div class="cell docutils container">
@@ -1159,8 +1173,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 </table>
 </div></div></div>
 </div>
-</div>
-<div class="section" id="querying-for-our-desired-variable">
+</section>
+<section id="querying-for-our-desired-variable">
 <h3>Querying for our desired variable<a class="headerlink" href="#querying-for-our-desired-variable" title="Permalink to this headline">¶</a></h3>
 <p>In this case, we are interested in the surface temperature in Boulder, Colorado. There are <strong>numerous</strong> temperature variables in the dataset, we can search for all the <code class="docutils literal notranslate"><span class="pre">long_names</span></code> from atmospheric output.</p>
 <p>We can use the wildcard here <code class="docutils literal notranslate"><span class="pre">*</span></code> to look for where both captial and lowercase <code class="docutils literal notranslate"><span class="pre">temperature</span></code> show up in the <code class="docutils literal notranslate"><span class="pre">long_name</span></code></p>
@@ -1198,8 +1212,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="query-and-subset-our-catalog">
+</section>
+<section id="query-and-subset-our-catalog">
 <h3>Query and Subset our Catalog<a class="headerlink" href="#query-and-subset-our-catalog" title="Permalink to this headline">¶</a></h3>
 <p>Let’s go with <code class="docutils literal notranslate"><span class="pre">Lowest</span> <span class="pre">model</span> <span class="pre">level</span> <span class="pre">temperature</span></code> since this represents the closest to the surface without being at the <strong>actual</strong> surface of the earth. We pass the <code class="docutils literal notranslate"><span class="pre">component</span></code> and <code class="docutils literal notranslate"><span class="pre">long_name</span></code> into the query, which reduces the number of datasets to 8!</p>
 <div class="cell docutils container">
@@ -1310,9 +1324,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </table>
 </div></div></div>
 </div>
-</div>
-</div>
-<div class="section" id="read-in-using-to-dataset-dict">
+</section>
+</section>
+<section id="read-in-using-to-dataset-dict">
 <h2>Read in using <code class="docutils literal notranslate"><span class="pre">.to_dataset_dict()</span></code><a class="headerlink" href="#read-in-using-to-dataset-dict" title="Permalink to this headline">¶</a></h2>
 <p>We include the additional <code class="docutils literal notranslate"><span class="pre">dask.config.set()</span></code> to help with splitting up large chunks when reading in</p>
 <div class="cell docutils container">
@@ -1367,7 +1381,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li><p>Control Branch Year - which year the ensemble branched off from, these are described within the <a class="reference external" href="https://www.cesm.ucar.edu/projects/community-projects/LENS2/">CESM2-LE documentation page</a></p></li>
 <li><p>Variable - which variable you are working with</p></li>
 </ul>
-<div class="section" id="define-a-helper-function-which-subsets-the-data-groups-by-year-and-returns-the-data-array">
+<section id="define-a-helper-function-which-subsets-the-data-groups-by-year-and-returns-the-data-array">
 <h3>Define a helper function which subsets the data, groups by year, and returns the data array<a class="headerlink" href="#define-a-helper-function-which-subsets-the-data-groups-by-year-and-returns-the-data-array" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1384,7 +1398,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 </div>
-<div class="section" id="look-at-one-of-the-datasets">
+<section id="look-at-one-of-the-datasets">
 <h4>Look at one of the datasets<a class="headerlink" href="#look-at-one-of-the-datasets" title="Permalink to this headline">¶</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1393,8 +1407,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="apply-our-function">
+</section>
+<section id="apply-our-function">
 <h4>Apply our function<a class="headerlink" href="#apply-our-function" title="Permalink to this headline">¶</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1403,9 +1417,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="plot-our-results">
+</section>
+</section>
+<section id="plot-our-results">
 <h3>Plot our Results!<a class="headerlink" href="#plot-our-results" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1443,13 +1457,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 <img alt="../../../_images/intake-cesm2-le-glade-example_26_0.png" src="../../../_images/intake-cesm2-le-glade-example_26_0.png" />
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="conclusion">
+</section>
+</section>
+<section id="conclusion">
 <h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
 <p>While this was a generally simple analysis, I hope this helps you see how powerful <code class="docutils literal notranslate"><span class="pre">intake-esm</span></code> can be when working with large datasets such as the CESM2-Large Ensemble!</p>
-</div>
-</div>
+</section>
+</section>
 
 <div class="section">
      
@@ -1479,10 +1493,9 @@ commentsRunWhenDOMLoaded(addUtterances);
               </div>
               
               
-              <div class='prev-next-bottom'>
-                
-
-              </div>
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
               
           </main>
           
@@ -1490,30 +1503,19 @@ commentsRunWhenDOMLoaded(addUtterances);
       </div>
     </div>
   
-  <script src="../../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
-
-  
-<script async="" src="https://www.google-analytics.com/analytics.js"></script>
-<script>
-                        window.ga = window.ga || function () {
-                            (ga.q = ga.q || []).push(arguments) };
-                        ga.l = +new Date;
-                        ga('create', 'UA-196809533-1', 'auto');
-                        ga('set', 'anonymizeIp', true);
-                        ga('send', 'pageview');
-                    </script>
+  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 <footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
       <p class="copyright">
-    &copy; Copyright 2021, NCAR Earth System Data Science Team.<br/>
+    &copy; Copyright 2021, NCAR Earth System Data Science Team.<br>
 </p>
     </div>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br/>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br>
 </p>
     </div>
     

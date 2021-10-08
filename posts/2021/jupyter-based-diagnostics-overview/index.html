@@ -4,11 +4,12 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Reimagining Diagnostics Through the Use of the Jupyter Ecosystem &#8212; NCAR-ESDS 0.1 documentation</title>
     
-  <link href="../../../_static/css/theme.css" rel="stylesheet" />
-  <link href="../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -23,14 +24,14 @@
 
     
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/blank.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../../../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
@@ -76,8 +77,21 @@ commentsRunWhenDOMLoaded(addUtterances);
     <link rel="index" title="Index" href="../../../genindex/" />
     <link rel="search" title="Search" href="../../../search/" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
-     
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-196809533-1', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+ 
 <link
   rel="alternate"
   type="application/atom+xml"
@@ -246,6 +260,12 @@ commentsRunWhenDOMLoaded(addUtterances);
 <ul>
    
   <li>
+    <a href="../kay-et-al-cesm2-le/"
+      >08 October - CESM2-Large Ensemble Reproduction of a Figure from Kay et al. 2015 Using Intake-ESM and hvPlot</a
+    >
+  </li>
+  
+  <li>
     <a href="../esds-update-september-2021/"
       >01 October - ESDS Progress Over the Past Few Months</a
     >
@@ -269,12 +289,6 @@ commentsRunWhenDOMLoaded(addUtterances);
     >
   </li>
   
-  <li>
-    <a href="../intake-obs-cesm2le-comparison/"
-      >27 August - Comparing Atmospheric Model Output with Observations Using Intake-ESM</a
-    >
-  </li>
-  
 </ul>
 
 <h3>
@@ -283,7 +297,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <ul>
    
   <li>
-    <a href="../../../blog/2021/">2021 (42)</a>
+    <a href="../../../blog/2021/">2021 (43)</a>
   </li>
     
   <li>
@@ -393,7 +407,7 @@ commentsRunWhenDOMLoaded(addUtterances);
           <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
               
               <div>
-                 <div class="tex2jax_ignore mathjax_ignore section" id="reimagining-diagnostics-through-the-use-of-the-jupyter-ecosystem">
+                 <section class="tex2jax_ignore mathjax_ignore" id="reimagining-diagnostics-through-the-use-of-the-jupyter-ecosystem">
 <h1>Reimagining Diagnostics Through the Use of the Jupyter Ecosystem<a class="headerlink" href="#reimagining-diagnostics-through-the-use-of-the-jupyter-ecosystem" title="Permalink to this headline">¶</a></h1>
 <p>Typically, diagnostics packages are written with following structure, using script-based workflows</p>
 <ul class="simple">
@@ -403,7 +417,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 <p>An example of this workflow is the Model Diagnostic Task Force (MDTF) package, which contains a collection of Process Oriented Diagnostics (PODs). Within the this workflow, files are pre-processed, then read into the various diagnostics using similar syntax.</p>
 <p>These workflows are typically executed using a collection of scripts, with Jupyter Notebooks primarily being used as a tool for <em><strong>exploratory analysis</strong></em>. Here, we investigate what diagnostics package built using <strong>Jupyter Notebooks</strong> would look like.</p>
-<div class="section" id="why-jupyter">
+<section id="why-jupyter">
 <h2>Why Jupyter<a class="headerlink" href="#why-jupyter" title="Permalink to this headline">¶</a></h2>
 <p>The Jupyter ecocystem (notebooks, hub, books, etc.) offers an alternative to traditional scripting and packages. In this example, investigate how using this interactive interface be used to write a parameterizable diagnostics package, capable of providing comparisons of CESM model output. The main reasons for using Jupyter include:</p>
 <ul class="simple">
@@ -417,8 +431,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li><p><a class="reference external" href="https://github.com/marbl-ecosys/marbl-bgc-diagnostics">Link to the project repository</a></p></li>
 </ul>
 <p><img alt="cesm-marbl-book-overview" src="../../../_images/cesm_marbl_book_overview.png" /></p>
-</div>
-<div class="section" id="setting-up-an-analysis-configuration-file">
+</section>
+<section id="setting-up-an-analysis-configuration-file">
 <h2>Setting up an Analysis Configuration File<a class="headerlink" href="#setting-up-an-analysis-configuration-file" title="Permalink to this headline">¶</a></h2>
 <p>A basic requirement of a diagnostics package is that it be configurable to different cases, allowing the user to specify which files to use, which diagnostics to plot, and where to place the output. An example of the configuration file used for this example is given below:</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">reference_case_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">b1850.f19_g17.validation_mct.004</span>
@@ -471,14 +485,14 @@ commentsRunWhenDOMLoaded(addUtterances);
         <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">SiO3</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="setting-up-the-preprocessing-notebooks">
+</section>
+<section id="setting-up-the-preprocessing-notebooks">
 <h2>Setting up the “Preprocessing” Notebooks<a class="headerlink" href="#setting-up-the-preprocessing-notebooks" title="Permalink to this headline">¶</a></h2>
 <p>The first two bullet points from the “traditional diagnostics” workflow can be accomplished using two primary notebooks, one for creating a data catalog (<code class="docutils literal notranslate"><span class="pre">00_Build_Catalog.ipynb</span></code>), the other accessing data from that catalog and applying a computation (<code class="docutils literal notranslate"><span class="pre">01_Compute_20yr_mean.ipynb</span></code>). A third notebook plots a visualization of the data catalog used in the analysis (<code class="docutils literal notranslate"><span class="pre">intro.ipynb</span></code>)</p>
 <p>If you are interested in how we built the data catalog, I encourage you check out the <a class="reference external" href="https://ncar.github.io/esds/posts/2021/ecgtools-history-files-example/">“Building Intake-ESM Catalogs from History Files” blog post</a>.</p>
 <p>If you are interested in how we computed the average over some time period using Dask, Xarray, and Intake-ESM, I encourage you check out our <a class="reference external" href="https://ncar.github.io/esds/posts/2021/intake-esm-holoviews-diagnostics/">“Examining Diagnostics Using Intake-ESM and hvPlot” blog post</a>.</p>
 <p>If you are interested in how we built the catalog visualization, I encourage you to check out the <a class="reference external" href="https://ncar.github.io/esds/posts/2021/model_documentation_jupyterbook/">“Creating Model Documentation Using Jupyterbook and Intake-ESM” blog post</a>.</p>
-<div class="section" id="using-our-configuration-file-in-the-notebooks">
+<section id="using-our-configuration-file-in-the-notebooks">
 <h3>Using our Configuration File in the Notebooks<a class="headerlink" href="#using-our-configuration-file-in-the-notebooks" title="Permalink to this headline">¶</a></h3>
 <p>At the top of every notebook, we call</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">config</span> <span class="kn">import</span> <span class="n">analysis_config</span>
@@ -495,9 +509,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </pre></div>
 </div>
 <p>This allows us to access a dictionary with the configuration set in our <code class="docutils literal notranslate"><span class="pre">analysis_config.yml</span></code> file.</p>
-</div>
-</div>
-<div class="section" id="how-to-parameterize-notebooks">
+</section>
+</section>
+<section id="how-to-parameterize-notebooks">
 <h2>How to Parameterize Notebooks<a class="headerlink" href="#how-to-parameterize-notebooks" title="Permalink to this headline">¶</a></h2>
 <p>An important requirement for a diagnostic package is that it be “parameterizable” such that a user can input a list of variables, and the package is able to “inject” those variables into the analysis. Here, we demonstrate a bare-minimum example of how this might work, specifying a list of <code class="docutils literal notranslate"><span class="pre">variables</span></code> in the <code class="docutils literal notranslate"><span class="pre">analysis_config.yaml</span></code> file:</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">variables</span><span class="p">:</span>
@@ -537,7 +551,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda install -c conda-forge papermill
 </pre></div>
 </div>
-<div class="section" id="parameterizing-code-cells">
+<section id="parameterizing-code-cells">
 <h3>Parameterizing Code Cells<a class="headerlink" href="#parameterizing-code-cells" title="Permalink to this headline">¶</a></h3>
 <p>We use <a class="reference external" href="https://papermill.readthedocs.io/en/latest/index.html">papermill</a> here to substitute variables within code blocks. You add a cell with the desired variable name (ex. <code class="docutils literal notranslate"><span class="pre">variable</span></code>), then add a cell tag <code class="docutils literal notranslate"><span class="pre">parameters</span></code>. An image of what this looks like the Jupyter Lab interface is shown below:</p>
 <p><img alt="papermill_cell_tags" src="../../../_images/papermill_cell_tags.png" /></p>
@@ -565,13 +579,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p><img alt="papermill_output_salt" src="../../../_images/papermill_output_salt.png" /></p>
 <p>We only see the output from papermill, and the plotting cell. If we expand the “Click to Show” section, we can see the original input.</p>
 <p><img alt="papermill_output_salt_expaned" src="../../../_images/papermill_output_salt_expanded.png" /></p>
-</div>
-<div class="section" id="taking-a-look-at-the-interactive-plots">
+</section>
+<section id="taking-a-look-at-the-interactive-plots">
 <h3>Taking a Look at the Interactive Plots<a class="headerlink" href="#taking-a-look-at-the-interactive-plots" title="Permalink to this headline">¶</a></h3>
 <p>Below these first few cells are interactive plots with the specified variables. An example of the <code class="docutils literal notranslate"><span class="pre">SALT</span></code> diagnostics are shown below (if you are interested in generating similar plots, be sure to check out the <a class="reference external" href="https://ncar.github.io/esds/posts/2021/intake-esm-holoviews-diagnostics/">“Examining Diagnostics Using Intake-ESM and hvPlot” blog post</a>.</p>
 <a class="reference internal image-reference" href="../../../_images/interactive_notebook_example_salt.gif"><img alt="../../../_images/interactive_notebook_example_salt.gif" class="align-center" src="../../../_images/interactive_notebook_example_salt.gif" style="width: 750px;" /></a>
-</div>
-<div class="section" id="parameterizing-markdown-cells">
+</section>
+<section id="parameterizing-markdown-cells">
 <h3>Parameterizing Markdown Cells<a class="headerlink" href="#parameterizing-markdown-cells" title="Permalink to this headline">¶</a></h3>
 <p>You’ll notice that the title of the first notebook is <code class="docutils literal notranslate"><span class="pre">Variable</span></code>, while the output notebooks have their respective variable titles. This is accomplished using <a class="reference external" href="https://nbformat.readthedocs.io/en/latest/">nbformat</a>, with the code block motivated by a thread on the <a class="reference external" href="https://discourse.jupyter.org/t/possible-to-send-markdown-text-to-a-markdown-cell-in-a-new-notebook-via-papermill-other-options/748/5">Jupyter Discourse</a>. A function to go through and substitute some variable name is given below:</p>
 <div class="cell docutils container">
@@ -613,9 +627,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="setting-up-our-jupyter-book-table-of-contents">
+</section>
+</section>
+<section id="setting-up-our-jupyter-book-table-of-contents">
 <h2>Setting up our Jupyter Book Table of Contents<a class="headerlink" href="#setting-up-our-jupyter-book-table-of-contents" title="Permalink to this headline">¶</a></h2>
 <p>When setting up a Jupyter Book, the two required configuration files are:</p>
 <ul class="simple">
@@ -640,7 +654,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </pre></div>
 </div>
 <p>Notice how we can use <code class="docutils literal notranslate"><span class="pre">glob</span></code> instead of <code class="docutils literal notranslate"><span class="pre">file</span></code> for the plotting notebooks to include any notebooks that start with either <code class="docutils literal notranslate"><span class="pre">physics</span></code> or <code class="docutils literal notranslate"><span class="pre">biogeochemistry</span></code>, placing these in their respective sections in the table of contents.</p>
-<div class="section" id="automating-the-book-build-using-github-actions">
+<section id="automating-the-book-build-using-github-actions">
 <h3>Automating the Book Build using Github Actions<a class="headerlink" href="#automating-the-book-build-using-github-actions" title="Permalink to this headline">¶</a></h3>
 <p>The Jupyter Book in this project is built automatically using Github Actions, with the web page rendered through Github Pages. The file used for this process (<code class="docutils literal notranslate"><span class="pre">deploy.yml</span></code>) is provided below, with the build triggered by pushes to the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch:</p>
 <p><strong>Make sure that this file is saved in the <code class="docutils literal notranslate"><span class="pre">{repo_root_directory}.github/workflows/</span></code> directory!</strong></p>
@@ -683,9 +697,9 @@ commentsRunWhenDOMLoaded(addUtterances);
         <span class="nt">publish_dir</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">notebooks/_build/html</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="conclusions">
+</section>
+</section>
+<section id="conclusions">
 <h2>Conclusions<a class="headerlink" href="#conclusions" title="Permalink to this headline">¶</a></h2>
 <p>In this example, we covered how the Jupyter ecoysystem provides the tools neccessary to build a diagnostics package. The combination of Jupyter Notebooks, Jupyter Book, and various open source packages made to modify these notebooks offer an alternative diagnostic workflow. Not only does this offer the ability to synthesize curiosity-driven analysis, but it also provides a means of automatically generating an interactive website to share with collaborators. The outputs from this workflow include:</p>
 <ul class="simple">
@@ -694,8 +708,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li><p>An interactive webpage which can be shared with others</p></li>
 </ul>
 <p>More effort should go into exploring how to better parameterize these calculations and data visualizations, in addition to how one would curate a collection of diagnostic Jupyter Books.</p>
-</div>
-</div>
+</section>
+</section>
 
 <div class="section">
      
@@ -725,10 +739,9 @@ commentsRunWhenDOMLoaded(addUtterances);
               </div>
               
               
-              <div class='prev-next-bottom'>
-                
-
-              </div>
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
               
           </main>
           
@@ -736,30 +749,19 @@ commentsRunWhenDOMLoaded(addUtterances);
       </div>
     </div>
   
-  <script src="../../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
-
-  
-<script async="" src="https://www.google-analytics.com/analytics.js"></script>
-<script>
-                        window.ga = window.ga || function () {
-                            (ga.q = ga.q || []).push(arguments) };
-                        ga.l = +new Date;
-                        ga('create', 'UA-196809533-1', 'auto');
-                        ga('set', 'anonymizeIp', true);
-                        ga('send', 'pageview');
-                    </script>
+  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 <footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
       <p class="copyright">
-    &copy; Copyright 2021, NCAR Earth System Data Science Team.<br/>
+    &copy; Copyright 2021, NCAR Earth System Data Science Team.<br>
 </p>
     </div>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br/>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br>
 </p>
     </div>
     

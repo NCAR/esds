@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2021-10-01T15:40:29.858754+00:00</updated>
+  <updated>2021-10-08T21:55:32.905195+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.19">ABlog</generator>
@@ -899,5 +899,25 @@ What should I do?</summary>
     <summary>The first ESDS “meeting” took place in mid March 2021, with the kickoff event being the CGD town hall (here is the blog post detailing the topics at that meeting). Since that meeting, we have moved forward, holding a variety of Work in Progress talks, partnering with Xdev to offer Python Tutorials, and publish a series of blog posts aimed at documenting scientific workflows here at NCAR.Most of our blog posts thus far have been focused on Python tutorials, workflow examples, or conference summaries. One new type of post we will be posting now are monthly summaries on ESDS activities. Since we have not posted one yet, we grouped up all of our activities since early March. Going forward, we will post on a monthly basis!office hours questions</summary>
     <category term="update" label="update"/>
     <published>2021-10-01T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/2021/kay-et-al-cesm2-le/</id>
+    <title>CESM2-Large Ensemble Reproduction of a Figure from Kay et al. 2015 Using Intake-ESM and hvPlot</title>
+    <updated>2021-10-08T00:00:00+00:00</updated>
+    <author>
+      <name>Max Grover</name>
+    </author>
+    <content type="html">&lt;p&gt;This Jupyter Notebook demonstrates how one might use the NCAR Community Earth System Model v2 (CESM2) Large Ensemble (CESM2-LE) data hosted on AWS S3. The notebook shows how to reproduce figure 2 from the Kay et al. (2015) paper describing the CESM LENS dataset (&lt;span class="xref myst"&gt;doi:10.1175/BAMS-D-13-00255.1&lt;/span&gt;), with the LENS2 dataset.&lt;/p&gt;
+&lt;p&gt;There was a previous notebook which explored this use case, put together by Joe Hamann and Anderson Banihirwe, accessible on the Pangeo Gallery using &lt;a class="reference external" href="http://gallery.pangeo.io/repos/NCAR/cesm-lens-aws/notebooks/kay-et-al-2015.v3.html"&gt;this link&lt;/a&gt;. The specific figure we are replicating is shown below.&lt;/p&gt;
+&lt;img alt="cesm1-lens" src="../_images/kay_et_al_2015_lens1.png" /&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/2021/kay-et-al-cesm2-le/" rel="alternate"/>
+    <summary>This Jupyter Notebook demonstrates how one might use the NCAR Community Earth System Model v2 (CESM2) Large Ensemble (CESM2-LE) data hosted on AWS S3. The notebook shows how to reproduce figure 2 from the Kay et al. (2015) paper describing the CESM LENS dataset (doi:10.1175/BAMS-D-13-00255.1), with the LENS2 dataset.There was a previous notebook which explored this use case, put together by Joe Hamann and Anderson Banihirwe, accessible on the Pangeo Gallery using this link. The specific figure we are replicating is shown below.cesm1-lens</summary>
+    <category term="intake" label="intake"/>
+    <category term="cesm2-le" label="cesm2-le"/>
+    <category term="cesm" label="cesm"/>
+    <category term="diagnostics" label="diagnostics"/>
+    <category term="visualization" label="visualization"/>
+    <published>2021-10-08T00:00:00+00:00</published>
   </entry>
 </feed>
