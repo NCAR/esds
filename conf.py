@@ -53,7 +53,7 @@ html_theme_options = {
     'github_url': 'https://github.com/ncar/esds',
     'search_bar_text': 'Search this site... ',
     'google_analytics_id': 'UA-196809533-1',
-    'navbar_end':["search-field.html", "navbar-icon-links"]
+    'navbar_end': ['search-field.html', 'navbar-icon-links'],
 }
 
 rediraffe_redirects = 'redirects.txt'
@@ -69,9 +69,15 @@ html_sidebars = {
     'about': ['hello.html'],
     'faq': ['hello.html'],
     'communication': ['hello.html'],
-    'blog': ["search-field.html", "sidebar-nav-bs.html", 'tagcloud.html', 'archives.html'],
-    'posts/**': ["search-field.html", "sidebar-nav-bs.html", 'postcard.html', 'recentposts.html', 'archives.html']
-#    "**": ["search-field.html", "sidebar-nav-bs.html"]
+    'blog': ['search-field.html', 'sidebar-nav-bs.html', 'tagcloud.html', 'archives.html'],
+    'posts/**': [
+        'search-field.html',
+        'sidebar-nav-bs.html',
+        'postcard.html',
+        'recentposts.html',
+        'archives.html',
+    ]
+    #    "**": ["search-field.html", "sidebar-nav-bs.html"]
 }
 
 
