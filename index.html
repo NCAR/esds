@@ -289,6 +289,11 @@ including a variety of blog posts and resources for the community</p>
 <section id="recent-posts">
 <h2>Recent posts<a class="headerlink" href="#recent-posts" title="Permalink to this headline">¶</a></h2>
 <ul class="postlist-style-none postlist">
+<li><p>2021-10-15 - <a class="reference internal" href="posts/2021/xarray-wrf-example/">Reading WRF data into Xarray and Visualizing the Output using hvPlot</a></p>
+<p>The <em><strong>typical</strong></em> data workflow within the Python ecosystem when working with Weather Research and Forecasting (WRF) data is to use the <a class="reference external" href="https://wrf-python.readthedocs.io/en/latest/">wrf-python</a> package! Traditionally, it can be difficult to utilize the <code class="docutils literal notranslate"><span class="pre">xarray</span></code> data model with WRF data, due to a few challenges:</p>
+<p>WRF data not being CF-compliant (which makes it hard for xarray to properly construct the dataset out of the box using xr.open_dataset)</p>
+<img alt="xarray-wrf-gif" src="_images/xarray_wrf_blog_post.gif" />
+</li>
 <li><p>2021-10-08 - <a class="reference internal" href="posts/2021/kay-et-al-cesm2-le/">CESM2-Large Ensemble Reproduction of a Figure from Kay et al. 2015 Using Intake-ESM and hvPlot</a></p>
 <p>This Jupyter Notebook demonstrates how one might use the NCAR Community Earth System Model v2 (CESM2) Large Ensemble (CESM2-LE) data hosted on AWS S3. The notebook shows how to reproduce figure 2 from the Kay et al. (2015) paper describing the CESM LENS dataset (<span class="xref myst">doi:10.1175/BAMS-D-13-00255.1</span>), with the LENS2 dataset.</p>
 <p>There was a previous notebook which explored this use case, put together by Joe Hamman and Anderson Banihirwe, accessible on the Pangeo Gallery using <a class="reference external" href="http://gallery.pangeo.io/repos/NCAR/cesm-lens-aws/notebooks/kay-et-al-2015.v3.html">this link</a>. The specific figure we are replicating is shown below.</p>

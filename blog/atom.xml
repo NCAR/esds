@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2021-10-14T21:19:43.139747+00:00</updated>
+  <updated>2021-10-15T20:38:35.533734+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.20">ABlog</generator>
@@ -919,5 +919,23 @@ What should I do?</summary>
     <category term="diagnostics" label="diagnostics"/>
     <category term="visualization" label="visualization"/>
     <published>2021-10-08T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/2021/xarray-wrf-example/</id>
+    <title>Reading WRF data into Xarray and Visualizing the Output using hvPlot</title>
+    <updated>2021-10-15T00:00:00+00:00</updated>
+    <author>
+      <name>Anderson Banihirwe</name>
+    </author>
+    <content type="html">&lt;p&gt;The &lt;em&gt;&lt;strong&gt;typical&lt;/strong&gt;&lt;/em&gt; data workflow within the Python ecosystem when working with Weather Research and Forecasting (WRF) data is to use the &lt;a class="reference external" href="https://wrf-python.readthedocs.io/en/latest/"&gt;wrf-python&lt;/a&gt; package! Traditionally, it can be difficult to utilize the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;xarray&lt;/span&gt;&lt;/code&gt; data model with WRF data, due to a few challenges:&lt;/p&gt;
+&lt;p&gt;WRF data not being CF-compliant (which makes it hard for xarray to properly construct the dataset out of the box using xr.open_dataset)&lt;/p&gt;
+&lt;img alt="xarray-wrf-gif" src="../_images/xarray_wrf_blog_post.gif" /&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/2021/xarray-wrf-example/" rel="alternate"/>
+    <summary>The typical data workflow within the Python ecosystem when working with Weather Research and Forecasting (WRF) data is to use the wrf-python package! Traditionally, it can be difficult to utilize the xarray data model with WRF data, due to a few challenges:WRF data not being CF-compliant (which makes it hard for xarray to properly construct the dataset out of the box using xr.open_dataset)xarray-wrf-gif</summary>
+    <category term="WRF" label="WRF"/>
+    <category term="visualization" label="visualization"/>
+    <category term="dask" label="dask"/>
+    <published>2021-10-15T00:00:00+00:00</published>
   </entry>
 </feed>
