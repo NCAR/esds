@@ -421,18 +421,27 @@ commentsRunWhenDOMLoaded(addUtterances);
                  <section class="tex2jax_ignore mathjax_ignore" id="using-intake-esm-s-new-derived-variable-functionality">
 <h1>Using <a class="reference external" href="https://intake-esm.readthedocs.io/en/latest/">Intake-ESM’s</a> New Derived Variable Functionality<a class="headerlink" href="#using-intake-esm-s-new-derived-variable-functionality" title="Permalink to this headline">¶</a></h1>
 <p>Last week, <a class="reference external" href="https://github.com/andersy005">Anderson Banihirwe</a> added a new feature to intake-esm, enabling users to add “derived variables” to catalogs! This is an exciting addition, and although this has not been included in a release yet, you are welcome to test out the functionality!</p>
+<p>Keep in mind that this is an initial prototype and the API is likely to change.</p>
 <section id="what-is-a-derived-variable">
 <h2>What is a “Derived Variable”<a class="headerlink" href="#what-is-a-derived-variable" title="Permalink to this headline">¶</a></h2>
-<p>A derived variable in this case is a variable which can be derived using variables within some data catalog. The basic assumption is that they can be included <strong>in the same dataset</strong> (which <em><strong>could be extended</strong></em> to be able to work with variables from multiple datasets). This means that variables will need to be <strong>on the same grid with the same dimensionality</strong>.</p>
-<p>An example of a derived variable could be temperature in degrees Fahrenheit. Often times, climate model models write temperature in Celsius or Kelvin, but the user may want degrees Fahrenheit!</p>
-<p>Often times, this workflow consists of the following:</p>
+<p>A “derived variable” in this case is a variable that doesn’t itself exist in an <a class="reference external" href="https://intake-esm.readthedocs.io/en/latest/">intake-esm</a> catalog, but can be computed (i.e., “derived”) from variables that do exist in the catalog.
+Currently, the derived variable implementation requires variables on the same grid, etc.; i.e., it assumes that all variables involved can be merged within <strong>the same dataset</strong>.</p>
+<p>An example of a derived variable could be temperature in degrees Fahrenheit. Often times, climate model models write temperature in Celsius or Kelvin, but the user may want degrees Fahrenheit!
+This is a really simple example; derived variables could include more sophsticated diagnostic output like aggregations of terms in a tracer budget or gradients in a particular field.</p>
+<p>A traditional workflow for “derived variables” might consist of the following:</p>
 <ul class="simple">
-<li><p>Load the data within the catalog</p></li>
+<li><p>Load the data</p></li>
 <li><p>Apply some function to the loaded datasets</p></li>
 <li><p>Plot the output</p></li>
 </ul>
-<p>But what if we could couple those first two steps? What if we could have some set of <strong>variable definitions</strong>, consisting of variable requirements, such as <code class="docutils literal notranslate"><span class="pre">dependent</span> <span class="pre">variables</span></code>, and a function which derives the quantity. This is what the <code class="docutils literal notranslate"><span class="pre">derived_variable</span></code> funtionality offers in <code class="docutils literal notranslate"><span class="pre">intake-esm</span></code>! This enables users to share a “registry” of derived variables across catalogs!</p>
-<p>Let’s get started with an example!</p>
+<p>This has shortcomings in the context of an automated process. For example, imagine the following.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>for 
+
+But what if we could couple those first two steps? What if we could have some set of **variable definitions**, consisting of variable requirements, such as `dependent variables`, and a function which derives the quantity. This is what the `derived_variable` funtionality offers in `intake-esm`! This enables users to share a &quot;registry&quot; of derived variables across catalogs!
+
+Let&#39;s get started with an example!
+</pre></div>
+</div>
 </section>
 <section id="installing-the-development-version-of-intake-esm">
 <h2>Installing the Development Version of Intake-ESM<a class="headerlink" href="#installing-the-development-version-of-intake-esm" title="Permalink to this headline">¶</a></h2>
