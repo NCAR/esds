@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2021-10-15T20:38:35.533734+00:00</updated>
+  <updated>2021-10-22T17:09:21.263811+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.20">ABlog</generator>
@@ -937,5 +937,22 @@ What should I do?</summary>
     <category term="visualization" label="visualization"/>
     <category term="dask" label="dask"/>
     <published>2021-10-15T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/2021/intake-esm-derived-variables/</id>
+    <title>Using Intake-ESM's New Derived Variable Functionality</title>
+    <updated>2021-10-22T00:00:00+00:00</updated>
+    <author>
+      <name>Max Grover</name>
+    </author>
+    <content type="html">&lt;p&gt;Last week, &lt;a class="reference external" href="https://github.com/andersy005"&gt;Anderson Banihirwe&lt;/a&gt; added a new feature to intake-esm, enabling users to add “derived variables” to catalogs! This is an exciting addition, and although this has not been included in a release yet, you are welcome to test out the functionality!&lt;/p&gt;
+&lt;p&gt;A derived variable in this case is a variable which can be derived using variables within some data catalog. The basic assumption is that they can be included &lt;strong&gt;in the same dataset&lt;/strong&gt; (which &lt;em&gt;&lt;strong&gt;could be extended&lt;/strong&gt;&lt;/em&gt; to be able to work with variables from multiple datasets). This means that variables will need to be &lt;strong&gt;on the same grid with the same dimensionality&lt;/strong&gt;.&lt;/p&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/2021/intake-esm-derived-variables/" rel="alternate"/>
+    <summary>Last week, Anderson Banihirwe added a new feature to intake-esm, enabling users to add “derived variables” to catalogs! This is an exciting addition, and although this has not been included in a release yet, you are welcome to test out the functionality!A derived variable in this case is a variable which can be derived using variables within some data catalog. The basic assumption is that they can be included in the same dataset (which could be extended to be able to work with variables from multiple datasets). This means that variables will need to be on the same grid with the same dimensionality.</summary>
+    <category term="intake" label="intake"/>
+    <category term="diagnostics" label="diagnostics"/>
+    <category term="cesm" label="cesm"/>
+    <published>2021-10-22T00:00:00+00:00</published>
   </entry>
 </feed>

@@ -289,6 +289,10 @@ including a variety of blog posts and resources for the community</p>
 <section id="recent-posts">
 <h2>Recent posts<a class="headerlink" href="#recent-posts" title="Permalink to this headline">¶</a></h2>
 <ul class="postlist-style-none postlist">
+<li><p>2021-10-22 - <a class="reference internal" href="posts/2021/intake-esm-derived-variables/">Using Intake-ESM's New Derived Variable Functionality</a></p>
+<p>Last week, <a class="reference external" href="https://github.com/andersy005">Anderson Banihirwe</a> added a new feature to intake-esm, enabling users to add “derived variables” to catalogs! This is an exciting addition, and although this has not been included in a release yet, you are welcome to test out the functionality!</p>
+<p>A derived variable in this case is a variable which can be derived using variables within some data catalog. The basic assumption is that they can be included <strong>in the same dataset</strong> (which <em><strong>could be extended</strong></em> to be able to work with variables from multiple datasets). This means that variables will need to be <strong>on the same grid with the same dimensionality</strong>.</p>
+</li>
 <li><p>2021-10-15 - <a class="reference internal" href="posts/2021/xarray-wrf-example/">Reading WRF data into Xarray and Visualizing the Output using hvPlot</a></p>
 <p>The <em><strong>typical</strong></em> data workflow within the Python ecosystem when working with Weather Research and Forecasting (WRF) data is to use the <a class="reference external" href="https://wrf-python.readthedocs.io/en/latest/">wrf-python</a> package! Traditionally, it can be difficult to utilize the <code class="docutils literal notranslate"><span class="pre">xarray</span></code> data model with WRF data, due to a few challenges:</p>
 <p>WRF data not being CF-compliant (which makes it hard for xarray to properly construct the dataset out of the box using xr.open_dataset)</p>
