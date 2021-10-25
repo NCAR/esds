@@ -14,6 +14,8 @@ Every other Monday, we hold WIP talks which are forums to present on a variety t
 
 This is a great place to discuss progress on your project, and get feedback from the community!
 
+If you are interested in giving a talk, be sure to sign up using [this spreadsheet](https://docs.google.com/spreadsheets/d/1Tuv5vwGbjSKdJD5KLT0Zow8WCY0_zt35tTI6EIRGOk4/edit?usp=sharing)!
+
 ### Xdev Office Hours
 
 Have a question about Python issues? Looking to get feedback on some project? Stop by our office hours!
