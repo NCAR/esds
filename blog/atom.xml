@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2021-10-22T19:00:22.040991+00:00</updated>
+  <updated>2021-10-25T20:25:02.161888+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.20">ABlog</generator>
@@ -954,5 +954,20 @@ What should I do?</summary>
     <category term="diagnostics" label="diagnostics"/>
     <category term="cesm" label="cesm"/>
     <published>2021-10-22T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/2021/advanced-plotting-tutorial/</id>
+    <title>Matplotlib Tutorial</title>
+    <updated>2021-10-25T00:00:00+00:00</updated>
+    <author>
+      <name>Julia Kent</name>
+    </author>
+    <content type="html">&lt;p&gt;The NCAR/UCAR virtual Python Tutorial Seminar Series continues with Advanced Plotting Techniques on &lt;strong&gt;Wednesday, October 27th at 1 PM Mountain&lt;/strong&gt;. This session will be led by Anissa Zacharias.&lt;/p&gt;
+&lt;p&gt;The content for this tutorial is hosted on Anissa’s &lt;a class="reference external" href="https://github.com/anissa111/matplotlib-tutorial"&gt;matplotlib-tutorial GitHub repository&lt;/a&gt; (the same repository as her previous plotting tutorials).&lt;/p&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/2021/advanced-plotting-tutorial/" rel="alternate"/>
+    <summary>The NCAR/UCAR virtual Python Tutorial Seminar Series continues with Advanced Plotting Techniques on Wednesday, October 27th at 1 PM Mountain. This session will be led by Anissa Zacharias.The content for this tutorial is hosted on Anissa’s matplotlib-tutorial GitHub repository (the same repository as her previous plotting tutorials).</summary>
+    <category term="python-tutorial-series" label="python-tutorial-series"/>
+    <published>2021-10-25T00:00:00+00:00</published>
   </entry>
 </feed>
