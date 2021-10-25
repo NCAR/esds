@@ -4,7 +4,7 @@ date: 2021-10-25
 tags: python-tutorial-series
 ---
 
-# Matplotlib Tutorial
+# Advanced Plotting Tutorial
 
 The NCAR/UCAR virtual Python Tutorial Seminar Series continues with Advanced Plotting Techniques on **Wednesday, October 27th at 1 PM Mountain**. This session will be led by Anissa Zacharias.
 
