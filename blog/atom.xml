@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2021-10-27T18:18:53.179904+00:00</updated>
+  <updated>2021-10-28T16:22:27.809087+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.20">ABlog</generator>
@@ -969,5 +969,25 @@ What should I do?</summary>
     <summary>The NCAR/UCAR virtual Python Tutorial Seminar Series continues with Advanced Plotting Techniques on Wednesday, October 27th at 1 PM Mountain. This session will be led by Anissa Zacharias.The content for this tutorial is hosted on Anissa’s matplotlib-tutorial GitHub repository (the same repository as her previous plotting tutorials).</summary>
     <category term="python-tutorial-series" label="python-tutorial-series"/>
     <published>2021-10-25T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/2021/esds-update-october-2021/</id>
+    <title>ESDS Update October 2021</title>
+    <updated>2021-10-27T00:00:00+00:00</updated>
+    <author>
+      <name>Max Grover</name>
+    </author>
+    <content type="html">&lt;p&gt;October has been an active month! There were a variety of talks, a variety of answered Python questions during office hours, and a Python tutorial!&lt;/p&gt;
+&lt;p&gt;Check out the following ESDS update for the month of October 2021.&lt;/p&gt;
+&lt;img alt="october-2021-office-hours" src="../_images/october_2021_question_topics.png" /&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/2021/esds-update-october-2021/" rel="alternate"/>
+    <summary>October has been an active month! There were a variety of talks, a variety of answered Python questions during office hours, and a Python tutorial!Check out the following ESDS update for the month of October 2021.october-2021-office-hours</summary>
+    <category term="update" label="update"/>
+    <category term="faq" label="faq"/>
+    <category term="xarray" label="xarray"/>
+    <category term="dask" label="dask"/>
+    <category term="matplotlib" label="matplotlib"/>
+    <published>2021-10-27T00:00:00+00:00</published>
   </entry>
 </feed>

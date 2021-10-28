@@ -1,0 +1,591 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>ESDS Update October 2021 &#8212; NCAR-ESDS 0.1 documentation</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/blank.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "NCAR/esds");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <link rel="author" title="About these documents" href="../../../about/" />
+    <link rel="index" title="Index" href="../../../genindex/" />
+    <link rel="search" title="Search" href="../../../search/" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-196809533-1', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../../blog/atom.xml"
+  title="NCAR ESDS"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+<a class="navbar-brand" href="../../../">
+<p class="title">NCAR-ESDS</p>
+</a>
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../about/">
+  About Us
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../faq/">
+  Frequently Asked Questions
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../blog/">
+  Blog
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../communication/">
+  Communication
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../best-practices/">
+  Best Practices
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../calendar/">
+  Calendar
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../projects/">
+  Projects
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <form class="bd-search d-flex align-items-center" action="../../../search/" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this site... " aria-label="Search this site... " autocomplete="off" >
+</form>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/ncar/esds" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../../search/" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this site... " aria-label="Search this site... " autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    
+  </div>
+</nav>  
+<h2>
+   <i class="fa fa-calendar"></i>
+  27 October 2021 
+</h2>
+
+<ul>
+   
+<li id="author">
+  <span
+    ><i class="fa-fw fa fa-user"></i></span
+  >
+   
+  <a href="../../../blog/author/max-grover/">Max Grover</a>  
+</li>
+    
+<li id="tags">
+  <span
+    ><i class="fa-fw fa fa-tags"></i> </span
+  >
+   
+  <a href="../../../blog/tag/update/">update</a>   
+  <a href="../../../blog/tag/faq/">faq</a>   
+  <a href="../../../blog/tag/xarray/">xarray</a>   
+  <a href="../../../blog/tag/dask/">dask</a>   
+  <a href="../../../blog/tag/matplotlib/">matplotlib</a>  
+</li>
+ 
+</ul>
+
+<h3>
+  <a href="../../../blog/">Recent Posts</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="../advanced-plotting-tutorial/"
+      >25 October - Advanced Plotting Tutorial</a
+    >
+  </li>
+  
+  <li>
+    <a href="../intake-esm-derived-variables/"
+      >22 October - Using Intake-ESM's New Derived Variable Functionality</a
+    >
+  </li>
+  
+  <li>
+    <a href="../xarray-wrf-example/"
+      >15 October - Reading WRF data into Xarray and Visualizing the Output using hvPlot</a
+    >
+  </li>
+  
+  <li>
+    <a href="../kay-et-al-cesm2-le/"
+      >08 October - CESM2-Large Ensemble Reproduction of a Figure from Kay et al. 2015 Using Intake-ESM and hvPlot</a
+    >
+  </li>
+  
+  <li>
+    <a href="../esds-update-september-2021/"
+      >01 October - ESDS Progress Over the Past Few Months</a
+    >
+  </li>
+  
+</ul>
+
+<h3>
+  <a href="../../../blog/archive/">Archives</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="../../../blog/2021/">2021 (47)</a>
+  </li>
+    
+  <li>
+    <a href="../../../blog/2020/">2020 (6)</a>
+  </li>
+    
+  <li>
+    <a href="../../../blog/2019/">2019 (2)</a>
+  </li>
+   
+</ul>
+
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#esds-forum">
+   ESDS Forum
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#python-package-overviews">
+     Python Package Overviews
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#general-discussion">
+     General Discussion
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#esds-blog-posts">
+   ESDS Blog Posts
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-computation">
+     Data Computation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#end-to-end-workflow">
+     End to End Workflow
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#office-hour-questions">
+   Office Hour Questions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#matplotlib-questions">
+     Matplotlib Questions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dask-questions">
+     Dask Questions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#xarray-questions">
+     Xarray Questions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-tutorial-s">
+   Python Tutorial(s)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#advanced-plotting-tutorial">
+     Advanced Plotting Tutorial
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                 <section class="tex2jax_ignore mathjax_ignore" id="esds-update-october-2021">
+<h1>ESDS Update October 2021<a class="headerlink" href="#esds-update-october-2021" title="Permalink to this headline">¶</a></h1>
+<p>October has been an active month! There were a variety of talks, a variety of answered Python questions during office hours, and a Python tutorial!</p>
+<p>Check out the following ESDS update for the month of October 2021.</p>
+<section id="esds-forum">
+<h2>ESDS Forum<a class="headerlink" href="#esds-forum" title="Permalink to this headline">¶</a></h2>
+<section id="python-package-overviews">
+<h3>Python Package Overviews<a class="headerlink" href="#python-package-overviews" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.google.com/presentation/d/1pWzVrPvNsYMjM4WqqXYophEOVz3XZjeJ5DHdqPY_3S8/edit?usp=sharing">A Jupyter Based Diagnostics Prototype</a> (4 October 2021) - Max Grover (CGD)</p></li>
+</ul>
+</section>
+<section id="general-discussion">
+<h3>General Discussion<a class="headerlink" href="#general-discussion" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.google.com/forms/d/e/1FAIpQLScX4ugyocLz1WgIthzX_eN_CXkBR7QvlHTS0eMLxFtxsjxPyw/viewform?vc=0&amp;c=0&amp;w=1&amp;flr=0">An Overview of Xdev and Analysis Pain Points</a> (18 October 2021) - Kevin Paul (CISL)</p></li>
+</ul>
+</section>
+</section>
+<section id="esds-blog-posts">
+<h2>ESDS Blog Posts<a class="headerlink" href="#esds-blog-posts" title="Permalink to this headline">¶</a></h2>
+<section id="data-computation">
+<h3>Data Computation<a class="headerlink" href="#data-computation" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://ncar.github.io/esds/posts/2021/intake-esm-derived-variables/">Using Intake-ESM’s New Derived Variable Functionality</a></p></li>
+</ul>
+</section>
+<section id="end-to-end-workflow">
+<h3>End to End Workflow<a class="headerlink" href="#end-to-end-workflow" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://ncar.github.io/esds/posts/2021/kay-et-al-cesm2-le/">CESM2-Large Ensemble Reproduction of a Figure from Kay et al. 2015 Using Intake-ESM and hvPlot</a></p></li>
+<li><p><a class="reference external" href="https://ncar.github.io/esds/posts/2021/xarray-wrf-example/">Reading WRF data into Xarray and Visualizing the Output using hvPlot</a></p></li>
+</ul>
+</section>
+</section>
+<section id="office-hour-questions">
+<h2>Office Hour Questions<a class="headerlink" href="#office-hour-questions" title="Permalink to this headline">¶</a></h2>
+<p>During the month of October 2021, our team answered a total of <strong>14 questions</strong> at our weekly <a class="reference external" href="https://ncar.github.io/esds/calendar/#xdev-office-hours">Xdev Office Hours</a>.</p>
+<p>Below is a summary of the most common questions brought up during office hours!</p>
+<p><img alt="october-2021-office-hours" src="../../../_images/october_2021_question_topics.png" /></p>
+<section id="matplotlib-questions">
+<h3>Matplotlib Questions<a class="headerlink" href="#matplotlib-questions" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>How do you adjust the colorbar size, spacing?</p>
+<ul>
+<li><p>Suggested adding to the <code class="docutils literal notranslate"><span class="pre">pad</span></code> argument</p></li>
+</ul>
+</li>
+<li><p>How to plot a basic map using matplotlib?</p>
+<ul>
+<li><p>Suggested checking out the <a class="reference external" href="https://foundations.projectpythia.org/core/cartopy/cartopy.html">Cartopy Content on the Pythia Foundations Page</a></p></li>
+</ul>
+</li>
+<li><p>How do you adjust the colorbar?</p>
+<ul>
+<li><p>Pointed to <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.colorbar.html">matplotlib colorbar documentation</a></p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="dask-questions">
+<h3>Dask Questions<a class="headerlink" href="#dask-questions" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>How do you get dask to work with stacking CESM2-LE data?</p>
+<ul>
+<li><p>Worked on an example subsetting the data, developing pipeline</p></li>
+</ul>
+</li>
+<li><p>How to submit jobs with different schedulers?</p>
+<ul>
+<li><p>Suggested checking out <a class="reference external" href="http://jobqueue.dask.org/en/latest/">Dask jobqueue options</a></p></li>
+</ul>
+</li>
+<li><p>What is the most efficient way to compute annual means from a bunch of Earth System Prediction (ESP) data?</p>
+<ul>
+<li><p>For some cases, makes sense using the preprocess function when the files are big enough (ex. ESP Decadal Prediction datasets)</p>
+<ul>
+<li><p>Good case for preprocess - calculating annual means with files ~10s of GB in size</p></li>
+<li><p>Bad case for preprocess - working with many smaller files, which leads to a large number of tasks and a slower process</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="xarray-questions">
+<h3>Xarray Questions<a class="headerlink" href="#xarray-questions" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>How do you optimize file read in with ESP data?</p>
+<ul>
+<li><p>Make sure to know when to use the preprocess function with computations</p></li>
+</ul>
+</li>
+<li><p>How to use one dataset to mask another with different dims?</p>
+<ul>
+<li><p>Needed to create a loop and create new dimensions for the datasets</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="python-tutorial-s">
+<h2>Python Tutorial(s)<a class="headerlink" href="#python-tutorial-s" title="Permalink to this headline">¶</a></h2>
+<section id="advanced-plotting-tutorial">
+<h3><a class="reference external" href="https://ncar.github.io/esds/posts/2021/advanced-plotting-tutorial/">Advanced Plotting Tutorial</a><a class="headerlink" href="#advanced-plotting-tutorial" title="Permalink to this headline">¶</a></h3>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vyqlHdFfGWo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</section>
+</section>
+</section>
+
+<div class="section">
+     
+<div class="section">
+  <span style="float: left">
+     
+    <a href="../advanced-plotting-tutorial/">
+      <i class="fa fa-arrow-circle-left"></i> Advanced Plotting Tutorial
+    </a>
+    
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right">
+    
+  </span>
+</div>
+  
+</div>
+
+              </div>
+              
+              
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021, NCAR Earth System Data Science Team.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>
