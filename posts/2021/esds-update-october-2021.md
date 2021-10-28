@@ -6,7 +6,7 @@ tags: update, faq, xarray, dask, matplotlib
 
 # ESDS Update October 2021
 
-October has been an active month! There were a variety of talks, a tutorial, a variety of answered Python questions during office hours, and a Python tutorial!
+October has been an active month! There were a variety of talks, a variety of answered Python questions during office hours, and a Python tutorial!
 
 Check out the folowing ESDS update for the month of October 2021.
 
@@ -42,7 +42,7 @@ Below is a summary of the most common questions brought up during office hours!
 ### Matplotlib Questions
 
 - How do you adjust the colorbar size, spacing?
-  - Suggested adding to the `pad` arguement
+  - Suggested adding to the `pad` argument
 - How to plot a basic map using matplotlib?
   - Suggested checking out the [Cartopy Content on the Pythia Foundations Page](https://foundations.projectpythia.org/core/cartopy/cartopy.html)
 - How do you adjust the colorbar?
@@ -56,7 +56,7 @@ Below is a summary of the most common questions brought up during office hours!
   - Suggested checking out [Dask jobqueue options](http://jobqueue.dask.org/en/latest/)
 - What is the most efficient way to compute annual means from a bunch of Earth System Prediction (ESP) data?
   - For some cases, makes sense using the preprocess function when the files are big enough (ex. ESP Decadal Prediction datasets)
-    - Good case for preprocess - calculating annaul means with files ~10s of GB in size
+    - Good case for preprocess - calculating annual means with files ~10s of GB in size
     - Bad case for preprocess - working with many smaller files, which leads to a large number of tasks and a slower process
 
 ### Xarray Questions
