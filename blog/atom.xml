@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2021-10-28T16:22:27.809087+00:00</updated>
+  <updated>2021-10-28T21:17:44.321334+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.20">ABlog</generator>
@@ -973,7 +973,7 @@ What should I do?</summary>
   <entry>
     <id>ncar.github.io/esds/posts/2021/esds-update-october-2021/</id>
     <title>ESDS Update October 2021</title>
-    <updated>2021-10-27T00:00:00+00:00</updated>
+    <updated>2021-10-28T00:00:00+00:00</updated>
     <author>
       <name>Max Grover</name>
     </author>
@@ -988,6 +988,6 @@ What should I do?</summary>
     <category term="xarray" label="xarray"/>
     <category term="dask" label="dask"/>
     <category term="matplotlib" label="matplotlib"/>
-    <published>2021-10-27T00:00:00+00:00</published>
+    <published>2021-10-28T00:00:00+00:00</published>
   </entry>
 </feed>

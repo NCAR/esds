@@ -241,7 +241,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </nav>  
 <h2>
    <i class="fa fa-calendar"></i>
-  27 October 2021 
+  28 October 2021 
 </h2>
 
 <ul>
@@ -341,6 +341,11 @@ commentsRunWhenDOMLoaded(addUtterances);
 <nav id="bd-toc-nav">
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#xdev-updates">
+   Xdev Updates
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#esds-forum">
    ESDS Forum
   </a>
@@ -432,6 +437,11 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h1>ESDS Update October 2021<a class="headerlink" href="#esds-update-october-2021" title="Permalink to this headline">¶</a></h1>
 <p>October has been an active month! There were a variety of talks, a variety of answered Python questions during office hours, and a Python tutorial!</p>
 <p>Check out the following ESDS update for the month of October 2021.</p>
+<section id="xdev-updates">
+<h2>Xdev Updates<a class="headerlink" href="#xdev-updates" title="Permalink to this headline">¶</a></h2>
+<p>Xdev has made some important advances on <a class="reference external" href="https://intake-esm.readthedocs.io/en/latest/"><code class="docutils literal notranslate"><span class="pre">Intake-ESM</span></code></a>, which is a data catalog utility comprising an API to data assets. Essentially, intake-esm “abstracts away” the file system, enabling data search and discovery, automated queries and dataset construction, and portability across cloud and HPC platforms. We’re now working on a set of ideas we’re calling <strong><em>Funnel</em></strong>; this extends the data catalog with “analysis recipes”, providing an effective strategy for modularization and extensibility of workflows.</p>
+<p>We also held our first discussion on <code class="docutils literal notranslate"><span class="pre">xwrf</span></code>, which is a new package meant to bring Weather Research and Forecasting (WRF) data into the Pangeo Ecosystem! Using this tool, users can read WRF output directly into <code class="docutils literal notranslate"><span class="pre">Xarray</span></code>, enabling the use of <code class="docutils literal notranslate"><span class="pre">Dask</span></code> and <code class="docutils literal notranslate"><span class="pre">hvPlot</span></code>. If you are interested in following along with that development, be sure to check out the <a class="reference external" href="https://github.com/NCAR/xwrf"><code class="docutils literal notranslate"><span class="pre">xwrf</span></code> repository</a>.</p>
+</section>
 <section id="esds-forum">
 <h2>ESDS Forum<a class="headerlink" href="#esds-forum" title="Permalink to this headline">¶</a></h2>
 <section id="python-package-overviews">
