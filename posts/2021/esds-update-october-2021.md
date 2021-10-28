@@ -8,7 +8,7 @@ tags: update, faq, xarray, dask, matplotlib
 
 October has been an active month! There were a variety of talks, a variety of answered Python questions during office hours, and a Python tutorial!
 
-Check out the folowing ESDS update for the month of October 2021.
+Check out the following ESDS update for the month of October 2021.
 
 ## ESDS Forum
 
