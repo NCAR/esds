@@ -69,3 +69,5 @@ Below is a summary of the most common questions brought up during office hours!
 ## Python Tutorial(s)
 
 ### [Advanced Plotting Tutorial](https://ncar.github.io/esds/posts/2021/advanced-plotting-tutorial/)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vyqlHdFfGWo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
