@@ -1,6 +1,6 @@
 ---
 author: Max Grover
-date: 2021-10-27
+date: 2021-10-28
 tags: update, faq, xarray, dask, matplotlib
 ---
 
@@ -9,6 +9,12 @@ tags: update, faq, xarray, dask, matplotlib
 October has been an active month! There were a variety of talks, a variety of answered Python questions during office hours, and a Python tutorial!
 
 Check out the following ESDS update for the month of October 2021.
+
+## Xdev Updates
+
+Xdev has made some important advances on [`Intake-ESM`](https://intake-esm.readthedocs.io/en/latest/), which is a data catalog utility comprising an API to data assets. Essentially, intake-esm "abstracts away" the file system, enabling data search and discovery, automated queries and dataset construction, and portability across cloud and HPC platforms. We're now working on a set of ideas we're calling **_Funnel_**; this extends the data catalog with "analysis recipes", providing an effective strategy for modularization and extensibility of workflows.
+
+We also held our first discussion on `xwrf`, which is a new package meant to bring Weather Research and Forecasting (WRF) data into the Pangeo Ecosystem! Using this tool, users can read WRF output directly into `Xarray`, enabling the use of `Dask` and `hvPlot`. If you are interested in following along with that development, be sure to check out the [`xwrf` repository](https://github.com/NCAR/xwrf).
 
 ## ESDS Forum
 
