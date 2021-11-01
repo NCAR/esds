@@ -309,6 +309,13 @@ commentsRunWhenDOMLoaded(addUtterances);
     <a class="reference internal nav-link" href="#conda-environments-on-jupyterhub">
      Conda Environments on JupyterHub
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#activating-your-base-environment-upon-opening-a-terminal">
+       Activating Your Base Environment Upon Opening a Terminal
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -527,6 +534,18 @@ conda config --add channels conda-forge
 <section id="conda-environments-on-jupyterhub">
 <h3>Conda Environments on JupyterHub<a class="headerlink" href="#conda-environments-on-jupyterhub" title="Permalink to this headline">¶</a></h3>
 <p>The Computational and Information Systems Lab (CISL) at NCAR put together some <a class="reference external" href="https://www2.cisl.ucar.edu/resources/conda-environments">good documentation</a> on dealing with environments on Casper/Cheyenne</p>
+<section id="activating-your-base-environment-upon-opening-a-terminal">
+<h4>Activating Your Base Environment Upon Opening a Terminal<a class="headerlink" href="#activating-your-base-environment-upon-opening-a-terminal" title="Permalink to this headline">¶</a></h4>
+<p>Even <strong>after</strong> running <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">init</span> <span class="pre">bash</span></code> , you may notice that upon opening a terminal on the JupyterHub/NCAR HPC resources, your conda environment is not activated right away. You <strong>could</strong> call</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash
+</pre></div>
+</div>
+<p>which would activate your conda environment! A better solution<a class="footnote-reference brackets" href="#id2" id="id1">1</a> would be to ensure that your conda environment is activated upon login.</p>
+<p>You can do this using the following snippet:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="s2">&quot;. ~/.bashrc&quot;</span> &gt;&gt; ~/.bash_profile
+</pre></div>
+</div>
+</section>
 </section>
 </section>
 <section id="xarray-and-dask">
@@ -706,6 +725,12 @@ in a serial context.</p>
 <p class="admonition-title">Note</p>
 <p>cf-xarray can be installed via pip or conda. cf-xarray docs are available <a class="reference external" href="https://cf-xarray.readthedocs.io/en/latest/">here</a>.</p>
 </div>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Assuming you are using a bash terminal, which is the default on NCAR HPC</p>
+</dd>
+</dl>
 </section>
 </section>
 </section>
