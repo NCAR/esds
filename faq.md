@@ -121,6 +121,24 @@ See [mamba documentation](https://mamba.readthedocs.io/en/latest/index.html) for
 
 The Computational and Information Systems Lab (CISL) at NCAR put together some [good documentation](https://www2.cisl.ucar.edu/resources/conda-environments) on dealing with environments on Casper/Cheyenne
 
+#### Activating Your Base Environment Upon Opening a Terminal
+
+Even **after** running `conda init bash` , you may notice that upon opening a terminal on the JupyterHub/NCAR HPC resources, your conda environment is not activated right away. You **could** call
+
+```bash
+bash
+```
+
+which would activate your conda environment! A better solution[^1] would be to ensure that your conda environment is activated upon login.
+
+You can do this using the following snippet:
+
+```bash
+echo ". ~/.bashrc" >> ~/.bash_profile
+```
+
+[^1]: Assuming you are using a bash terminal, which is the default on NCAR HPC
+
 ## Xarray and Dask
 
 ### General tips
