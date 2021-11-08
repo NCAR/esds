@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2021-11-08T19:06:18.900642+00:00</updated>
+  <updated>2021-11-08T22:30:39.367936+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.20">ABlog</generator>
@@ -989,5 +989,20 @@ What should I do?</summary>
     <category term="dask" label="dask"/>
     <category term="matplotlib" label="matplotlib"/>
     <published>2021-10-28T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/2021/oop-tutorial/</id>
+    <title>Object Oriented Programming Tutorial</title>
+    <updated>2021-11-08T00:00:00+00:00</updated>
+    <author>
+      <name>Julia Kent</name>
+    </author>
+    <content type="html">&lt;p&gt;The NCAR/UCAR virtual Python Tutorial Seminar Series continues with a lesson on Object Oriented Programming on &lt;strong&gt;November 10th at 1 PM Mountain Standard Time&lt;/strong&gt; led by Dr. Kevin Paul.&lt;/p&gt;
+&lt;p&gt;The content for this seminar tutorial is hosted on Kevin’s &lt;a class="reference external" href="https://github.com/kmpaul/pg2oop"&gt;Object Oriented Programming Tutorial Repository&lt;/a&gt;.&lt;/p&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/2021/oop-tutorial/" rel="alternate"/>
+    <summary>The NCAR/UCAR virtual Python Tutorial Seminar Series continues with a lesson on Object Oriented Programming on November 10th at 1 PM Mountain Standard Time led by Dr. Kevin Paul.The content for this seminar tutorial is hosted on Kevin’s Object Oriented Programming Tutorial Repository.</summary>
+    <category term="python-tutorial-series" label="python-tutorial-series"/>
+    <published>2021-11-08T00:00:00+00:00</published>
   </entry>
 </feed>
