@@ -26,7 +26,9 @@ You may also download the tutorial from GitHub to run it locally:
 
 - Clone this repository by running `git clone https://github.com/kmpaul/pg2oop` in your terminal.
 
-- Still in the terminal, create a Conda environment with Jupyter installed by first moving into the `pg2oop` directory with `cd pg2oop` and then `conda create --name pg2oop jupyterlab`
+- Still in the terminal, create a Conda environment with Jupyter installed by executing `conda create --name pg2oop jupyterlab`
+
+- Still in the terminal, move into the `pg2oop` directory with `cd pg2oop`
 
 - Activate your environment in the terminal with `conda activate pg2oop`.
 
