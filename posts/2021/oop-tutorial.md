@@ -20,8 +20,6 @@ Dr. Kevin Paul is a computational physicist and software engineer working in the
 
 - Click the "Launch Binder" button at the top level of the [repository](https://github.com/kmpaul/pg2oop).
 
-- Then, in the recently-launched Binder tab, select the notebook file `index.ipynb` to begin.
-
 You may also download the environment to run locally:
 
 - Check your conda install with `conda --version` and if necessary [install by following these instructions](https://docs.conda.io/en/latest/miniconda.html).
