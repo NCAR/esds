@@ -6,11 +6,13 @@ tags: python-tutorial-series
 
 # Object Oriented Programming Tutorial
 
-The NCAR/UCAR virtual Python Tutorial Seminar Series continues with a lesson on Object Oriented Programming on **November 10th at 1 PM Mountain Standard Time** led by Kevin Paul.
+The NCAR/UCAR virtual Python Tutorial Seminar Series continues with a lesson on Object Oriented Programming on **November 10th at 1 PM Mountain Standard Time** led by Dr. Kevin Paul.
 
 The content for this seminar tutorial is hosted on Kevin's [Object Oriented Programming Tutorial Repository](https://github.com/kmpaul/pg2oop).
 
 ## Bio
+
+Dr. Kevin Paul is a computational physicist and software engineer working in the Computational & Information Systems Lab at the National Center for Atmospheric Research. Dr. Paul is the head of the Experimental Development Team (Xdev) and is passionate about open source development and teaching Python to Earth system scientists.
 
 ## How-to-Run
 
