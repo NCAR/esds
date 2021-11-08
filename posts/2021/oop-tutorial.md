@@ -20,7 +20,7 @@ Dr. Kevin Paul is a computational physicist and software engineer working in the
 
 - Click the "Launch Binder" button at the top level of the [repository](https://github.com/kmpaul/pg2oop).
 
-You may also download the environment to run locally:
+You may also download the tutorial from GitHub to run it locally:
 
 - Check your conda install with `conda --version` and if necessary [install by following these instructions](https://docs.conda.io/en/latest/miniconda.html).
 
