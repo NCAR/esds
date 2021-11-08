@@ -12,12 +12,11 @@ The content for this seminar tutorial is hosted on Kevin's [Object Oriented Prog
 
 ## Bio
 
-
 ## How-to-Run
 
-**This tutorial is designed to be launched from Binder.** 
+**This tutorial is designed to be launched from Binder.**
 
-- Click the "Launch Binder" button at the top level of the [repository](https://github.com/kmpaul/pg2oop). 
+- Click the "Launch Binder" button at the top level of the [repository](https://github.com/kmpaul/pg2oop).
 
 - Then, in the recently-launched Binder tab, select the notebook file `index.ipynb` to begin.
 
