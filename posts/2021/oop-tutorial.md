@@ -32,7 +32,7 @@ You may also download the tutorial from GitHub to run it locally:
 
 - Activate your environment in the terminal with `conda activate pg2oop`.
 
-- Test your installation by launching JupyterLab with `jupyter lab`.
+- Launch the tutorial with JupyterLab by typing `jupyter lab` and then clicking on the `index.ipynb` file in Jupyter Lab's file browser.
 
 ## Sign Up
 
