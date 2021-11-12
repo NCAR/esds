@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2021-11-08T22:30:39.367936+00:00</updated>
+  <updated>2021-11-12T22:34:44.049878+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.20">ABlog</generator>
@@ -1004,5 +1004,23 @@ What should I do?</summary>
     <summary>The NCAR/UCAR virtual Python Tutorial Seminar Series continues with a lesson on Object Oriented Programming on November 10th at 1 PM Mountain Standard Time led by Dr. Kevin Paul.The content for this seminar tutorial is hosted on Kevin’s Object Oriented Programming Tutorial Repository.</summary>
     <category term="python-tutorial-series" label="python-tutorial-series"/>
     <published>2021-11-08T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/2021/weather-station-data-preprocess/</id>
+    <title>Processing Data from the NCAR Mesa Lab Weather Station</title>
+    <updated>2021-11-12T00:00:00+00:00</updated>
+    <author>
+      <name>Max Grover</name>
+    </author>
+    <content type="html">&lt;p&gt;There is a weather station located at the Mesa Lab, situated along the Foothills of the Rockies in Boulder, Colorado!&lt;/p&gt;
+&lt;p&gt;By the end of this post, you will be able to plot an interactive visualization of the weather data collected at the Mesa Lab, as shown below!&lt;/p&gt;
+&lt;img alt="mesa_lab_gif" src="../_images/mesa_lab_weather.gif" /&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/2021/weather-station-data-preprocess/" rel="alternate"/>
+    <summary>There is a weather station located at the Mesa Lab, situated along the Foothills of the Rockies in Boulder, Colorado!By the end of this post, you will be able to plot an interactive visualization of the weather data collected at the Mesa Lab, as shown below!mesa_lab_gif</summary>
+    <category term="xarray" label="xarray"/>
+    <category term="time" label="time"/>
+    <category term="preprocess" label="preprocess"/>
+    <published>2021-11-12T00:00:00+00:00</published>
   </entry>
 </feed>
