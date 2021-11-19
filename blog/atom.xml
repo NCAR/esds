@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2021-11-15T19:34:35.164401+00:00</updated>
+  <updated>2021-11-19T22:54:00.879418+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.20">ABlog</generator>
@@ -1022,5 +1022,24 @@ What should I do?</summary>
     <category term="time" label="time"/>
     <category term="preprocess" label="preprocess"/>
     <published>2021-11-12T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/2021/yearly-averages-xarray/</id>
+    <title>Correctly Calculating Annual Averages with Xarray</title>
+    <updated>2021-11-19T00:00:00+00:00</updated>
+    <author>
+      <name>Max Grover</name>
+    </author>
+    <content type="html">&lt;p&gt;A common component of people’s workflows is calculating annual averages, which helps &lt;strong&gt;reduce&lt;/strong&gt; the frequency of datasets, making them easier to work with. Two of the data frequencies you may be looking to convert to annual include:&lt;/p&gt;
+&lt;p&gt;Daily (365 days in each year)&lt;/p&gt;
+&lt;img alt="comparison" src="../_images/incorrect_vs_correct_weighting.png" /&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/2021/yearly-averages-xarray/" rel="alternate"/>
+    <summary>A common component of people’s workflows is calculating annual averages, which helps reduce the frequency of datasets, making them easier to work with. Two of the data frequencies you may be looking to convert to annual include:Daily (365 days in each year)comparison</summary>
+    <category term="cesm" label="cesm"/>
+    <category term="diagnostics" label="diagnostics"/>
+    <category term="xarray" label="xarray"/>
+    <category term="cesm2-le" label="cesm2-le"/>
+    <published>2021-11-19T00:00:00+00:00</published>
   </entry>
 </feed>
