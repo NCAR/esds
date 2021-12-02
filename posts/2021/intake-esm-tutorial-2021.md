@@ -1,12 +1,10 @@
 ---
 author: Max Grover
-date: 2021-12-08
-tags: python-tutorial-series, data-access, xarray, intake
+date: 2021-12-02
+tags: python-tutorial-series, xarray, intake
 ---
 
 # Intake-ESM Tutorial
-
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ProjectPythiaTutorials/intake-esm-tutorial_2021_12_08/main)
 
 The Project Pythia Python Tutorial Seminar Series continues with the Intake-ESM Tutorial on **Wednesday, December 8 at 1 PM Mountain Standard Time**. This session will be led by [Max Grover](https://github.com/mgrover1).
 
