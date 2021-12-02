@@ -1,7 +1,7 @@
 ---
 author: Max Grover
 date: 2021-12-08
-tags: python-tutorial-series, data-access, xarray, intake
+tags: python-tutorial-series, xarray, intake
 ---
 
 # Intake-ESM Tutorial
