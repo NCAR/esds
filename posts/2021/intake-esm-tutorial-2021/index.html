@@ -1,0 +1,455 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Intake-ESM Tutorial &#8212; NCAR-ESDS 0.1 documentation</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/blank.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "NCAR/esds");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <link rel="author" title="About these documents" href="../../../about/" />
+    <link rel="index" title="Index" href="../../../genindex/" />
+    <link rel="search" title="Search" href="../../../search/" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-196809533-1', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../../blog/atom.xml"
+  title="NCAR ESDS"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+<a class="navbar-brand" href="../../../">
+<p class="title">NCAR-ESDS</p>
+</a>
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../about/">
+  About Us
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../faq/">
+  Frequently Asked Questions
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../blog/">
+  Blog
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../communication/">
+  Communication
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../best-practices/">
+  Best Practices
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../calendar/">
+  Calendar
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../projects/">
+  Projects
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <form class="bd-search d-flex align-items-center" action="../../../search/" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this site... " aria-label="Search this site... " autocomplete="off" >
+</form>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/ncar/esds" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../../search/" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this site... " aria-label="Search this site... " autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    
+  </div>
+</nav>  
+<h2>
+   <i
+    class="fa fa-pencil"
+  ></i
+  > 08 December 2021  
+</h2>
+
+<ul>
+   
+<li id="author">
+  <span
+    ><i class="fa-fw fa fa-user"></i></span
+  >
+   
+  <a href="../../../blog/author/max-grover/">Max Grover</a>  
+</li>
+    
+<li id="tags">
+  <span
+    ><i class="fa-fw fa fa-tags"></i> </span
+  >
+   
+  <a href="../../../blog/tag/python-tutorial-series/">python-tutorial-series</a>   data-access  
+  <a href="../../../blog/tag/xarray/">xarray</a>   
+  <a href="../../../blog/tag/intake/">intake</a>  
+</li>
+ 
+</ul>
+
+<h3>
+  <a href="../../../blog/">Recent Posts</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="../yearly-averages-xarray/"
+      >19 November - Correctly Calculating Annual Averages with Xarray</a
+    >
+  </li>
+  
+  <li>
+    <a href="../weather-station-data-preprocess/"
+      >12 November - Processing Data from the NCAR Mesa Lab Weather Station</a
+    >
+  </li>
+  
+  <li>
+    <a href="../oop-tutorial/"
+      >08 November - Object Oriented Programming Tutorial</a
+    >
+  </li>
+  
+  <li>
+    <a href="../esds-update-october-2021/"
+      >28 October - ESDS Update October 2021</a
+    >
+  </li>
+  
+  <li>
+    <a href="../advanced-plotting-tutorial/"
+      >25 October - Advanced Plotting Tutorial</a
+    >
+  </li>
+  
+</ul>
+
+<h3>
+  <a href="../../../blog/archive/">Archives</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="../../../blog/2021/">2021 (50)</a>
+  </li>
+    
+  <li>
+    <a href="../../../blog/2020/">2020 (6)</a>
+  </li>
+    
+  <li>
+    <a href="../../../blog/2019/">2019 (2)</a>
+  </li>
+   
+</ul>
+
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bio">
+   Bio
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-run">
+   How-to-Run
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sign-up">
+   Sign Up
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tutorial-recording">
+   Tutorial Recording
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                 <section class="tex2jax_ignore mathjax_ignore" id="intake-esm-tutorial">
+<h1>Intake-ESM Tutorial<a class="headerlink" href="#intake-esm-tutorial" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://mybinder.org/v2/gh/ProjectPythiaTutorials/intake-esm-tutorial_2021_12_08/main"><img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></a></p>
+<p>The Project Pythia Python Tutorial Seminar Series continues with the Intake-ESM Tutorial on <strong>Wednesday, December 8 at 1 PM Mountain Standard Time</strong>. This session will be led by <a class="reference external" href="https://github.com/mgrover1">Max Grover</a>.</p>
+<p>The content for this tutorial is hosted in the <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> notebook file(s) within the <code class="docutils literal notranslate"><span class="pre">tutorial</span></code> directory of this repository.</p>
+<section id="bio">
+<h2>Bio<a class="headerlink" href="#bio" title="Permalink to this headline">¶</a></h2>
+<p>Max works as software engineer within the Climate and Global Dynamics Lab here at NCAR. He graduated with a B.S in meteorology from <a class="reference external" href="https://www.valpo.edu/geography-meteorology/">Valparaiso University</a> in 2019 and will complete his M.S. in atmospheric science this spring at the <a class="reference external" href="https://atmos.illinois.edu/">University of Illinois Urbana-Champaign</a>.</p>
+<p>He works on Python-based tools to support climate model evaluation and contributes to the Earth System Data Science initiative. His research in graduate school focused on using observational data collected during the RELAMPAGO-CACTI campaign in Argentina to study mesoscale convective dynamics, primarily utilizing mobile radar observations as well as GOES-16 satellite imagery. This is not his first time working at UCAR – he took part in the Unidata summer internship program in 2019, working with Ryan May on contributing METAR parsing functionality to MetPy, which motivated him to pursue a career in software engineering.</p>
+<p>He enjoys hiking, visiting breweries, and spending time on the water (his summer job, prior to graduate school, was at a resort in southern Wisconsin where he worked as a tour boat captain on Delavan Lake). He is also a big fan of Hawaiian shirts, with a collection of more than 40.</p>
+</section>
+<section id="how-to-run">
+<h2>How-to-Run<a class="headerlink" href="#how-to-run" title="Permalink to this headline">¶</a></h2>
+<p><strong>All of the tutorials in this organization can be followed by clicking the “Launch Binder” button at the top level or in each directory.</strong></p>
+<p>You may also download the environment to run locally:</p>
+<ul class="simple">
+<li><p>Check your conda install with <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">--version</span></code> and if necessary <a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">install by following these instructions</a>.</p></li>
+<li><p>Clone this repository by running <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/ProjectPythiaTutorials/intake-esm-tutorial_2021_12_08</span></code> in your terminal.</p></li>
+<li><p>Still in the terminal, create a Conda environment from the <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> file by first moving into the <code class="docutils literal notranslate"><span class="pre">intake-esm-tutorial_2021_12_08</span></code> directory with <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">intake-esm-tutorial_2021_12_08</span></code> and then <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">env</span> <span class="pre">create</span> <span class="pre">--file</span> <span class="pre">environment.yml</span></code></p></li>
+<li><p>Activate your environment in the terminal with <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">pythia-intake-esm-tutorial</span></code>.</p></li>
+<li><p>Test your installation by launching JupyterLab with <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">lab</span></code>.</p></li>
+</ul>
+</section>
+<section id="sign-up">
+<h2>Sign Up<a class="headerlink" href="#sign-up" title="Permalink to this headline">¶</a></h2>
+<p>To receive the Zoom link and password, please join the <em>learnpython&#64;ucar.edu</em> Google group and Calendar.</p>
+<p>To join the <em>learnpython&#64;ucar.edu</em> Google Group, follow this <a class="reference external" href="https://groups.google.com/a/ucar.edu/g/learnpython/about">link</a> and click “Join Group” next to the group name.</p>
+<p>By attending this tutorial, you are subject to the <a class="reference external" href="https://www.ucar.edu/who-we-are/ethics-integrity/codes-conduct.">NCAR/UCAR Code of Conduct</a></p>
+</section>
+<section id="tutorial-recording">
+<h2>Tutorial Recording<a class="headerlink" href="#tutorial-recording" title="Permalink to this headline">¶</a></h2>
+<p>This tutorial will be recorded and posted on our <a class="reference external" href="https://www.youtube.com/channel/UCoZPBqJal5uKpO8ZiwzavCw">YouTube channel</a>.
+[Note: A Project Pythia team member will replace this section with the embedded video once it is ready.]</p>
+</section>
+</section>
+
+<div class="section">
+       
+</div>
+
+              </div>
+              
+              
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021, NCAR Earth System Data Science Team.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.1.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>
