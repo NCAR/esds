@@ -14,7 +14,7 @@ Check out the following ESDS update for the month of November 2021.
 
 Xdev has continued to make progress on the **_Funnel_** project; this extends the data catalog with "analysis recipes", providing an effective strategy for modularization and extensibility of workflows.
 
-The [esds-funnel](https://github.com/NCAR/esds-funnel) provides the cacheing framework, while the [esm-collections](https://github.com/NCAR/esm-collections) repository is where we prototyping the full workflows with the catalogs and analysis recipes.
+The [esds-funnel](https://github.com/NCAR/esds-funnel) provides the caching framework, while the [esm-collections](https://github.com/NCAR/esm-collections) repository is where we prototype the full workflows with the catalogs and analysis recipes.
 
 We have continued to push forward on the `xwrf` project, which aims to help bring the Weather Research and Forecasting (WRF) model into the Pangeo ecosystem. Be sure to follow the [`xwrf` repository](https://github.com/NCAR/xwrf) for updates.
 
