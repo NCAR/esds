@@ -6,8 +6,6 @@ tags: python-tutorial-series, xarray, intake
 
 # Intake-ESM Tutorial
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ProjectPythiaTutorials/intake-esm-tutorial_2021_12_08/main)
-
 The Project Pythia Python Tutorial Seminar Series continues with the Intake-ESM Tutorial on **Wednesday, December 8 at 1 PM Mountain Standard Time**. This session will be led by [Max Grover](https://github.com/mgrover1).
 
 The content for this tutorial is hosted in the `.ipynb` notebook file(s) within the `tutorial` directory of this repository.
