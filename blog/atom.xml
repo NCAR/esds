@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2021-12-02T22:04:09.216861+00:00</updated>
+  <updated>2021-12-02T23:32:06.868559+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.21">ABlog</generator>
@@ -1041,5 +1041,22 @@ What should I do?</summary>
     <category term="xarray" label="xarray"/>
     <category term="cesm2-le" label="cesm2-le"/>
     <published>2021-11-19T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/2021/intake-esm-tutorial-2021/</id>
+    <title>Intake-ESM Tutorial</title>
+    <updated>2021-12-02T00:00:00+00:00</updated>
+    <author>
+      <name>Max Grover</name>
+    </author>
+    <content type="html">&lt;p&gt;The Project Pythia Python Tutorial Seminar Series continues with the Intake-ESM Tutorial on &lt;strong&gt;Wednesday, December 8 at 1 PM Mountain Standard Time&lt;/strong&gt;. This session will be led by &lt;a class="reference external" href="https://github.com/mgrover1"&gt;Max Grover&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The content for this tutorial is hosted in the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;.ipynb&lt;/span&gt;&lt;/code&gt; notebook file(s) within the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;tutorial&lt;/span&gt;&lt;/code&gt; directory of this repository.&lt;/p&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/2021/intake-esm-tutorial-2021/" rel="alternate"/>
+    <summary>The Project Pythia Python Tutorial Seminar Series continues with the Intake-ESM Tutorial on Wednesday, December 8 at 1 PM Mountain Standard Time. This session will be led by Max Grover.The content for this tutorial is hosted in the .ipynb notebook file(s) within the tutorial directory of this repository.</summary>
+    <category term="python-tutorial-series" label="python-tutorial-series"/>
+    <category term="xarray" label="xarray"/>
+    <category term="intake" label="intake"/>
+    <published>2021-12-02T00:00:00+00:00</published>
   </entry>
 </feed>
