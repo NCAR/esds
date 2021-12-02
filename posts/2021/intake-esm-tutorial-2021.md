@@ -30,7 +30,7 @@ You may also download the environment to run locally:
 
 - Clone this repository by running `git clone https://github.com/ProjectPythia/intake-esm-tutorial_2021_12_08` in your terminal.
 
-- Still in the terminal, create a Conda environment from the `environment.yml` file by first moving into the `intake-esm-tutorial_2021_12_08` directory with `cd intake-esm-tutorial_2021_12_08` and then `conda env update --file environment.yml`
+- Still in the terminal, create a Conda environment from the `environment.yml` file by first moving into the `intake-esm-tutorial_2021_12_08` directory with `cd intake-esm-tutorial_2021_12_08` and then `conda env create --file environment.yml`
 
 - Activate your environment in the terminal with `conda activate pythia-intake-esm-tutorial`.
 
