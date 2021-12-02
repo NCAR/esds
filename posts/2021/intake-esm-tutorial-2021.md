@@ -1,6 +1,6 @@
 ---
 author: Max Grover
-date: 2021-12-08
+date: 2021-12-02
 tags: python-tutorial-series, xarray, intake
 ---
 
