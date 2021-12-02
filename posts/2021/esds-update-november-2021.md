@@ -44,7 +44,7 @@ During the month of October 2021, our team answered a total of **10 questions** 
 
 Below is a summary of the most common questions brought up during office hours!
 
-![october-2021-office-hours](../images/october_2021_question_topics.png)
+![november-2021-office-hours](../images/november_office_hour_stats.png)
 
 ### Matplotlib Questions
 
