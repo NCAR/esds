@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2021-12-02T23:32:06.868559+00:00</updated>
+  <updated>2021-12-03T00:24:55.412688+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.21">ABlog</generator>
@@ -1041,6 +1041,26 @@ What should I do?</summary>
     <category term="xarray" label="xarray"/>
     <category term="cesm2-le" label="cesm2-le"/>
     <published>2021-11-19T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/2021/esds-update-november-2021/</id>
+    <title>ESDS Update November 2021</title>
+    <updated>2021-12-02T00:00:00+00:00</updated>
+    <author>
+      <name>Max Grover</name>
+    </author>
+    <content type="html">&lt;p&gt;November was an active month! There were a couple of ESDS Forum talks, a variety of answered Python questions during office hours, and a Python tutorial!&lt;/p&gt;
+&lt;p&gt;Check out the following ESDS update for the month of November 2021.&lt;/p&gt;
+&lt;img alt="november-2021-office-hours" src="../_images/november_office_hour_stats.png" /&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/2021/esds-update-november-2021/" rel="alternate"/>
+    <summary>November was an active month! There were a couple of ESDS Forum talks, a variety of answered Python questions during office hours, and a Python tutorial!Check out the following ESDS update for the month of November 2021.november-2021-office-hours</summary>
+    <category term="update" label="update"/>
+    <category term="faq" label="faq"/>
+    <category term="xarray" label="xarray"/>
+    <category term="dask" label="dask"/>
+    <category term="matplotlib" label="matplotlib"/>
+    <published>2021-12-02T00:00:00+00:00</published>
   </entry>
   <entry>
     <id>ncar.github.io/esds/posts/2021/intake-esm-tutorial-2021/</id>

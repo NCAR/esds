@@ -1,0 +1,603 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>ESDS Update November 2021 &#8212; NCAR-ESDS 0.1 documentation</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/blank.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "NCAR/esds");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <link rel="author" title="About these documents" href="../../../about/" />
+    <link rel="index" title="Index" href="../../../genindex/" />
+    <link rel="search" title="Search" href="../../../search/" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-196809533-1', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../../blog/atom.xml"
+  title="NCAR ESDS"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+<a class="navbar-brand" href="../../../">
+<p class="title">NCAR-ESDS</p>
+</a>
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../about/">
+  About Us
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../faq/">
+  Frequently Asked Questions
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../blog/">
+  Blog
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../communication/">
+  Communication
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../best-practices/">
+  Best Practices
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../calendar/">
+  Calendar
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../projects/">
+  Projects
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <form class="bd-search d-flex align-items-center" action="../../../search/" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this site... " aria-label="Search this site... " autocomplete="off" >
+</form>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/ncar/esds" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../../search/" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this site... " aria-label="Search this site... " autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    
+  </div>
+</nav>  
+<h2>
+   <i class="fa fa-calendar"></i>
+  02 December 2021 
+</h2>
+
+<ul>
+   
+<li id="author">
+  <span
+    ><i class="fa-fw fa fa-user"></i></span
+  >
+   
+  <a href="../../../blog/author/max-grover/">Max Grover</a>  
+</li>
+    
+<li id="tags">
+  <span
+    ><i class="fa-fw fa fa-tags"></i> </span
+  >
+   
+  <a href="../../../blog/tag/update/">update</a>   
+  <a href="../../../blog/tag/faq/">faq</a>   
+  <a href="../../../blog/tag/xarray/">xarray</a>   
+  <a href="../../../blog/tag/dask/">dask</a>   
+  <a href="../../../blog/tag/matplotlib/">matplotlib</a>  
+</li>
+ 
+</ul>
+
+<h3>
+  <a href="../../../blog/">Recent Posts</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="../intake-esm-tutorial-2021/"
+      >02 December - Intake-ESM Tutorial</a
+    >
+  </li>
+  
+  <li>
+    <a href="../yearly-averages-xarray/"
+      >19 November - Correctly Calculating Annual Averages with Xarray</a
+    >
+  </li>
+  
+  <li>
+    <a href="../weather-station-data-preprocess/"
+      >12 November - Processing Data from the NCAR Mesa Lab Weather Station</a
+    >
+  </li>
+  
+  <li>
+    <a href="../oop-tutorial/"
+      >08 November - Object Oriented Programming Tutorial</a
+    >
+  </li>
+  
+  <li>
+    <a href="../esds-update-october-2021/"
+      >28 October - ESDS Update October 2021</a
+    >
+  </li>
+  
+</ul>
+
+<h3>
+  <a href="../../../blog/archive/">Archives</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="../../../blog/2021/">2021 (52)</a>
+  </li>
+    
+  <li>
+    <a href="../../../blog/2020/">2020 (6)</a>
+  </li>
+    
+  <li>
+    <a href="../../../blog/2019/">2019 (2)</a>
+  </li>
+   
+</ul>
+
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#xdev-updates">
+   Xdev Updates
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#esds-forum">
+   ESDS Forum
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#python-package-overviews">
+     Python Package Overviews
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#general-discussion">
+     General Discussion
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#esds-blog-posts">
+   ESDS Blog Posts
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-computation">
+     Data Computation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#end-to-end-workflow">
+     End to End Workflow
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#office-hour-questions">
+   Office Hour Questions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#matplotlib-questions">
+     Matplotlib Questions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dask-questions">
+     Dask Questions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#xarray-questions">
+     Xarray Questions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conda-questions">
+     Conda Questions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-tutorial-s">
+   Python Tutorial(s)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#object-oriented-programming-tutorial">
+     Object Oriented Programming Tutorial
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                 <section class="tex2jax_ignore mathjax_ignore" id="esds-update-november-2021">
+<h1>ESDS Update November 2021<a class="headerlink" href="#esds-update-november-2021" title="Permalink to this headline">¶</a></h1>
+<p>November was an active month! There were a couple of ESDS Forum talks, a variety of answered Python questions during office hours, and a Python tutorial!</p>
+<p>Check out the following ESDS update for the month of November 2021.</p>
+<section id="xdev-updates">
+<h2>Xdev Updates<a class="headerlink" href="#xdev-updates" title="Permalink to this headline">¶</a></h2>
+<p>Xdev has continued to make progress on the <strong><em>Funnel</em></strong> project; this extends the data catalog with “analysis recipes”, providing an effective strategy for modularization and extensibility of workflows.</p>
+<p>The <a class="reference external" href="https://github.com/NCAR/esds-funnel">esds-funnel</a> provides the caching framework, while the <a class="reference external" href="https://github.com/NCAR/esm-collections">esm-collections</a> repository is where we prototype the full workflows with the catalogs and analysis recipes.</p>
+<p>We have continued to push forward on the <code class="docutils literal notranslate"><span class="pre">xwrf</span></code> project, which aims to help bring the Weather Research and Forecasting (WRF) model into the Pangeo ecosystem. Be sure to follow the <a class="reference external" href="https://github.com/NCAR/xwrf"><code class="docutils literal notranslate"><span class="pre">xwrf</span></code> repository</a> for updates.</p>
+</section>
+<section id="esds-forum">
+<h2>ESDS Forum<a class="headerlink" href="#esds-forum" title="Permalink to this headline">¶</a></h2>
+<section id="python-package-overviews">
+<h3>Python Package Overviews<a class="headerlink" href="#python-package-overviews" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://raijin.ucar.edu/">Introducing Project Raijin Community Geoscience Analysis Tools for Unstructured Mesh Data</a> (29 November 2021) - Orhan Eroglu (CISL)</p></li>
+</ul>
+</section>
+<section id="general-discussion">
+<h3>General Discussion<a class="headerlink" href="#general-discussion" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.google.com/forms/d/e/1FAIpQLScX4ugyocLz1WgIthzX_eN_CXkBR7QvlHTS0eMLxFtxsjxPyw/viewform?vc=0&amp;c=0&amp;w=1&amp;flr=0">An Open Discussion Around Earth System Prediction at NCAR</a> (01 November 2021) - Matt Long (CGD)</p></li>
+</ul>
+</section>
+</section>
+<section id="esds-blog-posts">
+<h2>ESDS Blog Posts<a class="headerlink" href="#esds-blog-posts" title="Permalink to this headline">¶</a></h2>
+<section id="data-computation">
+<h3>Data Computation<a class="headerlink" href="#data-computation" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://ncar.github.io/esds/posts/2021/yearly-averages-xarray/">Correctly Calculating Annual Averages with Xarray</a></p></li>
+</ul>
+</section>
+<section id="end-to-end-workflow">
+<h3>End to End Workflow<a class="headerlink" href="#end-to-end-workflow" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://ncar.github.io/esds/posts/2021/weather-station-data-preprocess/">Processing Data from the NCAR Mesa Lab Weather Station¶</a></p></li>
+</ul>
+</section>
+</section>
+<section id="office-hour-questions">
+<h2>Office Hour Questions<a class="headerlink" href="#office-hour-questions" title="Permalink to this headline">¶</a></h2>
+<p>During the month of October 2021, our team answered a total of <strong>10 questions</strong> at our weekly <a class="reference external" href="https://ncar.github.io/esds/calendar/#xdev-office-hours">Xdev Office Hours</a>.</p>
+<p>Below is a summary of the most common questions brought up during office hours!</p>
+<p><img alt="november-2021-office-hours" src="../../../_images/november_office_hour_stats.png" /></p>
+<section id="matplotlib-questions">
+<h3>Matplotlib Questions<a class="headerlink" href="#matplotlib-questions" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>How do you make boxplots with two datasets of varying sizes?</p>
+<ul>
+<li><p><strong>Solution</strong>: Called <code class="docutils literal notranslate"><span class="pre">plt.boxplot()</span></code> twice, use <code class="docutils literal notranslate"><span class="pre">width</span> <span class="pre">=</span> <span class="pre">0.1</span></code> for both calls and <code class="docutils literal notranslate"><span class="pre">positions=[1.5,2.5,3.5,4.5]</span></code> for the second call.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="dask-questions">
+<h3>Dask Questions<a class="headerlink" href="#dask-questions" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>How do you run Dask on Casper?</p>
+<ul>
+<li><p><strong>Solution</strong>: Encouraged use of <a class="reference external" href="https://github.com/NCAR/ncar-jobqueue"><code class="docutils literal notranslate"><span class="pre">ncar-jobqueue</span></code></a> package, using the compute nodes on Casper.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="xarray-questions">
+<h3>Xarray Questions<a class="headerlink" href="#xarray-questions" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>How do you load multiple files into xarray and plot the output?</p>
+<ul>
+<li><p><strong>Solution</strong>: Had to call .load() and .some_variable in order to access the shape, pointed to <a class="reference external" href="https://ncar.github.io/esds/faq/#xarray-and-dask">xarray and dask section on ESDS FAQ page</a>.</p></li>
+</ul>
+</li>
+<li><p>How do you drop specific dates from a dataset?</p>
+<ul>
+<li><p><strong>Solution</strong>: Used cftime_range() along with sel_drop()</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="conda-questions">
+<h3>Conda Questions<a class="headerlink" href="#conda-questions" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>How do you uninstall and reinstall a conda environment?</p>
+<ul>
+<li><p><strong>Solution</strong>: Encouraged to check out the <a class="reference external" href="https://docs.anaconda.com/anaconda/install/uninstall/">anaconda docs about deleting environment</a> and reinstall environment.</p></li>
+</ul>
+</li>
+<li><p>How do you make sure your conda environment is activated upon opening terminal?</p>
+<ul>
+<li><p><strong>Solution</strong>: Added a new section walking through this process called <a class="reference external" href="https://ncar.github.io/esds/faq/#conda-environments">“Activating Your Base Environment Upon Opening a Terminal”</a></p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="python-tutorial-s">
+<h2>Python Tutorial(s)<a class="headerlink" href="#python-tutorial-s" title="Permalink to this headline">¶</a></h2>
+<section id="object-oriented-programming-tutorial">
+<h3><a class="reference external" href="https://ncar.github.io/esds/posts/2021/oop-tutorial/">Object Oriented Programming Tutorial</a><a class="headerlink" href="#object-oriented-programming-tutorial" title="Permalink to this headline">¶</a></h3>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zlHkkjr7e6k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</section>
+</section>
+</section>
+
+<div class="section">
+     
+<div class="section">
+  <span style="float: left">
+     
+    <a href="../yearly-averages-xarray/">
+      <i class="fa fa-arrow-circle-left"></i> Correctly Calculating Annual Averages with Xarray
+    </a>
+    
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right">
+     
+    <a href="../intake-esm-tutorial-2021/">
+      Intake-ESM Tutorial <i
+        class="fa fa-arrow-circle-right"
+      ></i
+      >
+    </a>
+    
+  </span>
+</div>
+  
+</div>
+
+              </div>
+              
+              
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021, NCAR Earth System Data Science Team.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.1.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>
