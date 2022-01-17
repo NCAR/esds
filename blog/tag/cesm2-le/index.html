@@ -7,31 +7,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Posts tagged cesm2-le &#8212; NCAR-ESDS 0.1 documentation</title>
     
-  <link href="../../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
-
+    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  
     
-  <link rel="stylesheet"
-    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-
+    <link rel="stylesheet"
+      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
     
       
-
+  
     
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/blank.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
-
+    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -211,10 +211,8 @@ commentsRunWhenDOMLoaded(addUtterances);
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/ncar/esds" rel="noopener" target="_blank" title="GitHub">
-            <span><i class="fab fa-github-square"></i></span>
-            <label class="sr-only">GitHub</label>
-          </a>
+          <a class="nav-link" href="https://github.com/ncar/esds" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
         </li>
       </ul>
       </div>
@@ -230,7 +228,8 @@ commentsRunWhenDOMLoaded(addUtterances);
           
             
             <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../../search/" method="get">
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../search/" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this site... " aria-label="Search this site... " autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
@@ -238,6 +237,9 @@ commentsRunWhenDOMLoaded(addUtterances);
     
   </div>
 </nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
             </div>
             
           
@@ -262,8 +264,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   </h1>
    
 
-  <div class="section">
-    <h2>
+  <div class="section ablog-post">
+    <h2 class="ablog-post-title">
       <a href="../../../posts/2021/yearly-averages-xarray/"
         >Correctly Calculating Annual Averages with Xarray</a
       >
@@ -294,17 +296,19 @@ commentsRunWhenDOMLoaded(addUtterances);
 </li>
  
     </ul>
-    <p>A common component of people’s workflows is calculating annual averages, which helps <strong>reduce</strong> the frequency of datasets, making them easier to work with. Two of the data frequencies you may be looking to convert to annual include:</p>
+    <div class="ablog-post-excerpt docutils container">
+<p>A common component of people’s workflows is calculating annual averages, which helps <strong>reduce</strong> the frequency of datasets, making them easier to work with. Two of the data frequencies you may be looking to convert to annual include:</p>
 <p>Daily (365 days in each year)</p>
 <img alt="comparison" src="../../../_images/incorrect_vs_correct_weighting.png" />
+</div>
 
-    <p><a href="../../../posts/2021/yearly-averages-xarray/">Read more ...</a></p>
+    <p class="ablog-post-expand"><a href="../../../posts/2021/yearly-averages-xarray/"><em>Read more ...</em></a></p>
     <hr />
   </div>
   
 
-  <div class="section">
-    <h2>
+  <div class="section ablog-post">
+    <h2 class="ablog-post-title">
       <a href="../../../posts/2021/kay-et-al-cesm2-le/"
         >CESM2-Large Ensemble Reproduction of a Figure from Kay et al. 2015 Using Intake-ESM and hvPlot</a
       >
@@ -336,17 +340,19 @@ commentsRunWhenDOMLoaded(addUtterances);
 </li>
  
     </ul>
-    <p>This Jupyter Notebook demonstrates how one might use the NCAR Community Earth System Model v2 (CESM2) Large Ensemble (CESM2-LE) data hosted on AWS S3. The notebook shows how to reproduce figure 2 from the Kay et al. (2015) paper describing the CESM LENS dataset (<span class="xref myst">doi:10.1175/BAMS-D-13-00255.1</span>), with the LENS2 dataset.</p>
+    <div class="ablog-post-excerpt docutils container">
+<p>This Jupyter Notebook demonstrates how one might use the NCAR Community Earth System Model v2 (CESM2) Large Ensemble (CESM2-LE) data hosted on AWS S3. The notebook shows how to reproduce figure 2 from the Kay et al. (2015) paper describing the CESM LENS dataset (<span class="xref myst">doi:10.1175/BAMS-D-13-00255.1</span>), with the LENS2 dataset.</p>
 <p>There was a previous notebook which explored this use case, put together by Joe Hamman and Anderson Banihirwe, accessible on the Pangeo Gallery using <a class="reference external" href="http://gallery.pangeo.io/repos/NCAR/cesm-lens-aws/notebooks/kay-et-al-2015.v3.html">this link</a>. The specific figure we are replicating is shown below.</p>
 <img alt="cesm1-lens" src="../../../_images/kay_et_al_2015_lens1.png" />
+</div>
 
-    <p><a href="../../../posts/2021/kay-et-al-cesm2-le/">Read more ...</a></p>
+    <p class="ablog-post-expand"><a href="../../../posts/2021/kay-et-al-cesm2-le/"><em>Read more ...</em></a></p>
     <hr />
   </div>
   
 
-  <div class="section">
-    <h2>
+  <div class="section ablog-post">
+    <h2 class="ablog-post-title">
       <a href="../../../posts/2021/intake-obs-cesm2le-comparison/"
         >Comparing Atmospheric Model Output with Observations Using Intake-ESM</a
       >
@@ -376,16 +382,18 @@ commentsRunWhenDOMLoaded(addUtterances);
 </li>
  
     </ul>
-    <p>Comparing models and observations is a critical component of climate diagnostic packages. This process can be challenging though - given the number of observational datasets to compare against, and the difference in spatiotemporal resolutions. In the previous iteration of the diagnostics package used for atmospheric data from the Community Earth System Model (CESM), they used pre-computed, observational datasets stored in a directory on the GLADE filesystem (<code class="docutils literal notranslate"><span class="pre">/glade/p/cesm/amwg/amwg_diagnostics/obs_data</span></code>)</p>
+    <div class="ablog-post-excerpt docutils container">
+<p>Comparing models and observations is a critical component of climate diagnostic packages. This process can be challenging though - given the number of observational datasets to compare against, and the difference in spatiotemporal resolutions. In the previous iteration of the diagnostics package used for atmospheric data from the Community Earth System Model (CESM), they used pre-computed, observational datasets stored in a directory on the GLADE filesystem (<code class="docutils literal notranslate"><span class="pre">/glade/p/cesm/amwg/amwg_diagnostics/obs_data</span></code>)</p>
 <p>Within this example, we walk though generating an <code class="docutils literal notranslate"><span class="pre">intake-esm</span></code> catalog from the observational data, reading in CESM data, and compare models and observations</p>
+</div>
 
-    <p><a href="../../../posts/2021/intake-obs-cesm2le-comparison/">Read more ...</a></p>
+    <p class="ablog-post-expand"><a href="../../../posts/2021/intake-obs-cesm2le-comparison/"><em>Read more ...</em></a></p>
     <hr />
   </div>
   
 
-  <div class="section">
-    <h2>
+  <div class="section ablog-post">
+    <h2 class="ablog-post-title">
       <a href="../../../posts/2021/intake-cesm2-le-glade-example/"
         >Using Intake-ESM to Analyze Data from CESM2-LE</a
       >
@@ -415,11 +423,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 </li>
  
     </ul>
-    <p>In mid June, the <a class="reference external" href="https://www.cesm.ucar.edu/projects/community-projects/LENS2/">CESM2 Large Ensemble</a> dataset was made available to the public. This model was run in collaboration with the <a class="reference external" href="https://ibsclimate.org/">IBS Center for Climate Physics</a> and the <a class="reference external" href="https://ncar.ucar.edu/">National Center for Atmospheric Research</a> This dataset includes 100 ensemble members, at one degree spatial resolution, with each ensemble member including data from 1850 to 2100. If you are interested in learning more about how this ensemble was setup, be sure to check out <a class="reference external" href="https://www.cesm.ucar.edu/projects/community-projects/LENS2/">the main webpage</a> or read the pre-print of <a class="reference external" href="https://esd.copernicus.org/preprints/esd-2021-50/">Rodgers et al. 2021</a> which describes this dataset in detail.</p>
+    <div class="ablog-post-excerpt docutils container">
+<p>In mid June, the <a class="reference external" href="https://www.cesm.ucar.edu/projects/community-projects/LENS2/">CESM2 Large Ensemble</a> dataset was made available to the public. This model was run in collaboration with the <a class="reference external" href="https://ibsclimate.org/">IBS Center for Climate Physics</a> and the <a class="reference external" href="https://ncar.ucar.edu/">National Center for Atmospheric Research</a> This dataset includes 100 ensemble members, at one degree spatial resolution, with each ensemble member including data from 1850 to 2100. If you are interested in learning more about how this ensemble was setup, be sure to check out <a class="reference external" href="https://www.cesm.ucar.edu/projects/community-projects/LENS2/">the main webpage</a> or read the pre-print of <a class="reference external" href="https://esd.copernicus.org/preprints/esd-2021-50/">Rodgers et al. 2021</a> which describes this dataset in detail.</p>
 <p>One of these challenges with this dataset is dealing with the massive amount of output. The data are available through the <a class="reference external" href="https://www.cesm.ucar.edu/projects/community-projects/LENS2/data-sets.html">NCAR Climate Data Gateway</a> and via the <a class="reference external" href="https://climatedata.ibs.re.kr/data/cesm2-lens">IBS OpenDAP Server</a>. There is also a subset of the dataset available on the GLADE file system on NCAR HPC resources available within the directory <code class="docutils literal notranslate"><span class="pre">/glade/campaign/cgd/cesm/CESM2-LE/timeseries/</span></code>.</p>
 <img alt="intake-esm catalogs" src="../../../_images/intake_esm_catalogs.png" />
+</div>
 
-    <p><a href="../../../posts/2021/intake-cesm2-le-glade-example/">Read more ...</a></p>
+    <p class="ablog-post-expand"><a href="../../../posts/2021/intake-cesm2-le-glade-example/"><em>Read more ...</em></a></p>
     <hr />
   </div>
    
@@ -438,8 +448,8 @@ commentsRunWhenDOMLoaded(addUtterances);
       </div>
     </div>
   
-  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
-<footer class="footer mt-5 mt-md-0">
+    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">

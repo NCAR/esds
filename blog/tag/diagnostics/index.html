@@ -7,31 +7,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Posts tagged diagnostics &#8212; NCAR-ESDS 0.1 documentation</title>
     
-  <link href="../../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
-
+    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  
     
-  <link rel="stylesheet"
-    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-
+    <link rel="stylesheet"
+      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
     
       
-
+  
     
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/blank.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
-
+    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -211,10 +211,8 @@ commentsRunWhenDOMLoaded(addUtterances);
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/ncar/esds" rel="noopener" target="_blank" title="GitHub">
-            <span><i class="fab fa-github-square"></i></span>
-            <label class="sr-only">GitHub</label>
-          </a>
+          <a class="nav-link" href="https://github.com/ncar/esds" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
         </li>
       </ul>
       </div>
@@ -230,7 +228,8 @@ commentsRunWhenDOMLoaded(addUtterances);
           
             
             <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../../search/" method="get">
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../search/" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this site... " aria-label="Search this site... " autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
@@ -238,6 +237,9 @@ commentsRunWhenDOMLoaded(addUtterances);
     
   </div>
 </nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
             </div>
             
           
@@ -262,8 +264,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   </h1>
    
 
-  <div class="section">
-    <h2>
+  <div class="section ablog-post">
+    <h2 class="ablog-post-title">
       <a href="../../../posts/2021/yearly-averages-xarray/"
         >Correctly Calculating Annual Averages with Xarray</a
       >
@@ -294,17 +296,19 @@ commentsRunWhenDOMLoaded(addUtterances);
 </li>
  
     </ul>
-    <p>A common component of people’s workflows is calculating annual averages, which helps <strong>reduce</strong> the frequency of datasets, making them easier to work with. Two of the data frequencies you may be looking to convert to annual include:</p>
+    <div class="ablog-post-excerpt docutils container">
+<p>A common component of people’s workflows is calculating annual averages, which helps <strong>reduce</strong> the frequency of datasets, making them easier to work with. Two of the data frequencies you may be looking to convert to annual include:</p>
 <p>Daily (365 days in each year)</p>
 <img alt="comparison" src="../../../_images/incorrect_vs_correct_weighting.png" />
+</div>
 
-    <p><a href="../../../posts/2021/yearly-averages-xarray/">Read more ...</a></p>
+    <p class="ablog-post-expand"><a href="../../../posts/2021/yearly-averages-xarray/"><em>Read more ...</em></a></p>
     <hr />
   </div>
   
 
-  <div class="section">
-    <h2>
+  <div class="section ablog-post">
+    <h2 class="ablog-post-title">
       <a href="../../../posts/2021/intake-esm-derived-variables/"
         >Using Intake-ESM's New Derived Variable Functionality</a
       >
@@ -334,16 +338,18 @@ commentsRunWhenDOMLoaded(addUtterances);
 </li>
  
     </ul>
-    <p>Last week, <a class="reference external" href="https://github.com/andersy005">Anderson Banihirwe</a> added a new feature to intake-esm, enabling users to add “derived variables” to catalogs! This is an exciting addition, and although this has not been included in a release yet, you are welcome to test out the functionality!</p>
+    <div class="ablog-post-excerpt docutils container">
+<p>Last week, <a class="reference external" href="https://github.com/andersy005">Anderson Banihirwe</a> added a new feature to intake-esm, enabling users to add “derived variables” to catalogs! This is an exciting addition, and although this has not been included in a release yet, you are welcome to test out the functionality!</p>
 <p>Keep in mind that this is an initial prototype and the API is likely to change.</p>
+</div>
 
-    <p><a href="../../../posts/2021/intake-esm-derived-variables/">Read more ...</a></p>
+    <p class="ablog-post-expand"><a href="../../../posts/2021/intake-esm-derived-variables/"><em>Read more ...</em></a></p>
     <hr />
   </div>
   
 
-  <div class="section">
-    <h2>
+  <div class="section ablog-post">
+    <h2 class="ablog-post-title">
       <a href="../../../posts/2021/kay-et-al-cesm2-le/"
         >CESM2-Large Ensemble Reproduction of a Figure from Kay et al. 2015 Using Intake-ESM and hvPlot</a
       >
@@ -375,17 +381,19 @@ commentsRunWhenDOMLoaded(addUtterances);
 </li>
  
     </ul>
-    <p>This Jupyter Notebook demonstrates how one might use the NCAR Community Earth System Model v2 (CESM2) Large Ensemble (CESM2-LE) data hosted on AWS S3. The notebook shows how to reproduce figure 2 from the Kay et al. (2015) paper describing the CESM LENS dataset (<span class="xref myst">doi:10.1175/BAMS-D-13-00255.1</span>), with the LENS2 dataset.</p>
+    <div class="ablog-post-excerpt docutils container">
+<p>This Jupyter Notebook demonstrates how one might use the NCAR Community Earth System Model v2 (CESM2) Large Ensemble (CESM2-LE) data hosted on AWS S3. The notebook shows how to reproduce figure 2 from the Kay et al. (2015) paper describing the CESM LENS dataset (<span class="xref myst">doi:10.1175/BAMS-D-13-00255.1</span>), with the LENS2 dataset.</p>
 <p>There was a previous notebook which explored this use case, put together by Joe Hamman and Anderson Banihirwe, accessible on the Pangeo Gallery using <a class="reference external" href="http://gallery.pangeo.io/repos/NCAR/cesm-lens-aws/notebooks/kay-et-al-2015.v3.html">this link</a>. The specific figure we are replicating is shown below.</p>
 <img alt="cesm1-lens" src="../../../_images/kay_et_al_2015_lens1.png" />
+</div>
 
-    <p><a href="../../../posts/2021/kay-et-al-cesm2-le/">Read more ...</a></p>
+    <p class="ablog-post-expand"><a href="../../../posts/2021/kay-et-al-cesm2-le/"><em>Read more ...</em></a></p>
     <hr />
   </div>
   
 
-  <div class="section">
-    <h2>
+  <div class="section ablog-post">
+    <h2 class="ablog-post-title">
       <a href="../../../posts/2021/jupyter-based-diagnostics-overview/"
         >Reimagining Diagnostics Through the Use of the Jupyter Ecosystem</a
       >
@@ -417,17 +425,19 @@ commentsRunWhenDOMLoaded(addUtterances);
 </li>
  
     </ul>
-    <p>Typically, diagnostics packages are written with following structure, using script-based workflows</p>
+    <div class="ablog-post-excerpt docutils container">
+<p>Typically, diagnostics packages are written with following structure, using script-based workflows</p>
 <p>Read files and do some preprocessing</p>
 <img alt="cesm-marbl-book-overview" src="../../../_images/cesm_marbl_book_overview.png" />
+</div>
 
-    <p><a href="../../../posts/2021/jupyter-based-diagnostics-overview/">Read more ...</a></p>
+    <p class="ablog-post-expand"><a href="../../../posts/2021/jupyter-based-diagnostics-overview/"><em>Read more ...</em></a></p>
     <hr />
   </div>
   
 
-  <div class="section">
-    <h2>
+  <div class="section ablog-post">
+    <h2 class="ablog-post-title">
       <a href="../../../posts/2021/regrid-observations-pop-grid/"
         >Regridding High Resolution Observations to a High Resolution Model Grid</a
       >
@@ -458,16 +468,18 @@ commentsRunWhenDOMLoaded(addUtterances);
 </li>
  
     </ul>
-    <p>In this example, we will cover how to leverage a useful package from the <a class="reference external" href="http://www.pangeo.io">Pangeo Ecosystem</a>, <a class="reference external" href="https://pangeo-xesmf.readthedocs.io/en/latest/">xESMF</a>. One important note when using this package, is <strong>make sure you are using the most up-to-date documentation/version</strong>, a few years ago, development moved to the <a class="reference external" href="https://github.com/pangeo-data/xESMF">pangeo-data</a> branch of the package, installable using the following:</p>
+    <div class="ablog-post-excerpt docutils container">
+<p>In this example, we will cover how to leverage a useful package from the <a class="reference external" href="http://www.pangeo.io">Pangeo Ecosystem</a>, <a class="reference external" href="https://pangeo-xesmf.readthedocs.io/en/latest/">xESMF</a>. One important note when using this package, is <strong>make sure you are using the most up-to-date documentation/version</strong>, a few years ago, development moved to the <a class="reference external" href="https://github.com/pangeo-data/xESMF">pangeo-data</a> branch of the package, installable using the following:</p>
 <p>For this example, we will download a file from the <a class="reference external" href="https://www.ncei.noaa.gov/products/world-ocean-atlas">World Ocean Atlas</a>, which includes a variety of ocean observations assembled from the World Ocean Database.</p>
+</div>
 
-    <p><a href="../../../posts/2021/regrid-observations-pop-grid/">Read more ...</a></p>
+    <p class="ablog-post-expand"><a href="../../../posts/2021/regrid-observations-pop-grid/"><em>Read more ...</em></a></p>
     <hr />
   </div>
   
 
-  <div class="section">
-    <h2>
+  <div class="section ablog-post">
+    <h2 class="ablog-post-title">
       <a href="../../../posts/2021/intake-esm-holoviews-diagnostics/"
         >Examining Diagnostics Using Intake-ESM and hvPlot</a
       >
@@ -498,16 +510,18 @@ commentsRunWhenDOMLoaded(addUtterances);
 </li>
  
     </ul>
-    <p>In previous weeks, we have looked at <a class="reference external" href="https://ncar.github.io/esds/posts/2021/ecgtools-history-files-example/">building Intake-ESM catalogs from history files</a> and <a class="reference external" href="https://ncar.github.io/esds/posts/2021/cesm-datashader/">visualizing CESM output using Holoviews and Datashader</a>, but this week we are putting together a few of those pieces to visualize a comparison between model runs.</p>
+    <div class="ablog-post-excerpt docutils container">
+<p>In previous weeks, we have looked at <a class="reference external" href="https://ncar.github.io/esds/posts/2021/ecgtools-history-files-example/">building Intake-ESM catalogs from history files</a> and <a class="reference external" href="https://ncar.github.io/esds/posts/2021/cesm-datashader/">visualizing CESM output using Holoviews and Datashader</a>, but this week we are putting together a few of those pieces to visualize a comparison between model runs.</p>
 <p>One of the first ESDS blog posts looked at <a class="reference external" href="https://ncar.github.io/esds/posts/2021/Interactive_Dashboard/">building an interactive dashboard to look at plots</a>, using high resolution ocean model output as the dataset. One of the limitations of that approach is that the images are static - we are pulling in <code class="docutils literal notranslate"><span class="pre">png</span></code>s, and rending on the page, as opposed to more interactive options. In this example, we will read in data generated from <a class="reference external" href="https://ecgtools.readthedocs.io/en/latest/">ecgtools</a>, from a directory only accessible via NCAR’s high performance computing center.</p>
+</div>
 
-    <p><a href="../../../posts/2021/intake-esm-holoviews-diagnostics/">Read more ...</a></p>
+    <p class="ablog-post-expand"><a href="../../../posts/2021/intake-esm-holoviews-diagnostics/"><em>Read more ...</em></a></p>
     <hr />
   </div>
   
 
-  <div class="section">
-    <h2>
+  <div class="section ablog-post">
+    <h2 class="ablog-post-title">
       <a href="../../../posts/2021/cesm-workshop-2021-diagnostics/"
         >CESM Diagnostics Discussion</a
       >
@@ -537,10 +551,12 @@ commentsRunWhenDOMLoaded(addUtterances);
 </li>
  
     </ul>
-    <p>Every year, NCAR holds the <a class="reference external" href="https://www.cesm.ucar.edu/events/workshops/2021/">Community Earth System Model (CESM) Workshop</a> which brings together the CESM community to discuss relavant updates from the <a class="reference external" href="https://www.cesm.ucar.edu/working_groups/">working groups</a> as well as featured speakers and cross-working group discussions.</p>
+    <div class="ablog-post-excerpt docutils container">
+<p>Every year, NCAR holds the <a class="reference external" href="https://www.cesm.ucar.edu/events/workshops/2021/">Community Earth System Model (CESM) Workshop</a> which brings together the CESM community to discuss relavant updates from the <a class="reference external" href="https://www.cesm.ucar.edu/working_groups/">working groups</a> as well as featured speakers and cross-working group discussions.</p>
 <p>During the Software Engineering Working Group (SEWG) session, following a variety of talks, there was an open discussion regarding the current state of CESM diagnostics and future plans for collaboration.</p>
-<img alt="diagnostics_image" src="../../../_images/cesm-diagnostics.svg" />
-    <p><a href="../../../posts/2021/cesm-workshop-2021-diagnostics/">Read more ...</a></p>
+<img alt="diagnostics_image" src="../../../_images/cesm-diagnostics.svg" /></div>
+
+    <p class="ablog-post-expand"><a href="../../../posts/2021/cesm-workshop-2021-diagnostics/"><em>Read more ...</em></a></p>
     <hr />
   </div>
    
@@ -559,8 +575,8 @@ commentsRunWhenDOMLoaded(addUtterances);
       </div>
     </div>
   
-  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
-<footer class="footer mt-5 mt-md-0">
+    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
