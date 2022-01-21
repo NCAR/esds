@@ -489,6 +489,10 @@ If you are creating an environment from scratch, use the following:</p>
 </div>
 <p>where <code class="docutils literal notranslate"><span class="pre">name</span></code> is the name of your environment</p>
 <p>if you have an environment file (ex. <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code>), use the following:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Make sure you include the <a class="reference external" href="https://github.com/ipython/ipykernel"><code class="docutils literal notranslate"><span class="pre">ipykernel</span></code></a> package within your environment, which is required for your environment to be available from the <a class="reference external" href="https://jupyterhub.hpc.ucar.edu/">JupyterHub</a></p>
+</div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda env create -f environment.yml
 </pre></div>
 </div>
@@ -780,7 +784,7 @@ in a serial context.</p>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.2.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
 </p>
     </div>
     
