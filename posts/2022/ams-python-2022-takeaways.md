@@ -5,4 +5,3 @@ tags: conference, python, pythia
 ---
 
 # Key Takeaways from the AMS 2022 Python Symposium
-
