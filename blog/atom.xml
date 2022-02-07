@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2022-02-07T17:27:12.277916+00:00</updated>
+  <updated>2022-02-07T21:49:55.364977+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.23">ABlog</generator>
@@ -1198,5 +1198,22 @@ What should I do?</summary>
     <category term="xarray" label="xarray"/>
     <category term="intake" label="intake"/>
     <published>2021-12-02T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/2022/metpy_tutorial/</id>
+    <title>MetPy Tutorial</title>
+    <updated>2022-02-07T00:00:00+00:00</updated>
+    <author>
+      <name>Julia Kent</name>
+    </author>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;The NCAR/UCAR virtual Python Tutorial Seminar Series continues with a lesson on MetPy on &lt;strong&gt;February 9th at 1 PM Mountain Standard Time&lt;/strong&gt; led by Drew Camron.&lt;/p&gt;
+&lt;p&gt;MetPy is a collection of tools in Python for reading, visualizing, and performing calculations with weather data. See the &lt;a class="reference external" href="https://unidata.github.io/MetPy/latest/index.html"&gt;MetPy Documentation&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/2022/metpy_tutorial/" rel="alternate"/>
+    <summary>The NCAR/UCAR virtual Python Tutorial Seminar Series continues with a lesson on MetPy on February 9th at 1 PM Mountain Standard Time led by Drew Camron.MetPy is a collection of tools in Python for reading, visualizing, and performing calculations with weather data. See the MetPy Documentation</summary>
+    <category term="python-tutorial-series" label="python-tutorial-series"/>
+    <published>2022-02-07T00:00:00+00:00</published>
   </entry>
 </feed>
