@@ -70,6 +70,12 @@ You may want to move past just your base environment, and create a new conda env
 
    if you have an environment file (ex. `environment.yml`), use the following:
 
+   ```{Note}
+
+   Make sure you include the [`ipykernel`](https://github.com/ipython/ipykernel) package within your environment, which is required for your environment to be available from the [JupyterHub](https://jupyterhub.hpc.ucar.edu/)
+
+   ```
+
    ```bash
    conda env create -f environment.yml
    ```
