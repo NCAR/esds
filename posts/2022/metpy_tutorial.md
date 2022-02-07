@@ -14,9 +14,8 @@ The content for this seminar tutorial is hosted on the new [Project Pythia Tutor
 
 You can copy it from there, but not super easy to preview. The content:
 
-Drew Camron works as a Python Developer with [Unidata](https://www.unidata.ucar.edu/
-), one of UCAR's Community Programs, where he serves as a maintainer for the open-source [MetPy](https://github.com/Unidata/MetPy/) and [Siphon](https://github.com/Unidata/siphon/) projects along with Unidata's collection of synchronous and asynchronous virtual Python learning resources. Throughout his education and profession, Drew has nurtured a long-running passion for using and supporting open source tools and seeks to make it easier for others to use and learn them along the way.
- 
+Drew Camron works as a Python Developer with [Unidata](https://www.unidata.ucar.edu/), one of UCAR's Community Programs, where he serves as a maintainer for the open-source [MetPy](https://github.com/Unidata/MetPy/) and [Siphon](https://github.com/Unidata/siphon/) projects along with Unidata's collection of synchronous and asynchronous virtual Python learning resources. Throughout his education and profession, Drew has nurtured a long-running passion for using and supporting open source tools and seeks to make it easier for others to use and learn them along the way.
+
 His cats are also known for making appearances during virtual presentations, so keep an eye out.
 
 ## How-to-Run
