@@ -8,7 +8,9 @@ tags: python-tutorial-series
 
 The NCAR/UCAR virtual Python Tutorial Seminar Series continues with a lesson on MetPy on **February 9th at 1 PM Mountain Standard Time** led by Drew Camron.
 
-The content for this seminar tutorial is hosted on the new [Project Pythia Tutorials" GitHub organization](https://github.com/ProjectPythiaTutorials). Within the [metpy-2022-02-09 repository](https://github.com/ProjectPythiaTutorials/metpy-2022-02-09)
+MetPy is a collection of tools in Python for reading, visualizing, and performing calculations with weather data. See the [MetPy Documentation](https://unidata.github.io/MetPy/latest/index.html#)
+
+The content for this seminar tutorial is hosted on the new [Project Pythia Tutorials GitHub organization](https://github.com/ProjectPythiaTutorials). Within the [metpy-2022-02-09 repository](https://github.com/ProjectPythiaTutorials/metpy-2022-02-09)
 
 ## Bio
 
