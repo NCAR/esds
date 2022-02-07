@@ -1,0 +1,40 @@
+---
+author: Julia Kent
+date: 2022-02-07
+tags: python-tutorial-series
+---
+
+# MetPy Tutorial
+
+The NCAR/UCAR virtual Python Tutorial Seminar Series continues with a lesson on MetPy on **February 9th at 1 PM Mountain Standard Time** led by Drew Camron and Ryan May.
+
+The content for this seminar tutorial is hosted on the new [Project Pythia Tutorials" GitHub organization](https://github.com/ProjectPythiaTutorials). Within the [metpy-2022-02-20 repository](https://github.com/ProjectPythiaTutorials/metpy-2022-02-20)
+
+## Bio
+
+Drew Camron ...
+Ryan May ...
+
+## How-to-Run
+
+**This tutorial is designed to be launched from Binder.**
+
+- Click the "Launch Binder" button at the top level of the [repository](https://github.com/ProjectPythiaTutorials/metpy-2022-02-20).
+
+You may also download the tutorial from GitHub to run it locally:
+
+- Check your conda install with `conda --version` and if necessary [install by following these instructions](https://docs.conda.io/en/latest/miniconda.html).
+
+- Clone this repository by running `git clone https://github.com/ProjectPythiaTutorials/metpy-2022-02-20` in your terminal.
+
+- Still in the terminal, create a Conda environment from the `environment.yml` file by first moving into the `metpy-2022-02-20` directory with `cd metpy-2022-02-20` and then `conda env update --file environment.yml`
+
+- Activate your environment in the terminal with `conda activate pythia-metpy-tutorial`.
+
+- Test your installation by launching JupyterLab with `jupyter lab`.
+
+## Sign Up
+
+If you would like join the *learnpython@ucar.edu* Google group to be informed of updates and events in the seminar series, please do so by following this [link](https://groups.google.com/a/ucar.edu/g/learnpython/about) and clicking "Join Group" next to the group name.
+
+<iframe src="https://calendar.google.com/calendar/embed?src=c_krmtmqm6kb5u7ke6t5on9l0rus%40group.calendar.google.com" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
