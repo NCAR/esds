@@ -38,6 +38,6 @@ You may also download the tutorial from GitHub to run it locally:
 
 ## Sign Up
 
-If you would like join the *learnpython@ucar.edu* Google group to be informed of updates and events in the seminar series, please do so by following this [link](https://groups.google.com/a/ucar.edu/g/learnpython/about) and clicking "Join Group" next to the group name.
+If you would like to join the *learnpython@ucar.edu* Google group to be informed of updates and events in the seminar series, please do so by following this [link](https://groups.google.com/a/ucar.edu/g/learnpython/about) and clicking "Join Group" next to the group name.
 
 <iframe src="https://calendar.google.com/calendar/embed?src=c_krmtmqm6kb5u7ke6t5on9l0rus%40group.calendar.google.com" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
