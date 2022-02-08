@@ -14,8 +14,6 @@ The content for this seminar tutorial is hosted on the new [Project Pythia Tutor
 
 ## Bio
 
-You can copy it from there, but not super easy to preview. The content:
-
 Drew Camron works as a Python Developer with [Unidata](https://www.unidata.ucar.edu/), one of UCAR's Community Programs, where he serves as a maintainer for the open-source [MetPy](https://github.com/Unidata/MetPy/) and [Siphon](https://github.com/Unidata/siphon/) projects along with Unidata's collection of synchronous and asynchronous virtual Python learning resources. Throughout his education and profession, Drew has nurtured a long-running passion for using and supporting open source tools and seeks to make it easier for others to use and learn them along the way.
 
 His cats are also known for making appearances during virtual presentations, so keep an eye out.
@@ -40,6 +38,6 @@ You may also download the tutorial from GitHub to run it locally:
 
 ## Sign Up
 
-If you would like join the *learnpython@ucar.edu* Google group to be informed of updates and events in the seminar series, please do so by following this [link](https://groups.google.com/a/ucar.edu/g/learnpython/about) and clicking "Join Group" next to the group name.
+If you would like to join the *learnpython@ucar.edu* Google group to be informed of updates and events in the seminar series, please do so by following this [link](https://groups.google.com/a/ucar.edu/g/learnpython/about) and clicking "Join Group" next to the group name.
 
 <iframe src="https://calendar.google.com/calendar/embed?src=c_krmtmqm6kb5u7ke6t5on9l0rus%40group.calendar.google.com" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
