@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2022-02-08T18:34:56.983675+00:00</updated>
+  <updated>2022-02-24T22:19:06.430073+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.23">ABlog</generator>
@@ -1215,5 +1215,25 @@ What should I do?</summary>
     <summary>The NCAR/UCAR virtual Python Tutorial Seminar Series continues with a lesson on MetPy on February 9th at 1 PM Mountain Standard Time led by Drew Camron.MetPy is a collection of tools in Python for reading, visualizing, and performing calculations with weather data. See the MetPy Documentation</summary>
     <category term="python-tutorial-series" label="python-tutorial-series"/>
     <published>2022-02-07T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/2022/sparse-PFT-gridding/</id>
+    <title>Sparse arrays and the CESM land model component</title>
+    <updated>2022-02-24T00:00:00+00:00</updated>
+    <author>
+      <name>Katie Dagon</name>
+    </author>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;An underappreciated feature of Xarray + Dask is the ability to plug in &lt;a class="reference external" href="https://docs.xarray.dev/en/stable/user-guide/duckarrays.html"&gt;different array types&lt;/a&gt;. Usually we work with Xarray wrapping a Dask array which in turn uses &lt;em&gt;NumPy&lt;/em&gt; arrays for each block; or just Xarray wrapping NumPy arrays directly. NumPy arrays are dense in-memory arrays. Other array types exist:&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://sparse.pydata.org"&gt;sparse&lt;/a&gt; for sparse arrays&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/2022/sparse-PFT-gridding/" rel="alternate"/>
+    <summary>An underappreciated feature of Xarray + Dask is the ability to plug in different array types. Usually we work with Xarray wrapping a Dask array which in turn uses NumPy arrays for each block; or just Xarray wrapping NumPy arrays directly. NumPy arrays are dense in-memory arrays. Other array types exist:sparse for sparse arrays</summary>
+    <category term="sparse" label="sparse"/>
+    <category term="CLM" label="CLM"/>
+    <category term="PFT" label="PFT"/>
+    <category term="dask" label="dask"/>
+    <published>2022-02-24T00:00:00+00:00</published>
   </entry>
 </feed>
