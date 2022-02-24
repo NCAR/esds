@@ -21,6 +21,7 @@ dependencies:
   - python=3.9
   - scipy
   - seaborn
+  - sparse
   - sphinx
   - sphinx-autobuild
   - sphinx-comments
