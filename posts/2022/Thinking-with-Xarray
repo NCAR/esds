@@ -10,7 +10,7 @@ The NCAR/UCAR virtual Python Tutorial Seminar Series continues with a lesson on 
 
 Xarray is an open source project and Python package that makes working with multi-dimensional arrays simple and effient by introducing labels in the form of dimensions, coordinates and attributes on top of raw NumPy-like arrays. See the [Xarray Documentation](https://docs.xarray.dev/en/stable/)
 
-The content for this seminar tutorial is hosted on the new [Project Pythia Tutorials GitHub organization](https://github.com/ProjectPythiaTutorials). Within the [thinking-with-xarray-2022-03-09 repository](https://github.com/ProjectPythiaTutorials/thinking-with-xarray-2022-03-09)
+The content for this seminar tutorial is hosted on the new [Project Pythia Tutorials GitHub organization](https://github.com/ProjectPythiaTutorials). Within the [thinking-with-xarray_2022_03_09 repository](https://github.com/ProjectPythiaTutorials/thinking-with-xarray_2022_03_09)
 
 ## Bio
 
@@ -20,15 +20,15 @@ Deepak Cherian is a Project Scientist and physical oceanographer in CGD. He help
 
 **This tutorial is designed to be launched from Binder.**
 
-- Click the "Launch Binder" button at the top level of the [repository](https://github.com/ProjectPythiaTutorials/thinking-with-xarray-2022-03-09).
+- Click the "Launch Binder" button at the top level of the [repository](https://github.com/ProjectPythiaTutorials/thinking-with-xarray_2022_03_09).
 
 You may also download the tutorial from GitHub to run it locally:
 
 - Check your conda install with `conda --version` and if necessary [install by following these instructions](https://docs.conda.io/en/latest/miniconda.html).
 
-- Clone this repository by running `git clone https://github.com/ProjectPythiaTutorials/thinking-with-xarray-2022-03-09` in your terminal.
+- Clone this repository by running `git clone https://github.com/ProjectPythiaTutorials/thinking-with-xarray_2022_03_09` in your terminal.
 
-- Still in the terminal, create a Conda environment from the `environment.yml` file by first moving into the `thinking-with-xarray-2022-03-09` directory with `cd thinking-with-xarray-2022-03-09` and then `conda env update --file environment.yml`
+- Still in the terminal, create a Conda environment from the `environment.yml` file by first moving into the `thinking-with-xarray_2022_03_09` directory with `cd thinking-with-xarray_2022_03_09` and then `conda env update --file environment.yml`
 
 - Activate your environment in the terminal with `conda activate pythia-thinking-with-xarray-tutorial`.
 
