@@ -125,7 +125,7 @@ See [mamba documentation](https://mamba.readthedocs.io/en/latest/index.html) for
 
 ### Conda Environments on JupyterHub
 
-The Computational and Information Systems Lab (CISL) at NCAR put together some [good documentation](https://www2.cisl.ucar.edu/resources/conda-environments) on dealing with environments on Casper/Cheyenne
+The Computational and Information Systems Lab (CISL) at NCAR put together some [good documentation](https://arc.ucar.edu/knowledge_base/83853599) on dealing with environments on Casper/Cheyenne
 
 #### Activating Your Base Environment Upon Opening a Terminal
 
