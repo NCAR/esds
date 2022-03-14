@@ -6,8 +6,6 @@ tags: python, jupyter, notebooks, papermill, automation
 
 # Batch Processing Jupyter Notebooks with Papermill
 
-## Summary
-
 ## Background and Motivation
 
 [Jupyter notebooks](https://jupyter.org/) are really good for doing the heavy lifting of data analysis by:
@@ -132,6 +130,13 @@ $ ls -ltrh
 -rw-r--r--  1 abanihi ncar 105K Mar 14 15:34 output-notebook-rasm-Tair.ipynb
 ```
 
+```{note}
+For more information on Papermill, see [the documentation](https://papermill.readthedocs.io/en/latest/).
+```
+
 ## Final Thoughts
 
-- Papermill is well-suited for users who would like to run a notebook template with different input values (parameters).
+Papermill is well-suited for
+
+- Users who would like to run a notebook template with different input values (parameters).
+- Serial execution on a single node. Features like parallel execution of a list of notebooks would require extending papermill.
