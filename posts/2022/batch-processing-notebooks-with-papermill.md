@@ -84,11 +84,16 @@ Executing:   0%|                                                                
 Executing: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:05<00:00,  1.05cell/s]
 ```
 
+When inspecting the output notebook, you will notice that Papermill has added a cell that contains the parameters that were used to run the notebook (e.g. `air_temperature` and `air`). Attached is a screenshot of the original notebook and the output notebook side by side.
+
+![](../../images/papermill-executed-notebook.png)
+
 #### Option 2: from another Python script or Jupyter notebook
 
 To run the notebook from another Python script or Jupyter notebook, you need to use the `papermill.execute_notebook` function.
 
 ```python
+# contents of `papermill_runner.py`
 import papermill as pm
 
 parameters = [{
@@ -108,13 +113,21 @@ for params in parameters:
     )
 ```
 
-Running the example above, produces two notebooks which are saved according to the parameters used in the notebook.
+Running the example above, produces two notebooks which are saved using the pair of parameters used in the notebook.
+
+```bash
+$ python papermill_runner.py
+Executing:   0%|                                                                                                                                   | 0/6 [00:00<?, ?cell/s]CONDA_PREFIX=/glade/work/abanihi/opt/miniconda/envs/my-analysis-env
+Executing: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:06<00:00,  1.06s/cell]
+Executing:   0%|                                                                                                                                   | 0/6 [00:00<?, ?cell/s]CONDA_PREFIX=/glade/work/abanihi/opt/miniconda/envs/my-analysis-env
+Executing: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:03<00:00,  1.69cell/s]
+```
 
 ```bash
 $ ls -ltrh
 -rw-r--r--  1 abanihi ncar 102K Mar 14 14:26 sample-notebook.ipynb
 -rw-r--r--  1 abanihi ncar  50K Mar 14 15:26 output-notebook.ipynb
--rw-r--r--  1 abanihi ncar  342 Mar 14 15:34 runner.py
+-rw-r--r--  1 abanihi ncar  342 Mar 14 15:34 papermill_runner.py
 -rw-r--r--  1 abanihi ncar  50K Mar 14 15:34 output-notebook-air_temperature-air.ipynb
 -rw-r--r--  1 abanihi ncar 105K Mar 14 15:34 output-notebook-rasm-Tair.ipynb
 ```
