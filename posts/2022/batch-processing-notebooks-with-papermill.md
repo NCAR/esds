@@ -57,7 +57,7 @@ $ conda create -n myenv -c conda-forge papermill ipykernel
 There are no restrictions on the environment in which you can run Papermill. You can use any environment that you like (e.g. the same environment used by your notebook).
 ```
 
-Once your environment is ready, you need to ensure the jupyter kernel used by your notebook is properly configured by running the following commands:
+Once your environment is ready, you need to ensure the Jupyter kernel used by your notebook is properly configured by running the following commands:
 
 ```bash
 $ conda activate my-analysis-env
