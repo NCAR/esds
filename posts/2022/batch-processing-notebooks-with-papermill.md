@@ -17,7 +17,7 @@ tags: python, jupyter, notebooks, papermill, automation
 However, Jupyter notebooks have a few drawbacks:
 
 - Jupyter notebooks are difficult to maintain and reuse. Unlike a regular Python module that you can import and use in any Python project, users are copying and pasting snippets from each other's notebooks, and it's very easy to get out of sync.
-- Jupyter notebooks are hard to parameterize. This makes it difficult to maintain one version of the truth that can be used as a notebook template for exploring different parameters.
+- Jupyter notebooks are hard to parameterize. This makes it difficult to maintain one version of the truth that can be used as a notebook template for exploring different parameters. Parameters in this context correspond to different variables/arguments that you want to feed to your notebook whenever you run it.
 - Unlike a regular Python scripts that can be run from the command line, running a Jupyter notebook in batch mode requires additional setup and configuration.
 
 Some of these drawbacks can be addressed with the help of Papermill.
@@ -30,7 +30,11 @@ Some of these drawbacks can be addressed with the help of Papermill.
 
 ### Step 1: Prepare the notebook
 
-To transform your notebook into a Papermill-enabled notebook (a notebook that can be run with Papermill), you need to add the `parameters` tag to cells that contains the parameters you intend to parametrize when running the notebook with Papermill.
+To transform your notebook into a Papermill-enabled notebook (a notebook that can be run with Papermill), you need to add the `parameters` tag to cells that contains the parameters you intend to parametrize when running the notebook with Papermill:
+
+1. Select the cell to parameterize
+2. Click the property inspector in the right sidebar (double gear icon)
+3. Type `parameters` in the `Add Tag +` box and hit `Enter`.
 
 ![](../../images/papermill-parameters.png)
 
@@ -139,4 +143,4 @@ For more information on Papermill, see [the documentation](https://papermill.rea
 Papermill is well-suited for
 
 - Users who would like to run a notebook template with different input values (parameters).
-- Serial execution on a single node. Features like parallel execution of a list of notebooks would require extending papermill.
+- Serial execution on a single node. Features like parallel execution of a list of notebooks would require extending Papermill.
