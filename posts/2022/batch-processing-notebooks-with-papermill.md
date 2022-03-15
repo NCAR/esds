@@ -24,7 +24,7 @@ Some of these drawbacks can be addressed with the help of Papermill.
 
 ## What is Papermill?
 
-[**Papermill**](https://papermill.readthedocs.io/en/latest/) is a Python library that aims to allow users to run and parametrize Jupyter notebooks in a way that is easy to maintain and reuse. In this post, we will walk through how to use Papermill's approach to parametrize a notebook that loads an xarray dataset and plots a map of the data.
+[**Papermill**](https://papermill.readthedocs.io/en/latest/) is a Python library that aims to allow users to run and parametrize Jupyter notebooks in a way that is easy to maintain and reuse. In this post, we will walk through how to use Papermill's approach to parametrize a notebook that loads an Xarray dataset and plots a map of the data.
 
 ## How to use Papermill
 
