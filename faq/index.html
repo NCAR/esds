@@ -563,6 +563,7 @@ conda config --add channels conda-forge
 <h3>General tips<a class="headerlink" href="#general-tips" title="Permalink to this headline">¶</a></h3>
 <ol class="simple">
 <li><p>Read the xarray documentation on <a class="reference external" href="https://xarray.pydata.org/en/stable/dask.html#optimization-tips">optimizing workflow with dask</a>.</p></li>
+<li><p>Read the <a class="reference external" href="https://docs.dask.org/en/stable/array-best-practices.html">Best practices for dask array</a></p></li>
 <li><p>Keep track of chunk sizes throughout your workflow. This is especially important when reading in data using <code class="docutils literal notranslate"><span class="pre">xr.open_mfdataset</span></code>. Aim for 100-200MB size
 chunks.</p></li>
 <li><p>Choose chunking appropriate to your analysis. If you’re working with time series then chunk more in space and less along time.</p></li>
