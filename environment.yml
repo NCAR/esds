@@ -21,6 +21,7 @@ dependencies:
   - python=3.9
   - scipy
   - seaborn
+  - sparse
   - sphinx
   - sphinx-autobuild
   - sphinx-comments
@@ -28,5 +29,7 @@ dependencies:
   - sphinxcontrib-bibtex<2.0.0
   - xarray>=0.18.2
   - sphinxext-rediraffe
+  - sphinx-design
+  - sphinx-copybutton
   - pip:
       - sphinxext-opengraph

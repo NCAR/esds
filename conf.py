@@ -30,7 +30,18 @@ release = '0.1'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['myst_nb', 'ablog', 'sphinx_panels', 'sphinx_comments', 'sphinxext.rediraffe']
+extensions = [
+    'myst_nb',
+    'ablog',
+    'sphinx_comments',
+    'sphinxext.rediraffe',
+    'sphinx_design',
+    'sphinx_copybutton',
+]
+
+# sphinx-copybutton configurations
+copybutton_prompt_text = r'>>> |\.\.\. |\$ |In \[\d*\]: | {2,5}\.\.\.: | {5,8}: '
+copybutton_prompt_is_regexp = True
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -95,7 +106,7 @@ panels_add_bootstrap_css = False
 
 # MyST config
 myst_enable_extensions = ['amsmath', 'colon_fence', 'deflist', 'html_image', 'dollarmath']
-myst_url_schemes = ('http', 'https', 'mailto')
+myst_url_schemes = ['http', 'https', 'mailto']
 
 
 # Temporarily stored as off until we fix it
