@@ -143,4 +143,4 @@ For more information on Papermill, see [the documentation](https://papermill.rea
 Papermill is well-suited for
 
 - Users who would like to run a notebook template with different input values (parameters).
-- Serial execution on a single node i.e. notebooks are executed one after the other, however, you can use frameworks like Dask to parallelize the execution of code within the notebook. Features like executing the same notebook with different parameters in parallel/concurrently would require extending Papermill.
+- Serial execution on a single node (i.e. notebooks are executed one after the other). However, you can use frameworks like Dask to parallelize the execution of code within the notebook. Features like executing the same notebook with different parameters in parallel/concurrently would require extending Papermill.
