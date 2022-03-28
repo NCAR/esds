@@ -8,31 +8,28 @@
 
     <title>The Importance of Software Citation &#8212; NCAR-ESDS 0.1 documentation</title>
     
-    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
     
-    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -128,7 +125,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </style>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -341,7 +338,7 @@ commentsRunWhenDOMLoaded(addUtterances);
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -383,20 +380,20 @@ commentsRunWhenDOMLoaded(addUtterances);
               
               <div>
                  <section class="tex2jax_ignore mathjax_ignore" id="the-importance-of-software-citation">
-<h1>The Importance of Software Citation<a class="headerlink" href="#the-importance-of-software-citation" title="Permalink to this headline">¶</a></h1>
+<h1>The Importance of Software Citation<a class="headerlink" href="#the-importance-of-software-citation" title="Permalink to this headline">#</a></h1>
 <p>One of the questions that came up during the <a class="reference external" href="https://ncar.github.io/esds/posts/esds-blog/">ESDS Town Hall</a> was how do scientists/developers get credit toward their efforts in developing open-source code? Software that is used by the wider community should received the acknowledgment and recognition it deserves.</p>
 <p>Data and academic publication citations have become popular in the literature, but often times, software is not cited… which can be arguably just as important to the work as the data.</p>
 <p>The <a class="reference external" href="https://library.ucar.edu/">NCAR Library team</a> put together a website, detailing software citation best practices, based on evaluating the &gt;500 <a class="reference external" href="https://github.com/NCAR">NCAR Github Repositories</a></p>
 <p>Here, we provide an overview of these recommendations, but if you are interested in more of the details, be sure to check out <a class="reference external" href="https://ncar.github.io/software-citation/">the NCAR software citation documentation</a>.</p>
 <section id="how-else-should-i-make-sure-people-cite-my-software">
-<h2>How else should I make sure people cite my software?<a class="headerlink" href="#how-else-should-i-make-sure-people-cite-my-software" title="Permalink to this headline">¶</a></h2>
+<h2>How else should I make sure people cite my software?<a class="headerlink" href="#how-else-should-i-make-sure-people-cite-my-software" title="Permalink to this headline">#</a></h2>
 <p>Within your <code class="docutils literal notranslate"><span class="pre">README.md</span></code> document, be sure to add how you would like others to cite your work. For example, if your repository is for a specific paper, then provide the citation to that paper. If you would like people to cite the software itself, then be sure to specify that.</p>
 <p>A great example of software citation instructions can be found on <a class="reference external" href="https://www.unidata.ucar.edu/community/index.html#acknowledge">Unidata’s website</a></p>
 <p>You can even add a DOI badge to your repository once you have one minted. An example is given below.</p>
 <p><a class="reference external" href="https://doi.org/YOUR_NCAR_DOI">![DOI](https://img.shields.io/badge/DOI-YOUR NCAR DOI)</a></p>
 </section>
 <section id="why-would-i-want-a-doi">
-<h2>Why would I want a DOI?<a class="headerlink" href="#why-would-i-want-a-doi" title="Permalink to this headline">¶</a></h2>
+<h2>Why would I want a DOI?<a class="headerlink" href="#why-would-i-want-a-doi" title="Permalink to this headline">#</a></h2>
 <p>DOI stands for “Digital Object Identifier” and serves as a permanent identifier of an article/document/or piece of software. Typically, it can be difficult to assign a DOI to software, especially since it can constantly be changing/evolving. Fortunately, through the NCAR Library, you can assign a DOI to your Github repository (although this is only available to NCAR produced and hosted software). The only requirements are the following</p>
 <ul class="simple">
 <li><p>Github repository link</p></li>
@@ -411,7 +408,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 </section>
 <section id="how-do-i-mint-a-doi-for-my-repository-if-i-am-outside-the-ncar-organization">
-<h2>How do I mint a DOI for my repository if I am outside the NCAR organization?<a class="headerlink" href="#how-do-i-mint-a-doi-for-my-repository-if-i-am-outside-the-ncar-organization" title="Permalink to this headline">¶</a></h2>
+<h2>How do I mint a DOI for my repository if I am outside the NCAR organization?<a class="headerlink" href="#how-do-i-mint-a-doi-for-my-repository-if-i-am-outside-the-ncar-organization" title="Permalink to this headline">#</a></h2>
 <p>Zenodo is a great option, and integrated within Github <a class="reference external" href="https://guides.github.com/activities/citable-code/">Zenodo Plugin</a>. This option can be good for people within the NCAR organization as well, especially if you would like to assign discrete DOIs to each of your releases.</p>
 </section>
 </section>
@@ -455,8 +452,9 @@ commentsRunWhenDOMLoaded(addUtterances);
       </div>
     </div>
   
-    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -467,7 +465,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     

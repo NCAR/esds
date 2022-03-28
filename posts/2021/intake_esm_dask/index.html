@@ -8,31 +8,28 @@
 
     <title>An Example of Using Intake-ESM &#8212; NCAR-ESDS 0.1 documentation</title>
     
-    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
     
-    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -128,7 +125,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </style>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -341,7 +338,7 @@ commentsRunWhenDOMLoaded(addUtterances);
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -414,10 +411,10 @@ commentsRunWhenDOMLoaded(addUtterances);
               
               <div>
                  <section class="tex2jax_ignore mathjax_ignore" id="an-example-of-using-intake-esm">
-<h1>An Example of Using Intake-ESM<a class="headerlink" href="#an-example-of-using-intake-esm" title="Permalink to this headline">¶</a></h1>
+<h1>An Example of Using Intake-ESM<a class="headerlink" href="#an-example-of-using-intake-esm" title="Permalink to this headline">#</a></h1>
 <p>This past week, NCAR CISL updated the Casper Node to use PBS instead of Slurm for scheduling jobs. This led a post in which an example of spinning up dask clusters on the new configuration. This was also an opportunity to dig into dask, and try applying it to a sample task, specifically looking at ecosystem variables in the CESM-LE dataset, using notebooks included in Matt Long’s <a class="reference external" href="https://github.com/matt-long/krill-cesm-le">krill-cesm-le repository</a>, modified by Kristen Krumhardt.</p>
 <section id="setting-up-the-imports-dask">
-<h2>Setting up the imports/dask<a class="headerlink" href="#setting-up-the-imports-dask" title="Permalink to this headline">¶</a></h2>
+<h2>Setting up the imports/dask<a class="headerlink" href="#setting-up-the-imports-dask" title="Permalink to this headline">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
 <span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">shutil</span>
@@ -445,7 +442,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </pre></div>
 </div>
 <section id="spin-up-dask-cluster">
-<h3>Spin up Dask Cluster<a class="headerlink" href="#spin-up-dask-cluster" title="Permalink to this headline">¶</a></h3>
+<h3>Spin up Dask Cluster<a class="headerlink" href="#spin-up-dask-cluster" title="Permalink to this headline">#</a></h3>
 <p>Here, we spin up our dask cluster. At first, running this notebook resulted in a <code class="docutils literal notranslate"><span class="pre">killed</span> <span class="pre">worker</span></code> error. After further expection, we noticed that additional resources would be needed to read in the notebook since the data are so large (on the order of ~1-2 TB). Increasing the individual worker to a higher amount (ex. 256 GB) solved the issue. Scale up to as many workers as you think are neccessary for the calculation (this may take some trial and error).</p>
 <p>You should base your chunks on your analysis - so in this case, we are interested in the top 100 m in the ocean, so chunking by <code class="docutils literal notranslate"><span class="pre">z_t</span></code>, the vertical coordinate, will help reduce the memory.</p>
 <p>Good general advice for working with dask is to check the dask graph (accessed via the url when you call the client). When there are “orange” regions within your task graph, this means your workers are getting close to maxing out on memory.</p>
@@ -482,7 +479,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </section>
 </section>
 <section id="read-the-cesm-le-data">
-<h2>Read the CESM-LE data<a class="headerlink" href="#read-the-cesm-le-data" title="Permalink to this headline">¶</a></h2>
+<h2>Read the CESM-LE data<a class="headerlink" href="#read-the-cesm-le-data" title="Permalink to this headline">#</a></h2>
 <p>We will use <a class="reference external" href="https://intake-esm.readthedocs.io/en/latest/"><code class="docutils literal notranslate"><span class="pre">intake-esm</span></code></a>, which is a data catalog tool.
 It enables querying a database for the files we want, then loading those directly as an <code class="docutils literal notranslate"><span class="pre">xarray.Dataset</span></code>.</p>
 <p>First step is to set the “collection” for the CESM-LE, which depends on a json file conforming to the <a class="reference external" href="https://github.com/NCAR/esm-collection-spec">ESM Catalog Specification</a>.</p>
@@ -506,7 +503,7 @@ It enables querying a database for the files we want, then loading those directl
 </pre></div>
 </div>
 <section id="apply-the-search-for-data">
-<h3>Apply the search for data<a class="headerlink" href="#apply-the-search-for-data" title="Permalink to this headline">¶</a></h3>
+<h3>Apply the search for data<a class="headerlink" href="#apply-the-search-for-data" title="Permalink to this headline">#</a></h3>
 <p>Specify a list of variables and perform a search. Under the hood, the <code class="docutils literal notranslate"><span class="pre">search</span></code> functionality uses <a class="reference external" href="https://pandas.pydata.org/"><code class="docutils literal notranslate"><span class="pre">pandas</span></code></a> data frames. We can view that frame here using the <code class="docutils literal notranslate"><span class="pre">.df</span></code> syntax.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">col_sub</span> <span class="o">=</span> <span class="n">col</span><span class="o">.</span><span class="n">search</span><span class="p">(</span>
     <span class="n">experiment</span><span class="o">=</span><span class="n">experiments</span><span class="p">,</span>
@@ -528,7 +525,7 @@ It enables querying a database for the files we want, then loading those directl
 </section>
 </section>
 <section id="apply-an-operation">
-<h2>Apply an operation<a class="headerlink" href="#apply-an-operation" title="Permalink to this headline">¶</a></h2>
+<h2>Apply an operation<a class="headerlink" href="#apply-an-operation" title="Permalink to this headline">#</a></h2>
 <p>Apply a calculation. In this case, we are calculating the average temperature within the top 100 m of the ocean.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">compute_TEMP_100m</span><span class="p">(</span><span class="n">ds</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;compute top 100m mean temperature&quot;&quot;&quot;</span>
@@ -547,7 +544,7 @@ It enables querying a database for the files we want, then loading those directl
 </pre></div>
 </div>
 <section id="combine-the-datasets">
-<h3>Combine the datasets<a class="headerlink" href="#combine-the-datasets" title="Permalink to this headline">¶</a></h3>
+<h3>Combine the datasets<a class="headerlink" href="#combine-the-datasets" title="Permalink to this headline">#</a></h3>
 <p>Concatenate the datasets in time, i.e. 20C + RCP8.5 experiments.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ordered_dsets_keys</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;ocn,20C,pop.h&#39;</span><span class="p">,</span> <span class="s1">&#39;ocn,RCP85,pop.h&#39;</span><span class="p">]</span>
 <span class="c1">#ordered_dsets_keys = [&#39;ocn.20C.pop.h&#39;, &#39;ocn.RCP85.pop.h&#39;]</span>
@@ -562,7 +559,7 @@ It enables querying a database for the files we want, then loading those directl
 </div>
 </section>
 <section id="calculate-an-annual-mean">
-<h3>Calculate an annual mean<a class="headerlink" href="#calculate-an-annual-mean" title="Permalink to this headline">¶</a></h3>
+<h3>Calculate an annual mean<a class="headerlink" href="#calculate-an-annual-mean" title="Permalink to this headline">#</a></h3>
 <p>Create an annual mean for temperature, using a <a class="reference external" href="https://github.com/matt-long/krill-cesm-le/blob/master/notebooks/util.py#L185">utility function</a> which deals with the times correctly.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ds_ann</span> <span class="o">=</span> <span class="n">util</span><span class="o">.</span><span class="n">ann_mean</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span> <span class="n">time_bnds_varname</span><span class="o">=</span><span class="s1">&#39;time_bound&#39;</span><span class="p">,</span> <span class="n">time_centered</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
@@ -570,7 +567,7 @@ It enables querying a database for the files we want, then loading those directl
 </section>
 </section>
 <section id="write-the-dataset-to-disk">
-<h2>Write the dataset to disk<a class="headerlink" href="#write-the-dataset-to-disk" title="Permalink to this headline">¶</a></h2>
+<h2>Write the dataset to disk<a class="headerlink" href="#write-the-dataset-to-disk" title="Permalink to this headline">#</a></h2>
 <p>Here, we are just looking to write out a few of the variables.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
 <span class="c1"># Create a list of variables to write out</span>
@@ -629,8 +626,9 @@ It enables querying a database for the files we want, then loading those directl
       </div>
     </div>
   
-    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -641,7 +639,7 @@ It enables querying a database for the files we want, then loading those directl
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     

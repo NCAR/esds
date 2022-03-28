@@ -8,31 +8,28 @@
 
     <title>NCAR-Jobqueue &#8212; NCAR-ESDS 0.1 documentation</title>
     
-    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
     
-    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -128,7 +125,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </style>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -341,7 +338,7 @@ commentsRunWhenDOMLoaded(addUtterances);
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -383,10 +380,10 @@ commentsRunWhenDOMLoaded(addUtterances);
               
               <div>
                  <section class="tex2jax_ignore mathjax_ignore" id="ncar-jobqueue">
-<h1>NCAR-Jobqueue<a class="headerlink" href="#ncar-jobqueue" title="Permalink to this headline">¶</a></h1>
+<h1>NCAR-Jobqueue<a class="headerlink" href="#ncar-jobqueue" title="Permalink to this headline">#</a></h1>
 <p>Last week, we added posts detailing how to configure <a class="reference external" href="https://docs.dask.org/en/latest/">Dask</a> using the new PBS scheduler on <a class="reference external" href="https://www2.cisl.ucar.edu/resources/computational-systems/casper">Casper</a>. In this week’s example, we provide an example of the recent updates to <a class="reference external" href="https://github.com/NCAR/ncar-jobqueue">ncar-jobqueue</a>, added by <a class="reference external" href="https://github.com/andersy005">Anderson Banihirwe</a>, which allow users to easily configure dask on Casper without having to add many extra steps.</p>
 <section id="how-can-i-use-the-new-updates-to-ncar-jobqueue">
-<h2>How can I use the new updates to NCAR-jobqueue?<a class="headerlink" href="#how-can-i-use-the-new-updates-to-ncar-jobqueue" title="Permalink to this headline">¶</a></h2>
+<h2>How can I use the new updates to NCAR-jobqueue?<a class="headerlink" href="#how-can-i-use-the-new-updates-to-ncar-jobqueue" title="Permalink to this headline">#</a></h2>
 <p>You must update the package to use the newest updates. You can update using conda!</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">update</span> <span class="n">ncar</span><span class="o">-</span><span class="n">jobqueue</span>
 </pre></div>
@@ -397,11 +394,11 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </section>
 <section id="how-is-ncar-jobqueue-different-than-dask-jobqueue">
-<h2>How is NCAR-Jobqueue different than Dask-Jobqueue<a class="headerlink" href="#how-is-ncar-jobqueue-different-than-dask-jobqueue" title="Permalink to this headline">¶</a></h2>
+<h2>How is NCAR-Jobqueue different than Dask-Jobqueue<a class="headerlink" href="#how-is-ncar-jobqueue-different-than-dask-jobqueue" title="Permalink to this headline">#</a></h2>
 <p>NCAR-jobqueue was created to easily interface Dask-Jobqueue, with the focus on using NCAR machines such as Casper or Cheyenne. NCAR-jobqueue sets up your PBS Cluster, using the same arguements as you would enter in the more general Dask-Jobqueue.</p>
 </section>
 <section id="how-would-i-use-this-on-within-my-workflow-on-casper">
-<h2>How would I use this on within my workflow on Casper?<a class="headerlink" href="#how-would-i-use-this-on-within-my-workflow-on-casper" title="Permalink to this headline">¶</a></h2>
+<h2>How would I use this on within my workflow on Casper?<a class="headerlink" href="#how-would-i-use-this-on-within-my-workflow-on-casper" title="Permalink to this headline">#</a></h2>
 <p>The overall workflow is the same - you inport dask related packages, configure your cluster, the scale your job depending on the number of jobs you would like. In last week’s example, we used the following example:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cluster</span> <span class="o">=</span> <span class="n">PBSCluster</span><span class="p">(</span>
     <span class="n">cores</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="c1"># The number of cores you want</span>
@@ -476,8 +473,9 @@ commentsRunWhenDOMLoaded(addUtterances);
       </div>
     </div>
   
-    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -488,7 +486,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     

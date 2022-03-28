@@ -8,31 +8,28 @@
 
     <title>Python Tutorial Seminar Series - Spring 2021 &#8212; NCAR-ESDS 0.1 documentation</title>
     
-    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
     
-    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -128,7 +125,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </style>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -342,7 +339,7 @@ commentsRunWhenDOMLoaded(addUtterances);
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -379,10 +376,10 @@ commentsRunWhenDOMLoaded(addUtterances);
               
               <div>
                  <section class="tex2jax_ignore mathjax_ignore" id="python-tutorial-seminar-series-spring-2021">
-<h1>Python Tutorial Seminar Series - Spring 2021<a class="headerlink" href="#python-tutorial-seminar-series-spring-2021" title="Permalink to this headline">¶</a></h1>
+<h1>Python Tutorial Seminar Series - Spring 2021<a class="headerlink" href="#python-tutorial-seminar-series-spring-2021" title="Permalink to this headline">#</a></h1>
 <p>The “Your First” Python Tutorial Series is over, but the tutorial seminar series continues.</p>
 <section id="please-join-us-virtually-on-the-following-dates">
-<h2>Please join us (virtually) on the following dates:<a class="headerlink" href="#please-join-us-virtually-on-the-following-dates" title="Permalink to this headline">¶</a></h2>
+<h2>Please join us (virtually) on the following dates:<a class="headerlink" href="#please-join-us-virtually-on-the-following-dates" title="Permalink to this headline">#</a></h2>
 <p>All events are at 1 PM Mountain</p>
 <p><em>February 24, 2021</em> - Jupyter Notebooks <br>
 An introduction to Jupyter Notebooks that will be fundamental for following many subsequent tutorials.</p>
@@ -401,7 +398,7 @@ Learn to use the specific plotting functionality developed by NCAR’s GeoCAT te
 <p>More dates TBA</p>
 </section>
 <section id="sign-up">
-<h2>Sign Up<a class="headerlink" href="#sign-up" title="Permalink to this headline">¶</a></h2>
+<h2>Sign Up<a class="headerlink" href="#sign-up" title="Permalink to this headline">#</a></h2>
 <p>If you would like join the <em>learnpython&#64;ucar.edu</em> Google group to be informed of updates and events in the seminar series, please do so by following this <a class="reference external" href="https://groups.google.com/a/ucar.edu/g/learnpython/about">link</a> and clicking the “Join group” button next to the group name.</p>
 </section>
 </section>
@@ -445,8 +442,9 @@ Learn to use the specific plotting functionality developed by NCAR’s GeoCAT te
       </div>
     </div>
   
-    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -457,7 +455,7 @@ Learn to use the specific plotting functionality developed by NCAR’s GeoCAT te
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     

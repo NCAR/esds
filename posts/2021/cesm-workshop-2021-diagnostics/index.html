@@ -8,31 +8,28 @@
 
     <title>CESM Diagnostics Discussion &#8212; NCAR-ESDS 0.1 documentation</title>
     
-    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
     
-    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -128,7 +125,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </style>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -341,7 +338,7 @@ commentsRunWhenDOMLoaded(addUtterances);
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -423,13 +420,13 @@ commentsRunWhenDOMLoaded(addUtterances);
               
               <div>
                  <section class="tex2jax_ignore mathjax_ignore" id="cesm-diagnostics-discussion">
-<h1>CESM Diagnostics Discussion<a class="headerlink" href="#cesm-diagnostics-discussion" title="Permalink to this headline">¶</a></h1>
+<h1>CESM Diagnostics Discussion<a class="headerlink" href="#cesm-diagnostics-discussion" title="Permalink to this headline">#</a></h1>
 <section id="overview-of-cesm-workshop">
-<h2>Overview of <span class="xref myst">CESM Workshop</span><a class="headerlink" href="#overview-of-cesm-workshop" title="Permalink to this headline">¶</a></h2>
+<h2>Overview of <span class="xref myst">CESM Workshop</span><a class="headerlink" href="#overview-of-cesm-workshop" title="Permalink to this headline">#</a></h2>
 <p>Every year, NCAR holds the <a class="reference external" href="https://www.cesm.ucar.edu/events/workshops/2021/">Community Earth System Model (CESM) Workshop</a> which brings together the CESM community to discuss relavant updates from the <a class="reference external" href="https://www.cesm.ucar.edu/working_groups/">working groups</a> as well as featured speakers and cross-working group discussions.</p>
 </section>
 <section id="software-engineering-working-group-meeting">
-<h2><a class="reference external" href="https://www.cesm.ucar.edu/events/workshops/2021/files/2021-cesm-agenda-software-engineering.pdf">Software Engineering Working Group Meeting</a><a class="headerlink" href="#software-engineering-working-group-meeting" title="Permalink to this headline">¶</a></h2>
+<h2><a class="reference external" href="https://www.cesm.ucar.edu/events/workshops/2021/files/2021-cesm-agenda-software-engineering.pdf">Software Engineering Working Group Meeting</a><a class="headerlink" href="#software-engineering-working-group-meeting" title="Permalink to this headline">#</a></h2>
 <p>During the Software Engineering Working Group (SEWG) session, following a variety of talks, there was an open discussion regarding the current state of CESM diagnostics and future plans for collaboration.</p>
 <p>The discussion started with <a class="reference external" href="https://docs.google.com/presentation/d/1IziFn6PKk5fwctyyOlF3blSL1CkLnXav7Vvh8hSVtf4/edit?usp=sharing">a presentation</a> which included updates from a wide variety of efforts across the center, with the objective being an overview of what packages/workflows are out in terms of CESM diagnostics.</p>
 <p>The large group of ~50 people was split into breakout rooms for small group discussion, focused around the following questions:</p>
@@ -443,12 +440,12 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>Obviously, groups could also provide other feedback or discuss topics outside of these five main questions, but these served as a good starting point and guide to the conversations. At the end, we came back to together to discuss the overall themes of the conversations, with an attempt to converge on some solutions to this diagnostic development problem.</p>
 </section>
 <section id="themes-from-the-diagnostic-discussion">
-<h2>Themes from the Diagnostic Discussion<a class="headerlink" href="#themes-from-the-diagnostic-discussion" title="Permalink to this headline">¶</a></h2>
+<h2>Themes from the Diagnostic Discussion<a class="headerlink" href="#themes-from-the-diagnostic-discussion" title="Permalink to this headline">#</a></h2>
 <p>There were 8 groups, which each put together a google document summarizing their discussions. Using that information, the following word cloud was generated:</p>
 <p><img alt="diagnostics_image" src="../../../_images/cesm-diagnostics.svg" /></p>
 <p>Here, we break down the main highlights from each question prompted to the groups</p>
 <section id="how-do-you-incorporate-diagnostics-within-your-workflow">
-<h3>How do you Incorporate Diagnostics within your Workflow?<a class="headerlink" href="#how-do-you-incorporate-diagnostics-within-your-workflow" title="Permalink to this headline">¶</a></h3>
+<h3>How do you Incorporate Diagnostics within your Workflow?<a class="headerlink" href="#how-do-you-incorporate-diagnostics-within-your-workflow" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>Sanity checks</p>
 <ul>
@@ -466,7 +463,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 </section>
 <section id="what-diagnostic-package-s-do-you-use">
-<h3>What Diagnostic Package(s) do you Use?<a class="headerlink" href="#what-diagnostic-package-s-do-you-use" title="Permalink to this headline">¶</a></h3>
+<h3>What Diagnostic Package(s) do you Use?<a class="headerlink" href="#what-diagnostic-package-s-do-you-use" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>NCL-based</p>
 <ul>
@@ -529,7 +526,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 </section>
 <section id="what-features-do-you-think-are-required-before-you-would-use-new-diagnostic-packages">
-<h3>What features do you think are required before you would use new diagnostic packages?<a class="headerlink" href="#what-features-do-you-think-are-required-before-you-would-use-new-diagnostic-packages" title="Permalink to this headline">¶</a></h3>
+<h3>What features do you think are required before you would use new diagnostic packages?<a class="headerlink" href="#what-features-do-you-think-are-required-before-you-would-use-new-diagnostic-packages" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>Easy to use</p></li>
 <li><p>Easy to port (download + install)</p></li>
@@ -553,7 +550,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 </section>
 <section id="given-that-much-of-the-diagnostic-development-comes-from-volunteers-in-the-user-community-how-could-you-or-your-colleagues-contribute">
-<h3>Given that much of the diagnostic development comes from volunteers in the user community, how could you or your colleagues contribute<a class="headerlink" href="#given-that-much-of-the-diagnostic-development-comes-from-volunteers-in-the-user-community-how-could-you-or-your-colleagues-contribute" title="Permalink to this headline">¶</a></h3>
+<h3>Given that much of the diagnostic development comes from volunteers in the user community, how could you or your colleagues contribute<a class="headerlink" href="#given-that-much-of-the-diagnostic-development-comes-from-volunteers-in-the-user-community-how-could-you-or-your-colleagues-contribute" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>Coordinate with the MELODIES-MONET group</p>
 <ul>
@@ -568,7 +565,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 </section>
 <section id="how-could-we-better-enable-contributions">
-<h3>How could we better enable contributions?<a class="headerlink" href="#how-could-we-better-enable-contributions" title="Permalink to this headline">¶</a></h3>
+<h3>How could we better enable contributions?<a class="headerlink" href="#how-could-we-better-enable-contributions" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>Provide well-defined APIs</p>
 <ul>
@@ -582,7 +579,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 </section>
 <section id="over-arching-comments">
-<h3>Over-arching Comments<a class="headerlink" href="#over-arching-comments" title="Permalink to this headline">¶</a></h3>
+<h3>Over-arching Comments<a class="headerlink" href="#over-arching-comments" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>Older diagnostic packages are done - <strong><em>need</em></strong> to move away from these</p></li>
 <li><p>Currently, we are struggling to find support to move forward</p>
@@ -596,7 +593,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </section>
 </section>
 <section id="main-takeaways-from-the-discussion">
-<h2>Main Takeaways from the Discussion<a class="headerlink" href="#main-takeaways-from-the-discussion" title="Permalink to this headline">¶</a></h2>
+<h2>Main Takeaways from the Discussion<a class="headerlink" href="#main-takeaways-from-the-discussion" title="Permalink to this headline">#</a></h2>
 <p>During this session, we gathered some valuable from those within the NCAR community, as well as more general CESM community regarding the current state, use, and future directions of CESM diagnostics. It is clear that there needs to more coordination around these efforts moving forward, with an emphasis on finding support to ensure we move beyond the older, NCL-based diagnostic packages and toward more scalable and shareable workflows utilizing the python ecosystem. We need to continue to leverage expertise from the <a class="reference external" href="https://geocat.ucar.edu/">GeoCAT</a>, <a class="reference external" href="https://ncar.github.io/xdev/">Xdev</a>, and <a class="reference external" href="https://ncar.github.io/esds/">ESDS</a> teams to accomplish these shared goals of creating the next generation of CESM diagnostics.</p>
 </section>
 </section>
@@ -640,8 +637,9 @@ commentsRunWhenDOMLoaded(addUtterances);
       </div>
     </div>
   
-    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -652,7 +650,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     

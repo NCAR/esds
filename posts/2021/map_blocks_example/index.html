@@ -8,31 +8,28 @@
 
     <title>How to Use xarray.map_blocks for Vertical Interpolation of a 3D Field &#8212; NCAR-ESDS 0.1 documentation</title>
     
-    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
     
-    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -128,7 +125,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </style>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -342,7 +339,7 @@ commentsRunWhenDOMLoaded(addUtterances);
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -401,11 +398,11 @@ commentsRunWhenDOMLoaded(addUtterances);
               
               <div>
                  <section class="tex2jax_ignore mathjax_ignore" id="how-to-use-xarray-map-blocks-for-vertical-interpolation-of-a-3d-field">
-<h1>How to Use <code class="docutils literal notranslate"><span class="pre">xarray.map_blocks</span></code> for Vertical Interpolation of a 3D Field<a class="headerlink" href="#how-to-use-xarray-map-blocks-for-vertical-interpolation-of-a-3d-field" title="Permalink to this headline">¶</a></h1>
+<h1>How to Use <code class="docutils literal notranslate"><span class="pre">xarray.map_blocks</span></code> for Vertical Interpolation of a 3D Field<a class="headerlink" href="#how-to-use-xarray-map-blocks-for-vertical-interpolation-of-a-3d-field" title="Permalink to this headline">#</a></h1>
 <p>Within this example, we cover how to use <code class="docutils literal notranslate"><span class="pre">xarray.map_blocks</span></code> to calculate the mixed-layer depth within the CESM POP model output.</p>
 <p>This calculation is “embarassingly parallel” such that each calculation is done within a single a column. The calculation <strong><em>should</em></strong> be easily computed within each column across the model domain. This is where <code class="docutils literal notranslate"><span class="pre">map_blocks</span></code> can be used to improve the performance of this metric.</p>
 <section id="imports-and-data-ingestion">
-<h2>Imports and Data Ingestion<a class="headerlink" href="#imports-and-data-ingestion" title="Permalink to this headline">¶</a></h2>
+<h2>Imports and Data Ingestion<a class="headerlink" href="#imports-and-data-ingestion" title="Permalink to this headline">#</a></h2>
 <p>We use the following libraries/packages within this example</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 
@@ -433,7 +430,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </section>
 <section id="data-operation">
-<h2>Data Operation<a class="headerlink" href="#data-operation" title="Permalink to this headline">¶</a></h2>
+<h2>Data Operation<a class="headerlink" href="#data-operation" title="Permalink to this headline">#</a></h2>
 <p>Next, we setup a function to compute the mixed layer depth (MLD). The MLD is defined as the point in the water column where the potential density (<code class="docutils literal notranslate"><span class="pre">sigma</span></code>) exceeds the surface density by a specified threshold (<code class="docutils literal notranslate"><span class="pre">dsigma</span></code>).</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">mld_dsigma</span><span class="p">(</span><span class="n">SALT</span><span class="p">,</span> <span class="n">TEMP</span><span class="p">,</span> <span class="n">dsigma</span><span class="o">=</span><span class="mf">0.03</span><span class="p">,</span> <span class="n">rho_chunks</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;nlat&#39;</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span> <span class="s1">&#39;nlon&#39;</span><span class="p">:</span> <span class="mi">16</span><span class="p">}):</span>
     <span class="sd">&quot;&quot;&quot;</span>
@@ -500,7 +497,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </pre></div>
 </div>
 <section id="applying-mixed-layer-depth-calculation">
-<h3>Applying Mixed Layer Depth Calculation<a class="headerlink" href="#applying-mixed-layer-depth-calculation" title="Permalink to this headline">¶</a></h3>
+<h3>Applying Mixed Layer Depth Calculation<a class="headerlink" href="#applying-mixed-layer-depth-calculation" title="Permalink to this headline">#</a></h3>
 <p>This function, <code class="docutils literal notranslate"><span class="pre">interp_mld_dsigma</span></code> is designed to be called within <code class="docutils literal notranslate"><span class="pre">xr.map_blocks</span></code>. It assumes that <code class="docutils literal notranslate"><span class="pre">rho_in</span></code> has a depth dimension, <code class="docutils literal notranslate"><span class="pre">z_t</span></code> and some number of unspecified other dimensions, <code class="docutils literal notranslate"><span class="pre">non_vertical_dims</span></code>.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">non_vertical_dims</span></code> are “stacked” using <code class="docutils literal notranslate"><span class="pre">xarray.stack</span></code> and the code loops over these dimensions, performing linear interpolation in <code class="docutils literal notranslate"><span class="pre">z_t</span></code> at each location.</p>
 <p>The data are returned unstacked with the dimensions ordered as they arrived in <code class="docutils literal notranslate"><span class="pre">rho_in</span></code>.</p>
@@ -544,7 +541,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </section>
 </section>
 <section id="visualize-the-output">
-<h2>Visualize the Output<a class="headerlink" href="#visualize-the-output" title="Permalink to this headline">¶</a></h2>
+<h2>Visualize the Output<a class="headerlink" href="#visualize-the-output" title="Permalink to this headline">#</a></h2>
 <p>Here’s a plot of the MLD diagnosed using TEMP by the linear interpolation method above.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
@@ -567,7 +564,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p><img alt="MLD example plot" src="../../../_images/mld_example_plot.png" /></p>
 </section>
 <section id="running-this-on-the-entire-dataset">
-<h2>Running this on the Entire Dataset<a class="headerlink" href="#running-this-on-the-entire-dataset" title="Permalink to this headline">¶</a></h2>
+<h2>Running this on the Entire Dataset<a class="headerlink" href="#running-this-on-the-entire-dataset" title="Permalink to this headline">#</a></h2>
 <p>Now let’s put everything together, running the <code class="docutils literal notranslate"><span class="pre">mld_dsigma</span></code> calculation on the “full” dataset (note that it is still subset given the smaller domain mentioned previously).</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="n">time</span>
 <span class="n">mld</span> <span class="o">=</span> <span class="n">mld_dsigma</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">SALT</span><span class="p">,</span> <span class="n">ds</span><span class="o">.</span><span class="n">TEMP</span><span class="p">)</span><span class="o">.</span><span class="n">compute</span><span class="p">()</span>
@@ -576,7 +573,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>This process takes ~2 seconds. Currently, this implementation takes 18 minutes to compute <code class="docutils literal notranslate"><span class="pre">mld_sigma</span></code> for the entire spatial domain for a single ensemble member. Further posts will investigate using <code class="docutils literal notranslate"><span class="pre">xarray.apply_unfunc</span></code> in this context, comparing the performance and tradeoffs.</p>
 </section>
 <section id="potential-opportunities-for-improvements">
-<h2>Potential opportunities for improvements<a class="headerlink" href="#potential-opportunities-for-improvements" title="Permalink to this headline">¶</a></h2>
+<h2>Potential opportunities for improvements<a class="headerlink" href="#potential-opportunities-for-improvements" title="Permalink to this headline">#</a></h2>
 <p>When working through these computations, it is important to use the dask dashboard to determine where there are bottlenecks within the analysis.</p>
 <p>Also, it can be helpful to understand the nature of the computation. In this case, this computation is considered to CPU heavy, so the key is increasing the number cores being utilized, using a line like this at the beginning:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Increase # of threads, more compute heavy</span>
@@ -632,8 +629,9 @@ commentsRunWhenDOMLoaded(addUtterances);
       </div>
     </div>
   
-    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -644,7 +642,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     

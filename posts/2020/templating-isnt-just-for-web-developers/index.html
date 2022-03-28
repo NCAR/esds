@@ -8,31 +8,28 @@
 
     <title>Templating isn’t just for Web Developers! &#8212; NCAR-ESDS 0.1 documentation</title>
     
-    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
     
-    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -128,7 +125,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </style>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -340,7 +337,7 @@ commentsRunWhenDOMLoaded(addUtterances);
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -397,7 +394,7 @@ commentsRunWhenDOMLoaded(addUtterances);
               
               <div>
                  <section class="tex2jax_ignore mathjax_ignore" id="templating-isn-t-just-for-web-developers">
-<h1>Templating isn’t just for Web Developers!<a class="headerlink" href="#templating-isn-t-just-for-web-developers" title="Permalink to this headline">¶</a></h1>
+<h1>Templating isn’t just for Web Developers!<a class="headerlink" href="#templating-isn-t-just-for-web-developers" title="Permalink to this headline">#</a></h1>
 <p>Recently, I found myself rambling on in an unprepared attempt to
 explain templating to a colleague of mine who had no prior experience
 with frontend design. It didn’t take me long to realize that my
@@ -424,7 +421,7 @@ might even be scared when they read “less-than-h-t-m-l-greater-than”.
 Today, we’ll learn Jinja2 templating through an example use case where
 we want to generate a form letter for a number of different addressees.</p>
 <section id="jinja2">
-<h2>Jinja2<a class="headerlink" href="#jinja2" title="Permalink to this headline">¶</a></h2>
+<h2>Jinja2<a class="headerlink" href="#jinja2" title="Permalink to this headline">#</a></h2>
 <p>I’ll be using Jinja2 for this tutorial. It’s extremely popular and
 widespread in the Python developer community, and it has very good
 documentation… except for the fact that all of their documentation
@@ -441,7 +438,7 @@ is almost entirely geared toward frontend designers.</p>
 has (at least) python3 and jinja2 installed in it.</p>
 </section>
 <section id="the-use-case">
-<h2>The Use Case<a class="headerlink" href="#the-use-case" title="Permalink to this headline">¶</a></h2>
+<h2>The Use Case<a class="headerlink" href="#the-use-case" title="Permalink to this headline">#</a></h2>
 <p>Imagine that you are the attorney for an oil tycoon with $4.5M
 held in the Bank of <a class="reference external" href="https://en.wikipedia.org/wiki/Duck_Soup_(1933_film)">Freedonia</a>.
 With tensions mounting between Freedonia and neighboring Sylvania,
@@ -461,7 +458,7 @@ and now you must craft an email to send to all of these addressees.</p>
 common scenario motivating your need to learn templating.</p>
 </section>
 <section id="the-letter">
-<h2>The Letter<a class="headerlink" href="#the-letter" title="Permalink to this headline">¶</a></h2>
+<h2>The Letter<a class="headerlink" href="#the-letter" title="Permalink to this headline">#</a></h2>
 <p>Fortunately, you already have a “template” for a formal <em>written</em> business
 letter sitting around on your hard drive. It looks like this:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>[Your Address]
@@ -493,7 +490,7 @@ substitution, for example replacing <code class="docutils literal notranslate"><
 just string substitution…but with a touch more sophistication.</p>
 </section>
 <section id="the-jinja2-template">
-<h2>The Jinja2 Template<a class="headerlink" href="#the-jinja2-template" title="Permalink to this headline">¶</a></h2>
+<h2>The Jinja2 Template<a class="headerlink" href="#the-jinja2-template" title="Permalink to this headline">#</a></h2>
 <p>So, to start out, we are going to convert this text template into a
 Jinja2 template. To do so, the easiest first step would be to just
 replace every <code class="docutils literal notranslate"><span class="pre">[]</span></code>-bracketted item with a Jinja2 <em>expressions</em>,
@@ -606,7 +603,7 @@ in the template document will be ignored.</p>
 <p>But not everything.</p>
 </section>
 <section id="jinja2-statements">
-<h2>Jinja2 Statements<a class="headerlink" href="#jinja2-statements" title="Permalink to this headline">¶</a></h2>
+<h2>Jinja2 Statements<a class="headerlink" href="#jinja2-statements" title="Permalink to this headline">#</a></h2>
 <p>This letter template is nice, but we want to send out <em>emails</em>,
 not actual postage. You don’t have time for snail mail!</p>
 <p>So, we <em>could</em> write another template for an email, but for the
@@ -658,7 +655,7 @@ variable to be a <code class="docutils literal notranslate"><span class="pre">li
 list in the template itself.</p>
 </section>
 <section id="inheritance">
-<h2>Inheritance<a class="headerlink" href="#inheritance" title="Permalink to this headline">¶</a></h2>
+<h2>Inheritance<a class="headerlink" href="#inheritance" title="Permalink to this headline">#</a></h2>
 <p>The last thing to explain that is useful with templating
 is <em>inheritance</em>. If we wanted to print out the same
 letter for every recipient, we <em>could</em> just as easily
@@ -781,8 +778,9 @@ for a website.</p>
       </div>
     </div>
   
-    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -793,7 +791,7 @@ for a website.</p>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     

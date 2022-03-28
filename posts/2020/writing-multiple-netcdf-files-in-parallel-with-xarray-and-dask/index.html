@@ -8,31 +8,28 @@
 
     <title>Writing multiple netCDF files in parallel with xarray and dask &#8212; NCAR-ESDS 0.1 documentation</title>
     
-    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
     
-    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -128,7 +125,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </style>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -342,7 +339,7 @@ commentsRunWhenDOMLoaded(addUtterances);
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -421,7 +418,7 @@ commentsRunWhenDOMLoaded(addUtterances);
               
               <div>
                  <section class="tex2jax_ignore mathjax_ignore" id="writing-multiple-netcdf-files-in-parallel-with-xarray-and-dask">
-<h1>Writing multiple netCDF files in parallel with xarray and dask<a class="headerlink" href="#writing-multiple-netcdf-files-in-parallel-with-xarray-and-dask" title="Permalink to this headline">¶</a></h1>
+<h1>Writing multiple netCDF files in parallel with xarray and dask<a class="headerlink" href="#writing-multiple-netcdf-files-in-parallel-with-xarray-and-dask" title="Permalink to this headline">#</a></h1>
 <p>A typical computation workflow with xarray consists of:</p>
 <ol class="simple">
 <li><p>reading one or more netCDF files into an xarray dataset backed by dask using <code class="docutils literal notranslate"><span class="pre">xr.open_mfdataset()</span></code> or <code class="docutils literal notranslate"><span class="pre">xr.open_dataset(chunks=...)</span></code>,</p></li>
@@ -443,9 +440,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </pre></div>
 </div>
 <section id="please-show-me-the-code">
-<h2>Please show me the code<a class="headerlink" href="#please-show-me-the-code" title="Permalink to this headline">¶</a></h2>
+<h2>Please show me the code<a class="headerlink" href="#please-show-me-the-code" title="Permalink to this headline">#</a></h2>
 <section id="package-imports">
-<h3>Package imports<a class="headerlink" href="#package-imports" title="Permalink to this headline">¶</a></h3>
+<h3>Package imports<a class="headerlink" href="#package-imports" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -492,7 +489,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </section>
 <section id="load-some-toy-dataset">
-<h3>Load some toy dataset<a class="headerlink" href="#load-some-toy-dataset" title="Permalink to this headline">¶</a></h3>
+<h3>Load some toy dataset<a class="headerlink" href="#load-some-toy-dataset" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">tutorial</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;rasm&#39;</span><span class="p">,</span> <span class="n">chunks</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;time&#39;</span><span class="p">:</span> <span class="mi">12</span><span class="p">})</span>
@@ -1018,7 +1015,7 @@ history deleted for brevity</dd></dl></div></li></ul></div></div></div></div>
 </div>
 </section>
 <section id="perform-a-computation-on-input-dataset">
-<h3>Perform a computation on input dataset<a class="headerlink" href="#perform-a-computation-on-input-dataset" title="Permalink to this headline">¶</a></h3>
+<h3>Perform a computation on input dataset<a class="headerlink" href="#perform-a-computation-on-input-dataset" title="Permalink to this headline">#</a></h3>
 <p>As you can see, our input dataset is chunked along the <code class="docutils literal notranslate"><span class="pre">time</span></code> dimension. This produces an xarray dataset with 3 chunks. For illustrative purposes, let’s apply some arbitray computation on our dataset:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1040,7 +1037,7 @@ history deleted for brevity</dd></dl></div></li></ul></div></div></div></div>
 <p>Our resulting xarray dataset has the same dimensions and the same number of chunks as our input dataset.</p>
 </section>
 <section id="create-a-helper-function-to-split-a-dataset-into-sub-datasets">
-<h3>Create a helper function to split a dataset into sub-datasets<a class="headerlink" href="#create-a-helper-function-to-split-a-dataset-into-sub-datasets" title="Permalink to this headline">¶</a></h3>
+<h3>Create a helper function to split a dataset into sub-datasets<a class="headerlink" href="#create-a-helper-function-to-split-a-dataset-into-sub-datasets" title="Permalink to this headline">#</a></h3>
 <p>Our main objective is to save this resulting dataset into multiple netCDF files by saving each chunk in its own netCDF file. To accomplish this, we need to create a function that allows us to split a dataset into sub-datasets for each chunk. The following code snippet was adapted from this <a class="reference external" href="https://github.com/pydata/xarray/issues/1093#issuecomment-259213382">comment</a> by <a class="reference external" href="https://github.com/shoyer">Stephan Hoyer</a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1089,7 +1086,7 @@ history deleted for brevity</dd></dl></div></li></ul></div></div></div></div>
 <p>Each item in the returned list consists of an xarray dataset corresponding to each sliced chunk. Now that we have a list of datasets, we need another helper function that will generate a filepath for us when given an xarray dataset as input:</p>
 </section>
 <section id="create-a-helper-function-for-generating-a-filepath">
-<h3>Create a helper function for generating a filepath<a class="headerlink" href="#create-a-helper-function-for-generating-a-filepath" title="Permalink to this headline">¶</a></h3>
+<h3>Create a helper function for generating a filepath<a class="headerlink" href="#create-a-helper-function-for-generating-a-filepath" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">create_filepath</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span> <span class="n">prefix</span><span class="o">=</span><span class="s1">&#39;filename&#39;</span><span class="p">,</span> <span class="n">root_path</span><span class="o">=</span><span class="s2">&quot;.&quot;</span><span class="p">):</span>
@@ -1135,7 +1132,7 @@ history deleted for brevity</dd></dl></div></li></ul></div></div></div></div>
 </div>
 </section>
 <section id="invoke-xr-save-mfdataset">
-<h3>Invoke <code class="docutils literal notranslate"><span class="pre">xr.save_mfdataset()</span></code><a class="headerlink" href="#invoke-xr-save-mfdataset" title="Permalink to this headline">¶</a></h3>
+<h3>Invoke <code class="docutils literal notranslate"><span class="pre">xr.save_mfdataset()</span></code><a class="headerlink" href="#invoke-xr-save-mfdataset" title="Permalink to this headline">#</a></h3>
 <p>At this point we have two lists:</p>
 <ol class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">datasets</span></code>: List of datasets to save.</p></li>
@@ -1151,7 +1148,7 @@ history deleted for brevity</dd></dl></div></li></ul></div></div></div></div>
 </div>
 </section>
 <section id="confirm-that-the-output-files-were-properly-written">
-<h3>Confirm that the output files were properly written<a class="headerlink" href="#confirm-that-the-output-files-were-properly-written" title="Permalink to this headline">¶</a></h3>
+<h3>Confirm that the output files were properly written<a class="headerlink" href="#confirm-that-the-output-files-were-properly-written" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">new_ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_mfdataset</span><span class="p">(</span><span class="n">paths</span><span class="p">,</span> <span class="n">combine</span><span class="o">=</span><span class="s1">&#39;by_coords&#39;</span><span class="p">)</span>
@@ -1684,7 +1681,7 @@ dl.xr-attrs {
 </section>
 </section>
 <section id="conclusion">
-<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">#</a></h2>
 <p>This article was inspired by a problem that my colleague was running into. I thought it would be useful to document this fix in a blog post. Many thanks to <a class="reference external" href="https://github.com/dcherian">Deepak Cherian</a> for pointing me to some relevant xarray issues and to the <a class="reference external" href="https://github.com/orgs/NCAR/teams/xdev">&#64;NCAR/xdev</a> team for their valuable and critical feedback on drafts of this article along the way.</p>
 </section>
 </section>
@@ -1728,8 +1725,9 @@ dl.xr-attrs {
       </div>
     </div>
   
-    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -1740,7 +1738,7 @@ dl.xr-attrs {
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     
