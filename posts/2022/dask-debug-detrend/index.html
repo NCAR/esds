@@ -6958,7 +6958,7 @@ Coordinates:
 <section id="future-work">
 <h2>Future work<a class="headerlink" href="#future-work" title="Permalink to this headline">#</a></h2>
 <ol>
-<li><p>Some improvements to <code class="docutils literal notranslate"><span class="pre">xarray.polyval</span></code> are needed so that it can handle a chunked coordinate as input.</p></li>
+<li><p>Some <a class="reference external" href="https://github.com/pydata/xarray/issues/6411">improvements</a> to <code class="docutils literal notranslate"><span class="pre">xarray.polyval</span></code> are needed so that it can handle a chunked coordinate as input.</p></li>
 <li><p>Dask could also detect that a giant 5GB chunk is constructed by this line in polyval:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">lhs</span> <span class="o">*</span> <span class="n">coeffs</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">degree_dim</span><span class="p">)</span>
 </pre></div>
