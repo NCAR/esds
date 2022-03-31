@@ -11,6 +11,7 @@ dependencies:
   - dask
   - dask-labextension
   - distributed
+  - graphviz
   - ipywidgets
   - jupyterlab>=3
   - matplotlib
@@ -18,6 +19,7 @@ dependencies:
   - netcdf4
   - pip
   - pydata-sphinx-theme>=0.4.3
+  - python-graphviz
   - python=3.9
   - scipy
   - seaborn
