@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2022-03-31T16:51:44.029805+00:00</updated>
+  <updated>2022-03-31T17:02:14.243301+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.23">ABlog</generator>
@@ -1254,24 +1254,6 @@ What should I do?</summary>
     <published>2022-03-04T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>ncar.github.io/esds/posts/2022/dask-debug-detrend/</id>
-    <title>Debugging dask workflows: Detrending part 1</title>
-    <updated>2022-03-07T00:00:00+00:00</updated>
-    <author>
-      <name>Deepak Cherian</name>
-    </author>
-    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
-&lt;p&gt;Detrending - subtracting a trend, commonly a linear fit, from the data - along the time dimension is a common workflow in the climate sciences.&lt;/p&gt;
-&lt;p&gt;Detrending with dask is a consistent source of headaches:&lt;/p&gt;
-&lt;/div&gt;
-</content>
-    <link href="ncar.github.io/esds/posts/2022/dask-debug-detrend/" rel="alternate"/>
-    <summary>Detrending - subtracting a trend, commonly a linear fit, from the data - along the time dimension is a common workflow in the climate sciences.Detrending with dask is a consistent source of headaches:</summary>
-    <category term="dask" label="dask"/>
-    <category term="debug" label="debug"/>
-    <published>2022-03-07T00:00:00+00:00</published>
-  </entry>
-  <entry>
     <id>ncar.github.io/esds/posts/2022/batch-processing-notebooks-with-papermill/</id>
     <title>Batch Processing Jupyter Notebooks with Papermill</title>
     <updated>2022-03-17T00:00:00+00:00</updated>
@@ -1292,5 +1274,23 @@ What should I do?</summary>
     <category term="papermill" label="papermill"/>
     <category term="automation" label="automation"/>
     <published>2022-03-17T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/2022/dask-debug-detrend/</id>
+    <title>Debugging dask workflows: Detrending part 1</title>
+    <updated>2022-03-31T00:00:00+00:00</updated>
+    <author>
+      <name>Deepak Cherian</name>
+    </author>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;Detrending - subtracting a trend, commonly a linear fit, from the data - along the time dimension is a common workflow in the climate sciences.&lt;/p&gt;
+&lt;p&gt;Detrending with dask is a consistent source of headaches:&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/2022/dask-debug-detrend/" rel="alternate"/>
+    <summary>Detrending - subtracting a trend, commonly a linear fit, from the data - along the time dimension is a common workflow in the climate sciences.Detrending with dask is a consistent source of headaches:</summary>
+    <category term="dask" label="dask"/>
+    <category term="debug" label="debug"/>
+    <published>2022-03-31T00:00:00+00:00</published>
   </entry>
 </feed>
