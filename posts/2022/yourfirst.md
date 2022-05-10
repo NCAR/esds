@@ -6,7 +6,7 @@ tags: python-tutorial-series
 
 # The Python Tutorial Seminar Series Returns this Summer!
 
-The Python Tutorial Seminar Series returns on every other Thurday at 1 PM Mountain starting May 26th with the 5-part "Your First" Python Tutorial series. The first lesson, "Opening a `.txt` File, covers how to create your first Python script to open some simple data. Some tutorials will be 1-off seminars on specific topics, while others will span multiple seminar sessions.
+The Python Tutorial Seminar Series returns on every other Thurday at 1 PM Mountain starting May 26th with the 5-part "Your First" Python Tutorial series. The first lesson, "Opening a `.txt` File", covers how to create your first Python script to open some simple data. Some tutorials will be 1-off seminars on specific topics, while others will span multiple seminar sessions.
 
 We will begin by following through the [Xdev tutorial website](https://ncar.github.io/python-tutorial/), designed to introduce Python to scientists who already have a good deal of programming experience, albeit with a different language. Our main audience is NCAR scientists, but anyone who has some experience working in the terminal and understanding of basic coding structures who wants geoscience-applicable examples will find this seminar helpful and reqarding.
 
