@@ -25,7 +25,7 @@ Julia Kent is an NCAR Software Engineer in Boulder, Colorado. Julia has made con
 
 ## How-to-Run
 
-The "Your First" Python Tutorial series sessions are designed to be run on the Terminal. 
+The "Your First" Python Tutorial series sessions are designed to be run on the Terminal.
 
 Follow the [Python installation instructuions](https://ncar.github.io/python-tutorial/tutorials/yourfirst.html#requirements-installation) on the Xdev website.
 
