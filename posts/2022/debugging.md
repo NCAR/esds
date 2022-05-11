@@ -26,7 +26,7 @@ And of course Stack Overflow has its own share of meta-humor between the correct
 
 Are you passing the correct Class into the function? Are you aware of all the available keyword arguments? Do the keyword arguments refer to what you think? If the documentation is good, the answer to your problem may be there. And help future-you, by updating the documentation in your code to match your updated code.
 
-![doc](../../images/debugging/README.jpg)
+![doc](../../images/debugging/doc.jpg)
 
 ## Check the Codebase
 
