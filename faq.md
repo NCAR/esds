@@ -125,7 +125,7 @@ See [mamba documentation](https://mamba.readthedocs.io/en/latest/index.html) for
 
 ### Conda Environments on JupyterHub
 
-The Computational and Information Systems Lab (CISL) at NCAR put together some [good documentation](https://www2.cisl.ucar.edu/resources/conda-environments) on dealing with environments on Casper/Cheyenne
+The Computational and Information Systems Lab (CISL) at NCAR put together some [good documentation](https://arc.ucar.edu/knowledge_base/83853599) on dealing with environments on Casper/Cheyenne
 
 #### Activating Your Base Environment Upon Opening a Terminal
 
@@ -150,6 +150,7 @@ echo ". ~/.bashrc" >> ~/.bash_profile
 ### General tips
 
 1. Read the xarray documentation on [optimizing workflow with dask](https://xarray.pydata.org/en/stable/dask.html#optimization-tips).
+1. Read the [Best practices for dask array](https://docs.dask.org/en/stable/array-best-practices.html)
 1. Keep track of chunk sizes throughout your workflow. This is especially important when reading in data using `xr.open_mfdataset`. Aim for 100-200MB size
    chunks.
 1. Choose chunking appropriate to your analysis. If you're working with time series then chunk more in space and less along time.
