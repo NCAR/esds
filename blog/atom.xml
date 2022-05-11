@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2022-04-11T20:44:52.996115+00:00</updated>
+  <updated>2022-05-11T18:47:52.581825+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.23">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.25">ABlog</generator>
   <entry>
     <id>ncar.github.io/esds/posts/2020/Time/</id>
     <title>The Significance of Time</title>
@@ -1292,5 +1292,22 @@ What should I do?</summary>
     <category term="dask" label="dask"/>
     <category term="debug" label="debug"/>
     <published>2022-03-31T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/2022/yourfirst/</id>
+    <title>The Python Tutorial Seminar Series Returns this Summer!</title>
+    <updated>2022-05-11T00:00:00+00:00</updated>
+    <author>
+      <name>Julia Kent</name>
+    </author>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;The Python Tutorial Seminar Series returns on every other Thurday at 1 PM Mountain starting May 26th with the 5-part “Your First” Python Tutorial series. The first lesson, “Opening a &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;.txt&lt;/span&gt;&lt;/code&gt; File”, covers how to create your first Python script to open some simple data. Some tutorials will be 1-off seminars on specific topics, while others will span multiple seminar sessions.&lt;/p&gt;
+&lt;p&gt;We will begin by following through the &lt;a class="reference external" href="https://ncar.github.io/python-tutorial/"&gt;Xdev tutorial website&lt;/a&gt;, designed to introduce Python to scientists who already have a good deal of programming experience, albeit with a different language. Our main audience is NCAR scientists, but anyone who has some experience working in the terminal and understanding of basic coding structures who wants geoscience-applicable examples will find this seminar helpful and reqarding.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/2022/yourfirst/" rel="alternate"/>
+    <summary>The Python Tutorial Seminar Series returns on every other Thurday at 1 PM Mountain starting May 26th with the 5-part “Your First” Python Tutorial series. The first lesson, “Opening a .txt File”, covers how to create your first Python script to open some simple data. Some tutorials will be 1-off seminars on specific topics, while others will span multiple seminar sessions.We will begin by following through the Xdev tutorial website, designed to introduce Python to scientists who already have a good deal of programming experience, albeit with a different language. Our main audience is NCAR scientists, but anyone who has some experience working in the terminal and understanding of basic coding structures who wants geoscience-applicable examples will find this seminar helpful and reqarding.</summary>
+    <category term="python-tutorial-series" label="python-tutorial-series"/>
+    <published>2022-05-11T00:00:00+00:00</published>
   </entry>
 </feed>
