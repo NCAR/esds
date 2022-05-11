@@ -26,7 +26,7 @@ And of course Stack Overflow has its own share of meta-humor between the correct
 
 Are you passing the correct Class into the function? Are you aware of all the available keyword arguments? Do the keyword arguments refer to what you think? If the documentation is good, the answer to your problem may be there. And help future-you, by updating the documentation in your code to match your updated code.
 
-(../../images/debugging/README.jpg)
+![doc](../../images/debugging/README.jpg)
 
 ## Check the Codebase
 
@@ -44,13 +44,13 @@ Or a rubber duck! If you are a verbal processor, speaking through the steps of w
 
 Small victories are important for keeping your momentum up. A changing error message is one step closer to understanding the error, even though it can feel like you now have to start the process all over again. The process is cyclic, but will hone into the correct solution eventually.
 
-(../../images/debugging/errormsg_changed.jpg)
+![error](../../images/debugging/errormsg_changed.jpg)
 
 ## Trust your intuition
 
 Remember the ultimate goal is for your code to work. Sometimes I have an idea of what to do, but hold myself back because I worry that it is too “hacky”. Usually, my intuition was pointing me towards the right solution all along, and I was getting in my own way with thoughts of how a coder is supposed to think. Really you just want the simplest code that completes the task. If there is a cleaner or faster solution than what you come up with, the code can be refactored later. What is “hacky” anyway?
 
-(../../images/debugging/hacky.jpg)
+![hacky](../../images/debugging/hacky.jpg)
 
 ## Change your mindset
 
