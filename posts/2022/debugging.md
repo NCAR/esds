@@ -14,7 +14,7 @@ I have been actively working on ways to help myself persevere through coding cha
 
 ## Search for your problem
 
-Google and Stack Overflow are your friends! Oftentimes the task you’re trying to accomplish has given someone else a headache before, and usually their solution is documented somewhere like Stack Overflow. Of course sometimes it can be hard to know what to Google, especially if you’re using a package that shares a name with a creature -I’m looking at you Sphinx and Pandas. 
+Google and Stack Overflow are your friends! Oftentimes the task you’re trying to accomplish has given someone else a headache before, and usually their solution is documented somewhere like Stack Overflow. Of course sometimes it can be hard to know what to Google, especially if you’re using a package that shares a name with a creature -I’m looking at you Sphinx and Pandas.
 
 But it is hard to be grumpy when this is what comes up when I search for `pandas.rolling`
 
@@ -34,7 +34,7 @@ This is similar to checking the documentation, but look at the code itself. This
 
 ## Add print statements to your code
 
-Do you know at what line your code stops working as expected? Adding print statements as simple as `print(“step X completed”)` can help you know how far your code succeeded. You should also consider printing variable values and types throughout to get further insight. 
+Do you know at what line your code stops working as expected? Adding print statements as simple as `print(“step X completed”)` can help you know how far your code succeeded. You should also consider printing variable values and types throughout to get further insight.
 
 ## Talk to yourself
 
@@ -48,7 +48,7 @@ Small victories are important for keeping your momentum up. A changing error mes
 
 ## Trust your intuition
 
-Remember the ultimate goal is for your code to work. Sometimes I have an idea of what to do, but hold myself back because I worry that it is too “hacky”. Usually, my intuition was pointing me towards the right solution all along, and I was getting in my own way with thoughts of how a coder is supposed to think. Really you just want the simplest code that completes the task. If there is a cleaner or faster solution than what you come up with, the code can be refactored later. What is “hacky” anyway? 
+Remember the ultimate goal is for your code to work. Sometimes I have an idea of what to do, but hold myself back because I worry that it is too “hacky”. Usually, my intuition was pointing me towards the right solution all along, and I was getting in my own way with thoughts of how a coder is supposed to think. Really you just want the simplest code that completes the task. If there is a cleaner or faster solution than what you come up with, the code can be refactored later. What is “hacky” anyway?
 
 (../../images/debugging/hacky.jpg)
 
@@ -56,6 +56,6 @@ Remember the ultimate goal is for your code to work. Sometimes I have an idea of
 
 Putting on your “debugging” hat can help you be more patient with yourself and your computer. If you are too eager to implement your new feature, bugging feels like a chore. Taking a break and coming back to the debugging problem as an interesting puzzle, rather than a roadblock, can help you be less blocked in moving through and solving it.
 
-------------
+---
 
 If you've tried all of these methods, it might be time to reach out for help. Do you have access to office hours? Someone you can peer program with? Coding is hard, and that's okay. Good luck and happy coding!
