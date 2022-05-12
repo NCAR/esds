@@ -20,7 +20,7 @@ But it is hard to be grumpy when this is what comes up when I search for `pandas
 
 <iframe src="https://giphy.com/embed/Wji7dIi2rW7fy" width="480" height="305" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/panda-roll-Wji7dIi2rW7fy">via GIPHY</a></p>
 
-And of course Stack Overflow has its own share of meta-humor between the correct solution being downvoted, and different problems being removed as “identicals”. Still, for most problems, Stack Overflow can help.
+And of course Stack Overflow has its own share of meta-humor between the correct solution being downvoted and different problems being removed as “identicals”. Still, for most problems, Stack Overflow can help.
 
 ## Check the Documentation
 
