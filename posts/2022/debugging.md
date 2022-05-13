@@ -1,7 +1,7 @@
 ---
 author: Julia Kent
 date: 2022-05-12
-tags:
+tags: debug
 ---
 
 # What I’ve learned about debugging
