@@ -1,2 +1,2 @@
-posts/ @esds-core
-*.md @esds-core
+posts/ @NCAR/esds-core
+*.md @NCAR/esds-core
