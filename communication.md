@@ -6,7 +6,7 @@ ESDS uses several primary platforms for communication. Here is a list of communi
 
 Discourse offers a community where users can ask questions and share progress on various projects. It is setup similarly to the [Pangeo discourse](https://discourse.pangeo.io/). You will need to register for an account, but once registered and logged on, be sure to follow the ESDS channel on this platform.
 
-## Email List
+## [Email List]((https://groups.google.com/a/ucar.edu/g/esds)
 
 If you would like to join the ESDS Email List (Google Group) to be informed of updates about these meetings and question/answer opportunities, we recommend you join the ESDS Google Goup using [this link to the ESDS Group page](https://groups.google.com/a/ucar.edu/g/esds), then click "Join Group."
 
@@ -34,7 +34,7 @@ This is a great place to discuss progress on your project, and get feedback from
 
 If you are interested in giving a talk or leading a discussion, please fill out this [ESDS Forum sign-up spreadsheet](https://docs.google.com/spreadsheets/d/1Tuv5vwGbjSKdJD5KLT0Zow8WCY0_zt35tTI6EIRGOk4/edit?usp=sharing). See the [ESDS Forum Meeting Notes](https://docs.google.com/document/d/e/2PACX-1vQeHIGSSz_8A8gZVL87xDjYXEwqB4CkRk85yf0TACb-rVgubjb3ukiulEYuUwHZGVXhgYNpaRC2SNAt/pub) for an overview of previous discussions.
 
-## [Office Hours]
+## [Office Hours](https://docs.google.com/document/d/1gIK0C-srceYmoYtgoODeLtuPQPL40iAHoI9DXWqfWP0/edit?usp=sharing)
 
 Have a question about Python/data analysis issues? Looking to get feedback on some project? Stop by our office hours! You do NOT need to have submitted a question in advance.
 
@@ -42,7 +42,7 @@ Office Hours are hosted Mondays and Wednesdays from 3-4pm MT via Zoom. Join the 
 
 Office hours are typically staffed by 1-4 ESDS members who are prepared to answer your questions. We’ll use breakout rooms to divide topics when necessary. If your question is about an error message you are raising in your workflow, help us help you by being ready to provide a copy of your dataset and code so we can reproduce your error. Depending on your question, we may be able to walk you through a solution or send you documentation/resources that address your question. See the [Office Hour Notes](https://docs.google.com/document/d/1gIK0C-srceYmoYtgoODeLtuPQPL40iAHoI9DXWqfWP0/edit?usp=sharing) for a summary of previous sessions. 
 
-## Project Pythia
+## [Project Pythia](https://projectpythia.org/)
 
 Want to learn more about using Python, GitHub, or Jupyter Notebooks for Earth system data science? Project Pythia is a home for Python-centered learning resources that are open-source, community-owned, geoscience-focused, and high-quality. Check out [Project Pythia](https://projectpythia.org/) tutorials, examples, and other training materials here. Project Pythia shares several contributors with the ESDS community and is a resource we highly recommend. 
 
