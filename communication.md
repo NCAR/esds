@@ -19,6 +19,8 @@ This repository and webpage is a space where we can post progress on this initia
 
 ## [ESDS Forum](https://docs.google.com/document/d/e/2PACX-1vQeHIGSSz_8A8gZVL87xDjYXEwqB4CkRk85yf0TACb-rVgubjb3ukiulEYuUwHZGVXhgYNpaRC2SNAt/pub)
 
-We have weekly meetings featuring presentations and discussions related to this project. If you are interested in the notes from these meetings, please check out [the agenda](https://docs.google.com/document/d/e/2PACX-1vQeHIGSSz_8A8gZVL87xDjYXEwqB4CkRk85yf0TACb-rVgubjb3ukiulEYuUwHZGVXhgYNpaRC2SNAt/pub)!
+We have bi-weekly meetings featuring presentations and discussions related to this project. If you are interested in the notes from these meetings, please check out [the agenda](https://docs.google.com/document/d/e/2PACX-1vQeHIGSSz_8A8gZVL87xDjYXEwqB4CkRk85yf0TACb-rVgubjb3ukiulEYuUwHZGVXhgYNpaRC2SNAt/pub)!
 
 As with the Zulip, we recommend you join the ESDS Google Goup using [this link to the ESDS Group page](https://groups.google.com/a/ucar.edu/g/esds), then click "Join Group."
+
+<iframe src="https://calendar.google.com/calendar/embed?src=c_nhpphc0mm0mhmpi7mibjh2t5dc%40group.calendar.google.com&ctz=America%2FDenver" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
