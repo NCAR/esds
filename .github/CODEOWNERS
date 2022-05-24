@@ -1,0 +1,5 @@
+posts/ @NCAR/esds-core
+*.md @NCAR/esds-core
+*.py @NCAR/esds-infrastructure
+*.yaml @NCAR/esds-infrastructure
+.github/ @NCAR/esds-infrastructure
