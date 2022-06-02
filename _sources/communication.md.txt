@@ -6,7 +6,7 @@ ESDS uses several primary platforms for communication. Here is a list of communi
 
 Discourse offers a community where users can ask questions and share progress on various projects. It is setup similarly to the [Pangeo discourse](https://discourse.pangeo.io/). You will need to register for an account, but once registered and logged on, be sure to follow the ESDS channel on this platform.
 
-## [Email List]((https://groups.google.com/a/ucar.edu/g/esds)
+## [Email List](https://groups.google.com/a/ucar.edu/g/esds)
 
 If you would like to join the ESDS Email List (Google Group) to be informed of updates about these meetings and question/answer opportunities, we recommend you join the ESDS Google Goup using [this link to the ESDS Group page](https://groups.google.com/a/ucar.edu/g/esds), then click "Join Group."
 
