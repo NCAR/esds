@@ -25,8 +25,8 @@
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
@@ -444,7 +444,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <section id="where-do-i-go-for-help">
 <h3>Where do I go for help?<a class="headerlink" href="#where-do-i-go-for-help" title="Permalink to this headline">#</a></h3>
 <p>Try one of the following resources.</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Xarray’s <a class="reference external" href="https://xarray.pydata.org/en/stable/howdoi.html">How Do I do X?</a> page</p></li>
 <li><p><a class="reference external" href="https://github.com/pydata/xarray/discussions">Xarray Github Discussions</a></p></li>
 <li><p><a class="reference external" href="https://discourse.pangeo.org">Pangeo Discourse Forum</a></p></li>
@@ -460,7 +460,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <section id="someone-must-have-written-the-function-i-want-where-do-i-look">
 <h2>Someone must have written the function I want. Where do I look?<a class="headerlink" href="#someone-must-have-written-the-function-i-want-where-do-i-look" title="Permalink to this headline">#</a></h2>
 <p>See the xarray <a class="reference external" href="https://xarray.pydata.org/en/latest/ecosystem.html">ecosystem</a> page. Also see the <a class="reference external" href="https://github.com/xarray-contrib/">xarray-contrib</a> and <a class="reference external" href="https://github.com/pangeo-data">pangeo-data</a> organizations. Some NCAR relevant projects include:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>GeoCAT-comp</p></li>
 <li><p>GeoCAT-viz</p></li>
 <li><p>cf_xarray</p></li>
@@ -484,7 +484,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <section id="installing-conda-on-ncar-hpc-resources">
 <h3>Installing conda on NCAR HPC resources<a class="headerlink" href="#installing-conda-on-ncar-hpc-resources" title="Permalink to this headline">#</a></h3>
 <p>There are two main steps of installing <code class="docutils literal notranslate"><span class="pre">conda</span></code> (miniconda in this case) on NCAR HPC resources</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Download <a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">miniconda</a> within your work directory</p></li>
 <li><p>Install and activate your installation</p></li>
 </ol>
@@ -494,7 +494,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <section id="creating-and-accessing-a-new-conda-environment">
 <h3>Creating and accessing a new conda environment<a class="headerlink" href="#creating-and-accessing-a-new-conda-environment" title="Permalink to this headline">#</a></h3>
 <p>You may want to move past just your base environment, and create a new conda environment! There are a few primary steps to this process:</p>
-<ol>
+<ol class="arabic">
 <li><p>Create the environment
 If you are creating an environment from scratch, use the following:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda create --name
@@ -571,7 +571,7 @@ conda config --add channels conda-forge
 <h2>Xarray and Dask<a class="headerlink" href="#xarray-and-dask" title="Permalink to this headline">#</a></h2>
 <section id="general-tips">
 <h3>General tips<a class="headerlink" href="#general-tips" title="Permalink to this headline">#</a></h3>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Read the xarray documentation on <a class="reference external" href="https://xarray.pydata.org/en/stable/dask.html#optimization-tips">optimizing workflow with dask</a>.</p></li>
 <li><p>Read the <a class="reference external" href="https://docs.dask.org/en/stable/array-best-practices.html">Best practices for dask array</a></p></li>
 <li><p>Keep track of chunk sizes throughout your workflow. This is especially important when reading in data using <code class="docutils literal notranslate"><span class="pre">xr.open_mfdataset</span></code>. Aim for 100-200MB size
@@ -623,26 +623,26 @@ in a serial context.</p>
 <section id="killedworker-x-what-do-i-do">
 <h3><code class="docutils literal notranslate"><span class="pre">KilledWorker</span></code> X{. What do I do?<a class="headerlink" href="#killedworker-x-what-do-i-do" title="Permalink to this headline">#</a></h3>
 <p>Keep an eye on the dask dashboard.</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>If a lot of the bars in the Memory tab are orange, that means your workers are running out of memory. Reduce your chunk size.</p></li>
 </ol>
 </section>
 <section id="help-my-analysis-is-slow">
 <h3>Help, my analysis is slow!<a class="headerlink" href="#help-my-analysis-is-slow" title="Permalink to this headline">#</a></h3>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Try subsetting for <strong><em>just</em></strong> the variable(s) you need for example, if you are reading in a dataset with ~25 variables, and you only need <code class="docutils literal notranslate"><span class="pre">temperature</span></code>, just read in temperature. You can specificy which variables to read in by using the following syntax, following the example of the temperature variable.</p></li>
 </ol>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">data_vars</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;temperature&#39;</span><span class="p">])</span>
 </pre></div>
 </div>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Take a look at your chunk size, it might not be optimized. When reading a file in using Xarray with Dask, a “general rule of thumb” is to keep your chunk size down to around 100 mb.</p></li>
 </ol>
 <p>For example, let’s say you trying to read in multiple files, each with ~600 time steps. This is case where each file is very large (several 10s of GB) and using Dask to help with data processing is <em>essential</em>.</p>
 <p>You can check the size of each chunk by subsetting a single DataArray (ex. <code class="docutils literal notranslate"><span class="pre">ds['temperature']</span></code>)</p>
 <p>If you have very large chunks, try modifying the number of chunks you specify within <code class="docutils literal notranslate"><span class="pre">xr.open_mfdataset(files,</span> <span class="pre">...,</span> <span class="pre">chunks={'lev':1,</span> <span class="pre">&quot;time&quot;:</span> <span class="pre">500})</span></code> where lev and time are vertical and time dimensions respectively.</p>
 <p>Check to see how large each chunk is after modifying the chunk size, and modify as necessary.</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>You do not have enough dask workers</p></li>
 </ol>
 <p>If you have a few large files, having the number of workers equal to to the number of input files read in using <code class="docutils literal notranslate"><span class="pre">xr.open_mfdataset</span></code> would be a good practice</p>
@@ -655,7 +655,7 @@ in a serial context.</p>
 <section id="writing-to-files-in-parallel">
 <h3>Writing to files in parallel<a class="headerlink" href="#writing-to-files-in-parallel" title="Permalink to this headline">#</a></h3>
 <p>Distributed writes to netCDF are hard.</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Try writing to <code class="docutils literal notranslate"><span class="pre">zarr</span></code> using <code class="docutils literal notranslate"><span class="pre">Dataset.to_zarr</span></code>.</p></li>
 <li><p>If you need to write to netCDF and your final dataset can fit in memory then use <code class="docutils literal notranslate"><span class="pre">dataset.load().to_netcdf(...)</span></code>.</p></li>
 <li><p>If you really must write a big dataset to netCDF try using <code class="docutils literal notranslate"><span class="pre">save_mfdataset</span></code> (see <a class="reference external" href="https://ncar.github.io/xdev/posts/writing-multiple-netcdf-files-in-parallel-with-xarray-and-dask/">here</a>).</p></li>
@@ -675,7 +675,7 @@ in a serial context.</p>
 <section id="setting-up-github-authentication">
 <h3>Setting up Github Authentication<a class="headerlink" href="#setting-up-github-authentication" title="Permalink to this headline">#</a></h3>
 <p>Beginning August 13, 2021, Github will no longer accept account passwords when authenticating git operations. There are essentially two options, which Github provides proper documentation for getting setup:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p><a class="reference external" href="https://docs.github.com/en/github/authenticating-to-github/securing-your-account-with-two-factor-authentication-2fa">Setup two-factor authentication</a></p></li>
 <li><p><a class="reference external" href="https://docs.github.com/en/github-ae&#64;latest/github/authenticating-to-github/connecting-to-github-with-ssh">Connect to Github via SSH</a></p></li>
 </ol>

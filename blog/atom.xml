@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2022-06-14T16:18:11.175932+00:00</updated>
+  <updated>2022-06-21T18:17:42.888710+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.25">ABlog</generator>
@@ -131,6 +131,7 @@ be more confusing than illuminating.</summary>
     <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
 &lt;p&gt;A typical computation workflow with xarray consists of:&lt;/p&gt;
 &lt;p&gt;reading one or more netCDF files into an xarray dataset backed by dask using &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;xr.open_mfdataset()&lt;/span&gt;&lt;/code&gt; or &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;xr.open_dataset(chunks=...)&lt;/span&gt;&lt;/code&gt;,&lt;/p&gt;
+&lt;img alt="../_images/68a7c16c9445f3a38f0c52d82c39b90ee5c24aa7b18fdc82136c224079f446da.png" src="../_images/68a7c16c9445f3a38f0c52d82c39b90ee5c24aa7b18fdc82136c224079f446da.png" /&gt;
 &lt;/div&gt;
 </content>
     <link href="ncar.github.io/esds/posts/2020/writing-multiple-netcdf-files-in-parallel-with-xarray-and-dask/" rel="alternate"/>
@@ -631,6 +632,7 @@ What should I do?</summary>
     <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
 &lt;p&gt;As mentioned in a couple of ESDS posts (&lt;a class="reference external" href="https://ncar.github.io/esds/posts/intake_esm_dask/"&gt;intake-esm and Dask&lt;/a&gt;, &lt;a class="reference external" href="https://ncar.github.io/esds/posts/intake_cmip6_debug/"&gt;debugging intake-esm&lt;/a&gt;), &lt;a class="reference external" href="https://intake-esm.readthedocs.io/en/latest/"&gt;intake-esm&lt;/a&gt; can be a helpful tool to work with when dealing with model data, especially CESM. One of the requirements for using intake-esm is having a catalog which is comprised of two pieces:&lt;/p&gt;
 &lt;p&gt;A table of the relevant metadata (ex. file path, variable, stream, etc.)&lt;/p&gt;
+&lt;img alt="../_images/c844fe1ce42eb01887e1c4c239c0dff261f07ec69b4f44a736a1e1a020b82d45.png" src="../_images/c844fe1ce42eb01887e1c4c239c0dff261f07ec69b4f44a736a1e1a020b82d45.png" /&gt;
 &lt;/div&gt;
 </content>
     <link href="ncar.github.io/esds/posts/2021/ecgtools-history-files-example/" rel="alternate"/>
@@ -666,7 +668,7 @@ What should I do?</summary>
     <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
 &lt;p&gt;A common initial task when working with a new dataset is figuring out what data is available. This is especially true when working with climate ensembles with several components and time-frequency output (ex. Community Earth System Model Large Ensemble, CESM-LE). Here, we will examine different methods of investigating this catalog&lt;/p&gt;
 &lt;p&gt;Here, we will use &lt;a class="reference external" href="https://intake-esm.readthedocs.io/en/latest/"&gt;intake-esm&lt;/a&gt; and &lt;a class="reference external" href="https://graphviz.readthedocs.io/en/stable/manual.html"&gt;graphviz&lt;/a&gt;, which can be installed using the following (including jupyterlab too!)&lt;/p&gt;
-&lt;/div&gt;
+&lt;img alt="../_images/e696afcdb2fcbec7e9268399b9609587a5f0f51f6c5249afe3b3a0fcd46f0376.svg" src="../_images/e696afcdb2fcbec7e9268399b9609587a5f0f51f6c5249afe3b3a0fcd46f0376.svg" /&gt;&lt;/div&gt;
 </content>
     <link href="ncar.github.io/esds/posts/2021/graphviz_example/" rel="alternate"/>
     <summary>A common initial task when working with a new dataset is figuring out what data is available. This is especially true when working with climate ensembles with several components and time-frequency output (ex. Community Earth System Model Large Ensemble, CESM-LE). Here, we will examine different methods of investigating this catalogHere, we will use intake-esm and graphviz, which can be installed using the following (including jupyterlab too!)</summary>
@@ -929,6 +931,7 @@ What should I do?</summary>
     <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
 &lt;p&gt;In this example, we will cover how to leverage a useful package from the &lt;a class="reference external" href="http://www.pangeo.io"&gt;Pangeo Ecosystem&lt;/a&gt;, &lt;a class="reference external" href="https://pangeo-xesmf.readthedocs.io/en/latest/"&gt;xESMF&lt;/a&gt;. One important note when using this package, is &lt;strong&gt;make sure you are using the most up-to-date documentation/version&lt;/strong&gt;, a few years ago, development moved to the &lt;a class="reference external" href="https://github.com/pangeo-data/xESMF"&gt;pangeo-data&lt;/a&gt; branch of the package, installable using the following:&lt;/p&gt;
 &lt;p&gt;For this example, we will download a file from the &lt;a class="reference external" href="https://www.ncei.noaa.gov/products/world-ocean-atlas"&gt;World Ocean Atlas&lt;/a&gt;, which includes a variety of ocean observations assembled from the World Ocean Database.&lt;/p&gt;
+&lt;img alt="../_images/5d1735a9cd17c21c74dd23dc6b8463e12d0a07af0cbb389b5a01c91e30c7141c.png" src="../_images/5d1735a9cd17c21c74dd23dc6b8463e12d0a07af0cbb389b5a01c91e30c7141c.png" /&gt;
 &lt;/div&gt;
 </content>
     <link href="ncar.github.io/esds/posts/2021/regrid-observations-pop-grid/" rel="alternate"/>
@@ -1208,7 +1211,7 @@ What should I do?</summary>
     </author>
     <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
 &lt;p&gt;The NCAR/UCAR virtual Python Tutorial Seminar Series continues with a lesson on MetPy on &lt;strong&gt;February 9th at 1 PM Mountain Standard Time&lt;/strong&gt; led by Drew Camron.&lt;/p&gt;
-&lt;p&gt;MetPy is a collection of tools in Python for reading, visualizing, and performing calculations with weather data. See the &lt;a class="reference external" href="https://unidata.github.io/MetPy/latest/index.html"&gt;MetPy Documentation&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;MetPy is a collection of tools in Python for reading, visualizing, and performing calculations with weather data. See the &lt;a class="reference external" href="https://unidata.github.io/MetPy/latest/index.html#"&gt;MetPy Documentation&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="ncar.github.io/esds/posts/2022/metpy_tutorial/" rel="alternate"/>
@@ -1226,6 +1229,7 @@ What should I do?</summary>
     <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
 &lt;p&gt;An underappreciated feature of Xarray + Dask is the ability to plug in &lt;a class="reference external" href="https://docs.xarray.dev/en/stable/user-guide/duckarrays.html"&gt;different array types&lt;/a&gt;. Usually we work with Xarray wrapping a Dask array which in turn uses &lt;em&gt;NumPy&lt;/em&gt; arrays for each block; or just Xarray wrapping NumPy arrays directly. NumPy arrays are dense in-memory arrays. Other array types exist:&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://sparse.pydata.org"&gt;sparse&lt;/a&gt; for sparse arrays&lt;/p&gt;
+&lt;img alt="../_images/c4d9bf482f609b5c8823a94f55faa35a854a944a89bdc967aff406eb134a52c5.png" src="../_images/c4d9bf482f609b5c8823a94f55faa35a854a944a89bdc967aff406eb134a52c5.png" /&gt;
 &lt;/div&gt;
 </content>
     <link href="ncar.github.io/esds/posts/2022/sparse-PFT-gridding/" rel="alternate"/>
@@ -1285,6 +1289,7 @@ What should I do?</summary>
     <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
 &lt;p&gt;Detrending - subtracting a trend, commonly a linear fit, from the data - along the time dimension is a common workflow in the climate sciences.&lt;/p&gt;
 &lt;p&gt;Here’s an example&lt;/p&gt;
+&lt;img alt="../_images/e25cf220f15e78e7aa8d54f8e9d18a52e56c57a24b0f30bbd7bc7410543329f9.png" src="../_images/e25cf220f15e78e7aa8d54f8e9d18a52e56c57a24b0f30bbd7bc7410543329f9.png" /&gt;
 &lt;/div&gt;
 </content>
     <link href="ncar.github.io/esds/posts/2022/dask-debug-detrend/" rel="alternate"/>

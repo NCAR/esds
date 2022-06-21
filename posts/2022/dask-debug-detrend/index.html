@@ -25,8 +25,8 @@
     href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
@@ -481,11 +481,11 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fd46e54acd0&gt;
 </pre></div>
 </div>
-<img alt="../../../_images/dask-debug-detrend_1_1.png" src="../../../_images/dask-debug-detrend_1_1.png" />
+<img alt="../../../_images/e25cf220f15e78e7aa8d54f8e9d18a52e56c57a24b0f30bbd7bc7410543329f9.png" src="../../../_images/e25cf220f15e78e7aa8d54f8e9d18a52e56c57a24b0f30bbd7bc7410543329f9.png" />
 </div>
 </div>
 <p>Detrending with dask is a consistent source of headaches:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p><a class="reference external" href="https://github.com/pydata/xarray/issues/5629">Polyfit performance on large datasets - Suboptimal dask task graph</a></p></li>
 <li><p><a class="reference external" href="https://github.com/pydata/xarray/issues/4554">Unexpected chunking of 3d DataArray in polyfit()</a></p></li>
 <li><p><a class="reference external" href="https://github.com/pydata/xarray/discussions/6280">Memory errors with detrending + rolling operations</a></p></li>
@@ -493,7 +493,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <section id="challenges-of-detrending">
 <h2>Challenges of detrending<a class="headerlink" href="#challenges-of-detrending" title="Permalink to this headline">#</a></h2>
 <p>Detrending has 3 steps:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Fit a polynomial using polyfit</p></li>
 <li><p>Evaluate the trend using polyval and the fit coefficients</p></li>
 <li><p>Subtract the trend from the original data</p></li>
@@ -513,7 +513,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </section>
 <section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">#</a></h2>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>We use simple techniques like tracking chunk sizes and number of tasks to isolate a few problems, particularly in <code class="docutils literal notranslate"><span class="pre">polyval</span></code>.</p></li>
 <li><p>Fixing <code class="docutils literal notranslate"><span class="pre">polyval</span></code> doesn’t improve the calculation, so we then examine the dask graph for <code class="docutils literal notranslate"><span class="pre">polyfit</span></code> in a smaller artificial problem that replicates the main issues.</p></li>
 <li><p>This lets us trace the issue back to a serious <a class="reference external" href="https://github.com/dask/dask/issues/6916">regression</a> in dask’s <code class="docutils literal notranslate"><span class="pre">tensordot</span></code> function.</p></li>
@@ -554,24 +554,24 @@ commentsRunWhenDOMLoaded(addUtterances);
         <table style="width: 100%; text-align: left;">
 
         <tr>
-
+        
             <td style="text-align: left;"><strong>Connection method:</strong> Cluster object</td>
             <td style="text-align: left;"><strong>Cluster type:</strong> distributed.LocalCluster</td>
-
+        
         </tr>
 
-
+        
             <tr>
                 <td style="text-align: left;">
                     <strong>Dashboard: </strong> <a href="http://127.0.0.1:8787/status" target="_blank">http://127.0.0.1:8787/status</a>
                 </td>
                 <td style="text-align: left;"></td>
             </tr>
-
+        
 
         </table>
 
-
+        
             <details>
             <summary style="margin-bottom: 20px;"><h3 style="display: inline;">Cluster Info</h3></summary>
             <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-mod-trusted jp-OutputArea-output">
@@ -597,13 +597,13 @@ commentsRunWhenDOMLoaded(addUtterances);
                     <strong>Total memory:</strong> 16.00 GiB
                 </td>
             </tr>
-
+            
             <tr>
     <td style="text-align: left;"><strong>Status:</strong> running</td>
     <td style="text-align: left;"><strong>Using processes:</strong> True</td>
 </tr>
 
-
+            
         </table>
 
         <details>
@@ -651,7 +651,7 @@ commentsRunWhenDOMLoaded(addUtterances);
             <h3 style="display: inline;">Workers</h3>
         </summary>
 
-
+        
         <div style="margin-bottom: 20px;">
             <div style="width: 24px; height: 24px; background-color: #DBF5FF; border: 3px solid #4CC9FF; border-radius: 5px; position: absolute;"> </div>
             <div style="margin-left: 48px;">
@@ -688,15 +688,15 @@ commentsRunWhenDOMLoaded(addUtterances);
                         </td>
                     </tr>
 
+                    
 
-
-
+                    
 
                 </table>
             </details>
             </div>
         </div>
-
+        
         <div style="margin-bottom: 20px;">
             <div style="width: 24px; height: 24px; background-color: #DBF5FF; border: 3px solid #4CC9FF; border-radius: 5px; position: absolute;"> </div>
             <div style="margin-left: 48px;">
@@ -733,15 +733,15 @@ commentsRunWhenDOMLoaded(addUtterances);
                         </td>
                     </tr>
 
+                    
 
-
-
+                    
 
                 </table>
             </details>
             </div>
         </div>
-
+        
         <div style="margin-bottom: 20px;">
             <div style="width: 24px; height: 24px; background-color: #DBF5FF; border: 3px solid #4CC9FF; border-radius: 5px; position: absolute;"> </div>
             <div style="margin-left: 48px;">
@@ -778,15 +778,15 @@ commentsRunWhenDOMLoaded(addUtterances);
                         </td>
                     </tr>
 
+                    
 
-
-
+                    
 
                 </table>
             </details>
             </div>
         </div>
-
+        
         <div style="margin-bottom: 20px;">
             <div style="width: 24px; height: 24px; background-color: #DBF5FF; border: 3px solid #4CC9FF; border-radius: 5px; position: absolute;"> </div>
             <div style="margin-left: 48px;">
@@ -823,15 +823,15 @@ commentsRunWhenDOMLoaded(addUtterances);
                         </td>
                     </tr>
 
+                    
 
-
-
+                    
 
                 </table>
             </details>
             </div>
         </div>
-
+        
 
     </details>
 </div>
@@ -840,7 +840,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     </div>
 </div>
             </details>
-
+        
 
     </div>
 </div></div></div>
@@ -1237,13 +1237,13 @@ Dimensions without coordinates: ocean_time, eta_rho, xi_rho</pre><div class='xr-
                     </tr>
                 </thead>
                 <tbody>
-
+                    
                     <tr>
                         <th> Bytes </th>
                         <td> 5.23 GiB </td>
                         <td> 19.55 MiB </td>
                     </tr>
-
+                    
                     <tr>
                         <th> Shape </th>
                         <td> (2193, 489, 655) </td>
@@ -1731,13 +1731,13 @@ Coordinates:
                     </tr>
                 </thead>
                 <tbody>
-
+                    
                     <tr>
                         <th> Bytes </th>
                         <td> 5.23 GiB </td>
                         <td> 19.55 MiB </td>
                     </tr>
-
+                    
                     <tr>
                         <th> Shape </th>
                         <td> (2193, 489, 655) </td>
@@ -1856,7 +1856,7 @@ Coordinates:
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/dask-debug-detrend_13_0.png" src="../../../_images/dask-debug-detrend_13_0.png" />
+<img alt="../../../_images/e8748b7355eb2bda1a38dc0cd79eac7368bf41ddaebbda7b422bc6ccfe7b7a93.png" src="../../../_images/e8748b7355eb2bda1a38dc0cd79eac7368bf41ddaebbda7b422bc6ccfe7b7a93.png" />
 </div>
 </div>
 <p>What is going wrong?</p>
@@ -1864,7 +1864,7 @@ Coordinates:
 <section id="lets-look-at-detrend">
 <h2>Lets look at detrend<a class="headerlink" href="#lets-look-at-detrend" title="Permalink to this headline">#</a></h2>
 <p>Detrend has 3 steps:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>polyfit</p></li>
 <li><p>polyval</p></li>
 <li><p>subtract</p></li>
@@ -2259,13 +2259,13 @@ Data variables:
                     </tr>
                 </thead>
                 <tbody>
-
+                    
                     <tr>
                         <th> Bytes </th>
                         <td> 4.89 MiB </td>
                         <td> 4.89 MiB </td>
                     </tr>
-
+                    
                     <tr>
                         <th> Shape </th>
                         <td> (2, 489, 655) </td>
@@ -2707,13 +2707,13 @@ Coordinates:
                     </tr>
                 </thead>
                 <tbody>
-
+                    
                     <tr>
                         <th> Bytes </th>
                         <td> 5.23 GiB </td>
                         <td> 5.23 GiB </td>
                     </tr>
-
+                    
                     <tr>
                         <th> Shape </th>
                         <td> (2193, 489, 655) </td>
@@ -2785,7 +2785,7 @@ Coordinates:
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/dask-debug-detrend_20_0.png" src="../../../_images/dask-debug-detrend_20_0.png" />
+<img alt="../../../_images/044484cfb7e1241863c106d22916670cc88306c5547c684b1b1de8549a411b87.png" src="../../../_images/044484cfb7e1241863c106d22916670cc88306c5547c684b1b1de8549a411b87.png" />
 </div>
 </div>
 <div class="admonition tip">
@@ -3559,13 +3559,13 @@ Dimensions without coordinates: ocean_time</pre><div class='xr-wrap' style='disp
                     </tr>
                 </thead>
                 <tbody>
-
+                    
                     <tr>
                         <th> Bytes </th>
                         <td> 17.13 kiB </td>
                         <td> 64 B </td>
                     </tr>
-
+                    
                     <tr>
                         <th> Shape </th>
                         <td> (2193,) </td>
@@ -4019,13 +4019,13 @@ Coordinates:
                     </tr>
                 </thead>
                 <tbody>
-
+                    
                     <tr>
                         <th> Bytes </th>
                         <td> 5.23 GiB </td>
                         <td> 19.55 MiB </td>
                     </tr>
-
+                    
                     <tr>
                         <th> Shape </th>
                         <td> (2193, 489, 655) </td>
@@ -4147,7 +4147,7 @@ Coordinates:
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/dask-debug-detrend_30_0.png" src="../../../_images/dask-debug-detrend_30_0.png" />
+<img alt="../../../_images/21afdc28f8f0ed1c68855f5f61763253c4d2880a65302f67ed5008677bf854ea.png" src="../../../_images/21afdc28f8f0ed1c68855f5f61763253c4d2880a65302f67ed5008677bf854ea.png" />
 </div>
 </div>
 <p>Hmm…. that single <code class="docutils literal notranslate"><span class="pre">tensordot</span></code> task still looks problematic. It is probably why we see very skewed memory consumption (mostly one worker).</p>
@@ -4545,13 +4545,13 @@ Dimensions without coordinates: ocean_time, eta_rho, xi_rho</pre><div class='xr-
                     </tr>
                 </thead>
                 <tbody>
-
+                    
                     <tr>
                         <th> Bytes </th>
                         <td> 58.65 MiB </td>
                         <td> 19.55 MiB </td>
                     </tr>
-
+                    
                     <tr>
                         <th> Shape </th>
                         <td> (24, 489, 655) </td>
@@ -4627,7 +4627,7 @@ Dimensions without coordinates: ocean_time, eta_rho, xi_rho</pre><div class='xr-
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/dask-debug-detrend_34_0.png" src="../../../_images/dask-debug-detrend_34_0.png" />
+<img alt="../../../_images/9821c8fb7ac49fcecef2f21d473c4fbfeae407bb25a82942646892d0d1abcdd8.png" src="../../../_images/9821c8fb7ac49fcecef2f21d473c4fbfeae407bb25a82942646892d0d1abcdd8.png" />
 </div>
 </div>
 <p>Ouch. we see all the tasks go through a single <code class="docutils literal notranslate"><span class="pre">tensordot</span></code> task.</p>
@@ -4660,7 +4660,7 @@ Dimensions without coordinates: ocean_time, eta_rho, xi_rho</pre><div class='xr-
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/dask-debug-detrend_38_0.png" src="../../../_images/dask-debug-detrend_38_0.png" />
+<img alt="../../../_images/4a992587ceb07bab24ce07dfb12566eb83f0025c06b071437bf777e9ddff1284.png" src="../../../_images/4a992587ceb07bab24ce07dfb12566eb83f0025c06b071437bf777e9ddff1284.png" />
 </div>
 </div>
 <p>Yes! we now see 3 tensordot tasks for this smaller problem instead of 1 in the previous buggy version.</p>
@@ -5049,13 +5049,13 @@ Data variables:
                     </tr>
                 </thead>
                 <tbody>
-
+                    
                     <tr>
                         <th> Bytes </th>
                         <td> 4.89 MiB </td>
                         <td> 4.89 MiB </td>
                     </tr>
-
+                    
                     <tr>
                         <th> Shape </th>
                         <td> (2, 489, 655) </td>
@@ -5889,13 +5889,13 @@ Coordinates:
                     </tr>
                 </thead>
                 <tbody>
-
+                    
                     <tr>
                         <th> Bytes </th>
                         <td> 5.23 GiB </td>
                         <td> 19.55 MiB </td>
                     </tr>
-
+                    
                     <tr>
                         <th> Shape </th>
                         <td> (2193, 489, 655) </td>
@@ -6448,7 +6448,7 @@ Coordinates:
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/dask-debug-detrend_47_0.png" src="../../../_images/dask-debug-detrend_47_0.png" />
+<img alt="../../../_images/5f45f027691ebe1eaeed2f5e90b4194b2c1a957403983b2eadf7e28ffd0275f1.png" src="../../../_images/5f45f027691ebe1eaeed2f5e90b4194b2c1a957403983b2eadf7e28ffd0275f1.png" />
 </div>
 </div>
 </section>
@@ -6863,13 +6863,13 @@ Coordinates:
                     </tr>
                 </thead>
                 <tbody>
-
+                    
                     <tr>
                         <th> Bytes </th>
                         <td> 5.23 GiB </td>
                         <td> 19.55 MiB </td>
                     </tr>
-
+                    
                     <tr>
                         <th> Shape </th>
                         <td> (2193, 489, 655) </td>
@@ -6983,7 +6983,7 @@ Coordinates:
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/dask-debug-detrend_51_0.png" src="../../../_images/dask-debug-detrend_51_0.png" />
+<img alt="../../../_images/1ea683a7d495e745bde909755b6575089b8ad19076742b6cd8a826438b295bbe.png" src="../../../_images/1ea683a7d495e745bde909755b6575089b8ad19076742b6cd8a826438b295bbe.png" />
 </div>
 </div>
 <p>It works!</p>
@@ -6991,7 +6991,7 @@ Coordinates:
 <section id="id1">
 <h2>Summary<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
 <p>In this notebook, I explore the detrending problem a little bit to find what other challenges affect detrending workflows.</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>We use simple techniques like tracking chunk sizes and number of tasks to isolate a few problems.</p></li>
 <li><p>Fixing those doesn’t improve the calculation, so we then examine the dask  graph  for a smaller artificial problem that replicates the main issues.</p></li>
 <li><p>This lets us trace the issue back to a serious <a class="reference external" href="https://github.com/dask/dask/issues/6916">regression</a> in dask.</p></li>
@@ -7001,7 +7001,7 @@ Coordinates:
 </section>
 <section id="future-work">
 <h2>Future work<a class="headerlink" href="#future-work" title="Permalink to this headline">#</a></h2>
-<ol>
+<ol class="arabic">
 <li><p>Some <a class="reference external" href="https://github.com/pydata/xarray/issues/6411">improvements</a> to <code class="docutils literal notranslate"><span class="pre">xarray.polyval</span></code> are needed so that it can handle a chunked coordinate as input.</p></li>
 <li><p>Dask could also detect that a giant 5GB chunk is constructed by this line in polyval:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">lhs</span> <span class="o">*</span> <span class="n">coeffs</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">degree_dim</span><span class="p">)</span>
