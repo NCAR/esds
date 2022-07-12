@@ -39,7 +39,7 @@ If you are interested in giving a talk or leading a discussion, please fill out 
 
 The AWSIG provides a communication forum for the exchange of ideas
 and experiences related to the operational aspects of CISL supported
-**analysis** resources and services (e.g. Casper,  JupyterHub,
+**analysis** resources and services (e.g. Casper, JupyterHub,
 GLADE, VirtualGL, etc.). This working group complements the more
 modeling/simulation focused [NCAR HPC User Group
 (NHUG)](https://arc.ucar.edu/knowledge_base/70549847).
@@ -47,7 +47,7 @@ modeling/simulation focused [NCAR HPC User Group
 The AWSIG Seeks to:
 
 - Connect the users & providers of CISL’s analysis resources at regular intervals,
-- Provide advice and feedback to CISL on the current state and future delivery of CISL analysis resources and services, 
+- Provide advice and feedback to CISL on the current state and future delivery of CISL analysis resources and services,
 - Promote the effective use of NCAR computing facilities by sharing experiences,
 - Collaborate to enhance productivity when using CISL resources,
 - Suggest new research and technology directions in scientific computing,
@@ -69,6 +69,7 @@ will have items to directly contribute, but also do a lot of listening
 and then implementing feedback.
 
 ### Membership & Participation
+
 The AWSIG is open to all users of NCAR’s HPC resources. Representatives
 from CISL’s Consulting Group and relevant resource providers will
 be in attendance. We desire that representatives from each scientific
@@ -78,8 +79,6 @@ lab attend as well.
 
 If you'd like to propose a discussion topic, or upvote a suggested topic,
 please use the spreadsheet [here](https://docs.google.com/spreadsheets/d/14BT79YxmWOHFVm1kV8TDYMGQvNPjKZvQwq2OHx9zXGY/edit?usp=sharing)
-
-
 
 ## [Office Hours](https://docs.google.com/document/d/1gIK0C-srceYmoYtgoODeLtuPQPL40iAHoI9DXWqfWP0/edit?usp=sharing)
 
