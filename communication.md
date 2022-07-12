@@ -76,6 +76,9 @@ lab attend as well.
 
 ### Want to suggest a topic for the AWSIG?
 
+If you'd like to propose a discussion topic, or upvote a suggested topic,
+please use the spreadsheet [here](https://docs.google.com/spreadsheets/d/14BT79YxmWOHFVm1kV8TDYMGQvNPjKZvQwq2OHx9zXGY/edit?usp=sharing)
+
 
 
 ## [Office Hours](https://docs.google.com/document/d/1gIK0C-srceYmoYtgoODeLtuPQPL40iAHoI9DXWqfWP0/edit?usp=sharing)
