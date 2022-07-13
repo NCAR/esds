@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2022-07-05T19:18:00.534582+00:00</updated>
+  <updated>2022-07-13T02:51:19.852417+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.25">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.26">ABlog</generator>
   <entry>
     <id>ncar.github.io/esds/posts/2020/Time/</id>
     <title>The Significance of Time</title>
