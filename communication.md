@@ -82,7 +82,7 @@ please use the spreadsheet [here](https://docs.google.com/spreadsheets/d/14BT79Y
 
 ## [Office Hours](https://ncar.github.io/esds/office-hours/)
 
-Have a question about Python/data analysis issues? Looking to get feedback on some project? Stop by our office hours! You do NOT need to have submitted a question in advance.
+Have a question about Python/data analysis issues? Looking to get feedback on some project? Set up an "office hours" appointment!
 
 Several ESDS members are prepared to answer your Python questions via 1-on-1 appointments. You can now select the ESDS member with the specialization best equiped for your question, find a time that works for you, and generate an appointment. Please also provide how you'd like to meet (in-person or virtual) and a brief description of your question.
 
