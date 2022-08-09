@@ -80,7 +80,7 @@ lab attend as well.
 If you'd like to propose a discussion topic, or upvote a suggested topic,
 please use the spreadsheet [here](https://docs.google.com/spreadsheets/d/14BT79YxmWOHFVm1kV8TDYMGQvNPjKZvQwq2OHx9zXGY/edit?usp=sharing)
 
-## [Office Hours](https://ncar.github.io/esds/office-hours/)
+## [Office Hours](office-hours)
 
 Have a question about Python/data analysis issues? Looking to get feedback on some project? Set up an "office hours" appointment!
 
