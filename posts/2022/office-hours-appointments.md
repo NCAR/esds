@@ -8,7 +8,7 @@ tags: office-hours
 
 The ESDS office hours are moving to an [appointment scheduling page](office-hours/).
 
-The previous office hours system was two one-hour blocks at the same time every week via a Zoom call where software engineers sit in and await scientists to show up and receive help. This was not ideal because some weeks noone showed up (which eventually leads to lower attrition of software engineers), and other weeks many people showed up and could not all receive the individualized help they needed. Also we had many software engineers and scientists with scheduling conflicts during these two static time blocks. You may have noticed these are no longer on the ESDS calendar.
+The previous office hours system was two one-hour blocks at the same time every week via a Zoom call where software engineers sit in and await scientists to show up and receive help. This was not ideal because some weeks no one showed up (which eventually leads to lower attrition of software engineers), and other weeks many people showed up and could not all receive the individualized help they needed. Also we had many software engineers and scientists with scheduling conflicts during these two static time blocks. You may have noticed these are no longer on the ESDS calendar.
 
 Now you can select a software engineer with a speciality most closely related to your question and find a time to meet with them. Or you could just find the next available software engineer to meet with.
 
