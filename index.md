@@ -18,6 +18,7 @@ about
 faq
 blog
 communication
+office-hours
 best-practices
 calendar
 projects
