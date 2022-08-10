@@ -80,13 +80,13 @@ lab attend as well.
 If you'd like to propose a discussion topic, or upvote a suggested topic,
 please use the spreadsheet [here](https://docs.google.com/spreadsheets/d/14BT79YxmWOHFVm1kV8TDYMGQvNPjKZvQwq2OHx9zXGY/edit?usp=sharing)
 
-## [Office Hours](https://docs.google.com/document/d/1gIK0C-srceYmoYtgoODeLtuPQPL40iAHoI9DXWqfWP0/edit?usp=sharing)
+## [Office Hours](office-hours)
 
-Have a question about Python/data analysis issues? Looking to get feedback on some project? Stop by our office hours! You do NOT need to have submitted a question in advance.
+Have a question about Python/data analysis issues? Looking to get feedback on some project? Set up an "office hours" appointment!
 
-Office Hours are hosted Mondays and Wednesdays from 3-4pm MT via Zoom. Join the [ESDS Activities calendar](https://calendar.google.com/calendar/u/1?cid=Y19uaHBwaGMwbW0wbWhtcGk3bWliamgydDVkY0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t) to see event updates and notifications.
+Several ESDS members are prepared to answer your Python questions via 1-on-1 appointments. You can now select the ESDS member with the specialization best equiped for your question, find a time that works for you, and generate an appointment. Please also provide how you'd like to meet (in-person or virtual) and a brief description of your question.
 
-Office hours are typically staffed by 1-4 ESDS members who are prepared to answer your questions. We’ll use breakout rooms to divide topics when necessary. If your question is about an error message you are raising in your workflow, help us help you by being ready to provide a copy of your dataset and code so we can reproduce your error. Depending on your question, we may be able to walk you through a solution or send you documentation/resources that address your question. See the [Office Hour Notes](https://docs.google.com/document/d/1gIK0C-srceYmoYtgoODeLtuPQPL40iAHoI9DXWqfWP0/edit?usp=sharing) for a summary of previous sessions.
+If your question is about an error message you are raising in your workflow, help us help you by being ready to provide a copy of your dataset and code so we can reproduce your error. Depending on your question, we may be able to walk you through a solution or send you documentation/resources that address your question. See the [Office Hour Notes](https://docs.google.com/document/d/1gIK0C-srceYmoYtgoODeLtuPQPL40iAHoI9DXWqfWP0/edit?usp=sharing) for a summary of previous sessions.
 
 ## [Project Pythia](https://projectpythia.org/)
 

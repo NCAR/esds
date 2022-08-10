@@ -101,3 +101,8 @@ div.timeline div.entry.left::after {
 div.timeline div.entry.right::after {
   left: -0.5em;
 }
+
+/* Expand top nav bar */
+.col-lg-9 {
+  max-width: 87%;
+}

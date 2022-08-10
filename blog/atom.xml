@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2022-07-18T20:01:25.811044+00:00</updated>
+  <updated>2022-08-10T14:53:24.516286+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.26">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.28">ABlog</generator>
   <entry>
     <id>ncar.github.io/esds/posts/2020/Time/</id>
     <title>The Significance of Time</title>
@@ -20,9 +20,9 @@
 </content>
     <link href="ncar.github.io/esds/posts/2020/Time/" rel="alternate"/>
     <summary>Time is relative, as my coworker Anderson likes to remind me every time manipulating this coordinate proves to be relatively difficult.This post is to be the first in a series of my struggles coming from an atmospheric science background and transitioning into software. My hope is that if I detail pain points and headaches I encounter along my journey, you won’t have to.</summary>
-    <category term="xarray" label="xarray"/>
-    <category term="cftime" label="cftime"/>
     <category term="calendars" label="calendars"/>
+    <category term="cftime" label="cftime"/>
+    <category term="xarray" label="xarray"/>
     <published>2019-08-28T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -77,8 +77,8 @@ churning out technology, this group would also serve as an example to the rest o
 NCAR on how (and why) to use modern best practices (GitHub, continuous integration,
 test-driven development, etc.) for scientific software development. …and for
 science itself!</summary>
-    <category term="opensource" label="open source"/>
     <category term="opendevelopment" label="open development"/>
+    <category term="opensource" label="open source"/>
     <published>2019-12-09T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -117,8 +117,8 @@ results!”), all I could find were tutorials for frontend developers.
 And if you aren’t an HTML expert, or already have experience with
 Flask or Django, teaching templating in those contexts can actually
 be more confusing than illuminating.</summary>
-    <category term="templating" label="templating"/>
     <category term="jinja2" label="jinja2"/>
+    <category term="templating" label="templating"/>
     <published>2020-05-08T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -136,10 +136,10 @@ be more confusing than illuminating.</summary>
 </content>
     <link href="ncar.github.io/esds/posts/2020/writing-multiple-netcdf-files-in-parallel-with-xarray-and-dask/" rel="alternate"/>
     <summary>A typical computation workflow with xarray consists of:reading one or more netCDF files into an xarray dataset backed by dask using xr.open_mfdataset() or xr.open_dataset(chunks=...),</summary>
+    <category term="dask" label="dask"/>
+    <category term="netcdf" label="netcdf"/>
     <category term="python" label="python"/>
     <category term="xarray" label="xarray"/>
-    <category term="netcdf" label="netcdf"/>
-    <category term="dask" label="dask"/>
     <published>2020-06-29T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -177,9 +177,9 @@ What should I do?&lt;/p&gt;
     <summary>Here is a compilation of questions and issues that arose during the first session of the Python Tutorial Seminar Series. Hopefully all attendees feel that their issues are addressed here.Q. I am having issues running the command:
 curl -kO https://sundowner.colorado.edu/weather/atoc8/wxobs20170821.txt.
 What should I do?</summary>
-    <category term="python-tutorial-series" label="python-tutorial-series"/>
     <category term="faq" label="faq"/>
     <category term="python" label="python"/>
+    <category term="python-tutorial-series" label="python-tutorial-series"/>
     <published>2020-10-20T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -196,9 +196,9 @@ What should I do?</summary>
 </content>
     <link href="ncar.github.io/esds/posts/2020/python-tutorial-faq-part-2/" rel="alternate"/>
     <summary>Here is a compilation of questions and issues that arose during the second session of the Python Tutorial Seminar Series, on creating a data dictionary. After this first short series, these FAQ sections will be added to the Xdev tutorial websiteQ. Why is list[0:10] the first 10 elements, not 11?</summary>
-    <category term="python-tutorial-series" label="python-tutorial-series"/>
     <category term="faq" label="faq"/>
     <category term="python" label="python"/>
+    <category term="python-tutorial-series" label="python-tutorial-series"/>
     <published>2020-11-05T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -215,9 +215,9 @@ What should I do?</summary>
 </content>
     <link href="ncar.github.io/esds/posts/2020/python-tutorial-faq-part-3/" rel="alternate"/>
     <summary>Here is a compilation of questions from the third session of the Python Tutorial Seminar Series which covered writing functions as well as f-string formatting.Q. Seeing how 2/2 returns 1.0 instead of 1, is the numeric type automatically determined from the inputs or do you have to force it?</summary>
-    <category term="python-tutorial-series" label="python-tutorial-series"/>
     <category term="faq" label="faq"/>
     <category term="python" label="python"/>
+    <category term="python-tutorial-series" label="python-tutorial-series"/>
     <published>2020-11-18T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -251,8 +251,8 @@ What should I do?</summary>
 </content>
     <link href="ncar.github.io/esds/posts/2021/your-first-package-python-tutorial-faq/" rel="alternate"/>
     <summary>Here is a compilation of questions from the fourth and fifth sessions (“Your First Package”) of the Python Tutorial Seminar Series which covered refactoring code into seperate modules and packages, using an external built-in module (math), and how to publish your packageQ. Should we add __init__.py to .gitignore?</summary>
-    <category term="python-tutorial-series" label="python-tutorial-series"/>
     <category term="faq" label="faq"/>
+    <category term="python-tutorial-series" label="python-tutorial-series"/>
     <published>2021-02-19T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -286,9 +286,9 @@ What should I do?</summary>
 </content>
     <link href="ncar.github.io/esds/posts/2021/jupyter-notebooks-faq/" rel="alternate"/>
     <summary>Here is a compilation of questions and issues that arose during the Jupyter Notebooks session of the Python Tutorial Seminar Series.Q. I installed Miniconda but it doesn’t seem to be working. conda is not a recognized command. What should I do?</summary>
-    <category term="python-tutorial-series" label="python-tutorial-series"/>
     <category term="faq" label="faq"/>
     <category term="jupyter" label="jupyter"/>
+    <category term="python-tutorial-series" label="python-tutorial-series"/>
     <published>2021-03-03T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -340,9 +340,9 @@ What should I do?</summary>
 </content>
     <link href="ncar.github.io/esds/posts/2021/numpy-faq/" rel="alternate"/>
     <summary>Here is a compilation of questions and issues that arose during the Numpy session of the Python Tutorial Seminar Series.The live video recording of this content can be found here.</summary>
-    <category term="python-tutorial-series" label="python-tutorial-series"/>
     <category term="faq" label="faq"/>
     <category term="numpy" label="numpy"/>
+    <category term="python-tutorial-series" label="python-tutorial-series"/>
     <published>2021-03-19T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -359,9 +359,9 @@ What should I do?</summary>
 </content>
     <link href="ncar.github.io/esds/posts/2021/esds-blog/" rel="alternate"/>
     <summary>Last week, there was a town hall focused on gathering input on the Earth System Data Science initiative at NCAR. The meeting began with an introduction about the initiative, the vision, goals, and how the team is planning to start working toward these goals.The Question/Answer portion of the town hall was very informative and brought up some great topics for discussion. They have been collected from both the chat and Google Doc, sorted by category.</summary>
-    <category term="townhall" label="townhall"/>
     <category term="cgd" label="cgd"/>
     <category term="questions" label="questions"/>
+    <category term="townhall" label="townhall"/>
     <published>2021-03-26T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -378,9 +378,9 @@ What should I do?</summary>
 </content>
     <link href="ncar.github.io/esds/posts/2021/matplotlib-faq/" rel="alternate"/>
     <summary>Here is a compilation of questions and issues that arose during the Matplotlib session of the Python Tutorial Seminar Series.Q. Are all the colormaps perceptually ordered?</summary>
-    <category term="python-tutorial-series" label="python-tutorial-series"/>
     <category term="faq" label="faq"/>
     <category term="matplotlib" label="matplotlib"/>
+    <category term="python-tutorial-series" label="python-tutorial-series"/>
     <published>2021-03-30T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -397,8 +397,8 @@ What should I do?</summary>
 </content>
     <link href="ncar.github.io/esds/posts/2021/software-citation/" rel="alternate"/>
     <summary>One of the questions that came up during the ESDS Town Hall was how do scientists/developers get credit toward their efforts in developing open-source code? Software that is used by the wider community should received the acknowledgment and recognition it deserves.Data and academic publication citations have become popular in the literature, but often times, software is not cited… which can be arguably just as important to the work as the data.</summary>
-    <category term="open-science" label="open-science"/>
     <category term="citation" label="citation"/>
+    <category term="open-science" label="open-science"/>
     <category term="software" label="software"/>
     <published>2021-04-02T00:00:00+00:00</published>
   </entry>
@@ -416,8 +416,8 @@ What should I do?</summary>
 </content>
     <link href="ncar.github.io/esds/posts/2021/casper_pbs_dask/" rel="alternate"/>
     <summary>Casper will complete a transition from Slurm to the PBS Pro workload manager on April 7, 2021. This has implications for how to spin up a Dask cluster, including via the NCAR Jupyterhub.Below is an example script suitable for the new configuration using the PBSCluster function from dask_jobqueue. Note that the ncar_jobqueue package requires updating to work with the new configuration.</summary>
-    <category term="jupyterhub" label="jupyterhub"/>
     <category term="dask" label="dask"/>
+    <category term="jupyterhub" label="jupyterhub"/>
     <published>2021-04-06T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -434,9 +434,9 @@ What should I do?</summary>
 </content>
     <link href="ncar.github.io/esds/posts/2021/intake_esm_dask/" rel="alternate"/>
     <summary>This past week, NCAR CISL updated the Casper Node to use PBS instead of Slurm for scheduling jobs. This led a post in which an example of spinning up dask clusters on the new configuration. This was also an opportunity to dig into dask, and try applying it to a sample task, specifically looking at ecosystem variables in the CESM-LE dataset, using notebooks included in Matt Long’s krill-cesm-le repository, modified by Kristen Krumhardt.Here, we spin up our dask cluster. At first, running this notebook resulted in a killed worker error. After further expection, we noticed that additional resources would be needed to read in the notebook since the data are so large (on the order of ~1-2 TB). Increasing the individual worker to a higher amount (ex. 256 GB) solved the issue. Scale up to as many workers as you think are neccessary for the calculation (this may take some trial and error).</summary>
+    <category term="cesm" label="cesm"/>
     <category term="dask" label="dask"/>
     <category term="intake" label="intake"/>
-    <category term="cesm" label="cesm"/>
     <published>2021-04-09T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -470,8 +470,8 @@ What should I do?</summary>
 </content>
     <link href="ncar.github.io/esds/posts/2021/ncar-jobqueue-example/" rel="alternate"/>
     <summary>Last week, we added posts detailing how to configure Dask using the new PBS scheduler on Casper. In this week’s example, we provide an example of the recent updates to ncar-jobqueue, added by Anderson Banihirwe, which allow users to easily configure dask on Casper without having to add many extra steps.You must update the package to use the newest updates. You can update using conda!</summary>
-    <category term="jupyterhub" label="jupyterhub"/>
     <category term="dask" label="dask"/>
+    <category term="jupyterhub" label="jupyterhub"/>
     <category term="ncar" label="ncar"/>
     <published>2021-04-15T00:00:00+00:00</published>
   </entry>
@@ -489,9 +489,9 @@ What should I do?</summary>
 </content>
     <link href="ncar.github.io/esds/posts/2021/multiple_index_xarray_xoak/" rel="alternate"/>
     <summary>This week, there a post within the Zulip regarding how to deal with indexing CAM-SE data. The tricky part here is that is an unstructured grid, where there is only one column to the data, ncol.Here is an example of the dataset we are working with. Notice that both lat and lon have the same dimension, ncol.</summary>
+    <category term="index" label="index"/>
     <category term="xarray" label="xarray"/>
     <category term="xoak" label="xoak"/>
-    <category term="index" label="index"/>
     <published>2021-04-23T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -516,7 +516,7 @@ What should I do?</summary>
     <title>How to Use xarray.map_blocks for Vertical Interpolation of a 3D Field</title>
     <updated>2021-04-28T00:00:00+00:00</updated>
     <author>
-      <name>Max Grover</name>
+      <name>Matt Long</name>
     </author>
     <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
 &lt;p&gt;Within this example, we cover how to use &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;xarray.map_blocks&lt;/span&gt;&lt;/code&gt; to calculate the mixed-layer depth within the CESM POP model output.&lt;/p&gt;
@@ -526,9 +526,9 @@ What should I do?</summary>
 </content>
     <link href="ncar.github.io/esds/posts/2021/map_blocks_example/" rel="alternate"/>
     <summary>Within this example, we cover how to use xarray.map_blocks to calculate the mixed-layer depth within the CESM POP model output.This calculation is “embarassingly parallel” such that each calculation is done within a single a column. The calculation should be easily computed within each column across the model domain. This is where map_blocks can be used to improve the performance of this metric.MLD example plot</summary>
-    <category term="xarray" label="xarray"/>
     <category term="dask" label="dask"/>
     <category term="pop" label="pop"/>
+    <category term="xarray" label="xarray"/>
     <published>2021-04-28T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -581,9 +581,9 @@ What should I do?</summary>
 </content>
     <link href="ncar.github.io/esds/posts/2021/intake_cmip6_debug/" rel="alternate"/>
     <summary>This post was motivated by a post from Steve Yeager @sgyeager, who ran into an error when attempting to read in CMIP6 data via intake-esm.For those who are unfamiliar with intake-esm, be sure to read over the documentation! The user guide even includes an entire portion of their site on looking at CMIP6 data. These resources would be a great place to start.</summary>
-    <category term="intake" label="intake"/>
     <category term="cmip6" label="cmip6"/>
     <category term="debug" label="debug"/>
+    <category term="intake" label="intake"/>
     <published>2021-05-14T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -617,8 +617,8 @@ What should I do?</summary>
 </content>
     <link href="ncar.github.io/esds/posts/2021/dask-summit-takeaway/" rel="alternate"/>
     <summary>Cloud optimized datasets help improve speed of analysisEntire 4 TB datasets open up in a few seconds</summary>
-    <category term="dask" label="dask"/>
     <category term="conference" label="conference"/>
+    <category term="dask" label="dask"/>
     <category term="open-science" label="open-science"/>
     <published>2021-05-28T00:00:00+00:00</published>
   </entry>
@@ -637,8 +637,8 @@ What should I do?</summary>
 </content>
     <link href="ncar.github.io/esds/posts/2021/ecgtools-history-files-example/" rel="alternate"/>
     <summary>As mentioned in a couple of ESDS posts (intake-esm and Dask, debugging intake-esm), intake-esm can be a helpful tool to work with when dealing with model data, especially CESM. One of the requirements for using intake-esm is having a catalog which is comprised of two pieces:A table of the relevant metadata (ex. file path, variable, stream, etc.)</summary>
-    <category term="intake" label="intake"/>
     <category term="cesm" label="cesm"/>
+    <category term="intake" label="intake"/>
     <published>2021-06-04T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -672,9 +672,9 @@ What should I do?</summary>
 </content>
     <link href="ncar.github.io/esds/posts/2021/graphviz_example/" rel="alternate"/>
     <summary>A common initial task when working with a new dataset is figuring out what data is available. This is especially true when working with climate ensembles with several components and time-frequency output (ex. Community Earth System Model Large Ensemble, CESM-LE). Here, we will examine different methods of investigating this catalogHere, we will use intake-esm and graphviz, which can be installed using the following (including jupyterlab too!)</summary>
-    <category term="visualization" label="visualization"/>
-    <category term="intake" label="intake"/>
     <category term="cesm" label="cesm"/>
+    <category term="intake" label="intake"/>
+    <category term="visualization" label="visualization"/>
     <published>2021-06-11T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -692,8 +692,8 @@ What should I do?</summary>
     <link href="ncar.github.io/esds/posts/2021/cesm-workshop-2021-diagnostics/" rel="alternate"/>
     <summary>Every year, NCAR holds the Community Earth System Model (CESM) Workshop which brings together the CESM community to discuss relavant updates from the working groups as well as featured speakers and cross-working group discussions.During the Software Engineering Working Group (SEWG) session, following a variety of talks, there was an open discussion regarding the current state of CESM diagnostics and future plans for collaboration.diagnostics_image</summary>
     <category term="cesm" label="cesm"/>
-    <category term="diagnostics" label="diagnostics"/>
     <category term="conference" label="conference"/>
+    <category term="diagnostics" label="diagnostics"/>
     <published>2021-06-17T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -711,10 +711,10 @@ What should I do?</summary>
 </content>
     <link href="ncar.github.io/esds/posts/2021/model_documentation_jupyterbook/" rel="alternate"/>
     <summary>A common step to any project is documenting your data and your data workflow. Fortunately, open tools in the scientific python ecosystem make that much easier! In this example, we will cover creating your github repo, creating the catalog, visualizing the catalog, and generating a static webpage you can share with collaborators!This week’s post is quite detailed, so just a warning! If you would like to look at the finished product, check out the followingCESM book page</summary>
-    <category term="jupyter" label="jupyter"/>
     <category term="cesm" label="cesm"/>
-    <category term="intake" label="intake"/>
     <category term="documentation" label="documentation"/>
+    <category term="intake" label="intake"/>
+    <category term="jupyter" label="jupyter"/>
     <published>2021-06-25T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -785,8 +785,8 @@ What should I do?</summary>
     <link href="ncar.github.io/esds/posts/2021/scipy-2021-takeaways/" rel="alternate"/>
     <summary>A couple weeks ago, I had an opportunity to (virtually) attend the Scientific Computing with Python (SciPy) Conference! The conference consisted of three primary sections:Tutorials (Monday/Tuesday)</summary>
     <category term="conference" label="conference"/>
-    <category term="scipy" label="scipy"/>
     <category term="open-source" label="open-source"/>
+    <category term="scipy" label="scipy"/>
     <published>2021-07-26T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -804,9 +804,9 @@ What should I do?</summary>
 </content>
     <link href="ncar.github.io/esds/posts/2021/project-pythia-overview/" rel="alternate"/>
     <summary>Last year, the Project Pythia team was formed to “provide a public, web-accessible training resource that will help educate current, and aspiring, earth scientists to more effectively use both the Scientific Python Ecosystem and Cloud Computing to make sense of huge volumes of numerical scientific data.”The team is formally a collaboration between three main organizations, although contributors come from throughout the scientific Python community:Pythia Portal</summary>
+    <category term="education" label="education"/>
     <category term="pythia" label="pythia"/>
     <category term="training" label="training"/>
-    <category term="education" label="education"/>
     <published>2021-07-30T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -824,9 +824,9 @@ What should I do?</summary>
 </content>
     <link href="ncar.github.io/esds/posts/2021/intake-cesm2-le-glade-example/" rel="alternate"/>
     <summary>In mid June, the CESM2 Large Ensemble dataset was made available to the public. This model was run in collaboration with the IBS Center for Climate Physics and the National Center for Atmospheric Research This dataset includes 100 ensemble members, at one degree spatial resolution, with each ensemble member including data from 1850 to 2100. If you are interested in learning more about how this ensemble was setup, be sure to check out the main webpage or read the pre-print of Rodgers et al. 2021 which describes this dataset in detail.One of these challenges with this dataset is dealing with the massive amount of output. The data are available through the NCAR Climate Data Gateway and via the IBS OpenDAP Server. There is also a subset of the dataset available on the GLADE file system on NCAR HPC resources available within the directory /glade/campaign/cgd/cesm/CESM2-LE/timeseries/.intake-esm catalogs</summary>
-    <category term="intake" label="intake"/>
     <category term="cesm" label="cesm"/>
     <category term="cesm2-le" label="cesm2-le"/>
+    <category term="intake" label="intake"/>
     <published>2021-08-06T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -843,8 +843,8 @@ What should I do?</summary>
 </content>
     <link href="ncar.github.io/esds/posts/2021/cesm-datashader/" rel="alternate"/>
     <summary>This week, during Xdev office hours, Steve Yeager raised a question regarding plotting unstructured grid data within Python. He was interested in plotting output from the Community Atmosphere Model, which supports unstructured grids, essentially a combination of triangles allowing for higher resolution in certain parts of the domain. This can be adventageous when wanting to achieve the benefits of high resolution within the primary domain, while maintaining the global scale of the model. This week, NCAR Science tweeted a great explanation of how revolutionary this capability is in the context of resolving processes over Greenland.Unstructured grids can be difficult to plot directly within Python since they do not follow the typical lat, lon (x, y) convention. There is some preprocessing that needs to be applied before plotting.</summary>
-    <category term="unstructuredgrids" label="unstructured grids"/>
     <category term="cesm" label="cesm"/>
+    <category term="unstructuredgrids" label="unstructured grids"/>
     <category term="visualization" label="visualization"/>
     <published>2021-08-13T00:00:00+00:00</published>
   </entry>
@@ -880,9 +880,9 @@ What should I do?</summary>
     <link href="ncar.github.io/esds/posts/2021/intake-esm-holoviews-diagnostics/" rel="alternate"/>
     <summary>In previous weeks, we have looked at building Intake-ESM catalogs from history files and visualizing CESM output using Holoviews and Datashader, but this week we are putting together a few of those pieces to visualize a comparison between model runs.One of the first ESDS blog posts looked at building an interactive dashboard to look at plots, using high resolution ocean model output as the dataset. One of the limitations of that approach is that the images are static - we are pulling in pngs, and rending on the page, as opposed to more interactive options. In this example, we will read in data generated from ecgtools, from a directory only accessible via NCAR’s high performance computing center.</summary>
     <category term="cesm" label="cesm"/>
+    <category term="diagnostics" label="diagnostics"/>
     <category term="intake" label="intake"/>
     <category term="visualization" label="visualization"/>
-    <category term="diagnostics" label="diagnostics"/>
     <published>2021-08-20T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -899,9 +899,9 @@ What should I do?</summary>
 </content>
     <link href="ncar.github.io/esds/posts/2021/intake-obs-cesm2le-comparison/" rel="alternate"/>
     <summary>Comparing models and observations is a critical component of climate diagnostic packages. This process can be challenging though - given the number of observational datasets to compare against, and the difference in spatiotemporal resolutions. In the previous iteration of the diagnostics package used for atmospheric data from the Community Earth System Model (CESM), they used pre-computed, observational datasets stored in a directory on the GLADE filesystem (/glade/p/cesm/amwg/amwg_diagnostics/obs_data)Within this example, we walk though generating an intake-esm catalog from the observational data, reading in CESM data, and compare models and observations</summary>
+    <category term="cesm2-le" label="cesm2-le"/>
     <category term="intake" label="intake"/>
     <category term="observations" label="observations"/>
-    <category term="cesm2-le" label="cesm2-le"/>
     <published>2021-08-27T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -936,10 +936,10 @@ What should I do?</summary>
 </content>
     <link href="ncar.github.io/esds/posts/2021/regrid-observations-pop-grid/" rel="alternate"/>
     <summary>In this example, we will cover how to leverage a useful package from the Pangeo Ecosystem, xESMF. One important note when using this package, is make sure you are using the most up-to-date documentation/version, a few years ago, development moved to the pangeo-data branch of the package, installable using the following:For this example, we will download a file from the World Ocean Atlas, which includes a variety of ocean observations assembled from the World Ocean Database.</summary>
-    <category term="diagnostics" label="diagnostics"/>
-    <category term="observations" label="observations"/>
     <category term="cesm" label="cesm"/>
+    <category term="diagnostics" label="diagnostics"/>
     <category term="intake" label="intake"/>
+    <category term="observations" label="observations"/>
     <published>2021-09-10T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -956,11 +956,11 @@ What should I do?</summary>
 </content>
     <link href="ncar.github.io/esds/posts/2021/benchmarking-history-timeseries-intake/" rel="alternate"/>
     <summary>In this example, we will look at how long reading data from the Community Earth System Model (CESM), applying calculations, and visualizing the output takes using the following packages:ecgtools</summary>
+    <category term="benchmark" label="benchmark"/>
+    <category term="cesm" label="cesm"/>
+    <category term="dask" label="dask"/>
     <category term="ecgtools" label="ecgtools"/>
     <category term="intake" label="intake"/>
-    <category term="dask" label="dask"/>
-    <category term="cesm" label="cesm"/>
-    <category term="benchmark" label="benchmark"/>
     <published>2021-09-17T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -978,10 +978,10 @@ What should I do?</summary>
 </content>
     <link href="ncar.github.io/esds/posts/2021/jupyter-based-diagnostics-overview/" rel="alternate"/>
     <summary>Typically, diagnostics packages are written with following structure, using script-based workflowsRead files and do some preprocessingcesm-marbl-book-overview</summary>
-    <category term="diagnostics" label="diagnostics"/>
-    <category term="jupyter" label="jupyter"/>
-    <category term="intake" label="intake"/>
     <category term="cesm" label="cesm"/>
+    <category term="diagnostics" label="diagnostics"/>
+    <category term="intake" label="intake"/>
+    <category term="jupyter" label="jupyter"/>
     <category term="visualization" label="visualization"/>
     <published>2021-09-24T00:00:00+00:00</published>
   </entry>
@@ -1018,10 +1018,10 @@ What should I do?</summary>
 </content>
     <link href="ncar.github.io/esds/posts/2021/kay-et-al-cesm2-le/" rel="alternate"/>
     <summary>This Jupyter Notebook demonstrates how one might use the NCAR Community Earth System Model v2 (CESM2) Large Ensemble (CESM2-LE) data hosted on AWS S3. The notebook shows how to reproduce figure 2 from the Kay et al. (2015) paper describing the CESM LENS dataset (doi:10.1175/BAMS-D-13-00255.1), with the LENS2 dataset.There was a previous notebook which explored this use case, put together by Joe Hamman and Anderson Banihirwe, accessible on the Pangeo Gallery using this link. The specific figure we are replicating is shown below.cesm1-lens</summary>
-    <category term="intake" label="intake"/>
-    <category term="cesm2-le" label="cesm2-le"/>
     <category term="cesm" label="cesm"/>
+    <category term="cesm2-le" label="cesm2-le"/>
     <category term="diagnostics" label="diagnostics"/>
+    <category term="intake" label="intake"/>
     <category term="visualization" label="visualization"/>
     <published>2021-10-08T00:00:00+00:00</published>
   </entry>
@@ -1041,8 +1041,8 @@ What should I do?</summary>
     <link href="ncar.github.io/esds/posts/2021/xarray-wrf-example/" rel="alternate"/>
     <summary>The typical data workflow within the Python ecosystem when working with Weather Research and Forecasting (WRF) data is to use the wrf-python package! Traditionally, it can be difficult to utilize the xarray data model with WRF data, due to a few challenges:WRF data not being CF-compliant (which makes it hard for xarray to properly construct the dataset out of the box using xr.open_dataset)xarray-wrf-gif</summary>
     <category term="WRF" label="WRF"/>
-    <category term="visualization" label="visualization"/>
     <category term="dask" label="dask"/>
+    <category term="visualization" label="visualization"/>
     <published>2021-10-15T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -1059,9 +1059,9 @@ What should I do?</summary>
 </content>
     <link href="ncar.github.io/esds/posts/2021/intake-esm-derived-variables/" rel="alternate"/>
     <summary>Last week, Anderson Banihirwe added a new feature to intake-esm, enabling users to add “derived variables” to catalogs! This is an exciting addition, and although this has not been included in a release yet, you are welcome to test out the functionality!Keep in mind that this is an initial prototype and the API is likely to change.</summary>
-    <category term="intake" label="intake"/>
-    <category term="diagnostics" label="diagnostics"/>
     <category term="cesm" label="cesm"/>
+    <category term="diagnostics" label="diagnostics"/>
+    <category term="intake" label="intake"/>
     <published>2021-10-22T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -1096,11 +1096,11 @@ What should I do?</summary>
 </content>
     <link href="ncar.github.io/esds/posts/2021/esds-update-october-2021/" rel="alternate"/>
     <summary>October has been an active month! There were a variety of talks, a variety of answered Python questions during office hours, and a Python tutorial!Check out the following ESDS update for the month of October 2021.october-2021-office-hours</summary>
-    <category term="update" label="update"/>
-    <category term="faq" label="faq"/>
-    <category term="xarray" label="xarray"/>
     <category term="dask" label="dask"/>
+    <category term="faq" label="faq"/>
     <category term="matplotlib" label="matplotlib"/>
+    <category term="update" label="update"/>
+    <category term="xarray" label="xarray"/>
     <published>2021-10-28T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -1135,9 +1135,9 @@ What should I do?</summary>
 </content>
     <link href="ncar.github.io/esds/posts/2021/weather-station-data-preprocess/" rel="alternate"/>
     <summary>There is a weather station located at the Mesa Lab, situated along the Foothills of the Rockies in Boulder, Colorado!By the end of this post, you will be able to plot an interactive visualization of the weather data collected at the Mesa Lab, as shown below!mesa_lab_gif</summary>
-    <category term="xarray" label="xarray"/>
-    <category term="time" label="time"/>
     <category term="preprocess" label="preprocess"/>
+    <category term="time" label="time"/>
+    <category term="xarray" label="xarray"/>
     <published>2021-11-12T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -1156,9 +1156,9 @@ What should I do?</summary>
     <link href="ncar.github.io/esds/posts/2021/yearly-averages-xarray/" rel="alternate"/>
     <summary>A common component of people’s workflows is calculating annual averages, which helps reduce the frequency of datasets, making them easier to work with. Two of the data frequencies you may be looking to convert to annual include:Daily (365 days in each year)comparison</summary>
     <category term="cesm" label="cesm"/>
+    <category term="cesm2-le" label="cesm2-le"/>
     <category term="diagnostics" label="diagnostics"/>
     <category term="xarray" label="xarray"/>
-    <category term="cesm2-le" label="cesm2-le"/>
     <published>2021-11-19T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -1176,11 +1176,11 @@ What should I do?</summary>
 </content>
     <link href="ncar.github.io/esds/posts/2021/esds-update-november-2021/" rel="alternate"/>
     <summary>November was an active month! There were a couple of ESDS Forum talks, a variety of answered Python questions during office hours, and a Python tutorial!Check out the following ESDS update for the month of November 2021.november-2021-office-hours</summary>
-    <category term="update" label="update"/>
-    <category term="faq" label="faq"/>
-    <category term="xarray" label="xarray"/>
     <category term="dask" label="dask"/>
+    <category term="faq" label="faq"/>
     <category term="matplotlib" label="matplotlib"/>
+    <category term="update" label="update"/>
+    <category term="xarray" label="xarray"/>
     <published>2021-12-02T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -1197,9 +1197,9 @@ What should I do?</summary>
 </content>
     <link href="ncar.github.io/esds/posts/2021/intake-esm-tutorial-2021/" rel="alternate"/>
     <summary>The Project Pythia Python Tutorial Seminar Series continues with the Intake-ESM Tutorial on Wednesday, December 8 at 1 PM Mountain Standard Time. This session will be led by Max Grover.The content for this tutorial is hosted in the .ipynb notebook file(s) within the tutorial directory of this repository.</summary>
+    <category term="intake" label="intake"/>
     <category term="python-tutorial-series" label="python-tutorial-series"/>
     <category term="xarray" label="xarray"/>
-    <category term="intake" label="intake"/>
     <published>2021-12-02T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -1234,10 +1234,10 @@ What should I do?</summary>
 </content>
     <link href="ncar.github.io/esds/posts/2022/sparse-PFT-gridding/" rel="alternate"/>
     <summary>An underappreciated feature of Xarray + Dask is the ability to plug in different array types. Usually we work with Xarray wrapping a Dask array which in turn uses NumPy arrays for each block; or just Xarray wrapping NumPy arrays directly. NumPy arrays are dense in-memory arrays. Other array types exist:sparse for sparse arrays</summary>
-    <category term="sparse" label="sparse"/>
     <category term="CLM" label="CLM"/>
     <category term="PFT" label="PFT"/>
     <category term="dask" label="dask"/>
+    <category term="sparse" label="sparse"/>
     <published>2022-02-24T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -1262,7 +1262,7 @@ What should I do?</summary>
     <title>Batch Processing Jupyter Notebooks with Papermill</title>
     <updated>2022-03-17T00:00:00+00:00</updated>
     <author>
-      <name>Matthew Long</name>
+      <name>Anderson Banihirwe</name>
     </author>
     <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://jupyter.org/"&gt;Jupyter notebooks&lt;/a&gt; are really good for doing the heavy lifting of data analysis by:&lt;/p&gt;
@@ -1272,11 +1272,11 @@ What should I do?</summary>
 </content>
     <link href="ncar.github.io/esds/posts/2022/batch-processing-notebooks-with-papermill/" rel="alternate"/>
     <summary>Jupyter notebooks are really good for doing the heavy lifting of data analysis by:Allowing you to showcase your work in a single place. You can see the complete “paper trail” of what was done. This includes the code, results, visuals and the narrative accompanying your analysis.</summary>
-    <category term="python" label="python"/>
+    <category term="automation" label="automation"/>
     <category term="jupyter" label="jupyter"/>
     <category term="notebooks" label="notebooks"/>
     <category term="papermill" label="papermill"/>
-    <category term="automation" label="automation"/>
+    <category term="python" label="python"/>
     <published>2022-03-17T00:00:00+00:00</published>
   </entry>
   <entry>
