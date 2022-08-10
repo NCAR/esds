@@ -272,9 +272,19 @@ commentsRunWhenDOMLoaded(addUtterances);
     
     <div class="toc-item">
       
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
 
 <nav id="bd-toc-nav">
-    
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tips-for-building-the-site-locally">
+   Tips for Building the Site Locally
+  </a>
+ </li>
+</ul>
+
 </nav>
     </div>
     
@@ -295,6 +305,23 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h1><a class="reference external" href="https://ncar.github.io/esds/">ncar.github.io/esds</a><a class="headerlink" href="#ncar-github-io-esds" title="Permalink to this headline">#</a></h1>
 <p><img alt="GitHub Workflow Status (branch)" src="https://img.shields.io/github/workflow/status/NCAR/esds/deploy-website/main?logo=github&amp;style=for-the-badge" /></p>
 <p>Repository for hosting material related to Earth System Data Science Initiative efforts. The contents are posted at <a class="reference external" href="https://ncar.github.io/esds/">ncar.github.io/esds</a>.</p>
+<section id="tips-for-building-the-site-locally">
+<h2>Tips for Building the Site Locally<a class="headerlink" href="#tips-for-building-the-site-locally" title="Permalink to this headline">#</a></h2>
+<p>To preview your changes to the site, you will have to build the site locally.
+To do that you need to:</p>
+<ol class="arabic simple">
+<li><p>Create the conda environment for this repository with <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">env</span> <span class="pre">create</span> <span class="pre">-f</span> <span class="pre">environment.yml</span></code>.</p></li>
+<li><p>Activate your environment with <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">esds-blog</span></code></p></li>
+<li><p>And build the site with <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code></p></li>
+</ol>
+<p>At this point you can preview your built site with your prefered method. Here are some options:</p>
+<ol class="arabic simple">
+<li><p>Navigating to <code class="docutils literal notranslate"><span class="pre">_build/index.html</span></code> and opening in your prefered Browser (often possible with a right click).</p></li>
+<li><p>View via localhost by using Python <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">SimpleHTTPServer</span></code></p></li>
+<li><p>Or view via localhost by using Node js with <code class="docutils literal notranslate"><span class="pre">npm</span> <span class="pre">install</span> <span class="pre">http-server</span> <span class="pre">-g</span></code> and <code class="docutils literal notranslate"><span class="pre">http-server</span> <span class="pre">name-of-file</span></code></p></li>
+</ol>
+<p><strong>NOTE:</strong> If you added a file, it must be represented in the Table of Contents <code class="docutils literal notranslate"><span class="pre">toctree</span></code> within the <code class="docutils literal notranslate"><span class="pre">index.md</span></code> file to be built with the site.</p>
+</section>
 </section>
 
 <div class="section">
