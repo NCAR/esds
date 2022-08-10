@@ -14,6 +14,6 @@ Now you can select a software engineer with a speciality most closely related to
 
 A good amount of time went into researching the scheduling service, securing funding for it, and getting approval from UCAR security, so we are very pleased that the service is now LIVE!
 
-Since this is still new please be patient and let me know if you have any difficulty using the service.
+Since this is still new please be patient and let us know if you have any difficulty using the service.
 
-If you'd like to be added as a potential office hours "staff" please reach out, and we'll get you set up. 
+If you'd like to be added as a potential office hours "staff" please reach out, and we'll get you set up.
