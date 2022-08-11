@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2022-08-10T20:29:31.119112+00:00</updated>
+  <updated>2022-08-11T04:31:39.529421+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.28">ABlog</generator>
@@ -1262,7 +1262,7 @@ What should I do?</summary>
     <title>Batch Processing Jupyter Notebooks with Papermill</title>
     <updated>2022-03-17T00:00:00+00:00</updated>
     <author>
-      <name>Matthew Long</name>
+      <name>Anderson Banihirwe</name>
     </author>
     <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://jupyter.org/"&gt;Jupyter notebooks&lt;/a&gt; are really good for doing the heavy lifting of data analysis by:&lt;/p&gt;
@@ -1332,5 +1332,22 @@ What should I do?</summary>
     <summary>It can be easy to get discouraged when working on a coding problem. When you think you’ve solved a problem in your code, it turns out that you misunderstood or didn’t fully grasp the root of the problem. Then, you’re facing a new coding challenge where the computer continually returns a different result than expected. This can turn into a game of cat and mouse as you chase down the bugs that are in the way of your new shiny feature being implemented.When this happens to me, I feel disheartened and imposter syndrome creeps up - and then I can shut down, wishing that coding was easier. For me, the silver lining here is that a lot of my work is geared towards educating geoscientists to be better coders. Despite always being STEM-oriented in my passions and work, coding can be hard. This is the experience for a lot of people, and certainly is the experience for a lot of the scientists I have worked with. Reflecting on my own struggles in my own software development practices, can help me teach coding from empathetic and helpful perspectives.doc</summary>
     <category term="debug" label="debug"/>
     <published>2022-05-12T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/2022/office-hours-appointments/</id>
+    <title>New Office Hours Appointment System</title>
+    <updated>2022-08-10T00:00:00+00:00</updated>
+    <author>
+      <name>Julia Kent</name>
+    </author>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;The ESDS office hours are moving to an &lt;a class="reference internal" href="../office-hours/"&gt;&lt;span class="doc std std-doc"&gt;appointment scheduling page&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The previous office hours system was two one-hour blocks at the same time every week via a Zoom call where software engineers sit in and await scientists to show up and receive help. This was not ideal because some weeks no one showed up (which eventually leads to attrition of software engineers), and other weeks many people showed up and could not all receive the individualized help they needed. Also we had many software engineers and scientists with scheduling conflicts during these two static time blocks. You may have noticed these are no longer on the ESDS calendar.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/2022/office-hours-appointments/" rel="alternate"/>
+    <summary>The ESDS office hours are moving to an appointment scheduling page.The previous office hours system was two one-hour blocks at the same time every week via a Zoom call where software engineers sit in and await scientists to show up and receive help. This was not ideal because some weeks no one showed up (which eventually leads to attrition of software engineers), and other weeks many people showed up and could not all receive the individualized help they needed. Also we had many software engineers and scientists with scheduling conflicts during these two static time blocks. You may have noticed these are no longer on the ESDS calendar.</summary>
+    <category term="office-hours" label="office-hours"/>
+    <published>2022-08-10T00:00:00+00:00</published>
   </entry>
 </feed>
