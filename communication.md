@@ -87,6 +87,9 @@ Have a question about Python/data analysis issues? Looking to get feedback on so
 Several ESDS members are prepared to answer your Python questions via 1-on-1 appointments. You can now select the ESDS member with the specialization best equiped for your question, find a time that works for you, and generate an appointment. Please also provide how you'd like to meet (in-person or virtual) and a brief description of your question.
 
 If your question is about an error message you are raising in your workflow, help us help you by being ready to provide a copy of your dataset and code so we can reproduce your error. Depending on your question, we may be able to walk you through a solution or send you documentation/resources that address your question. See the [Office Hour Notes](https://docs.google.com/document/d/1gIK0C-srceYmoYtgoODeLtuPQPL40iAHoI9DXWqfWP0/edit?usp=sharing) for a summary of previous sessions.
+ 
+**NOTE:** Office hours are open to NCAR/UCAR staff only.
+
 
 ## [Project Pythia](https://projectpythia.org/)
 
