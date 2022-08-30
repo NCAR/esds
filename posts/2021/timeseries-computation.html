@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -60239,13 +60239,13 @@
                       if (attempts > 100) {
                         clearInterval(timer)
                         console.log(
-                          'Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing'
+                          'Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing',
                         )
                       }
                     }
                   },
                   10,
-                  root
+                  root,
                 )
               }
             })(window)
