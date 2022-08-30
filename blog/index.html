@@ -6,32 +6,32 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>All Posts &#8212; NCAR-ESDS 0.1 documentation</title>
-<script>
-  document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-  document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
-</script>
-
+  <script>
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=92025949c220c2e29695" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+  <link href="../_static/styles/theme.css?digest=9b1a4fa89bdd0e95b23b" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=9b1a4fa89bdd0e95b23b" rel="stylesheet">
 
-
+  
   <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    href="../_static/vendor/fontawesome/6.1.2/css/all.min.css">
   <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
   <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=9b1a4fa89bdd0e95b23b">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -81,18 +81,19 @@ commentsRunWhenDOMLoaded(addUtterances);
     <script src="../_static/design-tabs.js"></script>
     <script async="async" src="https://www.google-analytics.com/analytics.js"></script>
     <script>
-                window.ga = window.ga || function () {
-                    (ga.q = ga.q || []).push(arguments) };
-                ga.l = +new Date;
-                ga('create', 'UA-196809533-1', 'auto');
-                ga('set', 'anonymizeIp', true);
-                ga('send', 'pageview');
-            </script>
+                    window.ga = window.ga || function () {
+                        (ga.q = ga.q || []).push(arguments) };
+                    ga.l = +new Date;
+                    ga('create', 'UA-196809533-1', 'auto');
+                    ga('set', 'anonymizeIp', true);
+                    ga('send', 'pageview');
+                </script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'blog';</script>
     <link rel="author" title="About these documents" href="../about/" />
     <link rel="index" title="Index" href="../genindex/" />
     <link rel="search" title="Search" href="../search/" /> 
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="docsearch:language" content="None"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="docsearch:language" content="None"> 
 <link
   rel="alternate"
   type="application/atom+xml"
@@ -129,14 +130,33 @@ commentsRunWhenDOMLoaded(addUtterances);
   
   
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
-    <div class="bd-header-announcement container-fluid" id="banner">
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
+  <label class="overlay overlay-primary" for="__primary"></label>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary">
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
       
-
+<form class="bd-search d-flex align-items-center" action="../search/" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this site... " aria-label="Search this site... " autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
     </div>
+  </div>
 
-    
-    <nav class="bd-header navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="bd-header__inner container-xl">
-
+  
+  <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+      <span class="fas fa-bars"></span>
+  </label>
   <div id="navbar-start">
     
     
@@ -144,9 +164,15 @@ commentsRunWhenDOMLoaded(addUtterances);
 
 
 <a class="navbar-brand logo" href="../">
+
   
   
   
+  
+  
+  
+  
+
   
   
     <p class="title logo__title">NCAR-ESDS 0.1 documentation</p>
@@ -155,83 +181,113 @@ commentsRunWhenDOMLoaded(addUtterances);
     
   </div>
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="fas fa-bars"></span>
-  </button>
-
   
-  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+  <div class="col-lg-9 navbar-header-items">
     <div id="navbar-center" class="mr-auto">
       
       <div class="navbar-center-item">
-        <ul id="navbar-main-elements" class="navbar-nav">
-    <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../about/">
-  About Us
- </a>
-</li>
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                <li class="nav-item">
+                    <a class="nav-link" href="../about/">
+                        About Us
+                    </a>
+                </li>
+                
 
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../faq/">
-  Frequently Asked Questions
- </a>
-</li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../faq/">
+                        Frequently Asked Questions
+                    </a>
+                </li>
+                
 
-<li class="toctree-l1 current active nav-item">
- <a class="current reference internal nav-link" href="#">
-  Blog
- </a>
-</li>
+                <li class="nav-item current active">
+                    <a class="nav-link" href="#">
+                        Blog
+                    </a>
+                </li>
+                
 
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../communication/">
-  Communication
- </a>
-</li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../communication/">
+                        Communication
+                    </a>
+                </li>
+                
 
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../office-hours/">
-  Office Hours
- </a>
-</li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../office-hours/">
+                        Office Hours
+                    </a>
+                </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                <li class="nav-item">
+                    <a class="nav-link" href="../best-practices/">
+                        Best Practices
+                    </a>
+                </li>
+                
 
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../best-practices/">
-  Best Practices
- </a>
-</li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../calendar/">
+                        Calendar
+                    </a>
+                </li>
+                
 
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../calendar/">
-  Calendar
- </a>
-</li>
-
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../projects/">
-  Projects
- </a>
-</li>
-
-    
-</ul>
+                <li class="nav-item">
+                    <a class="nav-link" href="../projects/">
+                        Projects
+                    </a>
+                </li>
+                
+                </div>
+            </div>
+            
+    </ul>
+</nav>
       </div>
       
     </div>
 
     <div id="navbar-end">
+      <div class="navbar-end-item navbar-end__search-button-container">
+        
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search">
+  <i class="fas fa-search"></i>
+</button>
+      </div>
       
       <div class="navbar-end-item">
-        <form class="bd-search d-flex align-items-center" action="../search/" method="get">
+        
+<form class="bd-search d-flex align-items-center" action="../search/" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this site... " aria-label="Search this site... " autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this site... " aria-label="Search this site... " autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form>
       </div>
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/ncar/esds" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/ncar/esds" title="GitHub" class="nav-link" rel="noopener" target="_blank"><span><i class="fab fa-github-square"></i></span>
             <label class="sr-only">GitHub</label></a>
         </li>
       </ul>
@@ -239,24 +295,155 @@ commentsRunWhenDOMLoaded(addUtterances);
       
     </div>
   </div>
+
+
+  
+  <div class="search-button-container--mobile">
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search">
+  <i class="fas fa-search"></i>
+</button>
+  </div>
+
+  
+  <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fas fa-outdent"></span>
+  </label>
+  
+
 </div>
-    </nav>
+  </nav>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                <li class="nav-item">
+                    <a class="nav-link" href="../about/">
+                        About Us
+                    </a>
+                </li>
+                
+
+                <li class="nav-item">
+                    <a class="nav-link" href="../faq/">
+                        Frequently Asked Questions
+                    </a>
+                </li>
+                
+
+                <li class="nav-item current active">
+                    <a class="nav-link" href="#">
+                        Blog
+                    </a>
+                </li>
+                
+
+                <li class="nav-item">
+                    <a class="nav-link" href="../communication/">
+                        Communication
+                    </a>
+                </li>
+                
+
+                <li class="nav-item">
+                    <a class="nav-link" href="../office-hours/">
+                        Office Hours
+                    </a>
+                </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                <li class="nav-item">
+                    <a class="nav-link" href="../best-practices/">
+                        Best Practices
+                    </a>
+                </li>
+                
+
+                <li class="nav-item">
+                    <a class="nav-link" href="../calendar/">
+                        Calendar
+                    </a>
+                </li>
+                
+
+                <li class="nav-item">
+                    <a class="nav-link" href="../projects/">
+                        Projects
+                    </a>
+                </li>
+                
+                </div>
+            </div>
+            
+    </ul>
+</nav>
+      </div>
+      
+      </div>
     
 
-    <div class="bd-container container-xl">
-      <div class="bd-container__inner row">
-          
-
-<!-- Only show if we have sidebars configured, else just a small margin  -->
-<div class="bd-sidebar-primary col-12 col-md-3 bd-sidebar">
-  <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../search/" method="get">
+    
+    
+    <div class="sidebar-header-items__end">
+      
+      <div class="navbar-end-item">
+        
+<form class="bd-search d-flex align-items-center" action="../search/" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this site... " aria-label="Search this site... " autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-  <div class="bd-toc-item active">
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this site... " aria-label="Search this site... " autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/ncar/esds" title="GitHub" class="nav-link" rel="noopener" target="_blank"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
     
   </div>
-</nav>
+
+  
+  <div class="sidebar-start-items sidebar-primary__section">
+    <div class="sidebar-start-items__item">
+<form class="bd-search d-flex align-items-center" action="../search/" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this site... " aria-label="Search this site... " autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+    <div class="sidebar-start-items__item">
 <h3><a href="tag/">Tags</a></h3>
 <style type="text/css">
   ul.ablog-cloud {
@@ -533,6 +720,8 @@ commentsRunWhenDOMLoaded(addUtterances);
    
 </ul>
 
+    </div>
+    <div class="sidebar-start-items__item">
 <h3>
   <a href="archive/">Archives</a>
 </h3>
@@ -556,26 +745,30 @@ commentsRunWhenDOMLoaded(addUtterances);
    
 </ul>
 
+    </div>
   </div>
-  <div class="sidebar-end-items">
-  </div>
-</div>
-
-
-          
-
-
-<div class="bd-sidebar-secondary d-none d-xl-block col-xl-2 bd-toc">
   
-</div>
 
+  
+  <div class="sidebar-end-items sidebar-primary__section">
+    <div class="sidebar-end-items__item">
+    </div>
+  </div>
 
-          
-          
-          <div class="bd-content col-12 col-md-9 col-xl-7">
-              
-              <article class="bd-article" role="main">
+      </div>
+      <main class="bd-main">
+        
+        
+        <div class="bd-content">
+          <div class="bd-article-container">
+            
+            <div class="bd-header-article">
                 
+            </div>
+            
+            
+            <article class="bd-article" role="main">
+              
 <div class="section">
   <h1>
      All  Posts 
@@ -776,11 +969,11 @@ commentsRunWhenDOMLoaded(addUtterances);
     ><i class="fa-fw fa fa-tags"></i> </span
   >
    
+  <a href="tag/papermill/">papermill</a>   
   <a href="tag/python/">python</a>   
-  <a href="tag/jupyter/">jupyter</a>   
   <a href="tag/notebooks/">notebooks</a>   
-  <a href="tag/automation/">automation</a>   
-  <a href="tag/papermill/">papermill</a>  
+  <a href="tag/jupyter/">jupyter</a>   
+  <a href="tag/automation/">automation</a>  
 </li>
  
     </ul>
@@ -863,10 +1056,10 @@ commentsRunWhenDOMLoaded(addUtterances);
     ><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="tag/pft/">PFT</a>   
-  <a href="tag/dask/">dask</a>   
+  <a href="tag/clm/">CLM</a>   
   <a href="tag/sparse/">sparse</a>   
-  <a href="tag/clm/">CLM</a>  
+  <a href="tag/dask/">dask</a>   
+  <a href="tag/pft/">PFT</a>  
 </li>
  
     </ul>
@@ -948,9 +1141,9 @@ commentsRunWhenDOMLoaded(addUtterances);
     ><i class="fa-fw fa fa-tags"></i> </span
   >
    
+  <a href="tag/intake/">intake</a>   
   <a href="tag/python-tutorial-series/">python-tutorial-series</a>   
-  <a href="tag/xarray/">xarray</a>   
-  <a href="tag/intake/">intake</a>  
+  <a href="tag/xarray/">xarray</a>  
 </li>
  
     </ul>
@@ -991,9 +1184,9 @@ commentsRunWhenDOMLoaded(addUtterances);
    
   <a href="tag/dask/">dask</a>   
   <a href="tag/xarray/">xarray</a>   
-  <a href="tag/matplotlib/">matplotlib</a>   
+  <a href="tag/update/">update</a>   
   <a href="tag/faq/">faq</a>   
-  <a href="tag/update/">update</a>  
+  <a href="tag/matplotlib/">matplotlib</a>  
 </li>
  
     </ul>
@@ -1033,10 +1226,10 @@ commentsRunWhenDOMLoaded(addUtterances);
     ><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="tag/diagnostics/">diagnostics</a>   
-  <a href="tag/xarray/">xarray</a>   
   <a href="tag/cesm2-le/">cesm2-le</a>   
-  <a href="tag/cesm/">cesm</a>  
+  <a href="tag/cesm/">cesm</a>   
+  <a href="tag/xarray/">xarray</a>   
+  <a href="tag/diagnostics/">diagnostics</a>  
 </li>
  
     </ul>
@@ -1076,9 +1269,9 @@ commentsRunWhenDOMLoaded(addUtterances);
     ><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="tag/xarray/">xarray</a>   
   <a href="tag/time/">time</a>   
-  <a href="tag/preprocess/">preprocess</a>  
+  <a href="tag/preprocess/">preprocess</a>   
+  <a href="tag/xarray/">xarray</a>  
 </li>
  
     </ul>
@@ -1162,9 +1355,9 @@ commentsRunWhenDOMLoaded(addUtterances);
    
   <a href="tag/dask/">dask</a>   
   <a href="tag/xarray/">xarray</a>   
-  <a href="tag/matplotlib/">matplotlib</a>   
+  <a href="tag/update/">update</a>   
   <a href="tag/faq/">faq</a>   
-  <a href="tag/update/">update</a>  
+  <a href="tag/matplotlib/">matplotlib</a>  
 </li>
  
     </ul>
@@ -1246,9 +1439,9 @@ commentsRunWhenDOMLoaded(addUtterances);
     ><i class="fa-fw fa fa-tags"></i> </span
   >
    
+  <a href="tag/intake/">intake</a>   
   <a href="tag/cesm/">cesm</a>   
-  <a href="tag/diagnostics/">diagnostics</a>   
-  <a href="tag/intake/">intake</a>  
+  <a href="tag/diagnostics/">diagnostics</a>  
 </li>
  
     </ul>
@@ -1288,9 +1481,9 @@ commentsRunWhenDOMLoaded(addUtterances);
     ><i class="fa-fw fa fa-tags"></i> </span
   >
    
+  <a href="tag/visualization/">visualization</a>   
   <a href="tag/wrf/">WRF</a>   
-  <a href="tag/dask/">dask</a>   
-  <a href="tag/visualization/">visualization</a>  
+  <a href="tag/dask/">dask</a>  
 </li>
  
     </ul>
@@ -1330,11 +1523,11 @@ commentsRunWhenDOMLoaded(addUtterances);
     ><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="tag/diagnostics/">diagnostics</a>   
-  <a href="tag/cesm/">cesm</a>   
+  <a href="tag/cesm2-le/">cesm2-le</a>   
   <a href="tag/visualization/">visualization</a>   
   <a href="tag/intake/">intake</a>   
-  <a href="tag/cesm2-le/">cesm2-le</a>  
+  <a href="tag/diagnostics/">diagnostics</a>   
+  <a href="tag/cesm/">cesm</a>  
 </li>
  
     </ul>
@@ -1417,11 +1610,11 @@ commentsRunWhenDOMLoaded(addUtterances);
     ><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="tag/diagnostics/">diagnostics</a>   
-  <a href="tag/cesm/">cesm</a>   
   <a href="tag/visualization/">visualization</a>   
   <a href="tag/intake/">intake</a>   
-  <a href="tag/jupyter/">jupyter</a>  
+  <a href="tag/jupyter/">jupyter</a>   
+  <a href="tag/diagnostics/">diagnostics</a>   
+  <a href="tag/cesm/">cesm</a>  
 </li>
  
     </ul>
@@ -1461,11 +1654,11 @@ commentsRunWhenDOMLoaded(addUtterances);
     ><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="tag/cesm/">cesm</a>   
-  <a href="tag/intake/">intake</a>   
-  <a href="tag/dask/">dask</a>   
+  <a href="tag/benchmark/">benchmark</a>   
   <a href="tag/ecgtools/">ecgtools</a>   
-  <a href="tag/benchmark/">benchmark</a>  
+  <a href="tag/dask/">dask</a>   
+  <a href="tag/intake/">intake</a>   
+  <a href="tag/cesm/">cesm</a>  
 </li>
  
     </ul>
@@ -1504,10 +1697,10 @@ commentsRunWhenDOMLoaded(addUtterances);
     ><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="tag/diagnostics/">diagnostics</a>   
-  <a href="tag/observations/">observations</a>   
   <a href="tag/intake/">intake</a>   
-  <a href="tag/cesm/">cesm</a>  
+  <a href="tag/observations/">observations</a>   
+  <a href="tag/cesm/">cesm</a>   
+  <a href="tag/diagnostics/">diagnostics</a>  
 </li>
  
     </ul>
@@ -1589,9 +1782,9 @@ commentsRunWhenDOMLoaded(addUtterances);
     ><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="tag/observations/">observations</a>   
   <a href="tag/cesm2-le/">cesm2-le</a>   
-  <a href="tag/intake/">intake</a>  
+  <a href="tag/intake/">intake</a>   
+  <a href="tag/observations/">observations</a>  
 </li>
  
     </ul>
@@ -1630,10 +1823,10 @@ commentsRunWhenDOMLoaded(addUtterances);
     ><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="tag/diagnostics/">diagnostics</a>   
-  <a href="tag/intake/">intake</a>   
   <a href="tag/visualization/">visualization</a>   
-  <a href="tag/cesm/">cesm</a>  
+  <a href="tag/intake/">intake</a>   
+  <a href="tag/cesm/">cesm</a>   
+  <a href="tag/diagnostics/">diagnostics</a>  
 </li>
  
     </ul>
@@ -1714,8 +1907,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     ><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="tag/cesm/">cesm</a>   
   <a href="tag/visualization/">visualization</a>   
+  <a href="tag/cesm/">cesm</a>   
   <a href="tag/unstructured-grids/">unstructured grids</a>  
 </li>
  
@@ -1755,9 +1948,9 @@ commentsRunWhenDOMLoaded(addUtterances);
     ><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="tag/cesm/">cesm</a>   
   <a href="tag/cesm2-le/">cesm2-le</a>   
-  <a href="tag/intake/">intake</a>  
+  <a href="tag/intake/">intake</a>   
+  <a href="tag/cesm/">cesm</a>  
 </li>
  
     </ul>
@@ -1797,8 +1990,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     ><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="tag/pythia/">pythia</a>   
   <a href="tag/training/">training</a>   
+  <a href="tag/pythia/">pythia</a>   
   <a href="tag/education/">education</a>  
 </li>
  
@@ -1839,9 +2032,9 @@ commentsRunWhenDOMLoaded(addUtterances);
     ><i class="fa-fw fa fa-tags"></i> </span
   >
    
+  <a href="tag/conference/">conference</a>   
   <a href="tag/scipy/">scipy</a>   
-  <a href="tag/open-source/">open-source</a>   
-  <a href="tag/conference/">conference</a>  
+  <a href="tag/open-source/">open-source</a>  
 </li>
  
     </ul>
@@ -2005,9 +2198,9 @@ commentsRunWhenDOMLoaded(addUtterances);
     ><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="tag/jupyter/">jupyter</a>   
-  <a href="tag/intake/">intake</a>   
   <a href="tag/documentation/">documentation</a>   
+  <a href="tag/intake/">intake</a>   
+  <a href="tag/jupyter/">jupyter</a>   
   <a href="tag/cesm/">cesm</a>  
 </li>
  
@@ -2048,9 +2241,9 @@ commentsRunWhenDOMLoaded(addUtterances);
     ><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="tag/diagnostics/">diagnostics</a>   
   <a href="tag/conference/">conference</a>   
-  <a href="tag/cesm/">cesm</a>  
+  <a href="tag/cesm/">cesm</a>   
+  <a href="tag/diagnostics/">diagnostics</a>  
 </li>
  
     </ul>
@@ -2089,9 +2282,9 @@ commentsRunWhenDOMLoaded(addUtterances);
     ><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="tag/cesm/">cesm</a>   
+  <a href="tag/visualization/">visualization</a>   
   <a href="tag/intake/">intake</a>   
-  <a href="tag/visualization/">visualization</a>  
+  <a href="tag/cesm/">cesm</a>  
 </li>
  
     </ul>
@@ -2172,8 +2365,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     ><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="tag/cesm/">cesm</a>   
-  <a href="tag/intake/">intake</a>  
+  <a href="tag/intake/">intake</a>   
+  <a href="tag/cesm/">cesm</a>  
 </li>
  
     </ul>
@@ -2213,9 +2406,9 @@ commentsRunWhenDOMLoaded(addUtterances);
     ><i class="fa-fw fa fa-tags"></i> </span
   >
    
+  <a href="tag/conference/">conference</a>   
   <a href="tag/dask/">dask</a>   
-  <a href="tag/open-science/">open-science</a>   
-  <a href="tag/conference/">conference</a>  
+  <a href="tag/open-science/">open-science</a>  
 </li>
  
     </ul>
@@ -2297,8 +2490,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   >
    
   <a href="tag/cmip6/">cmip6</a>   
-  <a href="tag/debug/">debug</a>   
-  <a href="tag/intake/">intake</a>  
+  <a href="tag/intake/">intake</a>   
+  <a href="tag/debug/">debug</a>  
 </li>
  
     </ul>
@@ -2379,8 +2572,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     ><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="tag/paired-programming/">paired-programming</a>   
   <a href="tag/remote-access/">remote-access</a>   
+  <a href="tag/paired-programming/">paired-programming</a>   
   <a href="tag/editor/">editor</a>  
 </li>
  
@@ -2412,8 +2605,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     ><i class="fa-fw fa fa-user"></i></span
   >
    
-  <a href="author/max-grover/">Max Grover</a>,   
-  <a href="author/matt-long/">Matt Long</a>  
+  <a href="author/matt-long/">Matt Long</a>,   
+  <a href="author/max-grover/">Max Grover</a>  
 </li>
     
 <li id="tags">
@@ -2421,9 +2614,9 @@ commentsRunWhenDOMLoaded(addUtterances);
     ><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="tag/xarray/">xarray</a>   
   <a href="tag/dask/">dask</a>   
-  <a href="tag/pop/">pop</a>  
+  <a href="tag/pop/">pop</a>   
+  <a href="tag/xarray/">xarray</a>  
 </li>
  
     </ul>
@@ -2505,9 +2698,9 @@ commentsRunWhenDOMLoaded(addUtterances);
     ><i class="fa-fw fa fa-tags"></i> </span
   >
    
+  <a href="tag/xoak/">xoak</a>   
   <a href="tag/">index</a>   
-  <a href="tag/xarray/">xarray</a>   
-  <a href="tag/xoak/">xoak</a>  
+  <a href="tag/xarray/">xarray</a>  
 </li>
  
     </ul>
@@ -2629,9 +2822,9 @@ commentsRunWhenDOMLoaded(addUtterances);
     ><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="tag/cesm/">cesm</a>   
   <a href="tag/dask/">dask</a>   
-  <a href="tag/intake/">intake</a>  
+  <a href="tag/intake/">intake</a>   
+  <a href="tag/cesm/">cesm</a>  
 </li>
  
     </ul>
@@ -2792,8 +2985,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     ><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="tag/cgd/">cgd</a>   
   <a href="tag/townhall/">townhall</a>   
+  <a href="tag/cgd/">cgd</a>   
   <a href="tag/questions/">questions</a>  
 </li>
  
@@ -2833,9 +3026,9 @@ commentsRunWhenDOMLoaded(addUtterances);
     ><i class="fa-fw fa fa-tags"></i> </span
   >
    
+  <a href="tag/numpy/">numpy</a>   
   <a href="tag/python-tutorial-series/">python-tutorial-series</a>   
-  <a href="tag/faq/">faq</a>   
-  <a href="tag/numpy/">numpy</a>  
+  <a href="tag/faq/">faq</a>  
 </li>
  
     </ul>
@@ -2956,8 +3149,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     ><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="tag/python-tutorial-series/">python-tutorial-series</a>   
   <a href="tag/jupyter/">jupyter</a>   
+  <a href="tag/python-tutorial-series/">python-tutorial-series</a>   
   <a href="tag/faq/">faq</a>  
 </li>
  
@@ -3121,8 +3314,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     ><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="tag/python-tutorial-series/">python-tutorial-series</a>   
   <a href="tag/python/">python</a>   
+  <a href="tag/python-tutorial-series/">python-tutorial-series</a>   
   <a href="tag/faq/">faq</a>  
 </li>
  
@@ -3162,8 +3355,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     ><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="tag/python-tutorial-series/">python-tutorial-series</a>   
   <a href="tag/python/">python</a>   
+  <a href="tag/python-tutorial-series/">python-tutorial-series</a>   
   <a href="tag/faq/">faq</a>  
 </li>
  
@@ -3203,8 +3396,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     ><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="tag/python-tutorial-series/">python-tutorial-series</a>   
   <a href="tag/python/">python</a>   
+  <a href="tag/python-tutorial-series/">python-tutorial-series</a>   
   <a href="tag/faq/">faq</a>  
 </li>
  
@@ -3288,9 +3481,9 @@ What should I do?</p>
     ><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="tag/xarray/">xarray</a>   
   <a href="tag/python/">python</a>   
   <a href="tag/dask/">dask</a>   
+  <a href="tag/xarray/">xarray</a>   
   <a href="tag/netcdf/">netcdf</a>  
 </li>
  
@@ -3441,9 +3634,9 @@ science itself!</p>
     ><i class="fa-fw fa fa-tags"></i> </span
   >
    
+  <a href="tag/calendars/">calendars</a>   
   <a href="tag/xarray/">xarray</a>   
-  <a href="tag/cftime/">cftime</a>   
-  <a href="tag/calendars/">calendars</a>  
+  <a href="tag/cftime/">cftime</a>  
 </li>
  
     </ul>
@@ -3458,41 +3651,70 @@ science itself!</p>
    
 </div>
 
-              </article>
-              
-
-              
-              <footer class="bd-footer-article">
-                  <!-- Previous / next buttons -->
+            </article>
+            
+            
+            
+            <footer class="bd-footer-article">
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'>
 </div>
-              </footer>
-              
+            </footer>
+            
           </div>
           
-      </div>
+          
+          
+            <div class="bd-sidebar-secondary bd-toc">
+              
+<div class="toc-item">
+  
+</div>
+
+<div class="toc-item">
+  
+</div>
+
+            </div>
+          
+          
+        </div>
+        <footer class="bd-footer-content">
+          <div class="bd-footer-content__inner">
+            
+          </div>
+        </footer>
+        
+      </main>
     </div>
+  </div>
 
   
-  
+    
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695"></script>
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=9b1a4fa89bdd0e95b23b"></script>
 
-<footer class="bd-footer"><div class="bd-footer__inner container">
+  <footer class="bd-footer"><div class="bd-footer__inner container">
   
   <div class="footer-item">
-    <p class="copyright">
+    
+<p class="copyright">
+
     &copy; Copyright 2021, NCAR Earth System Data Science Team.<br>
+
 </p>
+
   </div>
   
   <div class="footer-item">
-    <p class="sphinx-version">
+    
+<p class="sphinx-version">
 Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
+
   </div>
   
 </div>
-</footer>
+  </footer>
   </body>
 </html>
