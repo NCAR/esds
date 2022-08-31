@@ -19,7 +19,7 @@ can be used for both private messages and messages seperated by topic. When post
 
 Again, we recommend you join the ESDS Google Goup using [this link to the ESDS Group page](https://groups.google.com/a/ucar.edu/g/esds), then click "Join Group." New members to this Google Group will receive an invitation to join Zulip as well! Alternatively, this [Zulip invite link](https://zulip2.cloud.ucar.edu/join/w5kv3jauplyepqndapyos7eh/) does not expire.
 
-## [ESDS Github Repository](https://ncar.github.io/esds/)
+## [ESDS Github Repository](https://github.com/ncar/esds)
 
 This repository and webpage is a space where we can post progress on this initiative, publish blog posts related to various workflows, document "best practices," in addition to serving as a resource/discussion spot via comments on pages and posts.
 
