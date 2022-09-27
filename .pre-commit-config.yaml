@@ -16,7 +16,7 @@ repos:
       - id: black
 
   - repo: https://github.com/keewis/blackdoc
-    rev: v0.3.6
+    rev: v0.3.7
     hooks:
       - id: blackdoc
 
@@ -36,7 +36,7 @@ repos:
       - id: prettier
 
   - repo: https://github.com/nbQA-dev/nbQA
-    rev: 1.4.0
+    rev: 1.5.1
     hooks:
       - id: nbqa-black
         additional_dependencies: [black==22.3.0]
