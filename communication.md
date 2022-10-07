@@ -88,7 +88,7 @@ Several ESDS members are prepared to answer your Python questions via 1-on-1 app
 
 If your question is about an error message you are raising in your workflow, help us help you by being ready to provide a copy of your dataset and code so we can reproduce your error. Depending on your question, we may be able to walk you through a solution or send you documentation/resources that address your question. See the [Office Hour Notes](https://docs.google.com/document/d/1gIK0C-srceYmoYtgoODeLtuPQPL40iAHoI9DXWqfWP0/edit?usp=sharing) for a summary of previous sessions.
 
-**NOTE:** Office hours are open to NCAR/UCAR staff only.
+**NOTE:** Office hours are designed for NCAR/UCAR staff.
 
 ## [Project Pythia](https://projectpythia.org/)
 

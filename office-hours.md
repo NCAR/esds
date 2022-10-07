@@ -1,11 +1,13 @@
 # Office Hours
 
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="refresh" content="7; url='https://www.w3docs.com'" />
-  </head>
-  <body>
-    <p>Please follow this link to the <a href="https://sundog.ucar.edu/Interact/Pages/Content/Document.aspx?id=6160">Sundog UCAR Portal office hours page. </a>.</p>
-  </body>
-</html>
+<iframe
+  src="https://app.squarespacescheduling.com/schedule.php?owner=26907589&appointmentType=35983319"
+  title="Schedule Appointment"
+  width="100%"
+  height="800"
+  frameborder="0"
+></iframe>
+<script
+  src="https://embed.acuityscheduling.com/js/embed.js"
+  type="text/javascript"
+></script>
