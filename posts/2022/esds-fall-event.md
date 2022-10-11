@@ -28,7 +28,7 @@ Day 2:
 - GeoCAT-viz
 - GeoCAT-comp
 - UXarray
-- WRF-Python)
+- WRF-Python
 - GeoCAT on NCAR's HPC clusters
 - Hackathon (UCAR/NCAR only)
 
