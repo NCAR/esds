@@ -20,7 +20,7 @@ Day 1:
 - Numpy
 - Data Visualization
 - Xarray
-- Dasy
+- Dask
 
 Day 2:
 
