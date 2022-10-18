@@ -31,4 +31,4 @@ Day 2:
 
 * Starred events are planned to have a "flipped classrooom" format, where participants will be asked to watch tutorial recordings ahead of time, and we will go over use cases, Q&A, and individual trouble shooting on each topic during its session.
 
-Stay tuned for an announcement when **registration opens on October, 14th**.
+Stay tuned for an announcement when **registration opens on October, 20th**.
