@@ -18,15 +18,12 @@ Day 1:
 - Python Intro and Workspace Set Up
 - Python Syntax Basics\*
 - Breakout groups on Numpy, Visualization, Xarray, and Dask\*
+- GeoCAT packages (GeoCAT-viz, GeoCAT-comp, UXarray, WRF-Python)
+- GeoCAT on NCAR's HPC clusters
 
 Day 2:
 
-- Intro to GeoCAT
-- GeoCAT-viz
-- GeoCAT-comp
-- UXarray
-- WRF-Python
-- GeoCAT on NCAR's HPC clusters
+- Hackathon openening 
 - Hackathon and focused group discussions (UCAR/NCAR only)
 
 * Starred events are planned to have a "flipped classrooom" format, where participants will be asked to watch tutorial recordings ahead of time, and we will go over use cases, Q&A, and individual trouble shooting on each topic during its session.
