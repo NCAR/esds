@@ -17,10 +17,7 @@ Day 1:
 - Intro to ESDS
 - Python Intro and Workspace Set Up
 - Python Syntax Basics\*
-- Numpy\*
-- Data Visualization\*
-- Xarray\*
-- Dask\*
+- Breakout groups on Numpy, Visualization, Xarray, and Dask\*
 
 Day 2:
 
