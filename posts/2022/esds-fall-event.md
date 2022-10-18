@@ -8,7 +8,7 @@ tags: tutorial hackathon events
 
 ESDS is hosting a (Re)Introduction to Earth System Data Science (ESDS) Across NCAR/UCAR/UCP on **November 9th and 10th** (Wednesday-Thursday). This event will be hybrid, in-person in NCAR's Mesa Lab Main Seminar Room and virtual over Zoom.
 
-The ESDS Fall Event will cover a (re)introduction to ESDS and Python tutorials (open to the community). Particular emphasis will be placed on the skills needed to best leverage the GeoCAT Python stack. The event will culminate in a hackathon (NCAR/UCAR personnel only) at the end of the second day.
+The ESDS Fall Event will cover a (re)introduction to the NCAR ESDS Initiative and include breakout groups and discussions on Python packages and analysis needs. The event will culminate in a hackathon (NCAR/UCAR personnel only) on Friday.
 
 Here is an approximate content schedule:
 
