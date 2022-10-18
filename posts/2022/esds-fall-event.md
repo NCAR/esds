@@ -25,9 +25,9 @@ Here is an approximate content schedule:
 - Python Intro and Workspace Set Up
 - Python Basics\*
 - Breakout groups\*
-    - Numpy, Visualization, Xarray, and Dask\*
+  - Numpy, Visualization, Xarray, and Dask\*
 - GeoCAT tutorial
-    - GeoCAT-viz, GeoCAT-comp, UXarray, WRF-Python
+  - GeoCAT-viz, GeoCAT-comp, UXarray, WRF-Python
 
 * Starred events are planned to have a "flipped classrooom" format, where
   participants will be asked to watch tutorial recordings ahead of time, and
