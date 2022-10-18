@@ -23,7 +23,7 @@ Day 1:
 
 Day 2:
 
-- Hackathon openening 
+- Hackathon openening
 - Hackathon and focused group discussions (UCAR/NCAR only)
 
 * Starred events are planned to have a "flipped classrooom" format, where participants will be asked to watch tutorial recordings ahead of time, and we will go over use cases, Q&A, and individual trouble shooting on each topic during its session.
