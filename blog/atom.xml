@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2022-10-19T17:13:51.463742+00:00</updated>
+  <updated>2022-10-19T20:52:50.121693+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.29">ABlog</generator>
@@ -1262,7 +1262,7 @@ What should I do?</summary>
     <title>Batch Processing Jupyter Notebooks with Papermill</title>
     <updated>2022-03-17T00:00:00+00:00</updated>
     <author>
-      <name>Matthew Long</name>
+      <name>Anderson Banihirwe</name>
     </author>
     <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://jupyter.org/"&gt;Jupyter notebooks&lt;/a&gt; are really good for doing the heavy lifting of data analysis by:&lt;/p&gt;
@@ -1362,22 +1362,18 @@ What should I do?</summary>
 NCAR/UCAR/UCP on &lt;strong&gt;November 10th and 11th&lt;/strong&gt; (Thursday-Friday). This event will
 be hybrid, in-person in NCAR’s Mesa Lab Main Seminar Room and virtual over Google
 Meet.&lt;/p&gt;
-&lt;p&gt;The ESDS Fall Event will cover a (re)introduction to the NCAR ESDS Initiative;
-include breakout groups and discussions on Python basics, packages, and analysis
-needs; and provide tutorials of the Geoscience Community Analysis Toolkit
-(GeoCAT)’s software tools on Thursday. The event will culminate in a hackathon
-(NCAR/UCAR personnel only) on Friday.&lt;/p&gt;
+&lt;p&gt;Please register to the event through the &lt;a class="reference external" href="https://docs.google.com/forms/d/e/1FAIpQLSd7DnvzeHueKVSeuYWV1QT8TMjfYXJ0lcQQnOI-xDNPMnNk3w/viewform?usp=sf_link"&gt;Registration
+Form&lt;/a&gt;
+by &lt;strong&gt;Friday, November 4, 2022&lt;/strong&gt;!&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="ncar.github.io/esds/posts/2022/esds-fall-event/" rel="alternate"/>
     <summary>ESDS is hosting a (Re)Introduction to Earth System Data Science (ESDS) Across
 NCAR/UCAR/UCP on November 10th and 11th (Thursday-Friday). This event will
 be hybrid, in-person in NCAR’s Mesa Lab Main Seminar Room and virtual over Google
-Meet.The ESDS Fall Event will cover a (re)introduction to the NCAR ESDS Initiative;
-include breakout groups and discussions on Python basics, packages, and analysis
-needs; and provide tutorials of the Geoscience Community Analysis Toolkit
-(GeoCAT)’s software tools on Thursday. The event will culminate in a hackathon
-(NCAR/UCAR personnel only) on Friday.</summary>
+Meet.Please register to the event through the Registration
+Form
+by Friday, November 4, 2022!</summary>
     <category term="tutorialhackathonevents" label="tutorial hackathon events"/>
     <published>2022-10-18T00:00:00+00:00</published>
   </entry>
