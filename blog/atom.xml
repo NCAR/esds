@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2022-10-11T15:12:50.980838+00:00</updated>
+  <updated>2022-10-19T17:13:51.463742+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.29">ABlog</generator>
@@ -516,7 +516,7 @@ What should I do?</summary>
     <title>How to Use xarray.map_blocks for Vertical Interpolation of a 3D Field</title>
     <updated>2021-04-28T00:00:00+00:00</updated>
     <author>
-      <name>Matt Long</name>
+      <name>Max Grover</name>
     </author>
     <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
 &lt;p&gt;Within this example, we cover how to use &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;xarray.map_blocks&lt;/span&gt;&lt;/code&gt; to calculate the mixed-layer depth within the CESM POP model output.&lt;/p&gt;
@@ -1030,7 +1030,7 @@ What should I do?</summary>
     <title>Reading WRF data into Xarray and Visualizing the Output using hvPlot</title>
     <updated>2021-10-15T00:00:00+00:00</updated>
     <author>
-      <name>Anderson Banihirwe</name>
+      <name>Max Grover</name>
     </author>
     <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
 &lt;p&gt;The &lt;em&gt;&lt;strong&gt;typical&lt;/strong&gt;&lt;/em&gt; data workflow within the Python ecosystem when working with Weather Research and Forecasting (WRF) data is to use the &lt;a class="reference external" href="https://wrf-python.readthedocs.io/en/latest/"&gt;wrf-python&lt;/a&gt; package! Traditionally, it can be difficult to utilize the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;xarray&lt;/span&gt;&lt;/code&gt; data model with WRF data, due to a few challenges:&lt;/p&gt;
@@ -1262,7 +1262,7 @@ What should I do?</summary>
     <title>Batch Processing Jupyter Notebooks with Papermill</title>
     <updated>2022-03-17T00:00:00+00:00</updated>
     <author>
-      <name>Anderson Banihirwe</name>
+      <name>Matthew Long</name>
     </author>
     <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://jupyter.org/"&gt;Jupyter notebooks&lt;/a&gt; are really good for doing the heavy lifting of data analysis by:&lt;/p&gt;
@@ -1349,5 +1349,36 @@ What should I do?</summary>
     <summary>The ESDS office hours are moving to an appointment scheduling page.The previous office hours system was two one-hour blocks at the same time every week via a Zoom call where software engineers sit in and await scientists to show up and receive help. This was not ideal because some weeks no one showed up (which eventually leads to attrition of software engineers), and other weeks many people showed up and could not all receive the individualized help they needed. Also we had many software engineers and scientists with scheduling conflicts during these two static time blocks. You may have noticed these are no longer on the ESDS calendar.</summary>
     <category term="office-hours" label="office-hours"/>
     <published>2022-08-10T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/2022/esds-fall-event/</id>
+    <title>A (Re)Introduction to Earth System Data Science (ESDS) Across NCAR/UCAR/UCP</title>
+    <updated>2022-10-18T00:00:00+00:00</updated>
+    <author>
+      <name>Julia Kent</name>
+    </author>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;ESDS is hosting a (Re)Introduction to Earth System Data Science (ESDS) Across
+NCAR/UCAR/UCP on &lt;strong&gt;November 10th and 11th&lt;/strong&gt; (Thursday-Friday). This event will
+be hybrid, in-person in NCAR’s Mesa Lab Main Seminar Room and virtual over Google
+Meet.&lt;/p&gt;
+&lt;p&gt;The ESDS Fall Event will cover a (re)introduction to the NCAR ESDS Initiative;
+include breakout groups and discussions on Python basics, packages, and analysis
+needs; and provide tutorials of the Geoscience Community Analysis Toolkit
+(GeoCAT)’s software tools on Thursday. The event will culminate in a hackathon
+(NCAR/UCAR personnel only) on Friday.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/2022/esds-fall-event/" rel="alternate"/>
+    <summary>ESDS is hosting a (Re)Introduction to Earth System Data Science (ESDS) Across
+NCAR/UCAR/UCP on November 10th and 11th (Thursday-Friday). This event will
+be hybrid, in-person in NCAR’s Mesa Lab Main Seminar Room and virtual over Google
+Meet.The ESDS Fall Event will cover a (re)introduction to the NCAR ESDS Initiative;
+include breakout groups and discussions on Python basics, packages, and analysis
+needs; and provide tutorials of the Geoscience Community Analysis Toolkit
+(GeoCAT)’s software tools on Thursday. The event will culminate in a hackathon
+(NCAR/UCAR personnel only) on Friday.</summary>
+    <category term="tutorialhackathonevents" label="tutorial hackathon events"/>
+    <published>2022-10-18T00:00:00+00:00</published>
   </entry>
 </feed>
