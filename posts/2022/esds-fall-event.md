@@ -13,7 +13,7 @@ or Google Meet.
 
 Please register to the event through the [Registration
 Form](https://docs.google.com/forms/d/e/1FAIpQLSd7DnvzeHueKVSeuYWV1QT8TMjfYXJ0lcQQnOI-xDNPMnNk3w/viewform?usp=sf_link)
-by **November 4, 2022**!
+by **Friday, November 4, 2022**!
 
 The ESDS Fall event will cover a (re)introduction to the NCAR ESDS Initiative;
 include breakout groups and discussions on Python basics, packages, and analysis
