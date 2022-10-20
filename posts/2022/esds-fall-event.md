@@ -8,7 +8,7 @@ tags: tutorial hackathon events
 
 ESDS is hosting a (Re)Introduction to Earth System Data Science (ESDS) Across
 NCAR/UCAR/UCP on **November 10th and 11th** (Thursday-Friday). This event will
-be hybrid, in-person in NCAR's Mesa Lab Main Seminar Room and virtual over Zoom 
+be hybrid, in-person in NCAR's Mesa Lab Main Seminar Room and virtual over Zoom
 or Google Meet.
 
 Please register to the event through the [Registration
