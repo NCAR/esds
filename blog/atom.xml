@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2022-10-19T20:52:50.121693+00:00</updated>
+  <updated>2022-10-20T19:25:34.273518+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.29">ABlog</generator>
@@ -1360,8 +1360,8 @@ What should I do?</summary>
     <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
 &lt;p&gt;ESDS is hosting a (Re)Introduction to Earth System Data Science (ESDS) Across
 NCAR/UCAR/UCP on &lt;strong&gt;November 10th and 11th&lt;/strong&gt; (Thursday-Friday). This event will
-be hybrid, in-person in NCAR’s Mesa Lab Main Seminar Room and virtual over Google
-Meet.&lt;/p&gt;
+be hybrid, in-person in NCAR’s Mesa Lab Main Seminar Room and virtual over Zoom
+or Google Meet.&lt;/p&gt;
 &lt;p&gt;Please register to the event through the &lt;a class="reference external" href="https://docs.google.com/forms/d/e/1FAIpQLSd7DnvzeHueKVSeuYWV1QT8TMjfYXJ0lcQQnOI-xDNPMnNk3w/viewform?usp=sf_link"&gt;Registration
 Form&lt;/a&gt;
 by &lt;strong&gt;Friday, November 4, 2022&lt;/strong&gt;!&lt;/p&gt;
@@ -1370,8 +1370,8 @@ by &lt;strong&gt;Friday, November 4, 2022&lt;/strong&gt;!&lt;/p&gt;
     <link href="ncar.github.io/esds/posts/2022/esds-fall-event/" rel="alternate"/>
     <summary>ESDS is hosting a (Re)Introduction to Earth System Data Science (ESDS) Across
 NCAR/UCAR/UCP on November 10th and 11th (Thursday-Friday). This event will
-be hybrid, in-person in NCAR’s Mesa Lab Main Seminar Room and virtual over Google
-Meet.Please register to the event through the Registration
+be hybrid, in-person in NCAR’s Mesa Lab Main Seminar Room and virtual over Zoom
+or Google Meet.Please register to the event through the Registration
 Form
 by Friday, November 4, 2022!</summary>
     <category term="tutorialhackathonevents" label="tutorial hackathon events"/>
