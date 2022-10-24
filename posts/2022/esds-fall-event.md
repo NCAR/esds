@@ -14,8 +14,7 @@ Meet.
 The ESDS Fall Event will cover a (re)introduction to the NCAR ESDS Initiative;
 include breakout groups and discussions on Python basics, packages, and analysis
 needs; and provide tutorials of the Geoscience Community Analysis Toolkit
-(GeoCAT)'s software tools on Thursday. The event will culminate in a hackathon
-(NCAR/UCAR personnel only) on Friday.
+(GeoCAT)'s software tools on Thursday. The event will culminate in a hackathon on Friday.
 
 Here is an approximate content schedule:
 
@@ -37,6 +36,6 @@ Here is an approximate content schedule:
 **Day 2 (Friday, November 11th):**
 
 - Hackathon opening
-- Hackathon and focused group discussions (UCAR/NCAR only)
+- Hackathon and focused group discussions
 
 Stay tuned for an announcement when **registration opens on October, 20th**.
