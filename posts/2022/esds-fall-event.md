@@ -32,7 +32,7 @@ Here is an approximate content schedule:
 - GeoCAT tutorial
   - Intro, GeoCAT-viz, GeoCAT-comp, UXarray
 - VAPOR Python API
-- HPC & Dask
+- Dask
 
 * Starred events are planned to have a "flipped classrooom" format, where
   participants will be asked to watch tutorial recordings ahead of time, and
