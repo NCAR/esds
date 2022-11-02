@@ -32,7 +32,8 @@ Once installed, you will
 1. clone the repository in a terminal with `git clone git@github.com:NCAR/geocat-tutorials.git`,
 2. navigate to the new directory with `cd geocat-tutorials` and
 3. create the tutorial environment with the terminal command `conda env create -f environment.yml`.
-4. Finally, activate your environment with `conda activate ENVNAME`.
+4. Then, activate your environment with `conda activate ENVNAME`, 
+5. and finally, launch the Jupyter notebook with `jupyter lab`.
 
 If you have any aditional questions, feel free to reach out to Julia Kent at jkent@ucar.edu.
 The 08:40 - 09:30: Python Intro and Workspace Set Up slot on Day 1 will be for troubleshooting any problems that we could not resolve beforehand.
