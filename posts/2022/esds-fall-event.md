@@ -18,7 +18,6 @@ by **Friday, November 4, 2022**!
 The ESDS Fall event will cover a (re)introduction to the NCAR ESDS Initiative;
 include breakout groups and discussions on Python basics, packages, and analysis
 needs; and provide tutorials of the Geoscience Community Analysis Toolkit
-
 (GeoCAT)'s software tools on Thursday. The event will culminate in a hackathon,
 discussion, and forum on Friday.
 
