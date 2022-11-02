@@ -34,7 +34,7 @@ The breakout groups are:
 - [Python Basics](https://docs.google.com/document/d/1ku15eYYGFujpGaiabJCDL4Lo8WBJilG5x2GbjMsjsNU/edit?usp=sharing)
 - [Numpy](https://docs.google.com/document/d/1fCLZaJwQxiV12QHAwVuu5fHv5h6Atoq9xT_rdnEX3OM/edit?usp=sharing)
 - [Visualization]()
-- [Xarray]()
+- [Xarray](https://docs.google.com/document/d/12mNISjqjhuYaf2MN9USbwqWz-Z3pGKk89yYrXkCy5No/edit#heading=h.2f5s7kmk7pxa)
 
 Each section links to a Google Doc with the viewing homework.
 
