@@ -19,7 +19,7 @@ You can follow [Project Pythia instructions to install Python on Jupyter](https:
 
 For more information, review the [Jupyter Project Pythia content](https://foundations.projectpythia.org/foundations/getting-started-jupyter.html).
 
-If you have trouble installing miniconda - try to uninstall and reinstall it, making sure you select the correct install location. If you have any aditional questions, feel free to reach out to Julia Kent at jkent@ucar.edu. 
+If you have trouble installing miniconda - try to uninstall and reinstall it, making sure you select the correct install location. If you have any aditional questions, feel free to reach out to Julia Kent at jkent@ucar.edu.
 
 Once installed, please create the tutorial environment by downloading the `environment.yml` file from REPOSITORY. Use the terminal command `conda env create -n ENVNAME --file ENV.yml` followed by `conda activate ENVNAME`.
 
@@ -31,10 +31,10 @@ The events on Day 1 will follow a flipped classroom model, where you watch some 
 
 The breakout groups are:
 
-  - [Python Basics](https://docs.google.com/document/d/1ku15eYYGFujpGaiabJCDL4Lo8WBJilG5x2GbjMsjsNU/edit?usp=sharing)
-  - [Numpy](https://docs.google.com/document/d/1fCLZaJwQxiV12QHAwVuu5fHv5h6Atoq9xT_rdnEX3OM/edit?usp=sharing)
-  - [Visualization]()
-  - [Xarray]()
+- [Python Basics](https://docs.google.com/document/d/1ku15eYYGFujpGaiabJCDL4Lo8WBJilG5x2GbjMsjsNU/edit?usp=sharing)
+- [Numpy](https://docs.google.com/document/d/1fCLZaJwQxiV12QHAwVuu5fHv5h6Atoq9xT_rdnEX3OM/edit?usp=sharing)
+- [Visualization]()
+- [Xarray]()
 
 Each section links to a Google Doc with the viewing homework.
 
