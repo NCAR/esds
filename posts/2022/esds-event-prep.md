@@ -23,9 +23,7 @@ Essentially, Binder is a web service that hosts Jupyter Notebooks in an immediat
 
 For those of you who prefer to work on your local machine, please install Miniconda and Jupyter before the ESDS event.
 
-You can follow [Project Pythia instructions to install Python on Jupyter](https://foundations.projectpythia.org/foundations/jupyter.html).
-
-For more information on Jupyter, review the [Jupyter Project Pythia content](https://foundations.projectpythia.org/foundations/getting-started-jupyter.html).
+You can follow the [Project Pythia instructions to install Python on Jupyter](https://foundations.projectpythia.org/foundations/jupyter.html).
 
 If you have trouble installing miniconda - try to uninstall and reinstall it, making sure you select the correct install location. 
 
