@@ -9,7 +9,7 @@ tags: tutorial hackathon events
 ESDS is hosting a (Re)Introduction to Earth System Data Science (ESDS) Across
 NCAR/UCAR/UCP on **November 10th and 11th** (Thursday-Friday). This event will
 be hybrid, in-person in NCAR's Mesa Lab Main Seminar Room and virtual over Zoom
-or Google Meet.
+and/or Google Meet.
 
 Please register to the event through the [Registration
 Form](https://docs.google.com/forms/d/e/1FAIpQLSd7DnvzeHueKVSeuYWV1QT8TMjfYXJ0lcQQnOI-xDNPMnNk3w/viewform?usp=sf_link)
@@ -18,7 +18,9 @@ by **Friday, November 4, 2022**!
 The ESDS Fall event will cover a (re)introduction to the NCAR ESDS Initiative;
 include breakout groups and discussions on Python basics, packages, and analysis
 needs; and provide tutorials of the Geoscience Community Analysis Toolkit
-(GeoCAT)'s software tools on Thursday. The event will culminate in a hackathon on Friday.
+
+(GeoCAT)'s software tools on Thursday. The event will culminate in a hackathon,
+discussion, and forum on Friday.
 
 Here is an approximate content schedule:
 
@@ -26,11 +28,12 @@ Here is an approximate content schedule:
 
 - Intro to ESDS
 - Python Intro and Workspace Set Up
-- Python Basics\*
 - Breakout groups\*
-  - Numpy, Visualization, Xarray, and Dask\*
+  - Python Basics, Numpy, Visualization, and Xarray\*
 - GeoCAT tutorial
-  - GeoCAT-viz, GeoCAT-comp, UXarray, WRF-Python
+  - Intro, GeoCAT-viz, GeoCAT-comp, UXarray
+- VAPOR Python API
+- Dask
 
 * Starred events are planned to have a "flipped classrooom" format, where
   participants will be asked to watch tutorial recordings ahead of time, and
@@ -41,5 +44,6 @@ Here is an approximate content schedule:
 
 - Hackathon opening
 - Hackathon and focused group discussions
+- ESDS Forum
 
 Stay tuned for additional details as we get closer to the event!
