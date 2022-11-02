@@ -27,11 +27,12 @@ You can follow [Project Pythia instructions to install Python on Jupyter](https:
 
 For more information on Jupyter, review the [Jupyter Project Pythia content](https://foundations.projectpythia.org/foundations/getting-started-jupyter.html).
 
-If you have trouble installing miniconda - try to uninstall and reinstall it, making sure you select the correct install location. 
+If you have trouble installing miniconda - try to uninstall and reinstall it, making sure you select the correct install location.
 
-Once installed, you will 
-1. clone the repository in a terminal with `git clone git@github.com:NCAR/geocat-tutorials.git`, 
-2. navigate to the new directory with `cd geocat-tutorials` and 
+Once installed, you will
+
+1. clone the repository in a terminal with `git clone git@github.com:NCAR/geocat-tutorials.git`,
+2. navigate to the new directory with `cd geocat-tutorials` and
 3. create the tutorial environment with the terminal command `conda env create -f environment.yml`.
 4. Finally, activate your environment with `conda activate ENVNAME`.
 
