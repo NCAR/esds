@@ -13,16 +13,29 @@ or Google Meet. More information is in this [previous post](esds-fall-event.md).
 
 ## Environment Install
 
-Please install Miniconda and Jupyter before the ESDS event.
+### Binder
+
+This tutorial is designed to be run from Binder. You can do that by navigating to the [GeoCat Tutorial Repository](https://github.com/NCAR/geocat-tutorials) and selecting ["Launch Binder"](https://mybinder.org/v2/gh/NCAR/geocat-tutorials/main) in the `README.md`.
+
+Essentially, Binder is a web service that hosts Jupyter Notebooks in an immediately executable and reproducible way. [Learn more about Binder](https://mybinder.org/). For more information on Jupyter Notebooks, review the [Jupyter Project Pythia content](https://foundations.projectpythia.org/foundations/getting-started-jupyter.html).
+
+### Local Install
+
+For those of you who prefer to work on your local machine, please install Miniconda and Jupyter before the ESDS event.
 
 You can follow [Project Pythia instructions to install Python on Jupyter](https://foundations.projectpythia.org/foundations/jupyter.html).
 
-For more information, review the [Jupyter Project Pythia content](https://foundations.projectpythia.org/foundations/getting-started-jupyter.html).
+For more information on Jupyter, review the [Jupyter Project Pythia content](https://foundations.projectpythia.org/foundations/getting-started-jupyter.html).
 
-If you have trouble installing miniconda - try to uninstall and reinstall it, making sure you select the correct install location. If you have any aditional questions, feel free to reach out to Julia Kent at jkent@ucar.edu.
+If you have trouble installing miniconda - try to uninstall and reinstall it, making sure you select the correct install location. 
 
-Once installed, please create the tutorial environment by downloading the `environment.yml` file from REPOSITORY. Use the terminal command `conda env create -n ENVNAME --file ENV.yml` followed by `conda activate ENVNAME`.
+Once installed, you will 
+1. clone the repository in a terminal with `git clone git@github.com:NCAR/geocat-tutorials.git`, 
+2. navigate to the new directory with `cd geocat-tutorials` and 
+3. create the tutorial environment with the terminal command `conda env create -f environment.yml`.
+4. Finally, activate your environment with `conda activate ENVNAME`.
 
+If you have any aditional questions, feel free to reach out to Julia Kent at jkent@ucar.edu.
 The 08:40 - 09:30: Python Intro and Workspace Set Up slot on Day 1 will be for troubleshooting any problems that we could not resolve beforehand.
 
 ## Session homework
@@ -33,7 +46,7 @@ The breakout groups are:
 
 - [Python Basics](https://docs.google.com/document/d/1ku15eYYGFujpGaiabJCDL4Lo8WBJilG5x2GbjMsjsNU/edit?usp=sharing)
 - [Numpy](https://docs.google.com/document/d/1fCLZaJwQxiV12QHAwVuu5fHv5h6Atoq9xT_rdnEX3OM/edit?usp=sharing)
-- [Visualization]()
+- [Visualization](https://docs.google.com/document/d/1pCZNh1NToWETMBwHQr-rj12l-ABJQpdEXK8-IGa6r4E/edit?usp=sharing)
 - [Xarray]()
 
 Each section links to a Google Doc with the viewing homework.
