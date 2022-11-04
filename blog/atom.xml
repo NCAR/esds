@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2022-10-25T18:06:41.535167+00:00</updated>
+  <updated>2022-11-04T18:15:48.121482+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.29">ABlog</generator>
@@ -1376,5 +1376,28 @@ Form
 by Friday, November 4, 2022!</summary>
     <category term="tutorialhackathonevents" label="tutorial hackathon events"/>
     <published>2022-10-18T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/2022/esds-event-prep/</id>
+    <title>Preparation for a (Re)Introduction to Earth System Data Science (ESDS) Across NCAR/UCAR/UCP</title>
+    <updated>2022-11-02T00:00:00+00:00</updated>
+    <author>
+      <name>Julia Kent</name>
+    </author>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;ESDS is hosting a (Re)Introduction to Earth System Data Science (ESDS) Across
+NCAR/UCAR/UCP on &lt;strong&gt;November 10th and 11th&lt;/strong&gt; (Thursday-Friday). This event will
+be hybrid, in-person in NCAR’s Mesa Lab Main Seminar Room and virtual over Zoom
+or Google Meet. More information is in this &lt;span class="xref myst"&gt;previous post&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;This tutorial is designed to be run from Binder. You can do that by navigating to the &lt;a class="reference external" href="https://github.com/NCAR/geocat-tutorials"&gt;GeoCat Tutorial Repository&lt;/a&gt; and selecting &lt;a class="reference external" href="https://mybinder.org/v2/gh/NCAR/geocat-tutorials/main"&gt;“Launch Binder”&lt;/a&gt; in the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;README.md&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/2022/esds-event-prep/" rel="alternate"/>
+    <summary>ESDS is hosting a (Re)Introduction to Earth System Data Science (ESDS) Across
+NCAR/UCAR/UCP on November 10th and 11th (Thursday-Friday). This event will
+be hybrid, in-person in NCAR’s Mesa Lab Main Seminar Room and virtual over Zoom
+or Google Meet. More information is in this previous post.This tutorial is designed to be run from Binder. You can do that by navigating to the GeoCat Tutorial Repository and selecting “Launch Binder” in the README.md.</summary>
+    <category term="tutorialhackathonevents" label="tutorial hackathon events"/>
+    <published>2022-11-02T00:00:00+00:00</published>
   </entry>
 </feed>
