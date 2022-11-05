@@ -25,8 +25,6 @@ Do not forget to check the materials and instructions compiled by section
 leaders to prepare for this event, outlined in this [ESDS blog 
 post](https://ncar.github.io/esds/posts/2022/esds-event-prep/)!
 
-Section leaders have compiled materials and instructions to prepare for this event
-
 Here is the content schedule:
 
 **Day 1 (Thursday, November 10th):**
