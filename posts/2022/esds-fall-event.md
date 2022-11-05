@@ -21,8 +21,8 @@ needs; and provide tutorials of the Geoscience Community Analysis Toolkit
 (GeoCAT)'s software tools on Thursday. The event will culminate in a hackathon,
 discussion, and forum on Friday.
 
-Do not forget to check the materials and instructions compiled by section 
-leaders to prepare for this event, outlined in this [ESDS blog 
+Do not forget to check the materials and instructions compiled by section
+leaders to prepare for this event, outlined in this [ESDS blog
 post](https://ncar.github.io/esds/posts/2022/esds-event-prep/)!
 
 Here is the content schedule:
