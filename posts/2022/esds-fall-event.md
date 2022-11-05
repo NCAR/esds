@@ -21,18 +21,12 @@ needs; and provide tutorials of the Geoscience Community Analysis Toolkit
 (GeoCAT)'s software tools on Thursday. The event will culminate in a hackathon,
 discussion, and forum on Friday.
 
-Here is an approximate content schedule:
+Please be sure to check the [ESDS blog post on how to prepare for the 
+tutorial](https://ncar.github.io/esds/posts/2022/esds-event-prep/)
+
+Here is the content schedule:
 
 **Day 1 (Thursday, November 10th):**
-
-- Intro to ESDS
-- Python Intro and Workspace Set Up
-- Breakout groups\*
-  - Python Basics, Numpy, Visualization, and Xarray\*
-- GeoCAT tutorial
-  - Intro, GeoCAT-viz, GeoCAT-comp, UXarray
-- VAPOR Python API
-- Dask
 
 - 08:30 - 08:40: Intro to ESDS - Katie Dagon
 - 08:40 - 09:30: Python Intro and Workspace Set Up - Julia Kent, Heather Craker, Anissa Zacharias
