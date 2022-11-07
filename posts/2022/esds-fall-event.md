@@ -46,7 +46,6 @@ Here is the content schedule:
 - 14:30 - 14:45: Break 3
 - 14:45 - 15:15: VAPOR Python API - Stanislaw ‘Stas’ Jaroszynski
 - 15:15 - 15:30: Break 4
-- 15:30 - 16:30: Dask - Deepak Cherian
 
 * Starred events are planned to have a "flipped classrooom" format, where
   participants will be asked to watch tutorial recordings ahead of time, and
