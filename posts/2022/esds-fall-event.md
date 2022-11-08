@@ -27,16 +27,16 @@ post](https://ncar.github.io/esds/posts/2022/esds-event-prep/)!
 
 Here is the content schedule:
 
-**Day 1 (Thursday, November 10th):**
+**Day 1 (Thursday, November 10th), Mesa Lab Main Seminar Room and Online:**
 
 - 08:30 - 08:40: Intro to ESDS - Katie Dagon
 - 08:40 - 09:30: Python Intro and Workspace Set Up - Julia Kent, Heather Craker, Anissa Zacharias
 - 09:30 - 09:45: Break 1
 - 09:45 - 10:45: Breakout groups\*
-  - Python Basics\* - Heather Craker,
-  - Numpy\* - Julia Kent,
-  - Visualization\* - Elena Romashkova,
-  - Xarray\* - Deepak Cherian
+  - Python Basics\* - Heather Craker (ML-215 and Online; _start at 10am_),
+  - Numpy\* - Julia Kent (Main Seminar Room and Online),
+  - Visualization\* - Elena Romashkova (Chapman Room and Online),
+  - Xarray\* - Deepak Cherian (ML-680 and Online)
 - 10:45 - 10:55: Break 2
 - 10:55 - 11:05: GeoCAT Intro - Orhan Eroglu
 - 11:05 - 12:00: GeoCAT-viz - Alea Kootz
@@ -45,7 +45,6 @@ Here is the content schedule:
 - 14:00 - 14:30: UXarray - Philip Chmielowiec
 - 14:30 - 14:45: Break 3
 - 14:45 - 15:15: VAPOR Python API - Stanislaw ‘Stas’ Jaroszynski
-- 15:15 - 15:30: Break 4
 
 * Starred events are planned to have a "flipped classrooom" format, where
   participants will be asked to watch tutorial recordings ahead of time, and
@@ -58,24 +57,13 @@ Here is the content schedule:
   - Discuss registration form questions.
   - How can we break down barriers to participation?
   - Feedback on Day 1
-- 11:00 - 12:00: Hackathon projects intro and setup (potentially form breakout groups)
-  - Getting started before the lunch
+- 11:00 - 12:00: Hackathon projects intro and setup
+  - form breakout groups
+  - Get started before lunch
 - 12:00 - 13:00: Lunch break
-- 13:00 - 15:00: Hackathon projects
-- 13:00 - 15:00: Discussion forums\*\*
+- 13:00 - 15:00: Hackathon projects and/or Discussion groups
 
-\*\* Tentative discussion forums
-
-- Almost certain:
-  - UXarray - Orhan Eroglu, Anissa Zacharias, Philip Chmielowiec
-  - AIML - David John Gagne, John Schreck
-  - Xarray for ML - Thomas Martin
-  - Challenging Dask computations - Possible Deepak Cherian
-  - Dashboarding - Negin Sobhani
-- Maybe
-  - Re Day 1’s Breakout groups: Xarray, Dask, etc. as needed
-  - Re Day 1’s GeoCAT tutorial: User forum
-  - GPU compute / diagnostics
-  - Distributed arrays Pangeo group
+Please consider submitting a [hackathon or discussion group proposal](https://docs.google.com/presentation/d/1ju8yN5ydW1vvnBCoksXoYlxqL3ssrN8x6sZhfUJ_nYE/edit#slide=id.p)
+ahead of Friday at 11am. Our goal is to encourage small group collaborations.
 
 We are looking forward to seeing you all at the event!
