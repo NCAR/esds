@@ -41,6 +41,7 @@ Here is the content schedule:
 - 10:55 - 11:05: GeoCAT Intro - Orhan Eroglu
 - 11:05 - 12:00: GeoCAT-viz - Alea Kootz
 - 12:00 - 13:00: Lunch Break
+- 13:00 - 13:05: Intro to Day 2 - Katie Dagon
 - 13:00 - 14:00: GeoCAT-comp - Anissa Zacharias, Heather Craker
 - 14:00 - 14:30: UXarray - Philip Chmielowiec
 - 14:30 - 14:45: Break 3
@@ -53,7 +54,7 @@ Here is the content schedule:
 
 **Day 2 (Friday, November 11th):**
 
-- 10:30 - 11:00: ESDS Forum
+- 10:30 - 11:00: ESDS Forum - Katie Dagon, Deepak Cherian
   - Discuss registration form questions.
   - How can we break down barriers to participation?
   - Feedback on Day 1
