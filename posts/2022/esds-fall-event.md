@@ -42,7 +42,7 @@ Here is the content schedule:
 - 11:05 - 12:00: GeoCAT-viz - Alea Kootz
 - 12:00 - 13:00: Lunch Break
 - 13:00 - 13:05: Intro to Day 2 - Katie Dagon
-- 13:00 - 14:00: GeoCAT-comp - Anissa Zacharias, Heather Craker
+- 13:05 - 14:00: GeoCAT-comp - Anissa Zacharias, Heather Craker
 - 14:00 - 14:30: UXarray - Philip Chmielowiec
 - 14:30 - 14:45: Break 3
 - 14:45 - 15:15: VAPOR Python API - Stanislaw ‘Stas’ Jaroszynski
