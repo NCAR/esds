@@ -58,7 +58,7 @@ Here is the content schedule:
   - How can we break down barriers to participation?
   - Feedback on Day 1
 - 11:00 - 12:00: Hackathon projects intro and setup
-  - form breakout groups
+  - Form breakout groups
   - Get started before lunch
 - 12:00 - 13:00: Lunch break
 - 13:00 - 15:00: Hackathon projects and/or Discussion groups
