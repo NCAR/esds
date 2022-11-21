@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2022-11-08T17:32:09.359009+00:00</updated>
+  <updated>2022-11-21T22:10:45.161549+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.29">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.33">ABlog</generator>
   <entry>
     <id>ncar.github.io/esds/posts/2020/Time/</id>
     <title>The Significance of Time</title>
@@ -1030,7 +1030,7 @@ What should I do?</summary>
     <title>Reading WRF data into Xarray and Visualizing the Output using hvPlot</title>
     <updated>2021-10-15T00:00:00+00:00</updated>
     <author>
-      <name>Max Grover</name>
+      <name>Anderson Banihirwe</name>
     </author>
     <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
 &lt;p&gt;The &lt;em&gt;&lt;strong&gt;typical&lt;/strong&gt;&lt;/em&gt; data workflow within the Python ecosystem when working with Weather Research and Forecasting (WRF) data is to use the &lt;a class="reference external" href="https://wrf-python.readthedocs.io/en/latest/"&gt;wrf-python&lt;/a&gt; package! Traditionally, it can be difficult to utilize the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;xarray&lt;/span&gt;&lt;/code&gt; data model with WRF data, due to a few challenges:&lt;/p&gt;
@@ -1224,7 +1224,7 @@ What should I do?</summary>
     <title>Sparse arrays and the CESM land model component</title>
     <updated>2022-02-24T00:00:00+00:00</updated>
     <author>
-      <name>Katie Dagon</name>
+      <name>Deepak Cherian</name>
     </author>
     <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
 &lt;p&gt;An underappreciated feature of Xarray + Dask is the ability to plug in &lt;a class="reference external" href="https://docs.xarray.dev/en/stable/user-guide/duckarrays.html"&gt;different array types&lt;/a&gt;. Usually we work with Xarray wrapping a Dask array which in turn uses &lt;em&gt;NumPy&lt;/em&gt; arrays for each block; or just Xarray wrapping NumPy arrays directly. NumPy arrays are dense in-memory arrays. Other array types exist:&lt;/p&gt;
@@ -1399,5 +1399,24 @@ be hybrid, in-person in NCAR’s Mesa Lab Main Seminar Room and virtual over Zoo
 or Google Meet. More information is in this previous post.This tutorial is designed to be run from Binder. You can do that by navigating to the GeoCat Tutorial Repository and selecting “Launch Binder” in the README.md.</summary>
     <category term="tutorialhackathonevents" label="tutorial hackathon events"/>
     <published>2022-11-02T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/2022/esds-event-recap/</id>
+    <title>Recap of a (Re)Introduction to Earth System Data Science (ESDS) Across NCAR/UCAR/UCP</title>
+    <updated>2022-11-21T00:00:00+00:00</updated>
+    <author>
+      <name>Katie Dagon</name>
+    </author>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;ESDS hosted a (Re)Introduction to Earth System Data Science (ESDS) Across
+NCAR/UCAR/UCP on November 10-11, 2022. This blog post serves to consolidate and share resources from that event.&lt;/p&gt;
+&lt;p&gt;The final agenda from the event can be found &lt;a class="reference external" href="https://docs.google.com/document/d/10cgElI2Rl8gCqH3oSQqEXzmW-3sSbrv9LQ9eM6A7v8g/edit?usp=sharing"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/2022/esds-event-recap/" rel="alternate"/>
+    <summary>ESDS hosted a (Re)Introduction to Earth System Data Science (ESDS) Across
+NCAR/UCAR/UCP on November 10-11, 2022. This blog post serves to consolidate and share resources from that event.The final agenda from the event can be found here.</summary>
+    <category term="tutorialhackathonevents" label="tutorial hackathon events"/>
+    <published>2022-11-21T00:00:00+00:00</published>
   </entry>
 </feed>
