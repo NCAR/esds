@@ -11,7 +11,7 @@ repos:
       - id: double-quote-string-fixer
 
   - repo: https://github.com/psf/black
-    rev: 22.8.0
+    rev: 22.10.0
     hooks:
       - id: black
 
@@ -39,7 +39,7 @@ repos:
     rev: 1.5.1
     hooks:
       - id: nbqa-black
-        additional_dependencies: [black==22.3.0]
+        additional_dependencies: [black==22.10.0]
       - id: nbqa-pyupgrade
         additional_dependencies: [pyupgrade==2.7.3]
       - id: nbqa-isort
