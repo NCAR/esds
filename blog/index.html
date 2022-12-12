@@ -477,6 +477,10 @@ commentsRunWhenDOMLoaded(addUtterances);
 <ul class="ablog-cloud">
    
   <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/cam/">CAM</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
     <a href="tag/clm/">CLM</a>
   </li>
     
@@ -729,6 +733,10 @@ commentsRunWhenDOMLoaded(addUtterances);
   </li>
     
   <li class="ablog-cloud ablog-cloud-1">
+    <a href="tag/xesmf/">xesmf</a>
+  </li>
+    
+  <li class="ablog-cloud ablog-cloud-1">
     <a href="tag/xoak/">xoak</a>
   </li>
    
@@ -742,7 +750,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <ul>
    
   <li>
-    <a href="2022/">2022 (11)</a>
+    <a href="2022/">2022 (12)</a>
   </li>
     
   <li>
@@ -795,6 +803,44 @@ commentsRunWhenDOMLoaded(addUtterances);
 
   <div class="section ablog-post">
     <h2 class="ablog-post-title">
+      <a href="../posts/2022/cam-se-regridding/">Regridding using xESMF and an existing weights file</a>
+    </h2>
+
+    <ul class="ablog-archive">
+      <li>
+         <i class="fa fa-calendar"></i> 06 December 2022 
+      </li>
+       
+<li id="author">
+  <span><i class="fa-fw fa fa-user"></i></span
+  >
+   
+  <a href="author/christine-shields/">Christine Shields</a>,   
+  <a href="author/deepak-cherian/">Deepak Cherian</a>  
+</li>
+    
+<li id="tags">
+  <span><i class="fa-fw fa fa-tags"></i> </span
+  >
+   
+  <a href="tag/cam/">CAM</a>   
+  <a href="tag/xesmf/">xesmf</a>  
+</li>
+ 
+    </ul>
+    <div class="ablog-post-excerpt docutils container">
+<p>A fairly common request is to use an existing ESMF weights file to regrid a Xarray Dataset  (<a class="reference external" href="https://github.com/UXARRAY/uxarray/issues/172">1</a>,  <a class="reference external" href="https://github.com/pangeo-data/xESMF/issues/202">2</a>). Applying weights in general should be easy: read weights then <a class="reference external" href="https://github.com/UXARRAY/uxarray/issues/172#issuecomment-1310601230">apply them</a> using <code class="docutils literal notranslate"><span class="pre">dot</span></code> or <code class="docutils literal notranslate"><span class="pre">tensordot</span></code> on the input dataset.</p>
+<p>In the Xarray/Dask/Pangeo ecosystem, <a class="reference external" href="https://xesmf.readthedocs.io">xESMF</a> provides an interface to ESMF for convenient regridding, includiing parallelization with Dask. Here we demonstrate how to use an existing ESMF weights file with xESMF specifically for CAM-SE.</p>
+<img alt="../_images/fd44e9f7bac7bfb9e60950a50b7f51ec81040235662db40028a587eea1fe403e.png" src="../_images/fd44e9f7bac7bfb9e60950a50b7f51ec81040235662db40028a587eea1fe403e.png" />
+</div>
+
+    <p class="ablog-post-expand"><a href="../posts/2022/cam-se-regridding/"><em>Read more ...</em></a></p>
+    <hr/>
+  </div>
+  
+
+  <div class="section ablog-post">
+    <h2 class="ablog-post-title">
       <a href="../posts/2022/xarray-groupby-vs-geocat-climatology/">Calculating Temporal Averages with GeoCAT-comp vs Xarray</a>
     </h2>
 
@@ -817,8 +863,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a href="tag/xarray/">xarray</a>   
   <a href="tag/calculations/">calculations</a>   
   <a href="tag/climate/">climate</a>   
-  <a href="tag/jupyter/">jupyter</a>   
-  <a href="tag/geocat-comp/">geocat-comp</a>  
+  <a href="tag/geocat-comp/">geocat-comp</a>   
+  <a href="tag/jupyter/">jupyter</a>  
 </li>
  
     </ul>
@@ -1083,19 +1129,19 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   <span><i class="fa-fw fa fa-user"></i></span
   >
    
-  <a href="author/anderson-banihirwe/">Anderson Banihirwe</a>,   
-  <a href="author/matthew-long/">Matthew Long</a>  
+  <a href="author/matthew-long/">Matthew Long</a>,   
+  <a href="author/anderson-banihirwe/">Anderson Banihirwe</a>  
 </li>
     
 <li id="tags">
   <span><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="tag/automation/">automation</a>   
-  <a href="tag/jupyter/">jupyter</a>   
-  <a href="tag/notebooks/">notebooks</a>   
   <a href="tag/papermill/">papermill</a>   
-  <a href="tag/python/">python</a>  
+  <a href="tag/automation/">automation</a>   
+  <a href="tag/python/">python</a>   
+  <a href="tag/notebooks/">notebooks</a>   
+  <a href="tag/jupyter/">jupyter</a>  
 </li>
  
     </ul>
@@ -1170,10 +1216,10 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   <span><i class="fa-fw fa fa-tags"></i> </span
   >
    
+  <a href="tag/pft/">PFT</a>   
   <a href="tag/clm/">CLM</a>   
   <a href="tag/dask/">dask</a>   
-  <a href="tag/sparse/">sparse</a>   
-  <a href="tag/pft/">PFT</a>  
+  <a href="tag/sparse/">sparse</a>  
 </li>
  
     </ul>
@@ -1247,9 +1293,9 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   <span><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="tag/python-tutorial-series/">python-tutorial-series</a>   
+  <a href="tag/intake/">intake</a>   
   <a href="tag/xarray/">xarray</a>   
-  <a href="tag/intake/">intake</a>  
+  <a href="tag/python-tutorial-series/">python-tutorial-series</a>  
 </li>
  
     </ul>
@@ -1285,10 +1331,10 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   >
    
   <a href="tag/xarray/">xarray</a>   
-  <a href="tag/faq/">faq</a>   
   <a href="tag/update/">update</a>   
-  <a href="tag/dask/">dask</a>   
-  <a href="tag/matplotlib/">matplotlib</a>  
+  <a href="tag/faq/">faq</a>   
+  <a href="tag/matplotlib/">matplotlib</a>   
+  <a href="tag/dask/">dask</a>  
 </li>
  
     </ul>
@@ -1325,9 +1371,9 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   >
    
   <a href="tag/cesm2-le/">cesm2-le</a>   
-  <a href="tag/cesm/">cesm</a>   
+  <a href="tag/xarray/">xarray</a>   
   <a href="tag/diagnostics/">diagnostics</a>   
-  <a href="tag/xarray/">xarray</a>  
+  <a href="tag/cesm/">cesm</a>  
 </li>
  
     </ul>
@@ -1440,10 +1486,10 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   >
    
   <a href="tag/xarray/">xarray</a>   
-  <a href="tag/faq/">faq</a>   
   <a href="tag/update/">update</a>   
-  <a href="tag/dask/">dask</a>   
-  <a href="tag/matplotlib/">matplotlib</a>  
+  <a href="tag/faq/">faq</a>   
+  <a href="tag/matplotlib/">matplotlib</a>   
+  <a href="tag/dask/">dask</a>  
 </li>
  
     </ul>
@@ -1517,9 +1563,9 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   <span><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="tag/cesm/">cesm</a>   
+  <a href="tag/intake/">intake</a>   
   <a href="tag/diagnostics/">diagnostics</a>   
-  <a href="tag/intake/">intake</a>  
+  <a href="tag/cesm/">cesm</a>  
 </li>
  
     </ul>
@@ -1555,8 +1601,8 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   <span><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="tag/visualization/">visualization</a>   
   <a href="tag/wrf/">WRF</a>   
+  <a href="tag/visualization/">visualization</a>   
   <a href="tag/dask/">dask</a>  
 </li>
  
@@ -1593,11 +1639,11 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   <span><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="tag/diagnostics/">diagnostics</a>   
   <a href="tag/intake/">intake</a>   
-  <a href="tag/cesm/">cesm</a>   
+  <a href="tag/diagnostics/">diagnostics</a>   
+  <a href="tag/visualization/">visualization</a>   
   <a href="tag/cesm2-le/">cesm2-le</a>   
-  <a href="tag/visualization/">visualization</a>  
+  <a href="tag/cesm/">cesm</a>  
 </li>
  
     </ul>
@@ -1672,11 +1718,11 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   <span><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="tag/diagnostics/">diagnostics</a>   
   <a href="tag/intake/">intake</a>   
-  <a href="tag/cesm/">cesm</a>   
+  <a href="tag/diagnostics/">diagnostics</a>   
+  <a href="tag/visualization/">visualization</a>   
   <a href="tag/jupyter/">jupyter</a>   
-  <a href="tag/visualization/">visualization</a>  
+  <a href="tag/cesm/">cesm</a>  
 </li>
  
     </ul>
@@ -1713,10 +1759,10 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   >
    
   <a href="tag/intake/">intake</a>   
-  <a href="tag/cesm/">cesm</a>   
-  <a href="tag/dask/">dask</a>   
+  <a href="tag/benchmark/">benchmark</a>   
   <a href="tag/ecgtools/">ecgtools</a>   
-  <a href="tag/benchmark/">benchmark</a>  
+  <a href="tag/dask/">dask</a>   
+  <a href="tag/cesm/">cesm</a>  
 </li>
  
     </ul>
@@ -1752,9 +1798,9 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   >
    
   <a href="tag/intake/">intake</a>   
-  <a href="tag/cesm/">cesm</a>   
+  <a href="tag/observations/">observations</a>   
   <a href="tag/diagnostics/">diagnostics</a>   
-  <a href="tag/observations/">observations</a>  
+  <a href="tag/cesm/">cesm</a>  
 </li>
  
     </ul>
@@ -1828,9 +1874,9 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   <span><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="tag/cesm2-le/">cesm2-le</a>   
   <a href="tag/observations/">observations</a>   
-  <a href="tag/intake/">intake</a>  
+  <a href="tag/intake/">intake</a>   
+  <a href="tag/cesm2-le/">cesm2-le</a>  
 </li>
  
     </ul>
@@ -1865,10 +1911,10 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   <span><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="tag/cesm/">cesm</a>   
+  <a href="tag/intake/">intake</a>   
   <a href="tag/diagnostics/">diagnostics</a>   
   <a href="tag/visualization/">visualization</a>   
-  <a href="tag/intake/">intake</a>  
+  <a href="tag/cesm/">cesm</a>  
 </li>
  
     </ul>
@@ -1941,9 +1987,9 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   <span><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="tag/cesm/">cesm</a>   
   <a href="tag/unstructured-grids/">unstructured grids</a>   
-  <a href="tag/visualization/">visualization</a>  
+  <a href="tag/visualization/">visualization</a>   
+  <a href="tag/cesm/">cesm</a>  
 </li>
  
     </ul>
@@ -1978,9 +2024,9 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   <span><i class="fa-fw fa fa-tags"></i> </span
   >
    
+  <a href="tag/intake/">intake</a>   
   <a href="tag/cesm2-le/">cesm2-le</a>   
-  <a href="tag/cesm/">cesm</a>   
-  <a href="tag/intake/">intake</a>  
+  <a href="tag/cesm/">cesm</a>  
 </li>
  
     </ul>
@@ -2055,8 +2101,8 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   >
    
   <a href="tag/conference/">conference</a>   
-  <a href="tag/open-source/">open-source</a>   
-  <a href="tag/scipy/">scipy</a>  
+  <a href="tag/scipy/">scipy</a>   
+  <a href="tag/open-source/">open-source</a>  
 </li>
  
     </ul>
@@ -2204,10 +2250,10 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   <span><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="tag/cesm/">cesm</a>   
-  <a href="tag/jupyter/">jupyter</a>   
   <a href="tag/documentation/">documentation</a>   
-  <a href="tag/intake/">intake</a>  
+  <a href="tag/intake/">intake</a>   
+  <a href="tag/jupyter/">jupyter</a>   
+  <a href="tag/cesm/">cesm</a>  
 </li>
  
     </ul>
@@ -2243,9 +2289,9 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   <span><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="tag/cesm/">cesm</a>   
+  <a href="tag/conference/">conference</a>   
   <a href="tag/diagnostics/">diagnostics</a>   
-  <a href="tag/conference/">conference</a>  
+  <a href="tag/cesm/">cesm</a>  
 </li>
  
     </ul>
@@ -2280,9 +2326,9 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   <span><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="tag/cesm/">cesm</a>   
+  <a href="tag/intake/">intake</a>   
   <a href="tag/visualization/">visualization</a>   
-  <a href="tag/intake/">intake</a>  
+  <a href="tag/cesm/">cesm</a>  
 </li>
  
     </ul>
@@ -2355,8 +2401,8 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   <span><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="tag/cesm/">cesm</a>   
-  <a href="tag/intake/">intake</a>  
+  <a href="tag/intake/">intake</a>   
+  <a href="tag/cesm/">cesm</a>  
 </li>
  
     </ul>
@@ -2393,8 +2439,8 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   >
    
   <a href="tag/conference/">conference</a>   
-  <a href="tag/dask/">dask</a>   
-  <a href="tag/open-science/">open-science</a>  
+  <a href="tag/open-science/">open-science</a>   
+  <a href="tag/dask/">dask</a>  
 </li>
  
     </ul>
@@ -2467,8 +2513,8 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   <span><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="tag/debug/">debug</a>   
   <a href="tag/cmip6/">cmip6</a>   
+  <a href="tag/debug/">debug</a>   
   <a href="tag/intake/">intake</a>  
 </li>
  
@@ -2542,8 +2588,8 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   <span><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="tag/paired-programming/">paired-programming</a>   
   <a href="tag/remote-access/">remote-access</a>   
+  <a href="tag/paired-programming/">paired-programming</a>   
   <a href="tag/editor/">editor</a>  
 </li>
  
@@ -2572,8 +2618,8 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   <span><i class="fa-fw fa fa-user"></i></span
   >
    
-  <a href="author/max-grover/">Max Grover</a>,   
-  <a href="author/matt-long/">Matt Long</a>  
+  <a href="author/matt-long/">Matt Long</a>,   
+  <a href="author/max-grover/">Max Grover</a>  
 </li>
     
 <li id="tags">
@@ -2656,9 +2702,9 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   <span><i class="fa-fw fa fa-tags"></i> </span
   >
    
+  <a href="tag/xoak/">xoak</a>   
   <a href="tag/xarray/">xarray</a>   
-  <a href="tag/">index</a>   
-  <a href="tag/xoak/">xoak</a>  
+  <a href="tag/">index</a>  
 </li>
  
     </ul>
@@ -2693,9 +2739,9 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   <span><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="tag/dask/">dask</a>   
+  <a href="tag/ncar/">ncar</a>   
   <a href="tag/jupyterhub/">jupyterhub</a>   
-  <a href="tag/ncar/">ncar</a>  
+  <a href="tag/dask/">dask</a>  
 </li>
  
     </ul>
@@ -2769,8 +2815,8 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   >
    
   <a href="tag/cesm/">cesm</a>   
-  <a href="tag/dask/">dask</a>   
-  <a href="tag/intake/">intake</a>  
+  <a href="tag/intake/">intake</a>   
+  <a href="tag/dask/">dask</a>  
 </li>
  
     </ul>
@@ -2805,8 +2851,8 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   <span><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="tag/dask/">dask</a>   
-  <a href="tag/jupyterhub/">jupyterhub</a>  
+  <a href="tag/jupyterhub/">jupyterhub</a>   
+  <a href="tag/dask/">dask</a>  
 </li>
  
     </ul>
@@ -2841,8 +2887,8 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   <span><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="tag/citation/">citation</a>   
   <a href="tag/software/">software</a>   
+  <a href="tag/citation/">citation</a>   
   <a href="tag/open-science/">open-science</a>  
 </li>
  
@@ -3213,8 +3259,8 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   >
    
   <a href="tag/faq/">faq</a>   
-  <a href="tag/python-tutorial-series/">python-tutorial-series</a>   
-  <a href="tag/python/">python</a>  
+  <a href="tag/python/">python</a>   
+  <a href="tag/python-tutorial-series/">python-tutorial-series</a>  
 </li>
  
     </ul>
@@ -3250,8 +3296,8 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   >
    
   <a href="tag/faq/">faq</a>   
-  <a href="tag/python-tutorial-series/">python-tutorial-series</a>   
-  <a href="tag/python/">python</a>  
+  <a href="tag/python/">python</a>   
+  <a href="tag/python-tutorial-series/">python-tutorial-series</a>  
 </li>
  
     </ul>
@@ -3287,8 +3333,8 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   >
    
   <a href="tag/faq/">faq</a>   
-  <a href="tag/python-tutorial-series/">python-tutorial-series</a>   
-  <a href="tag/python/">python</a>  
+  <a href="tag/python/">python</a>   
+  <a href="tag/python-tutorial-series/">python-tutorial-series</a>  
 </li>
  
     </ul>
@@ -3363,9 +3409,9 @@ What should I do?</p>
   <span><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="tag/dask/">dask</a>   
   <a href="tag/xarray/">xarray</a>   
   <a href="tag/python/">python</a>   
+  <a href="tag/dask/">dask</a>   
   <a href="tag/netcdf/">netcdf</a>  
 </li>
  
@@ -3402,8 +3448,8 @@ What should I do?</p>
   <span><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="tag/jinja2/">jinja2</a>   
-  <a href="tag/templating/">templating</a>  
+  <a href="tag/templating/">templating</a>   
+  <a href="tag/jinja2/">jinja2</a>  
 </li>
  
     </ul>
@@ -3449,8 +3495,8 @@ be more confusing than illuminating.</p>
   <span><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="tag/open-development/">open development</a>   
-  <a href="tag/open-source/">open source</a>  
+  <a href="tag/open-source/">open source</a>   
+  <a href="tag/open-development/">open development</a>  
 </li>
  
     </ul>
@@ -3504,9 +3550,9 @@ science itself!</p>
   <span><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="tag/cftime/">cftime</a>   
+  <a href="tag/calendars/">calendars</a>   
   <a href="tag/xarray/">xarray</a>   
-  <a href="tag/calendars/">calendars</a>  
+  <a href="tag/cftime/">cftime</a>  
 </li>
  
     </ul>

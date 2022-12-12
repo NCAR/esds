@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2022-12-09T08:01:14.408854+00:00</updated>
+  <updated>2022-12-12T16:49:52.475532+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.33">ABlog</generator>
@@ -516,7 +516,7 @@ What should I do?</summary>
     <title>How to Use xarray.map_blocks for Vertical Interpolation of a 3D Field</title>
     <updated>2021-04-28T00:00:00+00:00</updated>
     <author>
-      <name>Matt Long</name>
+      <name>Max Grover</name>
     </author>
     <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
 &lt;p&gt;Within this example, we cover how to use &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;xarray.map_blocks&lt;/span&gt;&lt;/code&gt; to calculate the mixed-layer depth within the CESM POP model output.&lt;/p&gt;
@@ -1262,7 +1262,7 @@ What should I do?</summary>
     <title>Batch Processing Jupyter Notebooks with Papermill</title>
     <updated>2022-03-17T00:00:00+00:00</updated>
     <author>
-      <name>Matthew Long</name>
+      <name>Anderson Banihirwe</name>
     </author>
     <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://jupyter.org/"&gt;Jupyter notebooks&lt;/a&gt; are really good for doing the heavy lifting of data analysis by:&lt;/p&gt;
@@ -1421,5 +1421,24 @@ or Google Meet. More information is in this previous post.This tutorial is desig
     <category term="jupyter" label="jupyter"/>
     <category term="xarray" label="xarray"/>
     <published>2022-11-29T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/2022/cam-se-regridding/</id>
+    <title>Regridding using xESMF and an existing weights file</title>
+    <updated>2022-12-06T00:00:00+00:00</updated>
+    <author>
+      <name>Deepak Cherian</name>
+    </author>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;A fairly common request is to use an existing ESMF weights file to regrid a Xarray Dataset  (&lt;a class="reference external" href="https://github.com/UXARRAY/uxarray/issues/172"&gt;1&lt;/a&gt;,  &lt;a class="reference external" href="https://github.com/pangeo-data/xESMF/issues/202"&gt;2&lt;/a&gt;). Applying weights in general should be easy: read weights then &lt;a class="reference external" href="https://github.com/UXARRAY/uxarray/issues/172#issuecomment-1310601230"&gt;apply them&lt;/a&gt; using &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;dot&lt;/span&gt;&lt;/code&gt; or &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;tensordot&lt;/span&gt;&lt;/code&gt; on the input dataset.&lt;/p&gt;
+&lt;p&gt;In the Xarray/Dask/Pangeo ecosystem, &lt;a class="reference external" href="https://xesmf.readthedocs.io"&gt;xESMF&lt;/a&gt; provides an interface to ESMF for convenient regridding, includiing parallelization with Dask. Here we demonstrate how to use an existing ESMF weights file with xESMF specifically for CAM-SE.&lt;/p&gt;
+&lt;img alt="../_images/fd44e9f7bac7bfb9e60950a50b7f51ec81040235662db40028a587eea1fe403e.png" src="../_images/fd44e9f7bac7bfb9e60950a50b7f51ec81040235662db40028a587eea1fe403e.png" /&gt;
+&lt;/div&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/2022/cam-se-regridding/" rel="alternate"/>
+    <summary>A fairly common request is to use an existing ESMF weights file to regrid a Xarray Dataset  (1,  2). Applying weights in general should be easy: read weights then apply them using dot or tensordot on the input dataset.In the Xarray/Dask/Pangeo ecosystem, xESMF provides an interface to ESMF for convenient regridding, includiing parallelization with Dask. Here we demonstrate how to use an existing ESMF weights file with xESMF specifically for CAM-SE.</summary>
+    <category term="CAM" label="CAM"/>
+    <category term="xesmf" label="xesmf"/>
+    <published>2022-12-06T00:00:00+00:00</published>
   </entry>
 </feed>
