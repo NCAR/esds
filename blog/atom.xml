@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2022-12-12T16:49:52.475532+00:00</updated>
+  <updated>2022-12-13T20:28:38.687763+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.33">ABlog</generator>
@@ -516,7 +516,7 @@ What should I do?</summary>
     <title>How to Use xarray.map_blocks for Vertical Interpolation of a 3D Field</title>
     <updated>2021-04-28T00:00:00+00:00</updated>
     <author>
-      <name>Max Grover</name>
+      <name>Matt Long</name>
     </author>
     <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
 &lt;p&gt;Within this example, we cover how to use &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;xarray.map_blocks&lt;/span&gt;&lt;/code&gt; to calculate the mixed-layer depth within the CESM POP model output.&lt;/p&gt;
@@ -1030,7 +1030,7 @@ What should I do?</summary>
     <title>Reading WRF data into Xarray and Visualizing the Output using hvPlot</title>
     <updated>2021-10-15T00:00:00+00:00</updated>
     <author>
-      <name>Max Grover</name>
+      <name>Anderson Banihirwe</name>
     </author>
     <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
 &lt;p&gt;The &lt;em&gt;&lt;strong&gt;typical&lt;/strong&gt;&lt;/em&gt; data workflow within the Python ecosystem when working with Weather Research and Forecasting (WRF) data is to use the &lt;a class="reference external" href="https://wrf-python.readthedocs.io/en/latest/"&gt;wrf-python&lt;/a&gt; package! Traditionally, it can be difficult to utilize the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;xarray&lt;/span&gt;&lt;/code&gt; data model with WRF data, due to a few challenges:&lt;/p&gt;
@@ -1224,7 +1224,7 @@ What should I do?</summary>
     <title>Sparse arrays and the CESM land model component</title>
     <updated>2022-02-24T00:00:00+00:00</updated>
     <author>
-      <name>Katie Dagon</name>
+      <name>Deepak Cherian</name>
     </author>
     <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
 &lt;p&gt;An underappreciated feature of Xarray + Dask is the ability to plug in &lt;a class="reference external" href="https://docs.xarray.dev/en/stable/user-guide/duckarrays.html"&gt;different array types&lt;/a&gt;. Usually we work with Xarray wrapping a Dask array which in turn uses &lt;em&gt;NumPy&lt;/em&gt; arrays for each block; or just Xarray wrapping NumPy arrays directly. NumPy arrays are dense in-memory arrays. Other array types exist:&lt;/p&gt;
@@ -1262,7 +1262,7 @@ What should I do?</summary>
     <title>Batch Processing Jupyter Notebooks with Papermill</title>
     <updated>2022-03-17T00:00:00+00:00</updated>
     <author>
-      <name>Anderson Banihirwe</name>
+      <name>Matthew Long</name>
     </author>
     <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://jupyter.org/"&gt;Jupyter notebooks&lt;/a&gt; are really good for doing the heavy lifting of data analysis by:&lt;/p&gt;
