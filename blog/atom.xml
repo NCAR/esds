@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2022-12-19T17:52:15.456556+00:00</updated>
+  <updated>2022-12-19T18:31:06.472149+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.33">ABlog</generator>
@@ -1224,7 +1224,7 @@ What should I do?</summary>
     <title>Sparse arrays and the CESM land model component</title>
     <updated>2022-02-24T00:00:00+00:00</updated>
     <author>
-      <name>Katie Dagon</name>
+      <name>Deepak Cherian</name>
     </author>
     <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
 &lt;p&gt;An underappreciated feature of Xarray + Dask is the ability to plug in &lt;a class="reference external" href="https://docs.xarray.dev/en/stable/user-guide/duckarrays.html"&gt;different array types&lt;/a&gt;. Usually we work with Xarray wrapping a Dask array which in turn uses &lt;em&gt;NumPy&lt;/em&gt; arrays for each block; or just Xarray wrapping NumPy arrays directly. NumPy arrays are dense in-memory arrays. Other array types exist:&lt;/p&gt;
@@ -1262,7 +1262,7 @@ What should I do?</summary>
     <title>Batch Processing Jupyter Notebooks with Papermill</title>
     <updated>2022-03-17T00:00:00+00:00</updated>
     <author>
-      <name>Matthew Long</name>
+      <name>Anderson Banihirwe</name>
     </author>
     <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://jupyter.org/"&gt;Jupyter notebooks&lt;/a&gt; are really good for doing the heavy lifting of data analysis by:&lt;/p&gt;
@@ -1427,7 +1427,7 @@ or Google Meet. More information is in this previous post.This tutorial is desig
     <title>Regridding using xESMF and an existing weights file</title>
     <updated>2022-12-06T00:00:00+00:00</updated>
     <author>
-      <name>Christine Shields</name>
+      <name>Deepak Cherian</name>
     </author>
     <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
 &lt;p&gt;A fairly common request is to use an existing ESMF weights file to regrid a Xarray Dataset  (&lt;a class="reference external" href="https://github.com/UXARRAY/uxarray/issues/172"&gt;1&lt;/a&gt;,  &lt;a class="reference external" href="https://github.com/pangeo-data/xESMF/issues/202"&gt;2&lt;/a&gt;). Applying weights in general should be easy: read weights then &lt;a class="reference external" href="https://github.com/UXARRAY/uxarray/issues/172#issuecomment-1310601230"&gt;apply them&lt;/a&gt; using &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;dot&lt;/span&gt;&lt;/code&gt; or &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;tensordot&lt;/span&gt;&lt;/code&gt; on the input dataset.&lt;/p&gt;
@@ -1440,5 +1440,24 @@ or Google Meet. More information is in this previous post.This tutorial is desig
     <category term="CAM" label="CAM"/>
     <category term="xesmf" label="xesmf"/>
     <published>2022-12-06T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/2022/esds-event-recap/</id>
+    <title>Recap of a (Re)Introduction to Earth System Data Science (ESDS) Across NCAR/UCAR/UCP</title>
+    <updated>2022-12-19T00:00:00+00:00</updated>
+    <author>
+      <name>Katie Dagon</name>
+    </author>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;ESDS hosted a (Re)Introduction to Earth System Data Science (ESDS) Across
+NCAR/UCAR/UCP on November 10-11, 2022. This blog post serves to consolidate and share resources from that event.&lt;/p&gt;
+&lt;p&gt;The final agenda from the event can be found &lt;a class="reference external" href="https://docs.google.com/document/d/10cgElI2Rl8gCqH3oSQqEXzmW-3sSbrv9LQ9eM6A7v8g/edit?usp=sharing"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/2022/esds-event-recap/" rel="alternate"/>
+    <summary>ESDS hosted a (Re)Introduction to Earth System Data Science (ESDS) Across
+NCAR/UCAR/UCP on November 10-11, 2022. This blog post serves to consolidate and share resources from that event.The final agenda from the event can be found here.</summary>
+    <category term="tutorialhackathonevents" label="tutorial hackathon events"/>
+    <published>2022-12-19T00:00:00+00:00</published>
   </entry>
 </feed>

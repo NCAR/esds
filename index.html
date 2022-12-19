@@ -478,6 +478,11 @@ including a variety of blog posts and resources for the community</p>
 <section id="recent-posts">
 <h2>Recent posts<a class="headerlink" href="#recent-posts" title="Permalink to this headline">#</a></h2>
 <ul class="postlist-style-none postlist">
+<li class="ablog-post"><p class="ablog-post-title">2022-12-19 - <a class="reference internal" href="posts/2022/esds-event-recap/">Recap of a (Re)Introduction to Earth System Data Science (ESDS) Across NCAR/UCAR/UCP</a></p>
+<p class="ablog-post-excerpt">ESDS hosted a (Re)Introduction to Earth System Data Science (ESDS) Across
+NCAR/UCAR/UCP on November 10-11, 2022. This blog post serves to consolidate and share resources from that event.</p>
+<p class="ablog-post-excerpt">The final agenda from the event can be found <a class="reference external" href="https://docs.google.com/document/d/10cgElI2Rl8gCqH3oSQqEXzmW-3sSbrv9LQ9eM6A7v8g/edit?usp=sharing">here</a>.</p>
+</li>
 <li class="ablog-post"><p class="ablog-post-title">2022-12-06 - <a class="reference internal" href="posts/2022/cam-se-regridding/">Regridding using xESMF and an existing weights file</a></p>
 <p class="ablog-post-excerpt">A fairly common request is to use an existing ESMF weights file to regrid a Xarray Dataset  (<a class="reference external" href="https://github.com/UXARRAY/uxarray/issues/172">1</a>,  <a class="reference external" href="https://github.com/pangeo-data/xESMF/issues/202">2</a>). Applying weights in general should be easy: read weights then <a class="reference external" href="https://github.com/UXARRAY/uxarray/issues/172#issuecomment-1310601230">apply them</a> using <code class="docutils literal notranslate"><span class="pre">dot</span></code> or <code class="docutils literal notranslate"><span class="pre">tensordot</span></code> on the input dataset.</p>
 <p class="ablog-post-excerpt">In the Xarray/Dask/Pangeo ecosystem, <a class="reference external" href="https://xesmf.readthedocs.io">xESMF</a> provides an interface to ESMF for convenient regridding, includiing parallelization with Dask. Here we demonstrate how to use an existing ESMF weights file with xESMF specifically for CAM-SE.</p>
