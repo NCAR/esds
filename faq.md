@@ -46,7 +46,10 @@ See the xarray [ecosystem](https://xarray.pydata.org/en/latest/ecosystem.html) p
 
 ### General Advice
 
-Dealing with Python environments can be tricky... a good place to start is to checkout [this guide on dealing with Python environments](https://whiteboxml.com/blog/the-definitive-guide-to-python-virtual-environments-with-conda). If you just need a refresher on the various conda commands, this [conda cheet sheet](https://docs.conda.io/projects/conda/en/latest/_downloads/843d9e0198f2a193a3484886fa28163c/conda-cheatsheet.pdf) is a wonderful quick reference.
+Dealing with Python environments can be tricky... a good place to start is to checkout
+[this guide on dealing with Python environments](https://whiteboxml.com/blog/the-definitive-guide-to-python-virtual-environments-with-conda).
+If you just need a refresher on the various conda commands, this [conda cheet sheet](https://docs.conda.io/projects/conda/en/latest/_downloads/843d9e0198f2a193a3484886fa28163c/conda-cheatsheet.pdf)
+is a wonderful quick reference.
 
 ### Installing conda on NCAR HPC resources
 
