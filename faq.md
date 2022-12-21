@@ -19,7 +19,11 @@ Avoid personal emails and prefer a public forum.
 
 ### What do I do if my question is not answered on this page?
 
-Open an issue [here](https://github.com/NCAR/esds/issues) or book an [office hour appointment](https://ncar.github.io/esds/office-hours/) with an ESDS core member!
+If your question is related to conda environments and you're affiliated with UCAR/NCAR,
+you can open a help ticket on the NCAR Research Computing Helpdesk site.
+If your issue is related to data science packages and workflows, you can open an issue
+[on our GitHub here](https://github.com/NCAR/esds/issues) or book an
+[office hour appointment](https://ncar.github.io/esds/office-hours/) with an ESDS core member!
 
 ## Someone must have written the function I want. Where do I look?
 
