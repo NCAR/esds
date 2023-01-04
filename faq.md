@@ -46,18 +46,64 @@ See the xarray [ecosystem](https://xarray.pydata.org/en/latest/ecosystem.html) p
 
 ### General Advice
 
-Dealing with Python environments can be tricky... a good place to start is to checkout [this guide on dealing with Python environments](https://whiteboxml.com/blog/the-definitive-guide-to-python-virtual-environments-with-conda)
+Dealing with Python environments can be tricky... a good place to start is to checkout
+[this guide on dealing with Python environments](https://whiteboxml.com/blog/the-definitive-guide-to-python-virtual-environments-with-conda).
+If you just need a refresher on the various conda commands, this [conda cheet sheet](https://docs.conda.io/projects/conda/en/latest/_downloads/843d9e0198f2a193a3484886fa28163c/conda-cheatsheet.pdf)
+is a wonderful quick reference.
 
-### Installing conda on NCAR HPC resources
+### Using conda on NCAR HPC resources
+```{Warning}
 
-There are two main steps of installing `conda` (miniconda in this case) on NCAR HPC resources
+Since 12 December 2022, it is no longer recommended to install your own version of miniconda on the HPC system.
+To migrate your existing environments to the recommened installation of miniconda, refer to the bottom of this section.
 
-1. Download [miniconda](https://docs.conda.io/en/latest/miniconda.html) within your work directory
-1. Install and activate your installation
+```
 
-There are a few videos which Anderson Banihirwe put together walking through this process - they are embedded below!
+The NCAR High Performance Computing (HPC) system has a conda installation for you to use. The most recent and detailed
+instructions can be found on this [Using Conda and Python](https://arc.ucar.edu/knowledge_base/83853599) page. 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/GGxUgjlmW2A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+#### Conda environment options
+If you don't want the trouble of making your own conda environment, there are managed environments available. The NCAR
+Package Library (NPL) is an environment containing many common scientific Python pacakges such as Numpy, Xarray, GeoCAT, 
+A summary of the most common workflow is listed here for convenience.
+
+##### Conda on the command line
+1. Open up a terminal in Casper or Cheyenne
+2. Load the NCAR conda module:
+
+   ```bash
+   $ module load conda/latest
+   ```
+3. List the available NCAR managed environments:
+
+   ```bash
+   $ conda env list
+
+      base                  *  /glade/u/apps/opt/conda
+      npl                      /glade/u/apps/opt/conda/envs/npl
+      npl-2022b                /glade/u/apps/opt/conda/envs/npl-2022b
+      npl-2206                 /glade/u/apps/opt/conda/envs/npl-2206
+      npl-2207                 /glade/u/apps/opt/conda/envs/npl-2207
+      pygpu-dask               /glade/u/apps/opt/conda/envs/pygpu-dask
+   ```
+4. Activate the environment you want to use. Here we are using the NPL environment as an example. NPL can be replaced
+   with any environment name:
+
+   ```bash
+   $ conda activate npl
+   ```
+5. Now when you run a script, the modules within the npl environment will be available to your program.
+
+##### Conda in the NCAR JupyterHub
+1. Log in to the Production [NCAR JupyterHub](https://jupyterhub.hpc.ucar.edu/)
+2. Start a [server](https://arc.ucar.edu/knowledge_base/70549913)
+3. With your Jupyter Notebook open, click on the kernel name in the upper right.
+   ![The NCAR JupyterHub with a blank JupyterNotebook open. A red arrow is pointing to the upper right where the current kernel is listed.](images/JupyterHub.png)
+4. A dialog will appear with all the verious kernels available to you. These kernels will (generally) have the same
+   name as the conda environment that it uses. This may not be the case if you are managing your own environments and kernels.
+   ![After clicking on the current kernel name, a dialog appears saying "Select Kernel" with a drop down menu](images/SelectKernel.png)
+5. Select the "npl (conda)" kernel from the list if you want to use the NCAR-managed NPL environment.
+   ![The "Select Kernel" dialog with the NPL (conda) kernel selected](images/NPLKernel.png)
 
 ### Creating and accessing a new conda environment
 
