@@ -11,32 +11,36 @@ This contains relevant questions and answers from common workflow issues and que
 Try one of the following resources.
 
 1. Xarray's [How Do I do X?](https://xarray.pydata.org/en/stable/howdoi.html) page
-1. [Xarray Github Discussions](https://github.com/pydata/xarray/discussions)
-1. [Pangeo Discourse Forum](https://discourse.pangeo.org)
-1. NCAR Zulip under #python-questions, #python-dev, or #dask.
+2. [Xarray Github Discussions](https://github.com/pydata/xarray/discussions)
+3. [Pangeo Discourse Forum](https://discourse.pangeo.org)
+4. NCAR Zulip under #python-questions, #python-dev, or #dask.
 
 Avoid personal emails and prefer a public forum.
 
 ### What do I do if my question is not answered on this page?
 
-Open an issue [here](https://github.com/NCAR/esds/issues)
+If your question is related to conda environments and you're affiliated with UCAR/NCAR,
+you can open a help ticket on the NCAR Research Computing Helpdesk site.
+If your issue is related to data science packages and workflows, you can open an issue
+[on our GitHub here](https://github.com/NCAR/esds/issues) or book an
+[office hour appointment](https://ncar.github.io/esds/office-hours/) with an ESDS core member!
 
 ## Someone must have written the function I want. Where do I look?
 
 See the xarray [ecosystem](https://xarray.pydata.org/en/latest/ecosystem.html) page. Also see the [xarray-contrib](https://github.com/xarray-contrib/) and [pangeo-data](https://github.com/pangeo-data) organizations. Some NCAR relevant projects include:
 
-1. GeoCAT-comp
-1. GeoCAT-viz
-1. cf_xarray
-1. climpred
-1. eofs
-1. MetPy
-1. rechunker
-1. xclim
-1. xesmf
-1. xgcm
-1. pop-tools
-1. xskillscore
+1. [GeoCAT-comp](https://geocat-comp.readthedocs.io/en/latest/)
+1. [GeoCAT-viz](https://geocat-viz.readthedocs.io/en/latest/)
+1. [cf_xarray](https://cf-xarray.readthedocs.io/en/latest/)
+1. [climpred](https://climpred.readthedocs.io/en/stable/)
+1. [eofs](https://ajdawson.github.io/eofs/latest/)
+1. [MetPy](https://unidata.github.io/MetPy/latest/index.html)
+1. [rechunker](https://rechunker.readthedocs.io/en/latest/)
+1. [xclim](https://xclim.readthedocs.io/en/stable/)
+1. [xesmf](https://xesmf.readthedocs.io/en/latest/)
+1. [xgcm](https://xgcm.readthedocs.io/en/latest/)
+1. [pop-tools](https://pop-tools.readthedocs.io/en/latest/)
+1. [xskillscore](https://xskillscore.readthedocs.io/en/stable/index.html)
 
 ## Conda Environments
 
