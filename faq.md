@@ -63,13 +63,11 @@ To export your existing environments to the recommended installation of minicond
 The NCAR High Performance Computing (HPC) system has a conda installation for you to use. The most recent and detailed
 instructions can be found on this [Using Conda and Python](https://arc.ucar.edu/knowledge_base/83853599) page.
 
-#### Conda environment options
-
 If you don't want the trouble of making your own conda environment, there are managed environments available. The NCAR
 Package Library (NPL) is an environment containing many common scientific Python pacakges such as Numpy, Xarray, and GeoCAT.
 You can access the NPL environment through the command line and the NCAR JupyterHub.
 
-##### NPL on the command line
+#### NPL on the command line
 
 1. Open up a terminal in Casper or Cheyenne
 2. Load the NCAR conda module:
@@ -100,7 +98,7 @@ You can access the NPL environment through the command line and the NCAR Jupyter
 
 5. Now when you run a script, the modules within the `npl` environment will be available to your program.
 
-##### NPL on the NCAR JupyterHub
+#### NPL on the NCAR JupyterHub
 
 1. Log in to the Production [NCAR JupyterHub](https://jupyterhub.hpc.ucar.edu/)
 2. Start a [server](https://arc.ucar.edu/knowledge_base/70549913)
