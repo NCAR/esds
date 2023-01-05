@@ -56,7 +56,7 @@ is a wonderful quick reference.
 ```{Warning}
 
 Since 12 December 2022, it is no longer recommended to install your own version of miniconda on the HPC system.
-To export your existing environments to the recommened installation of miniconda, refer to the bottom of this section.
+To export your existing environments to the recommended installation of miniconda, refer to the "How can I export my environments?" section.
 
 ```
 
@@ -199,7 +199,7 @@ We do not recommend using `mamba` to activate and deactivate environments as thi
 
 See [mamba documentation](https://mamba.readthedocs.io/en/latest/index.html) for more.
 
-### How can I export my environments?
+### https://ithelp.ucar.edu/plugins/servlet/desk/site/rc
 
 If you made an environment on one machine or using a different conda installation, you can export that environment
 and use it elsewhere. These are the basic steps:
