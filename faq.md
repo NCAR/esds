@@ -55,7 +55,7 @@ is a wonderful quick reference.
 ```{Warning}
 
 Since 12 December 2022, it is no longer recommended to install your own version of miniconda on the HPC system.
-To migrate your existing environments to the recommened installation of miniconda, refer to the bottom of this section.
+To export your existing environments to the recommened installation of miniconda, refer to the bottom of this section.
 
 ```
 
@@ -187,6 +187,25 @@ mamba env update -f environment.yml
 We do not recommend using `mamba` to activate and deactivate environments as this can cause packages to misbehave/not load correctly.
 ```
 See [mamba documentation](https://mamba.readthedocs.io/en/latest/index.html) for more.
+
+### How can I export my environments?
+If you made an environment on one machine or using a different conda installation, you can export that environment
+and use it elsewhere. These are the basic steps:
+1. Export your environment
+   
+   With the environment you want to export activated, run the following command:
+   ```bash
+   conda env export --from-history > environment.yml
+   ```
+   where `environment` can be replaced with the file name of your choice. The `--from-history` flag allows you to
+   recreate your environment on any system. It is the cross-platform compatible way of exporting an environment.
+
+2. Move the `environment.yml` to the system you want to use it on / activate the appropriate conda installtion you wish to use.
+
+3. Use the `.yml` file to create your environment
+   ```bash
+   conda env create -f environment.yml
+   ```
 
 ## Xarray and Dask
 
