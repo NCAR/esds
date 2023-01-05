@@ -52,6 +52,7 @@ If you just need a refresher on the various conda commands, this [conda cheet sh
 is a wonderful quick reference.
 
 ### Using conda on NCAR HPC resources
+
 ```{Warning}
 
 Since 12 December 2022, it is no longer recommended to install your own version of miniconda on the HPC system.
@@ -60,20 +61,23 @@ To export your existing environments to the recommened installation of miniconda
 ```
 
 The NCAR High Performance Computing (HPC) system has a conda installation for you to use. The most recent and detailed
-instructions can be found on this [Using Conda and Python](https://arc.ucar.edu/knowledge_base/83853599) page. 
+instructions can be found on this [Using Conda and Python](https://arc.ucar.edu/knowledge_base/83853599) page.
 
 #### Conda environment options
+
 If you don't want the trouble of making your own conda environment, there are managed environments available. The NCAR
-Package Library (NPL) is an environment containing many common scientific Python pacakges such as Numpy, Xarray, and GeoCAT. 
+Package Library (NPL) is an environment containing many common scientific Python pacakges such as Numpy, Xarray, and GeoCAT.
 You can access the NPL environment through the command line and the NCAR JupyterHub.
 
 ##### NPL on the command line
+
 1. Open up a terminal in Casper or Cheyenne
 2. Load the NCAR conda module:
 
    ```bash
    $ module load conda/latest
    ```
+
 3. List the available NCAR managed environments:
 
    ```bash
@@ -86,15 +90,18 @@ You can access the NPL environment through the command line and the NCAR Jupyter
       npl-2207                 /glade/u/apps/opt/conda/envs/npl-2207
       pygpu-dask               /glade/u/apps/opt/conda/envs/pygpu-dask
    ```
+
 4. Activate the environment you want to use. Here we are using the `npl` environment as an example. `npl` can be replaced
    with any available environment name:
 
    ```bash
    $ conda activate npl
    ```
+
 5. Now when you run a script, the modules within the `npl` environment will be available to your program.
 
 ##### NPL on the NCAR JupyterHub
+
 1. Log in to the Production [NCAR JupyterHub](https://jupyterhub.hpc.ucar.edu/)
 2. Start a [server](https://arc.ucar.edu/knowledge_base/70549913)
 3. With your Jupyter Notebook open, click on the kernel name in the upper right.
@@ -111,7 +118,6 @@ You may want to move past using NPL, and create a new conda environment!
 For detailed instructions, check out the [Using Conda and Python](https://arc.ucar.edu/knowledge_base/83853599) page on
 the NCAR Advanced Research Computing site. Heres a summary of the basic steps:
 
-
 1. Create the environment
 
    If you are creating an environment from scratch, use the following:
@@ -127,18 +133,20 @@ the NCAR Advanced Research Computing site. Heres a summary of the basic steps:
    ```bash
    conda env create -f environment.yml
    ```
+
 2. Activate your environment and install the `ipykernel` package
 
    ```bash
    conda activate my_environment.yml
    conda install ipykernel
    ```
-   
+
    ```{Note}
 
    The [`ipykernel`](https://github.com/ipython/ipykernel) package is required for your environment to be available from the NCAR [JupyterHub](https://jupyterhub.hpc.ucar.edu/)
 
    ```
+
 3. Accessing your conda environment
 
    Your environment should now automatically show up as an available kernel in any Jupyter server on the NCAR HPC systems.
@@ -147,8 +155,9 @@ the NCAR Advanced Research Computing site. Heres a summary of the basic steps:
    ```bash
    python -m ipykernel install --user --name=my-kernel
    ```
+
    Where `my-kernel` is the kernel name.
-   
+
 ### Conda is taking too long to solve environment: use mamba
 
 This is a very common issue when installing a new package or trying to update a package in an existing conda environment. This issue is usually manifested in a conda message along these lines:
@@ -187,17 +196,22 @@ mamba env update -f environment.yml
 ```{Note}
 We do not recommend using `mamba` to activate and deactivate environments as this can cause packages to misbehave/not load correctly.
 ```
+
 See [mamba documentation](https://mamba.readthedocs.io/en/latest/index.html) for more.
 
 ### How can I export my environments?
+
 If you made an environment on one machine or using a different conda installation, you can export that environment
 and use it elsewhere. These are the basic steps:
+
 1. Export your environment
-   
+
    With the environment you want to export activated, run the following command:
+
    ```bash
    conda env export --from-history > environment.yml
    ```
+
    where `environment` can be replaced with the file name of your choice. The `--from-history` flag allows you to
    recreate your environment on any system. It is the cross-platform compatible way of exporting an environment.
 
