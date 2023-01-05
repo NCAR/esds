@@ -64,10 +64,10 @@ instructions can be found on this [Using Conda and Python](https://arc.ucar.edu/
 
 #### Conda environment options
 If you don't want the trouble of making your own conda environment, there are managed environments available. The NCAR
-Package Library (NPL) is an environment containing many common scientific Python pacakges such as Numpy, Xarray, GeoCAT, 
-A summary of the most common workflow is listed here for convenience.
+Package Library (NPL) is an environment containing many common scientific Python pacakges such as Numpy, Xarray, and GeoCAT. 
+You can access the NPL environment through the command line and the NCAR JupyterHub.
 
-##### Conda on the command line
+##### NPL on the command line
 1. Open up a terminal in Casper or Cheyenne
 2. Load the NCAR conda module:
 
@@ -86,15 +86,15 @@ A summary of the most common workflow is listed here for convenience.
       npl-2207                 /glade/u/apps/opt/conda/envs/npl-2207
       pygpu-dask               /glade/u/apps/opt/conda/envs/pygpu-dask
    ```
-4. Activate the environment you want to use. Here we are using the NPL environment as an example. NPL can be replaced
-   with any environment name:
+4. Activate the environment you want to use. Here we are using the `npl` environment as an example. `npl` can be replaced
+   with any available environment name:
 
    ```bash
    $ conda activate npl
    ```
-5. Now when you run a script, the modules within the npl environment will be available to your program.
+5. Now when you run a script, the modules within the `npl` environment will be available to your program.
 
-##### Conda in the NCAR JupyterHub
+##### NPL on the NCAR JupyterHub
 1. Log in to the Production [NCAR JupyterHub](https://jupyterhub.hpc.ucar.edu/)
 2. Start a [server](https://arc.ucar.edu/knowledge_base/70549913)
 3. With your Jupyter Notebook open, click on the kernel name in the upper right.
@@ -107,9 +107,9 @@ A summary of the most common workflow is listed here for convenience.
 
 ### Creating and accessing a new conda environment on the NCAR JupyterHub
 
-You may want to move past just your base environment, and create a new conda environment!
+You may want to move past using NPL, and create a new conda environment!
 For detailed instructions, check out the [Using Conda and Python](https://arc.ucar.edu/knowledge_base/83853599) page on
-the NCAR Advanced Research Computing site. There are a few primary steps to this process:
+the NCAR Advanced Research Computing site. Heres a summary of the basic steps:
 
 
 1. Create the environment
@@ -122,7 +122,7 @@ the NCAR Advanced Research Computing site. There are a few primary steps to this
 
    where `my_environment` is the name of your environment
 
-   if you have an environment file (ex. `environment.yml`), use the following:
+   Ff you have an environment file (ex. `environment.yml`), use the following:
 
    ```bash
    conda env create -f environment.yml
@@ -140,6 +140,7 @@ the NCAR Advanced Research Computing site. There are a few primary steps to this
 
    ```
 3. Accessing your conda environment
+
    Your environment should now automatically show up as an available kernel in any Jupyter server on the NCAR HPC systems.
    If you want to give your kernel a name that is different from the environment name, you can use the following command:
 
