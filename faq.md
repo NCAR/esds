@@ -197,7 +197,7 @@ We do not recommend using `mamba` to activate and deactivate environments as thi
 
 See [mamba documentation](https://mamba.readthedocs.io/en/latest/index.html) for more.
 
-### How can I export my environments? 
+### How can I export my environments?
 
 If you made an environment on one machine or using a different conda installation, you can export that environment
 and use it elsewhere. These are the basic steps:
