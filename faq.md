@@ -42,7 +42,7 @@ See the xarray [ecosystem](https://xarray.pydata.org/en/latest/ecosystem.html) p
 1. [pop-tools](https://pop-tools.readthedocs.io/en/latest/)
 1. [xskillscore](https://xskillscore.readthedocs.io/en/stable/index.html)
 
-## Conda Environments
+## How do I use conda environments?
 
 ### General Advice
 
@@ -105,37 +105,49 @@ A summary of the most common workflow is listed here for convenience.
 5. Select the "npl (conda)" kernel from the list if you want to use the NCAR-managed NPL environment.
    ![The "Select Kernel" dialog with the NPL (conda) kernel selected](images/NPLKernel.png)
 
-### Creating and accessing a new conda environment
+### Creating and accessing a new conda environment on the NCAR JupyterHub
 
-You may want to move past just your base environment, and create a new conda environment! There are a few primary steps to this process:
+You may want to move past just your base environment, and create a new conda environment!
+For detailed instructions, check out the [Using Conda and Python](https://arc.ucar.edu/knowledge_base/83853599) page on
+the NCAR Advanced Research Computing site. There are a few primary steps to this process:
+
 
 1. Create the environment
+
    If you are creating an environment from scratch, use the following:
 
    ```bash
-   conda create --name
+   conda create --name my_environment
    ```
 
-   where `name` is the name of your environment
+   where `my_environment` is the name of your environment
 
    if you have an environment file (ex. `environment.yml`), use the following:
-
-   ```{Note}
-
-   Make sure you include the [`ipykernel`](https://github.com/ipython/ipykernel) package within your environment, which is required for your environment to be available from the [JupyterHub](https://jupyterhub.hpc.ucar.edu/)
-
-   ```
 
    ```bash
    conda env create -f environment.yml
    ```
+2. Activate your environment and install the `ipykernel` package
 
-2. Accessing your conda environment
+   ```bash
+   conda activate my_environment.yml
+   conda install ipykernel
+   ```
+   
+   ```{Note}
 
-   This process will change depending on whether you are using an interactive Jupyter environment - I encourage you to check out the video which Anderson Banihirwe put together describing this process on NCAR HPC resources
+   The [`ipykernel`](https://github.com/ipython/ipykernel) package is required for your environment to be available from the NCAR [JupyterHub](https://jupyterhub.hpc.ucar.edu/)
 
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/W4Jb6rY1w1w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+   ```
+3. Accessing your conda environment
+   Your environment should now automatically show up as an available kernel in any Jupyter server on the NCAR HPC systems.
+   If you want to give your kernel a name that is different from the environment name, you can use the following command:
 
+   ```bash
+   python -m ipykernel install --user --name=my-kernel
+   ```
+   Where `my-kernel` is the kernel name.
+   
 ### Conda is taking too long to solve environment: use mamba
 
 This is a very common issue when installing a new package or trying to update a package in an existing conda environment. This issue is usually manifested in a conda message along these lines:
@@ -171,29 +183,10 @@ mamba install package_name
 mamba env update -f environment.yml
 ```
 
+```{Note}
+We do not recommend using `mamba` to activate and deactivate environments as this can cause packages to misbehave/not load correctly.
+```
 See [mamba documentation](https://mamba.readthedocs.io/en/latest/index.html) for more.
-
-### Conda Environments on JupyterHub
-
-The Computational and Information Systems Lab (CISL) at NCAR put together some [good documentation](https://arc.ucar.edu/knowledge_base/83853599) on dealing with environments on Casper/Cheyenne
-
-#### Activating Your Base Environment Upon Opening a Terminal
-
-Even **after** running `conda init bash` , you may notice that upon opening a terminal on the JupyterHub/NCAR HPC resources, your conda environment is not activated right away. You **could** call
-
-```bash
-bash
-```
-
-which would activate your conda environment! A better solution[^1] would be to ensure that your conda environment is activated upon login.
-
-You can do this using the following snippet:
-
-```bash
-echo ". ~/.bashrc" >> ~/.bash_profile
-```
-
-[^1]: Assuming you are using a bash terminal, which is the default on NCAR HPC
 
 ## Xarray and Dask
 
