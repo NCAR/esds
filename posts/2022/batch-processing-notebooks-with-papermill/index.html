@@ -462,11 +462,11 @@ commentsRunWhenDOMLoaded(addUtterances);
   <span><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="../../../blog/tag/python/">python</a>   
   <a href="../../../blog/tag/notebooks/">notebooks</a>   
   <a href="../../../blog/tag/papermill/">papermill</a>   
-  <a href="../../../blog/tag/automation/">automation</a>   
-  <a href="../../../blog/tag/jupyter/">jupyter</a>  
+  <a href="../../../blog/tag/jupyter/">jupyter</a>   
+  <a href="../../../blog/tag/python/">python</a>   
+  <a href="../../../blog/tag/automation/">automation</a>  
 </li>
  
 </ul>
@@ -602,9 +602,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li><p><a class="reference external" href="https://jupyterlab.readthedocs.io/en/stable/"><strong>jupyterlab</strong></a></p></li>
 </ul>
 <p>For demonstration purposes, we will use <code class="docutils literal notranslate"><span class="pre">mamba</span></code>/<code class="docutils literal notranslate"><span class="pre">conda</span></code> to install these packages in a new execution environment:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ mamba create -n myenv -c conda-forge papermill ipykernel
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>mamba<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>myenv<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>papermill<span class="w"> </span>ipykernel
 <span class="c1"># or</span>
-$ conda create -n myenv -c conda-forge papermill ipykernel
+$<span class="w"> </span>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>myenv<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>papermill<span class="w"> </span>ipykernel
 </pre></div>
 </div>
 <div class="admonition note">
@@ -612,8 +612,8 @@ $ conda create -n myenv -c conda-forge papermill ipykernel
 <p>There are no restrictions on the environment in which you can run Papermill. You can use any environment that you like (e.g. the same environment used by your notebook).</p>
 </div>
 <p>Once your environment is ready, you need to ensure the Jupyter kernel used by your notebook is properly configured by running the following commands:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda activate my-analysis-env
-$ python3 -m ipykernel install --user --name my-analyis-env
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>activate<span class="w"> </span>my-analysis-env
+$<span class="w"> </span>python3<span class="w"> </span>-m<span class="w"> </span>ipykernel<span class="w"> </span>install<span class="w"> </span>--user<span class="w"> </span>--name<span class="w"> </span>my-analyis-env
 </pre></div>
 </div>
 </section>
@@ -623,15 +623,15 @@ $ python3 -m ipykernel install --user --name my-analyis-env
 <section id="option-1-from-the-command-line">
 <h4>Option 1: from the command line<a class="headerlink" href="#option-1-from-the-command-line" title="Permalink to this headline">#</a></h4>
 <p>To run the notebook from the command line, you need to run the following command</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda activate myenv
-$ papermill sample-notebook.ipynb output-notebook.ipynb -p dataset air_temperature -p variable air -k my-analysis-env
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>activate<span class="w"> </span>myenv
+$<span class="w"> </span>papermill<span class="w"> </span>sample-notebook.ipynb<span class="w"> </span>output-notebook.ipynb<span class="w"> </span>-p<span class="w"> </span>dataset<span class="w"> </span>air_temperature<span class="w"> </span>-p<span class="w"> </span>variable<span class="w"> </span>air<span class="w"> </span>-k<span class="w"> </span>my-analysis-env
 </pre></div>
 </div>
 <p>which returns the following output:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Input Notebook:  sample-notebook.ipynb
-Output Notebook: output-notebook.ipynb
-Executing:   <span class="m">0</span>%<span class="p">|</span>                                                                                                                                   <span class="p">|</span> <span class="m">0</span>/6 <span class="o">[</span><span class="m">00</span>:00&lt;?, ?cell/s<span class="o">]</span>Executing notebook with kernel: my-analysis-env
-Executing: <span class="m">100</span>%<span class="p">|</span>███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████<span class="p">|</span> <span class="m">6</span>/6 <span class="o">[</span><span class="m">00</span>:05&lt;<span class="m">00</span>:00,  <span class="m">1</span>.05cell/s<span class="o">]</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Input<span class="w"> </span>Notebook:<span class="w">  </span>sample-notebook.ipynb
+Output<span class="w"> </span>Notebook:<span class="w"> </span>output-notebook.ipynb
+Executing:<span class="w">   </span><span class="m">0</span>%<span class="p">|</span><span class="w">                                                                                                                                   </span><span class="p">|</span><span class="w"> </span><span class="m">0</span>/6<span class="w"> </span><span class="o">[</span><span class="m">00</span>:00&lt;?,<span class="w"> </span>?cell/s<span class="o">]</span>Executing<span class="w"> </span>notebook<span class="w"> </span>with<span class="w"> </span>kernel:<span class="w"> </span>my-analysis-env
+Executing:<span class="w"> </span><span class="m">100</span>%<span class="p">|</span>███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████<span class="p">|</span><span class="w"> </span><span class="m">6</span>/6<span class="w"> </span><span class="o">[</span><span class="m">00</span>:05&lt;<span class="m">00</span>:00,<span class="w">  </span><span class="m">1</span>.05cell/s<span class="o">]</span>
 </pre></div>
 </div>
 <p>When inspecting the output notebook, you will notice that Papermill has added a cell that contains the parameters that were used to run the notebook (e.g. <code class="docutils literal notranslate"><span class="pre">air_temperature</span></code> and <code class="docutils literal notranslate"><span class="pre">air</span></code>). Attached is a screenshot of the original notebook and the output notebook side by side.</p>
@@ -661,19 +661,19 @@ Executing: <span class="m">100</span>%<span class="p">|</span>██████
 </pre></div>
 </div>
 <p>Running the example above, produces two notebooks which are saved using the pair of parameters used in the notebook.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ python papermill_runner.py
-Executing:   <span class="m">0</span>%<span class="p">|</span>                                                                                                                                   <span class="p">|</span> <span class="m">0</span>/6 <span class="o">[</span><span class="m">00</span>:00&lt;?, ?cell/s<span class="o">]</span><span class="nv">CONDA_PREFIX</span><span class="o">=</span>/glade/work/abanihi/opt/miniconda/envs/my-analysis-env
-Executing: <span class="m">100</span>%<span class="p">|</span>███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████<span class="p">|</span> <span class="m">6</span>/6 <span class="o">[</span><span class="m">00</span>:06&lt;<span class="m">00</span>:00,  <span class="m">1</span>.06s/cell<span class="o">]</span>
-Executing:   <span class="m">0</span>%<span class="p">|</span>                                                                                                                                   <span class="p">|</span> <span class="m">0</span>/6 <span class="o">[</span><span class="m">00</span>:00&lt;?, ?cell/s<span class="o">]</span><span class="nv">CONDA_PREFIX</span><span class="o">=</span>/glade/work/abanihi/opt/miniconda/envs/my-analysis-env
-Executing: <span class="m">100</span>%<span class="p">|</span>███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████<span class="p">|</span> <span class="m">6</span>/6 <span class="o">[</span><span class="m">00</span>:03&lt;<span class="m">00</span>:00,  <span class="m">1</span>.69cell/s<span class="o">]</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>python<span class="w"> </span>papermill_runner.py
+Executing:<span class="w">   </span><span class="m">0</span>%<span class="p">|</span><span class="w">                                                                                                                                   </span><span class="p">|</span><span class="w"> </span><span class="m">0</span>/6<span class="w"> </span><span class="o">[</span><span class="m">00</span>:00&lt;?,<span class="w"> </span>?cell/s<span class="o">]</span><span class="nv">CONDA_PREFIX</span><span class="o">=</span>/glade/work/abanihi/opt/miniconda/envs/my-analysis-env
+Executing:<span class="w"> </span><span class="m">100</span>%<span class="p">|</span>███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████<span class="p">|</span><span class="w"> </span><span class="m">6</span>/6<span class="w"> </span><span class="o">[</span><span class="m">00</span>:06&lt;<span class="m">00</span>:00,<span class="w">  </span><span class="m">1</span>.06s/cell<span class="o">]</span>
+Executing:<span class="w">   </span><span class="m">0</span>%<span class="p">|</span><span class="w">                                                                                                                                   </span><span class="p">|</span><span class="w"> </span><span class="m">0</span>/6<span class="w"> </span><span class="o">[</span><span class="m">00</span>:00&lt;?,<span class="w"> </span>?cell/s<span class="o">]</span><span class="nv">CONDA_PREFIX</span><span class="o">=</span>/glade/work/abanihi/opt/miniconda/envs/my-analysis-env
+Executing:<span class="w"> </span><span class="m">100</span>%<span class="p">|</span>███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████<span class="p">|</span><span class="w"> </span><span class="m">6</span>/6<span class="w"> </span><span class="o">[</span><span class="m">00</span>:03&lt;<span class="m">00</span>:00,<span class="w">  </span><span class="m">1</span>.69cell/s<span class="o">]</span>
 </pre></div>
 </div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ls -ltrh
--rw-r--r--  <span class="m">1</span> abanihi ncar 102K Mar <span class="m">14</span> <span class="m">14</span>:26 sample-notebook.ipynb
--rw-r--r--  <span class="m">1</span> abanihi ncar  50K Mar <span class="m">14</span> <span class="m">15</span>:26 output-notebook.ipynb
--rw-r--r--  <span class="m">1</span> abanihi ncar  <span class="m">342</span> Mar <span class="m">14</span> <span class="m">15</span>:34 papermill_runner.py
--rw-r--r--  <span class="m">1</span> abanihi ncar  50K Mar <span class="m">14</span> <span class="m">15</span>:34 output-notebook-air_temperature-air.ipynb
--rw-r--r--  <span class="m">1</span> abanihi ncar 105K Mar <span class="m">14</span> <span class="m">15</span>:34 output-notebook-rasm-Tair.ipynb
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>ls<span class="w"> </span>-ltrh
+-rw-r--r--<span class="w">  </span><span class="m">1</span><span class="w"> </span>abanihi<span class="w"> </span>ncar<span class="w"> </span>102K<span class="w"> </span>Mar<span class="w"> </span><span class="m">14</span><span class="w"> </span><span class="m">14</span>:26<span class="w"> </span>sample-notebook.ipynb
+-rw-r--r--<span class="w">  </span><span class="m">1</span><span class="w"> </span>abanihi<span class="w"> </span>ncar<span class="w">  </span>50K<span class="w"> </span>Mar<span class="w"> </span><span class="m">14</span><span class="w"> </span><span class="m">15</span>:26<span class="w"> </span>output-notebook.ipynb
+-rw-r--r--<span class="w">  </span><span class="m">1</span><span class="w"> </span>abanihi<span class="w"> </span>ncar<span class="w">  </span><span class="m">342</span><span class="w"> </span>Mar<span class="w"> </span><span class="m">14</span><span class="w"> </span><span class="m">15</span>:34<span class="w"> </span>papermill_runner.py
+-rw-r--r--<span class="w">  </span><span class="m">1</span><span class="w"> </span>abanihi<span class="w"> </span>ncar<span class="w">  </span>50K<span class="w"> </span>Mar<span class="w"> </span><span class="m">14</span><span class="w"> </span><span class="m">15</span>:34<span class="w"> </span>output-notebook-air_temperature-air.ipynb
+-rw-r--r--<span class="w">  </span><span class="m">1</span><span class="w"> </span>abanihi<span class="w"> </span>ncar<span class="w"> </span>105K<span class="w"> </span>Mar<span class="w"> </span><span class="m">14</span><span class="w"> </span><span class="m">15</span>:34<span class="w"> </span>output-notebook-rasm-Tair.ipynb
 </pre></div>
 </div>
 <div class="admonition note">

@@ -461,10 +461,10 @@ commentsRunWhenDOMLoaded(addUtterances);
   <span><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="../../../blog/tag/cesm/">cesm</a>   
-  <a href="../../../blog/tag/jupyter/">jupyter</a>   
   <a href="../../../blog/tag/intake/">intake</a>   
-  <a href="../../../blog/tag/documentation/">documentation</a>  
+  <a href="../../../blog/tag/documentation/">documentation</a>   
+  <a href="../../../blog/tag/cesm/">cesm</a>   
+  <a href="../../../blog/tag/jupyter/">jupyter</a>  
 </li>
  
 </ul>
@@ -596,7 +596,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <section id="clone-to-your-machine">
 <h3>Clone to your machine!<a class="headerlink" href="#clone-to-your-machine" title="Permalink to this headline">#</a></h3>
 <p>We want to clone to the repository within the <a class="reference external" href="https://jupyterhub.ucar.edu">Jupyterhub</a>, so once logging on, we open a terminal and paste the link using the following syntax</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/mgrover1/cesm-test-data.git
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/mgrover1/cesm-test-data.git
 </pre></div>
 </div>
 </section>
@@ -604,8 +604,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 <section id="create-a-docs-directory">
 <h2>Create a docs directory<a class="headerlink" href="#create-a-docs-directory" title="Permalink to this headline">#</a></h2>
 <p>Now that you cloned the repository, move into it and create a <code class="docutils literal notranslate"><span class="pre">docs</span></code> directory using the following</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> cesm-test-data
-mkdir docs
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>cesm-test-data
+mkdir<span class="w"> </span>docs
 </pre></div>
 </div>
 </section>
@@ -617,8 +617,8 @@ mkdir docs
 <li><p>ecgtools</p></li>
 </ul>
 <p>If you haven’t installed these yet, you can use conda and pip (ecgtools is not yet on conda-forge)</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda install -c conda-forge jupyter-book intake-esm graphviz
-pip install ecgtools
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>jupyter-book<span class="w"> </span>intake-esm<span class="w"> </span>graphviz
+pip<span class="w"> </span>install<span class="w"> </span>ecgtools
 </pre></div>
 </div>
 <p>In this case, follow the instructions in the <a class="reference external" href="https://ncar.github.io/esds/posts/ecgtools-history-files-example/">Building an Intake-esm catalog from CESM2 History Files</a> post provides the instructions for building the data catalog</p>
@@ -748,24 +748,24 @@ pip install ecgtools
 <section id="download-a-sample-cesm-logo">
 <h3>Download a sample CESM logo<a class="headerlink" href="#download-a-sample-cesm-logo" title="Permalink to this headline">#</a></h3>
 <p>I copied over a copy of the CESM logo to Github, which can be downloaded using the following (be sure to save to an an <code class="docutils literal notranslate"><span class="pre">image</span></code> directory in <code class="docutils literal notranslate"><span class="pre">docs</span></code></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget https://raw.githubusercontent.com/mgrover1/cesm-workflow/main/images/cesm.jpg
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget<span class="w"> </span>https://raw.githubusercontent.com/mgrover1/cesm-workflow/main/images/cesm.jpg
 </pre></div>
 </div>
 </section>
 <section id="adding-to-your-config-config-yml-file">
 <h3>Adding to your Config (<code class="docutils literal notranslate"><span class="pre">_config.yml</span></code>) file<a class="headerlink" href="#adding-to-your-config-config-yml-file" title="Permalink to this headline">#</a></h3>
 <p>Within your <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> file, input the following</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>title: <span class="s2">&quot;CESM Test Data&quot;</span>
-logo: images/cesm.jpg
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>title:<span class="w"> </span><span class="s2">&quot;CESM Test Data&quot;</span>
+logo:<span class="w"> </span>images/cesm.jpg
 execute:
-  execute_notebooks: <span class="s2">&quot;off&quot;</span>
+<span class="w">  </span>execute_notebooks:<span class="w"> </span><span class="s2">&quot;off&quot;</span>
 </pre></div>
 </div>
 </section>
 <section id="add-to-your-table-of-contents-toc-yml-file">
 <h3>Add to your Table of Contents (<code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code>) file<a class="headerlink" href="#add-to-your-table-of-contents-toc-yml-file" title="Permalink to this headline">#</a></h3>
 <p>This is where you place your content - in this case, the <code class="docutils literal notranslate"><span class="pre">model_documentation.ipynb</span></code> notebook. Jupyterbook does not require you specify the file type here - so leave off the <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>- file: model_documentation
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>-<span class="w"> </span>file:<span class="w"> </span>model_documentation
 </pre></div>
 </div>
 </section>
@@ -773,7 +773,7 @@ execute:
 <section id="build-your-book">
 <h2>Build your Book!<a class="headerlink" href="#build-your-book" title="Permalink to this headline">#</a></h2>
 <p>Now that you have your content, config file, and table of contents, it’s time to build the book. Make sure you are in your repository root directory, and run the following</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book build docs
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book<span class="w"> </span>build<span class="w"> </span>docs
 </pre></div>
 </div>
 <p>If it built correctly, you should see the following</p>
@@ -798,25 +798,25 @@ execute:
 <section id="install-github-pages-import">
 <h3>Install Github Pages Import<a class="headerlink" href="#install-github-pages-import" title="Permalink to this headline">#</a></h3>
 <p>If you have not done so already, install the following</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install ghp-import
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>ghp-import
 </pre></div>
 </div>
 </section>
 <section id="build-the-book-and-push-to-your-github-pages-branch">
 <h3>Build the book and push to your Github Pages branch<a class="headerlink" href="#build-the-book-and-push-to-your-github-pages-branch" title="Permalink to this headline">#</a></h3>
 <p>Move to your docs directory again, and run the following (after building your book)</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ghp-import -n -p -f _build/html
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> </span>-f<span class="w"> </span>_build/html
 </pre></div>
 </div>
 </section>
 <section id="rebuilding-your-book">
 <h3>Rebuilding your book<a class="headerlink" href="#rebuilding-your-book" title="Permalink to this headline">#</a></h3>
 <p>If you make changes to your notebook or want to rebuild your book, run the following within your project root directory</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book build docs
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book<span class="w"> </span>build<span class="w"> </span>docs
 </pre></div>
 </div>
 <p>and this within your <code class="docutils literal notranslate"><span class="pre">docs</span></code> directory</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ghp-import -n -p -f _build/html
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> </span>-f<span class="w"> </span>_build/html
 </pre></div>
 </div>
 </section>

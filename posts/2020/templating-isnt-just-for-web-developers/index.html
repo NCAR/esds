@@ -461,8 +461,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <span><i class="fa-fw fa fa-tags"></i> </span
   >
    
-  <a href="../../../blog/tag/templating/">templating</a>   
-  <a href="../../../blog/tag/jinja2/">jinja2</a>  
+  <a href="../../../blog/tag/jinja2/">jinja2</a>   
+  <a href="../../../blog/tag/templating/">templating</a>  
 </li>
  
 </ul>
@@ -591,11 +591,11 @@ widespread in the Python developer community, and it has very good
 documentation… except for the fact that all of their documentation
 is almost entirely geared toward frontend designers.</p>
 <p>You can install Jinja2 with <code class="docutils literal notranslate"><span class="pre">pip</span></code> or <code class="docutils literal notranslate"><span class="pre">conda</span></code> as follows:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ pip install Jinja2
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>Jinja2
 </pre></div>
 </div>
 <p>or</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ conda install jinja2
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>install<span class="w"> </span>jinja2
 </pre></div>
 </div>
 <p>That’s it. You should now be set up with an environment that
@@ -659,23 +659,23 @@ just string substitution…but with a touch more sophistication.</p>
 Jinja2 template. To do so, the easiest first step would be to just
 replace every <code class="docutils literal notranslate"><span class="pre">[]</span></code>-bracketted item with a Jinja2 <em>expressions</em>,
 which are represented with <code class="docutils literal notranslate"><span class="pre">{{}}</span></code>-brackets:</p>
-<div class="highlight-jinja notranslate"><div class="highlight"><pre><span></span><span class="cp">{{</span> <span class="nv">your_address</span> <span class="cp">}}</span><span class="x"></span>
+<div class="highlight-jinja notranslate"><div class="highlight"><pre><span></span><span class="cp">{{</span> <span class="nv">your_address</span> <span class="cp">}}</span>
 
-<span class="cp">{{</span> <span class="nv">date</span> <span class="cp">}}</span><span class="x"></span>
+<span class="cp">{{</span> <span class="nv">date</span> <span class="cp">}}</span>
 
-<span class="cp">{{</span> <span class="nv">recipient_name</span> <span class="cp">}}</span><span class="x"></span>
-<span class="cp">{{</span> <span class="nv">recipient_title</span> <span class="cp">}}</span><span class="x"></span>
-<span class="cp">{{</span> <span class="nv">recipient_company</span> <span class="cp">}}</span><span class="x"></span>
-<span class="cp">{{</span> <span class="nv">recipient_address</span> <span class="cp">}}</span><span class="x"></span>
+<span class="cp">{{</span> <span class="nv">recipient_name</span> <span class="cp">}}</span>
+<span class="cp">{{</span> <span class="nv">recipient_title</span> <span class="cp">}}</span>
+<span class="cp">{{</span> <span class="nv">recipient_company</span> <span class="cp">}}</span>
+<span class="cp">{{</span> <span class="nv">recipient_address</span> <span class="cp">}}</span>
 
 <span class="cp">{{</span> <span class="nv">greeting</span> <span class="cp">}}</span><span class="x"> </span><span class="cp">{{</span> <span class="nv">recipient_name</span> <span class="cp">}}</span><span class="x">:</span>
 
-<span class="cp">{{</span> <span class="nv">letter_body</span> <span class="cp">}}</span><span class="x"></span>
+<span class="cp">{{</span> <span class="nv">letter_body</span> <span class="cp">}}</span>
 
 <span class="cp">{{</span> <span class="nv">closing</span> <span class="cp">}}</span><span class="x">,</span>
 
-<span class="cp">{{</span> <span class="nv">your_name</span> <span class="cp">}}</span><span class="x"></span>
-<span class="cp">{{</span> <span class="nv">your_title</span> <span class="cp">}}</span><span class="x"></span>
+<span class="cp">{{</span> <span class="nv">your_name</span> <span class="cp">}}</span>
+<span class="cp">{{</span> <span class="nv">your_title</span> <span class="cp">}}</span>
 </pre></div>
 </div>
 <p>Also, notice that I have converted the text labels inside the
@@ -782,25 +782,25 @@ specifying if the document we are writing is a letter or an
 email. We’ll label this variable <code class="docutils literal notranslate"><span class="pre">is_letter</span></code>, and we’ll
 insert it into our template document with some <code class="docutils literal notranslate"><span class="pre">if</span></code> <em>statements</em>,
 like so:</p>
-<div class="highlight-jinja notranslate"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">is_letter</span> <span class="cp">%}</span><span class="x"></span>
-<span class="cp">{{</span> <span class="nv">your_address</span> <span class="cp">}}</span><span class="x"></span>
+<div class="highlight-jinja notranslate"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">is_letter</span> <span class="cp">%}</span>
+<span class="cp">{{</span> <span class="nv">your_address</span> <span class="cp">}}</span>
 
-<span class="cp">{{</span> <span class="nv">date</span> <span class="cp">}}</span><span class="x"></span>
+<span class="cp">{{</span> <span class="nv">date</span> <span class="cp">}}</span>
 
-<span class="cp">{{</span> <span class="nv">recipient_name</span> <span class="cp">}}</span><span class="x"></span>
-<span class="cp">{{</span> <span class="nv">recipient_title</span> <span class="cp">}}</span><span class="x"></span>
-<span class="cp">{{</span> <span class="nv">recipient_company</span> <span class="cp">}}</span><span class="x"></span>
-<span class="cp">{{</span> <span class="nv">recipient_address</span> <span class="cp">}}</span><span class="x"></span>
+<span class="cp">{{</span> <span class="nv">recipient_name</span> <span class="cp">}}</span>
+<span class="cp">{{</span> <span class="nv">recipient_title</span> <span class="cp">}}</span>
+<span class="cp">{{</span> <span class="nv">recipient_company</span> <span class="cp">}}</span>
+<span class="cp">{{</span> <span class="nv">recipient_address</span> <span class="cp">}}</span>
 
-<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
+<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
 <span class="cp">{{</span> <span class="nv">greeting</span> <span class="cp">}}</span><span class="x"> </span><span class="cp">{{</span> <span class="nv">recipient_name</span> <span class="cp">}}</span><span class="x">:</span>
 
-<span class="cp">{{</span> <span class="nv">letter_body</span> <span class="cp">}}</span><span class="x"></span>
+<span class="cp">{{</span> <span class="nv">letter_body</span> <span class="cp">}}</span>
 
 <span class="cp">{{</span> <span class="nv">closing</span> <span class="cp">}}</span><span class="x">,</span>
 
-<span class="cp">{{</span> <span class="nv">your_name</span> <span class="cp">}}</span><span class="x"></span>
-<span class="cp">{{</span> <span class="nv">your_title</span> <span class="cp">}}</span><span class="x"></span>
+<span class="cp">{{</span> <span class="nv">your_name</span> <span class="cp">}}</span>
+<span class="cp">{{</span> <span class="nv">your_title</span> <span class="cp">}}</span>
 </pre></div>
 </div>
 <p>By default, if we don’t specify <code class="docutils literal notranslate"><span class="pre">is_letter</span></code> in the

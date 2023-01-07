@@ -1461,7 +1461,7 @@ Dimensions without coordinates: ocean_time, eta_rho, xi_rho</pre><div class='xr-
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Function to detrend</span>
 <span class="c1"># Source: https://gist.github.com/rabernat/1ea82bb067c3273a6166d1b1f77d490f</span>
 <span class="k">def</span> <span class="nf">detrend_dim</span><span class="p">(</span><span class="n">da</span><span class="p">,</span> <span class="n">dim</span><span class="p">,</span> <span class="n">deg</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;detrend along a single dimension.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;detrend along a single dimension.&quot;&quot;&quot;</span>
     <span class="c1"># calculate polynomial coefficients</span>
     <span class="n">p</span> <span class="o">=</span> <span class="n">da</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="n">dim</span><span class="p">,</span> <span class="n">deg</span><span class="o">=</span><span class="n">deg</span><span class="p">,</span> <span class="n">skipna</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
     <span class="c1"># evaluate trend</span>
@@ -6611,7 +6611,7 @@ Coordinates:
 <span class="c1"># Function to detrend</span>
 <span class="c1"># Modified from source: https://gist.github.com/rabernat/1ea82bb067c3273a6166d1b1f77d490f</span>
 <span class="k">def</span> <span class="nf">detrend_dim</span><span class="p">(</span><span class="n">da</span><span class="p">,</span> <span class="n">dim</span><span class="p">,</span> <span class="n">deg</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;detrend along a single dimension.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;detrend along a single dimension.&quot;&quot;&quot;</span>
     <span class="c1"># calculate polynomial coefficients</span>
     <span class="n">p</span> <span class="o">=</span> <span class="n">da</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="n">dim</span><span class="p">,</span> <span class="n">deg</span><span class="o">=</span><span class="n">deg</span><span class="p">,</span> <span class="n">skipna</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
     <span class="c1"># first create a chunked version of the &quot;ocean_time&quot; dimension</span>

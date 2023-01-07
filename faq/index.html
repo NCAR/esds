@@ -491,117 +491,192 @@ commentsRunWhenDOMLoaded(addUtterances);
 </section>
 <section id="what-do-i-do-if-my-question-is-not-answered-on-this-page">
 <h3>What do I do if my question is not answered on this page?<a class="headerlink" href="#what-do-i-do-if-my-question-is-not-answered-on-this-page" title="Permalink to this headline">#</a></h3>
-<p>Open an issue <a class="reference external" href="https://github.com/NCAR/esds/issues">here</a></p>
+<p>If your question is related to conda environments and you’re affiliated with UCAR/NCAR,
+you can open a help ticket on the <a class="reference external" href="https://ithelp.ucar.edu/plugins/servlet/desk/site/rc">NCAR Research Computing Helpdesk site</a>.
+If your issue is related to data science packages and workflows, you can open an issue
+<a class="reference external" href="https://github.com/NCAR/esds/issues">on our GitHub here</a> or book an
+<a class="reference external" href="https://ncar.github.io/esds/office-hours/">office hour appointment</a> with an ESDS core member!</p>
 </section>
 </section>
 <section id="someone-must-have-written-the-function-i-want-where-do-i-look">
 <h2>Someone must have written the function I want. Where do I look?<a class="headerlink" href="#someone-must-have-written-the-function-i-want-where-do-i-look" title="Permalink to this headline">#</a></h2>
 <p>See the xarray <a class="reference external" href="https://xarray.pydata.org/en/latest/ecosystem.html">ecosystem</a> page. Also see the <a class="reference external" href="https://github.com/xarray-contrib/">xarray-contrib</a> and <a class="reference external" href="https://github.com/pangeo-data">pangeo-data</a> organizations. Some NCAR relevant projects include:</p>
 <ol class="arabic simple">
-<li><p>GeoCAT-comp</p></li>
-<li><p>GeoCAT-viz</p></li>
-<li><p>cf_xarray</p></li>
-<li><p>climpred</p></li>
-<li><p>eofs</p></li>
-<li><p>MetPy</p></li>
-<li><p>rechunker</p></li>
-<li><p>xclim</p></li>
-<li><p>xesmf</p></li>
-<li><p>xgcm</p></li>
-<li><p>pop-tools</p></li>
-<li><p>xskillscore</p></li>
+<li><p><a class="reference external" href="https://geocat-comp.readthedocs.io/en/latest/">GeoCAT-comp</a></p></li>
+<li><p><a class="reference external" href="https://geocat-viz.readthedocs.io/en/latest/">GeoCAT-viz</a></p></li>
+<li><p><a class="reference external" href="https://cf-xarray.readthedocs.io/en/latest/">cf_xarray</a></p></li>
+<li><p><a class="reference external" href="https://climpred.readthedocs.io/en/stable/">climpred</a></p></li>
+<li><p><a class="reference external" href="https://ajdawson.github.io/eofs/latest/">eofs</a></p></li>
+<li><p><a class="reference external" href="https://unidata.github.io/MetPy/latest/index.html">MetPy</a></p></li>
+<li><p><a class="reference external" href="https://rechunker.readthedocs.io/en/latest/">rechunker</a></p></li>
+<li><p><a class="reference external" href="https://xclim.readthedocs.io/en/stable/">xclim</a></p></li>
+<li><p><a class="reference external" href="https://xesmf.readthedocs.io/en/latest/">xesmf</a></p></li>
+<li><p><a class="reference external" href="https://xgcm.readthedocs.io/en/latest/">xgcm</a></p></li>
+<li><p><a class="reference external" href="https://pop-tools.readthedocs.io/en/latest/">pop-tools</a></p></li>
+<li><p><a class="reference external" href="https://xskillscore.readthedocs.io/en/stable/index.html">xskillscore</a></p></li>
 </ol>
 </section>
-<section id="conda-environments">
-<h2>Conda Environments<a class="headerlink" href="#conda-environments" title="Permalink to this headline">#</a></h2>
+<section id="how-do-i-use-conda-environments">
+<h2>How do I use conda environments?<a class="headerlink" href="#how-do-i-use-conda-environments" title="Permalink to this headline">#</a></h2>
 <section id="general-advice">
 <h3>General Advice<a class="headerlink" href="#general-advice" title="Permalink to this headline">#</a></h3>
-<p>Dealing with Python environments can be tricky… a good place to start is to checkout <a class="reference external" href="https://whiteboxml.com/blog/the-definitive-guide-to-python-virtual-environments-with-conda">this guide on dealing with Python environments</a></p>
+<p>Dealing with Python environments can be tricky… a good place to start is to checkout
+<a class="reference external" href="https://whiteboxml.com/blog/the-definitive-guide-to-python-virtual-environments-with-conda">this guide on dealing with Python environments</a>.
+If you just need a refresher on the various conda commands, this <a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/_downloads/843d9e0198f2a193a3484886fa28163c/conda-cheatsheet.pdf">conda cheet sheet</a>
+is a wonderful quick reference.</p>
 </section>
-<section id="installing-conda-on-ncar-hpc-resources">
-<h3>Installing conda on NCAR HPC resources<a class="headerlink" href="#installing-conda-on-ncar-hpc-resources" title="Permalink to this headline">#</a></h3>
-<p>There are two main steps of installing <code class="docutils literal notranslate"><span class="pre">conda</span></code> (miniconda in this case) on NCAR HPC resources</p>
-<ol class="arabic simple">
-<li><p>Download <a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">miniconda</a> within your work directory</p></li>
-<li><p>Install and activate your installation</p></li>
-</ol>
-<p>There are a few videos which Anderson Banihirwe put together walking through this process - they are embedded below!</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/GGxUgjlmW2A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</section>
-<section id="creating-and-accessing-a-new-conda-environment">
-<h3>Creating and accessing a new conda environment<a class="headerlink" href="#creating-and-accessing-a-new-conda-environment" title="Permalink to this headline">#</a></h3>
-<p>You may want to move past just your base environment, and create a new conda environment! There are a few primary steps to this process:</p>
+<section id="using-conda-on-ncar-hpc-resources">
+<h3>Using conda on NCAR HPC resources<a class="headerlink" href="#using-conda-on-ncar-hpc-resources" title="Permalink to this headline">#</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Since 12 December 2022, it is no longer recommended to install your own version of miniconda on the HPC system.
+To export your existing environments to the recommended installation of miniconda, refer to the “How can I export my environments?” section.</p>
+</div>
+<p>The NCAR High Performance Computing (HPC) system has a conda installation for you to use. The most recent and detailed
+instructions can be found on this <a class="reference external" href="https://arc.ucar.edu/knowledge_base/83853599">Using Conda and Python</a> page.</p>
+<p>If you don’t want the trouble of making your own conda environment, there are managed environments available. The NCAR
+Package Library (NPL) is an environment containing many common scientific Python pacakges such as Numpy, Xarray, and GeoCAT.
+You can access the NPL environment through the command line and the NCAR JupyterHub.</p>
+<section id="npl-on-the-command-line">
+<h4>NPL on the command line<a class="headerlink" href="#npl-on-the-command-line" title="Permalink to this headline">#</a></h4>
 <ol class="arabic">
-<li><p>Create the environment
-If you are creating an environment from scratch, use the following:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda create --name
-</pre></div>
-</div>
-<p>where <code class="docutils literal notranslate"><span class="pre">name</span></code> is the name of your environment</p>
-<p>if you have an environment file (ex. <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code>), use the following:</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Make sure you include the <a class="reference external" href="https://github.com/ipython/ipykernel"><code class="docutils literal notranslate"><span class="pre">ipykernel</span></code></a> package within your environment, which is required for your environment to be available from the <a class="reference external" href="https://jupyterhub.hpc.ucar.edu/">JupyterHub</a></p>
-</div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda env create -f environment.yml
+<li><p>Open up a terminal in Casper or Cheyenne</p></li>
+<li><p>Load the NCAR conda module:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>module<span class="w"> </span>load<span class="w"> </span>conda/latest
 </pre></div>
 </div>
 </li>
+<li><p>List the available NCAR managed environments:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>env<span class="w"> </span>list
+
+<span class="w">   </span>base<span class="w">                  </span>*<span class="w">  </span>/glade/u/apps/opt/conda
+<span class="w">   </span>npl<span class="w">                      </span>/glade/u/apps/opt/conda/envs/npl
+<span class="w">   </span>npl-2022b<span class="w">                </span>/glade/u/apps/opt/conda/envs/npl-2022b
+<span class="w">   </span>npl-2206<span class="w">                 </span>/glade/u/apps/opt/conda/envs/npl-2206
+<span class="w">   </span>npl-2207<span class="w">                 </span>/glade/u/apps/opt/conda/envs/npl-2207
+<span class="w">   </span>pygpu-dask<span class="w">               </span>/glade/u/apps/opt/conda/envs/pygpu-dask
+</pre></div>
+</div>
+</li>
+<li><p>Activate the environment you want to use. Here we are using the <code class="docutils literal notranslate"><span class="pre">npl</span></code> environment as an example. <code class="docutils literal notranslate"><span class="pre">npl</span></code> can be replaced
+with any available environment name:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>activate<span class="w"> </span>npl
+</pre></div>
+</div>
+</li>
+<li><p>Now when you run a script, the modules within the <code class="docutils literal notranslate"><span class="pre">npl</span></code> environment will be available to your program.</p></li>
+</ol>
+</section>
+<section id="npl-on-the-ncar-jupyterhub">
+<h4>NPL on the NCAR JupyterHub<a class="headerlink" href="#npl-on-the-ncar-jupyterhub" title="Permalink to this headline">#</a></h4>
+<ol class="arabic simple">
+<li><p>Log in to the Production <a class="reference external" href="https://jupyterhub.hpc.ucar.edu/">NCAR JupyterHub</a></p></li>
+<li><p>Start a <a class="reference external" href="https://arc.ucar.edu/knowledge_base/70549913">server</a></p></li>
+<li><p>With your Jupyter Notebook open, click on the kernel name in the upper right.
+<img alt="The NCAR JupyterHub with a blank JupyterNotebook open. A red arrow is pointing to the upper right where the current kernel is listed." src="../_images/JupyterHub.png" /></p></li>
+<li><p>A dialog will appear with all the verious kernels available to you. These kernels will (generally) have the same
+name as the conda environment that it uses. This may not be the case if you are managing your own environments and kernels.
+<img alt="After clicking on the current kernel name, a dialog appears saying &quot;Select Kernel&quot; with a drop down menu" src="../_images/SelectKernel.png" /></p></li>
+<li><p>Select the “npl (conda)” kernel from the list if you want to use the NCAR-managed NPL environment.
+<img alt="The &quot;Select Kernel&quot; dialog with the NPL (conda) kernel selected" src="../_images/NPLKernel.png" /></p></li>
+</ol>
+</section>
+</section>
+<section id="creating-and-accessing-a-new-conda-environment-on-the-ncar-jupyterhub">
+<h3>Creating and accessing a new conda environment on the NCAR JupyterHub<a class="headerlink" href="#creating-and-accessing-a-new-conda-environment-on-the-ncar-jupyterhub" title="Permalink to this headline">#</a></h3>
+<p>You may want to move past using NPL, and create a new conda environment!
+For detailed instructions, check out the <a class="reference external" href="https://arc.ucar.edu/knowledge_base/83853599">Using Conda and Python</a> page on
+the NCAR Advanced Research Computing site. Heres a summary of the basic steps:</p>
+<ol class="arabic">
+<li><p>Create the environment</p>
+<p>If you are creating an environment from scratch, use the following:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>create<span class="w"> </span>--name<span class="w"> </span>my_environment
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">my_environment</span></code> is the name of your environment</p>
+<p>Ff you have an environment file (ex. <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code>), use the following:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>env<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>environment.yml
+</pre></div>
+</div>
+</li>
+<li><p>Activate your environment and install the <code class="docutils literal notranslate"><span class="pre">ipykernel</span></code> package</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>my_environment.yml
+conda<span class="w"> </span>install<span class="w"> </span>ipykernel
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <a class="reference external" href="https://github.com/ipython/ipykernel"><code class="docutils literal notranslate"><span class="pre">ipykernel</span></code></a> package is required for your environment to be available from the NCAR <a class="reference external" href="https://jupyterhub.hpc.ucar.edu/">JupyterHub</a></p>
+</div>
+</li>
 <li><p>Accessing your conda environment</p>
-<p>This process will change depending on whether you are using an interactive Jupyter environment - I encourage you to check out the video which Anderson Banihirwe put together describing this process on NCAR HPC resources</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/W4Jb6rY1w1w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p>Your environment should now automatically show up as an available kernel in any Jupyter server on the NCAR HPC systems.
+If you want to give your kernel a name that is different from the environment name, you can use the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>ipykernel<span class="w"> </span>install<span class="w"> </span>--user<span class="w"> </span>--name<span class="o">=</span>my-kernel
+</pre></div>
+</div>
+<p>Where <code class="docutils literal notranslate"><span class="pre">my-kernel</span></code> is the kernel name.</p>
 </li>
 </ol>
 </section>
 <section id="conda-is-taking-too-long-to-solve-environment-use-mamba">
 <h3>Conda is taking too long to solve environment: use mamba<a class="headerlink" href="#conda-is-taking-too-long-to-solve-environment-use-mamba" title="Permalink to this headline">#</a></h3>
 <p>This is a very common issue when installing a new package or trying to update a package in an existing conda environment. This issue is usually manifested in a conda message along these lines:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>environment Solving environment: failed with initial frozen solve. Retrying with flexible solve.
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>environment<span class="w"> </span>Solving<span class="w"> </span>environment:<span class="w"> </span>failed<span class="w"> </span>with<span class="w"> </span>initial<span class="w"> </span>frozen<span class="w"> </span>solve.<span class="w"> </span>Retrying<span class="w"> </span>with<span class="w"> </span>flexible<span class="w"> </span>solve.
 </pre></div>
 </div>
 <p>One solution to this issue is to use <a class="reference external" href="https://mamba.readthedocs.io/en/latest/user_guide/concepts.html"><code class="docutils literal notranslate"><span class="pre">mamba</span></code></a> which is a drop-in replacement for conda. Mamba aims to greately speed up and improve conda functionality such as solving environment, installing packages, etc…</p>
 <ul class="simple">
 <li><p>Installing Mamba</p></li>
 </ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda install -n base -c conda-forge mamba
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>install<span class="w"> </span>-n<span class="w"> </span>base<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>mamba
 </pre></div>
 </div>
 <ul class="simple">
 <li><p>Set <code class="docutils literal notranslate"><span class="pre">conda-forge</span></code> and <code class="docutils literal notranslate"><span class="pre">nodefaults</span></code> channels</p></li>
 </ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda config --add channels nodefaults
-conda config --add channels conda-forge
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>config<span class="w"> </span>--add<span class="w"> </span>channels<span class="w"> </span>nodefaults
+conda<span class="w"> </span>config<span class="w"> </span>--add<span class="w"> </span>channels<span class="w"> </span>conda-forge
 </pre></div>
 </div>
 <ul class="simple">
 <li><p>To install a package with mamba, you just run</p></li>
 </ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mamba install package_name
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mamba<span class="w"> </span>install<span class="w"> </span>package_name
 </pre></div>
 </div>
 <ul class="simple">
 <li><p>To create/update an environment from an environment file, run:</p></li>
 </ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mamba env update -f environment.yml
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mamba<span class="w"> </span>env<span class="w"> </span>update<span class="w"> </span>-f<span class="w"> </span>environment.yml
 </pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We do not recommend using <code class="docutils literal notranslate"><span class="pre">mamba</span></code> to activate and deactivate environments as this can cause packages to misbehave/not load correctly.</p>
 </div>
 <p>See <a class="reference external" href="https://mamba.readthedocs.io/en/latest/index.html">mamba documentation</a> for more.</p>
 </section>
-<section id="conda-environments-on-jupyterhub">
-<h3>Conda Environments on JupyterHub<a class="headerlink" href="#conda-environments-on-jupyterhub" title="Permalink to this headline">#</a></h3>
-<p>The Computational and Information Systems Lab (CISL) at NCAR put together some <a class="reference external" href="https://arc.ucar.edu/knowledge_base/83853599">good documentation</a> on dealing with environments on Casper/Cheyenne</p>
-<section id="activating-your-base-environment-upon-opening-a-terminal">
-<h4>Activating Your Base Environment Upon Opening a Terminal<a class="headerlink" href="#activating-your-base-environment-upon-opening-a-terminal" title="Permalink to this headline">#</a></h4>
-<p>Even <strong>after</strong> running <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">init</span> <span class="pre">bash</span></code> , you may notice that upon opening a terminal on the JupyterHub/NCAR HPC resources, your conda environment is not activated right away. You <strong>could</strong> call</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash
+<section id="how-can-i-export-my-environments">
+<h3>How can I export my environments?<a class="headerlink" href="#how-can-i-export-my-environments" title="Permalink to this headline">#</a></h3>
+<p>If you made an environment on one machine or using a different conda installation, you can export that environment
+and use it elsewhere. These are the basic steps:</p>
+<ol class="arabic">
+<li><p>Export your environment</p>
+<p>With the environment you want to export activated, run the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>env<span class="w"> </span><span class="nb">export</span><span class="w"> </span>--from-history<span class="w"> </span>&gt;<span class="w"> </span>environment.yml
 </pre></div>
 </div>
-<p>which would activate your conda environment! A better solution<a class="footnote-reference brackets" href="#id2" id="id1">1</a> would be to ensure that your conda environment is activated upon login.</p>
-<p>You can do this using the following snippet:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="s2">&quot;. ~/.bashrc&quot;</span> &gt;&gt; ~/.bash_profile
+<p>where <code class="docutils literal notranslate"><span class="pre">environment</span></code> can be replaced with the file name of your choice. The <code class="docutils literal notranslate"><span class="pre">--from-history</span></code> flag allows you to
+recreate your environment on any system. It is the cross-platform compatible way of exporting an environment.</p>
+</li>
+<li><p>Move the <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> to the system you want to use it on / activate the appropriate conda installtion you wish to use.</p></li>
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">.yml</span></code> file to create your environment</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>env<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>environment.yml
 </pre></div>
 </div>
-</section>
+</li>
+</ol>
 </section>
 </section>
 <section id="xarray-and-dask">
@@ -782,12 +857,6 @@ in a serial context.</p>
 <p class="admonition-title">Note</p>
 <p>cf-xarray can be installed via pip or conda. cf-xarray docs are available <a class="reference external" href="https://cf-xarray.readthedocs.io/en/latest/">here</a>.</p>
 </div>
-<hr class="footnotes docutils" />
-<dl class="footnote brackets">
-<dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>Assuming you are using a bash terminal, which is the default on NCAR HPC</p>
-</dd>
-</dl>
 </section>
 </section>
 </section>
@@ -856,8 +925,8 @@ in a serial context.</p>
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#conda-environments">
-   Conda Environments
+  <a class="reference internal nav-link" href="#how-do-i-use-conda-environments">
+   How do I use conda environments?
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -866,13 +935,25 @@ in a serial context.</p>
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#installing-conda-on-ncar-hpc-resources">
-     Installing conda on NCAR HPC resources
+    <a class="reference internal nav-link" href="#using-conda-on-ncar-hpc-resources">
+     Using conda on NCAR HPC resources
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#npl-on-the-command-line">
+       NPL on the command line
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#npl-on-the-ncar-jupyterhub">
+       NPL on the NCAR JupyterHub
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#creating-and-accessing-a-new-conda-environment">
-     Creating and accessing a new conda environment
+    <a class="reference internal nav-link" href="#creating-and-accessing-a-new-conda-environment-on-the-ncar-jupyterhub">
+     Creating and accessing a new conda environment on the NCAR JupyterHub
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -881,16 +962,9 @@ in a serial context.</p>
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#conda-environments-on-jupyterhub">
-     Conda Environments on JupyterHub
+    <a class="reference internal nav-link" href="#how-can-i-export-my-environments">
+     How can I export my environments?
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#activating-your-base-environment-upon-opening-a-terminal">
-       Activating Your Base Environment Upon Opening a Terminal
-      </a>
-     </li>
-    </ul>
    </li>
   </ul>
  </li>
