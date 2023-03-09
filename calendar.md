@@ -17,9 +17,9 @@ This is a great place to discuss progress on your project, and get feedback from
 
 If you are interested in giving a talk, be sure to sign up using [this spreadsheet](https://docs.google.com/spreadsheets/d/1Tuv5vwGbjSKdJD5KLT0Zow8WCY0_zt35tTI6EIRGOk4/edit?usp=sharing)!
 
-### Xdev Office Hours
+### Office Hours
 
-Have a question about Python issues? Looking to get feedback on some project? Stop by our office hours!
+Have a question about Python issues? Looking to get feedback on some project? [Schedule an office hours appointment](office-hours)!
 
 If you would like join the esds@ucar.edu Google group to be informed of updates and events about these meetings and question/answer opportunties, please do so by following [this link](https://groups.google.com/a/ucar.edu/g/esds/about?pli=1) and clicking "Join Group" next to the group name.
 
