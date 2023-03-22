@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2023-03-21T02:36:22.890919+00:00</updated>
+  <updated>2023-03-22T16:13:37.649685+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.33.post1">ABlog</generator>
@@ -516,7 +516,7 @@ What should I do?</summary>
     <title>How to Use xarray.map_blocks for Vertical Interpolation of a 3D Field</title>
     <updated>2021-04-28T00:00:00+00:00</updated>
     <author>
-      <name>Matt Long</name>
+      <name>Max Grover</name>
     </author>
     <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
 &lt;p&gt;Within this example, we cover how to use &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;xarray.map_blocks&lt;/span&gt;&lt;/code&gt; to calculate the mixed-layer depth within the CESM POP model output.&lt;/p&gt;
@@ -1030,7 +1030,7 @@ What should I do?</summary>
     <title>Reading WRF data into Xarray and Visualizing the Output using hvPlot</title>
     <updated>2021-10-15T00:00:00+00:00</updated>
     <author>
-      <name>Max Grover</name>
+      <name>Anderson Banihirwe</name>
     </author>
     <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
 &lt;p&gt;The &lt;em&gt;&lt;strong&gt;typical&lt;/strong&gt;&lt;/em&gt; data workflow within the Python ecosystem when working with Weather Research and Forecasting (WRF) data is to use the &lt;a class="reference external" href="https://wrf-python.readthedocs.io/en/latest/"&gt;wrf-python&lt;/a&gt; package! Traditionally, it can be difficult to utilize the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;xarray&lt;/span&gt;&lt;/code&gt; data model with WRF data, due to a few challenges:&lt;/p&gt;
@@ -1262,7 +1262,7 @@ What should I do?</summary>
     <title>Batch Processing Jupyter Notebooks with Papermill</title>
     <updated>2022-03-17T00:00:00+00:00</updated>
     <author>
-      <name>Matthew Long</name>
+      <name>Anderson Banihirwe</name>
     </author>
     <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://jupyter.org/"&gt;Jupyter notebooks&lt;/a&gt; are really good for doing the heavy lifting of data analysis by:&lt;/p&gt;
@@ -1427,7 +1427,7 @@ or Google Meet. More information is in this previous post.This tutorial is desig
     <title>Regridding using xESMF and an existing weights file</title>
     <updated>2022-12-06T00:00:00+00:00</updated>
     <author>
-      <name>Christine Shields</name>
+      <name>Deepak Cherian</name>
     </author>
     <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
 &lt;p&gt;A fairly common request is to use an existing ESMF weights file to regrid a Xarray Dataset  (&lt;a class="reference external" href="https://github.com/UXARRAY/uxarray/issues/172"&gt;1&lt;/a&gt;,  &lt;a class="reference external" href="https://github.com/pangeo-data/xESMF/issues/202"&gt;2&lt;/a&gt;). Applying weights in general should be easy: read weights then &lt;a class="reference external" href="https://github.com/UXARRAY/uxarray/issues/172#issuecomment-1310601230"&gt;apply them&lt;/a&gt; using &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;dot&lt;/span&gt;&lt;/code&gt; or &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;tensordot&lt;/span&gt;&lt;/code&gt; on the input dataset.&lt;/p&gt;
@@ -1469,11 +1469,11 @@ NCAR/UCAR/UCP on November 10-11, 2022. This blog post serves to consolidate and 
     </author>
     <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
 &lt;p&gt;This notebook is adapted from the &lt;a class="reference external" href="https://github.com/lsterzinger/2022-esip-kerchunk-tutorial/blob/main/01-Create_References.ipynb"&gt;work&lt;/a&gt; by &lt;a class="reference external" href="https://lucassterzinger.com/"&gt;Lucas Sterzinger&lt;/a&gt; (an NCAR SIParCS intern in 2021).&lt;/p&gt;
-&lt;p&gt;From the &lt;a class="reference external" href="https://fsspec.github.io/kerchunk/"&gt;docs&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This notebook was updated to&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="ncar.github.io/esds/posts/2023/kerchunk-mom6/" rel="alternate"/>
-    <summary>This notebook is adapted from the work by Lucas Sterzinger (an NCAR SIParCS intern in 2021).From the docs</summary>
+    <summary>This notebook is adapted from the work by Lucas Sterzinger (an NCAR SIParCS intern in 2021).This notebook was updated to</summary>
     <published>2023-03-07T00:00:00+00:00</published>
   </entry>
   <entry>
