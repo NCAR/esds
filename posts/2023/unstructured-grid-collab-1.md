@@ -1,5 +1,5 @@
 ---
-author: Deepak Cherian
+author: Deepak Cherian, Katie Dagon, Falko Judt, Orhan Eroglu
 date: 2023-05-05
 tags: tutorial hackathon events
 ---
