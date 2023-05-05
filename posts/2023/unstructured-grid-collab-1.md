@@ -4,7 +4,7 @@ date: 2023-05-05
 tags: tutorial hackathon events
 ---
 
-# Unstructured Grid Collaborative Work Time
+# Recap: Unstructured Grid Collaborative Work Time
 
 ESDS hosted our first Collaborative Work Time event on April 17, 2023.
 The topic of the session was "Working With Unstructured Grids".
