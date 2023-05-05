@@ -11,8 +11,7 @@ The topic of the session was "Working With Unstructured Grids".
 Our goal is to encourage cross-lab collaboration and build lasting science-software partnerships.
 
 The event was hybrid with in-person attendees in the Damon Room at the Mesa Lab.
-A lucky overlap with the Improving Scientific Software conference, meant that collaborators from the DOE
-were also able to attend in-person.
+A lucky overlap with the Improving Scientific Software conference, meant that collaborators from the Department of Energy were also able to attend in-person.
 
 ```{image} ../images/unstructured-grid-collab-1.jpg
 :alt: Photo of unstructured grids collaborative work time session.
@@ -35,7 +34,7 @@ At the event, we broke out in to approximately four groups. A recap from each gr
 
 *What did your group do?*
 
-The UXarray devs had a chance to discuss use cases and get feedback from the community members on UXarray. We branched into subgroups for different work ideas and coded with our users. We noticed a significant bug and fixed that throughout the end of the day.
+The UXarray developers had a chance to discuss use cases and get feedback from the community members on UXarray. We branched into subgroups for different work ideas and coded with our users. We noticed a  significant bug related to face area calculations (Pull Request [#283](https://github.com/UXARRAY/uxarray/pull/283) and worked on that throughout the end of the day. We also worked on issues that came up with ingesting MPAS data into UXarray regarding attributes not being parsed with the dual mesh only (see pull requests [#274](https://github.com/UXARRAY/uxarray/pull/274) and [#275](https://github.com/UXARRAY/uxarray/pull/275)).
 
 *Was it a fruitful experience?*
 
@@ -47,9 +46,7 @@ Sitting together with the users and listening to their expectations was a great 
 
 *Would it be useful to redo the  topic again?  What would you do differently the second time around?*
 
-Yes, after some time. We'd add one or two work idea of our own group as well as those came from the community. There were bugs related to
-1. UXarray's MPAS data ingest (attributes not being parsed) with the dual mesh only (see PRs [#274](https://github.com/UXARRAY/uxarray/pull/274) and [#275](https://github.com/UXARRAY/uxarray/pull/275)), and
-2. face area calculations (see PR [#283](https://github.com/UXARRAY/uxarray/pull/283))
+Yes, after some time. We'd add one or two work idea of our own group as well as those came from the community.
 
 
 #### Falko Judt (MMM):
@@ -75,7 +72,7 @@ Yes, maybe in 1/2 year or so? Could tell people to have some project ready to ge
 
 #### Katie Dagon (CGD):
 
-**Topic**: Visualizing & Analyzing CAM-SE output in Python
+**Topic**: Visualizing & Analyzing Community Atmosphere Model (CAM) with the spectral element (SE) grid output in Python
 
 *What did your group do? Write code? discussions?*
 
@@ -87,12 +84,19 @@ In total I believe we had 9 active participants (myself included) and went for a
 
 *Was it a fruitful experience?*
 
-Yes, very. A lot of good information and helpful tips/tools were exchanged. I can list some of these out for the blog post if that would be helpful.
+Yes, very. A lot of good information and helpful tips/tools were exchanged:
+- Users need to consider different tools for different purposes (e.g., visualization, analysis, looking at extremes).
+- Bilinear interpolation will change information but is generally acceptable when going from coarse to fine scale. Consider conservative remapping when going from fine to coarse scale, and nearest-neighbor method for preserving extremes.
+- If you have access to NCAR HPC, CESM grid files are located at `/glade/p/cesmdata/cseg/inputdata/share/`
+- [ncremap](https://github.com/nco/nco/blob/master/data/ncremap) via NCO tools is still a solid resource for remapping, though we are interested in Python-based alternatives.
+- [VisIt](https://visit-dav.github.io/visit-website/index.html) and [ncvis](https://github.com/SEATStandards/ncvis) are useful for quick visualization of unstructured grids.
+- [TempestRemap](https://github.com/ClimateGlobalChange/tempestremap) can be used for native spectral element regridding.
+- Ongoing [UXarray development](https://github.com/UXARRAY/uxarray/issues/183) would hopefully make this process more seamless, so the user does not have to interact with the native grid. This is still in process.
 
 *What worked for your group and what didn't work?*
 
 Having an example notebook to walk through helped maintain the discussion, and once it got going we had plenty to discuss without coding. It helped that there were a few key participants present with a lot of expertise.
-You and I were the only in person participants, so technically we didn't need to be in the Damon room (and it was a little hard to hear at times with the overlapping group discussions in the same physical space). It would be nice to have more participants in person.
+There were only two in-person participants, so technically we didn't need to be in the Damon room (and it was a little hard to hear at times with the overlapping group discussions in the same physical space). It would be nice to have more participants in person.
 
 *Would it be useful to redo the  topic again?  What would you do differently the second time around?*
 
@@ -101,6 +105,6 @@ Perhaps, if there was enough interest. Maybe it would be good to have a tutorial
 
 ## Takeaways
 
-- Good to have a prepared notebook in addition to a single slide description
-- In-person attendees enjoyed discussion.
+- Would be good to have a prepared notebook to guide the project/discussion in addition to a single slide description
+- In-person attendees enjoyed discussion, and encouraging more in-person participation would be helpful.
 - A repeat in the future around the same topic would be valuable.
