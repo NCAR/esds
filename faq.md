@@ -11,80 +11,150 @@ This contains relevant questions and answers from common workflow issues and que
 Try one of the following resources.
 
 1. Xarray's [How Do I do X?](https://xarray.pydata.org/en/stable/howdoi.html) page
-1. [Xarray Github Discussions](https://github.com/pydata/xarray/discussions)
-1. [Pangeo Discourse Forum](https://discourse.pangeo.org)
-1. NCAR Zulip under #python-questions, #python-dev, or #dask.
+2. [Xarray Github Discussions](https://github.com/pydata/xarray/discussions)
+3. [Pangeo Discourse Forum](https://discourse.pangeo.org)
+4. NCAR Zulip under #python-questions, #python-dev, or #dask.
 
 Avoid personal emails and prefer a public forum.
 
 ### What do I do if my question is not answered on this page?
 
-Open an issue [here](https://github.com/NCAR/esds/issues)
+If your question is related to conda environments and you're affiliated with UCAR/NCAR,
+you can open a help ticket on the [NCAR Research Computing Helpdesk site](https://ithelp.ucar.edu/plugins/servlet/desk/site/rc).
+If your issue is related to data science packages and workflows, you can open an issue
+[on our GitHub here](https://github.com/NCAR/esds/issues) or book an
+[office hour appointment](https://ncar.github.io/esds/office-hours/) with an ESDS core member!
 
 ## Someone must have written the function I want. Where do I look?
 
 See the xarray [ecosystem](https://xarray.pydata.org/en/latest/ecosystem.html) page. Also see the [xarray-contrib](https://github.com/xarray-contrib/) and [pangeo-data](https://github.com/pangeo-data) organizations. Some NCAR relevant projects include:
 
-1. GeoCAT-comp
-1. GeoCAT-viz
-1. cf_xarray
-1. climpred
-1. eofs
-1. MetPy
-1. rechunker
-1. xclim
-1. xesmf
-1. xgcm
-1. pop-tools
-1. xskillscore
+1. [GeoCAT-comp](https://geocat-comp.readthedocs.io/en/latest/)
+1. [GeoCAT-viz](https://geocat-viz.readthedocs.io/en/latest/)
+1. [cf_xarray](https://cf-xarray.readthedocs.io/en/latest/)
+1. [climpred](https://climpred.readthedocs.io/en/stable/)
+1. [eofs](https://ajdawson.github.io/eofs/latest/)
+1. [MetPy](https://unidata.github.io/MetPy/latest/index.html)
+1. [rechunker](https://rechunker.readthedocs.io/en/latest/)
+1. [xclim](https://xclim.readthedocs.io/en/stable/)
+1. [xesmf](https://xesmf.readthedocs.io/en/latest/)
+1. [xgcm](https://xgcm.readthedocs.io/en/latest/)
+1. [pop-tools](https://pop-tools.readthedocs.io/en/latest/)
+1. [xskillscore](https://xskillscore.readthedocs.io/en/stable/index.html)
 
-## Conda Environments
+## How do I use conda environments?
 
 ### General Advice
 
-Dealing with Python environments can be tricky... a good place to start is to checkout [this guide on dealing with Python environments](https://whiteboxml.com/blog/the-definitive-guide-to-python-virtual-environments-with-conda)
+Dealing with Python environments can be tricky... a good place to start is to checkout
+[this guide on dealing with Python environments](https://whiteboxml.com/blog/the-definitive-guide-to-python-virtual-environments-with-conda).
+If you just need a refresher on the various conda commands, this [conda cheet sheet](https://docs.conda.io/projects/conda/en/latest/_downloads/843d9e0198f2a193a3484886fa28163c/conda-cheatsheet.pdf)
+is a wonderful quick reference.
 
-### Installing conda on NCAR HPC resources
+### Using conda on NCAR HPC resources
 
-There are two main steps of installing `conda` (miniconda in this case) on NCAR HPC resources
+```{Warning}
 
-1. Download [miniconda](https://docs.conda.io/en/latest/miniconda.html) within your work directory
-1. Install and activate your installation
+Since 12 December 2022, it is no longer recommended to install your own version of miniconda on the HPC system.
+To export your existing environments to the recommended installation of miniconda, refer to the "How can I export my environments?" section.
 
-There are a few videos which Anderson Banihirwe put together walking through this process - they are embedded below!
+```
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/GGxUgjlmW2A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+The NCAR High Performance Computing (HPC) system has a conda installation for you to use. The most recent and detailed
+instructions can be found on this [Using Conda and Python](https://arc.ucar.edu/knowledge_base/83853599) page.
 
-### Creating and accessing a new conda environment
+If you don't want the trouble of making your own conda environment, there are managed environments available. The NCAR
+Package Library (NPL) is an environment containing many common scientific Python pacakges such as Numpy, Xarray, and GeoCAT.
+You can access the NPL environment through the command line and the NCAR JupyterHub.
 
-You may want to move past just your base environment, and create a new conda environment! There are a few primary steps to this process:
+#### NPL on the command line
+
+1. Open up a terminal in Casper or Cheyenne
+2. Load the NCAR conda module:
+
+   ```bash
+   $ module load conda/latest
+   ```
+
+3. List the available NCAR managed environments:
+
+   ```bash
+   $ conda env list
+
+      base                  *  /glade/u/apps/opt/conda
+      npl                      /glade/u/apps/opt/conda/envs/npl
+      npl-2022b                /glade/u/apps/opt/conda/envs/npl-2022b
+      npl-2206                 /glade/u/apps/opt/conda/envs/npl-2206
+      npl-2207                 /glade/u/apps/opt/conda/envs/npl-2207
+      pygpu-dask               /glade/u/apps/opt/conda/envs/pygpu-dask
+   ```
+
+4. Activate the environment you want to use. Here we are using the `npl` environment as an example. `npl` can be replaced
+   with any available environment name:
+
+   ```bash
+   $ conda activate npl
+   ```
+
+5. Now when you run a script, the modules within the `npl` environment will be available to your program.
+
+#### NPL on the NCAR JupyterHub
+
+1. Log in to the Production [NCAR JupyterHub](https://jupyterhub.hpc.ucar.edu/)
+2. Start a [server](https://arc.ucar.edu/knowledge_base/70549913)
+3. With your Jupyter Notebook open, click on the kernel name in the upper right.
+   ![The NCAR JupyterHub with a blank JupyterNotebook open. A red arrow is pointing to the upper right where the current kernel is listed.](images/JupyterHub.png)
+4. A dialog will appear with all the verious kernels available to you. These kernels will (generally) have the same
+   name as the conda environment that it uses. This may not be the case if you are managing your own environments and kernels.
+   ![After clicking on the current kernel name, a dialog appears saying "Select Kernel" with a drop down menu](images/SelectKernel.png)
+5. Select the "npl (conda)" kernel from the list if you want to use the NCAR-managed NPL environment.
+   ![The "Select Kernel" dialog with the NPL (conda) kernel selected](images/NPLKernel.png)
+
+### Creating and accessing a new conda environment on the NCAR JupyterHub
+
+You may want to move past using NPL, and create a new conda environment!
+For detailed instructions, check out the [Using Conda and Python](https://arc.ucar.edu/knowledge_base/83853599) page on
+the NCAR Advanced Research Computing site. Heres a summary of the basic steps:
 
 1. Create the environment
+
    If you are creating an environment from scratch, use the following:
 
    ```bash
-   conda create --name
+   conda create --name my_environment
    ```
 
-   where `name` is the name of your environment
+   where `my_environment` is the name of your environment
 
-   if you have an environment file (ex. `environment.yml`), use the following:
-
-   ```{Note}
-
-   Make sure you include the [`ipykernel`](https://github.com/ipython/ipykernel) package within your environment, which is required for your environment to be available from the [JupyterHub](https://jupyterhub.hpc.ucar.edu/)
-
-   ```
+   Ff you have an environment file (ex. `environment.yml`), use the following:
 
    ```bash
    conda env create -f environment.yml
    ```
 
-2. Accessing your conda environment
+2. Activate your environment and install the `ipykernel` package
 
-   This process will change depending on whether you are using an interactive Jupyter environment - I encourage you to check out the video which Anderson Banihirwe put together describing this process on NCAR HPC resources
+   ```bash
+   conda activate my_environment.yml
+   conda install ipykernel
+   ```
 
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/W4Jb6rY1w1w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+   ```{Note}
+
+   The [`ipykernel`](https://github.com/ipython/ipykernel) package is required for your environment to be available from the NCAR [JupyterHub](https://jupyterhub.hpc.ucar.edu/)
+
+   ```
+
+3. Accessing your conda environment
+
+   Your environment should now automatically show up as an available kernel in any Jupyter server on the NCAR HPC systems.
+   If you want to give your kernel a name that is different from the environment name, you can use the following command:
+
+   ```bash
+   python -m ipykernel install --user --name=my-kernel
+   ```
+
+   Where `my-kernel` is the kernel name.
 
 ### Conda is taking too long to solve environment: use mamba
 
@@ -121,29 +191,34 @@ mamba install package_name
 mamba env update -f environment.yml
 ```
 
+```{Note}
+We do not recommend using `mamba` to activate and deactivate environments as this can cause packages to misbehave/not load correctly.
+```
+
 See [mamba documentation](https://mamba.readthedocs.io/en/latest/index.html) for more.
 
-### Conda Environments on JupyterHub
+### How can I export my environments?
 
-The Computational and Information Systems Lab (CISL) at NCAR put together some [good documentation](https://arc.ucar.edu/knowledge_base/83853599) on dealing with environments on Casper/Cheyenne
+If you made an environment on one machine or using a different conda installation, you can export that environment
+and use it elsewhere. These are the basic steps:
 
-#### Activating Your Base Environment Upon Opening a Terminal
+1. Export your environment
 
-Even **after** running `conda init bash` , you may notice that upon opening a terminal on the JupyterHub/NCAR HPC resources, your conda environment is not activated right away. You **could** call
+   With the environment you want to export activated, run the following command:
 
-```bash
-bash
-```
+   ```bash
+   conda env export --from-history > environment.yml
+   ```
 
-which would activate your conda environment! A better solution[^1] would be to ensure that your conda environment is activated upon login.
+   where `environment` can be replaced with the file name of your choice. The `--from-history` flag allows you to
+   recreate your environment on any system. It is the cross-platform compatible way of exporting an environment.
 
-You can do this using the following snippet:
+2. Move the `environment.yml` to the system you want to use it on / activate the appropriate conda installtion you wish to use.
 
-```bash
-echo ". ~/.bashrc" >> ~/.bash_profile
-```
-
-[^1]: Assuming you are using a bash terminal, which is the default on NCAR HPC
+3. Use the `.yml` file to create your environment
+   ```bash
+   conda env create -f environment.yml
+   ```
 
 ## Xarray and Dask
 
