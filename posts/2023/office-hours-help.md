@@ -68,7 +68,7 @@ And that's it! You can double check that it worked by navigating to the [ESDS Of
 
 If you are another team at NCAR, you can share our Acuity Squarespace scheduling account. Our account supports up to 36 different calendars (office hours assistants), so as long as our combined usage is less than that we can save $$ by sharing.
 
-In fact we already share with the HPC Research Computing Support group. We can do this by adding additional appointment types to the account.
+In fact we already share this scheduling service with the [HPC Research Computing Support group](https://arc.ucar.edu/knowledge_base/121077762). We can do this by adding additional appointment types to the account.
 
 ![](../../images/office-hours-help/appointment_types.png)
 
