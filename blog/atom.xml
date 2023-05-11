@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2023-04-03T15:52:57.020336+00:00</updated>
+  <updated>2023-05-11T16:47:35.698226+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.33.post1">ABlog</generator>
@@ -1497,5 +1497,23 @@ We use a single ensemble member historical experiment with daily data from 1850 
     <category term="netcdf" label="netcdf"/>
     <category term="zarr" label="zarr"/>
     <published>2023-03-15T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/2023/office-hours-help/</id>
+    <title>ESDS Office Hours Support</title>
+    <updated>2023-05-10T00:00:00+00:00</updated>
+    <author>
+      <name>Julia Kent</name>
+    </author>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;A core goal of the ESDS community is to enhance the efficiency of the NCAR/UCAR workforce by fostering deeper collaboration across labs. &lt;a class="reference internal" href="../posts/2022/office-hours-appointments/#office-hours-appointments"&gt;&lt;span class="std std-ref"&gt;ESDS Office Hours&lt;/span&gt;&lt;/a&gt; help achieve this goal by serving a dual purpose: helping scientists to more quickly overcome software challenges, which allows them to refocus on their scientific pursuits, and fostering connections among workers across different labs. Office Hours assistants benefit from having a scientific colleague as a “client”, enabling them to refine scientific use cases for their software development and fostering a greater sense of camaraderie. ESDS is always open to additional Office Hours assistants with diverse skill sets to join our team. If you are interested in becoming a part of the ESDS Office Hours team or if you would like to explore a similar service for your own team, this blog post is for you.&lt;/p&gt;
+&lt;p&gt;All are welcome to join the ESDS Office Hours team. Even if you don’t consider yourself a Python expert your experience learning to set up your conda environment or work on HPC systems, for example, is still valuable to your ESDS colleagues. Different experience is valuable, and your bio can reflect the areas that you can or cannot help.&lt;/p&gt;
+&lt;img alt="" src="images/office-hours-help/appointmentsummary.png" /&gt;
+&lt;/div&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/2023/office-hours-help/" rel="alternate"/>
+    <summary>A core goal of the ESDS community is to enhance the efficiency of the NCAR/UCAR workforce by fostering deeper collaboration across labs. ESDS Office Hours help achieve this goal by serving a dual purpose: helping scientists to more quickly overcome software challenges, which allows them to refocus on their scientific pursuits, and fostering connections among workers across different labs. Office Hours assistants benefit from having a scientific colleague as a “client”, enabling them to refine scientific use cases for their software development and fostering a greater sense of camaraderie. ESDS is always open to additional Office Hours assistants with diverse skill sets to join our team. If you are interested in becoming a part of the ESDS Office Hours team or if you would like to explore a similar service for your own team, this blog post is for you.All are welcome to join the ESDS Office Hours team. Even if you don’t consider yourself a Python expert your experience learning to set up your conda environment or work on HPC systems, for example, is still valuable to your ESDS colleagues. Different experience is valuable, and your bio can reflect the areas that you can or cannot help.</summary>
+    <category term="office-hours" label="office-hours"/>
+    <published>2023-05-10T00:00:00+00:00</published>
   </entry>
 </feed>
