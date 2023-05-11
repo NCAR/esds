@@ -9,7 +9,7 @@ tags: office-hours
 A core goal of the ESDS community is to enhance the efficiency of the NCAR/UCAR workforce by fostering deeper collaboration across labs. [ESDS Office Hours](https://ncar.github.io/esds/office-hours/) help achieve this goal by serving a dual purpose: helping scientists to more quickly overcome software challenges, which allows them to refocus on their scientific pursuits, and fostering connections among workers across different labs. Office Hours assistants benefit from having a scientific colleague as a "client", enabling them to refine scientific use cases for their software development and fostering a greater sense of camaraderie. ESDS is always open to additional Office Hours assistants with diverse skill sets to join our team. If you are interested in becoming a part of the ESDS Office Hours team or if you would like to explore a similar service for your own team, this blog post is for you.
 
 If you're curious about the ESDS Office Hours system, see our previous [New Office Hours Appointment System blog post](office-hours-appointments)).
- 
+
 ## Considering Joining the Office Hours Team?
 
 All are welcome to join the ESDS Office Hours team. Even if you don't consider yourself a Python expert your experience learning to set up your conda environment or work on HPC systems, for example, is still valuable to your ESDS colleagues. Different experience is valuable, and your bio can reflect the areas that you can or cannot help.
