@@ -1,0 +1,839 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Recap: Unstructured Grid Collaborative Work Time &#8212; NCAR-ESDS 0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "NCAR/esds");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'posts/2023/unstructured-grid-collab-1';</script>
+    <link rel="author" title="About these documents" href="../../../about/" />
+    <link rel="index" title="Index" href="../../../genindex/" />
+    <link rel="search" title="Search" href="../../../search/" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/> 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../../blog/atom.xml"
+  title="NCAR ESDS"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search/"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this site... "
+         aria-label="Search this site... "
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../../../">
+  
+  
+  
+  
+  
+    <p class="title logo__title">NCAR-ESDS 0.1 documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../about/">
+                        About Us
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../faq/">
+                        Frequently Asked Questions
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../blog/">
+                        Blog
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../communication/">
+                        Communication
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../office-hours/">
+                        Office Hours
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../best-practices/">
+                        Best Practices
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../calendar/">
+                        Calendar
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../projects/">
+                        Projects
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search/"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this site... "
+         aria-label="Search this site... "
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/ncar/esds" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../about/">
+                        About Us
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../faq/">
+                        Frequently Asked Questions
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../blog/">
+                        Blog
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../communication/">
+                        Communication
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../office-hours/">
+                        Office Hours
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../best-practices/">
+                        Best Practices
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../calendar/">
+                        Calendar
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../projects/">
+                        Projects
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search/"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this site... "
+         aria-label="Search this site... "
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/ncar/esds" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search/"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this site... "
+         aria-label="Search this site... "
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+        <div class="sidebar-primary-item">  
+<h2>
+   <i class="fa fa-calendar"></i>
+  05 May 2023 
+</h2>
+
+<ul>
+   
+<li id="author">
+  <span><i class="fa-fw fa fa-user"></i></span
+  >
+   
+  <a href="../../../blog/author/katie-dagon/">Katie Dagon</a>,   
+  <a href="../../../blog/author/deepak-cherian/">Deepak Cherian</a>,   
+  <a href="../../../blog/author/falko-judt/">Falko Judt</a>,   
+  <a href="../../../blog/author/orhan-eroglu/">Orhan Eroglu</a>  
+</li>
+    
+<li id="tags">
+  <span><i
+      class="fa-fw fa fa-tag"
+    ></i
+    ></span
+  >
+   
+  <a href="../../../blog/tag/tutorial-hackathon-events/">tutorial hackathon events</a>  
+</li>
+ 
+</ul>
+</div>
+        <div class="sidebar-primary-item">
+<h3>
+  <a href="../../../blog/">Recent Posts</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="../office-hours-help/"
+      >10 May - ESDS Office Hours Support</a
+    >
+  </li>
+  
+  <li>
+    <a href="../cesm2-le-timeseries-kerchunk/"
+      >15 March - Using Kerchunk with CESM Timeseries Data on the Cloud</a
+    >
+  </li>
+  
+  <li>
+    <a href="../kerchunk-mom6/"
+      >07 March - Virtual aggregate CESM MOM6 datasets with kerchunk</a
+    >
+  </li>
+  
+  <li>
+    <a href="../../2022/esds-event-recap/"
+      >19 December - Recap of a (Re)Introduction to Earth System Data Science (ESDS) Across NCAR/UCAR/UCP</a
+    >
+  </li>
+  
+  <li>
+    <a href="../../2022/cam-se-regridding/"
+      >06 December - Regridding using xESMF and an existing weights file</a
+    >
+  </li>
+  
+</ul>
+</div>
+        <div class="sidebar-primary-item">
+<h3>
+  <a href="../../../blog/archive/">Archives</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="../../../blog/2023/">2023 (4)</a>
+  </li>
+    
+  <li>
+    <a href="../../../blog/2022/">2022 (13)</a>
+  </li>
+    
+  <li>
+    <a href="../../../blog/2021/">2021 (52)</a>
+  </li>
+    
+  <li>
+    <a href="../../../blog/2020/">2020 (6)</a>
+  </li>
+    
+  <li>
+    <a href="../../../blog/2019/">2019 (2)</a>
+  </li>
+   
+</ul>
+</div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">Recap: Unstructured Grid Collaborative Work Time</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                   <section class="tex2jax_ignore mathjax_ignore" id="recap-unstructured-grid-collaborative-work-time">
+<h1>Recap: Unstructured Grid Collaborative Work Time<a class="headerlink" href="#recap-unstructured-grid-collaborative-work-time" title="Permalink to this headline">#</a></h1>
+<p>ESDS hosted our first Collaborative Work Time event on April 17, 2023.
+The topic of the session was “Working With Unstructured Grids”.
+Our goal is to encourage cross-lab collaboration and build lasting science-software partnerships.</p>
+<p>The event was hybrid with in-person attendees in the Damon Room at the Mesa Lab.
+A lucky overlap with the Improving Scientific Software conference, meant that collaborators from the Department of Energy were also able to attend in-person.</p>
+<a class="reference internal image-reference" href="../../../_images/unstructured-grid-collab-1.jpg"><img alt="Photo of unstructured grids collaborative work time session." class="align-center" src="../../../_images/unstructured-grid-collab-1.jpg" style="width: 70%;" /></a>
+<section id="plan">
+<h2>Plan<a class="headerlink" href="#plan" title="Permalink to this headline">#</a></h2>
+<p>Participants were asked to fill out a brief survey, and asked to self-organize by adding a one slide description of a project
+to a <a class="reference external" href="https://docs.google.com/presentation/d/1UDjNMMCyXcHRT6BvX_Lcs4AEoHpNM8LntEfxWOWwwNQ/edit#slide=id.p">presentation</a> in the weeks preceding the event.</p>
+<p>At the event, we broke out in to approximately four groups. A recap from each group follows.</p>
+</section>
+<section id="recap">
+<h2>Recap<a class="headerlink" href="#recap" title="Permalink to this headline">#</a></h2>
+<section id="orhan-eroglu-cisl">
+<h3>Orhan Eroglu (CISL):<a class="headerlink" href="#orhan-eroglu-cisl" title="Permalink to this headline">#</a></h3>
+<p><strong>Topic:</strong> Project <a class="reference external" href="https://raijin.ucar.edu/">Raijin</a> &amp; <a class="reference external" href="https://uxarray.readthedocs.io/">UXarray</a></p>
+<p><em>What did your group do?</em></p>
+<p>The UXarray developers had a chance to discuss use cases and get feedback from the community members on UXarray. We branched into subgroups for different work ideas and coded with our users. We noticed a  significant bug related to face area calculations (Pull Request <a class="reference external" href="https://github.com/UXARRAY/uxarray/pull/283">#283</a> and worked on that throughout the end of the day. We also worked on issues that came up with ingesting MPAS data into UXarray regarding attributes not being parsed with the dual mesh only (see pull requests <a class="reference external" href="https://github.com/UXARRAY/uxarray/pull/274">#274</a> and <a class="reference external" href="https://github.com/UXARRAY/uxarray/pull/275">#275</a>).</p>
+<p><em>Was it a fruitful experience?</em></p>
+<p>Very much!</p>
+<p><em>What worked for your group and what didn’t work?</em></p>
+<p>Sitting together with the users and listening to their expectations was a great opportunity! Since we had multiple UXarray folks as facilitators, things worked quite well for us. That wouldn’t happen if we didn’t have that many helpers (as a side note for the future)</p>
+<p><em>Would it be useful to redo the  topic again?  What would you do differently the second time around?</em></p>
+<p>Yes, after some time. We’d add one or two work idea of our own group as well as those came from the community.</p>
+</section>
+<section id="falko-judt-mmm">
+<h3>Falko Judt (MMM):<a class="headerlink" href="#falko-judt-mmm" title="Permalink to this headline">#</a></h3>
+<p><strong>Topic</strong> Extract Tropical Cyclone Vitals from MPAS</p>
+<p><em>What did your group do?</em></p>
+<p>Free discussion. Mostly scientist asking questions to the GeoCAT/UXarray experts. We didn’t write any code because nobody had a project ready.</p>
+<p><em>Was it a fruitful experience?</em></p>
+<p>Yes.</p>
+<p><em>What worked for your group and what didn’t work?</em></p>
+<p>Discussion was great. Also just meeting some people face to face was a plus.</p>
+<p><em>Would it be useful to redo the  topic again?  What would you do differently the second time around?</em></p>
+<p>Yes, maybe in 1/2 year or so? Could tell people to have some project ready to get into some hands-on coding.</p>
+</section>
+<section id="katie-dagon-cgd">
+<h3>Katie Dagon (CGD):<a class="headerlink" href="#katie-dagon-cgd" title="Permalink to this headline">#</a></h3>
+<p><strong>Topic</strong>: Visualizing &amp; Analyzing Community Atmosphere Model (CAM) with the spectral element (SE) grid output in Python</p>
+<p><em>What did your group do? Write code? discussions?</em></p>
+<p>We started with open discussion and sharing our experiences with the overall topic (CAM-SE analysis/visualization).
+We then went through <a class="reference external" href="https://github.com/katiedagon/CAM-SE_analysis/blob/main/notebooks/CAM-SE.ipynb">a notebook</a> I had prepared with various examples of remapping to visualize CAM-SE unstructured output.
+I did a little live debugging, then <a class="reference external" href="https://github.com/katiedagon/CAM-SE_analysis/pull/1">Deepak was kind enough</a> to help debug the xemsf code!
+We ended with some additional discussion and had a few more participants log on after their first breakout sessions ended early.
+In total I believe we had 9 active participants (myself included) and went for at least ~1.5 hours.</p>
+<p><em>Was it a fruitful experience?</em></p>
+<p>Yes, very. A lot of good information and helpful tips/tools were exchanged:</p>
+<ul class="simple">
+<li><p>Users need to consider different tools for different purposes (e.g., visualization, analysis, looking at extremes).</p></li>
+<li><p>Bilinear interpolation will change information but is generally acceptable when going from coarse to fine scale. Consider conservative remapping when going from fine to coarse scale, and nearest-neighbor method for preserving extremes.</p></li>
+<li><p>If you have access to NCAR HPC, CESM grid files are located at <code class="docutils literal notranslate"><span class="pre">/glade/p/cesmdata/cseg/inputdata/share/</span></code></p></li>
+<li><p><a class="reference external" href="https://github.com/nco/nco/blob/master/data/ncremap">ncremap</a> via NCO tools is still a solid resource for remapping, though we are interested in Python-based alternatives.</p></li>
+<li><p><a class="reference external" href="https://visit-dav.github.io/visit-website/index.html">VisIt</a> and <a class="reference external" href="https://github.com/SEATStandards/ncvis">ncvis</a> are useful for quick visualization of unstructured grids.</p></li>
+<li><p><a class="reference external" href="https://github.com/ClimateGlobalChange/tempestremap">TempestRemap</a> can be used for native spectral element regridding.</p></li>
+<li><p>Ongoing <a class="reference external" href="https://github.com/UXARRAY/uxarray/issues/183">UXarray development</a> would hopefully make this process more seamless, so the user does not have to interact with the native grid. This is still in process.</p></li>
+</ul>
+<p><em>What worked for your group and what didn’t work?</em></p>
+<p>Having an example notebook to walk through helped maintain the discussion, and once it got going we had plenty to discuss without coding. It helped that there were a few key participants present with a lot of expertise.
+There were only two in-person participants, so technically we didn’t need to be in the Damon room (and it was a little hard to hear at times with the overlapping group discussions in the same physical space). It would be nice to have more participants in person.</p>
+<p><em>Would it be useful to redo the  topic again?  What would you do differently the second time around?</em></p>
+<p>Perhaps, if there was enough interest. Maybe it would be good to have a tutorial-type notebook prepared for participants to live code together.</p>
+</section>
+</section>
+<section id="takeaways">
+<h2>Takeaways<a class="headerlink" href="#takeaways" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Would be good to have a prepared notebook to guide the project/discussion in addition to a single slide description</p></li>
+<li><p>In-person attendees enjoyed discussion, and encouraging more in-person participation would be helpful.</p></li>
+<li><p>A repeat in the future around the same topic would be valuable.</p></li>
+</ul>
+</section>
+</section>
+
+<div class="section">
+    
+
+<div class="section">
+  <span style="float: left">
+     
+    <a href="../cesm2-le-timeseries-kerchunk/">
+      <i class="fa fa-arrow-circle-left"></i> Using Kerchunk with CESM Timeseries Data on the Cloud
+    </a>
+    
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right">
+     
+    <a href="../office-hours-help/">
+      ESDS Office Hours Support <i
+        class="fa fa-arrow-circle-right"
+      ></i
+      >
+    </a>
+    
+  </span>
+</div>
+  
+</div>
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plan">Plan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recap">Recap</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#orhan-eroglu-cisl">Orhan Eroglu (CISL):</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#falko-judt-mmm">Falko Judt (MMM):</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#katie-dagon-cgd">Katie Dagon (CGD):</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#takeaways">Takeaways</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  <div class="tocsection sourcelink">
+    <a href="../../../_sources/posts/2023/unstructured-grid-collab-1.md.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2021, NCAR Earth System Data Science Team.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
