@@ -1,7 +1,7 @@
 # Office Hours
 
 <iframe
-  src="https://app.squarespacescheduling.com/schedule.php?owner=26907589&appointmentType=35983319"
+  src="https://app.squarespacescheduling.com/schedule.php?owner=26907589"
   title="Schedule Appointment"
   width="100%"
   height="800"
