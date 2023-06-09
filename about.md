@@ -1,5 +1,15 @@
 # About Us
 
+The Earth Systems Data Science (ESDS) initiative is a community
+with a common interest in advancing geoscientist’s ability to make
+effective use of modern, open tools and technologies to support
+their Data Science needs. ESDS welcomes participation from all
+NCAR/UCAR LCPOs. We are primarily a volunteer organization, and
+encourage each LCPO to support our efforts by delegating representatives
+to serve on the ESDS Leadership Committee and/or Working Groups as
+described in our [governance document](https://docs.google.com/document/d/1xjNzJqZjeRzUg5BMipQVUsy2xA1SRlEiyJLpPmUAs9E/edit?usp=sharing).
+
+
 ## Vision
 
 _The Earth System Data Science initiative aims to profoundly increase the effectiveness of the NCAR/UCAR workforce by promoting deeper collaboration centered on analytics, improving our capacity to deliver impactful, actionable, reproducible science and serve the university community by transforming how geoscientists synthesize and extract information from large, diverse data sets._
