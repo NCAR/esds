@@ -1,6 +1,6 @@
 # Communication
 
-ESDS uses several primary platforms for communication. Here is a list of communication platforms and learning resources if you'd like to ve involved in the ESDS community:
+ESDS uses several primary platforms for communication. Here is a list of communication platforms and learning resources if you'd like to be involved in the ESDS community:
 
 ## [NSA Discourse](https://discourse-nsa.ucar.edu/)
 
@@ -25,15 +25,18 @@ This repository and webpage is a space where we can post progress on this initia
 
 ## [ESDS Forum](https://docs.google.com/document/d/e/2PACX-1vQeHIGSSz_8A8gZVL87xDjYXEwqB4CkRk85yf0TACb-rVgubjb3ukiulEYuUwHZGVXhgYNpaRC2SNAt/pub)
 
-Every other Monday from 2-3pm MT, we hold the ESDS Forum in person and over Google Meet, which provides a venue for discussion, coordination and showcasing work in progress. Examples include:
+Every other Monday from 2-3pm MT, we hold the ESDS Forum over Google Meet, which provides a venue for discussion, coordination and showcasing work in progress. Examples include:
 
 - Workflow demos
 - Overview of packages and analysis tools
 - Focused discussions on new efforts
 - Feedback on computing and analysis resources
-  This is a great place to discuss progress on your project, and get feedback from the community!
 
-If you are interested in giving a talk or leading a discussion, please fill out this [ESDS Forum sign-up spreadsheet](https://docs.google.com/spreadsheets/d/1Tuv5vwGbjSKdJD5KLT0Zow8WCY0_zt35tTI6EIRGOk4/edit?usp=sharing). See the [ESDS Forum Meeting Notes](https://docs.google.com/document/d/e/2PACX-1vQeHIGSSz_8A8gZVL87xDjYXEwqB4CkRk85yf0TACb-rVgubjb3ukiulEYuUwHZGVXhgYNpaRC2SNAt/pub) for an overview of previous discussions.
+This is a great place to discuss progress on your project, and get feedback from the community!
+
+If you are interested in giving a talk or leading a discussion, please fill out this [ESDS Forum sign-up spreadsheet](https://docs.google.com/spreadsheets/d/1Tuv5vwGbjSKdJD5KLT0Zow8WCY0_zt35tTI6EIRGOk4/edit?usp=sharing). 
+
+See the [ESDS Forum Meeting Notes](https://docs.google.com/document/d/e/2PACX-1vQeHIGSSz_8A8gZVL87xDjYXEwqB4CkRk85yf0TACb-rVgubjb3ukiulEYuUwHZGVXhgYNpaRC2SNAt/pub) for an overview of previous discussions.
 
 ## Analysis Workflow Special Interest Group (AWSIG)
 
