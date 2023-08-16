@@ -34,7 +34,7 @@ Every other Monday from 2-3pm MT, we hold the ESDS Forum over Google Meet, which
 
 This is a great place to discuss progress on your project, and get feedback from the community!
 
-If you are interested in giving a talk or leading a discussion, please fill out this [ESDS Forum sign-up spreadsheet](https://docs.google.com/spreadsheets/d/1Tuv5vwGbjSKdJD5KLT0Zow8WCY0_zt35tTI6EIRGOk4/edit?usp=sharing). 
+If you are interested in giving a talk or leading a discussion, please fill out this [ESDS Forum sign-up spreadsheet](https://docs.google.com/spreadsheets/d/1Tuv5vwGbjSKdJD5KLT0Zow8WCY0_zt35tTI6EIRGOk4/edit?usp=sharing).
 
 See the [ESDS Forum Meeting Notes](https://docs.google.com/document/d/e/2PACX-1vQeHIGSSz_8A8gZVL87xDjYXEwqB4CkRk85yf0TACb-rVgubjb3ukiulEYuUwHZGVXhgYNpaRC2SNAt/pub) for an overview of previous discussions.
 
