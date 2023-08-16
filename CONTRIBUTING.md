@@ -34,7 +34,7 @@ git branch -va
 git branch --set-upstream-to=origin/$BRANCH $BRANCH
 ```
 
-9. Add and edit file(s) in the appropriate blog post folder, e.g., /posts/2023/  
+9. Add and edit file(s) in the appropriate blog post folder, e.g., /posts/2023/
     * Tip: look at other posts (.md or .ipynb files) to get ideas on formatting
     * To add author/date/tags to a notebook post, click on the settings icon in the top right corner of jupyterlab for the first cell of the notebook (use an existing notebook post to see formatting).
 
@@ -62,4 +62,3 @@ git push origin $BRANCH
 ```
 git pull
 ```
-
