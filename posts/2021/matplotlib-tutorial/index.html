@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>Matplotlib Tutorial &#8212; NCAR-ESDS 0.1 documentation</title>
   
@@ -42,7 +42,9 @@
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
     <script kind="utterances">
@@ -83,40 +85,19 @@ commentsRunWhenDOMLoaded(addUtterances);
     <script>DOCUMENTATION_OPTIONS.pagename = 'posts/2021/matplotlib-tutorial';</script>
     <link rel="author" title="About these documents" href="../../../about/" />
     <link rel="index" title="Index" href="../../../genindex/" />
-    <link rel="search" title="Search" href="../../../search/" /> 
+    <link rel="search" title="Search" href="../../../search/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/> 
+  <meta name="docsearch:language" content="en"/>
+
 <link
   rel="alternate"
   type="application/atom+xml"
   href="../../../blog/atom.xml"
   title="NCAR ESDS"
 />
- 
-<style type="text/css">
-  ul.ablog-archive {
-    list-style: none;
-    overflow: auto;
-    margin-left: 0px;
-  }
-  ul.ablog-archive li {
-    float: left;
-    margin-right: 5px;
-    font-size: 80%;
-  }
-  ul.postlist a {
-    font-style: italic;
-  }
-  ul.postlist-style-disc {
-    list-style-type: disc;
-  }
-  ul.postlist-style-none {
-    list-style-type: none;
-  }
-  ul.postlist-style-circle {
-    list-style-type: circle;
-  }
-</style>
+
+
 
   </head>
   
@@ -488,98 +469,141 @@ document.write(`
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
-        <div class="sidebar-primary-item">  
-<h2>
-   <i class="fa fa-calendar"></i>
-  19 March 2021 
-</h2>
+        <div class="sidebar-primary-item">
 
+<div class="ablog-sidebar-item ablog__postcard">
+
+
+<h2>
+  
+  
+  <i class="fa fa-calendar"></i>
+  
+  19 March 2021
+  
+</h2>
 <ul>
-   
-<li id="author">
-  <span><i class="fa-fw fa fa-user"></i></span
-  >
-   
-  <a href="../../../blog/author/julia-kent/">Julia Kent</a>  
-</li>
+  
+
+<li id="ablog-sidebar-item author ablog__author">
+  <span>
     
-<li id="tags">
-  <span><i
-      class="fa-fw fa fa-tag"
-    ></i
-    ></span
-  >
-   
-  <a href="../../../blog/tag/python-tutorial-series/">python-tutorial-series</a>  
+    <i class="fa-fw fa fa-user"></i>
+    
+    </span>
+  
+  
+  <a href="../../../blog/author/julia-kent/">Julia Kent</a>
+  
+  
+  
 </li>
- 
+
+
+
+
+
+<li id="ablog-sidebar-item tags ablog__tags">
+  <span>
+    
+    
+    <i class="fa-fw fa fa-tag"></i>
+    
+    </span>
+  
+  
+  <a href="../../../blog/tag/python-tutorial-series/">python-tutorial-series</a>
+  
+  
+  
+</li>
+
+
 </ul>
 </div>
+</div>
         <div class="sidebar-primary-item">
+
+<div class="ablog-sidebar-item ablog__recentposts">
 <h3>
   <a href="../../../blog/">Recent Posts</a>
 </h3>
 <ul>
-   
+  
+  
   <li>
-    <a href="../../2023/office-hours-help/"
-      >10 May - ESDS Office Hours Support</a
-    >
+    <a href="../../2023/mfdataset/">
+      16 August - Thinking through CESM data access
+    </a>
   </li>
   
   <li>
-    <a href="../../2023/unstructured-grid-collab-1/"
-      >05 May - Recap: Unstructured Grid Collaborative Work Time</a
-    >
+    <a href="../../2023/office-hours-help/">
+      10 May - ESDS Office Hours Support
+    </a>
   </li>
   
   <li>
-    <a href="../../2023/cesm2-le-timeseries-kerchunk/"
-      >15 March - Using Kerchunk with CESM Timeseries Data on the Cloud</a
-    >
+    <a href="../../2023/unstructured-grid-collab-1/">
+      05 May - Recap: Unstructured Grid Collaborative Work Time
+    </a>
   </li>
   
   <li>
-    <a href="../../2023/kerchunk-mom6/"
-      >07 March - Virtual aggregate CESM MOM6 datasets with kerchunk</a
-    >
+    <a href="../../2023/cesm2-le-timeseries-kerchunk/">
+      15 March - Using Kerchunk with CESM Timeseries Data on the Cloud
+    </a>
   </li>
   
   <li>
-    <a href="../../2022/esds-event-recap/"
-      >19 December - Recap of a (Re)Introduction to Earth System Data Science (ESDS) Across NCAR/UCAR/UCP</a
-    >
+    <a href="../../2023/kerchunk-mom6/">
+      07 March - Virtual aggregate CESM MOM6 datasets with kerchunk
+    </a>
   </li>
   
 </ul>
 </div>
+</div>
         <div class="sidebar-primary-item">
+
+<div class="ablog-sidebar-item ablog__archive">
 <h3>
   <a href="../../../blog/archive/">Archives</a>
 </h3>
 <ul>
-   
+  
+  
   <li>
-    <a href="../../../blog/2023/">2023 (4)</a>
+    <a href="../../../blog/2023/">2023 (5)</a>
   </li>
-    
+  
+  
+  
   <li>
     <a href="../../../blog/2022/">2022 (13)</a>
   </li>
-    
+  
+  
+  
   <li>
     <a href="../../../blog/2021/">2021 (52)</a>
   </li>
-    
+  
+  
+  
   <li>
     <a href="../../../blog/2020/">2020 (6)</a>
   </li>
-    
+  
+  
+  
   <li>
     <a href="../../../blog/2019/">2019 (2)</a>
   </li>
-   
+  
+  
 </ul>
+</div>
 </div>
     </div>
   
@@ -631,12 +655,13 @@ document.write(`
                 
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
-                   <section class="tex2jax_ignore mathjax_ignore" id="matplotlib-tutorial">
-<h1>Matplotlib Tutorial<a class="headerlink" href="#matplotlib-tutorial" title="Permalink to this headline">#</a></h1>
+                  
+<section class="tex2jax_ignore mathjax_ignore" id="matplotlib-tutorial">
+<h1>Matplotlib Tutorial<a class="headerlink" href="#matplotlib-tutorial" title="Permalink to this heading">#</a></h1>
 <p>The NCAR/UCAR virtual Python Tutorial Seminar Series continues with an introduction to the Python package <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> on <strong>Wednesday, March 24th at 1 PM Mountain</strong>. This session will be led by Anissa Zacharias.</p>
 <p>The content for this tutorial is hosted on Anissa’s <a class="reference external" href="https://github.com/anissa111/matplotlib-tutorial">matplotlib-tutorial GitHub repository</a>. Primarily direct your attention to the <code class="docutils literal notranslate"><span class="pre">matplotlib-tutorial.ipynb</span></code>.</p>
 <section id="preparation">
-<h2>Preparation<a class="headerlink" href="#preparation" title="Permalink to this headline">#</a></h2>
+<h2>Preparation<a class="headerlink" href="#preparation" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Check your conda install if this is the first tutorial in the series you are joining us for with <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">--version</span></code> and if necessary <a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">install by following these instructions</a>.</p></li>
 <li><p>If you already have Jupyter working correctly in an environment (perhaps called <code class="docutils literal notranslate"><span class="pre">jupyter_tutorial</span></code>) from your personal use or a past tutorial in this seminar series, activate it with <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">ENVNAME</span></code>. Then check that you have <code class="docutils literal notranslate"><span class="pre">numpy</span></code> and <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> installed with <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">list</span></code>. If installation is necessary, type <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">matplotlib</span> <span class="pre">numpy</span></code>.</p></li>
@@ -645,35 +670,44 @@ document.write(`
 <p>If you did not attend the live session, it will beneficial to watch the recording from the live tutorial on <a class="reference external" href="https://youtu.be/xSzXvwzFsDU">Jupyter Notebooks</a> before the Matplotlib session.</p>
 </section>
 <section id="sign-up">
-<h2>Sign Up<a class="headerlink" href="#sign-up" title="Permalink to this headline">#</a></h2>
+<h2>Sign Up<a class="headerlink" href="#sign-up" title="Permalink to this heading">#</a></h2>
 <p>If you would like join the <em>learnpython&#64;ucar.edu</em> Google group to be informed of updates and events in the seminar series, please do so by following this <a class="reference external" href="https://groups.google.com/a/ucar.edu/g/learnpython/about">link</a> and clicking “Join Group” next to the group name.</p>
 <iframe src="https://calendar.google.com/calendar/embed?src=c_krmtmqm6kb5u7ke6t5on9l0rus%40group.calendar.google.com" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 </section>
 </section>
 
-<div class="section">
-    
+<div class="section ablog__blog_comments">
+  
+  
 
-<div class="section">
-  <span style="float: left">
-     
+
+<div class="section ablog__prev-next">
+  <span class="ablog__prev">
+    
+    
     <a href="../Interactive_Dashboard/">
-      <i class="fa fa-arrow-circle-left"></i> HiRes-CESM Interactive Dashboard Example
+      
+      <i class="fa fa-arrow-circle-left"></i>
+      
+      <span>HiRes-CESM Interactive Dashboard Example</span>
     </a>
     
   </span>
-  <span>&nbsp;</span>
-  <span style="float: right">
-     
+  <span class="ablog__spacer">&nbsp;</span>
+  <span class="ablog__next">
+    
+    
     <a href="../numpy-faq/">
-      NumPy Tutorial FAQ <i
-        class="fa fa-arrow-circle-right"
-      ></i
-      >
+      <span>NumPy Tutorial FAQ</span>
+      
+      <i class="fa fa-arrow-circle-right" ></i>
+      
     </a>
     
   </span>
 </div>
+
+  
   
 </div>
 
@@ -750,7 +784,7 @@ document.write(`
       
         <div class="footer-item">
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
     <br/>
   </p>
 </div>

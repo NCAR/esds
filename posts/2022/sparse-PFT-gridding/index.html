@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>Sparse arrays and the CESM land model component &#8212; NCAR-ESDS 0.1 documentation</title>
   
@@ -42,7 +42,9 @@
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
     <script kind="utterances">
@@ -83,40 +85,19 @@ commentsRunWhenDOMLoaded(addUtterances);
     <script>DOCUMENTATION_OPTIONS.pagename = 'posts/2022/sparse-PFT-gridding';</script>
     <link rel="author" title="About these documents" href="../../../about/" />
     <link rel="index" title="Index" href="../../../genindex/" />
-    <link rel="search" title="Search" href="../../../search/" /> 
+    <link rel="search" title="Search" href="../../../search/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/> 
+  <meta name="docsearch:language" content="en"/>
+
 <link
   rel="alternate"
   type="application/atom+xml"
   href="../../../blog/atom.xml"
   title="NCAR ESDS"
 />
- 
-<style type="text/css">
-  ul.ablog-archive {
-    list-style: none;
-    overflow: auto;
-    margin-left: 0px;
-  }
-  ul.ablog-archive li {
-    float: left;
-    margin-right: 5px;
-    font-size: 80%;
-  }
-  ul.postlist a {
-    font-style: italic;
-  }
-  ul.postlist-style-disc {
-    list-style-type: disc;
-  }
-  ul.postlist-style-none {
-    list-style-type: none;
-  }
-  ul.postlist-style-circle {
-    list-style-type: circle;
-  }
-</style>
+
+
 
   </head>
   
@@ -488,99 +469,167 @@ document.write(`
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
-        <div class="sidebar-primary-item">  
-<h2>
-   <i class="fa fa-calendar"></i>
-  24 February 2022 
-</h2>
+        <div class="sidebar-primary-item">
 
+<div class="ablog-sidebar-item ablog__postcard">
+
+
+<h2>
+  
+  
+  <i class="fa fa-calendar"></i>
+  
+  24 February 2022
+  
+</h2>
 <ul>
-   
-<li id="author">
-  <span><i class="fa-fw fa fa-user"></i></span
-  >
-   
-  <a href="../../../blog/author/katie-dagon/">Katie Dagon</a>,   
-  <a href="../../../blog/author/deepak-cherian/">Deepak Cherian</a>  
-</li>
+  
+
+<li id="ablog-sidebar-item author ablog__author">
+  <span>
     
-<li id="tags">
-  <span><i class="fa-fw fa fa-tags"></i> </span
-  >
-   
-  <a href="../../../blog/tag/sparse/">sparse</a>   
-  <a href="../../../blog/tag/pft/">PFT</a>   
-  <a href="../../../blog/tag/dask/">dask</a>   
-  <a href="../../../blog/tag/clm/">CLM</a>  
+    <i class="fa-fw fa fa-user"></i>
+    
+    </span>
+  
+  
+  <a href="../../../blog/author/katie-dagon/">Katie Dagon</a>
+  
+  ,
+  
+  
+  
+  
+  <a href="../../../blog/author/deepak-cherian/">Deepak Cherian</a>
+  
+  
+  
 </li>
- 
+
+
+
+
+
+<li id="ablog-sidebar-item tags ablog__tags">
+  <span>
+    
+    
+    <i class="fa-fw fa fa-tags"></i>
+    
+    
+    </span>
+  
+  
+  <a href="../../../blog/tag/pft/">PFT</a>
+  
+  
+  
+  
+  
+  <a href="../../../blog/tag/sparse/">sparse</a>
+  
+  
+  
+  
+  
+  <a href="../../../blog/tag/dask/">dask</a>
+  
+  
+  
+  
+  
+  <a href="../../../blog/tag/clm/">CLM</a>
+  
+  
+  
+</li>
+
+
 </ul>
 </div>
+</div>
         <div class="sidebar-primary-item">
+
+<div class="ablog-sidebar-item ablog__recentposts">
 <h3>
   <a href="../../../blog/">Recent Posts</a>
 </h3>
 <ul>
-   
+  
+  
   <li>
-    <a href="../../2023/office-hours-help/"
-      >10 May - ESDS Office Hours Support</a
-    >
+    <a href="../../2023/mfdataset/">
+      16 August - Thinking through CESM data access
+    </a>
   </li>
   
   <li>
-    <a href="../../2023/unstructured-grid-collab-1/"
-      >05 May - Recap: Unstructured Grid Collaborative Work Time</a
-    >
+    <a href="../../2023/office-hours-help/">
+      10 May - ESDS Office Hours Support
+    </a>
   </li>
   
   <li>
-    <a href="../../2023/cesm2-le-timeseries-kerchunk/"
-      >15 March - Using Kerchunk with CESM Timeseries Data on the Cloud</a
-    >
+    <a href="../../2023/unstructured-grid-collab-1/">
+      05 May - Recap: Unstructured Grid Collaborative Work Time
+    </a>
   </li>
   
   <li>
-    <a href="../../2023/kerchunk-mom6/"
-      >07 March - Virtual aggregate CESM MOM6 datasets with kerchunk</a
-    >
+    <a href="../../2023/cesm2-le-timeseries-kerchunk/">
+      15 March - Using Kerchunk with CESM Timeseries Data on the Cloud
+    </a>
   </li>
   
   <li>
-    <a href="../esds-event-recap/"
-      >19 December - Recap of a (Re)Introduction to Earth System Data Science (ESDS) Across NCAR/UCAR/UCP</a
-    >
+    <a href="../../2023/kerchunk-mom6/">
+      07 March - Virtual aggregate CESM MOM6 datasets with kerchunk
+    </a>
   </li>
   
 </ul>
 </div>
+</div>
         <div class="sidebar-primary-item">
+
+<div class="ablog-sidebar-item ablog__archive">
 <h3>
   <a href="../../../blog/archive/">Archives</a>
 </h3>
 <ul>
-   
+  
+  
   <li>
-    <a href="../../../blog/2023/">2023 (4)</a>
+    <a href="../../../blog/2023/">2023 (5)</a>
   </li>
-    
+  
+  
+  
   <li>
     <a href="../../../blog/2022/">2022 (13)</a>
   </li>
-    
+  
+  
+  
   <li>
     <a href="../../../blog/2021/">2021 (52)</a>
   </li>
-    
+  
+  
+  
   <li>
     <a href="../../../blog/2020/">2020 (6)</a>
   </li>
-    
+  
+  
+  
   <li>
     <a href="../../../blog/2019/">2019 (2)</a>
   </li>
-   
+  
+  
 </ul>
+</div>
 </div>
     </div>
   
@@ -632,8 +681,9 @@ document.write(`
                 
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
-                   <section class="tex2jax_ignore mathjax_ignore" id="sparse-arrays-and-the-cesm-land-model-component">
-<h1>Sparse arrays and the CESM land model component<a class="headerlink" href="#sparse-arrays-and-the-cesm-land-model-component" title="Permalink to this headline">#</a></h1>
+                  
+<section class="tex2jax_ignore mathjax_ignore" id="sparse-arrays-and-the-cesm-land-model-component">
+<h1>Sparse arrays and the CESM land model component<a class="headerlink" href="#sparse-arrays-and-the-cesm-land-model-component" title="Permalink to this heading">#</a></h1>
 <p>An underappreciated feature of Xarray + Dask is the ability to plug in <a class="reference external" href="https://docs.xarray.dev/en/stable/user-guide/duckarrays.html">different array types</a>. Usually we work with Xarray wrapping a Dask array which in turn uses <em>NumPy</em> arrays for each block; or just Xarray wrapping NumPy arrays directly. NumPy arrays are dense in-memory arrays. Other array types exist:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://sparse.pydata.org">sparse</a> for sparse arrays</p></li>
@@ -643,7 +693,7 @@ document.write(`
 <p>Over the past few years, significant effort has been made to make these array types speak a common protocol so that higher-level packages like Xarray can easily wrap all of them.  The latest (and hopefully last) version of these efforts is described at <a class="reference external" href="https://data-apis.org/">data-apis</a> if you are interested.</p>
 <p>This notebook explores using  sparse arrays with dask and xarray motivated by some Zulip conversations around representing “Plant Functional Types” from the land model component. A preliminary version of this notebook is <a class="reference external" href="https://nbviewer.jupyter.org/github/NCAR/ctsm_python_gallery/blob/master/notebooks/sparse-PFT-gridding.ipynb">here</a>; and the work builds on <a class="reference external" href="https://nbviewer.org/github/NCAR/ctsm_python_gallery/blob/master/notebooks/PFT-Gridding.ipynb">PFT-Gridding.ipynb</a></p>
 <section id="importing-libraries">
-<h2>Importing Libraries<a class="headerlink" href="#importing-libraries" title="Permalink to this headline">#</a></h2>
+<h2>Importing Libraries<a class="headerlink" href="#importing-libraries" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
@@ -671,7 +721,7 @@ document.write(`
 </div>
 </section>
 <section id="community-land-model-clm-output">
-<h2>Community Land Model (CLM) output<a class="headerlink" href="#community-land-model-clm-output" title="Permalink to this headline">#</a></h2>
+<h2>Community Land Model (CLM) output<a class="headerlink" href="#community-land-model-clm-output" title="Permalink to this heading">#</a></h2>
 <p>Lets read a dataset.</p>
 <p>This dataset represents <em>monthly mean</em>  output from the Community Land Model (CLM), the land model component of CESM. The particular variable here is gross primary production (GPP), which is essentially photosynthesis or carbon uptake by plants. Because CLM represents different <a class="reference external" href="https://escomp.github.io/ctsm-docs/versions/release-clm5.0/html/tech_note/Crop_Irrigation/CLM50_Tech_Note_Crop_Irrigation.html#crop-plant-functional-types">plant functional types (PFTs)</a> within a single model grid cell (up to 79 different types including natural vegetation and crops), this dataset includes information on how GPP varies by PFT. This way we can examine photosynthesis and how it varies across different plant types. To visualize this output, we often need to remap the information to a latitude/longitude grid, preserving plant type.</p>
 <div class="cell docutils container">
@@ -4651,7 +4701,7 @@ Attributes:
 </div>
 </section>
 <section id="goal">
-<h2>Goal<a class="headerlink" href="#goal" title="Permalink to this headline">#</a></h2>
+<h2>Goal<a class="headerlink" href="#goal" title="Permalink to this heading">#</a></h2>
 <p>Our goal here is to expand this 2D <code class="docutils literal notranslate"><span class="pre">GPP</span></code> dataarray to a 4D sparse array (<code class="docutils literal notranslate"><span class="pre">time</span></code>, <code class="docutils literal notranslate"><span class="pre">type</span></code>, <code class="docutils literal notranslate"><span class="pre">lat</span></code>, <code class="docutils literal notranslate"><span class="pre">lon</span></code>).</p>
 <ol class="arabic simple">
 <li><p>This way no extra memory is used to represent NaNs over the ocean.</p></li>
@@ -5389,7 +5439,7 @@ Attributes:
        b&#x27;irrigated_tropical_soybean              &#x27;], dtype=&#x27;|S40&#x27;)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-558af00d-1a32-42c4-ada0-f4002fb18a65' class='xr-section-summary-in' type='checkbox'  checked><label for='section-558af00d-1a32-42c4-ada0-f4002fb18a65' class='xr-section-summary' >Attributes: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>gross primary production</dd><dt><span>units :</span></dt><dd>gC/m^2/s</dd><dt><span>cell_methods :</span></dt><dd>time: mean</dd></dl></div></li></ul></div></div></div></div>
 </div>
 <section id="easy-visualization">
-<h3>Easy visualization<a class="headerlink" href="#easy-visualization" title="Permalink to this headline">#</a></h3>
+<h3>Easy visualization<a class="headerlink" href="#easy-visualization" title="Permalink to this heading">#</a></h3>
 <p>Once converted to a 4D sparse array, visualization of the dataset is now easy</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -5407,7 +5457,7 @@ Attributes:
 </div>
 </section>
 <section id="many-xarray-operations-just-work">
-<h3>Many xarray operations just work<a class="headerlink" href="#many-xarray-operations-just-work" title="Permalink to this headline">#</a></h3>
+<h3>Many xarray operations just work<a class="headerlink" href="#many-xarray-operations-just-work" title="Permalink to this heading">#</a></h3>
 <p>Here’s a monthly climatology for January (calculated using the first two years only to reduce  computation time).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -5432,9 +5482,9 @@ Attributes:
 </section>
 </section>
 <section id="introduction-to-sparse-arrays">
-<h2>Introduction to sparse arrays<a class="headerlink" href="#introduction-to-sparse-arrays" title="Permalink to this headline">#</a></h2>
+<h2>Introduction to sparse arrays<a class="headerlink" href="#introduction-to-sparse-arrays" title="Permalink to this heading">#</a></h2>
 <section id="what-is-a-sparse-array">
-<h3>What is a sparse array?<a class="headerlink" href="#what-is-a-sparse-array" title="Permalink to this headline">#</a></h3>
+<h3>What is a sparse array?<a class="headerlink" href="#what-is-a-sparse-array" title="Permalink to this heading">#</a></h3>
 <p>A sparse array is a n-dimensional generalization of a <a class="reference external" href="https://en.wikipedia.org/wiki/Sparse_matrix">sparse matrix</a> which is one where most elements are 0 (or some other “fill value”). Significant memory savings are possible by only storing non-zero values and the locations of the those values.  A “dense” representation, for example using NumPy, which uses memory for every 0 would use substantially  more memory</p>
 <p>Here is a visualization from the Wikipedia article where black squares are non-zero.</p>
 <div class="cell tag_hide-input docutils container">
@@ -5457,7 +5507,7 @@ Attributes:
 </div>
 </section>
 <section id="constructing-a-sparse-array">
-<h3>Constructing a sparse array<a class="headerlink" href="#constructing-a-sparse-array" title="Permalink to this headline">#</a></h3>
+<h3>Constructing a sparse array<a class="headerlink" href="#constructing-a-sparse-array" title="Permalink to this heading">#</a></h3>
 <p>https://sparse.pydata.org/ provides a number of sparse array formats. Here we work with <code class="docutils literal notranslate"><span class="pre">sparse.COO</span></code>.</p>
 <p>We construct a <code class="docutils literal notranslate"><span class="pre">sparse.COO</span></code> array by passing a list of non-zero data values and the coordinate locations for those values</p>
 <div class="cell docutils container">
@@ -5519,7 +5569,7 @@ Attributes:
 </div>
 </section>
 <section id="sparse-arrays-with-dask">
-<h3>Sparse arrays with dask<a class="headerlink" href="#sparse-arrays-with-dask" title="Permalink to this headline">#</a></h3>
+<h3>Sparse arrays with dask<a class="headerlink" href="#sparse-arrays-with-dask" title="Permalink to this heading">#</a></h3>
 <p>The idea here is that each dask block is a sparse array (compare the more common case where each block is a NumPy array). This works well, dask recognizes that the chunks are sparse arrays (see Type under Chunk)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -5589,7 +5639,7 @@ Attributes:
 </section>
 </section>
 <section id="wrapping-sparse-arrays-in-xarray">
-<h2>Wrapping sparse arrays in xarray<a class="headerlink" href="#wrapping-sparse-arrays-in-xarray" title="Permalink to this headline">#</a></h2>
+<h2>Wrapping sparse arrays in xarray<a class="headerlink" href="#wrapping-sparse-arrays-in-xarray" title="Permalink to this heading">#</a></h2>
 <p>works by passing the sparse array to <code class="docutils literal notranslate"><span class="pre">xarray.DataArray</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -6732,7 +6782,7 @@ Coordinates:
   * y        (y) int64 0 1 2 3</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'></div><ul class='xr-dim-list'><li><span class='xr-has-index'>y</span>: 4</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-7243f5e4-41a3-4e24-aeeb-187a7ca47e1c' class='xr-array-in' type='checkbox' checked><label for='section-7243f5e4-41a3-4e24-aeeb-187a7ca47e1c' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>&lt;COO: nnz=3, fill_value=nan&gt;</span></div><div class='xr-array-data'><table><tbody><tr><th style="text-align: left">Format</th><td style="text-align: left">coo</td></tr><tr><th style="text-align: left">Data Type</th><td style="text-align: left">float64</td></tr><tr><th style="text-align: left">Shape</th><td style="text-align: left">(4,)</td></tr><tr><th style="text-align: left">nnz</th><td style="text-align: left">3</td></tr><tr><th style="text-align: left">Density</th><td style="text-align: left">0.75</td></tr><tr><th style="text-align: left">Read-only</th><td style="text-align: left">True</td></tr><tr><th style="text-align: left">Size</th><td style="text-align: left">48</td></tr><tr><th style="text-align: left">Storage ratio</th><td style="text-align: left">1.5</td></tr></tbody></table></div></div></li><li class='xr-section-item'><input id='section-5635aa25-c0e1-4448-b91c-cb439ac411db' class='xr-section-summary-in' type='checkbox'  checked><label for='section-5635aa25-c0e1-4448-b91c-cb439ac411db' class='xr-section-summary' >Coordinates: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>y</span></div><div class='xr-var-dims'>(y)</div><div class='xr-var-dtype'>int64</div><div class='xr-var-preview xr-preview'>0 1 2 3</div><input id='attrs-56760857-450e-41d2-9fbc-16d3c50ef647' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-56760857-450e-41d2-9fbc-16d3c50ef647' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-41f46a90-a5e5-40e7-9cba-e0023c8316a9' class='xr-var-data-in' type='checkbox'><label for='data-41f46a90-a5e5-40e7-9cba-e0023c8316a9' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([0, 1, 2, 3])</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-c73950b4-69f7-4971-a40c-090d5ea0961f' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-c73950b4-69f7-4971-a40c-090d5ea0961f' class='xr-section-summary'  title='Expand/collapse section'>Attributes: <span>(0)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'></dl></div></li></ul></div></div></div></div>
 </div>
 <section id="sparse-arrays-with-dask-xarray">
-<h3>Sparse arrays with dask + xarray<a class="headerlink" href="#sparse-arrays-with-dask-xarray" title="Permalink to this headline">#</a></h3>
+<h3>Sparse arrays with dask + xarray<a class="headerlink" href="#sparse-arrays-with-dask-xarray" title="Permalink to this heading">#</a></h3>
 <p>Xarray knows how to handle dask arrays, so we can just pass <code class="docutils literal notranslate"><span class="pre">dasky_array</span></code> and things work</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -7154,9 +7204,9 @@ Coordinates:
 </section>
 </section>
 <section id="back-to-clm-output">
-<h2>Back to CLM output<a class="headerlink" href="#back-to-clm-output" title="Permalink to this headline">#</a></h2>
+<h2>Back to CLM output<a class="headerlink" href="#back-to-clm-output" title="Permalink to this heading">#</a></h2>
 <section id="convert-a-single-timestep-to-sparse">
-<h3>Convert a single timestep to sparse<a class="headerlink" href="#convert-a-single-timestep-to-sparse" title="Permalink to this headline">#</a></h3>
+<h3>Convert a single timestep to sparse<a class="headerlink" href="#convert-a-single-timestep-to-sparse" title="Permalink to this heading">#</a></h3>
 <p>Lets begin with a simple subset of the problem: a single timestep as a numpy array.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -8803,7 +8853,7 @@ Coordinates:
 </div>
 </div>
 <section id="aside-further-compressing-the-vegtype-dimension">
-<h4>Aside: further compressing the <code class="docutils literal notranslate"><span class="pre">vegtype</span></code> dimension<a class="headerlink" href="#aside-further-compressing-the-vegtype-dimension" title="Permalink to this headline">#</a></h4>
+<h4>Aside: further compressing the <code class="docutils literal notranslate"><span class="pre">vegtype</span></code> dimension<a class="headerlink" href="#aside-further-compressing-the-vegtype-dimension" title="Permalink to this heading">#</a></h4>
 <p>The <code class="docutils literal notranslate"><span class="pre">vegtype</span></code> dimension is sized <code class="docutils literal notranslate"><span class="pre">78</span></code> because <code class="docutils literal notranslate"><span class="pre">max(vegtype)</span></code> is 77. However there are substantially fewer <code class="docutils literal notranslate"><span class="pre">vegtypes</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -8853,7 +8903,7 @@ Coordinates:
 </section>
 </section>
 <section id="convert-multiple-timesteps-to-sparse">
-<h3>Convert multiple timesteps to sparse<a class="headerlink" href="#convert-multiple-timesteps-to-sparse" title="Permalink to this headline">#</a></h3>
+<h3>Convert multiple timesteps to sparse<a class="headerlink" href="#convert-multiple-timesteps-to-sparse" title="Permalink to this heading">#</a></h3>
 <p>Our chunks are <code class="docutils literal notranslate"><span class="pre">100</span></code> in time, that means we need to do some extra work to convert each chunk  to a sparse array in one go. We’ll also anticipate converting dataarrays using <code class="docutils literal notranslate"><span class="pre">xarray.apply_ufunc</span></code> and so make functions that take  numpy arrays as input</p>
 <p>We could loop over time and concatenate them, but it should be faster to construct the appropriate <code class="docutils literal notranslate"><span class="pre">coords</span></code> array for coordinate locations and pass all of the data at once</p>
 <p>Lets again extract a small subset of the data</p>
@@ -9820,7 +9870,7 @@ Coordinates:
 </div>
 </section>
 <section id="using-xarray-apply-ufunc">
-<h3>Using <code class="docutils literal notranslate"><span class="pre">xarray.apply_ufunc</span></code><a class="headerlink" href="#using-xarray-apply-ufunc" title="Permalink to this headline">#</a></h3>
+<h3>Using <code class="docutils literal notranslate"><span class="pre">xarray.apply_ufunc</span></code><a class="headerlink" href="#using-xarray-apply-ufunc" title="Permalink to this heading">#</a></h3>
 <p>We extracted numpy arrays, called <code class="docutils literal notranslate"><span class="pre">to_sparse</span></code> and then used the returned <code class="docutils literal notranslate"><span class="pre">sparse.COO</span></code> array to manually create a DataArray. Now we wrap those steps using <code class="docutils literal notranslate"><span class="pre">xarray.apply_ufunc</span></code>.  Why so?</p>
 <ol class="arabic simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">apply_ufunc</span></code> is really useful when you want to apply a function that expects and returns pure arrays (like numpy or sparse.COO) to an xarray object.</p></li>
@@ -10248,7 +10298,7 @@ Attributes:
 </div>
 </section>
 <section id="apply-to-entire-dask-dataarray">
-<h3>Apply to entire dask DataArray<a class="headerlink" href="#apply-to-entire-dask-dataarray" title="Permalink to this headline">#</a></h3>
+<h3>Apply to entire dask DataArray<a class="headerlink" href="#apply-to-entire-dask-dataarray" title="Permalink to this heading">#</a></h3>
 <p>Now we use <code class="docutils literal notranslate"><span class="pre">xr.apply_ufunc</span></code> to convert all of the data to sparse with <code class="docutils literal notranslate"><span class="pre">to_sparse</span></code>. This transformation can be applied  to each block of a dask array independently, so we can use <code class="docutils literal notranslate"><span class="pre">dask=&quot;parallelized&quot;</span></code> to automatically parallelize the operation (using something like <code class="docutils literal notranslate"><span class="pre">dask.array.map_blocks</span></code> underneath).</p>
 <p>Dask will also need us to provide the sizes for these new dimensions. We do that by providing <code class="docutils literal notranslate"><span class="pre">output_sizes</span></code> in <code class="docutils literal notranslate"><span class="pre">dask_gufunc_kwargs</span></code></p>
 <div class="cell docutils container">
@@ -11290,7 +11340,7 @@ Attributes:
 </section>
 </section>
 <section id="putting-it-all-together">
-<h2>Putting it all together<a class="headerlink" href="#putting-it-all-together" title="Permalink to this headline">#</a></h2>
+<h2>Putting it all together<a class="headerlink" href="#putting-it-all-together" title="Permalink to this heading">#</a></h2>
 <p>Here’s a generalized  function that wraps up all the steps in the previous section</p>
 <ol class="arabic simple">
 <li><p>Takes a Dataset like <code class="docutils literal notranslate"><span class="pre">data</span></code> as input</p></li>
@@ -12883,7 +12933,7 @@ Attributes: (12/102)
 </table></div></li></ul></div></li><li class='xr-section-item'><input id='section-89c1cfc1-5a6c-417c-a7e6-ecded85e3a77' class='xr-section-summary-in' type='checkbox'  ><label for='section-89c1cfc1-5a6c-417c-a7e6-ecded85e3a77' class='xr-section-summary' >Attributes: <span>(102)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>title :</span></dt><dd>CLM History file information</dd><dt><span>comment :</span></dt><dd>NOTE: None of the variables are weighted by land fraction!</dd><dt><span>Conventions :</span></dt><dd>CF-1.0</dd><dt><span>history :</span></dt><dd>created on 09/27/19 16:25:57</dd><dt><span>source :</span></dt><dd>Community Terrestrial Systems Model</dd><dt><span>hostname :</span></dt><dd>cheyenne</dd><dt><span>username :</span></dt><dd>dll</dd><dt><span>version :</span></dt><dd>branch_tags/TRENDY-2019.n02_ctsm1.0.dev056</dd><dt><span>revision_id :</span></dt><dd>$Id: histFileMod.F90 42903 2012-12-21 15:32:10Z muszala $</dd><dt><span>case_title :</span></dt><dd>UNSET</dd><dt><span>case_id :</span></dt><dd>TRENDY2019_S0_constant_v2</dd><dt><span>Surface_dataset :</span></dt><dd>surfdata_0.9x1.25_hist_78pfts_TRENDY_simyr1700_c190814.nc</dd><dt><span>Initial_conditions_dataset :</span></dt><dd>finidat_interp_dest.nc</dd><dt><span>PFT_physiological_constants_dataset :</span></dt><dd>clm5_params.c190529.nc</dd><dt><span>ltype_vegetated_or_bare_soil :</span></dt><dd>1</dd><dt><span>ltype_crop :</span></dt><dd>2</dd><dt><span>ltype_UNUSED :</span></dt><dd>3</dd><dt><span>ltype_landice_multiple_elevation_classes :</span></dt><dd>4</dd><dt><span>ltype_deep_lake :</span></dt><dd>5</dd><dt><span>ltype_wetland :</span></dt><dd>6</dd><dt><span>ltype_urban_tbd :</span></dt><dd>7</dd><dt><span>ltype_urban_hd :</span></dt><dd>8</dd><dt><span>ltype_urban_md :</span></dt><dd>9</dd><dt><span>ctype_vegetated_or_bare_soil :</span></dt><dd>1</dd><dt><span>ctype_crop :</span></dt><dd>2</dd><dt><span>ctype_crop_noncompete :</span></dt><dd>2*100+m, m=cft_lb,cft_ub</dd><dt><span>ctype_landice :</span></dt><dd>3</dd><dt><span>ctype_landice_multiple_elevation_classes :</span></dt><dd>4*100+m, m=1,glcnec</dd><dt><span>ctype_deep_lake :</span></dt><dd>5</dd><dt><span>ctype_wetland :</span></dt><dd>6</dd><dt><span>ctype_urban_roof :</span></dt><dd>71</dd><dt><span>ctype_urban_sunwall :</span></dt><dd>72</dd><dt><span>ctype_urban_shadewall :</span></dt><dd>73</dd><dt><span>ctype_urban_impervious_road :</span></dt><dd>74</dd><dt><span>ctype_urban_pervious_road :</span></dt><dd>75</dd><dt><span>cft_c3_crop :</span></dt><dd>1</dd><dt><span>cft_c3_irrigated :</span></dt><dd>2</dd><dt><span>cft_temperate_corn :</span></dt><dd>3</dd><dt><span>cft_irrigated_temperate_corn :</span></dt><dd>4</dd><dt><span>cft_spring_wheat :</span></dt><dd>5</dd><dt><span>cft_irrigated_spring_wheat :</span></dt><dd>6</dd><dt><span>cft_winter_wheat :</span></dt><dd>7</dd><dt><span>cft_irrigated_winter_wheat :</span></dt><dd>8</dd><dt><span>cft_temperate_soybean :</span></dt><dd>9</dd><dt><span>cft_irrigated_temperate_soybean :</span></dt><dd>10</dd><dt><span>cft_barley :</span></dt><dd>11</dd><dt><span>cft_irrigated_barley :</span></dt><dd>12</dd><dt><span>cft_winter_barley :</span></dt><dd>13</dd><dt><span>cft_irrigated_winter_barley :</span></dt><dd>14</dd><dt><span>cft_rye :</span></dt><dd>15</dd><dt><span>cft_irrigated_rye :</span></dt><dd>16</dd><dt><span>cft_winter_rye :</span></dt><dd>17</dd><dt><span>cft_irrigated_winter_rye :</span></dt><dd>18</dd><dt><span>cft_cassava :</span></dt><dd>19</dd><dt><span>cft_irrigated_cassava :</span></dt><dd>20</dd><dt><span>cft_citrus :</span></dt><dd>21</dd><dt><span>cft_irrigated_citrus :</span></dt><dd>22</dd><dt><span>cft_cocoa :</span></dt><dd>23</dd><dt><span>cft_irrigated_cocoa :</span></dt><dd>24</dd><dt><span>cft_coffee :</span></dt><dd>25</dd><dt><span>cft_irrigated_coffee :</span></dt><dd>26</dd><dt><span>cft_cotton :</span></dt><dd>27</dd><dt><span>cft_irrigated_cotton :</span></dt><dd>28</dd><dt><span>cft_datepalm :</span></dt><dd>29</dd><dt><span>cft_irrigated_datepalm :</span></dt><dd>30</dd><dt><span>cft_foddergrass :</span></dt><dd>31</dd><dt><span>cft_irrigated_foddergrass :</span></dt><dd>32</dd><dt><span>cft_grapes :</span></dt><dd>33</dd><dt><span>cft_irrigated_grapes :</span></dt><dd>34</dd><dt><span>cft_groundnuts :</span></dt><dd>35</dd><dt><span>cft_irrigated_groundnuts :</span></dt><dd>36</dd><dt><span>cft_millet :</span></dt><dd>37</dd><dt><span>cft_irrigated_millet :</span></dt><dd>38</dd><dt><span>cft_oilpalm :</span></dt><dd>39</dd><dt><span>cft_irrigated_oilpalm :</span></dt><dd>40</dd><dt><span>cft_potatoes :</span></dt><dd>41</dd><dt><span>cft_irrigated_potatoes :</span></dt><dd>42</dd><dt><span>cft_pulses :</span></dt><dd>43</dd><dt><span>cft_irrigated_pulses :</span></dt><dd>44</dd><dt><span>cft_rapeseed :</span></dt><dd>45</dd><dt><span>cft_irrigated_rapeseed :</span></dt><dd>46</dd><dt><span>cft_rice :</span></dt><dd>47</dd><dt><span>cft_irrigated_rice :</span></dt><dd>48</dd><dt><span>cft_sorghum :</span></dt><dd>49</dd><dt><span>cft_irrigated_sorghum :</span></dt><dd>50</dd><dt><span>cft_sugarbeet :</span></dt><dd>51</dd><dt><span>cft_irrigated_sugarbeet :</span></dt><dd>52</dd><dt><span>cft_sugarcane :</span></dt><dd>53</dd><dt><span>cft_irrigated_sugarcane :</span></dt><dd>54</dd><dt><span>cft_sunflower :</span></dt><dd>55</dd><dt><span>cft_irrigated_sunflower :</span></dt><dd>56</dd><dt><span>cft_miscanthus :</span></dt><dd>57</dd><dt><span>cft_irrigated_miscanthus :</span></dt><dd>58</dd><dt><span>cft_switchgrass :</span></dt><dd>59</dd><dt><span>cft_irrigated_switchgrass :</span></dt><dd>60</dd><dt><span>cft_tropical_corn :</span></dt><dd>61</dd><dt><span>cft_irrigated_tropical_corn :</span></dt><dd>62</dd><dt><span>cft_tropical_soybean :</span></dt><dd>63</dd><dt><span>cft_irrigated_tropical_soybean :</span></dt><dd>64</dd><dt><span>time_period_freq :</span></dt><dd>month_1</dd><dt><span>Time_constant_3Dvars_filename :</span></dt><dd>./TRENDY2019_S0_constant_v2.clm2.h0.1700-01.nc</dd><dt><span>Time_constant_3Dvars :</span></dt><dd>ZSOI:DZSOI:WATSAT:SUCSAT:BSW:HKSAT:ZLAKE:DZLAKE</dd></dl></div></li></ul></div></div></div></div>
 </div>
 <section id="make-a-test-plot">
-<h3>Make a test plot<a class="headerlink" href="#make-a-test-plot" title="Permalink to this headline">#</a></h3>
+<h3>Make a test plot<a class="headerlink" href="#make-a-test-plot" title="Permalink to this heading">#</a></h3>
 <p>And here’s the plot we started out with</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -12902,7 +12952,7 @@ Attributes: (12/102)
 </section>
 </section>
 <section id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">#</a></h2>
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p>We first developed a function <code class="docutils literal notranslate"><span class="pre">to_sparse</span></code> that took as input 1D or 2D compressed NumPy arrays and converted them to <code class="docutils literal notranslate"><span class="pre">sparse.COO</span></code> arrays.</p></li>
 <li><p>We then used <code class="docutils literal notranslate"><span class="pre">apply_ufunc</span></code> to apply <code class="docutils literal notranslate"><span class="pre">to_sparse</span></code> to xarray inputs, and receive an xarray object in return.</p></li>
@@ -12911,7 +12961,7 @@ Attributes: (12/102)
 </ol>
 </section>
 <section id="question">
-<h2>Question<a class="headerlink" href="#question" title="Permalink to this headline">#</a></h2>
+<h2>Question<a class="headerlink" href="#question" title="Permalink to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p>Are there places where sparse arrays could help in your analysis?</p>
 <ul class="simple">
@@ -12928,29 +12978,38 @@ Attributes: (12/102)
 </section>
 </section>
 
-<div class="section">
-    
+<div class="section ablog__blog_comments">
+  
+  
 
-<div class="section">
-  <span style="float: left">
-     
+
+<div class="section ablog__prev-next">
+  <span class="ablog__prev">
+    
+    
     <a href="../metpy_tutorial/">
-      <i class="fa fa-arrow-circle-left"></i> MetPy Tutorial
+      
+      <i class="fa fa-arrow-circle-left"></i>
+      
+      <span>MetPy Tutorial</span>
     </a>
     
   </span>
-  <span>&nbsp;</span>
-  <span style="float: right">
-     
+  <span class="ablog__spacer">&nbsp;</span>
+  <span class="ablog__next">
+    
+    
     <a href="../Thinking-with-Xarray/">
-      “Thinking with Xarray” Tutorial <i
-        class="fa fa-arrow-circle-right"
-      ></i
-      >
+      <span>“Thinking with Xarray” Tutorial</span>
+      
+      <i class="fa fa-arrow-circle-right" ></i>
+      
     </a>
     
   </span>
 </div>
+
+  
   
 </div>
 
@@ -13058,7 +13117,7 @@ Attributes: (12/102)
       
         <div class="footer-item">
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
     <br/>
   </p>
 </div>

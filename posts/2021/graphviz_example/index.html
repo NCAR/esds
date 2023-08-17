@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>Creating Visualizations of Intake-ESM Catalogs &#8212; NCAR-ESDS 0.1 documentation</title>
   
@@ -42,7 +42,9 @@
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
     <script kind="utterances">
@@ -83,40 +85,19 @@ commentsRunWhenDOMLoaded(addUtterances);
     <script>DOCUMENTATION_OPTIONS.pagename = 'posts/2021/graphviz_example';</script>
     <link rel="author" title="About these documents" href="../../../about/" />
     <link rel="index" title="Index" href="../../../genindex/" />
-    <link rel="search" title="Search" href="../../../search/" /> 
+    <link rel="search" title="Search" href="../../../search/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/> 
+  <meta name="docsearch:language" content="en"/>
+
 <link
   rel="alternate"
   type="application/atom+xml"
   href="../../../blog/atom.xml"
   title="NCAR ESDS"
 />
- 
-<style type="text/css">
-  ul.ablog-archive {
-    list-style: none;
-    overflow: auto;
-    margin-left: 0px;
-  }
-  ul.ablog-archive li {
-    float: left;
-    margin-right: 5px;
-    font-size: 80%;
-  }
-  ul.postlist a {
-    font-style: italic;
-  }
-  ul.postlist-style-disc {
-    list-style-type: disc;
-  }
-  ul.postlist-style-none {
-    list-style-type: none;
-  }
-  ul.postlist-style-circle {
-    list-style-type: circle;
-  }
-</style>
+
+
 
   </head>
   
@@ -488,97 +469,154 @@ document.write(`
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
-        <div class="sidebar-primary-item">  
-<h2>
-   <i class="fa fa-calendar"></i>
-  11 June 2021 
-</h2>
+        <div class="sidebar-primary-item">
 
+<div class="ablog-sidebar-item ablog__postcard">
+
+
+<h2>
+  
+  
+  <i class="fa fa-calendar"></i>
+  
+  11 June 2021
+  
+</h2>
 <ul>
-   
-<li id="author">
-  <span><i class="fa-fw fa fa-user"></i></span
-  >
-   
-  <a href="../../../blog/author/max-grover/">Max Grover</a>  
-</li>
+  
+
+<li id="ablog-sidebar-item author ablog__author">
+  <span>
     
-<li id="tags">
-  <span><i class="fa-fw fa fa-tags"></i> </span
-  >
-   
-  <a href="../../../blog/tag/cesm/">cesm</a>   
-  <a href="../../../blog/tag/intake/">intake</a>   
-  <a href="../../../blog/tag/visualization/">visualization</a>  
+    <i class="fa-fw fa fa-user"></i>
+    
+    </span>
+  
+  
+  <a href="../../../blog/author/max-grover/">Max Grover</a>
+  
+  
+  
 </li>
- 
+
+
+
+
+
+<li id="ablog-sidebar-item tags ablog__tags">
+  <span>
+    
+    
+    <i class="fa-fw fa fa-tags"></i>
+    
+    
+    </span>
+  
+  
+  <a href="../../../blog/tag/visualization/">visualization</a>
+  
+  
+  
+  
+  
+  <a href="../../../blog/tag/cesm/">cesm</a>
+  
+  
+  
+  
+  
+  <a href="../../../blog/tag/intake/">intake</a>
+  
+  
+  
+</li>
+
+
 </ul>
 </div>
+</div>
         <div class="sidebar-primary-item">
+
+<div class="ablog-sidebar-item ablog__recentposts">
 <h3>
   <a href="../../../blog/">Recent Posts</a>
 </h3>
 <ul>
-   
+  
+  
   <li>
-    <a href="../../2023/office-hours-help/"
-      >10 May - ESDS Office Hours Support</a
-    >
+    <a href="../../2023/mfdataset/">
+      16 August - Thinking through CESM data access
+    </a>
   </li>
   
   <li>
-    <a href="../../2023/unstructured-grid-collab-1/"
-      >05 May - Recap: Unstructured Grid Collaborative Work Time</a
-    >
+    <a href="../../2023/office-hours-help/">
+      10 May - ESDS Office Hours Support
+    </a>
   </li>
   
   <li>
-    <a href="../../2023/cesm2-le-timeseries-kerchunk/"
-      >15 March - Using Kerchunk with CESM Timeseries Data on the Cloud</a
-    >
+    <a href="../../2023/unstructured-grid-collab-1/">
+      05 May - Recap: Unstructured Grid Collaborative Work Time
+    </a>
   </li>
   
   <li>
-    <a href="../../2023/kerchunk-mom6/"
-      >07 March - Virtual aggregate CESM MOM6 datasets with kerchunk</a
-    >
+    <a href="../../2023/cesm2-le-timeseries-kerchunk/">
+      15 March - Using Kerchunk with CESM Timeseries Data on the Cloud
+    </a>
   </li>
   
   <li>
-    <a href="../../2022/esds-event-recap/"
-      >19 December - Recap of a (Re)Introduction to Earth System Data Science (ESDS) Across NCAR/UCAR/UCP</a
-    >
+    <a href="../../2023/kerchunk-mom6/">
+      07 March - Virtual aggregate CESM MOM6 datasets with kerchunk
+    </a>
   </li>
   
 </ul>
 </div>
+</div>
         <div class="sidebar-primary-item">
+
+<div class="ablog-sidebar-item ablog__archive">
 <h3>
   <a href="../../../blog/archive/">Archives</a>
 </h3>
 <ul>
-   
+  
+  
   <li>
-    <a href="../../../blog/2023/">2023 (4)</a>
+    <a href="../../../blog/2023/">2023 (5)</a>
   </li>
-    
+  
+  
+  
   <li>
     <a href="../../../blog/2022/">2022 (13)</a>
   </li>
-    
+  
+  
+  
   <li>
     <a href="../../../blog/2021/">2021 (52)</a>
   </li>
-    
+  
+  
+  
   <li>
     <a href="../../../blog/2020/">2020 (6)</a>
   </li>
-    
+  
+  
+  
   <li>
     <a href="../../../blog/2019/">2019 (2)</a>
   </li>
-   
+  
+  
 </ul>
+</div>
 </div>
     </div>
   
@@ -630,11 +668,12 @@ document.write(`
                 
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
-                   <section class="tex2jax_ignore mathjax_ignore" id="creating-visualizations-of-intake-esm-catalogs">
-<h1>Creating Visualizations of Intake-ESM Catalogs<a class="headerlink" href="#creating-visualizations-of-intake-esm-catalogs" title="Permalink to this headline">#</a></h1>
+                  
+<section class="tex2jax_ignore mathjax_ignore" id="creating-visualizations-of-intake-esm-catalogs">
+<h1>Creating Visualizations of Intake-ESM Catalogs<a class="headerlink" href="#creating-visualizations-of-intake-esm-catalogs" title="Permalink to this heading">#</a></h1>
 <p>A common initial task when working with a new dataset is figuring out what data is available. This is especially true when working with climate ensembles with several components and time-frequency output (ex. Community Earth System Model Large Ensemble, CESM-LE). Here, we will examine different methods of investigating this catalog</p>
 <section id="imports">
-<h2>Imports<a class="headerlink" href="#imports" title="Permalink to this headline">#</a></h2>
+<h2>Imports<a class="headerlink" href="#imports" title="Permalink to this heading">#</a></h2>
 <p>Here, we will use <a class="reference external" href="https://intake-esm.readthedocs.io/en/latest/">intake-esm</a> and <a class="reference external" href="https://graphviz.readthedocs.io/en/stable/manual.html">graphviz</a>, which can be installed using the following (including jupyterlab too!)</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">jupyterlab</span> <span class="n">intake</span><span class="o">-</span><span class="n">esm</span> <span class="n">graphviz</span>
 </pre></div>
@@ -650,7 +689,7 @@ document.write(`
 </div>
 </section>
 <section id="read-in-intake-esm-catalog">
-<h2>Read in intake-esm catalog<a class="headerlink" href="#read-in-intake-esm-catalog" title="Permalink to this headline">#</a></h2>
+<h2>Read in intake-esm catalog<a class="headerlink" href="#read-in-intake-esm-catalog" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">col</span> <span class="o">=</span> <span class="n">intake</span><span class="o">.</span><span class="n">open_esm_datastore</span><span class="p">(</span>
@@ -1068,10 +1107,10 @@ document.write(`
 </div>
 </section>
 <section id="using-graphviz-in-a-jupyter-notebook">
-<h2>Using Graphviz in a Jupyter Notebook<a class="headerlink" href="#using-graphviz-in-a-jupyter-notebook" title="Permalink to this headline">#</a></h2>
+<h2>Using Graphviz in a Jupyter Notebook<a class="headerlink" href="#using-graphviz-in-a-jupyter-notebook" title="Permalink to this heading">#</a></h2>
 <p><a class="reference external" href="https://graphviz.readthedocs.io/en/stable/manual.html">Graphviz</a> offers an interface to create network graphs</p>
 <section id="main-components-of-graphviz">
-<h3>Main “components” of <a class="reference external" href="https://graphviz.readthedocs.io/en/stable/manual.html">Graphviz</a><a class="headerlink" href="#main-components-of-graphviz" title="Permalink to this headline">#</a></h3>
+<h3>Main “components” of <a class="reference external" href="https://graphviz.readthedocs.io/en/stable/manual.html">Graphviz</a><a class="headerlink" href="#main-components-of-graphviz" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Digraph class</p>
 <ul>
@@ -1092,7 +1131,7 @@ document.write(`
 </ul>
 </section>
 <section id="example-of-case-visualization">
-<h3>Example of case visualization<a class="headerlink" href="#example-of-case-visualization" title="Permalink to this headline">#</a></h3>
+<h3>Example of case visualization<a class="headerlink" href="#example-of-case-visualization" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create Digraph object</span>
@@ -1134,7 +1173,7 @@ document.write(`
 </div>
 </section>
 <section id="looping-through-the-cesm-le-catalog">
-<h3>Looping through the CESM-LE catalog<a class="headerlink" href="#looping-through-the-cesm-le-catalog" title="Permalink to this headline">#</a></h3>
+<h3>Looping through the CESM-LE catalog<a class="headerlink" href="#looping-through-the-cesm-le-catalog" title="Permalink to this heading">#</a></h3>
 <p>Let’s apply this to our data catalog, assigning the dataframe with dataset attributes to <code class="docutils literal notranslate"><span class="pre">df</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1190,34 +1229,43 @@ document.write(`
 </section>
 </section>
 <section id="conclusion">
-<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">#</a></h2>
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this heading">#</a></h2>
 <p><a class="reference external" href="https://graphviz.readthedocs.io/en/stable/manual.html">Graphviz</a> can be a helpful tool when visualizing what data is within your data catalog - I hope this provides a good starting point in terms of using this with <a class="reference external" href="https://intake-esm.readthedocs.io/en/latest/">intake-esm</a> catalogs!</p>
 </section>
 </section>
 
-<div class="section">
-    
+<div class="section ablog__blog_comments">
+  
+  
 
-<div class="section">
-  <span style="float: left">
-     
+
+<div class="section ablog__prev-next">
+  <span class="ablog__prev">
+    
+    
     <a href="../xarray-tutorial/">
-      <i class="fa fa-arrow-circle-left"></i> Xarray Tutorial
+      
+      <i class="fa fa-arrow-circle-left"></i>
+      
+      <span>Xarray Tutorial</span>
     </a>
     
   </span>
-  <span>&nbsp;</span>
-  <span style="float: right">
-     
+  <span class="ablog__spacer">&nbsp;</span>
+  <span class="ablog__next">
+    
+    
     <a href="../cesm-workshop-2021-diagnostics/">
-      CESM Diagnostics Discussion <i
-        class="fa fa-arrow-circle-right"
-      ></i
-      >
+      <span>CESM Diagnostics Discussion</span>
+      
+      <i class="fa fa-arrow-circle-right" ></i>
+      
     </a>
     
   </span>
 </div>
+
+  
   
 </div>
 
@@ -1301,7 +1349,7 @@ document.write(`
       
         <div class="footer-item">
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
     <br/>
   </p>
 </div>

@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>Calculating Temporal Averages with GeoCAT-comp vs Xarray &#8212; NCAR-ESDS 0.1 documentation</title>
   
@@ -42,7 +42,9 @@
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
     <script kind="utterances">
@@ -83,40 +85,19 @@ commentsRunWhenDOMLoaded(addUtterances);
     <script>DOCUMENTATION_OPTIONS.pagename = 'posts/2022/xarray-groupby-vs-geocat-climatology';</script>
     <link rel="author" title="About these documents" href="../../../about/" />
     <link rel="index" title="Index" href="../../../genindex/" />
-    <link rel="search" title="Search" href="../../../search/" /> 
+    <link rel="search" title="Search" href="../../../search/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/> 
+  <meta name="docsearch:language" content="en"/>
+
 <link
   rel="alternate"
   type="application/atom+xml"
   href="../../../blog/atom.xml"
   title="NCAR ESDS"
 />
- 
-<style type="text/css">
-  ul.ablog-archive {
-    list-style: none;
-    overflow: auto;
-    margin-left: 0px;
-  }
-  ul.ablog-archive li {
-    float: left;
-    margin-right: 5px;
-    font-size: 80%;
-  }
-  ul.postlist a {
-    font-style: italic;
-  }
-  ul.postlist-style-disc {
-    list-style-type: disc;
-  }
-  ul.postlist-style-none {
-    list-style-type: none;
-  }
-  ul.postlist-style-circle {
-    list-style-type: circle;
-  }
-</style>
+
+
 
   </head>
   
@@ -488,99 +469,166 @@ document.write(`
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
-        <div class="sidebar-primary-item">  
-<h2>
-   <i class="fa fa-calendar"></i>
-  29 November 2022 
-</h2>
+        <div class="sidebar-primary-item">
 
+<div class="ablog-sidebar-item ablog__postcard">
+
+
+<h2>
+  
+  
+  <i class="fa fa-calendar"></i>
+  
+  29 November 2022
+  
+</h2>
 <ul>
-   
-<li id="author">
-  <span><i class="fa-fw fa fa-user"></i></span
-  >
-   
-  <a href="../../../blog/author/heather-craker/">Heather Craker</a>  
-</li>
+  
+
+<li id="ablog-sidebar-item author ablog__author">
+  <span>
     
-<li id="tags">
-  <span><i class="fa-fw fa fa-tags"></i> </span
-  >
-   
-  <a href="../../../blog/tag/climate/">climate</a>   
-  <a href="../../../blog/tag/jupyter/">jupyter</a>   
-  <a href="../../../blog/tag/geocat-comp/">geocat-comp</a>   
-  <a href="../../../blog/tag/calculations/">calculations</a>   
-  <a href="../../../blog/tag/xarray/">xarray</a>  
+    <i class="fa-fw fa fa-user"></i>
+    
+    </span>
+  
+  
+  <a href="../../../blog/author/heather-craker/">Heather Craker</a>
+  
+  
+  
 </li>
- 
+
+
+
+
+
+<li id="ablog-sidebar-item tags ablog__tags">
+  <span>
+    
+    
+    <i class="fa-fw fa fa-tags"></i>
+    
+    
+    </span>
+  
+  
+  <a href="../../../blog/tag/jupyter/">jupyter</a>
+  
+  
+  
+  
+  
+  <a href="../../../blog/tag/climate/">climate</a>
+  
+  
+  
+  
+  
+  <a href="../../../blog/tag/calculations/">calculations</a>
+  
+  
+  
+  
+  
+  <a href="../../../blog/tag/geocat-comp/">geocat-comp</a>
+  
+  
+  
+  
+  
+  <a href="../../../blog/tag/xarray/">xarray</a>
+  
+  
+  
+</li>
+
+
 </ul>
 </div>
+</div>
         <div class="sidebar-primary-item">
+
+<div class="ablog-sidebar-item ablog__recentposts">
 <h3>
   <a href="../../../blog/">Recent Posts</a>
 </h3>
 <ul>
-   
+  
+  
   <li>
-    <a href="../../2023/office-hours-help/"
-      >10 May - ESDS Office Hours Support</a
-    >
+    <a href="../../2023/mfdataset/">
+      16 August - Thinking through CESM data access
+    </a>
   </li>
   
   <li>
-    <a href="../../2023/unstructured-grid-collab-1/"
-      >05 May - Recap: Unstructured Grid Collaborative Work Time</a
-    >
+    <a href="../../2023/office-hours-help/">
+      10 May - ESDS Office Hours Support
+    </a>
   </li>
   
   <li>
-    <a href="../../2023/cesm2-le-timeseries-kerchunk/"
-      >15 March - Using Kerchunk with CESM Timeseries Data on the Cloud</a
-    >
+    <a href="../../2023/unstructured-grid-collab-1/">
+      05 May - Recap: Unstructured Grid Collaborative Work Time
+    </a>
   </li>
   
   <li>
-    <a href="../../2023/kerchunk-mom6/"
-      >07 March - Virtual aggregate CESM MOM6 datasets with kerchunk</a
-    >
+    <a href="../../2023/cesm2-le-timeseries-kerchunk/">
+      15 March - Using Kerchunk with CESM Timeseries Data on the Cloud
+    </a>
   </li>
   
   <li>
-    <a href="../esds-event-recap/"
-      >19 December - Recap of a (Re)Introduction to Earth System Data Science (ESDS) Across NCAR/UCAR/UCP</a
-    >
+    <a href="../../2023/kerchunk-mom6/">
+      07 March - Virtual aggregate CESM MOM6 datasets with kerchunk
+    </a>
   </li>
   
 </ul>
 </div>
+</div>
         <div class="sidebar-primary-item">
+
+<div class="ablog-sidebar-item ablog__archive">
 <h3>
   <a href="../../../blog/archive/">Archives</a>
 </h3>
 <ul>
-   
+  
+  
   <li>
-    <a href="../../../blog/2023/">2023 (4)</a>
+    <a href="../../../blog/2023/">2023 (5)</a>
   </li>
-    
+  
+  
+  
   <li>
     <a href="../../../blog/2022/">2022 (13)</a>
   </li>
-    
+  
+  
+  
   <li>
     <a href="../../../blog/2021/">2021 (52)</a>
   </li>
-    
+  
+  
+  
   <li>
     <a href="../../../blog/2020/">2020 (6)</a>
   </li>
-    
+  
+  
+  
   <li>
     <a href="../../../blog/2019/">2019 (2)</a>
   </li>
-   
+  
+  
 </ul>
+</div>
 </div>
     </div>
   
@@ -632,11 +680,12 @@ document.write(`
                 
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
-                   <section class="tex2jax_ignore mathjax_ignore" id="calculating-temporal-averages-with-geocat-comp-vs-xarray">
-<h1>Calculating Temporal Averages with GeoCAT-comp vs Xarray<a class="headerlink" href="#calculating-temporal-averages-with-geocat-comp-vs-xarray" title="Permalink to this headline">#</a></h1>
+                  
+<section class="tex2jax_ignore mathjax_ignore" id="calculating-temporal-averages-with-geocat-comp-vs-xarray">
+<h1>Calculating Temporal Averages with GeoCAT-comp vs Xarray<a class="headerlink" href="#calculating-temporal-averages-with-geocat-comp-vs-xarray" title="Permalink to this heading">#</a></h1>
 <p>With temporally large datasets, computing seasonal and annual averages are a great ways to summarize the data and make it easier to manage and understand. You may want to take hourly, daily, or monthly data and compute seasonal or annual averages.</p>
 <section id="challenges">
-<h2>Challenges<a class="headerlink" href="#challenges" title="Permalink to this headline">#</a></h2>
+<h2>Challenges<a class="headerlink" href="#challenges" title="Permalink to this heading">#</a></h2>
 <p>When using data that has a daily or finer resolution (e.g. hourly), calculating an annual average is simple. Every day and hour has the same length, so an unweighted average will work.</p>
 <p>But when using data that is monthly, things can get a bit tricky. Not every month is created equal. February has 28 or 29 days and March has 31 days. Since monthly data has one value for each month, those points can’t be averaged in the usual way. A weighted average is needed.</p>
 <p>While it is tempting to quickly compute monthly to annual averages with <code class="docutils literal notranslate"><span class="pre">Xarray</span></code>’s <code class="docutils literal notranslate"><span class="pre">resample</span></code> or <code class="docutils literal notranslate"><span class="pre">groupby</span></code> functions, we need to be careful to specify the weights. Unfortunately, <code class="docutils literal notranslate"><span class="pre">Xarray</span></code> doesn’t support weighted <code class="docutils literal notranslate"><span class="pre">resample</span></code> or <code class="docutils literal notranslate"><span class="pre">groupby</span></code> at the time this post was created, but <code class="docutils literal notranslate"><span class="pre">geocat-comp.climatology_average</span></code> builds upon <code class="docutils literal notranslate"><span class="pre">Xarray</span></code> to compute the weights for you.</p>
@@ -644,10 +693,10 @@ document.write(`
 <p><img alt="xarray_vs_geocat_climatology.png" src="../../../_images/xarray_vs_geocat_climatology.png" /></p>
 </section>
 <section id="demonstration">
-<h2>Demonstration<a class="headerlink" href="#demonstration" title="Permalink to this headline">#</a></h2>
+<h2>Demonstration<a class="headerlink" href="#demonstration" title="Permalink to this heading">#</a></h2>
 <p>In this post, I’ll show how to compute seasonal averages from monthly data the naive way (with unweighted averages) and the correct way (with weighted averages).</p>
 <section id="imports">
-<h3>Imports<a class="headerlink" href="#imports" title="Permalink to this headline">#</a></h3>
+<h3>Imports<a class="headerlink" href="#imports" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cartopy</span> <span class="k">as</span> <span class="nn">cart</span>
@@ -662,7 +711,7 @@ document.write(`
 </div>
 </section>
 <section id="helper-function-to-make-all-of-the-plots-the-same-way-but-with-different-data">
-<h3>Helper function to make all of the plots the same way but with different data<a class="headerlink" href="#helper-function-to-make-all-of-the-plots-the-same-way-but-with-different-data" title="Permalink to this headline">#</a></h3>
+<h3>Helper function to make all of the plots the same way but with different data<a class="headerlink" href="#helper-function-to-make-all-of-the-plots-the-same-way-but-with-different-data" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">custom_plot</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">title</span><span class="p">):</span>
@@ -748,7 +797,7 @@ document.write(`
 </div>
 </section>
 <section id="read-in-and-format-data">
-<h3>Read in and format data<a class="headerlink" href="#read-in-and-format-data" title="Permalink to this headline">#</a></h3>
+<h3>Read in and format data<a class="headerlink" href="#read-in-and-format-data" title="Permalink to this heading">#</a></h3>
 <p>The data we will be using is a subset from RDA dataset ds277.0 - ‘NOAA NCEP Optimum Interpolation Sea Surface Temperature Analysis’. It contains monthly average sea surface temperatures over the eastern equitorial Pacific from 1982 to 1986. We will be computing seasonal averages from this data and comparing the two different methods for doing this calculation.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -763,7 +812,7 @@ document.write(`
 </div>
 </section>
 <section id="the-incorrect-way-to-compute-seasonal-averages-from-monthly-data">
-<h3>The incorrect way to compute seasonal averages from monthly data<a class="headerlink" href="#the-incorrect-way-to-compute-seasonal-averages-from-monthly-data" title="Permalink to this headline">#</a></h3>
+<h3>The incorrect way to compute seasonal averages from monthly data<a class="headerlink" href="#the-incorrect-way-to-compute-seasonal-averages-from-monthly-data" title="Permalink to this heading">#</a></h3>
 <p>It’s easy to compute an unweighted average using <code class="docutils literal notranslate"><span class="pre">xarray</span></code> functionality; however, this generates inaccurate results. Here is what the <em><strong>incorrect</strong></em> way of doing this looks like. Notice that the result has a <code class="docutils literal notranslate"><span class="pre">season</span></code> dimension. These seasons are quarters of the year representing the meteorological seasons. (e.g. December, January, and February for winter)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1275,7 +1324,7 @@ Attributes: (12/13)
 </div>
 </section>
 <section id="the-correct-way-to-compute-seasonal-averages-with-xarray">
-<h3>The correct way to compute seasonal averages with xarray<a class="headerlink" href="#the-correct-way-to-compute-seasonal-averages-with-xarray" title="Permalink to this headline">#</a></h3>
+<h3>The correct way to compute seasonal averages with xarray<a class="headerlink" href="#the-correct-way-to-compute-seasonal-averages-with-xarray" title="Permalink to this heading">#</a></h3>
 <p>Using GeoCAT’s climatology average, we can calculate the average temperature for each season. Note that <code class="docutils literal notranslate"><span class="pre">climatology_average</span></code> requires that the datetime objects for the time dimension match a recognized frequency. More information about frequencies can be found <a class="reference external" href="http://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html#offset-aliases">here</a>. Luckily, our data is already in the correct format as shown below with each data point being at the start of a month.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2257,7 +2306,7 @@ Attributes: (12/13)
 </section>
 </section>
 <section id="so-what-s-the-difference">
-<h2>So what’s the difference?<a class="headerlink" href="#so-what-s-the-difference" title="Permalink to this headline">#</a></h2>
+<h2>So what’s the difference?<a class="headerlink" href="#so-what-s-the-difference" title="Permalink to this heading">#</a></h2>
 <p>It is hard to see the difference between the correct and incorrect ways of caluclating the seasonal averages. If we plot the difference between the two results, the computational errors become easier to see.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2279,39 +2328,48 @@ Attributes: (12/13)
 </div>
 </section>
 <section id="what-we-learned">
-<h2>What we learned<a class="headerlink" href="#what-we-learned" title="Permalink to this headline">#</a></h2>
+<h2>What we learned<a class="headerlink" href="#what-we-learned" title="Permalink to this heading">#</a></h2>
 <p>The incorrect averages deviate from the correct averages by up to 0.1 degrees Celsius in this example, but it wasn’t obvious before we computed the difference! While these differences are very small, they aren’t small enough to be neglgible for scientific purposes. It’s really easy to assume that an unweighted average will give you the correct climatology values and end up with hard to find errors in your calculations.</p>
 <p>This example covered the correct way to compute seasonal climatologies from monthly data using GeoCAT-comp’s <code class="docutils literal notranslate"><span class="pre">climatology_average</span></code> and the discrepancies of using unweighted averages. Not every calculation needs a weighted average, but be sure to consider what kind of average you need before doing your calculations to avoid a debugging headache!</p>
 </section>
 <section id="additional-info">
-<h2>Additional Info<a class="headerlink" href="#additional-info" title="Permalink to this headline">#</a></h2>
+<h2>Additional Info<a class="headerlink" href="#additional-info" title="Permalink to this heading">#</a></h2>
 <p>If you want finer control over the averaging than what GeoCAT-comp allows with <code class="docutils literal notranslate"><span class="pre">climatology_average</span></code>, check out <a class="reference external" href="https://docs.xarray.dev/en/stable/examples/monthly-means.html">this post</a> from Xarray about computing seasonal averages from monthly means. This tutorial is a detailed explaination of the process that <code class="docutils literal notranslate"><span class="pre">climatology_average</span></code> is based on. We also discussed this same computational challenge in an <a class="reference external" href="https://ncar.github.io/esds/posts/2021/yearly-averages-xarray/">older blog post</a> before <code class="docutils literal notranslate"><span class="pre">climatology_average</span></code> was implemented that may be of interest.</p>
 </section>
 </section>
 
-<div class="section">
-    
+<div class="section ablog__blog_comments">
+  
+  
 
-<div class="section">
-  <span style="float: left">
-     
+
+<div class="section ablog__prev-next">
+  <span class="ablog__prev">
+    
+    
     <a href="../esds-event-prep/">
-      <i class="fa fa-arrow-circle-left"></i> Preparation for a (Re)Introduction to Earth System Data Science (ESDS) Across NCAR/UCAR/UCP
+      
+      <i class="fa fa-arrow-circle-left"></i>
+      
+      <span>Preparation for a (Re)Introduction to Earth System Data Science (ESDS) Across NCAR/UCAR/UCP</span>
     </a>
     
   </span>
-  <span>&nbsp;</span>
-  <span style="float: right">
-     
+  <span class="ablog__spacer">&nbsp;</span>
+  <span class="ablog__next">
+    
+    
     <a href="../cam-se-regridding/">
-      Regridding using xESMF and an existing weights file <i
-        class="fa fa-arrow-circle-right"
-      ></i
-      >
+      <span>Regridding using xESMF and an existing weights file</span>
+      
+      <i class="fa fa-arrow-circle-right" ></i>
+      
     </a>
     
   </span>
 </div>
+
+  
   
 </div>
 
@@ -2398,7 +2456,7 @@ Attributes: (12/13)
       
         <div class="footer-item">
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
     <br/>
   </p>
 </div>

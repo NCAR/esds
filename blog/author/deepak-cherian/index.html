@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
@@ -41,7 +41,9 @@
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
     <script kind="utterances">
@@ -82,40 +84,19 @@ commentsRunWhenDOMLoaded(addUtterances);
     <script>DOCUMENTATION_OPTIONS.pagename = 'blog/author/deepak-cherian';</script>
     <link rel="author" title="About these documents" href="../../../about/" />
     <link rel="index" title="Index" href="../../../genindex/" />
-    <link rel="search" title="Search" href="../../../search/" /> 
+    <link rel="search" title="Search" href="../../../search/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/> 
+  <meta name="docsearch:language" content="en"/>
+
 <link
   rel="alternate"
   type="application/atom+xml"
   href="../../../blog/atom.xml"
   title="Posts by Deepak Cherian"
 />
- 
-<style type="text/css">
-  ul.ablog-archive {
-    list-style: none;
-    overflow: auto;
-    margin-left: 0px;
-  }
-  ul.ablog-archive li {
-    float: left;
-    margin-right: 5px;
-    font-size: 80%;
-  }
-  ul.postlist a {
-    font-style: italic;
-  }
-  ul.postlist-style-disc {
-    list-style-type: disc;
-  }
-  ul.postlist-style-none {
-    list-style-type: none;
-  }
-  ul.postlist-style-circle {
-    list-style-type: circle;
-  }
-</style>
+
+
 
   </head>
   
@@ -515,239 +496,491 @@ document.write(`
                 <article class="bd-article" role="main">
                   
 
-<div class="section">
+<div class="section ablog__collection">
   <h1>
-     Posts by  Deepak Cherian 
+    
+      Posts by
+      
+    Deepak Cherian
+    
   </h1>
-   
+  
+  
+  <div class="section ablog-post">
+    <h2 class="ablog-post-title">
+      <a href="../../../posts/2023/mfdataset/">Thinking through CESM data access</a>
+    </h2>
+    <ul class="ablog-archive">
+      <li>
+        
+        
+        <i class="fa fa-calendar"></i>
+        
+        16 August 2023
+        
+      </li>
+      
 
+<li id="ablog-sidebar-item author ablog__author">
+  <span>
+    
+    <i class="fa-fw fa fa-user"></i>
+    
+    </span>
+  
+  
+  <a href="#">Deepak Cherian</a>
+  
+  
+  
+</li>
+
+
+
+
+
+
+    </ul>
+    <p class="ablog-post-excerpt"><p>We want to read a large number of netCDF files, combine them to form a single dataset, and then analyze that. How do we think about it?</p>
+<p>In pseudocode we want</p>
+</p>
+
+    <p class="ablog-post-expand"><a href="../../../posts/2023/mfdataset/"><em>Read more ...</em></a></p>
+    <hr/>
+  </div>
+  
   <div class="section ablog-post">
     <h2 class="ablog-post-title">
       <a href="../../../posts/2023/unstructured-grid-collab-1/">Recap: Unstructured Grid Collaborative Work Time</a>
     </h2>
-
     <ul class="ablog-archive">
       <li>
-         <i class="fa fa-calendar"></i> 05 May 2023 
+        
+        
+        <i class="fa fa-calendar"></i>
+        
+        05 May 2023
+        
       </li>
-       
-<li id="author">
-  <span><i class="fa-fw fa fa-user"></i></span
-  >
-   
-  <a href="../falko-judt/">Falko Judt</a>,   
-  <a href="../orhan-eroglu/">Orhan Eroglu</a>,   
-  <a href="../katie-dagon/">Katie Dagon</a>,   
-  <a href="#">Deepak Cherian</a>  
-</li>
+      
+
+<li id="ablog-sidebar-item author ablog__author">
+  <span>
     
-<li id="tags">
-  <span><i
-      class="fa-fw fa fa-tag"
-    ></i
-    ></span
-  >
-   
-  <a href="../../tag/tutorial-hackathon-events/">tutorial hackathon events</a>  
+    <i class="fa-fw fa fa-user"></i>
+    
+    </span>
+  
+  
+  <a href="../katie-dagon/">Katie Dagon</a>
+  
+  ,
+  
+  
+  
+  
+  <a href="#">Deepak Cherian</a>
+  
+  ,
+  
+  
+  
+  
+  <a href="../orhan-eroglu/">Orhan Eroglu</a>
+  
+  ,
+  
+  
+  
+  
+  <a href="../falko-judt/">Falko Judt</a>
+  
+  
+  
 </li>
- 
+
+
+
+
+
+<li id="ablog-sidebar-item tags ablog__tags">
+  <span>
+    
+    
+    <i class="fa-fw fa fa-tag"></i>
+    
+    </span>
+  
+  
+  <a href="../../tag/tutorial-hackathon-events/">tutorial hackathon events</a>
+  
+  
+  
+</li>
+
+
     </ul>
-    <div class="ablog-post-excerpt docutils container">
-<p>ESDS hosted our first Collaborative Work Time event on April 17, 2023.
+    <p class="ablog-post-excerpt"><p>ESDS hosted our first Collaborative Work Time event on April 17, 2023.
 The topic of the session was “Working With Unstructured Grids”.
 Our goal is to encourage cross-lab collaboration and build lasting science-software partnerships.</p>
 <p>The event was hybrid with in-person attendees in the Damon Room at the Mesa Lab.
 A lucky overlap with the Improving Scientific Software conference, meant that collaborators from the Department of Energy were also able to attend in-person.</p>
-<img alt="Photo of unstructured grids collaborative work time session." class="align-center" src="../../../_images/unstructured-grid-collab-1.jpg" style="width: 70%;" />
-</div>
+<img alt="Photo of unstructured grids collaborative work time session." class="align-center" src="../../../_images/unstructured-grid-collab-1.jpg" style="width: 70%;" /></p>
 
     <p class="ablog-post-expand"><a href="../../../posts/2023/unstructured-grid-collab-1/"><em>Read more ...</em></a></p>
     <hr/>
   </div>
   
-
   <div class="section ablog-post">
     <h2 class="ablog-post-title">
       <a href="../../../posts/2023/cesm2-le-timeseries-kerchunk/">Using Kerchunk with CESM Timeseries Data on the Cloud</a>
     </h2>
-
     <ul class="ablog-archive">
       <li>
-         <i class="fa fa-calendar"></i> 15 March 2023 
+        
+        
+        <i class="fa fa-calendar"></i>
+        
+        15 March 2023
+        
       </li>
-       
-<li id="author">
-  <span><i class="fa-fw fa fa-user"></i></span
-  >
-   
-  <a href="../max-grover/">Max Grover</a>,   
-  <a href="#">Deepak Cherian</a>  
-</li>
+      
+
+<li id="ablog-sidebar-item author ablog__author">
+  <span>
     
-<li id="tags">
-  <span><i class="fa-fw fa fa-tags"></i> </span
-  >
-   
-  <a href="../../tag/netcdf/">netcdf</a>   
-  <a href="../../tag/zarr/">zarr</a>   
-  <a href="../../tag/cesm/">cesm</a>   
-  <a href="../../tag/benchmark/">benchmark</a>  
+    <i class="fa-fw fa fa-user"></i>
+    
+    </span>
+  
+  
+  <a href="../max-grover/">Max Grover</a>
+  
+  ,
+  
+  
+  
+  
+  <a href="#">Deepak Cherian</a>
+  
+  
+  
 </li>
- 
+
+
+
+
+
+<li id="ablog-sidebar-item tags ablog__tags">
+  <span>
+    
+    
+    <i class="fa-fw fa fa-tags"></i>
+    
+    
+    </span>
+  
+  
+  <a href="../../tag/benchmark/">benchmark</a>
+  
+  
+  
+  
+  
+  <a href="../../tag/netcdf/">netcdf</a>
+  
+  
+  
+  
+  
+  <a href="../../tag/cesm/">cesm</a>
+  
+  
+  
+  
+  
+  <a href="../../tag/zarr/">zarr</a>
+  
+  
+  
+</li>
+
+
     </ul>
-    <div class="ablog-post-excerpt docutils container">
-<p>We benchmark reading a subset of the CESM2-Large Ensemble stored as a collection of netCDF files on the cloud (Amazon / AWS) <strong>from Casper</strong>.
+    <p class="ablog-post-excerpt"><p>We benchmark reading a subset of the CESM2-Large Ensemble stored as a collection of netCDF files on the cloud (Amazon / AWS) <strong>from Casper</strong>.
 We use a single ensemble member historical experiment with daily data from 1850 to 2009, with a total dataset size of 600+ GB, from 13 netCDF4 files.</p>
 <p>We read in two ways:</p>
-</div>
+</p>
 
     <p class="ablog-post-expand"><a href="../../../posts/2023/cesm2-le-timeseries-kerchunk/"><em>Read more ...</em></a></p>
     <hr/>
   </div>
   
-
   <div class="section ablog-post">
     <h2 class="ablog-post-title">
       <a href="../../../posts/2023/kerchunk-mom6/">Virtual aggregate CESM MOM6 datasets with kerchunk</a>
     </h2>
-
     <ul class="ablog-archive">
       <li>
-         <i class="fa fa-calendar"></i> 07 March 2023 
+        
+        
+        <i class="fa fa-calendar"></i>
+        
+        07 March 2023
+        
       </li>
-       
-<li id="author">
-  <span><i class="fa-fw fa fa-user"></i></span
-  >
-   
-  <a href="#">Deepak Cherian</a>  
+      
+
+<li id="ablog-sidebar-item author ablog__author">
+  <span>
+    
+    <i class="fa-fw fa fa-user"></i>
+    
+    </span>
+  
+  
+  <a href="#">Deepak Cherian</a>
+  
+  
+  
 </li>
-     
+
+
+
+
+
+
     </ul>
-    <div class="ablog-post-excerpt docutils container">
-<p>This notebook is adapted from the <a class="reference external" href="https://github.com/lsterzinger/2022-esip-kerchunk-tutorial/blob/main/01-Create_References.ipynb">work</a> by <a class="reference external" href="https://lucassterzinger.com/">Lucas Sterzinger</a> (an NCAR SIParCS intern in 2021).</p>
+    <p class="ablog-post-excerpt"><p>This notebook is adapted from the <a class="reference external" href="https://github.com/lsterzinger/2022-esip-kerchunk-tutorial/blob/main/01-Create_References.ipynb">work</a> by <a class="reference external" href="https://lucassterzinger.com/">Lucas Sterzinger</a> (an NCAR SIParCS intern in 2021).</p>
 <p>This notebook was updated to</p>
-</div>
+</p>
 
     <p class="ablog-post-expand"><a href="../../../posts/2023/kerchunk-mom6/"><em>Read more ...</em></a></p>
     <hr/>
   </div>
   
-
   <div class="section ablog-post">
     <h2 class="ablog-post-title">
       <a href="../../../posts/2022/cam-se-regridding/">Regridding using xESMF and an existing weights file</a>
     </h2>
-
     <ul class="ablog-archive">
       <li>
-         <i class="fa fa-calendar"></i> 06 December 2022 
+        
+        
+        <i class="fa fa-calendar"></i>
+        
+        06 December 2022
+        
       </li>
-       
-<li id="author">
-  <span><i class="fa-fw fa fa-user"></i></span
-  >
-   
-  <a href="../christine-shields/">Christine Shields</a>,   
-  <a href="#">Deepak Cherian</a>  
-</li>
+      
+
+<li id="ablog-sidebar-item author ablog__author">
+  <span>
     
-<li id="tags">
-  <span><i class="fa-fw fa fa-tags"></i> </span
-  >
-   
-  <a href="../../tag/cam/">CAM</a>   
-  <a href="../../tag/xesmf/">xesmf</a>  
+    <i class="fa-fw fa fa-user"></i>
+    
+    </span>
+  
+  
+  <a href="#">Deepak Cherian</a>
+  
+  ,
+  
+  
+  
+  
+  <a href="../christine-shields/">Christine Shields</a>
+  
+  
+  
 </li>
- 
+
+
+
+
+
+<li id="ablog-sidebar-item tags ablog__tags">
+  <span>
+    
+    
+    <i class="fa-fw fa fa-tags"></i>
+    
+    
+    </span>
+  
+  
+  <a href="../../tag/cam/">CAM</a>
+  
+  
+  
+  
+  
+  <a href="../../tag/xesmf/">xesmf</a>
+  
+  
+  
+</li>
+
+
     </ul>
-    <div class="ablog-post-excerpt docutils container">
-<p>A fairly common request is to use an existing ESMF weights file to regrid a Xarray Dataset  (<a class="reference external" href="https://github.com/UXARRAY/uxarray/issues/172">1</a>,  <a class="reference external" href="https://github.com/pangeo-data/xESMF/issues/202">2</a>). Applying weights in general should be easy: read weights then <a class="reference external" href="https://github.com/UXARRAY/uxarray/issues/172#issuecomment-1310601230">apply them</a> using <code class="docutils literal notranslate"><span class="pre">dot</span></code> or <code class="docutils literal notranslate"><span class="pre">tensordot</span></code> on the input dataset.</p>
+    <p class="ablog-post-excerpt"><p>A fairly common request is to use an existing ESMF weights file to regrid a Xarray Dataset  (<a class="reference external" href="https://github.com/UXARRAY/uxarray/issues/172">1</a>,  <a class="reference external" href="https://github.com/pangeo-data/xESMF/issues/202">2</a>). Applying weights in general should be easy: read weights then <a class="reference external" href="https://github.com/UXARRAY/uxarray/issues/172#issuecomment-1310601230">apply them</a> using <code class="docutils literal notranslate"><span class="pre">dot</span></code> or <code class="docutils literal notranslate"><span class="pre">tensordot</span></code> on the input dataset.</p>
 <p>In the Xarray/Dask/Pangeo ecosystem, <a class="reference external" href="https://xesmf.readthedocs.io">xESMF</a> provides an interface to ESMF for convenient regridding, includiing parallelization with Dask. Here we demonstrate how to use an existing ESMF weights file with xESMF specifically for CAM-SE.</p>
-<img alt="../../../_images/fd44e9f7bac7bfb9e60950a50b7f51ec81040235662db40028a587eea1fe403e.png" src="../../../_images/fd44e9f7bac7bfb9e60950a50b7f51ec81040235662db40028a587eea1fe403e.png" />
-</div>
+<img alt="../../../_images/fd44e9f7bac7bfb9e60950a50b7f51ec81040235662db40028a587eea1fe403e.png" src="../../../_images/fd44e9f7bac7bfb9e60950a50b7f51ec81040235662db40028a587eea1fe403e.png" /></p>
 
     <p class="ablog-post-expand"><a href="../../../posts/2022/cam-se-regridding/"><em>Read more ...</em></a></p>
     <hr/>
   </div>
   
-
   <div class="section ablog-post">
     <h2 class="ablog-post-title">
       <a href="../../../posts/2022/dask-debug-detrend/">Debugging dask workflows: Detrending</a>
     </h2>
-
     <ul class="ablog-archive">
       <li>
-         <i class="fa fa-calendar"></i> 31 March 2022 
+        
+        
+        <i class="fa fa-calendar"></i>
+        
+        31 March 2022
+        
       </li>
-       
-<li id="author">
-  <span><i class="fa-fw fa fa-user"></i></span
-  >
-   
-  <a href="#">Deepak Cherian</a>  
-</li>
+      
+
+<li id="ablog-sidebar-item author ablog__author">
+  <span>
     
-<li id="tags">
-  <span><i class="fa-fw fa fa-tags"></i> </span
-  >
-   
-  <a href="../../tag/debug/">debug</a>   
-  <a href="../../tag/dask/">dask</a>  
+    <i class="fa-fw fa fa-user"></i>
+    
+    </span>
+  
+  
+  <a href="#">Deepak Cherian</a>
+  
+  
+  
 </li>
- 
+
+
+
+
+
+<li id="ablog-sidebar-item tags ablog__tags">
+  <span>
+    
+    
+    <i class="fa-fw fa fa-tags"></i>
+    
+    
+    </span>
+  
+  
+  <a href="../../tag/dask/">dask</a>
+  
+  
+  
+  
+  
+  <a href="../../tag/debug/">debug</a>
+  
+  
+  
+</li>
+
+
     </ul>
-    <div class="ablog-post-excerpt docutils container">
-<p>Detrending - subtracting a trend, commonly a linear fit, from the data - along the time dimension is a common workflow in the climate sciences.</p>
+    <p class="ablog-post-excerpt"><p>Detrending - subtracting a trend, commonly a linear fit, from the data - along the time dimension is a common workflow in the climate sciences.</p>
 <p>Here’s an example</p>
-<img alt="../../../_images/e25cf220f15e78e7aa8d54f8e9d18a52e56c57a24b0f30bbd7bc7410543329f9.png" src="../../../_images/e25cf220f15e78e7aa8d54f8e9d18a52e56c57a24b0f30bbd7bc7410543329f9.png" />
-</div>
+<img alt="../../../_images/e25cf220f15e78e7aa8d54f8e9d18a52e56c57a24b0f30bbd7bc7410543329f9.png" src="../../../_images/e25cf220f15e78e7aa8d54f8e9d18a52e56c57a24b0f30bbd7bc7410543329f9.png" /></p>
 
     <p class="ablog-post-expand"><a href="../../../posts/2022/dask-debug-detrend/"><em>Read more ...</em></a></p>
     <hr/>
   </div>
   
-
   <div class="section ablog-post">
     <h2 class="ablog-post-title">
       <a href="../../../posts/2022/sparse-PFT-gridding/">Sparse arrays and the CESM land model component</a>
     </h2>
-
     <ul class="ablog-archive">
       <li>
-         <i class="fa fa-calendar"></i> 24 February 2022 
+        
+        
+        <i class="fa fa-calendar"></i>
+        
+        24 February 2022
+        
       </li>
-       
-<li id="author">
-  <span><i class="fa-fw fa fa-user"></i></span
-  >
-   
-  <a href="../katie-dagon/">Katie Dagon</a>,   
-  <a href="#">Deepak Cherian</a>  
-</li>
+      
+
+<li id="ablog-sidebar-item author ablog__author">
+  <span>
     
-<li id="tags">
-  <span><i class="fa-fw fa fa-tags"></i> </span
-  >
-   
-  <a href="../../tag/sparse/">sparse</a>   
-  <a href="../../tag/pft/">PFT</a>   
-  <a href="../../tag/dask/">dask</a>   
-  <a href="../../tag/clm/">CLM</a>  
+    <i class="fa-fw fa fa-user"></i>
+    
+    </span>
+  
+  
+  <a href="../katie-dagon/">Katie Dagon</a>
+  
+  ,
+  
+  
+  
+  
+  <a href="#">Deepak Cherian</a>
+  
+  
+  
 </li>
- 
+
+
+
+
+
+<li id="ablog-sidebar-item tags ablog__tags">
+  <span>
+    
+    
+    <i class="fa-fw fa fa-tags"></i>
+    
+    
+    </span>
+  
+  
+  <a href="../../tag/pft/">PFT</a>
+  
+  
+  
+  
+  
+  <a href="../../tag/sparse/">sparse</a>
+  
+  
+  
+  
+  
+  <a href="../../tag/dask/">dask</a>
+  
+  
+  
+  
+  
+  <a href="../../tag/clm/">CLM</a>
+  
+  
+  
+</li>
+
+
     </ul>
-    <div class="ablog-post-excerpt docutils container">
-<p>An underappreciated feature of Xarray + Dask is the ability to plug in <a class="reference external" href="https://docs.xarray.dev/en/stable/user-guide/duckarrays.html">different array types</a>. Usually we work with Xarray wrapping a Dask array which in turn uses <em>NumPy</em> arrays for each block; or just Xarray wrapping NumPy arrays directly. NumPy arrays are dense in-memory arrays. Other array types exist:</p>
+    <p class="ablog-post-excerpt"><p>An underappreciated feature of Xarray + Dask is the ability to plug in <a class="reference external" href="https://docs.xarray.dev/en/stable/user-guide/duckarrays.html">different array types</a>. Usually we work with Xarray wrapping a Dask array which in turn uses <em>NumPy</em> arrays for each block; or just Xarray wrapping NumPy arrays directly. NumPy arrays are dense in-memory arrays. Other array types exist:</p>
 <p><a class="reference external" href="https://sparse.pydata.org">sparse</a> for sparse arrays</p>
-<img alt="../../../_images/c4d9bf482f609b5c8823a94f55faa35a854a944a89bdc967aff406eb134a52c5.png" src="../../../_images/c4d9bf482f609b5c8823a94f55faa35a854a944a89bdc967aff406eb134a52c5.png" />
-</div>
+<img alt="../../../_images/c4d9bf482f609b5c8823a94f55faa35a854a944a89bdc967aff406eb134a52c5.png" src="../../../_images/c4d9bf482f609b5c8823a94f55faa35a854a944a89bdc967aff406eb134a52c5.png" /></p>
 
     <p class="ablog-post-expand"><a href="../../../posts/2022/sparse-PFT-gridding/"><em>Read more ...</em></a></p>
     <hr/>
   </div>
-   
+  
+  
 </div>
 
                 </article>
@@ -800,7 +1033,7 @@ We use a single ensemble member historical experiment with daily data from 1850 
       
         <div class="footer-item">
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
     <br/>
   </p>
 </div>

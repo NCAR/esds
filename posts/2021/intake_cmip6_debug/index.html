@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>Debugging Intake-ESM Process for Reading in CMIP6 &#8212; NCAR-ESDS 0.1 documentation</title>
   
@@ -42,7 +42,9 @@
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
     <script kind="utterances">
@@ -83,40 +85,19 @@ commentsRunWhenDOMLoaded(addUtterances);
     <script>DOCUMENTATION_OPTIONS.pagename = 'posts/2021/intake_cmip6_debug';</script>
     <link rel="author" title="About these documents" href="../../../about/" />
     <link rel="index" title="Index" href="../../../genindex/" />
-    <link rel="search" title="Search" href="../../../search/" /> 
+    <link rel="search" title="Search" href="../../../search/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/> 
+  <meta name="docsearch:language" content="en"/>
+
 <link
   rel="alternate"
   type="application/atom+xml"
   href="../../../blog/atom.xml"
   title="NCAR ESDS"
 />
- 
-<style type="text/css">
-  ul.ablog-archive {
-    list-style: none;
-    overflow: auto;
-    margin-left: 0px;
-  }
-  ul.ablog-archive li {
-    float: left;
-    margin-right: 5px;
-    font-size: 80%;
-  }
-  ul.postlist a {
-    font-style: italic;
-  }
-  ul.postlist-style-disc {
-    list-style-type: disc;
-  }
-  ul.postlist-style-none {
-    list-style-type: none;
-  }
-  ul.postlist-style-circle {
-    list-style-type: circle;
-  }
-</style>
+
+
 
   </head>
   
@@ -488,97 +469,154 @@ document.write(`
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
-        <div class="sidebar-primary-item">  
-<h2>
-   <i class="fa fa-calendar"></i>
-  14 May 2021 
-</h2>
+        <div class="sidebar-primary-item">
 
+<div class="ablog-sidebar-item ablog__postcard">
+
+
+<h2>
+  
+  
+  <i class="fa fa-calendar"></i>
+  
+  14 May 2021
+  
+</h2>
 <ul>
-   
-<li id="author">
-  <span><i class="fa-fw fa fa-user"></i></span
-  >
-   
-  <a href="../../../blog/author/max-grover/">Max Grover</a>  
-</li>
+  
+
+<li id="ablog-sidebar-item author ablog__author">
+  <span>
     
-<li id="tags">
-  <span><i class="fa-fw fa fa-tags"></i> </span
-  >
-   
-  <a href="../../../blog/tag/debug/">debug</a>   
-  <a href="../../../blog/tag/intake/">intake</a>   
-  <a href="../../../blog/tag/cmip6/">cmip6</a>  
+    <i class="fa-fw fa fa-user"></i>
+    
+    </span>
+  
+  
+  <a href="../../../blog/author/max-grover/">Max Grover</a>
+  
+  
+  
 </li>
- 
+
+
+
+
+
+<li id="ablog-sidebar-item tags ablog__tags">
+  <span>
+    
+    
+    <i class="fa-fw fa fa-tags"></i>
+    
+    
+    </span>
+  
+  
+  <a href="../../../blog/tag/cmip6/">cmip6</a>
+  
+  
+  
+  
+  
+  <a href="../../../blog/tag/intake/">intake</a>
+  
+  
+  
+  
+  
+  <a href="../../../blog/tag/debug/">debug</a>
+  
+  
+  
+</li>
+
+
 </ul>
 </div>
+</div>
         <div class="sidebar-primary-item">
+
+<div class="ablog-sidebar-item ablog__recentposts">
 <h3>
   <a href="../../../blog/">Recent Posts</a>
 </h3>
 <ul>
-   
+  
+  
   <li>
-    <a href="../../2023/office-hours-help/"
-      >10 May - ESDS Office Hours Support</a
-    >
+    <a href="../../2023/mfdataset/">
+      16 August - Thinking through CESM data access
+    </a>
   </li>
   
   <li>
-    <a href="../../2023/unstructured-grid-collab-1/"
-      >05 May - Recap: Unstructured Grid Collaborative Work Time</a
-    >
+    <a href="../../2023/office-hours-help/">
+      10 May - ESDS Office Hours Support
+    </a>
   </li>
   
   <li>
-    <a href="../../2023/cesm2-le-timeseries-kerchunk/"
-      >15 March - Using Kerchunk with CESM Timeseries Data on the Cloud</a
-    >
+    <a href="../../2023/unstructured-grid-collab-1/">
+      05 May - Recap: Unstructured Grid Collaborative Work Time
+    </a>
   </li>
   
   <li>
-    <a href="../../2023/kerchunk-mom6/"
-      >07 March - Virtual aggregate CESM MOM6 datasets with kerchunk</a
-    >
+    <a href="../../2023/cesm2-le-timeseries-kerchunk/">
+      15 March - Using Kerchunk with CESM Timeseries Data on the Cloud
+    </a>
   </li>
   
   <li>
-    <a href="../../2022/esds-event-recap/"
-      >19 December - Recap of a (Re)Introduction to Earth System Data Science (ESDS) Across NCAR/UCAR/UCP</a
-    >
+    <a href="../../2023/kerchunk-mom6/">
+      07 March - Virtual aggregate CESM MOM6 datasets with kerchunk
+    </a>
   </li>
   
 </ul>
 </div>
+</div>
         <div class="sidebar-primary-item">
+
+<div class="ablog-sidebar-item ablog__archive">
 <h3>
   <a href="../../../blog/archive/">Archives</a>
 </h3>
 <ul>
-   
+  
+  
   <li>
-    <a href="../../../blog/2023/">2023 (4)</a>
+    <a href="../../../blog/2023/">2023 (5)</a>
   </li>
-    
+  
+  
+  
   <li>
     <a href="../../../blog/2022/">2022 (13)</a>
   </li>
-    
+  
+  
+  
   <li>
     <a href="../../../blog/2021/">2021 (52)</a>
   </li>
-    
+  
+  
+  
   <li>
     <a href="../../../blog/2020/">2020 (6)</a>
   </li>
-    
+  
+  
+  
   <li>
     <a href="../../../blog/2019/">2019 (2)</a>
   </li>
-   
+  
+  
 </ul>
+</div>
 </div>
     </div>
   
@@ -630,14 +668,15 @@ document.write(`
                 
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
-                   <section class="tex2jax_ignore mathjax_ignore" id="debugging-intake-esm-process-for-reading-in-cmip6">
-<h1>Debugging Intake-ESM Process for Reading in CMIP6<a class="headerlink" href="#debugging-intake-esm-process-for-reading-in-cmip6" title="Permalink to this headline">#</a></h1>
+                  
+<section class="tex2jax_ignore mathjax_ignore" id="debugging-intake-esm-process-for-reading-in-cmip6">
+<h1>Debugging Intake-ESM Process for Reading in CMIP6<a class="headerlink" href="#debugging-intake-esm-process-for-reading-in-cmip6" title="Permalink to this heading">#</a></h1>
 <p>This post was motivated by a post from Steve Yeager <a class="reference external" href="https://github.com/sgyeager">&#64;sgyeager</a>, who ran into an error when attempting to read in CMIP6 data via intake-esm.</p>
 <p>For those who are unfamiliar with intake-esm, be sure to read over <a class="reference external" href="https://intake-esm.readthedocs.io/en/latest/index.html">the documentation</a>! The user guide even includes <a class="reference external" href="https://intake-esm.readthedocs.io/en/latest/user-guide/cmip6-tutorial.html">an entire portion of their site</a> on looking at CMIP6 data. These resources would be a great place to start.</p>
 <p>The specific workflow of using this package for reading in Sea Water Silinity (<code class="docutils literal notranslate"><span class="pre">so</span></code>) and
 Sea Water Potential Temperature (<code class="docutils literal notranslate"><span class="pre">thetao</span></code>) are given below</p>
 <section id="reproducing-the-error">
-<h2>Reproducing the Error<a class="headerlink" href="#reproducing-the-error" title="Permalink to this headline">#</a></h2>
+<h2>Reproducing the Error<a class="headerlink" href="#reproducing-the-error" title="Permalink to this heading">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">intake</span>
 </pre></div>
 </div>
@@ -684,7 +723,7 @@ Sea Water Potential Temperature (<code class="docutils literal notranslate"><spa
 </div>
 </section>
 <section id="determining-the-cause-of-the-error">
-<h2>Determining the Cause of the Error<a class="headerlink" href="#determining-the-cause-of-the-error" title="Permalink to this headline">#</a></h2>
+<h2>Determining the Cause of the Error<a class="headerlink" href="#determining-the-cause-of-the-error" title="Permalink to this heading">#</a></h2>
 <p>At this point, let’s go back and inspect the subset catalog we have, calling the <code class="docutils literal notranslate"><span class="pre">catalog.df</span></code></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span><span class="o">.</span><span class="n">df</span>
 </pre></div>
@@ -702,7 +741,7 @@ Sea Water Potential Temperature (<code class="docutils literal notranslate"><spa
 <p>When <code class="docutils literal notranslate"><span class="pre">intake</span></code> attempts to concatenate these two datasets, it struggles and return an error, since the data is missing on the system. There is missing data here - reading variables separately is workaround, although it should be noted that at the end of the day, the missing files are the core problem.</p>
 </section>
 <section id="applying-our-workaround">
-<h2>Applying our “Workaround”<a class="headerlink" href="#applying-our-workaround" title="Permalink to this headline">#</a></h2>
+<h2>Applying our “Workaround”<a class="headerlink" href="#applying-our-workaround" title="Permalink to this heading">#</a></h2>
 <p>To work around this problem, If you would still like to work with the data, you will need to read in datasets using separate queries as shown below</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Search and read in dataset for so</span>
 <span class="n">cat_so</span> <span class="o">=</span> <span class="n">col</span><span class="o">.</span><span class="n">search</span><span class="p">(</span>
@@ -730,29 +769,38 @@ Sea Water Potential Temperature (<code class="docutils literal notranslate"><spa
 </section>
 </section>
 
-<div class="section">
-    
+<div class="section ablog__blog_comments">
+  
+  
 
-<div class="section">
-  <span style="float: left">
-     
+
+<div class="section ablog__prev-next">
+  <span class="ablog__prev">
+    
+    
     <a href="../git-and-github-tutorial/">
-      <i class="fa fa-arrow-circle-left"></i> Git and GitHub Tutorial
+      
+      <i class="fa fa-arrow-circle-left"></i>
+      
+      <span>Git and GitHub Tutorial</span>
     </a>
     
   </span>
-  <span>&nbsp;</span>
-  <span style="float: right">
-     
+  <span class="ablog__spacer">&nbsp;</span>
+  <span class="ablog__next">
+    
+    
     <a href="../pandas-tutorial/">
-      Pandas Tutorial <i
-        class="fa fa-arrow-circle-right"
-      ></i
-      >
+      <span>Pandas Tutorial</span>
+      
+      <i class="fa fa-arrow-circle-right" ></i>
+      
     </a>
     
   </span>
 </div>
+
+  
   
 </div>
 
@@ -830,7 +878,7 @@ Sea Water Potential Temperature (<code class="docutils literal notranslate"><spa
       
         <div class="footer-item">
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
     <br/>
   </p>
 </div>

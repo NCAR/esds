@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>Intake-ESM Tutorial &#8212; NCAR-ESDS 0.1 documentation</title>
   
@@ -42,7 +42,9 @@
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
     <script kind="utterances">
@@ -83,40 +85,19 @@ commentsRunWhenDOMLoaded(addUtterances);
     <script>DOCUMENTATION_OPTIONS.pagename = 'posts/2021/intake-esm-tutorial-2021';</script>
     <link rel="author" title="About these documents" href="../../../about/" />
     <link rel="index" title="Index" href="../../../genindex/" />
-    <link rel="search" title="Search" href="../../../search/" /> 
+    <link rel="search" title="Search" href="../../../search/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/> 
+  <meta name="docsearch:language" content="en"/>
+
 <link
   rel="alternate"
   type="application/atom+xml"
   href="../../../blog/atom.xml"
   title="NCAR ESDS"
 />
- 
-<style type="text/css">
-  ul.ablog-archive {
-    list-style: none;
-    overflow: auto;
-    margin-left: 0px;
-  }
-  ul.ablog-archive li {
-    float: left;
-    margin-right: 5px;
-    font-size: 80%;
-  }
-  ul.postlist a {
-    font-style: italic;
-  }
-  ul.postlist-style-disc {
-    list-style-type: disc;
-  }
-  ul.postlist-style-none {
-    list-style-type: none;
-  }
-  ul.postlist-style-circle {
-    list-style-type: circle;
-  }
-</style>
+
+
 
   </head>
   
@@ -488,97 +469,154 @@ document.write(`
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
-        <div class="sidebar-primary-item">  
-<h2>
-   <i class="fa fa-calendar"></i>
-  02 December 2021 
-</h2>
+        <div class="sidebar-primary-item">
 
+<div class="ablog-sidebar-item ablog__postcard">
+
+
+<h2>
+  
+  
+  <i class="fa fa-calendar"></i>
+  
+  02 December 2021
+  
+</h2>
 <ul>
-   
-<li id="author">
-  <span><i class="fa-fw fa fa-user"></i></span
-  >
-   
-  <a href="../../../blog/author/max-grover/">Max Grover</a>  
-</li>
+  
+
+<li id="ablog-sidebar-item author ablog__author">
+  <span>
     
-<li id="tags">
-  <span><i class="fa-fw fa fa-tags"></i> </span
-  >
-   
-  <a href="../../../blog/tag/python-tutorial-series/">python-tutorial-series</a>   
-  <a href="../../../blog/tag/xarray/">xarray</a>   
-  <a href="../../../blog/tag/intake/">intake</a>  
+    <i class="fa-fw fa fa-user"></i>
+    
+    </span>
+  
+  
+  <a href="../../../blog/author/max-grover/">Max Grover</a>
+  
+  
+  
 </li>
- 
+
+
+
+
+
+<li id="ablog-sidebar-item tags ablog__tags">
+  <span>
+    
+    
+    <i class="fa-fw fa fa-tags"></i>
+    
+    
+    </span>
+  
+  
+  <a href="../../../blog/tag/xarray/">xarray</a>
+  
+  
+  
+  
+  
+  <a href="../../../blog/tag/python-tutorial-series/">python-tutorial-series</a>
+  
+  
+  
+  
+  
+  <a href="../../../blog/tag/intake/">intake</a>
+  
+  
+  
+</li>
+
+
 </ul>
 </div>
+</div>
         <div class="sidebar-primary-item">
+
+<div class="ablog-sidebar-item ablog__recentposts">
 <h3>
   <a href="../../../blog/">Recent Posts</a>
 </h3>
 <ul>
-   
+  
+  
   <li>
-    <a href="../../2023/office-hours-help/"
-      >10 May - ESDS Office Hours Support</a
-    >
+    <a href="../../2023/mfdataset/">
+      16 August - Thinking through CESM data access
+    </a>
   </li>
   
   <li>
-    <a href="../../2023/unstructured-grid-collab-1/"
-      >05 May - Recap: Unstructured Grid Collaborative Work Time</a
-    >
+    <a href="../../2023/office-hours-help/">
+      10 May - ESDS Office Hours Support
+    </a>
   </li>
   
   <li>
-    <a href="../../2023/cesm2-le-timeseries-kerchunk/"
-      >15 March - Using Kerchunk with CESM Timeseries Data on the Cloud</a
-    >
+    <a href="../../2023/unstructured-grid-collab-1/">
+      05 May - Recap: Unstructured Grid Collaborative Work Time
+    </a>
   </li>
   
   <li>
-    <a href="../../2023/kerchunk-mom6/"
-      >07 March - Virtual aggregate CESM MOM6 datasets with kerchunk</a
-    >
+    <a href="../../2023/cesm2-le-timeseries-kerchunk/">
+      15 March - Using Kerchunk with CESM Timeseries Data on the Cloud
+    </a>
   </li>
   
   <li>
-    <a href="../../2022/esds-event-recap/"
-      >19 December - Recap of a (Re)Introduction to Earth System Data Science (ESDS) Across NCAR/UCAR/UCP</a
-    >
+    <a href="../../2023/kerchunk-mom6/">
+      07 March - Virtual aggregate CESM MOM6 datasets with kerchunk
+    </a>
   </li>
   
 </ul>
 </div>
+</div>
         <div class="sidebar-primary-item">
+
+<div class="ablog-sidebar-item ablog__archive">
 <h3>
   <a href="../../../blog/archive/">Archives</a>
 </h3>
 <ul>
-   
+  
+  
   <li>
-    <a href="../../../blog/2023/">2023 (4)</a>
+    <a href="../../../blog/2023/">2023 (5)</a>
   </li>
-    
+  
+  
+  
   <li>
     <a href="../../../blog/2022/">2022 (13)</a>
   </li>
-    
+  
+  
+  
   <li>
     <a href="../../../blog/2021/">2021 (52)</a>
   </li>
-    
+  
+  
+  
   <li>
     <a href="../../../blog/2020/">2020 (6)</a>
   </li>
-    
+  
+  
+  
   <li>
     <a href="../../../blog/2019/">2019 (2)</a>
   </li>
-   
+  
+  
 </ul>
+</div>
 </div>
     </div>
   
@@ -630,18 +668,19 @@ document.write(`
                 
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
-                   <section class="tex2jax_ignore mathjax_ignore" id="intake-esm-tutorial">
-<h1>Intake-ESM Tutorial<a class="headerlink" href="#intake-esm-tutorial" title="Permalink to this headline">#</a></h1>
+                  
+<section class="tex2jax_ignore mathjax_ignore" id="intake-esm-tutorial">
+<h1>Intake-ESM Tutorial<a class="headerlink" href="#intake-esm-tutorial" title="Permalink to this heading">#</a></h1>
 <p>The Project Pythia Python Tutorial Seminar Series continues with the Intake-ESM Tutorial on <strong>Wednesday, December 8 at 1 PM Mountain Standard Time</strong>. This session will be led by <a class="reference external" href="https://github.com/mgrover1">Max Grover</a>.</p>
 <p>The content for this tutorial is hosted in the <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> notebook file(s) within the <code class="docutils literal notranslate"><span class="pre">tutorial</span></code> directory of this repository.</p>
 <section id="bio">
-<h2>Bio<a class="headerlink" href="#bio" title="Permalink to this headline">#</a></h2>
+<h2>Bio<a class="headerlink" href="#bio" title="Permalink to this heading">#</a></h2>
 <p>Max works as software engineer within the Climate and Global Dynamics Lab here at NCAR. He graduated with a B.S in meteorology from <a class="reference external" href="https://www.valpo.edu/geography-meteorology/">Valparaiso University</a> in 2019 and will complete his M.S. in atmospheric science this spring at the <a class="reference external" href="https://atmos.illinois.edu/">University of Illinois Urbana-Champaign</a>.</p>
 <p>He works on Python-based tools to support climate model evaluation and contributes to the Earth System Data Science initiative. His research in graduate school focused on using observational data collected during the RELAMPAGO-CACTI campaign in Argentina to study mesoscale convective dynamics, primarily utilizing mobile radar observations as well as GOES-16 satellite imagery. This is not his first time working at UCAR – he took part in the Unidata summer internship program in 2019, working with Ryan May on contributing METAR parsing functionality to MetPy, which motivated him to pursue a career in software engineering.</p>
 <p>He enjoys hiking, visiting breweries, and spending time on the water (his summer job, prior to graduate school, was at a resort in southern Wisconsin where he worked as a tour boat captain on Delavan Lake). He is also a big fan of Hawaiian shirts, with a collection of more than 40.</p>
 </section>
 <section id="how-to-run">
-<h2>How-to-Run<a class="headerlink" href="#how-to-run" title="Permalink to this headline">#</a></h2>
+<h2>How-to-Run<a class="headerlink" href="#how-to-run" title="Permalink to this heading">#</a></h2>
 <p><strong>All of the tutorials in this organization can be followed by clicking the “Launch Binder” button at the top level or in each directory.</strong></p>
 <p>You may also download the environment to run locally:</p>
 <ul class="simple">
@@ -653,41 +692,50 @@ document.write(`
 </ul>
 </section>
 <section id="sign-up">
-<h2>Sign Up<a class="headerlink" href="#sign-up" title="Permalink to this headline">#</a></h2>
+<h2>Sign Up<a class="headerlink" href="#sign-up" title="Permalink to this heading">#</a></h2>
 <p>To receive the Zoom link and password, please join the <em>learnpython&#64;ucar.edu</em> Google group and Calendar.</p>
 <p>To join the <em>learnpython&#64;ucar.edu</em> Google Group, follow this <a class="reference external" href="https://groups.google.com/a/ucar.edu/g/learnpython/about">link</a> and click “Join Group” next to the group name.</p>
 <p>By attending this tutorial, you are subject to the <a class="reference external" href="https://www.ucar.edu/who-we-are/ethics-integrity/codes-conduct.">NCAR/UCAR Code of Conduct</a></p>
 </section>
 <section id="tutorial-recording">
-<h2>Tutorial Recording<a class="headerlink" href="#tutorial-recording" title="Permalink to this headline">#</a></h2>
+<h2>Tutorial Recording<a class="headerlink" href="#tutorial-recording" title="Permalink to this heading">#</a></h2>
 <p>This tutorial will be recorded and posted on our <a class="reference external" href="https://www.youtube.com/channel/UCoZPBqJal5uKpO8ZiwzavCw">YouTube channel</a>.
 [Note: A Project Pythia team member will replace this section with the embedded video once it is ready.]</p>
 </section>
 </section>
 
-<div class="section">
-    
+<div class="section ablog__blog_comments">
+  
+  
 
-<div class="section">
-  <span style="float: left">
-     
+
+<div class="section ablog__prev-next">
+  <span class="ablog__prev">
+    
+    
     <a href="../esds-update-november-2021/">
-      <i class="fa fa-arrow-circle-left"></i> ESDS Update November 2021
+      
+      <i class="fa fa-arrow-circle-left"></i>
+      
+      <span>ESDS Update November 2021</span>
     </a>
     
   </span>
-  <span>&nbsp;</span>
-  <span style="float: right">
-     
+  <span class="ablog__spacer">&nbsp;</span>
+  <span class="ablog__next">
+    
+    
     <a href="../../2022/metpy_tutorial/">
-      MetPy Tutorial <i
-        class="fa fa-arrow-circle-right"
-      ></i
-      >
+      <span>MetPy Tutorial</span>
+      
+      <i class="fa fa-arrow-circle-right" ></i>
+      
     </a>
     
   </span>
 </div>
+
+  
   
 </div>
 
@@ -766,7 +814,7 @@ document.write(`
       
         <div class="footer-item">
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
     <br/>
   </p>
 </div>

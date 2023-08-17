@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>Building an Intake-esm catalog from CESM2 History Files &#8212; NCAR-ESDS 0.1 documentation</title>
   
@@ -42,7 +42,9 @@
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
     <script kind="utterances">
@@ -83,40 +85,19 @@ commentsRunWhenDOMLoaded(addUtterances);
     <script>DOCUMENTATION_OPTIONS.pagename = 'posts/2021/ecgtools-history-files-example';</script>
     <link rel="author" title="About these documents" href="../../../about/" />
     <link rel="index" title="Index" href="../../../genindex/" />
-    <link rel="search" title="Search" href="../../../search/" /> 
+    <link rel="search" title="Search" href="../../../search/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/> 
+  <meta name="docsearch:language" content="en"/>
+
 <link
   rel="alternate"
   type="application/atom+xml"
   href="../../../blog/atom.xml"
   title="NCAR ESDS"
 />
- 
-<style type="text/css">
-  ul.ablog-archive {
-    list-style: none;
-    overflow: auto;
-    margin-left: 0px;
-  }
-  ul.ablog-archive li {
-    float: left;
-    margin-right: 5px;
-    font-size: 80%;
-  }
-  ul.postlist a {
-    font-style: italic;
-  }
-  ul.postlist-style-disc {
-    list-style-type: disc;
-  }
-  ul.postlist-style-none {
-    list-style-type: none;
-  }
-  ul.postlist-style-circle {
-    list-style-type: circle;
-  }
-</style>
+
+
 
   </head>
   
@@ -488,96 +469,148 @@ document.write(`
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
-        <div class="sidebar-primary-item">  
-<h2>
-   <i class="fa fa-calendar"></i>
-  04 June 2021 
-</h2>
+        <div class="sidebar-primary-item">
 
+<div class="ablog-sidebar-item ablog__postcard">
+
+
+<h2>
+  
+  
+  <i class="fa fa-calendar"></i>
+  
+  04 June 2021
+  
+</h2>
 <ul>
-   
-<li id="author">
-  <span><i class="fa-fw fa fa-user"></i></span
-  >
-   
-  <a href="../../../blog/author/max-grover/">Max Grover</a>  
-</li>
+  
+
+<li id="ablog-sidebar-item author ablog__author">
+  <span>
     
-<li id="tags">
-  <span><i class="fa-fw fa fa-tags"></i> </span
-  >
-   
-  <a href="../../../blog/tag/cesm/">cesm</a>   
-  <a href="../../../blog/tag/intake/">intake</a>  
+    <i class="fa-fw fa fa-user"></i>
+    
+    </span>
+  
+  
+  <a href="../../../blog/author/max-grover/">Max Grover</a>
+  
+  
+  
 </li>
- 
+
+
+
+
+
+<li id="ablog-sidebar-item tags ablog__tags">
+  <span>
+    
+    
+    <i class="fa-fw fa fa-tags"></i>
+    
+    
+    </span>
+  
+  
+  <a href="../../../blog/tag/cesm/">cesm</a>
+  
+  
+  
+  
+  
+  <a href="../../../blog/tag/intake/">intake</a>
+  
+  
+  
+</li>
+
+
 </ul>
 </div>
+</div>
         <div class="sidebar-primary-item">
+
+<div class="ablog-sidebar-item ablog__recentposts">
 <h3>
   <a href="../../../blog/">Recent Posts</a>
 </h3>
 <ul>
-   
+  
+  
   <li>
-    <a href="../../2023/office-hours-help/"
-      >10 May - ESDS Office Hours Support</a
-    >
+    <a href="../../2023/mfdataset/">
+      16 August - Thinking through CESM data access
+    </a>
   </li>
   
   <li>
-    <a href="../../2023/unstructured-grid-collab-1/"
-      >05 May - Recap: Unstructured Grid Collaborative Work Time</a
-    >
+    <a href="../../2023/office-hours-help/">
+      10 May - ESDS Office Hours Support
+    </a>
   </li>
   
   <li>
-    <a href="../../2023/cesm2-le-timeseries-kerchunk/"
-      >15 March - Using Kerchunk with CESM Timeseries Data on the Cloud</a
-    >
+    <a href="../../2023/unstructured-grid-collab-1/">
+      05 May - Recap: Unstructured Grid Collaborative Work Time
+    </a>
   </li>
   
   <li>
-    <a href="../../2023/kerchunk-mom6/"
-      >07 March - Virtual aggregate CESM MOM6 datasets with kerchunk</a
-    >
+    <a href="../../2023/cesm2-le-timeseries-kerchunk/">
+      15 March - Using Kerchunk with CESM Timeseries Data on the Cloud
+    </a>
   </li>
   
   <li>
-    <a href="../../2022/esds-event-recap/"
-      >19 December - Recap of a (Re)Introduction to Earth System Data Science (ESDS) Across NCAR/UCAR/UCP</a
-    >
+    <a href="../../2023/kerchunk-mom6/">
+      07 March - Virtual aggregate CESM MOM6 datasets with kerchunk
+    </a>
   </li>
   
 </ul>
 </div>
+</div>
         <div class="sidebar-primary-item">
+
+<div class="ablog-sidebar-item ablog__archive">
 <h3>
   <a href="../../../blog/archive/">Archives</a>
 </h3>
 <ul>
-   
+  
+  
   <li>
-    <a href="../../../blog/2023/">2023 (4)</a>
+    <a href="../../../blog/2023/">2023 (5)</a>
   </li>
-    
+  
+  
+  
   <li>
     <a href="../../../blog/2022/">2022 (13)</a>
   </li>
-    
+  
+  
+  
   <li>
     <a href="../../../blog/2021/">2021 (52)</a>
   </li>
-    
+  
+  
+  
   <li>
     <a href="../../../blog/2020/">2020 (6)</a>
   </li>
-    
+  
+  
+  
   <li>
     <a href="../../../blog/2019/">2019 (2)</a>
   </li>
-   
+  
+  
 </ul>
+</div>
 </div>
     </div>
   
@@ -629,8 +662,9 @@ document.write(`
                 
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
-                   <section class="tex2jax_ignore mathjax_ignore" id="building-an-intake-esm-catalog-from-cesm2-history-files">
-<h1>Building an Intake-esm catalog from CESM2 History Files<a class="headerlink" href="#building-an-intake-esm-catalog-from-cesm2-history-files" title="Permalink to this headline">#</a></h1>
+                  
+<section class="tex2jax_ignore mathjax_ignore" id="building-an-intake-esm-catalog-from-cesm2-history-files">
+<h1>Building an Intake-esm catalog from CESM2 History Files<a class="headerlink" href="#building-an-intake-esm-catalog-from-cesm2-history-files" title="Permalink to this heading">#</a></h1>
 <p>As mentioned in a couple of ESDS posts (<a class="reference external" href="https://ncar.github.io/esds/posts/intake_esm_dask/">intake-esm and Dask</a>, <a class="reference external" href="https://ncar.github.io/esds/posts/intake_cmip6_debug/">debugging intake-esm</a>), <a class="reference external" href="https://intake-esm.readthedocs.io/en/latest/">intake-esm</a> can be a helpful tool to work with when dealing with model data, especially CESM. One of the requirements for using intake-esm is having a catalog which is comprised of two pieces:</p>
 <ul class="simple">
 <li><p>A table of the relevant metadata (ex. file path, variable, stream, etc.)</p></li>
@@ -645,12 +679,12 @@ document.write(`
 <p>This package has not officially been release yet on <a class="reference external" href="https://pypi.org/">pypi</a> or <a class="reference external" href="https://conda-forge.org/">conda-forge</a>, but this release will likely happen soon. This post will give an overview of using <a class="reference external" href="https://ecgtools.readthedocs.io/en/latest/">ecgtools</a> for parsing CESM history file model output, and reading in the data using
 <a class="reference external" href="https://intake-esm.readthedocs.io/en/latest/">intake-esm</a>. In this example, we use model output using the default component-set (compset) detailed in the <a class="reference external" href="https://escomp.github.io/CESM/versions/cesm2.1/html/">CESM Quickstart Guide</a>.</p>
 <section id="what-s-a-history-file">
-<h2>What’s a “history” file?<a class="headerlink" href="#what-s-a-history-file" title="Permalink to this headline">#</a></h2>
+<h2>What’s a “history” file?<a class="headerlink" href="#what-s-a-history-file" title="Permalink to this heading">#</a></h2>
 <p>A history file is the default output from CESM, where each file is a single time “slice” with every variable from the component of interest. These types of files can be difficult to work with, since often times one is interested in a time series of a single variable. Building a catalog can be helpful in accessing your data, querying for certain variables, and potentially creating timeseries files later down the road.</p>
 <p>Let’s get started!</p>
 </section>
 <section id="downloading-the-beta-version-of-ecgtools">
-<h2>Downloading the beta version of ecgtools<a class="headerlink" href="#downloading-the-beta-version-of-ecgtools" title="Permalink to this headline">#</a></h2>
+<h2>Downloading the beta version of ecgtools<a class="headerlink" href="#downloading-the-beta-version-of-ecgtools" title="Permalink to this heading">#</a></h2>
 <p>In order to access this in its current state, you will need to clone the repository from github. On the machine with the data you are planning on creating a catalog for, run the following:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">NCAR</span><span class="o">/</span><span class="n">ecgtools</span><span class="o">.</span><span class="n">git</span>
 </pre></div>
@@ -666,7 +700,7 @@ document.write(`
 </div>
 </section>
 <section id="imports">
-<h2>Imports<a class="headerlink" href="#imports" title="Permalink to this headline">#</a></h2>
+<h2>Imports<a class="headerlink" href="#imports" title="Permalink to this heading">#</a></h2>
 <p>The only parts of ecgtools we need are the <code class="docutils literal notranslate"><span class="pre">Builder</span></code> object and the <code class="docutils literal notranslate"><span class="pre">parse_cesm_history</span></code> parser from the CESM parsers! We import <code class="docutils literal notranslate"><span class="pre">glob</span></code> to take a look at the files we are parsing.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -679,7 +713,7 @@ document.write(`
 </div>
 </div>
 <section id="understanding-the-directory-structure">
-<h3>Understanding the Directory Structure<a class="headerlink" href="#understanding-the-directory-structure" title="Permalink to this headline">#</a></h3>
+<h3>Understanding the Directory Structure<a class="headerlink" href="#understanding-the-directory-structure" title="Permalink to this heading">#</a></h3>
 <p>The first step to setting up the <code class="docutils literal notranslate"><span class="pre">Builder</span></code> object is determining where your files are stored. As mentioned previously, we have a sample dataset of CESM2 model output, which is stored in <code class="docutils literal notranslate"><span class="pre">/glade/work/mgrover/cesm_test_data/</span></code></p>
 <p>Taking a look at that directory, we see that there is a single case <code class="docutils literal notranslate"><span class="pre">b.e20.B1850.f19_g17.test</span></code></p>
 <div class="cell docutils container">
@@ -752,7 +786,7 @@ document.write(`
 </section>
 </section>
 <section id="build-the-catalog">
-<h2>Build the catalog!<a class="headerlink" href="#build-the-catalog" title="Permalink to this headline">#</a></h2>
+<h2>Build the catalog!<a class="headerlink" href="#build-the-catalog" title="Permalink to this heading">#</a></h2>
 <p>Let’s start by inspecting the builder object</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -852,7 +886,7 @@ njobs : int, optional
 </div>
 </section>
 <section id="inspect-the-catalog">
-<h2>Inspect the Catalog<a class="headerlink" href="#inspect-the-catalog" title="Permalink to this headline">#</a></h2>
+<h2>Inspect the Catalog<a class="headerlink" href="#inspect-the-catalog" title="Permalink to this heading">#</a></h2>
 <p>Now that the catalog is built, we can inspect the dataframe which is used to create the catalog by calling <code class="docutils literal notranslate"><span class="pre">.df</span></code> on the builder object</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1239,7 +1273,7 @@ njobs : int, optional
 <p>It appears that one of the invalid assets is a <code class="docutils literal notranslate"><span class="pre">pop.hv</span></code> stream, which is a time-invariant dataset we would not neccessarily be interested in looking at. If there is a file you think <em><strong>should</strong></em> be included in the resultant catalog but isn’t, be sure to add it to the <code class="docutils literal notranslate"><span class="pre">_STREAMS_DICT</span></code> used in the <a class="reference external" href="https://github.com/NCAR/ecgtools/blob/main/ecgtools/parsers/cesm.py">parsing tool</a>!</p>
 </section>
 <section id="save-the-catalog">
-<h2>Save the Catalog<a class="headerlink" href="#save-the-catalog" title="Permalink to this headline">#</a></h2>
+<h2>Save the Catalog<a class="headerlink" href="#save-the-catalog" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span><span class="o">.</span><span class="n">save</span><span class="p">(</span>
@@ -1276,10 +1310,10 @@ njobs : int, optional
 </div>
 </section>
 <section id="using-the-catalog">
-<h2>Using the Catalog<a class="headerlink" href="#using-the-catalog" title="Permalink to this headline">#</a></h2>
+<h2>Using the Catalog<a class="headerlink" href="#using-the-catalog" title="Permalink to this heading">#</a></h2>
 <p>You’ll notice the resultant filepaths are output when calling <code class="docutils literal notranslate"><span class="pre">.save</span></code> - which you could use within your intake-esm <code class="docutils literal notranslate"><span class="pre">open_esm_datastore</span></code> function.</p>
 <section id="additional-imports">
-<h3>Additional Imports<a class="headerlink" href="#additional-imports" title="Permalink to this headline">#</a></h3>
+<h3>Additional Imports<a class="headerlink" href="#additional-imports" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import ast which helps with parsing the list of variables</span>
@@ -1293,7 +1327,7 @@ njobs : int, optional
 </div>
 </section>
 <section id="use-the-catalog-to-read-in-data">
-<h3>Use the catalog to read in data<a class="headerlink" href="#use-the-catalog-to-read-in-data" title="Permalink to this headline">#</a></h3>
+<h3>Use the catalog to read in data<a class="headerlink" href="#use-the-catalog-to-read-in-data" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">col</span> <span class="o">=</span> <span class="n">intake</span><span class="o">.</span><span class="n">open_esm_datastore</span><span class="p">(</span>
@@ -1504,34 +1538,43 @@ njobs : int, optional
 </section>
 </section>
 <section id="conclusion">
-<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">#</a></h2>
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this heading">#</a></h2>
 <p>Having the ability to easily create intake-esm catalogs from history files can be a powerful tool in your analysis toolkit. These data can be read in relatively quickly, easing the ability to quickly take a look at model output or even share your data with others! For more updates on <a class="reference external" href="https://github.com/NCAR/ecgtools">ecgtools</a>, be sure to follow <a class="reference external" href="https://github.com/NCAR/ecgtools">the ecgtools repository</a> on Github! Have an idea for another helpful parser? Submit an issue!</p>
 </section>
 </section>
 
-<div class="section">
-    
+<div class="section ablog__blog_comments">
+  
+  
 
-<div class="section">
-  <span style="float: left">
-     
+
+<div class="section ablog__prev-next">
+  <span class="ablog__prev">
+    
+    
     <a href="../dask-summit-takeaway/">
-      <i class="fa fa-arrow-circle-left"></i> Dask Distributed Summit 2021 Takeaways
+      
+      <i class="fa fa-arrow-circle-left"></i>
+      
+      <span>Dask Distributed Summit 2021 Takeaways</span>
     </a>
     
   </span>
-  <span>&nbsp;</span>
-  <span style="float: right">
-     
+  <span class="ablog__spacer">&nbsp;</span>
+  <span class="ablog__next">
+    
+    
     <a href="../xarray-tutorial/">
-      Xarray Tutorial <i
-        class="fa fa-arrow-circle-right"
-      ></i
-      >
+      <span>Xarray Tutorial</span>
+      
+      <i class="fa fa-arrow-circle-right" ></i>
+      
     </a>
     
   </span>
 </div>
+
+  
   
 </div>
 
@@ -1621,7 +1664,7 @@ njobs : int, optional
       
         <div class="footer-item">
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
     <br/>
   </p>
 </div>

@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>Best Practices &#8212; NCAR-ESDS 0.1 documentation</title>
   
@@ -42,7 +42,9 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script kind="utterances">
@@ -85,40 +87,19 @@ commentsRunWhenDOMLoaded(addUtterances);
     <link rel="index" title="Index" href="../genindex/" />
     <link rel="search" title="Search" href="../search/" />
     <link rel="next" title="Calendar" href="../calendar/" />
-    <link rel="prev" title="Office Hours" href="../office-hours/" /> 
+    <link rel="prev" title="Office Hours" href="../office-hours/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/> 
+  <meta name="docsearch:language" content="en"/>
+
 <link
   rel="alternate"
   type="application/atom+xml"
   href="../blog/atom.xml"
   title="NCAR ESDS"
 />
- 
-<style type="text/css">
-  ul.ablog-archive {
-    list-style: none;
-    overflow: auto;
-    margin-left: 0px;
-  }
-  ul.ablog-archive li {
-    float: left;
-    margin-right: 5px;
-    font-size: 80%;
-  }
-  ul.postlist a {
-    font-style: italic;
-  }
-  ul.postlist-style-disc {
-    list-style-type: disc;
-  }
-  ul.postlist-style-none {
-    list-style-type: none;
-  }
-  ul.postlist-style-circle {
-    list-style-type: circle;
-  }
-</style>
+
+
 
   </head>
   
@@ -520,42 +501,44 @@ document.write(`
                 
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
-                   <section class="tex2jax_ignore mathjax_ignore" id="best-practices">
-<h1>Best Practices<a class="headerlink" href="#best-practices" title="Permalink to this headline">#</a></h1>
+                  
+<section class="tex2jax_ignore mathjax_ignore" id="best-practices">
+<h1>Best Practices<a class="headerlink" href="#best-practices" title="Permalink to this heading">#</a></h1>
 <section id="helpful-templates">
-<h2>Helpful Templates<a class="headerlink" href="#helpful-templates" title="Permalink to this headline">#</a></h2>
+<h2>Helpful Templates<a class="headerlink" href="#helpful-templates" title="Permalink to this heading">#</a></h2>
 <p>Thinking about starting a new project? It can be helpful to use a template so you are not starting from scratch.</p>
 <section id="package-template">
-<h3><a class="reference external" href="https://github.com/andersy005/template">Package Template</a><a class="headerlink" href="#package-template" title="Permalink to this headline">#</a></h3>
+<h3><a class="reference external" href="https://github.com/andersy005/template">Package Template</a><a class="headerlink" href="#package-template" title="Permalink to this heading">#</a></h3>
 <p>Anderson Banihirwe (<a class="reference external" href="https://github.com/andersy005">&#64;andersy005</a>) created a template repository for packages, which includes automated code-quality checkers. This can be a helpful place to start.</p>
 </section>
 <section id="analysis-repository">
-<h3><a class="reference external" href="https://github.com/jbusecke/cookiecutter-science-project">Analysis Repository</a><a class="headerlink" href="#analysis-repository" title="Permalink to this headline">#</a></h3>
+<h3><a class="reference external" href="https://github.com/jbusecke/cookiecutter-science-project">Analysis Repository</a><a class="headerlink" href="#analysis-repository" title="Permalink to this heading">#</a></h3>
 <p>Within the Pangeo community, Julius Busecke (<a class="reference external" href="https://github.com/jbusecke">&#64;jbusecke</a>) created the “Cookiecutter-Science-Project” repository which serves as a template when you are working with Jupyter notebooks. This repository walks you through setting up your repository and syncing it up through Github.</p>
 </section>
 </section>
 <section id="software-design">
-<h2>Software Design<a class="headerlink" href="#software-design" title="Permalink to this headline">#</a></h2>
+<h2>Software Design<a class="headerlink" href="#software-design" title="Permalink to this heading">#</a></h2>
 <section id="software-architecture-model">
-<h3><a class="reference external" href="https://docs.google.com/presentation/d/1hVCuxtm0f8TzDqsy2kC5nnjqNt3rsz26qgcMQOnM0RY/edit?usp=sharing">4+1 Software Architecture Model</a><a class="headerlink" href="#software-architecture-model" title="Permalink to this headline">#</a></h3>
+<h3><a class="reference external" href="https://docs.google.com/presentation/d/1hVCuxtm0f8TzDqsy2kC5nnjqNt3rsz26qgcMQOnM0RY/edit?usp=sharing">4+1 Software Architecture Model</a><a class="headerlink" href="#software-architecture-model" title="Permalink to this heading">#</a></h3>
 <p>Currently, the ESDS group is experimenting with design documents for the next generation of diagnostics package. This is an example of the “4+1 View Model of Software Architecture” with an application to the diagnostics workflow. Feel free to use this example as a template!</p>
 </section>
 <section id="zen-of-scientific-computing">
-<h3><a class="reference external" href="https://scicomp.aalto.fi/scicomp/zen-of-scicomp/#">Zen of Scientific Computing</a><a class="headerlink" href="#zen-of-scientific-computing" title="Permalink to this headline">#</a></h3>
+<h3><a class="reference external" href="https://scicomp.aalto.fi/scicomp/zen-of-scicomp/#">Zen of Scientific Computing</a><a class="headerlink" href="#zen-of-scientific-computing" title="Permalink to this heading">#</a></h3>
 <p>A group of researchers and software engineers put together a helpful guide for developing scientific software, detailing the nuances of working Python stacks and the difference between daily use cases and more foundational libraries.</p>
 </section>
 </section>
 <section id="managing-computational-resources">
-<h2>Managing Computational Resources<a class="headerlink" href="#managing-computational-resources" title="Permalink to this headline">#</a></h2>
+<h2>Managing Computational Resources<a class="headerlink" href="#managing-computational-resources" title="Permalink to this heading">#</a></h2>
 <section id="cisl-best-practices">
-<h3><a class="reference external" href="https://www2.cisl.ucar.edu/user-support/cisl-best-practices">CISL Best Practices</a><a class="headerlink" href="#cisl-best-practices" title="Permalink to this headline">#</a></h3>
+<h3><a class="reference external" href="https://www2.cisl.ucar.edu/user-support/cisl-best-practices">CISL Best Practices</a><a class="headerlink" href="#cisl-best-practices" title="Permalink to this heading">#</a></h3>
 <p>If you are using NCAR Computational and Information Systems Lab (CISL) resources such as Casper/Cheyenne, this is a great place to start with learning more making the most of your computing and storage allocations.</p>
 </section>
 </section>
 </section>
 
-<div class="section">
-   
+<div class="section ablog__blog_comments">
+  
+  
 </div>
 
                 </article>
@@ -661,7 +644,7 @@ document.write(`
       
         <div class="footer-item">
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
     <br/>
   </p>
 </div>

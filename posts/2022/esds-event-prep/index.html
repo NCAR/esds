@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>Preparation for a (Re)Introduction to Earth System Data Science (ESDS) Across NCAR/UCAR/UCP &#8212; NCAR-ESDS 0.1 documentation</title>
   
@@ -42,7 +42,9 @@
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
     <script kind="utterances">
@@ -83,40 +85,19 @@ commentsRunWhenDOMLoaded(addUtterances);
     <script>DOCUMENTATION_OPTIONS.pagename = 'posts/2022/esds-event-prep';</script>
     <link rel="author" title="About these documents" href="../../../about/" />
     <link rel="index" title="Index" href="../../../genindex/" />
-    <link rel="search" title="Search" href="../../../search/" /> 
+    <link rel="search" title="Search" href="../../../search/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/> 
+  <meta name="docsearch:language" content="en"/>
+
 <link
   rel="alternate"
   type="application/atom+xml"
   href="../../../blog/atom.xml"
   title="NCAR ESDS"
 />
- 
-<style type="text/css">
-  ul.ablog-archive {
-    list-style: none;
-    overflow: auto;
-    margin-left: 0px;
-  }
-  ul.ablog-archive li {
-    float: left;
-    margin-right: 5px;
-    font-size: 80%;
-  }
-  ul.postlist a {
-    font-style: italic;
-  }
-  ul.postlist-style-disc {
-    list-style-type: disc;
-  }
-  ul.postlist-style-none {
-    list-style-type: none;
-  }
-  ul.postlist-style-circle {
-    list-style-type: circle;
-  }
-</style>
+
+
 
   </head>
   
@@ -488,98 +469,141 @@ document.write(`
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
-        <div class="sidebar-primary-item">  
-<h2>
-   <i class="fa fa-calendar"></i>
-  02 November 2022 
-</h2>
+        <div class="sidebar-primary-item">
 
+<div class="ablog-sidebar-item ablog__postcard">
+
+
+<h2>
+  
+  
+  <i class="fa fa-calendar"></i>
+  
+  02 November 2022
+  
+</h2>
 <ul>
-   
-<li id="author">
-  <span><i class="fa-fw fa fa-user"></i></span
-  >
-   
-  <a href="../../../blog/author/julia-kent/">Julia Kent</a>  
-</li>
+  
+
+<li id="ablog-sidebar-item author ablog__author">
+  <span>
     
-<li id="tags">
-  <span><i
-      class="fa-fw fa fa-tag"
-    ></i
-    ></span
-  >
-   
-  <a href="../../../blog/tag/tutorial-hackathon-events/">tutorial hackathon events</a>  
+    <i class="fa-fw fa fa-user"></i>
+    
+    </span>
+  
+  
+  <a href="../../../blog/author/julia-kent/">Julia Kent</a>
+  
+  
+  
 </li>
- 
+
+
+
+
+
+<li id="ablog-sidebar-item tags ablog__tags">
+  <span>
+    
+    
+    <i class="fa-fw fa fa-tag"></i>
+    
+    </span>
+  
+  
+  <a href="../../../blog/tag/tutorial-hackathon-events/">tutorial hackathon events</a>
+  
+  
+  
+</li>
+
+
 </ul>
 </div>
+</div>
         <div class="sidebar-primary-item">
+
+<div class="ablog-sidebar-item ablog__recentposts">
 <h3>
   <a href="../../../blog/">Recent Posts</a>
 </h3>
 <ul>
-   
+  
+  
   <li>
-    <a href="../../2023/office-hours-help/"
-      >10 May - ESDS Office Hours Support</a
-    >
+    <a href="../../2023/mfdataset/">
+      16 August - Thinking through CESM data access
+    </a>
   </li>
   
   <li>
-    <a href="../../2023/unstructured-grid-collab-1/"
-      >05 May - Recap: Unstructured Grid Collaborative Work Time</a
-    >
+    <a href="../../2023/office-hours-help/">
+      10 May - ESDS Office Hours Support
+    </a>
   </li>
   
   <li>
-    <a href="../../2023/cesm2-le-timeseries-kerchunk/"
-      >15 March - Using Kerchunk with CESM Timeseries Data on the Cloud</a
-    >
+    <a href="../../2023/unstructured-grid-collab-1/">
+      05 May - Recap: Unstructured Grid Collaborative Work Time
+    </a>
   </li>
   
   <li>
-    <a href="../../2023/kerchunk-mom6/"
-      >07 March - Virtual aggregate CESM MOM6 datasets with kerchunk</a
-    >
+    <a href="../../2023/cesm2-le-timeseries-kerchunk/">
+      15 March - Using Kerchunk with CESM Timeseries Data on the Cloud
+    </a>
   </li>
   
   <li>
-    <a href="../esds-event-recap/"
-      >19 December - Recap of a (Re)Introduction to Earth System Data Science (ESDS) Across NCAR/UCAR/UCP</a
-    >
+    <a href="../../2023/kerchunk-mom6/">
+      07 March - Virtual aggregate CESM MOM6 datasets with kerchunk
+    </a>
   </li>
   
 </ul>
 </div>
+</div>
         <div class="sidebar-primary-item">
+
+<div class="ablog-sidebar-item ablog__archive">
 <h3>
   <a href="../../../blog/archive/">Archives</a>
 </h3>
 <ul>
-   
+  
+  
   <li>
-    <a href="../../../blog/2023/">2023 (4)</a>
+    <a href="../../../blog/2023/">2023 (5)</a>
   </li>
-    
+  
+  
+  
   <li>
     <a href="../../../blog/2022/">2022 (13)</a>
   </li>
-    
+  
+  
+  
   <li>
     <a href="../../../blog/2021/">2021 (52)</a>
   </li>
-    
+  
+  
+  
   <li>
     <a href="../../../blog/2020/">2020 (6)</a>
   </li>
-    
+  
+  
+  
   <li>
     <a href="../../../blog/2019/">2019 (2)</a>
   </li>
-   
+  
+  
 </ul>
+</div>
 </div>
     </div>
   
@@ -631,21 +655,22 @@ document.write(`
                 
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
-                   <section class="tex2jax_ignore mathjax_ignore" id="preparation-for-a-re-introduction-to-earth-system-data-science-esds-across-ncar-ucar-ucp">
-<h1>Preparation for a (Re)Introduction to Earth System Data Science (ESDS) Across NCAR/UCAR/UCP<a class="headerlink" href="#preparation-for-a-re-introduction-to-earth-system-data-science-esds-across-ncar-ucar-ucp" title="Permalink to this headline">#</a></h1>
+                  
+<section class="tex2jax_ignore mathjax_ignore" id="preparation-for-a-re-introduction-to-earth-system-data-science-esds-across-ncar-ucar-ucp">
+<h1>Preparation for a (Re)Introduction to Earth System Data Science (ESDS) Across NCAR/UCAR/UCP<a class="headerlink" href="#preparation-for-a-re-introduction-to-earth-system-data-science-esds-across-ncar-ucar-ucp" title="Permalink to this heading">#</a></h1>
 <p>ESDS is hosting a (Re)Introduction to Earth System Data Science (ESDS) Across
 NCAR/UCAR/UCP on <strong>November 10th and 11th</strong> (Thursday-Friday). This event will
 be hybrid, in-person in NCAR’s Mesa Lab Main Seminar Room and virtual over Zoom
 or Google Meet. More information is in this <a class="reference internal" href="../esds-fall-event/"><span class="doc std std-doc">previous post</span></a>.</p>
 <section id="environment-install">
-<h2>Environment Install<a class="headerlink" href="#environment-install" title="Permalink to this headline">#</a></h2>
+<h2>Environment Install<a class="headerlink" href="#environment-install" title="Permalink to this heading">#</a></h2>
 <section id="binder">
-<h3>Binder<a class="headerlink" href="#binder" title="Permalink to this headline">#</a></h3>
+<h3>Binder<a class="headerlink" href="#binder" title="Permalink to this heading">#</a></h3>
 <p>This tutorial is designed to be run from Binder. You can do that by navigating to the <a class="reference external" href="https://github.com/NCAR/geocat-tutorials">GeoCat Tutorial Repository</a> and selecting <a class="reference external" href="https://mybinder.org/v2/gh/NCAR/geocat-tutorials/main">“Launch Binder”</a> in the <code class="docutils literal notranslate"><span class="pre">README.md</span></code>.</p>
 <p>Essentially, Binder is a web service that hosts Jupyter Notebooks in an immediately executable and reproducible way. <a class="reference external" href="https://mybinder.org/">Learn more about Binder</a>. For more information on Jupyter Notebooks, review the <a class="reference external" href="https://foundations.projectpythia.org/foundations/getting-started-jupyter.html">Jupyter Project Pythia content</a>.</p>
 </section>
 <section id="local-install">
-<h3>Local Install<a class="headerlink" href="#local-install" title="Permalink to this headline">#</a></h3>
+<h3>Local Install<a class="headerlink" href="#local-install" title="Permalink to this heading">#</a></h3>
 <p>For those of you who prefer to work on your local machine, please install Miniconda and Jupyter before the ESDS event.</p>
 <p>You can follow the <a class="reference external" href="https://foundations.projectpythia.org/foundations/jupyter.html">Project Pythia instructions to install Python on Jupyter</a>.</p>
 <p>If you have trouble installing miniconda - try to uninstall and reinstall it, making sure you select the correct install location.</p>
@@ -655,7 +680,7 @@ The 08:40 - 09:30: Python Intro and Workspace Set Up slot on Day 1 will be for t
 </section>
 </section>
 <section id="session-homework">
-<h2>Session homework<a class="headerlink" href="#session-homework" title="Permalink to this headline">#</a></h2>
+<h2>Session homework<a class="headerlink" href="#session-homework" title="Permalink to this heading">#</a></h2>
 <p>The events on Day 1 will follow a flipped classroom model, where you watch some tutorials and do study on your own before coming together in your breakout group to troubleshoot, ask questions, or dive deeper. To get the most out of these sessions, please complete the prep work selected by each session leader.</p>
 <p>The breakout groups are:</p>
 <ul class="simple">
@@ -669,29 +694,38 @@ The 08:40 - 09:30: Python Intro and Workspace Set Up slot on Day 1 will be for t
 </section>
 </section>
 
-<div class="section">
-    
+<div class="section ablog__blog_comments">
+  
+  
 
-<div class="section">
-  <span style="float: left">
-     
+
+<div class="section ablog__prev-next">
+  <span class="ablog__prev">
+    
+    
     <a href="../esds-fall-event/">
-      <i class="fa fa-arrow-circle-left"></i> A (Re)Introduction to Earth System Data Science (ESDS) Across NCAR/UCAR/UCP
+      
+      <i class="fa fa-arrow-circle-left"></i>
+      
+      <span>A (Re)Introduction to Earth System Data Science (ESDS) Across NCAR/UCAR/UCP</span>
     </a>
     
   </span>
-  <span>&nbsp;</span>
-  <span style="float: right">
-     
+  <span class="ablog__spacer">&nbsp;</span>
+  <span class="ablog__next">
+    
+    
     <a href="../xarray-groupby-vs-geocat-climatology/">
-      Calculating Temporal Averages with GeoCAT-comp vs Xarray <i
-        class="fa fa-arrow-circle-right"
-      ></i
-      >
+      <span>Calculating Temporal Averages with GeoCAT-comp vs Xarray</span>
+      
+      <i class="fa fa-arrow-circle-right" ></i>
+      
     </a>
     
   </span>
 </div>
+
+  
   
 </div>
 
@@ -772,7 +806,7 @@ The 08:40 - 09:30: Python Intro and Workspace Set Up slot on Day 1 will be for t
       
         <div class="footer-item">
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
     <br/>
   </p>
 </div>

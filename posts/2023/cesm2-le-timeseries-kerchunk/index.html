@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>Cloud-optimized access to CESM Timeseries netCDF files in the Cloud with kerchunk &#8212; NCAR-ESDS 0.1 documentation</title>
   
@@ -42,7 +42,9 @@
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
     <script kind="utterances">
@@ -83,40 +85,19 @@ commentsRunWhenDOMLoaded(addUtterances);
     <script>DOCUMENTATION_OPTIONS.pagename = 'posts/2023/cesm2-le-timeseries-kerchunk';</script>
     <link rel="author" title="About these documents" href="../../../about/" />
     <link rel="index" title="Index" href="../../../genindex/" />
-    <link rel="search" title="Search" href="../../../search/" /> 
+    <link rel="search" title="Search" href="../../../search/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/> 
+  <meta name="docsearch:language" content="en"/>
+
 <link
   rel="alternate"
   type="application/atom+xml"
   href="../../../blog/atom.xml"
   title="NCAR ESDS"
 />
- 
-<style type="text/css">
-  ul.ablog-archive {
-    list-style: none;
-    overflow: auto;
-    margin-left: 0px;
-  }
-  ul.ablog-archive li {
-    float: left;
-    margin-right: 5px;
-    font-size: 80%;
-  }
-  ul.postlist a {
-    font-style: italic;
-  }
-  ul.postlist-style-disc {
-    list-style-type: disc;
-  }
-  ul.postlist-style-none {
-    list-style-type: none;
-  }
-  ul.postlist-style-circle {
-    list-style-type: circle;
-  }
-</style>
+
+
 
   </head>
   
@@ -488,99 +469,167 @@ document.write(`
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
-        <div class="sidebar-primary-item">  
-<h2>
-   <i class="fa fa-calendar"></i>
-  15 March 2023 
-</h2>
+        <div class="sidebar-primary-item">
 
+<div class="ablog-sidebar-item ablog__postcard">
+
+
+<h2>
+  
+  
+  <i class="fa fa-calendar"></i>
+  
+  15 March 2023
+  
+</h2>
 <ul>
-   
-<li id="author">
-  <span><i class="fa-fw fa fa-user"></i></span
-  >
-   
-  <a href="../../../blog/author/max-grover/">Max Grover</a>,   
-  <a href="../../../blog/author/deepak-cherian/">Deepak Cherian</a>  
-</li>
+  
+
+<li id="ablog-sidebar-item author ablog__author">
+  <span>
     
-<li id="tags">
-  <span><i class="fa-fw fa fa-tags"></i> </span
-  >
-   
-  <a href="../../../blog/tag/netcdf/">netcdf</a>   
-  <a href="../../../blog/tag/zarr/">zarr</a>   
-  <a href="../../../blog/tag/cesm/">cesm</a>   
-  <a href="../../../blog/tag/benchmark/">benchmark</a>  
+    <i class="fa-fw fa fa-user"></i>
+    
+    </span>
+  
+  
+  <a href="../../../blog/author/max-grover/">Max Grover</a>
+  
+  ,
+  
+  
+  
+  
+  <a href="../../../blog/author/deepak-cherian/">Deepak Cherian</a>
+  
+  
+  
 </li>
- 
+
+
+
+
+
+<li id="ablog-sidebar-item tags ablog__tags">
+  <span>
+    
+    
+    <i class="fa-fw fa fa-tags"></i>
+    
+    
+    </span>
+  
+  
+  <a href="../../../blog/tag/benchmark/">benchmark</a>
+  
+  
+  
+  
+  
+  <a href="../../../blog/tag/netcdf/">netcdf</a>
+  
+  
+  
+  
+  
+  <a href="../../../blog/tag/cesm/">cesm</a>
+  
+  
+  
+  
+  
+  <a href="../../../blog/tag/zarr/">zarr</a>
+  
+  
+  
+</li>
+
+
 </ul>
 </div>
+</div>
         <div class="sidebar-primary-item">
+
+<div class="ablog-sidebar-item ablog__recentposts">
 <h3>
   <a href="../../../blog/">Recent Posts</a>
 </h3>
 <ul>
-   
+  
+  
   <li>
-    <a href="../office-hours-help/"
-      >10 May - ESDS Office Hours Support</a
-    >
+    <a href="../mfdataset/">
+      16 August - Thinking through CESM data access
+    </a>
   </li>
   
   <li>
-    <a href="../unstructured-grid-collab-1/"
-      >05 May - Recap: Unstructured Grid Collaborative Work Time</a
-    >
+    <a href="../office-hours-help/">
+      10 May - ESDS Office Hours Support
+    </a>
   </li>
   
   <li>
-    <a href="../kerchunk-mom6/"
-      >07 March - Virtual aggregate CESM MOM6 datasets with kerchunk</a
-    >
+    <a href="../unstructured-grid-collab-1/">
+      05 May - Recap: Unstructured Grid Collaborative Work Time
+    </a>
   </li>
   
   <li>
-    <a href="../../2022/esds-event-recap/"
-      >19 December - Recap of a (Re)Introduction to Earth System Data Science (ESDS) Across NCAR/UCAR/UCP</a
-    >
+    <a href="../kerchunk-mom6/">
+      07 March - Virtual aggregate CESM MOM6 datasets with kerchunk
+    </a>
   </li>
   
   <li>
-    <a href="../../2022/cam-se-regridding/"
-      >06 December - Regridding using xESMF and an existing weights file</a
-    >
+    <a href="../../2022/esds-event-recap/">
+      19 December - Recap of a (Re)Introduction to Earth System Data Science (ESDS) Across NCAR/UCAR/UCP
+    </a>
   </li>
   
 </ul>
 </div>
+</div>
         <div class="sidebar-primary-item">
+
+<div class="ablog-sidebar-item ablog__archive">
 <h3>
   <a href="../../../blog/archive/">Archives</a>
 </h3>
 <ul>
-   
+  
+  
   <li>
-    <a href="../../../blog/2023/">2023 (4)</a>
+    <a href="../../../blog/2023/">2023 (5)</a>
   </li>
-    
+  
+  
+  
   <li>
     <a href="../../../blog/2022/">2022 (13)</a>
   </li>
-    
+  
+  
+  
   <li>
     <a href="../../../blog/2021/">2021 (52)</a>
   </li>
-    
+  
+  
+  
   <li>
     <a href="../../../blog/2020/">2020 (6)</a>
   </li>
-    
+  
+  
+  
   <li>
     <a href="../../../blog/2019/">2019 (2)</a>
   </li>
-   
+  
+  
 </ul>
+</div>
 </div>
     </div>
   
@@ -632,10 +681,11 @@ document.write(`
                 
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
-                   <section class="tex2jax_ignore mathjax_ignore" id="cloud-optimized-access-to-cesm-timeseries-netcdf-files-in-the-cloud-with-kerchunk">
-<h1>Cloud-optimized access to CESM Timeseries netCDF files in the Cloud with <code class="docutils literal notranslate"><span class="pre">kerchunk</span></code><a class="headerlink" href="#cloud-optimized-access-to-cesm-timeseries-netcdf-files-in-the-cloud-with-kerchunk" title="Permalink to this headline">#</a></h1>
+                  
+<section class="tex2jax_ignore mathjax_ignore" id="cloud-optimized-access-to-cesm-timeseries-netcdf-files-in-the-cloud-with-kerchunk">
+<h1>Cloud-optimized access to CESM Timeseries netCDF files in the Cloud with <code class="docutils literal notranslate"><span class="pre">kerchunk</span></code><a class="headerlink" href="#cloud-optimized-access-to-cesm-timeseries-netcdf-files-in-the-cloud-with-kerchunk" title="Permalink to this heading">#</a></h1>
 <section id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">#</a></h2>
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h2>
 <p>We benchmark reading a subset of the CESM2-Large Ensemble stored as a collection of netCDF files on the cloud (Amazon / AWS) <strong>from Casper</strong>.
 We use a single ensemble member historical experiment with daily data from 1850 to 2009, with a total dataset size of 600+ GB, from 13 netCDF4 files.</p>
 <p>We read in two ways:</p>
@@ -643,7 +693,7 @@ We use a single ensemble member historical experiment with daily data from 1850 
 <li><p>accessing the netCDF files directly</p></li>
 <li><p>using <code class="docutils literal notranslate"><span class="pre">kerchunk</span></code> as an intermediate layer to enable cloud-optimized access.</p></li>
 </ul>
-<table class="colwidths-auto table">
+<table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>File Access Method</p></th>
 <th class="head"><p>Dataset Lazy Read In Wall Time</p></th>
@@ -670,7 +720,7 @@ We use a single ensemble member historical experiment with daily data from 1850 
 </div>
 </section>
 <section id="imports">
-<h2>Imports<a class="headerlink" href="#imports" title="Permalink to this headline">#</a></h2>
+<h2>Imports<a class="headerlink" href="#imports" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">load_ext</span> watermark
@@ -2619,7 +2669,7 @@ sys      : 3.11.0 | packaged by conda-forge | (main, Jan 14 2023, 12:27:40) [GCC
 </div>
 </section>
 <section id="gather-a-list-of-files-available-from-an-amazon-s3-bucket">
-<h2>Gather a list of files available from an Amazon s3 bucket<a class="headerlink" href="#gather-a-list-of-files-available-from-an-amazon-s3-bucket" title="Permalink to this headline">#</a></h2>
+<h2>Gather a list of files available from an Amazon s3 bucket<a class="headerlink" href="#gather-a-list-of-files-available-from-an-amazon-s3-bucket" title="Permalink to this heading">#</a></h2>
 <p>As mentioned previously, s3 is Amazon’s object store file system. For this example, I moved a single ensemble member’s worth of <strong>daily historical timeseries output</strong> from the CESM2-LE dataset.</p>
 <p>We use <code class="docutils literal notranslate"><span class="pre">fsspec</span></code> to create a filesystem-like representation:</p>
 <div class="cell docutils container">
@@ -2687,7 +2737,7 @@ sys      : 3.11.0 | packaged by conda-forge | (main, Jan 14 2023, 12:27:40) [GCC
 </div>
 </section>
 <section id="approach">
-<h2>Approach<a class="headerlink" href="#approach" title="Permalink to this headline">#</a></h2>
+<h2>Approach<a class="headerlink" href="#approach" title="Permalink to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">kerchunk</span></code> works by first reading a “reference” file that maps virtual chunks of data to byte ranges stored in specific files. This “reference” file looks like a Zarr dataset, and is read using the Zarr library. <a class="reference external" href="https://ncar.github.io/esds/posts/2023/kerchunk-mom6/">Previously</a>, we demonstrated the use of Kerchunk to create virtual aggregate datasets without modifying the files on disk.</p>
 <p>Here, the goal is to demonstrate cloud-optimized data access enabled by using Zarr as an intermediate layer to access underlying netCDF files.</p>
 <p>The approach is similar:</p>
@@ -2697,7 +2747,7 @@ sys      : 3.11.0 | packaged by conda-forge | (main, Jan 14 2023, 12:27:40) [GCC
 </ul>
 </section>
 <section id="generate-the-mapper-files">
-<h2>Generate the Mapper Files<a class="headerlink" href="#generate-the-mapper-files" title="Permalink to this headline">#</a></h2>
+<h2>Generate the Mapper Files<a class="headerlink" href="#generate-the-mapper-files" title="Permalink to this heading">#</a></h2>
 <p>Set the output directory of the json mapping files</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2723,7 +2773,7 @@ sys      : 3.11.0 | packaged by conda-forge | (main, Jan 14 2023, 12:27:40) [GCC
 </div>
 </div>
 <section id="spin-up-a-cluster">
-<h3>Spin up a Cluster<a class="headerlink" href="#spin-up-a-cluster" title="Permalink to this headline">#</a></h3>
+<h3>Spin up a Cluster<a class="headerlink" href="#spin-up-a-cluster" title="Permalink to this heading">#</a></h3>
 <p>We will spin up a dask cluster to add distributed/parallel computing - we are spinning up 10 workers, each with 25 GB of RAM and a single processor</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2862,7 +2912,7 @@ Hosting the HTTP server on port 43962 instead
 </div>
 </section>
 <section id="create-reference-file-for-each-netcdf-file">
-<h3>Create reference file for each netCDF file<a class="headerlink" href="#create-reference-file-for-each-netcdf-file" title="Permalink to this headline">#</a></h3>
+<h3>Create reference file for each netCDF file<a class="headerlink" href="#create-reference-file-for-each-netcdf-file" title="Permalink to this heading">#</a></h3>
 <p>We can compute these reference files in parallel!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2880,7 +2930,7 @@ Wall time: 3min 25s
 </div>
 </section>
 <section id="merge-the-reference-files-together">
-<h3>Merge the reference files together<a class="headerlink" href="#merge-the-reference-files-together" title="Permalink to this headline">#</a></h3>
+<h3>Merge the reference files together<a class="headerlink" href="#merge-the-reference-files-together" title="Permalink to this heading">#</a></h3>
 <p>The previous process produced a <strong>single reference file for each netCDF file</strong> - let’s merge these all together to create single store.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2933,7 +2983,7 @@ Wall time: 3.29 s
 </section>
 <hr class="docutils" />
 <section id="read-directly-from-s3-without-kerchunk">
-<h2>Read directly from S3 (without <code class="docutils literal notranslate"><span class="pre">kerchunk</span></code>)<a class="headerlink" href="#read-directly-from-s3-without-kerchunk" title="Permalink to this headline">#</a></h2>
+<h2>Read directly from S3 (without <code class="docutils literal notranslate"><span class="pre">kerchunk</span></code>)<a class="headerlink" href="#read-directly-from-s3-without-kerchunk" title="Permalink to this heading">#</a></h2>
 <p>We went through all that work previously, but let’s take a look at what the performance would be <em><strong>without</strong></em> using this new <code class="docutils literal notranslate"><span class="pre">Kerchunk</span></code> package.</p>
 <p>To open the files, use <code class="docutils literal notranslate"><span class="pre">fsspec</span></code> again and generate a list of URLs.</p>
 <div class="cell docutils container">
@@ -4835,7 +4885,7 @@ Wall time: 17min 12s
 </div>
 </section>
 <section id="benchmark-reading-in-from-kerchunk-mappings">
-<h2>Benchmark Reading in from <code class="docutils literal notranslate"><span class="pre">Kerchunk</span></code> mappings<a class="headerlink" href="#benchmark-reading-in-from-kerchunk-mappings" title="Permalink to this headline">#</a></h2>
+<h2>Benchmark Reading in from <code class="docutils literal notranslate"><span class="pre">Kerchunk</span></code> mappings<a class="headerlink" href="#benchmark-reading-in-from-kerchunk-mappings" title="Permalink to this heading">#</a></h2>
 <p>Now, we can try reading in using our reference files (created from <code class="docutils literal notranslate"><span class="pre">Kerchunk</span></code>)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -5363,7 +5413,7 @@ Attributes:
             dtype=&#x27;object&#x27;, length=16426, calendar=&#x27;noleap&#x27;, freq=&#x27;D&#x27;))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>zlon</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-7e58af90-e0fc-4ee8-9347-9f7b8d7796c9' class='xr-index-data-in' type='checkbox'/><label for='index-7e58af90-e0fc-4ee8-9347-9f7b8d7796c9' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Float64Index([0.0], dtype=&#x27;float64&#x27;, name=&#x27;zlon&#x27;))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-36240a49-25bc-40bb-b49a-3acaac2556de' class='xr-section-summary-in' type='checkbox'  checked><label for='section-36240a49-25bc-40bb-b49a-3acaac2556de' class='xr-section-summary' >Attributes: <span>(9)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>Conventions :</span></dt><dd>CF-1.0</dd><dt><span>case :</span></dt><dd>b.e21.BHISTcmip6.f09_g17.LE2-1001.001</dd><dt><span>host :</span></dt><dd>mom2</dd><dt><span>initial_file :</span></dt><dd>b.e21.B1850.f09_g17.CMIP6-piControl.001.cam.i.1001-01-01-00000.nc</dd><dt><span>logname :</span></dt><dd>sunseon</dd><dt><span>model_doi_url :</span></dt><dd>https://doi.org/10.5065/D67H1H0V</dd><dt><span>source :</span></dt><dd>CAM</dd><dt><span>time_period_freq :</span></dt><dd>day_1</dd><dt><span>topography_file :</span></dt><dd>/mnt/lustre/share/CESM/cesm_input/atm/cam/topo/fv_0.9x1.25_nc3000_Nsw042_Nrs008_Co060_Fi001_ZR_sgh30_24km_GRNL_c170103.nc</dd></dl></div></li></ul></div></div></div></div>
 </div>
 <section id="plot-the-output-from-the-mapper-method">
-<h3>Plot the output from the Mapper Method<a class="headerlink" href="#plot-the-output-from-the-mapper-method" title="Permalink to this headline">#</a></h3>
+<h3>Plot the output from the Mapper Method<a class="headerlink" href="#plot-the-output-from-the-mapper-method" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
@@ -5420,29 +5470,38 @@ Wall time: 44.2 s
 </section>
 </section>
 
-<div class="section">
-    
+<div class="section ablog__blog_comments">
+  
+  
 
-<div class="section">
-  <span style="float: left">
-     
+
+<div class="section ablog__prev-next">
+  <span class="ablog__prev">
+    
+    
     <a href="../kerchunk-mom6/">
-      <i class="fa fa-arrow-circle-left"></i> Virtual aggregate CESM MOM6 datasets with kerchunk
+      
+      <i class="fa fa-arrow-circle-left"></i>
+      
+      <span>Virtual aggregate CESM MOM6 datasets with kerchunk</span>
     </a>
     
   </span>
-  <span>&nbsp;</span>
-  <span style="float: right">
-     
+  <span class="ablog__spacer">&nbsp;</span>
+  <span class="ablog__next">
+    
+    
     <a href="../unstructured-grid-collab-1/">
-      Recap: Unstructured Grid Collaborative Work Time <i
-        class="fa fa-arrow-circle-right"
-      ></i
-      >
+      <span>Recap: Unstructured Grid Collaborative Work Time</span>
+      
+      <i class="fa fa-arrow-circle-right" ></i>
+      
     </a>
     
   </span>
 </div>
+
+  
   
 </div>
 
@@ -5532,7 +5591,7 @@ Wall time: 44.2 s
       
         <div class="footer-item">
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
     <br/>
   </p>
 </div>

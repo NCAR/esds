@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>Using Intake-ESM’s New Derived Variable Functionality &#8212; NCAR-ESDS 0.1 documentation</title>
   
@@ -42,7 +42,9 @@
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
     <script kind="utterances">
@@ -83,40 +85,19 @@ commentsRunWhenDOMLoaded(addUtterances);
     <script>DOCUMENTATION_OPTIONS.pagename = 'posts/2021/intake-esm-derived-variables';</script>
     <link rel="author" title="About these documents" href="../../../about/" />
     <link rel="index" title="Index" href="../../../genindex/" />
-    <link rel="search" title="Search" href="../../../search/" /> 
+    <link rel="search" title="Search" href="../../../search/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/> 
+  <meta name="docsearch:language" content="en"/>
+
 <link
   rel="alternate"
   type="application/atom+xml"
   href="../../../blog/atom.xml"
   title="NCAR ESDS"
 />
- 
-<style type="text/css">
-  ul.ablog-archive {
-    list-style: none;
-    overflow: auto;
-    margin-left: 0px;
-  }
-  ul.ablog-archive li {
-    float: left;
-    margin-right: 5px;
-    font-size: 80%;
-  }
-  ul.postlist a {
-    font-style: italic;
-  }
-  ul.postlist-style-disc {
-    list-style-type: disc;
-  }
-  ul.postlist-style-none {
-    list-style-type: none;
-  }
-  ul.postlist-style-circle {
-    list-style-type: circle;
-  }
-</style>
+
+
 
   </head>
   
@@ -488,97 +469,154 @@ document.write(`
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
-        <div class="sidebar-primary-item">  
-<h2>
-   <i class="fa fa-calendar"></i>
-  22 October 2021 
-</h2>
+        <div class="sidebar-primary-item">
 
+<div class="ablog-sidebar-item ablog__postcard">
+
+
+<h2>
+  
+  
+  <i class="fa fa-calendar"></i>
+  
+  22 October 2021
+  
+</h2>
 <ul>
-   
-<li id="author">
-  <span><i class="fa-fw fa fa-user"></i></span
-  >
-   
-  <a href="../../../blog/author/max-grover/">Max Grover</a>  
-</li>
+  
+
+<li id="ablog-sidebar-item author ablog__author">
+  <span>
     
-<li id="tags">
-  <span><i class="fa-fw fa fa-tags"></i> </span
-  >
-   
-  <a href="../../../blog/tag/cesm/">cesm</a>   
-  <a href="../../../blog/tag/diagnostics/">diagnostics</a>   
-  <a href="../../../blog/tag/intake/">intake</a>  
+    <i class="fa-fw fa fa-user"></i>
+    
+    </span>
+  
+  
+  <a href="../../../blog/author/max-grover/">Max Grover</a>
+  
+  
+  
 </li>
- 
+
+
+
+
+
+<li id="ablog-sidebar-item tags ablog__tags">
+  <span>
+    
+    
+    <i class="fa-fw fa fa-tags"></i>
+    
+    
+    </span>
+  
+  
+  <a href="../../../blog/tag/cesm/">cesm</a>
+  
+  
+  
+  
+  
+  <a href="../../../blog/tag/diagnostics/">diagnostics</a>
+  
+  
+  
+  
+  
+  <a href="../../../blog/tag/intake/">intake</a>
+  
+  
+  
+</li>
+
+
 </ul>
 </div>
+</div>
         <div class="sidebar-primary-item">
+
+<div class="ablog-sidebar-item ablog__recentposts">
 <h3>
   <a href="../../../blog/">Recent Posts</a>
 </h3>
 <ul>
-   
+  
+  
   <li>
-    <a href="../../2023/office-hours-help/"
-      >10 May - ESDS Office Hours Support</a
-    >
+    <a href="../../2023/mfdataset/">
+      16 August - Thinking through CESM data access
+    </a>
   </li>
   
   <li>
-    <a href="../../2023/unstructured-grid-collab-1/"
-      >05 May - Recap: Unstructured Grid Collaborative Work Time</a
-    >
+    <a href="../../2023/office-hours-help/">
+      10 May - ESDS Office Hours Support
+    </a>
   </li>
   
   <li>
-    <a href="../../2023/cesm2-le-timeseries-kerchunk/"
-      >15 March - Using Kerchunk with CESM Timeseries Data on the Cloud</a
-    >
+    <a href="../../2023/unstructured-grid-collab-1/">
+      05 May - Recap: Unstructured Grid Collaborative Work Time
+    </a>
   </li>
   
   <li>
-    <a href="../../2023/kerchunk-mom6/"
-      >07 March - Virtual aggregate CESM MOM6 datasets with kerchunk</a
-    >
+    <a href="../../2023/cesm2-le-timeseries-kerchunk/">
+      15 March - Using Kerchunk with CESM Timeseries Data on the Cloud
+    </a>
   </li>
   
   <li>
-    <a href="../../2022/esds-event-recap/"
-      >19 December - Recap of a (Re)Introduction to Earth System Data Science (ESDS) Across NCAR/UCAR/UCP</a
-    >
+    <a href="../../2023/kerchunk-mom6/">
+      07 March - Virtual aggregate CESM MOM6 datasets with kerchunk
+    </a>
   </li>
   
 </ul>
 </div>
+</div>
         <div class="sidebar-primary-item">
+
+<div class="ablog-sidebar-item ablog__archive">
 <h3>
   <a href="../../../blog/archive/">Archives</a>
 </h3>
 <ul>
-   
+  
+  
   <li>
-    <a href="../../../blog/2023/">2023 (4)</a>
+    <a href="../../../blog/2023/">2023 (5)</a>
   </li>
-    
+  
+  
+  
   <li>
     <a href="../../../blog/2022/">2022 (13)</a>
   </li>
-    
+  
+  
+  
   <li>
     <a href="../../../blog/2021/">2021 (52)</a>
   </li>
-    
+  
+  
+  
   <li>
     <a href="../../../blog/2020/">2020 (6)</a>
   </li>
-    
+  
+  
+  
   <li>
     <a href="../../../blog/2019/">2019 (2)</a>
   </li>
-   
+  
+  
 </ul>
+</div>
 </div>
     </div>
   
@@ -630,12 +668,13 @@ document.write(`
                 
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
-                   <section class="tex2jax_ignore mathjax_ignore" id="using-intake-esm-s-new-derived-variable-functionality">
-<h1>Using <a class="reference external" href="https://intake-esm.readthedocs.io/en/latest/">Intake-ESM’s</a> New Derived Variable Functionality<a class="headerlink" href="#using-intake-esm-s-new-derived-variable-functionality" title="Permalink to this headline">#</a></h1>
+                  
+<section class="tex2jax_ignore mathjax_ignore" id="using-intake-esm-s-new-derived-variable-functionality">
+<h1>Using <a class="reference external" href="https://intake-esm.readthedocs.io/en/latest/">Intake-ESM’s</a> New Derived Variable Functionality<a class="headerlink" href="#using-intake-esm-s-new-derived-variable-functionality" title="Permalink to this heading">#</a></h1>
 <p>Last week, <a class="reference external" href="https://github.com/andersy005">Anderson Banihirwe</a> added a new feature to intake-esm, enabling users to add “derived variables” to catalogs! This is an exciting addition, and although this has not been included in a release yet, you are welcome to test out the functionality!</p>
 <p>Keep in mind that this is an initial prototype and the API is likely to change.</p>
 <section id="what-is-a-derived-variable">
-<h2>What is a “Derived Variable”<a class="headerlink" href="#what-is-a-derived-variable" title="Permalink to this headline">#</a></h2>
+<h2>What is a “Derived Variable”<a class="headerlink" href="#what-is-a-derived-variable" title="Permalink to this heading">#</a></h2>
 <p>A “derived variable” in this case is a variable that doesn’t itself exist in an <a class="reference external" href="https://intake-esm.readthedocs.io/en/latest/">intake-esm</a> catalog, but can be computed (i.e., “derived”) from variables that do exist in the catalog.
 Currently, the derived variable implementation requires variables on the same grid, etc.; i.e., it assumes that all variables involved can be merged within <strong>the same dataset</strong>.</p>
 <p>An example of a derived variable could be temperature in degrees Fahrenheit. Often times, climate model models write temperature in Celsius or Kelvin, but the user may want degrees Fahrenheit!
@@ -656,14 +695,14 @@ Let&#39;s get started with an example!
 </div>
 </section>
 <section id="installing-the-development-version-of-intake-esm">
-<h2>Installing the Development Version of Intake-ESM<a class="headerlink" href="#installing-the-development-version-of-intake-esm" title="Permalink to this headline">#</a></h2>
+<h2>Installing the Development Version of Intake-ESM<a class="headerlink" href="#installing-the-development-version-of-intake-esm" title="Permalink to this heading">#</a></h2>
 <p>Since this has not yet been released in a version of Intake-ESM, you can install the development version using the following:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>git+https://github.com/intake/intake-esm.git
 </pre></div>
 </div>
 </section>
 <section id="imports">
-<h2>Imports<a class="headerlink" href="#imports" title="Permalink to this headline">#</a></h2>
+<h2>Imports<a class="headerlink" href="#imports" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">holoviews</span> <span class="k">as</span> <span class="nn">hv</span>
@@ -2216,7 +2255,7 @@ roTBs2RqAAAAAElFTkSuQmCC'
 </div>
 </section>
 <section id="spin-up-a-dask-cluster">
-<h2>Spin up a Dask Cluster<a class="headerlink" href="#spin-up-a-dask-cluster" title="Permalink to this headline">#</a></h2>
+<h2>Spin up a Dask Cluster<a class="headerlink" href="#spin-up-a-dask-cluster" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cluster</span> <span class="o">=</span> <span class="n">NCARCluster</span><span class="p">()</span>
@@ -2348,7 +2387,7 @@ Hosting the HTTP server on port 40217 instead
 </div>
 </section>
 <section id="how-to-add-a-derived-variable">
-<h2>How to add a Derived Variable<a class="headerlink" href="#how-to-add-a-derived-variable" title="Permalink to this headline">#</a></h2>
+<h2>How to add a Derived Variable<a class="headerlink" href="#how-to-add-a-derived-variable" title="Permalink to this heading">#</a></h2>
 <p>Let’s compute a derived variable - wind speed! This can be derived from using the zonal (<code class="docutils literal notranslate"><span class="pre">U</span></code>) and meridional (<code class="docutils literal notranslate"><span class="pre">V</span></code>) components of the wind.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2359,7 +2398,7 @@ Hosting the HTTP server on port 40217 instead
 </div>
 </div>
 <section id="creating-our-derived-variable-registry">
-<h3>Creating our Derived Variable Registry<a class="headerlink" href="#creating-our-derived-variable-registry" title="Permalink to this headline">#</a></h3>
+<h3>Creating our Derived Variable Registry<a class="headerlink" href="#creating-our-derived-variable-registry" title="Permalink to this heading">#</a></h3>
 <p>We need to instantiate our derived variable registry, which will store our derived variable information! We use the variable <code class="docutils literal notranslate"><span class="pre">dvr</span></code> for this (<strong>D</strong>erived<strong>V</strong>ariable<strong>R</strong>egistry).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2395,7 +2434,7 @@ Hosting the HTTP server on port 40217 instead
 </section>
 </section>
 <section id="read-in-data-with-our-registry">
-<h2>Read in Data with our Registry<a class="headerlink" href="#read-in-data-with-our-registry" title="Permalink to this headline">#</a></h2>
+<h2>Read in Data with our Registry<a class="headerlink" href="#read-in-data-with-our-registry" title="Permalink to this heading">#</a></h2>
 <p>In this case, we will use data from the CESM Large Ensemble. We load in our derived variable catalog using the <code class="docutils literal notranslate"><span class="pre">registry</span></code> argument.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2576,7 +2615,7 @@ Hosting the HTTP server on port 40217 instead
 </div></div></div>
 </div>
 <section id="calling-to-dataset-dict-to-load-in-the-data">
-<h3>Calling <code class="docutils literal notranslate"><span class="pre">to_dataset_dict</span></code> to Load in the Data<a class="headerlink" href="#calling-to-dataset-dict-to-load-in-the-data" title="Permalink to this headline">#</a></h3>
+<h3>Calling <code class="docutils literal notranslate"><span class="pre">to_dataset_dict</span></code> to Load in the Data<a class="headerlink" href="#calling-to-dataset-dict-to-load-in-the-data" title="Permalink to this heading">#</a></h3>
 <p>We load in the data, which lazily adds our calculation for <code class="docutils literal notranslate"><span class="pre">wind_speed</span></code> to the datasets!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -3576,7 +3615,7 @@ Attributes: (12/21)
 </section>
 </section>
 <section id="apply-an-annual-mean-calculation">
-<h2>Apply an Annual Mean Calculation<a class="headerlink" href="#apply-an-annual-mean-calculation" title="Permalink to this headline">#</a></h2>
+<h2>Apply an Annual Mean Calculation<a class="headerlink" href="#apply-an-annual-mean-calculation" title="Permalink to this heading">#</a></h2>
 <p>Let’s apply an annual average to the data - since all the years are 365 days long, we do not need any special weighting</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -3587,7 +3626,7 @@ Attributes: (12/21)
 </div>
 </section>
 <section id="plot-the-output">
-<h2>Plot the Output<a class="headerlink" href="#plot-the-output" title="Permalink to this headline">#</a></h2>
+<h2>Plot the Output<a class="headerlink" href="#plot-the-output" title="Permalink to this heading">#</a></h2>
 <p>We use <code class="docutils literal notranslate"><span class="pre">hvPlot</span></code> here to plot a global map, selecting only the bottom 8 levels of the atmosphere.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -3640,29 +3679,38 @@ Attributes: (12/21)
 </section>
 </section>
 
-<div class="section">
-    
+<div class="section ablog__blog_comments">
+  
+  
 
-<div class="section">
-  <span style="float: left">
-     
+
+<div class="section ablog__prev-next">
+  <span class="ablog__prev">
+    
+    
     <a href="../xarray-wrf-example/">
-      <i class="fa fa-arrow-circle-left"></i> Reading WRF data into Xarray and Visualizing the Output using hvPlot
+      
+      <i class="fa fa-arrow-circle-left"></i>
+      
+      <span>Reading WRF data into Xarray and Visualizing the Output using hvPlot</span>
     </a>
     
   </span>
-  <span>&nbsp;</span>
-  <span style="float: right">
-     
+  <span class="ablog__spacer">&nbsp;</span>
+  <span class="ablog__next">
+    
+    
     <a href="../advanced-plotting-tutorial/">
-      Advanced Plotting Tutorial <i
-        class="fa fa-arrow-circle-right"
-      ></i
-      >
+      <span>Advanced Plotting Tutorial</span>
+      
+      <i class="fa fa-arrow-circle-right" ></i>
+      
     </a>
     
   </span>
 </div>
+
+  
   
 </div>
 
@@ -3751,7 +3799,7 @@ Attributes: (12/21)
       
         <div class="footer-item">
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
     <br/>
   </p>
 </div>

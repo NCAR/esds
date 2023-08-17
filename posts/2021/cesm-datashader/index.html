@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>Plotting CESM Data on an Unstructured Grid using Geoviews and Datashader &#8212; NCAR-ESDS 0.1 documentation</title>
   
@@ -42,7 +42,9 @@
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
     <script kind="utterances">
@@ -85,40 +87,19 @@ commentsRunWhenDOMLoaded(addUtterances);
     <script>DOCUMENTATION_OPTIONS.pagename = 'posts/2021/cesm-datashader';</script>
     <link rel="author" title="About these documents" href="../../../about/" />
     <link rel="index" title="Index" href="../../../genindex/" />
-    <link rel="search" title="Search" href="../../../search/" /> 
+    <link rel="search" title="Search" href="../../../search/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/> 
+  <meta name="docsearch:language" content="en"/>
+
 <link
   rel="alternate"
   type="application/atom+xml"
   href="../../../blog/atom.xml"
   title="NCAR ESDS"
 />
- 
-<style type="text/css">
-  ul.ablog-archive {
-    list-style: none;
-    overflow: auto;
-    margin-left: 0px;
-  }
-  ul.ablog-archive li {
-    float: left;
-    margin-right: 5px;
-    font-size: 80%;
-  }
-  ul.postlist a {
-    font-style: italic;
-  }
-  ul.postlist-style-disc {
-    list-style-type: disc;
-  }
-  ul.postlist-style-none {
-    list-style-type: none;
-  }
-  ul.postlist-style-circle {
-    list-style-type: circle;
-  }
-</style>
+
+
 
   </head>
   
@@ -490,97 +471,154 @@ document.write(`
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
-        <div class="sidebar-primary-item">  
-<h2>
-   <i class="fa fa-calendar"></i>
-  13 August 2021 
-</h2>
+        <div class="sidebar-primary-item">
 
+<div class="ablog-sidebar-item ablog__postcard">
+
+
+<h2>
+  
+  
+  <i class="fa fa-calendar"></i>
+  
+  13 August 2021
+  
+</h2>
 <ul>
-   
-<li id="author">
-  <span><i class="fa-fw fa fa-user"></i></span
-  >
-   
-  <a href="../../../blog/author/max-grover/">Max Grover</a>  
-</li>
+  
+
+<li id="ablog-sidebar-item author ablog__author">
+  <span>
     
-<li id="tags">
-  <span><i class="fa-fw fa fa-tags"></i> </span
-  >
-   
-  <a href="../../../blog/tag/cesm/">cesm</a>   
-  <a href="../../../blog/tag/visualization/">visualization</a>   
-  <a href="../../../blog/tag/unstructured-grids/">unstructured grids</a>  
+    <i class="fa-fw fa fa-user"></i>
+    
+    </span>
+  
+  
+  <a href="../../../blog/author/max-grover/">Max Grover</a>
+  
+  
+  
 </li>
- 
+
+
+
+
+
+<li id="ablog-sidebar-item tags ablog__tags">
+  <span>
+    
+    
+    <i class="fa-fw fa fa-tags"></i>
+    
+    
+    </span>
+  
+  
+  <a href="../../../blog/tag/visualization/">visualization</a>
+  
+  
+  
+  
+  
+  <a href="../../../blog/tag/unstructured-grids/">unstructured grids</a>
+  
+  
+  
+  
+  
+  <a href="../../../blog/tag/cesm/">cesm</a>
+  
+  
+  
+</li>
+
+
 </ul>
 </div>
+</div>
         <div class="sidebar-primary-item">
+
+<div class="ablog-sidebar-item ablog__recentposts">
 <h3>
   <a href="../../../blog/">Recent Posts</a>
 </h3>
 <ul>
-   
+  
+  
   <li>
-    <a href="../../2023/office-hours-help/"
-      >10 May - ESDS Office Hours Support</a
-    >
+    <a href="../../2023/mfdataset/">
+      16 August - Thinking through CESM data access
+    </a>
   </li>
   
   <li>
-    <a href="../../2023/unstructured-grid-collab-1/"
-      >05 May - Recap: Unstructured Grid Collaborative Work Time</a
-    >
+    <a href="../../2023/office-hours-help/">
+      10 May - ESDS Office Hours Support
+    </a>
   </li>
   
   <li>
-    <a href="../../2023/cesm2-le-timeseries-kerchunk/"
-      >15 March - Using Kerchunk with CESM Timeseries Data on the Cloud</a
-    >
+    <a href="../../2023/unstructured-grid-collab-1/">
+      05 May - Recap: Unstructured Grid Collaborative Work Time
+    </a>
   </li>
   
   <li>
-    <a href="../../2023/kerchunk-mom6/"
-      >07 March - Virtual aggregate CESM MOM6 datasets with kerchunk</a
-    >
+    <a href="../../2023/cesm2-le-timeseries-kerchunk/">
+      15 March - Using Kerchunk with CESM Timeseries Data on the Cloud
+    </a>
   </li>
   
   <li>
-    <a href="../../2022/esds-event-recap/"
-      >19 December - Recap of a (Re)Introduction to Earth System Data Science (ESDS) Across NCAR/UCAR/UCP</a
-    >
+    <a href="../../2023/kerchunk-mom6/">
+      07 March - Virtual aggregate CESM MOM6 datasets with kerchunk
+    </a>
   </li>
   
 </ul>
 </div>
+</div>
         <div class="sidebar-primary-item">
+
+<div class="ablog-sidebar-item ablog__archive">
 <h3>
   <a href="../../../blog/archive/">Archives</a>
 </h3>
 <ul>
-   
+  
+  
   <li>
-    <a href="../../../blog/2023/">2023 (4)</a>
+    <a href="../../../blog/2023/">2023 (5)</a>
   </li>
-    
+  
+  
+  
   <li>
     <a href="../../../blog/2022/">2022 (13)</a>
   </li>
-    
+  
+  
+  
   <li>
     <a href="../../../blog/2021/">2021 (52)</a>
   </li>
-    
+  
+  
+  
   <li>
     <a href="../../../blog/2020/">2020 (6)</a>
   </li>
-    
+  
+  
+  
   <li>
     <a href="../../../blog/2019/">2019 (2)</a>
   </li>
-   
+  
+  
 </ul>
+</div>
 </div>
     </div>
   
@@ -632,8 +670,9 @@ document.write(`
                 
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
-                   <section class="tex2jax_ignore mathjax_ignore" id="plotting-cesm-data-on-an-unstructured-grid-using-geoviews-and-datashader">
-<h1>Plotting CESM Data on an Unstructured Grid using <code class="docutils literal notranslate"><span class="pre">Geoviews</span></code> and <code class="docutils literal notranslate"><span class="pre">Datashader</span></code><a class="headerlink" href="#plotting-cesm-data-on-an-unstructured-grid-using-geoviews-and-datashader" title="Permalink to this headline">#</a></h1>
+                  
+<section class="tex2jax_ignore mathjax_ignore" id="plotting-cesm-data-on-an-unstructured-grid-using-geoviews-and-datashader">
+<h1>Plotting CESM Data on an Unstructured Grid using <code class="docutils literal notranslate"><span class="pre">Geoviews</span></code> and <code class="docutils literal notranslate"><span class="pre">Datashader</span></code><a class="headerlink" href="#plotting-cesm-data-on-an-unstructured-grid-using-geoviews-and-datashader" title="Permalink to this heading">#</a></h1>
 <p>This week, during Xdev office hours, <a class="reference external" href="https://staff.ucar.edu/users/yeager">Steve Yeager</a> raised a question regarding plotting unstructured grid data within Python. He was interested in plotting output from the <a class="reference external" href="https://www.cesm.ucar.edu/models/atm-cam/#:~:text=The%20Community%20Earth%20System%20Model,Department%20of%20Energy%20(DOE).">Community Atmosphere Model</a>, which supports unstructured grids, essentially a combination of triangles allowing for higher resolution in certain parts of the domain. This can be adventageous when wanting to achieve the benefits of high resolution within the primary domain, while maintaining the global scale of the model. This week, <a class="reference external" href="https://twitter.com/NCAR_Science/status/1425583582819483652?s=20">NCAR Science</a> tweeted a great explanation of how revolutionary this capability is in the context of resolving processes over Greenland.</p>
 <p>Unstructured grids can be difficult to plot directly within Python since they do not follow the typical <code class="docutils literal notranslate"><span class="pre">lat</span></code>, <code class="docutils literal notranslate"><span class="pre">lon</span></code> (x, y) convention. There is some preprocessing that needs to be applied before plotting.</p>
 <p>The two main points include:</p>
@@ -643,20 +682,20 @@ document.write(`
 </ul>
 <p>Fortunately, <code class="docutils literal notranslate"><span class="pre">SciPy</span></code> and <code class="docutils literal notranslate"><span class="pre">Datashader</span></code> provide utilities for this! We can also use <code class="docutils literal notranslate"><span class="pre">GeoViews</span></code>/<code class="docutils literal notranslate"><span class="pre">Holoviews</span></code> to interactively look at the data.</p>
 <section id="imports">
-<h2>Imports<a class="headerlink" href="#imports" title="Permalink to this headline">#</a></h2>
+<h2>Imports<a class="headerlink" href="#imports" title="Permalink to this heading">#</a></h2>
 <p>The main packages we will use here (outside of the “core” scientific packages), include:</p>
 <section id="datashader">
-<h3>Datashader<a class="headerlink" href="#datashader" title="Permalink to this headline">#</a></h3>
+<h3>Datashader<a class="headerlink" href="#datashader" title="Permalink to this heading">#</a></h3>
 <p>From the <a class="reference external" href="https://datashader.org/index.html">datashader documention</a>:</p>
 <p><em>“Datashader is a graphics pipeline system for creating meaningful representations of large datasets quickly and flexibly. Datashader breaks the creation of images into a series of explicit steps that allow computations to be done on intermediate representations. This approach allows accurate and effective visualizations to be produced automatically without trial-and-error parameter tuning, and also makes it simple for data scientists to focus on particular data and relationships of interest in a principled way.”</em></p>
 </section>
 <section id="holoviews">
-<h3>Holoviews<a class="headerlink" href="#holoviews" title="Permalink to this headline">#</a></h3>
+<h3>Holoviews<a class="headerlink" href="#holoviews" title="Permalink to this heading">#</a></h3>
 <p>From the <a class="reference external" href="https://holoviews.org/">holoviews documentation</a>:</p>
 <p><em>“HoloViews is an open-source Python library designed to make data analysis and visualization seamless and simple. With HoloViews, you can usually express what you want to do in very few lines of code, letting you focus on what you are trying to explore and convey, not on the process of plotting.”</em></p>
 </section>
 <section id="geoviews">
-<h3>Geoviews<a class="headerlink" href="#geoviews" title="Permalink to this headline">#</a></h3>
+<h3>Geoviews<a class="headerlink" href="#geoviews" title="Permalink to this heading">#</a></h3>
 <p>From the <a class="reference external" href="https://geoviews.org/index.html">geoviews documentation</a></p>
 <p>*”GeoViews is a Python library that makes it easy to explore and visualize geographical, meteorological, and oceanographic datasets, such as those used in weather, climate, and remote sensing research.</p>
 <p>GeoViews is built on the HoloViews library for building flexible visualizations of multidimensional data. GeoViews adds a family of geographic plot types based on the Cartopy library, plotted using either the Matplotlib or Bokeh packages. With GeoViews, you can now work easily and naturally with large, multidimensional geographic datasets, instantly visualizing any subset or combination of them, while always being able to access the raw data underlying any plot”*</p>
@@ -2221,7 +2260,7 @@ roTBs2RqAAAAAElFTkSuQmCC'
 </section>
 </section>
 <section id="read-in-the-data">
-<h2>Read in the data<a class="headerlink" href="#read-in-the-data" title="Permalink to this headline">#</a></h2>
+<h2>Read in the data<a class="headerlink" href="#read-in-the-data" title="Permalink to this heading">#</a></h2>
 <p>In this case, we are using test data provided by Steve Yeager</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2626,7 +2665,7 @@ Attributes: (12/14)
 </div>
 </section>
 <section id="setup-the-traiangulate-function-described-in-the-datashader-trimesh-documentation">
-<h2>Setup the <code class="docutils literal notranslate"><span class="pre">traiangulate</span></code> function, described in the <a class="reference external" href="https://datashader.org/user_guide/Trimesh.html"><code class="docutils literal notranslate"><span class="pre">datashader.Trimesh</span></code></a> documentation<a class="headerlink" href="#setup-the-traiangulate-function-described-in-the-datashader-trimesh-documentation" title="Permalink to this headline">#</a></h2>
+<h2>Setup the <code class="docutils literal notranslate"><span class="pre">traiangulate</span></code> function, described in the <a class="reference external" href="https://datashader.org/user_guide/Trimesh.html"><code class="docutils literal notranslate"><span class="pre">datashader.Trimesh</span></code></a> documentation<a class="headerlink" href="#setup-the-traiangulate-function-described-in-the-datashader-trimesh-documentation" title="Permalink to this heading">#</a></h2>
 <p>We can use the <code class="docutils literal notranslate"><span class="pre">Delaunay</span></code> triangulation function from <code class="docutils literal notranslate"><span class="pre">scipy.spatial</span></code> to calculate the vertices from our latitudes and longitudes</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2643,7 +2682,7 @@ Attributes: (12/14)
 </div>
 </div>
 <section id="apply-this-function-to-our-dataset">
-<h3>Apply this function to our dataset<a class="headerlink" href="#apply-this-function-to-our-dataset" title="Permalink to this headline">#</a></h3>
+<h3>Apply this function to our dataset<a class="headerlink" href="#apply-this-function-to-our-dataset" title="Permalink to this heading">#</a></h3>
 <p>We extract our lats, lons, and value (<code class="docutils literal notranslate"><span class="pre">TREFHT</span></code> aka <code class="docutils literal notranslate"><span class="pre">temp</span></code> ) from the dataset, and stack them together</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2696,7 +2735,7 @@ Wall time: 6.74 s
 </section>
 </section>
 <section id="plot-the-result-using-datashader-geoviews-holoviews">
-<h2>Plot the result using <code class="docutils literal notranslate"><span class="pre">Datashader</span></code> + <code class="docutils literal notranslate"><span class="pre">Geoviews</span></code>/<code class="docutils literal notranslate"><span class="pre">Holoviews</span></code><a class="headerlink" href="#plot-the-result-using-datashader-geoviews-holoviews" title="Permalink to this headline">#</a></h2>
+<h2>Plot the result using <code class="docutils literal notranslate"><span class="pre">Datashader</span></code> + <code class="docutils literal notranslate"><span class="pre">Geoviews</span></code>/<code class="docutils literal notranslate"><span class="pre">Holoviews</span></code><a class="headerlink" href="#plot-the-result-using-datashader-geoviews-holoviews" title="Permalink to this heading">#</a></h2>
 <p>Now that we have both our <code class="docutils literal notranslate"><span class="pre">triangulations</span></code> and <code class="docutils literal notranslate"><span class="pre">vertices</span></code>, we can input this into the <code class="docutils literal notranslate"><span class="pre">geoviews.TriMesh</span></code> function.  We add a label for this plot, and a coordinate reference system.</p>
 <p>Wrapping that within <code class="docutils literal notranslate"><span class="pre">rasterize</span></code> will ensure that we do not read in the entire meshgrid at once; but rather, render the image as neccessary.</p>
 <p>In the second line, we specify the output options (<code class="docutils literal notranslate"><span class="pre">opts</span></code>) including:</p>
@@ -2768,34 +2807,43 @@ Wall time: 206 ms
 </div>
 </section>
 <section id="conlcusion">
-<h2>Conlcusion<a class="headerlink" href="#conlcusion" title="Permalink to this headline">#</a></h2>
+<h2>Conlcusion<a class="headerlink" href="#conlcusion" title="Permalink to this heading">#</a></h2>
 <p>The open-source Python plotting stack, specifically packages such as <code class="docutils literal notranslate"><span class="pre">Datashader</span></code> and <code class="docutils literal notranslate"><span class="pre">Geoviews</span></code>, can be quite powerful when plotting unstructured grids. I encourage you to check out the <a class="reference external" href="https://geoviews.org/gallery/index.html">Geoviews Gallery</a> as well as the <a class="reference external" href="https://datashader.org/user_guide/Trimesh.html">Trimesh section of the Datashader Documentation</a>! Happy plotting!</p>
 </section>
 </section>
 
-<div class="section">
-    
+<div class="section ablog__blog_comments">
+  
+  
 
-<div class="section">
-  <span style="float: left">
-     
+
+<div class="section ablog__prev-next">
+  <span class="ablog__prev">
+    
+    
     <a href="../intake-cesm2-le-glade-example/">
-      <i class="fa fa-arrow-circle-left"></i> Using Intake-ESM to Analyze Data from CESM2-LE
+      
+      <i class="fa fa-arrow-circle-left"></i>
+      
+      <span>Using Intake-ESM to Analyze Data from CESM2-LE</span>
     </a>
     
   </span>
-  <span>&nbsp;</span>
-  <span style="float: right">
-     
+  <span class="ablog__spacer">&nbsp;</span>
+  <span class="ablog__next">
+    
+    
     <a href="../geocat-tutorial/">
-      Plotting with GeoCAT Tutorial <i
-        class="fa fa-arrow-circle-right"
-      ></i
-      >
+      <span>Plotting with GeoCAT Tutorial</span>
+      
+      <i class="fa fa-arrow-circle-right" ></i>
+      
     </a>
     
   </span>
 </div>
+
+  
   
 </div>
 
@@ -2883,7 +2931,7 @@ Wall time: 206 ms
       
         <div class="footer-item">
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
     <br/>
   </p>
 </div>

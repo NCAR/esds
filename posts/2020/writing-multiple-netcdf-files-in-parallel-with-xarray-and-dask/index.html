@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>Writing multiple netCDF files in parallel with xarray and dask &#8212; NCAR-ESDS 0.1 documentation</title>
   
@@ -42,7 +42,9 @@
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
     <script kind="utterances">
@@ -83,40 +85,19 @@ commentsRunWhenDOMLoaded(addUtterances);
     <script>DOCUMENTATION_OPTIONS.pagename = 'posts/2020/writing-multiple-netcdf-files-in-parallel-with-xarray-and-dask';</script>
     <link rel="author" title="About these documents" href="../../../about/" />
     <link rel="index" title="Index" href="../../../genindex/" />
-    <link rel="search" title="Search" href="../../../search/" /> 
+    <link rel="search" title="Search" href="../../../search/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/> 
+  <meta name="docsearch:language" content="en"/>
+
 <link
   rel="alternate"
   type="application/atom+xml"
   href="../../../blog/atom.xml"
   title="NCAR ESDS"
 />
- 
-<style type="text/css">
-  ul.ablog-archive {
-    list-style: none;
-    overflow: auto;
-    margin-left: 0px;
-  }
-  ul.ablog-archive li {
-    float: left;
-    margin-right: 5px;
-    font-size: 80%;
-  }
-  ul.postlist a {
-    font-style: italic;
-  }
-  ul.postlist-style-disc {
-    list-style-type: disc;
-  }
-  ul.postlist-style-none {
-    list-style-type: none;
-  }
-  ul.postlist-style-circle {
-    list-style-type: circle;
-  }
-</style>
+
+
 
   </head>
   
@@ -488,98 +469,160 @@ document.write(`
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
-        <div class="sidebar-primary-item">  
-<h2>
-   <i class="fa fa-calendar"></i>
-  29 June 2020 
-</h2>
+        <div class="sidebar-primary-item">
 
+<div class="ablog-sidebar-item ablog__postcard">
+
+
+<h2>
+  
+  
+  <i class="fa fa-calendar"></i>
+  
+  29 June 2020
+  
+</h2>
 <ul>
-   
-<li id="author">
-  <span><i class="fa-fw fa fa-user"></i></span
-  >
-   
-  <a href="../../../blog/author/anderson-banihirwe/">Anderson Banihirwe</a>  
-</li>
+  
+
+<li id="ablog-sidebar-item author ablog__author">
+  <span>
     
-<li id="tags">
-  <span><i class="fa-fw fa fa-tags"></i> </span
-  >
-   
-  <a href="../../../blog/tag/netcdf/">netcdf</a>   
-  <a href="../../../blog/tag/python/">python</a>   
-  <a href="../../../blog/tag/xarray/">xarray</a>   
-  <a href="../../../blog/tag/dask/">dask</a>  
+    <i class="fa-fw fa fa-user"></i>
+    
+    </span>
+  
+  
+  <a href="../../../blog/author/anderson-banihirwe/">Anderson Banihirwe</a>
+  
+  
+  
 </li>
- 
+
+
+
+
+
+<li id="ablog-sidebar-item tags ablog__tags">
+  <span>
+    
+    
+    <i class="fa-fw fa fa-tags"></i>
+    
+    
+    </span>
+  
+  
+  <a href="../../../blog/tag/dask/">dask</a>
+  
+  
+  
+  
+  
+  <a href="../../../blog/tag/netcdf/">netcdf</a>
+  
+  
+  
+  
+  
+  <a href="../../../blog/tag/python/">python</a>
+  
+  
+  
+  
+  
+  <a href="../../../blog/tag/xarray/">xarray</a>
+  
+  
+  
+</li>
+
+
 </ul>
 </div>
+</div>
         <div class="sidebar-primary-item">
+
+<div class="ablog-sidebar-item ablog__recentposts">
 <h3>
   <a href="../../../blog/">Recent Posts</a>
 </h3>
 <ul>
-   
+  
+  
   <li>
-    <a href="../../2023/office-hours-help/"
-      >10 May - ESDS Office Hours Support</a
-    >
+    <a href="../../2023/mfdataset/">
+      16 August - Thinking through CESM data access
+    </a>
   </li>
   
   <li>
-    <a href="../../2023/unstructured-grid-collab-1/"
-      >05 May - Recap: Unstructured Grid Collaborative Work Time</a
-    >
+    <a href="../../2023/office-hours-help/">
+      10 May - ESDS Office Hours Support
+    </a>
   </li>
   
   <li>
-    <a href="../../2023/cesm2-le-timeseries-kerchunk/"
-      >15 March - Using Kerchunk with CESM Timeseries Data on the Cloud</a
-    >
+    <a href="../../2023/unstructured-grid-collab-1/">
+      05 May - Recap: Unstructured Grid Collaborative Work Time
+    </a>
   </li>
   
   <li>
-    <a href="../../2023/kerchunk-mom6/"
-      >07 March - Virtual aggregate CESM MOM6 datasets with kerchunk</a
-    >
+    <a href="../../2023/cesm2-le-timeseries-kerchunk/">
+      15 March - Using Kerchunk with CESM Timeseries Data on the Cloud
+    </a>
   </li>
   
   <li>
-    <a href="../../2022/esds-event-recap/"
-      >19 December - Recap of a (Re)Introduction to Earth System Data Science (ESDS) Across NCAR/UCAR/UCP</a
-    >
+    <a href="../../2023/kerchunk-mom6/">
+      07 March - Virtual aggregate CESM MOM6 datasets with kerchunk
+    </a>
   </li>
   
 </ul>
 </div>
+</div>
         <div class="sidebar-primary-item">
+
+<div class="ablog-sidebar-item ablog__archive">
 <h3>
   <a href="../../../blog/archive/">Archives</a>
 </h3>
 <ul>
-   
+  
+  
   <li>
-    <a href="../../../blog/2023/">2023 (4)</a>
+    <a href="../../../blog/2023/">2023 (5)</a>
   </li>
-    
+  
+  
+  
   <li>
     <a href="../../../blog/2022/">2022 (13)</a>
   </li>
-    
+  
+  
+  
   <li>
     <a href="../../../blog/2021/">2021 (52)</a>
   </li>
-    
+  
+  
+  
   <li>
     <a href="../../../blog/2020/">2020 (6)</a>
   </li>
-    
+  
+  
+  
   <li>
     <a href="../../../blog/2019/">2019 (2)</a>
   </li>
-   
+  
+  
 </ul>
+</div>
 </div>
     </div>
   
@@ -631,8 +674,9 @@ document.write(`
                 
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
-                   <section class="tex2jax_ignore mathjax_ignore" id="writing-multiple-netcdf-files-in-parallel-with-xarray-and-dask">
-<h1>Writing multiple netCDF files in parallel with xarray and dask<a class="headerlink" href="#writing-multiple-netcdf-files-in-parallel-with-xarray-and-dask" title="Permalink to this headline">#</a></h1>
+                  
+<section class="tex2jax_ignore mathjax_ignore" id="writing-multiple-netcdf-files-in-parallel-with-xarray-and-dask">
+<h1>Writing multiple netCDF files in parallel with xarray and dask<a class="headerlink" href="#writing-multiple-netcdf-files-in-parallel-with-xarray-and-dask" title="Permalink to this heading">#</a></h1>
 <p>A typical computation workflow with xarray consists of:</p>
 <ol class="arabic simple">
 <li><p>reading one or more netCDF files into an xarray dataset backed by dask using <code class="docutils literal notranslate"><span class="pre">xr.open_mfdataset()</span></code> or <code class="docutils literal notranslate"><span class="pre">xr.open_dataset(chunks=...)</span></code>,</p></li>
@@ -654,9 +698,9 @@ document.write(`
 </pre></div>
 </div>
 <section id="please-show-me-the-code">
-<h2>Please show me the code<a class="headerlink" href="#please-show-me-the-code" title="Permalink to this headline">#</a></h2>
+<h2>Please show me the code<a class="headerlink" href="#please-show-me-the-code" title="Permalink to this heading">#</a></h2>
 <section id="package-imports">
-<h3>Package imports<a class="headerlink" href="#package-imports" title="Permalink to this headline">#</a></h3>
+<h3>Package imports<a class="headerlink" href="#package-imports" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -703,7 +747,7 @@ document.write(`
 </div>
 </section>
 <section id="load-some-toy-dataset">
-<h3>Load some toy dataset<a class="headerlink" href="#load-some-toy-dataset" title="Permalink to this headline">#</a></h3>
+<h3>Load some toy dataset<a class="headerlink" href="#load-some-toy-dataset" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">tutorial</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;rasm&#39;</span><span class="p">,</span> <span class="n">chunks</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;time&#39;</span><span class="p">:</span> <span class="mi">12</span><span class="p">})</span>
@@ -1229,7 +1273,7 @@ history deleted for brevity</dd></dl></div></li></ul></div></div></div></div>
 </div>
 </section>
 <section id="perform-a-computation-on-input-dataset">
-<h3>Perform a computation on input dataset<a class="headerlink" href="#perform-a-computation-on-input-dataset" title="Permalink to this headline">#</a></h3>
+<h3>Perform a computation on input dataset<a class="headerlink" href="#perform-a-computation-on-input-dataset" title="Permalink to this heading">#</a></h3>
 <p>As you can see, our input dataset is chunked along the <code class="docutils literal notranslate"><span class="pre">time</span></code> dimension. This produces an xarray dataset with 3 chunks. For illustrative purposes, let’s apply some arbitray computation on our dataset:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1251,7 +1295,7 @@ history deleted for brevity</dd></dl></div></li></ul></div></div></div></div>
 <p>Our resulting xarray dataset has the same dimensions and the same number of chunks as our input dataset.</p>
 </section>
 <section id="create-a-helper-function-to-split-a-dataset-into-sub-datasets">
-<h3>Create a helper function to split a dataset into sub-datasets<a class="headerlink" href="#create-a-helper-function-to-split-a-dataset-into-sub-datasets" title="Permalink to this headline">#</a></h3>
+<h3>Create a helper function to split a dataset into sub-datasets<a class="headerlink" href="#create-a-helper-function-to-split-a-dataset-into-sub-datasets" title="Permalink to this heading">#</a></h3>
 <p>Our main objective is to save this resulting dataset into multiple netCDF files by saving each chunk in its own netCDF file. To accomplish this, we need to create a function that allows us to split a dataset into sub-datasets for each chunk. The following code snippet was adapted from this <a class="reference external" href="https://github.com/pydata/xarray/issues/1093#issuecomment-259213382">comment</a> by <a class="reference external" href="https://github.com/shoyer">Stephan Hoyer</a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1300,7 +1344,7 @@ history deleted for brevity</dd></dl></div></li></ul></div></div></div></div>
 <p>Each item in the returned list consists of an xarray dataset corresponding to each sliced chunk. Now that we have a list of datasets, we need another helper function that will generate a filepath for us when given an xarray dataset as input:</p>
 </section>
 <section id="create-a-helper-function-for-generating-a-filepath">
-<h3>Create a helper function for generating a filepath<a class="headerlink" href="#create-a-helper-function-for-generating-a-filepath" title="Permalink to this headline">#</a></h3>
+<h3>Create a helper function for generating a filepath<a class="headerlink" href="#create-a-helper-function-for-generating-a-filepath" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">create_filepath</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span> <span class="n">prefix</span><span class="o">=</span><span class="s1">&#39;filename&#39;</span><span class="p">,</span> <span class="n">root_path</span><span class="o">=</span><span class="s2">&quot;.&quot;</span><span class="p">):</span>
@@ -1346,7 +1390,7 @@ history deleted for brevity</dd></dl></div></li></ul></div></div></div></div>
 </div>
 </section>
 <section id="invoke-xr-save-mfdataset">
-<h3>Invoke <code class="docutils literal notranslate"><span class="pre">xr.save_mfdataset()</span></code><a class="headerlink" href="#invoke-xr-save-mfdataset" title="Permalink to this headline">#</a></h3>
+<h3>Invoke <code class="docutils literal notranslate"><span class="pre">xr.save_mfdataset()</span></code><a class="headerlink" href="#invoke-xr-save-mfdataset" title="Permalink to this heading">#</a></h3>
 <p>At this point we have two lists:</p>
 <ol class="arabic simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">datasets</span></code>: List of datasets to save.</p></li>
@@ -1362,7 +1406,7 @@ history deleted for brevity</dd></dl></div></li></ul></div></div></div></div>
 </div>
 </section>
 <section id="confirm-that-the-output-files-were-properly-written">
-<h3>Confirm that the output files were properly written<a class="headerlink" href="#confirm-that-the-output-files-were-properly-written" title="Permalink to this headline">#</a></h3>
+<h3>Confirm that the output files were properly written<a class="headerlink" href="#confirm-that-the-output-files-were-properly-written" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">new_ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_mfdataset</span><span class="p">(</span><span class="n">paths</span><span class="p">,</span> <span class="n">combine</span><span class="o">=</span><span class="s1">&#39;by_coords&#39;</span><span class="p">)</span>
@@ -1895,34 +1939,43 @@ dl.xr-attrs {
 </section>
 </section>
 <section id="conclusion">
-<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">#</a></h2>
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this heading">#</a></h2>
 <p>This article was inspired by a problem that my colleague was running into. I thought it would be useful to document this fix in a blog post. Many thanks to <a class="reference external" href="https://github.com/dcherian">Deepak Cherian</a> for pointing me to some relevant xarray issues and to the <a class="reference external" href="https://github.com/orgs/NCAR/teams/xdev">&#64;NCAR/xdev</a> team for their valuable and critical feedback on drafts of this article along the way.</p>
 </section>
 </section>
 
-<div class="section">
-    
+<div class="section ablog__blog_comments">
+  
+  
 
-<div class="section">
-  <span style="float: left">
-     
+
+<div class="section ablog__prev-next">
+  <span class="ablog__prev">
+    
+    
     <a href="../templating-isnt-just-for-web-developers/">
-      <i class="fa fa-arrow-circle-left"></i> Templating isn’t just for Web Developers!
+      
+      <i class="fa fa-arrow-circle-left"></i>
+      
+      <span>Templating isn’t just for Web Developers!</span>
     </a>
     
   </span>
-  <span>&nbsp;</span>
-  <span style="float: right">
-     
+  <span class="ablog__spacer">&nbsp;</span>
+  <span class="ablog__next">
+    
+    
     <a href="../tutorial-seminar-series/">
-      Tutorial Seminar Series <i
-        class="fa fa-arrow-circle-right"
-      ></i
-      >
+      <span>Tutorial Seminar Series</span>
+      
+      <i class="fa fa-arrow-circle-right" ></i>
+      
     </a>
     
   </span>
 </div>
+
+  
   
 </div>
 
@@ -2008,7 +2061,7 @@ dl.xr-attrs {
       
         <div class="footer-item">
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
     <br/>
   </p>
 </div>

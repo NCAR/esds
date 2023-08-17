@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>Creating Model Documentation Using Jupyterbook and Intake-esm &#8212; NCAR-ESDS 0.1 documentation</title>
   
@@ -42,7 +42,9 @@
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
     <script kind="utterances">
@@ -83,40 +85,19 @@ commentsRunWhenDOMLoaded(addUtterances);
     <script>DOCUMENTATION_OPTIONS.pagename = 'posts/2021/model_documentation_jupyterbook';</script>
     <link rel="author" title="About these documents" href="../../../about/" />
     <link rel="index" title="Index" href="../../../genindex/" />
-    <link rel="search" title="Search" href="../../../search/" /> 
+    <link rel="search" title="Search" href="../../../search/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/> 
+  <meta name="docsearch:language" content="en"/>
+
 <link
   rel="alternate"
   type="application/atom+xml"
   href="../../../blog/atom.xml"
   title="NCAR ESDS"
 />
- 
-<style type="text/css">
-  ul.ablog-archive {
-    list-style: none;
-    overflow: auto;
-    margin-left: 0px;
-  }
-  ul.ablog-archive li {
-    float: left;
-    margin-right: 5px;
-    font-size: 80%;
-  }
-  ul.postlist a {
-    font-style: italic;
-  }
-  ul.postlist-style-disc {
-    list-style-type: disc;
-  }
-  ul.postlist-style-none {
-    list-style-type: none;
-  }
-  ul.postlist-style-circle {
-    list-style-type: circle;
-  }
-</style>
+
+
 
   </head>
   
@@ -488,98 +469,160 @@ document.write(`
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
-        <div class="sidebar-primary-item">  
-<h2>
-   <i class="fa fa-calendar"></i>
-  25 June 2021 
-</h2>
+        <div class="sidebar-primary-item">
 
+<div class="ablog-sidebar-item ablog__postcard">
+
+
+<h2>
+  
+  
+  <i class="fa fa-calendar"></i>
+  
+  25 June 2021
+  
+</h2>
 <ul>
-   
-<li id="author">
-  <span><i class="fa-fw fa fa-user"></i></span
-  >
-   
-  <a href="../../../blog/author/max-grover/">Max Grover</a>  
-</li>
+  
+
+<li id="ablog-sidebar-item author ablog__author">
+  <span>
     
-<li id="tags">
-  <span><i class="fa-fw fa fa-tags"></i> </span
-  >
-   
-  <a href="../../../blog/tag/jupyter/">jupyter</a>   
-  <a href="../../../blog/tag/documentation/">documentation</a>   
-  <a href="../../../blog/tag/cesm/">cesm</a>   
-  <a href="../../../blog/tag/intake/">intake</a>  
+    <i class="fa-fw fa fa-user"></i>
+    
+    </span>
+  
+  
+  <a href="../../../blog/author/max-grover/">Max Grover</a>
+  
+  
+  
 </li>
- 
+
+
+
+
+
+<li id="ablog-sidebar-item tags ablog__tags">
+  <span>
+    
+    
+    <i class="fa-fw fa fa-tags"></i>
+    
+    
+    </span>
+  
+  
+  <a href="../../../blog/tag/jupyter/">jupyter</a>
+  
+  
+  
+  
+  
+  <a href="../../../blog/tag/cesm/">cesm</a>
+  
+  
+  
+  
+  
+  <a href="../../../blog/tag/documentation/">documentation</a>
+  
+  
+  
+  
+  
+  <a href="../../../blog/tag/intake/">intake</a>
+  
+  
+  
+</li>
+
+
 </ul>
 </div>
+</div>
         <div class="sidebar-primary-item">
+
+<div class="ablog-sidebar-item ablog__recentposts">
 <h3>
   <a href="../../../blog/">Recent Posts</a>
 </h3>
 <ul>
-   
+  
+  
   <li>
-    <a href="../../2023/office-hours-help/"
-      >10 May - ESDS Office Hours Support</a
-    >
+    <a href="../../2023/mfdataset/">
+      16 August - Thinking through CESM data access
+    </a>
   </li>
   
   <li>
-    <a href="../../2023/unstructured-grid-collab-1/"
-      >05 May - Recap: Unstructured Grid Collaborative Work Time</a
-    >
+    <a href="../../2023/office-hours-help/">
+      10 May - ESDS Office Hours Support
+    </a>
   </li>
   
   <li>
-    <a href="../../2023/cesm2-le-timeseries-kerchunk/"
-      >15 March - Using Kerchunk with CESM Timeseries Data on the Cloud</a
-    >
+    <a href="../../2023/unstructured-grid-collab-1/">
+      05 May - Recap: Unstructured Grid Collaborative Work Time
+    </a>
   </li>
   
   <li>
-    <a href="../../2023/kerchunk-mom6/"
-      >07 March - Virtual aggregate CESM MOM6 datasets with kerchunk</a
-    >
+    <a href="../../2023/cesm2-le-timeseries-kerchunk/">
+      15 March - Using Kerchunk with CESM Timeseries Data on the Cloud
+    </a>
   </li>
   
   <li>
-    <a href="../../2022/esds-event-recap/"
-      >19 December - Recap of a (Re)Introduction to Earth System Data Science (ESDS) Across NCAR/UCAR/UCP</a
-    >
+    <a href="../../2023/kerchunk-mom6/">
+      07 March - Virtual aggregate CESM MOM6 datasets with kerchunk
+    </a>
   </li>
   
 </ul>
 </div>
+</div>
         <div class="sidebar-primary-item">
+
+<div class="ablog-sidebar-item ablog__archive">
 <h3>
   <a href="../../../blog/archive/">Archives</a>
 </h3>
 <ul>
-   
+  
+  
   <li>
-    <a href="../../../blog/2023/">2023 (4)</a>
+    <a href="../../../blog/2023/">2023 (5)</a>
   </li>
-    
+  
+  
+  
   <li>
     <a href="../../../blog/2022/">2022 (13)</a>
   </li>
-    
+  
+  
+  
   <li>
     <a href="../../../blog/2021/">2021 (52)</a>
   </li>
-    
+  
+  
+  
   <li>
     <a href="../../../blog/2020/">2020 (6)</a>
   </li>
-    
+  
+  
+  
   <li>
     <a href="../../../blog/2019/">2019 (2)</a>
   </li>
-   
+  
+  
 </ul>
+</div>
 </div>
     </div>
   
@@ -631,11 +674,12 @@ document.write(`
                 
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
-                   <section class="tex2jax_ignore mathjax_ignore" id="creating-model-documentation-using-jupyterbook-and-intake-esm">
-<h1>Creating Model Documentation Using Jupyterbook and Intake-esm<a class="headerlink" href="#creating-model-documentation-using-jupyterbook-and-intake-esm" title="Permalink to this headline">#</a></h1>
+                  
+<section class="tex2jax_ignore mathjax_ignore" id="creating-model-documentation-using-jupyterbook-and-intake-esm">
+<h1>Creating Model Documentation Using Jupyterbook and Intake-esm<a class="headerlink" href="#creating-model-documentation-using-jupyterbook-and-intake-esm" title="Permalink to this heading">#</a></h1>
 <p>A common step to any project is documenting your data and your data workflow. Fortunately, open tools in the scientific python ecosystem make that much easier! In this example, we will cover creating your github repo, creating the catalog, visualizing the catalog, and generating a static webpage you can share with collaborators!</p>
 <section id="fair-warning">
-<h2>Fair Warning<a class="headerlink" href="#fair-warning" title="Permalink to this headline">#</a></h2>
+<h2>Fair Warning<a class="headerlink" href="#fair-warning" title="Permalink to this heading">#</a></h2>
 <p>This week’s post is quite detailed, so just a warning! If you would like to look at the finished product, check out the following</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/mgrover1/cesm-test-data">Github repository with the content built here</a></p></li>
@@ -645,7 +689,7 @@ document.write(`
 <img alt="CESM book page" src="../../../_images/cesm_book_page.png" /></p>
 </section>
 <section id="create-your-github-repository">
-<h2>Create your Github Repository<a class="headerlink" href="#create-your-github-repository" title="Permalink to this headline">#</a></h2>
+<h2>Create your Github Repository<a class="headerlink" href="#create-your-github-repository" title="Permalink to this heading">#</a></h2>
 <p>Go to <a class="reference external" href="https://github.com/">Github</a> and select “New” in the top lefthand corner next to “Repositories” - this will pull up the following window. Once you are here, go ahead and name your repository!</p>
 <p>Be sure to add:</p>
 <ul class="simple">
@@ -658,15 +702,15 @@ document.write(`
 <p><img alt="screen_grab" src="../../../_images/github_screen_grab.png" /></p>
 </section>
 <section id="clone-your-repository">
-<h2>Clone your Repository<a class="headerlink" href="#clone-your-repository" title="Permalink to this headline">#</a></h2>
+<h2>Clone your Repository<a class="headerlink" href="#clone-your-repository" title="Permalink to this heading">#</a></h2>
 <p>At this point, you can go ahead and clone your repository! You can either clone to your local machine, or to some Jupyterhub (such as the <a class="reference external" href="https://jupyterhub.ucar.edu">NCAR Jupyterhub</a>), which will do in this case.</p>
 <section id="copy-the-link-from-github">
-<h3>Copy the link from Github<a class="headerlink" href="#copy-the-link-from-github" title="Permalink to this headline">#</a></h3>
+<h3>Copy the link from Github<a class="headerlink" href="#copy-the-link-from-github" title="Permalink to this heading">#</a></h3>
 <p>Copy the link from Github by clicking on the green “Code” button
 <img alt="Github Clone Link" src="../../../_images/github_clone_link.png" /></p>
 </section>
 <section id="clone-to-your-machine">
-<h3>Clone to your machine!<a class="headerlink" href="#clone-to-your-machine" title="Permalink to this headline">#</a></h3>
+<h3>Clone to your machine!<a class="headerlink" href="#clone-to-your-machine" title="Permalink to this heading">#</a></h3>
 <p>We want to clone to the repository within the <a class="reference external" href="https://jupyterhub.ucar.edu">Jupyterhub</a>, so once logging on, we open a terminal and paste the link using the following syntax</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/mgrover1/cesm-test-data.git
 </pre></div>
@@ -674,7 +718,7 @@ document.write(`
 </section>
 </section>
 <section id="create-a-docs-directory">
-<h2>Create a docs directory<a class="headerlink" href="#create-a-docs-directory" title="Permalink to this headline">#</a></h2>
+<h2>Create a docs directory<a class="headerlink" href="#create-a-docs-directory" title="Permalink to this heading">#</a></h2>
 <p>Now that you cloned the repository, move into it and create a <code class="docutils literal notranslate"><span class="pre">docs</span></code> directory using the following</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>cesm-test-data
 mkdir<span class="w"> </span>docs
@@ -682,7 +726,7 @@ mkdir<span class="w"> </span>docs
 </div>
 </section>
 <section id="build-your-catalog">
-<h2>Build your Catalog<a class="headerlink" href="#build-your-catalog" title="Permalink to this headline">#</a></h2>
+<h2>Build your Catalog<a class="headerlink" href="#build-your-catalog" title="Permalink to this heading">#</a></h2>
 <p>Open a new Jupyter Notebook called <code class="docutils literal notranslate"><span class="pre">model_documentation.ipynb</span></code> within the <code class="docutils literal notranslate"><span class="pre">docs</span></code> directory and select a development environment which includes the following:</p>
 <ul class="simple">
 <li><p>jupyter-book</p></li>
@@ -696,10 +740,10 @@ pip<span class="w"> </span>install<span class="w"> </span>ecgtools
 <p>In this case, follow the instructions in the <a class="reference external" href="https://ncar.github.io/esds/posts/ecgtools-history-files-example/">Building an Intake-esm catalog from CESM2 History Files</a> post provides the instructions for building the data catalog</p>
 </section>
 <section id="read-the-catalog-and-visualize-the-components-and-frequency">
-<h2>Read the Catalog and Visualize the Components and Frequency<a class="headerlink" href="#read-the-catalog-and-visualize-the-components-and-frequency" title="Permalink to this headline">#</a></h2>
+<h2>Read the Catalog and Visualize the Components and Frequency<a class="headerlink" href="#read-the-catalog-and-visualize-the-components-and-frequency" title="Permalink to this heading">#</a></h2>
 <p>A couple weeks ago, we covered <a class="reference external" href="https://ncar.github.io/esds/posts/graphviz_example/">Creating Visualizations of Intake-ESM Catalogs</a> which is helpful for understanding how <a class="reference external" href="https://graphviz.readthedocs.io/en/stable/manual.html"><code class="docutils literal notranslate"><span class="pre">Graphviz</span></code></a> works!</p>
 <section id="imports">
-<h3>Imports<a class="headerlink" href="#imports" title="Permalink to this headline">#</a></h3>
+<h3>Imports<a class="headerlink" href="#imports" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">intake</span>
@@ -710,7 +754,7 @@ pip<span class="w"> </span>install<span class="w"> </span>ecgtools
 </div>
 </section>
 <section id="read-in-the-test-history-catalog">
-<h3>Read in the Test History Catalog<a class="headerlink" href="#read-in-the-test-history-catalog" title="Permalink to this headline">#</a></h3>
+<h3>Read in the Test History Catalog<a class="headerlink" href="#read-in-the-test-history-catalog" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">col</span> <span class="o">=</span> <span class="n">intake</span><span class="o">.</span><span class="n">open_esm_datastore</span><span class="p">(</span><span class="s1">&#39;/glade/work/mgrover/cesm-hist-test.json&#39;</span><span class="p">)</span>
@@ -728,7 +772,7 @@ pip<span class="w"> </span>install<span class="w"> </span>ecgtools
 </div>
 </section>
 <section id="visualize-the-catalog">
-<h3>Visualize the Catalog<a class="headerlink" href="#visualize-the-catalog" title="Permalink to this headline">#</a></h3>
+<h3>Visualize the Catalog<a class="headerlink" href="#visualize-the-catalog" title="Permalink to this heading">#</a></h3>
 <p>Using the <code class="docutils literal notranslate"><span class="pre">Diagraph</span></code> object from the <a class="reference external" href="https://graphviz.readthedocs.io/en/stable/manual.html"><code class="docutils literal notranslate"><span class="pre">Graphviz</span></code> library</a>, we setup a loop to create the visualization using the three categories</p>
 <ul class="simple">
 <li><p>Case</p></li>
@@ -790,7 +834,7 @@ pip<span class="w"> </span>install<span class="w"> </span>ecgtools
 </div>
 </section>
 <section id="save-the-visualization">
-<h3>Save the Visualization<a class="headerlink" href="#save-the-visualization" title="Permalink to this headline">#</a></h3>
+<h3>Save the Visualization<a class="headerlink" href="#save-the-visualization" title="Permalink to this heading">#</a></h3>
 <p>In the block of code above, we specified <code class="docutils literal notranslate"><span class="pre">dot.format</span> <span class="pre">=</span> <span class="pre">'pdf'</span></code> which will ensure that when we save the graph, it is in PDF format. Other options include (but not limited to) <code class="docutils literal notranslate"><span class="pre">svg</span></code> and <code class="docutils literal notranslate"><span class="pre">png</span></code>!</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">Diagraph</span></code> method for saving is <code class="docutils literal notranslate"><span class="pre">.render()</span></code> with the filename in the argument (within the parentheses)</p>
 <div class="cell docutils container">
@@ -809,7 +853,7 @@ pip<span class="w"> </span>install<span class="w"> </span>ecgtools
 </section>
 </section>
 <section id="add-jupyterbook-files">
-<h2>Add Jupyterbook files<a class="headerlink" href="#add-jupyterbook-files" title="Permalink to this headline">#</a></h2>
+<h2>Add Jupyterbook files<a class="headerlink" href="#add-jupyterbook-files" title="Permalink to this heading">#</a></h2>
 <p>If you are curious about <a class="reference external" href="https://jupyterbook.org/intro.html">Jupyterbook</a>, be sure to checkout their <a class="reference external" href="https://jupyterbook.org/intro.html">official documentation</a>, specifically their <a class="reference external" href="https://jupyterbook.org/start/your-first-book.html">building your first book</a> tutorial!</p>
 <p>The main two files we need now are</p>
 <ul class="simple">
@@ -818,14 +862,14 @@ pip<span class="w"> </span>install<span class="w"> </span>ecgtools
 </ul>
 <p>Go ahead and create text files with your docs directory using those identical filenames</p>
 <section id="download-a-sample-cesm-logo">
-<h3>Download a sample CESM logo<a class="headerlink" href="#download-a-sample-cesm-logo" title="Permalink to this headline">#</a></h3>
+<h3>Download a sample CESM logo<a class="headerlink" href="#download-a-sample-cesm-logo" title="Permalink to this heading">#</a></h3>
 <p>I copied over a copy of the CESM logo to Github, which can be downloaded using the following (be sure to save to an an <code class="docutils literal notranslate"><span class="pre">image</span></code> directory in <code class="docutils literal notranslate"><span class="pre">docs</span></code></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget<span class="w"> </span>https://raw.githubusercontent.com/mgrover1/cesm-workflow/main/images/cesm.jpg
 </pre></div>
 </div>
 </section>
 <section id="adding-to-your-config-config-yml-file">
-<h3>Adding to your Config (<code class="docutils literal notranslate"><span class="pre">_config.yml</span></code>) file<a class="headerlink" href="#adding-to-your-config-config-yml-file" title="Permalink to this headline">#</a></h3>
+<h3>Adding to your Config (<code class="docutils literal notranslate"><span class="pre">_config.yml</span></code>) file<a class="headerlink" href="#adding-to-your-config-config-yml-file" title="Permalink to this heading">#</a></h3>
 <p>Within your <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> file, input the following</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>title:<span class="w"> </span><span class="s2">&quot;CESM Test Data&quot;</span>
 logo:<span class="w"> </span>images/cesm.jpg
@@ -835,7 +879,7 @@ execute:
 </div>
 </section>
 <section id="add-to-your-table-of-contents-toc-yml-file">
-<h3>Add to your Table of Contents (<code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code>) file<a class="headerlink" href="#add-to-your-table-of-contents-toc-yml-file" title="Permalink to this headline">#</a></h3>
+<h3>Add to your Table of Contents (<code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code>) file<a class="headerlink" href="#add-to-your-table-of-contents-toc-yml-file" title="Permalink to this heading">#</a></h3>
 <p>This is where you place your content - in this case, the <code class="docutils literal notranslate"><span class="pre">model_documentation.ipynb</span></code> notebook. Jupyterbook does not require you specify the file type here - so leave off the <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>-<span class="w"> </span>file:<span class="w"> </span>model_documentation
 </pre></div>
@@ -843,7 +887,7 @@ execute:
 </section>
 </section>
 <section id="build-your-book">
-<h2>Build your Book!<a class="headerlink" href="#build-your-book" title="Permalink to this headline">#</a></h2>
+<h2>Build your Book!<a class="headerlink" href="#build-your-book" title="Permalink to this heading">#</a></h2>
 <p>Now that you have your content, config file, and table of contents, it’s time to build the book. Make sure you are in your repository root directory, and run the following</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book<span class="w"> </span>build<span class="w"> </span>docs
 </pre></div>
@@ -864,25 +908,25 @@ execute:
 </div>
 </section>
 <section id="view-the-book-on-github">
-<h2>View the Book on Github<a class="headerlink" href="#view-the-book-on-github" title="Permalink to this headline">#</a></h2>
+<h2>View the Book on Github<a class="headerlink" href="#view-the-book-on-github" title="Permalink to this heading">#</a></h2>
 <p>It can be difficult to view the book on the Jupyterhub, but fortunately we can use Github for publishing this online!</p>
 <p>The <a class="reference external" href="https://jupyterbook.org/start/publish.html">Jupyterbook publish your book online</a> docs are helpful here, so we use the second part here <a class="reference external" href="https://jupyterbook.org/start/publish.html#publish-your-book-online-with-github-pages">describing using Github Pages</a></p>
 <section id="install-github-pages-import">
-<h3>Install Github Pages Import<a class="headerlink" href="#install-github-pages-import" title="Permalink to this headline">#</a></h3>
+<h3>Install Github Pages Import<a class="headerlink" href="#install-github-pages-import" title="Permalink to this heading">#</a></h3>
 <p>If you have not done so already, install the following</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>ghp-import
 </pre></div>
 </div>
 </section>
 <section id="build-the-book-and-push-to-your-github-pages-branch">
-<h3>Build the book and push to your Github Pages branch<a class="headerlink" href="#build-the-book-and-push-to-your-github-pages-branch" title="Permalink to this headline">#</a></h3>
+<h3>Build the book and push to your Github Pages branch<a class="headerlink" href="#build-the-book-and-push-to-your-github-pages-branch" title="Permalink to this heading">#</a></h3>
 <p>Move to your docs directory again, and run the following (after building your book)</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> </span>-f<span class="w"> </span>_build/html
 </pre></div>
 </div>
 </section>
 <section id="rebuilding-your-book">
-<h3>Rebuilding your book<a class="headerlink" href="#rebuilding-your-book" title="Permalink to this headline">#</a></h3>
+<h3>Rebuilding your book<a class="headerlink" href="#rebuilding-your-book" title="Permalink to this heading">#</a></h3>
 <p>If you make changes to your notebook or want to rebuild your book, run the following within your project root directory</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book<span class="w"> </span>build<span class="w"> </span>docs
 </pre></div>
@@ -894,41 +938,50 @@ execute:
 </section>
 </section>
 <section id="go-checkout-your-book">
-<h2>Go checkout your book!<a class="headerlink" href="#go-checkout-your-book" title="Permalink to this headline">#</a></h2>
+<h2>Go checkout your book!<a class="headerlink" href="#go-checkout-your-book" title="Permalink to this heading">#</a></h2>
 <p>Your book will be published along the following url structure</p>
 <p><code class="docutils literal notranslate"><span class="pre">{github_username}.github.io/{repository_name}</span></code></p>
 <p>For this example, the book can be found here</p>
 <p><a class="reference external" href="https://mgrover1.github.io/cesm-test-data/"><strong>https://mgrover1.github.io/cesm-test-data/</strong></a></p>
 </section>
 <section id="conclusion">
-<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">#</a></h2>
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this heading">#</a></h2>
 <p>This was a fairly in-depth post which covered content from previous <a class="reference external" href="https://ncar.github.io/esds/blog/">ESDS blog posts</a>, but I hope this provides a starting point for documentation your data, visualizing the data available, and sharing your data documentation with others!</p>
 </section>
 </section>
 
-<div class="section">
-    
+<div class="section ablog__blog_comments">
+  
+  
 
-<div class="section">
-  <span style="float: left">
-     
+
+<div class="section ablog__prev-next">
+  <span class="ablog__prev">
+    
+    
     <a href="../cesm-workshop-2021-diagnostics/">
-      <i class="fa fa-arrow-circle-left"></i> CESM Diagnostics Discussion
+      
+      <i class="fa fa-arrow-circle-left"></i>
+      
+      <span>CESM Diagnostics Discussion</span>
     </a>
     
   </span>
-  <span>&nbsp;</span>
-  <span style="float: right">
-     
+  <span class="ablog__spacer">&nbsp;</span>
+  <span class="ablog__next">
+    
+    
     <a href="../scaling-with-dask-class-takeaways/">
-      Scaling Python with Dask Class Takeaways <i
-        class="fa fa-arrow-circle-right"
-      ></i
-      >
+      <span>Scaling Python with Dask Class Takeaways</span>
+      
+      <i class="fa fa-arrow-circle-right" ></i>
+      
     </a>
     
   </span>
 </div>
+
+  
   
 </div>
 
@@ -1034,7 +1087,7 @@ execute:
       
         <div class="footer-item">
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
     <br/>
   </p>
 </div>
