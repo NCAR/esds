@@ -23,7 +23,7 @@ The [conference proceedings](https://conference.scipy.org/proceedings/) from thi
 
 ####  Better (Open Source) Homes and Gardens with Project Pythia
 *Kevin Tyle, Drew Camron*
-	
+
 - [Recording link](https://www.youtube.com/watch?v=5ggKEmNn79c)
 - [Slides](https://zenodo.org/record/8221039 )
 
@@ -43,7 +43,7 @@ The [conference proceedings](https://conference.scipy.org/proceedings/) from thi
 
 - Recording link: TBD
 
-### Posters: 
+### Posters:
 #### Xarray with GPUs
 *Deepak Cherian, Negin Sobhani, Max Jones*
 
