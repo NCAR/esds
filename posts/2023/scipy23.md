@@ -13,13 +13,14 @@ The [conference proceedings](https://conference.scipy.org/proceedings/) from thi
 
 ## ESDS and other NCAR/UCAR contributions:
 
-### Talks and Tutorials
+### Tutorials
 
 #### Xarray: Friendly, Interactive, and Scalable Scientific Data Analysis
  *Deepak Cherian, Tom Nicholas, Negin Sobhani, Scott Henderson, Anderson Banihirwe, Jessica Scheick, Don Setiawan*
 
-- Recording link: TBD
 - [Tutorial content](https://tutorial.xarray.dev/workshops/scipy2023/README.html)
+
+### Talks
 
 ####  Better (Open Source) Homes and Gardens with Project Pythia
 *Kevin Tyle, Drew Camron*
@@ -37,11 +38,11 @@ The [conference proceedings](https://conference.scipy.org/proceedings/) from thi
 *Ryan May*
 
 - [Recording link](https://www.youtube.com/watch?v=7hbGHHaRzBA)
+- [Slides](https://docs.google.com/presentation/d/14Db0NtTWW9P9TAlO8-_Ls_r9Hotq6Jo8tjaFJMP_lfo/edit?usp=sharing)
 
 #### Tidy Geospatial Cubes
 *Emma Marshall, Deepak Cherian, Scott Henderson*
 
-- Recording link: TBD
 
 ### Posters:
 #### Xarray with GPUs
@@ -52,4 +53,3 @@ The [conference proceedings](https://conference.scipy.org/proceedings/) from thi
 #### Bringing automated data analysis and machine learning pipelines directly to end users using Unidata tools
 *Thomas Martin, Hailey Johnson, Drew Camron*
 
-- Content: TBD
