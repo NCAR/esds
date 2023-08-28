@@ -52,4 +52,3 @@ The [conference proceedings](https://conference.scipy.org/proceedings/) from thi
 
 #### Bringing automated data analysis and machine learning pipelines directly to end users using Unidata tools
 *Thomas Martin, Hailey Johnson, Drew Camron*
-
