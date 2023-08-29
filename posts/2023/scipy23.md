@@ -47,6 +47,8 @@ The [conference proceedings](https://conference.scipy.org/proceedings/) from thi
 
 *Emma Marshall, Deepak Cherian, Scott Henderson*
 
+- [Recording link](https://www.youtube.com/watch?v=KZlG1im088s)
+
 ### Posters:
 #### Xarray with GPUs
 
@@ -57,3 +59,5 @@ The [conference proceedings](https://conference.scipy.org/proceedings/) from thi
 #### Bringing automated data analysis and machine learning pipelines directly to end users using Unidata tools
 
 *Thomas Martin, Hailey Johnson, Drew Camron*
+
+- [Poster](https://drive.google.com/file/d/1NPmT_xT-mX2pOAzy9GcoFSErj2MjVoUs/view?usp=sharing)
