@@ -519,7 +519,8 @@ document.write(`
         24 February 2022
         
       </li>
-      
+      <div class="ablog-sidebar-item ablog__postcard2">
+
 
 <li id="ablog-sidebar-item author ablog__author">
   <span>
@@ -529,14 +530,14 @@ document.write(`
     </span>
   
   
-  <a href="../../author/katie-dagon/">Katie Dagon</a>
+  <a href="../../author/deepak-cherian/">Deepak Cherian</a>
   
   ,
   
   
   
   
-  <a href="../../author/deepak-cherian/">Deepak Cherian</a>
+  <a href="../../author/katie-dagon/">Katie Dagon</a>
   
   
   
@@ -562,12 +563,6 @@ document.write(`
   
   
   
-  <a href="../pft/">PFT</a>
-  
-  
-  
-  
-  
   <a href="#">CLM</a>
   
   
@@ -578,9 +573,16 @@ document.write(`
   
   
   
+  
+  
+  <a href="../pft/">PFT</a>
+  
+  
+  
 </li>
 
 
+</div>
     </ul>
     <p class="ablog-post-excerpt"><p>An underappreciated feature of Xarray + Dask is the ability to plug in <a class="reference external" href="https://docs.xarray.dev/en/stable/user-guide/duckarrays.html">different array types</a>. Usually we work with Xarray wrapping a Dask array which in turn uses <em>NumPy</em> arrays for each block; or just Xarray wrapping NumPy arrays directly. NumPy arrays are dense in-memory arrays. Other array types exist:</p>
 <p><a class="reference external" href="https://sparse.pydata.org">sparse</a> for sparse arrays</p>

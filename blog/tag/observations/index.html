@@ -519,7 +519,8 @@ document.write(`
         10 September 2021
         
       </li>
-      
+      <div class="ablog-sidebar-item ablog__postcard2">
+
 
 <li id="ablog-sidebar-item author ablog__author">
   <span>
@@ -549,13 +550,13 @@ document.write(`
     </span>
   
   
-  <a href="../diagnostics/">diagnostics</a>
-  
-  
-  
-  
-  
   <a href="#">observations</a>
+  
+  
+  
+  
+  
+  <a href="../cesm/">cesm</a>
   
   
   
@@ -567,13 +568,14 @@ document.write(`
   
   
   
-  <a href="../cesm/">cesm</a>
+  <a href="../diagnostics/">diagnostics</a>
   
   
   
 </li>
 
 
+</div>
     </ul>
     <p class="ablog-post-excerpt"><p>In this example, we will cover how to leverage a useful package from the <a class="reference external" href="http://www.pangeo.io">Pangeo Ecosystem</a>, <a class="reference external" href="https://pangeo-xesmf.readthedocs.io/en/latest/">xESMF</a>. One important note when using this package, is <strong>make sure you are using the most up-to-date documentation/version</strong>, a few years ago, development moved to the <a class="reference external" href="https://github.com/pangeo-data/xESMF">pangeo-data</a> branch of the package, installable using the following:</p>
 <p>For this example, we will download a file from the <a class="reference external" href="https://www.ncei.noaa.gov/products/world-ocean-atlas">World Ocean Atlas</a>, which includes a variety of ocean observations assembled from the World Ocean Database.</p>
@@ -596,7 +598,8 @@ document.write(`
         27 August 2021
         
       </li>
-      
+      <div class="ablog-sidebar-item ablog__postcard2">
+
 
 <li id="ablog-sidebar-item author ablog__author">
   <span>
@@ -626,6 +629,12 @@ document.write(`
     </span>
   
   
+  <a href="../intake/">intake</a>
+  
+  
+  
+  
+  
   <a href="../cesm2-le/">cesm2-le</a>
   
   
@@ -636,15 +645,10 @@ document.write(`
   
   
   
-  
-  
-  <a href="../intake/">intake</a>
-  
-  
-  
 </li>
 
 
+</div>
     </ul>
     <p class="ablog-post-excerpt"><p>Comparing models and observations is a critical component of climate diagnostic packages. This process can be challenging though - given the number of observational datasets to compare against, and the difference in spatiotemporal resolutions. In the previous iteration of the diagnostics package used for atmospheric data from the Community Earth System Model (CESM), they used pre-computed, observational datasets stored in a directory on the GLADE filesystem (<code class="docutils literal notranslate"><span class="pre">/glade/p/cesm/amwg/amwg_diagnostics/obs_data</span></code>)</p>
 <p>Within this example, we walk though generating an <code class="docutils literal notranslate"><span class="pre">intake-esm</span></code> catalog from the observational data, reading in CESM data, and compare models and observations</p>

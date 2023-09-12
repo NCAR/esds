@@ -519,7 +519,8 @@ document.write(`
         06 December 2022
         
       </li>
-      
+      <div class="ablog-sidebar-item ablog__postcard2">
+
 
 <li id="ablog-sidebar-item author ablog__author">
   <span>
@@ -529,14 +530,14 @@ document.write(`
     </span>
   
   
-  <a href="#">Christine Shields</a>
+  <a href="../deepak-cherian/">Deepak Cherian</a>
   
   ,
   
   
   
   
-  <a href="../deepak-cherian/">Deepak Cherian</a>
+  <a href="#">Christine Shields</a>
   
   
   
@@ -569,6 +570,7 @@ document.write(`
 </li>
 
 
+</div>
     </ul>
     <p class="ablog-post-excerpt"><p>A fairly common request is to use an existing ESMF weights file to regrid a Xarray Dataset  (<a class="reference external" href="https://github.com/UXARRAY/uxarray/issues/172">1</a>,  <a class="reference external" href="https://github.com/pangeo-data/xESMF/issues/202">2</a>). Applying weights in general should be easy: read weights then <a class="reference external" href="https://github.com/UXARRAY/uxarray/issues/172#issuecomment-1310601230">apply them</a> using <code class="docutils literal notranslate"><span class="pre">dot</span></code> or <code class="docutils literal notranslate"><span class="pre">tensordot</span></code> on the input dataset.</p>
 <p>In the Xarray/Dask/Pangeo ecosystem, <a class="reference external" href="https://xesmf.readthedocs.io">xESMF</a> provides an interface to ESMF for convenient regridding, includiing parallelization with Dask. Here we demonstrate how to use an existing ESMF weights file with xESMF specifically for CAM-SE.</p>

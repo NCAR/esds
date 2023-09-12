@@ -519,7 +519,8 @@ document.write(`
         19 November 2021
         
       </li>
-      
+      <div class="ablog-sidebar-item ablog__postcard2">
+
 
 <li id="ablog-sidebar-item author ablog__author">
   <span>
@@ -549,7 +550,13 @@ document.write(`
     </span>
   
   
-  <a href="#">diagnostics</a>
+  <a href="../cesm2-le/">cesm2-le</a>
+  
+  
+  
+  
+  
+  <a href="../cesm/">cesm</a>
   
   
   
@@ -561,19 +568,14 @@ document.write(`
   
   
   
-  <a href="../cesm2-le/">cesm2-le</a>
-  
-  
-  
-  
-  
-  <a href="../cesm/">cesm</a>
+  <a href="#">diagnostics</a>
   
   
   
 </li>
 
 
+</div>
     </ul>
     <p class="ablog-post-excerpt"><p>A common component of people’s workflows is calculating annual averages, which helps <strong>reduce</strong> the frequency of datasets, making them easier to work with. Two of the data frequencies you may be looking to convert to annual include:</p>
 <p>Daily (365 days in each year)</p>
@@ -596,7 +598,8 @@ document.write(`
         22 October 2021
         
       </li>
-      
+      <div class="ablog-sidebar-item ablog__postcard2">
+
 
 <li id="ablog-sidebar-item author ablog__author">
   <span>
@@ -626,12 +629,6 @@ document.write(`
     </span>
   
   
-  <a href="#">diagnostics</a>
-  
-  
-  
-  
-  
   <a href="../intake/">intake</a>
   
   
@@ -642,9 +639,16 @@ document.write(`
   
   
   
+  
+  
+  <a href="#">diagnostics</a>
+  
+  
+  
 </li>
 
 
+</div>
     </ul>
     <p class="ablog-post-excerpt"><p>Last week, <a class="reference external" href="https://github.com/andersy005">Anderson Banihirwe</a> added a new feature to intake-esm, enabling users to add “derived variables” to catalogs! This is an exciting addition, and although this has not been included in a release yet, you are welcome to test out the functionality!</p>
 <p>Keep in mind that this is an initial prototype and the API is likely to change.</p>
@@ -667,7 +671,8 @@ document.write(`
         08 October 2021
         
       </li>
-      
+      <div class="ablog-sidebar-item ablog__postcard2">
+
 
 <li id="ablog-sidebar-item author ablog__author">
   <span>
@@ -697,19 +702,13 @@ document.write(`
     </span>
   
   
-  <a href="../cesm/">cesm</a>
+  <a href="../visualization/">visualization</a>
   
   
   
   
   
   <a href="#">diagnostics</a>
-  
-  
-  
-  
-  
-  <a href="../visualization/">visualization</a>
   
   
   
@@ -725,9 +724,16 @@ document.write(`
   
   
   
+  
+  
+  <a href="../cesm/">cesm</a>
+  
+  
+  
 </li>
 
 
+</div>
     </ul>
     <p class="ablog-post-excerpt"><p>This Jupyter Notebook demonstrates how one might use the NCAR Community Earth System Model v2 (CESM2) Large Ensemble (CESM2-LE) data hosted on AWS S3. The notebook shows how to reproduce figure 2 from the Kay et al. (2015) paper describing the CESM LENS dataset (<span class="xref myst">doi:10.1175/BAMS-D-13-00255.1</span>), with the LENS2 dataset.</p>
 <p>There was a previous notebook which explored this use case, put together by Joe Hamman and Anderson Banihirwe, accessible on the Pangeo Gallery using <a class="reference external" href="http://gallery.pangeo.io/repos/NCAR/cesm-lens-aws/notebooks/kay-et-al-2015.v3.html">this link</a>. The specific figure we are replicating is shown below.</p>
@@ -750,7 +756,8 @@ document.write(`
         24 September 2021
         
       </li>
-      
+      <div class="ablog-sidebar-item ablog__postcard2">
+
 
 <li id="ablog-sidebar-item author ablog__author">
   <span>
@@ -780,13 +787,13 @@ document.write(`
     </span>
   
   
+  <a href="../visualization/">visualization</a>
+  
+  
+  
+  
+  
   <a href="../jupyter/">jupyter</a>
-  
-  
-  
-  
-  
-  <a href="../cesm/">cesm</a>
   
   
   
@@ -798,19 +805,20 @@ document.write(`
   
   
   
-  <a href="../visualization/">visualization</a>
-  
-  
-  
-  
-  
   <a href="../intake/">intake</a>
+  
+  
+  
+  
+  
+  <a href="../cesm/">cesm</a>
   
   
   
 </li>
 
 
+</div>
     </ul>
     <p class="ablog-post-excerpt"><p>Typically, diagnostics packages are written with following structure, using script-based workflows</p>
 <p>Read files and do some preprocessing</p>
@@ -833,7 +841,8 @@ document.write(`
         10 September 2021
         
       </li>
-      
+      <div class="ablog-sidebar-item ablog__postcard2">
+
 
 <li id="ablog-sidebar-item author ablog__author">
   <span>
@@ -863,13 +872,13 @@ document.write(`
     </span>
   
   
-  <a href="#">diagnostics</a>
-  
-  
-  
-  
-  
   <a href="../observations/">observations</a>
+  
+  
+  
+  
+  
+  <a href="../cesm/">cesm</a>
   
   
   
@@ -881,13 +890,14 @@ document.write(`
   
   
   
-  <a href="../cesm/">cesm</a>
+  <a href="#">diagnostics</a>
   
   
   
 </li>
 
 
+</div>
     </ul>
     <p class="ablog-post-excerpt"><p>In this example, we will cover how to leverage a useful package from the <a class="reference external" href="http://www.pangeo.io">Pangeo Ecosystem</a>, <a class="reference external" href="https://pangeo-xesmf.readthedocs.io/en/latest/">xESMF</a>. One important note when using this package, is <strong>make sure you are using the most up-to-date documentation/version</strong>, a few years ago, development moved to the <a class="reference external" href="https://github.com/pangeo-data/xESMF">pangeo-data</a> branch of the package, installable using the following:</p>
 <p>For this example, we will download a file from the <a class="reference external" href="https://www.ncei.noaa.gov/products/world-ocean-atlas">World Ocean Atlas</a>, which includes a variety of ocean observations assembled from the World Ocean Database.</p>
@@ -910,7 +920,8 @@ document.write(`
         20 August 2021
         
       </li>
-      
+      <div class="ablog-sidebar-item ablog__postcard2">
+
 
 <li id="ablog-sidebar-item author ablog__author">
   <span>
@@ -940,7 +951,13 @@ document.write(`
     </span>
   
   
-  <a href="#">diagnostics</a>
+  <a href="../intake/">intake</a>
+  
+  
+  
+  
+  
+  <a href="../cesm/">cesm</a>
   
   
   
@@ -952,19 +969,14 @@ document.write(`
   
   
   
-  <a href="../intake/">intake</a>
-  
-  
-  
-  
-  
-  <a href="../cesm/">cesm</a>
+  <a href="#">diagnostics</a>
   
   
   
 </li>
 
 
+</div>
     </ul>
     <p class="ablog-post-excerpt"><p>In previous weeks, we have looked at <a class="reference external" href="https://ncar.github.io/esds/posts/2021/ecgtools-history-files-example/">building Intake-ESM catalogs from history files</a> and <a class="reference external" href="https://ncar.github.io/esds/posts/2021/cesm-datashader/">visualizing CESM output using Holoviews and Datashader</a>, but this week we are putting together a few of those pieces to visualize a comparison between model runs.</p>
 <p>One of the first ESDS blog posts looked at <a class="reference external" href="https://ncar.github.io/esds/posts/2021/Interactive_Dashboard/">building an interactive dashboard to look at plots</a>, using high resolution ocean model output as the dataset. One of the limitations of that approach is that the images are static - we are pulling in <code class="docutils literal notranslate"><span class="pre">png</span></code>s, and rending on the page, as opposed to more interactive options. In this example, we will read in data generated from <a class="reference external" href="https://ecgtools.readthedocs.io/en/latest/">ecgtools</a>, from a directory only accessible via NCAR’s high performance computing center.</p>
@@ -987,7 +999,8 @@ document.write(`
         17 June 2021
         
       </li>
-      
+      <div class="ablog-sidebar-item ablog__postcard2">
+
 
 <li id="ablog-sidebar-item author ablog__author">
   <span>
@@ -1017,12 +1030,6 @@ document.write(`
     </span>
   
   
-  <a href="#">diagnostics</a>
-  
-  
-  
-  
-  
   <a href="../conference/">conference</a>
   
   
@@ -1033,9 +1040,16 @@ document.write(`
   
   
   
+  
+  
+  <a href="#">diagnostics</a>
+  
+  
+  
 </li>
 
 
+</div>
     </ul>
     <p class="ablog-post-excerpt"><p>Every year, NCAR holds the <a class="reference external" href="https://www.cesm.ucar.edu/events/workshops/2021/">Community Earth System Model (CESM) Workshop</a> which brings together the CESM community to discuss relavant updates from the <a class="reference external" href="https://www.cesm.ucar.edu/working_groups/">working groups</a> as well as featured speakers and cross-working group discussions.</p>
 <p>During the Software Engineering Working Group (SEWG) session, following a variety of talks, there was an open discussion regarding the current state of CESM diagnostics and future plans for collaboration.</p>

@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Posts tagged CAM &#8212; NCAR-ESDS 0.1 documentation</title>
+    <title>Posts tagged cam &#8212; NCAR-ESDS 0.1 documentation</title>
   
   
   
@@ -93,7 +93,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   rel="alternate"
   type="application/atom+xml"
   href="../../../blog/atom.xml"
-  title="Posts tagged CAM"
+  title="Posts tagged cam"
 />
 
 
@@ -478,7 +478,7 @@ document.write(`
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
-    <li class="breadcrumb-item active" aria-current="page">Posts tagged CAM</li>
+    <li class="breadcrumb-item active" aria-current="page">Posts tagged cam</li>
   </ul>
 </nav>
 </div>
@@ -501,14 +501,14 @@ document.write(`
     
       Posts tagged
       
-    CAM
+    cam
     
   </h1>
   
   
   <div class="section ablog-post">
     <h2 class="ablog-post-title">
-      <a href="../../../posts/2022/cam-se-regridding/">Regridding using xESMF and an existing weights file</a>
+      <a href="../../../posts/2023/cam-se-analysis/">Analyzing and Visualizing CAM-SE Output in Python</a>
     </h2>
     <ul class="ablog-archive">
       <li>
@@ -516,10 +516,11 @@ document.write(`
         
         <i class="fa fa-calendar"></i>
         
-        06 December 2022
+        15 August 2023
         
       </li>
-      
+      <div class="ablog-sidebar-item ablog__postcard2">
+
 
 <li id="ablog-sidebar-item author ablog__author">
   <span>
@@ -529,14 +530,42 @@ document.write(`
     </span>
   
   
-  <a href="../../author/christine-shields/">Christine Shields</a>
+  <a href="../../author/deepak-cherian/">Deepak Cherian</a>
   
   ,
   
   
   
   
-  <a href="../../author/deepak-cherian/">Deepak Cherian</a>
+  <a href="../../author/steve-yeager/">Steve Yeager</a>
+  
+  ,
+  
+  
+  
+  
+  <a href="../../author/katie-dagon/">Katie Dagon</a>
+  
+  ,
+  
+  
+  
+  
+  <a href="../../author/colin-zarzycki/">Colin Zarzycki</a>
+  
+  ,
+  
+  
+  
+  
+  <a href="../../author/john-truesdale/">John Truesdale</a>
+  
+  ,
+  
+  
+  
+  
+  <a href="../../author/teagan-king/">Teagan King</a>
   
   
   
@@ -556,7 +585,7 @@ document.write(`
     </span>
   
   
-  <a href="#">CAM</a>
+  <a href="../visualization/">visualization</a>
   
   
   
@@ -566,15 +595,40 @@ document.write(`
   
   
   
+  
+  
+  <a href="../sparse/">sparse</a>
+  
+  
+  
+  
+  
+  <a href="../cesm/">cesm</a>
+  
+  
+  
+  
+  
+  <a href="../unstructured-grids/">unstructured grids</a>
+  
+  
+  
+  
+  
+  <a href="#">cam</a>
+  
+  
+  
 </li>
 
 
+</div>
     </ul>
-    <p class="ablog-post-excerpt"><p>A fairly common request is to use an existing ESMF weights file to regrid a Xarray Dataset  (<a class="reference external" href="https://github.com/UXARRAY/uxarray/issues/172">1</a>,  <a class="reference external" href="https://github.com/pangeo-data/xESMF/issues/202">2</a>). Applying weights in general should be easy: read weights then <a class="reference external" href="https://github.com/UXARRAY/uxarray/issues/172#issuecomment-1310601230">apply them</a> using <code class="docutils literal notranslate"><span class="pre">dot</span></code> or <code class="docutils literal notranslate"><span class="pre">tensordot</span></code> on the input dataset.</p>
-<p>In the Xarray/Dask/Pangeo ecosystem, <a class="reference external" href="https://xesmf.readthedocs.io">xESMF</a> provides an interface to ESMF for convenient regridding, includiing parallelization with Dask. Here we demonstrate how to use an existing ESMF weights file with xESMF specifically for CAM-SE.</p>
-<img alt="../../../_images/fd44e9f7bac7bfb9e60950a50b7f51ec81040235662db40028a587eea1fe403e.png" src="../../../_images/fd44e9f7bac7bfb9e60950a50b7f51ec81040235662db40028a587eea1fe403e.png" /></p>
+    <p class="ablog-post-excerpt"><p>We demonstrate a variety of options for analyzing and visualizing output from the Community Atmosphere Model (CAM) with the spectral element (SE) grid in Python. This notebook was developed for the ESDS <a class="reference external" href="https://ncar.github.io/esds/posts/2023/unstructured-grid-collab-1/">Collaborative Work Time on Unstructured Grids</a>, which took place on April 17, 2023. A recap of the related CAM-SE discussion can be found <a class="reference external" href="https://ncar.github.io/esds/posts/2023/unstructured-grid-collab-1/#katie-dagon-cgd">here</a>.</p>
+<p><span class="xref myst">Regrid CAM-SE output using map file</span></p>
+<img alt="../../../_images/817331336ac2ab88e948f527c691a3538a3d43641bd5be2eb8296e7597bb4851.png" src="../../../_images/817331336ac2ab88e948f527c691a3538a3d43641bd5be2eb8296e7597bb4851.png" /></p>
 
-    <p class="ablog-post-expand"><a href="../../../posts/2022/cam-se-regridding/"><em>Read more ...</em></a></p>
+    <p class="ablog-post-expand"><a href="../../../posts/2023/cam-se-analysis/"><em>Read more ...</em></a></p>
     <hr/>
   </div>
   
