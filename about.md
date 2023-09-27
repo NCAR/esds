@@ -38,6 +38,15 @@ described in our [governance document](https://docs.google.com/document/d/1xjNzJ
 * Teagan King, CGD
 * Mike Levy, CGD
 
+### Past Committee Members
+* Anderson Banihirwe, CISL
+* Deepak Cherian, CGD
+* Heather Craker, CISL
+* Max Grover, CGD
+* Thomas Hauser, CISL
+* Matt Long, CGD
+* Kevin Paul, CGD
+
 
 
 ## Vision
