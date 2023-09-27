@@ -22,7 +22,7 @@ described in our [governance document](https://docs.google.com/document/d/1xjNzJ
 * Falko Judt, MMM
 * Ryan May, Unidata
 * Mike Levy, CGD
-* Ulrike Romatschk, EOL
+* Ulrike Romatschke, EOL
 
 ### Community Working Group
 * Julia Kent, CISL
