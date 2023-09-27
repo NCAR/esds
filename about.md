@@ -33,7 +33,7 @@ described in our [governance document](https://docs.google.com/document/d/1xjNzJ
 * Daniel Adriaansen, RAL
 * John Clyne, CISL
 * Orhan Eroglu, CISL
-* Katelyn Fitzgerald, CISL
+* Katelyn FitzGerald, CISL
 * Julia Kent, CISL
 * Teagan King, CGD
 * Mike Levy, CGD
