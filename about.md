@@ -10,6 +10,36 @@ to serve on the ESDS Leadership Committee and/or Working Groups as
 described in our [governance document](https://docs.google.com/document/d/1xjNzJqZjeRzUg5BMipQVUsy2xA1SRlEiyJLpPmUAs9E/edit?usp=sharing).
 
 
+## ESDS Committees and Working Groups
+
+### Leadership Committee
+* Dan Adriaansen, RAL
+* Drew Camron, Unidata
+* John Clyne, CISL
+* Katie Dagon, CGD (stepping down, ~Feb 2024)
+* Orhan Eroglu, CISL
+* Teagan King, CGD
+* Falko Judt, MMM
+* Ryan May, Unidata
+* Mike Levy, CGD
+* Ulrike Romatschk, EOL
+
+### Community Working Group
+* Julia Kent, CISL
+* Katelyn FitzGerald, CISL
+* Elena Romashkova, CGD
+
+### Events Working Group
+* Daniel Adriaansen, RAL
+* John Clyne, CISL
+* Orhan Eroglu, CISL
+* Katelyn Fitzgerald, CISL
+* Julia Kent, CISL
+* Teagan King, CGD
+* Mike Levy, CGD
+
+
+
 ## Vision
 
 _The Earth System Data Science initiative aims to profoundly increase the effectiveness of the NCAR/UCAR workforce by promoting deeper collaboration centered on analytics, improving our capacity to deliver impactful, actionable, reproducible science and serve the university community by transforming how geoscientists synthesize and extract information from large, diverse data sets._
