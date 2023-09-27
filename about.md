@@ -18,10 +18,10 @@ described in our [governance document](https://docs.google.com/document/d/1xjNzJ
 * John Clyne, CISL
 * Katie Dagon, CGD (stepping down, ~Feb 2024)
 * Orhan Eroglu, CISL
-* Teagan King, CGD
 * Falko Judt, MMM
-* Ryan May, Unidata
+* Teagan King, CGD
 * Mike Levy, CGD
+* Ryan May, Unidata
 * Ulrike Romatschke, EOL
 
 ### Community Working Group
