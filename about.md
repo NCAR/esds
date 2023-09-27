@@ -13,7 +13,7 @@ described in our [governance document](https://docs.google.com/document/d/1xjNzJ
 ## ESDS Committees and Working Groups
 
 ### Leadership Committee
-* Dan Adriaansen, RAL
+* Daniel Adriaansen, RAL
 * Drew Camron, Unidata
 * John Clyne, CISL
 * Katie Dagon, CGD (stepping down, ~Feb 2024)
