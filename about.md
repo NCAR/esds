@@ -25,8 +25,8 @@ described in our [governance document](https://docs.google.com/document/d/1xjNzJ
 * Ulrike Romatschke, EOL
 
 ### Community Working Group
-* Julia Kent, CISL
 * Katelyn FitzGerald, CISL
+* Julia Kent, CISL
 * Elena Romashkova, CGD
 
 ### Events Working Group
