@@ -18,12 +18,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -35,8 +35,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -107,6 +108,15 @@ commentsRunWhenDOMLoaded(addUtterances);
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
   
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
   <input type="checkbox"
           class="sidebar-toggle"
           name="__primary"
@@ -146,7 +156,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     <span class="fa-solid fa-bars"></span>
   </label>
   
-  <div class="navbar-header-items__start">
+  
+  <div class="col-lg-3 navbar-header-items__start">
     
       <div class="navbar-item">
   
@@ -162,7 +173,6 @@ commentsRunWhenDOMLoaded(addUtterances);
 </a></div>
     
   </div>
-  
   
   <div class="col-lg-9 navbar-header-items">
     
@@ -211,34 +221,34 @@ commentsRunWhenDOMLoaded(addUtterances);
                       </a>
                     </li>
                 
-            <div class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-header-nav-more-links">
                     More
                 </button>
-                <div class="dropdown-menu">
+                <ul id="pst-header-nav-more-links" class="dropdown-menu">
                     
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../best-practices/">
+                      <a class="nav-link dropdown-item nav-internal" href="../best-practices/">
                         Best Practices
                       </a>
                     </li>
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../calendar/">
+                      <a class="nav-link dropdown-item nav-internal" href="../calendar/">
                         Calendar
                       </a>
                     </li>
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../projects/">
+                      <a class="nav-link dropdown-item nav-internal" href="../projects/">
                         Projects
                       </a>
                     </li>
                 
-                </div>
-            </div>
+                </ul>
+            </li>
             
   </ul>
 </nav></div>
@@ -250,13 +260,15 @@ commentsRunWhenDOMLoaded(addUtterances);
       
         <div class="navbar-item navbar-persistent--container">
           
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
-  </button>
-`);
-</script>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
         </div>
       
       
@@ -289,8 +301,8 @@ document.write(`
           
           
           
-          <a href="https://github.com/ncar/esds" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
-            <label class="sr-only">GitHub</label></a>
+          <a href="https://github.com/ncar/esds" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
         </li>
 </ul></div>
       
@@ -300,13 +312,15 @@ document.write(`
   
   
     <div class="navbar-persistent--mobile">
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
-  </button>
-`);
-</script>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
     </div>
   
 
@@ -370,34 +384,34 @@ document.write(`
                       </a>
                     </li>
                 
-            <div class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-header-nav-more-links">
                     More
                 </button>
-                <div class="dropdown-menu">
+                <ul id="pst-header-nav-more-links" class="dropdown-menu">
                     
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../best-practices/">
+                      <a class="nav-link dropdown-item nav-internal" href="../best-practices/">
                         Best Practices
                       </a>
                     </li>
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../calendar/">
+                      <a class="nav-link dropdown-item nav-internal" href="../calendar/">
                         Calendar
                       </a>
                     </li>
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../projects/">
+                      <a class="nav-link dropdown-item nav-internal" href="../projects/">
                         Projects
                       </a>
                     </li>
                 
-                </div>
-            </div>
+                </ul>
+            </li>
             
   </ul>
 </nav></div>
@@ -437,8 +451,8 @@ document.write(`
           
           
           
-          <a href="https://github.com/ncar/esds" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
-            <label class="sr-only">GitHub</label></a>
+          <a href="https://github.com/ncar/esds" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
         </li>
 </ul></div>
         
@@ -948,8 +962,8 @@ document.write(`
 
 
 
-<nav aria-label="Breadcrumbs">
-  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
     
     <li class="breadcrumb-item breadcrumb-home">
       <a href="../" class="nav-link" aria-label="Home">
@@ -1028,12 +1042,6 @@ document.write(`
     </span>
   
   
-  <a href="tag/conference/">conference</a>
-  
-  
-  
-  
-  
   <a href="tag/scipy/">scipy</a>
   
   
@@ -1041,6 +1049,12 @@ document.write(`
   
   
   <a href="tag/open-source/">open-source</a>
+  
+  
+  
+  
+  
+  <a href="tag/conference/">conference</a>
   
   
   
@@ -1126,21 +1140,7 @@ document.write(`
     </span>
   
   
-  <a href="author/deepak-cherian/">Deepak Cherian</a>
-  
-  ,
-  
-  
-  
-  
-  <a href="author/steve-yeager/">Steve Yeager</a>
-  
-  ,
-  
-  
-  
-  
-  <a href="author/katie-dagon/">Katie Dagon</a>
+  <a href="author/john-truesdale/">John Truesdale</a>
   
   ,
   
@@ -1154,7 +1154,14 @@ document.write(`
   
   
   
-  <a href="author/john-truesdale/">John Truesdale</a>
+  <a href="author/steve-yeager/">Steve Yeager</a>
+  
+  ,
+  
+  
+  
+  
+  <a href="author/deepak-cherian/">Deepak Cherian</a>
   
   ,
   
@@ -1162,6 +1169,13 @@ document.write(`
   
   
   <a href="author/teagan-king/">Teagan King</a>
+  
+  ,
+  
+  
+  
+  
+  <a href="author/katie-dagon/">Katie Dagon</a>
   
   
   
@@ -1181,19 +1195,13 @@ document.write(`
     </span>
   
   
-  <a href="tag/visualization/">visualization</a>
-  
-  
-  
-  
-  
-  <a href="tag/xesmf/">xesmf</a>
-  
-  
-  
-  
-  
   <a href="tag/sparse/">sparse</a>
+  
+  
+  
+  
+  
+  <a href="tag/visualization/">visualization</a>
   
   
   
@@ -1212,6 +1220,12 @@ document.write(`
   
   
   <a href="tag/cam/">cam</a>
+  
+  
+  
+  
+  
+  <a href="tag/xesmf/">xesmf</a>
   
   
   
@@ -1319,6 +1333,13 @@ document.write(`
   
   
   
+  <a href="author/orhan-eroglu/">Orhan Eroglu</a>
+  
+  ,
+  
+  
+  
+  
   <a href="author/deepak-cherian/">Deepak Cherian</a>
   
   ,
@@ -1327,13 +1348,6 @@ document.write(`
   
   
   <a href="author/katie-dagon/">Katie Dagon</a>
-  
-  ,
-  
-  
-  
-  
-  <a href="author/orhan-eroglu/">Orhan Eroglu</a>
   
   
   
@@ -1396,14 +1410,14 @@ A lucky overlap with the Improving Scientific Software conference, meant that co
     </span>
   
   
-  <a href="author/max-grover/">Max Grover</a>
+  <a href="author/deepak-cherian/">Deepak Cherian</a>
   
   ,
   
   
   
   
-  <a href="author/deepak-cherian/">Deepak Cherian</a>
+  <a href="author/max-grover/">Max Grover</a>
   
   
   
@@ -1423,13 +1437,13 @@ A lucky overlap with the Improving Scientific Software conference, meant that co
     </span>
   
   
-  <a href="tag/zarr/">zarr</a>
-  
-  
-  
-  
-  
   <a href="tag/cesm/">cesm</a>
+  
+  
+  
+  
+  
+  <a href="tag/zarr/">zarr</a>
   
   
   
@@ -1589,14 +1603,14 @@ NCAR/UCAR/UCP on November 10-11, 2022. This blog post serves to consolidate and 
     </span>
   
   
-  <a href="author/deepak-cherian/">Deepak Cherian</a>
+  <a href="author/christine-shields/">Christine Shields</a>
   
   ,
   
   
   
   
-  <a href="author/christine-shields/">Christine Shields</a>
+  <a href="author/deepak-cherian/">Deepak Cherian</a>
   
   
   
@@ -1683,7 +1697,7 @@ NCAR/UCAR/UCP on November 10-11, 2022. This blog post serves to consolidate and 
     </span>
   
   
-  <a href="tag/jupyter/">jupyter</a>
+  <a href="tag/xarray/">xarray</a>
   
   
   
@@ -1695,19 +1709,19 @@ NCAR/UCAR/UCP on November 10-11, 2022. This blog post serves to consolidate and 
   
   
   
+  <a href="tag/calculations/">calculations</a>
+  
+  
+  
+  
+  
   <a href="tag/geocat-comp/">geocat-comp</a>
   
   
   
   
   
-  <a href="tag/xarray/">xarray</a>
-  
-  
-  
-  
-  
-  <a href="tag/calculations/">calculations</a>
+  <a href="tag/jupyter/">jupyter</a>
   
   
   
@@ -2123,14 +2137,14 @@ by <strong>Friday, November 4, 2022</strong>!</p>
     </span>
   
   
-  <a href="author/matthew-long/">Matthew Long</a>
+  <a href="author/anderson-banihirwe/">Anderson Banihirwe</a>
   
   ,
   
   
   
   
-  <a href="author/anderson-banihirwe/">Anderson Banihirwe</a>
+  <a href="author/matthew-long/">Matthew Long</a>
   
   
   
@@ -2156,13 +2170,13 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   
   
   
+  <a href="tag/python/">python</a>
+  
+  
+  
+  
+  
   <a href="tag/jupyter/">jupyter</a>
-  
-  
-  
-  
-  
-  <a href="tag/notebooks/">notebooks</a>
   
   
   
@@ -2174,7 +2188,7 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   
   
   
-  <a href="tag/python/">python</a>
+  <a href="tag/notebooks/">notebooks</a>
   
   
   
@@ -2302,25 +2316,25 @@ by <strong>Friday, November 4, 2022</strong>!</p>
     </span>
   
   
-  <a href="tag/sparse/">sparse</a>
-  
-  
-  
-  
-  
-  <a href="tag/clm/">CLM</a>
-  
-  
-  
-  
-  
   <a href="tag/dask/">dask</a>
   
   
   
   
   
+  <a href="tag/sparse/">sparse</a>
+  
+  
+  
+  
+  
   <a href="tag/pft/">PFT</a>
+  
+  
+  
+  
+  
+  <a href="tag/clm/">CLM</a>
   
   
   
@@ -2441,7 +2455,7 @@ by <strong>Friday, November 4, 2022</strong>!</p>
     </span>
   
   
-  <a href="tag/intake/">intake</a>
+  <a href="tag/xarray/">xarray</a>
   
   
   
@@ -2453,7 +2467,7 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   
   
   
-  <a href="tag/xarray/">xarray</a>
+  <a href="tag/intake/">intake</a>
   
   
   
@@ -2514,13 +2528,19 @@ by <strong>Friday, November 4, 2022</strong>!</p>
     </span>
   
   
-  <a href="tag/faq/">faq</a>
+  <a href="tag/xarray/">xarray</a>
   
   
   
   
   
   <a href="tag/matplotlib/">matplotlib</a>
+  
+  
+  
+  
+  
+  <a href="tag/faq/">faq</a>
   
   
   
@@ -2533,12 +2553,6 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   
   
   <a href="tag/update/">update</a>
-  
-  
-  
-  
-  
-  <a href="tag/xarray/">xarray</a>
   
   
   
@@ -2599,7 +2613,7 @@ by <strong>Friday, November 4, 2022</strong>!</p>
     </span>
   
   
-  <a href="tag/cesm2-le/">cesm2-le</a>
+  <a href="tag/diagnostics/">diagnostics</a>
   
   
   
@@ -2611,13 +2625,13 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   
   
   
+  <a href="tag/cesm2-le/">cesm2-le</a>
+  
+  
+  
+  
+  
   <a href="tag/xarray/">xarray</a>
-  
-  
-  
-  
-  
-  <a href="tag/diagnostics/">diagnostics</a>
   
   
   
@@ -2811,13 +2825,19 @@ by <strong>Friday, November 4, 2022</strong>!</p>
     </span>
   
   
-  <a href="tag/faq/">faq</a>
+  <a href="tag/xarray/">xarray</a>
   
   
   
   
   
   <a href="tag/matplotlib/">matplotlib</a>
+  
+  
+  
+  
+  
+  <a href="tag/faq/">faq</a>
   
   
   
@@ -2830,12 +2850,6 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   
   
   <a href="tag/update/">update</a>
-  
-  
-  
-  
-  
-  <a href="tag/xarray/">xarray</a>
   
   
   
@@ -2956,12 +2970,6 @@ by <strong>Friday, November 4, 2022</strong>!</p>
     </span>
   
   
-  <a href="tag/intake/">intake</a>
-  
-  
-  
-  
-  
   <a href="tag/cesm/">cesm</a>
   
   
@@ -2969,6 +2977,12 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   
   
   <a href="tag/diagnostics/">diagnostics</a>
+  
+  
+  
+  
+  
+  <a href="tag/intake/">intake</a>
   
   
   
@@ -3009,14 +3023,14 @@ by <strong>Friday, November 4, 2022</strong>!</p>
     </span>
   
   
-  <a href="author/max-grover/">Max Grover</a>
+  <a href="author/anderson-banihirwe/">Anderson Banihirwe</a>
   
   ,
   
   
   
   
-  <a href="author/anderson-banihirwe/">Anderson Banihirwe</a>
+  <a href="author/max-grover/">Max Grover</a>
   
   
   
@@ -3036,6 +3050,12 @@ by <strong>Friday, November 4, 2022</strong>!</p>
     </span>
   
   
+  <a href="tag/visualization/">visualization</a>
+  
+  
+  
+  
+  
   <a href="tag/dask/">dask</a>
   
   
@@ -3043,12 +3063,6 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   
   
   <a href="tag/wrf/">WRF</a>
-  
-  
-  
-  
-  
-  <a href="tag/visualization/">visualization</a>
   
   
   
@@ -3115,13 +3129,13 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   
   
   
+  <a href="tag/cesm/">cesm</a>
+  
+  
+  
+  
+  
   <a href="tag/diagnostics/">diagnostics</a>
-  
-  
-  
-  
-  
-  <a href="tag/intake/">intake</a>
   
   
   
@@ -3133,7 +3147,7 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   
   
   
-  <a href="tag/cesm/">cesm</a>
+  <a href="tag/intake/">intake</a>
   
   
   
@@ -3260,7 +3274,7 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   
   
   
-  <a href="tag/jupyter/">jupyter</a>
+  <a href="tag/cesm/">cesm</a>
   
   
   
@@ -3278,7 +3292,7 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   
   
   
-  <a href="tag/cesm/">cesm</a>
+  <a href="tag/jupyter/">jupyter</a>
   
   
   
@@ -3339,13 +3353,13 @@ by <strong>Friday, November 4, 2022</strong>!</p>
     </span>
   
   
-  <a href="tag/benchmark/">benchmark</a>
+  <a href="tag/ecgtools/">ecgtools</a>
   
   
   
   
   
-  <a href="tag/intake/">intake</a>
+  <a href="tag/cesm/">cesm</a>
   
   
   
@@ -3357,13 +3371,13 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   
   
   
-  <a href="tag/ecgtools/">ecgtools</a>
+  <a href="tag/intake/">intake</a>
   
   
   
   
   
-  <a href="tag/cesm/">cesm</a>
+  <a href="tag/benchmark/">benchmark</a>
   
   
   
@@ -3424,13 +3438,13 @@ by <strong>Friday, November 4, 2022</strong>!</p>
     </span>
   
   
-  <a href="tag/observations/">observations</a>
-  
-  
-  
-  
-  
   <a href="tag/cesm/">cesm</a>
+  
+  
+  
+  
+  
+  <a href="tag/diagnostics/">diagnostics</a>
   
   
   
@@ -3442,7 +3456,7 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   
   
   
-  <a href="tag/diagnostics/">diagnostics</a>
+  <a href="tag/observations/">observations</a>
   
   
   
@@ -3563,13 +3577,13 @@ by <strong>Friday, November 4, 2022</strong>!</p>
     </span>
   
   
-  <a href="tag/intake/">intake</a>
-  
-  
-  
-  
-  
   <a href="tag/cesm2-le/">cesm2-le</a>
+  
+  
+  
+  
+  
+  <a href="tag/intake/">intake</a>
   
   
   
@@ -3636,7 +3650,7 @@ by <strong>Friday, November 4, 2022</strong>!</p>
     </span>
   
   
-  <a href="tag/intake/">intake</a>
+  <a href="tag/diagnostics/">diagnostics</a>
   
   
   
@@ -3648,13 +3662,13 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   
   
   
+  <a href="tag/intake/">intake</a>
+  
+  
+  
+  
+  
   <a href="tag/visualization/">visualization</a>
-  
-  
-  
-  
-  
-  <a href="tag/diagnostics/">diagnostics</a>
   
   
   
@@ -3848,7 +3862,7 @@ by <strong>Friday, November 4, 2022</strong>!</p>
     </span>
   
   
-  <a href="tag/intake/">intake</a>
+  <a href="tag/cesm/">cesm</a>
   
   
   
@@ -3860,7 +3874,7 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   
   
   
-  <a href="tag/cesm/">cesm</a>
+  <a href="tag/intake/">intake</a>
   
   
   
@@ -3994,12 +4008,6 @@ by <strong>Friday, November 4, 2022</strong>!</p>
     </span>
   
   
-  <a href="tag/conference/">conference</a>
-  
-  
-  
-  
-  
   <a href="tag/scipy/">scipy</a>
   
   
@@ -4007,6 +4015,12 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   
   
   <a href="tag/open-source/">open-source</a>
+  
+  
+  
+  
+  
+  <a href="tag/conference/">conference</a>
   
   
   
@@ -4254,18 +4268,6 @@ by <strong>Friday, November 4, 2022</strong>!</p>
     </span>
   
   
-  <a href="tag/intake/">intake</a>
-  
-  
-  
-  
-  
-  <a href="tag/documentation/">documentation</a>
-  
-  
-  
-  
-  
   <a href="tag/cesm/">cesm</a>
   
   
@@ -4273,6 +4275,18 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   
   
   <a href="tag/jupyter/">jupyter</a>
+  
+  
+  
+  
+  
+  <a href="tag/intake/">intake</a>
+  
+  
+  
+  
+  
+  <a href="tag/documentation/">documentation</a>
   
   
   
@@ -4333,7 +4347,7 @@ by <strong>Friday, November 4, 2022</strong>!</p>
     </span>
   
   
-  <a href="tag/conference/">conference</a>
+  <a href="tag/diagnostics/">diagnostics</a>
   
   
   
@@ -4345,7 +4359,7 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   
   
   
-  <a href="tag/diagnostics/">diagnostics</a>
+  <a href="tag/conference/">conference</a>
   
   
   
@@ -4406,13 +4420,13 @@ by <strong>Friday, November 4, 2022</strong>!</p>
     </span>
   
   
-  <a href="tag/intake/">intake</a>
-  
-  
-  
-  
-  
   <a href="tag/cesm/">cesm</a>
+  
+  
+  
+  
+  
+  <a href="tag/intake/">intake</a>
   
   
   
@@ -4539,13 +4553,13 @@ by <strong>Friday, November 4, 2022</strong>!</p>
     </span>
   
   
-  <a href="tag/intake/">intake</a>
-  
-  
-  
-  
-  
   <a href="tag/cesm/">cesm</a>
+  
+  
+  
+  
+  
+  <a href="tag/intake/">intake</a>
   
   
   
@@ -4606,7 +4620,7 @@ by <strong>Friday, November 4, 2022</strong>!</p>
     </span>
   
   
-  <a href="tag/open-science/">open-science</a>
+  <a href="tag/dask/">dask</a>
   
   
   
@@ -4618,7 +4632,7 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   
   
   
-  <a href="tag/dask/">dask</a>
+  <a href="tag/open-science/">open-science</a>
   
   
   
@@ -4739,12 +4753,6 @@ by <strong>Friday, November 4, 2022</strong>!</p>
     </span>
   
   
-  <a href="tag/intake/">intake</a>
-  
-  
-  
-  
-  
   <a href="tag/debug/">debug</a>
   
   
@@ -4752,6 +4760,12 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   
   
   <a href="tag/cmip6/">cmip6</a>
+  
+  
+  
+  
+  
+  <a href="tag/intake/">intake</a>
   
   
   
@@ -4952,12 +4966,6 @@ by <strong>Friday, November 4, 2022</strong>!</p>
     </span>
   
   
-  <a href="tag/pop/">pop</a>
-  
-  
-  
-  
-  
   <a href="tag/dask/">dask</a>
   
   
@@ -4965,6 +4973,12 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   
   
   <a href="tag/xarray/">xarray</a>
+  
+  
+  
+  
+  
+  <a href="tag/pop/">pop</a>
   
   
   
@@ -5085,6 +5099,12 @@ by <strong>Friday, November 4, 2022</strong>!</p>
     </span>
   
   
+  <a href="tag/xarray/">xarray</a>
+  
+  
+  
+  
+  
   <a href="tag/xoak/">xoak</a>
   
   
@@ -5092,12 +5112,6 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   
   
   <a href="tag/">index</a>
-  
-  
-  
-  
-  
-  <a href="tag/xarray/">xarray</a>
   
   
   
@@ -5158,13 +5172,13 @@ by <strong>Friday, November 4, 2022</strong>!</p>
     </span>
   
   
-  <a href="tag/dask/">dask</a>
-  
-  
-  
-  
-  
   <a href="tag/ncar/">ncar</a>
+  
+  
+  
+  
+  
+  <a href="tag/dask/">dask</a>
   
   
   
@@ -5291,7 +5305,7 @@ by <strong>Friday, November 4, 2022</strong>!</p>
     </span>
   
   
-  <a href="tag/intake/">intake</a>
+  <a href="tag/cesm/">cesm</a>
   
   
   
@@ -5303,7 +5317,7 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   
   
   
-  <a href="tag/cesm/">cesm</a>
+  <a href="tag/intake/">intake</a>
   
   
   
@@ -5431,7 +5445,7 @@ by <strong>Friday, November 4, 2022</strong>!</p>
     </span>
   
   
-  <a href="tag/open-science/">open-science</a>
+  <a href="tag/citation/">citation</a>
   
   
   
@@ -5443,7 +5457,7 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   
   
   
-  <a href="tag/citation/">citation</a>
+  <a href="tag/open-science/">open-science</a>
   
   
   
@@ -5504,6 +5518,12 @@ by <strong>Friday, November 4, 2022</strong>!</p>
     </span>
   
   
+  <a href="tag/faq/">faq</a>
+  
+  
+  
+  
+  
   <a href="tag/python-tutorial-series/">python-tutorial-series</a>
   
   
@@ -5511,12 +5531,6 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   
   
   <a href="tag/matplotlib/">matplotlib</a>
-  
-  
-  
-  
-  
-  <a href="tag/faq/">faq</a>
   
   
   
@@ -5577,12 +5591,6 @@ by <strong>Friday, November 4, 2022</strong>!</p>
     </span>
   
   
-  <a href="tag/questions/">questions</a>
-  
-  
-  
-  
-  
   <a href="tag/townhall/">townhall</a>
   
   
@@ -5590,6 +5598,12 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   
   
   <a href="tag/cgd/">cgd</a>
+  
+  
+  
+  
+  
+  <a href="tag/questions/">questions</a>
   
   
   
@@ -5650,12 +5664,6 @@ by <strong>Friday, November 4, 2022</strong>!</p>
     </span>
   
   
-  <a href="tag/python-tutorial-series/">python-tutorial-series</a>
-  
-  
-  
-  
-  
   <a href="tag/numpy/">numpy</a>
   
   
@@ -5663,6 +5671,12 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   
   
   <a href="tag/faq/">faq</a>
+  
+  
+  
+  
+  
+  <a href="tag/python-tutorial-series/">python-tutorial-series</a>
   
   
   
@@ -5850,12 +5864,6 @@ by <strong>Friday, November 4, 2022</strong>!</p>
     </span>
   
   
-  <a href="tag/python-tutorial-series/">python-tutorial-series</a>
-  
-  
-  
-  
-  
   <a href="tag/jupyter/">jupyter</a>
   
   
@@ -5863,6 +5871,12 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   
   
   <a href="tag/faq/">faq</a>
+  
+  
+  
+  
+  
+  <a href="tag/python-tutorial-series/">python-tutorial-series</a>
   
   
   
@@ -5983,13 +5997,13 @@ by <strong>Friday, November 4, 2022</strong>!</p>
     </span>
   
   
-  <a href="tag/python-tutorial-series/">python-tutorial-series</a>
-  
-  
-  
-  
-  
   <a href="tag/faq/">faq</a>
+  
+  
+  
+  
+  
+  <a href="tag/python-tutorial-series/">python-tutorial-series</a>
   
   
   
@@ -6110,6 +6124,12 @@ by <strong>Friday, November 4, 2022</strong>!</p>
     </span>
   
   
+  <a href="tag/faq/">faq</a>
+  
+  
+  
+  
+  
   <a href="tag/python-tutorial-series/">python-tutorial-series</a>
   
   
@@ -6117,12 +6137,6 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   
   
   <a href="tag/python/">python</a>
-  
-  
-  
-  
-  
-  <a href="tag/faq/">faq</a>
   
   
   
@@ -6183,6 +6197,12 @@ by <strong>Friday, November 4, 2022</strong>!</p>
     </span>
   
   
+  <a href="tag/faq/">faq</a>
+  
+  
+  
+  
+  
   <a href="tag/python-tutorial-series/">python-tutorial-series</a>
   
   
@@ -6190,12 +6210,6 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   
   
   <a href="tag/python/">python</a>
-  
-  
-  
-  
-  
-  <a href="tag/faq/">faq</a>
   
   
   
@@ -6256,6 +6270,12 @@ by <strong>Friday, November 4, 2022</strong>!</p>
     </span>
   
   
+  <a href="tag/faq/">faq</a>
+  
+  
+  
+  
+  
   <a href="tag/python-tutorial-series/">python-tutorial-series</a>
   
   
@@ -6263,12 +6283,6 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   
   
   <a href="tag/python/">python</a>
-  
-  
-  
-  
-  
-  <a href="tag/faq/">faq</a>
   
   
   
@@ -6397,7 +6411,7 @@ What should I do?</p>
   
   
   
-  <a href="tag/netcdf/">netcdf</a>
+  <a href="tag/xarray/">xarray</a>
   
   
   
@@ -6409,7 +6423,7 @@ What should I do?</p>
   
   
   
-  <a href="tag/xarray/">xarray</a>
+  <a href="tag/netcdf/">netcdf</a>
   
   
   
@@ -6470,13 +6484,13 @@ What should I do?</p>
     </span>
   
   
-  <a href="tag/templating/">templating</a>
-  
-  
-  
-  
-  
   <a href="tag/jinja2/">jinja2</a>
+  
+  
+  
+  
+  
+  <a href="tag/templating/">templating</a>
   
   
   
@@ -6548,13 +6562,13 @@ be more confusing than illuminating.</p>
     </span>
   
   
-  <a href="tag/open-source/">open source</a>
-  
-  
-  
-  
-  
   <a href="tag/open-development/">open development</a>
+  
+  
+  
+  
+  
+  <a href="tag/open-source/">open source</a>
   
   
   
@@ -6640,13 +6654,13 @@ science itself!</p>
   
   
   
-  <a href="tag/xarray/">xarray</a>
-  
-  
-  
-  
-  
   <a href="tag/cftime/">cftime</a>
+  
+  
+  
+  
+  
+  <a href="tag/xarray/">xarray</a>
   
   
   
@@ -6670,16 +6684,12 @@ science itself!</p>
               
               
               
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -6697,8 +6707,8 @@ science itself!</p>
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -6724,10 +6734,11 @@ science itself!</p>
     </div>
   
   
+  
     <div class="footer-items__end">
       
         <div class="footer-item"><p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.1.
 </p></div>
       
     </div>

@@ -18,12 +18,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
 
   
-  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -35,8 +35,9 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
@@ -107,6 +108,15 @@ commentsRunWhenDOMLoaded(addUtterances);
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
   
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
   <input type="checkbox"
           class="sidebar-toggle"
           name="__primary"
@@ -146,7 +156,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     <span class="fa-solid fa-bars"></span>
   </label>
   
-  <div class="navbar-header-items__start">
+  
+  <div class="col-lg-3 navbar-header-items__start">
     
       <div class="navbar-item">
   
@@ -162,7 +173,6 @@ commentsRunWhenDOMLoaded(addUtterances);
 </a></div>
     
   </div>
-  
   
   <div class="col-lg-9 navbar-header-items">
     
@@ -211,34 +221,34 @@ commentsRunWhenDOMLoaded(addUtterances);
                       </a>
                     </li>
                 
-            <div class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-header-nav-more-links">
                     More
                 </button>
-                <div class="dropdown-menu">
+                <ul id="pst-header-nav-more-links" class="dropdown-menu">
                     
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../../best-practices/">
+                      <a class="nav-link dropdown-item nav-internal" href="../../../best-practices/">
                         Best Practices
                       </a>
                     </li>
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../../calendar/">
+                      <a class="nav-link dropdown-item nav-internal" href="../../../calendar/">
                         Calendar
                       </a>
                     </li>
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../../projects/">
+                      <a class="nav-link dropdown-item nav-internal" href="../../../projects/">
                         Projects
                       </a>
                     </li>
                 
-                </div>
-            </div>
+                </ul>
+            </li>
             
   </ul>
 </nav></div>
@@ -250,13 +260,15 @@ commentsRunWhenDOMLoaded(addUtterances);
       
         <div class="navbar-item navbar-persistent--container">
           
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
-  </button>
-`);
-</script>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
         </div>
       
       
@@ -289,8 +301,8 @@ document.write(`
           
           
           
-          <a href="https://github.com/ncar/esds" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
-            <label class="sr-only">GitHub</label></a>
+          <a href="https://github.com/ncar/esds" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
         </li>
 </ul></div>
       
@@ -300,13 +312,15 @@ document.write(`
   
   
     <div class="navbar-persistent--mobile">
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
-  </button>
-`);
-</script>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
     </div>
   
 
@@ -370,34 +384,34 @@ document.write(`
                       </a>
                     </li>
                 
-            <div class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-header-nav-more-links">
                     More
                 </button>
-                <div class="dropdown-menu">
+                <ul id="pst-header-nav-more-links" class="dropdown-menu">
                     
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../../best-practices/">
+                      <a class="nav-link dropdown-item nav-internal" href="../../../best-practices/">
                         Best Practices
                       </a>
                     </li>
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../../calendar/">
+                      <a class="nav-link dropdown-item nav-internal" href="../../../calendar/">
                         Calendar
                       </a>
                     </li>
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../../projects/">
+                      <a class="nav-link dropdown-item nav-internal" href="../../../projects/">
                         Projects
                       </a>
                     </li>
                 
-                </div>
-            </div>
+                </ul>
+            </li>
             
   </ul>
 </nav></div>
@@ -437,8 +451,8 @@ document.write(`
           
           
           
-          <a href="https://github.com/ncar/esds" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
-            <label class="sr-only">GitHub</label></a>
+          <a href="https://github.com/ncar/esds" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
         </li>
 </ul></div>
         
@@ -470,8 +484,8 @@ document.write(`
 
 
 
-<nav aria-label="Breadcrumbs">
-  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
     
     <li class="breadcrumb-item breadcrumb-home">
       <a href="../../../" class="nav-link" aria-label="Home">
@@ -624,25 +638,25 @@ document.write(`
     </span>
   
   
-  <a href="../sparse/">sparse</a>
-  
-  
-  
-  
-  
-  <a href="../clm/">CLM</a>
-  
-  
-  
-  
-  
   <a href="#">dask</a>
   
   
   
   
   
+  <a href="../sparse/">sparse</a>
+  
+  
+  
+  
+  
   <a href="../pft/">PFT</a>
+  
+  
+  
+  
+  
+  <a href="../clm/">CLM</a>
   
   
   
@@ -703,13 +717,19 @@ document.write(`
     </span>
   
   
-  <a href="../faq/">faq</a>
+  <a href="../xarray/">xarray</a>
   
   
   
   
   
   <a href="../matplotlib/">matplotlib</a>
+  
+  
+  
+  
+  
+  <a href="../faq/">faq</a>
   
   
   
@@ -722,12 +742,6 @@ document.write(`
   
   
   <a href="../update/">update</a>
-  
-  
-  
-  
-  
-  <a href="../xarray/">xarray</a>
   
   
   
@@ -788,13 +802,19 @@ document.write(`
     </span>
   
   
-  <a href="../faq/">faq</a>
+  <a href="../xarray/">xarray</a>
   
   
   
   
   
   <a href="../matplotlib/">matplotlib</a>
+  
+  
+  
+  
+  
+  <a href="../faq/">faq</a>
   
   
   
@@ -807,12 +827,6 @@ document.write(`
   
   
   <a href="../update/">update</a>
-  
-  
-  
-  
-  
-  <a href="../xarray/">xarray</a>
   
   
   
@@ -853,14 +867,14 @@ document.write(`
     </span>
   
   
-  <a href="../../author/max-grover/">Max Grover</a>
+  <a href="../../author/anderson-banihirwe/">Anderson Banihirwe</a>
   
   ,
   
   
   
   
-  <a href="../../author/anderson-banihirwe/">Anderson Banihirwe</a>
+  <a href="../../author/max-grover/">Max Grover</a>
   
   
   
@@ -880,6 +894,12 @@ document.write(`
     </span>
   
   
+  <a href="../visualization/">visualization</a>
+  
+  
+  
+  
+  
   <a href="#">dask</a>
   
   
@@ -887,12 +907,6 @@ document.write(`
   
   
   <a href="../wrf/">WRF</a>
-  
-  
-  
-  
-  
-  <a href="../visualization/">visualization</a>
   
   
   
@@ -953,13 +967,13 @@ document.write(`
     </span>
   
   
-  <a href="../benchmark/">benchmark</a>
+  <a href="../ecgtools/">ecgtools</a>
   
   
   
   
   
-  <a href="../intake/">intake</a>
+  <a href="../cesm/">cesm</a>
   
   
   
@@ -971,13 +985,13 @@ document.write(`
   
   
   
-  <a href="../ecgtools/">ecgtools</a>
+  <a href="../intake/">intake</a>
   
   
   
   
   
-  <a href="../cesm/">cesm</a>
+  <a href="../benchmark/">benchmark</a>
   
   
   
@@ -1105,7 +1119,7 @@ document.write(`
     </span>
   
   
-  <a href="../open-science/">open-science</a>
+  <a href="#">dask</a>
   
   
   
@@ -1117,7 +1131,7 @@ document.write(`
   
   
   
-  <a href="#">dask</a>
+  <a href="../open-science/">open-science</a>
   
   
   
@@ -1185,12 +1199,6 @@ document.write(`
     </span>
   
   
-  <a href="../pop/">pop</a>
-  
-  
-  
-  
-  
   <a href="#">dask</a>
   
   
@@ -1198,6 +1206,12 @@ document.write(`
   
   
   <a href="../xarray/">xarray</a>
+  
+  
+  
+  
+  
+  <a href="../pop/">pop</a>
   
   
   
@@ -1258,13 +1272,13 @@ document.write(`
     </span>
   
   
-  <a href="#">dask</a>
-  
-  
-  
-  
-  
   <a href="../ncar/">ncar</a>
+  
+  
+  
+  
+  
+  <a href="#">dask</a>
   
   
   
@@ -1331,7 +1345,7 @@ document.write(`
     </span>
   
   
-  <a href="../intake/">intake</a>
+  <a href="../cesm/">cesm</a>
   
   
   
@@ -1343,7 +1357,7 @@ document.write(`
   
   
   
-  <a href="../cesm/">cesm</a>
+  <a href="../intake/">intake</a>
   
   
   
@@ -1477,7 +1491,7 @@ document.write(`
   
   
   
-  <a href="../netcdf/">netcdf</a>
+  <a href="../xarray/">xarray</a>
   
   
   
@@ -1489,7 +1503,7 @@ document.write(`
   
   
   
-  <a href="../xarray/">xarray</a>
+  <a href="../netcdf/">netcdf</a>
   
   
   
@@ -1513,16 +1527,12 @@ document.write(`
               
               
               
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -1540,8 +1550,8 @@ document.write(`
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -1567,10 +1577,11 @@ document.write(`
     </div>
   
   
+  
     <div class="footer-items__end">
       
         <div class="footer-item"><p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.1.
 </p></div>
       
     </div>
