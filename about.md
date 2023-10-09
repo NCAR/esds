@@ -45,7 +45,7 @@ described in our [governance document](https://docs.google.com/document/d/1xjNzJ
 * Max Grover, CGD
 * Thomas Hauser, CISL
 * Matt Long, CGD
-* Kevin Paul, CGD
+* Kevin Paul, CISL
 
 
 
