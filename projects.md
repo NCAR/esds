@@ -51,4 +51,3 @@ Utilities to build catalogs of ESM output that are usable by intake-esm.
 ### [Nbscuid](https://github.com/rmshkv/nbscuid)
 
 In development: package to enable running flexible, extensible notebook-based diagnostics workflows.
-
