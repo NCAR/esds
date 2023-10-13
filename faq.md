@@ -2,9 +2,16 @@
 
 This contains relevant questions and answers from common workflow issues and questions posted on Zulip.
 
-**_This page is meant to be a list of FAQ regarding climate datasets, movivated by a variety of employees across UCAR/NCAR_**
+**_This page is meant to be a list of FAQ regarding climate datasets, motivated by a variety of employees across UCAR/NCAR_**
 
-## I need help with this!
+# FAQs:
+[Where do I go for help?](#where-do-i-go-for-help?)
+[Someone must have written the function I want. Where do I look?](#someone-must-have-written-the-function-i-want.-where-do-i-look?)
+[How do I use conda environments?](#how-do-i-use-conda-environments?)
+[Xarray and Dask](#xarray-and-dask)
+[Github](#github)
+[CESM Data](#cesm-data)
+
 
 ### Where do I go for help?
 
