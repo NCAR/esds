@@ -4,16 +4,22 @@ This contains relevant questions and answers from common workflow issues and que
 
 **_This page is meant to be a list of FAQ regarding climate datasets, motivated by a variety of employees across UCAR/NCAR_**
 
-# FAQs:
-[Where do I go for help?](#where-do-i-go-for-help?)
-[Someone must have written the function I want. Where do I look?](#someone-must-have-written-the-function-i-want.-where-do-i-look?)
-[How do I use conda environments?](#how-do-i-use-conda-environments?)
+## Help Topics:
+[Where do I go for help?](#where-do-i-go-for-help)
+[What do I do if my question is not answered on this page?](#what-do-i-do-if-my-question-is-not-answered-on-this-page)
+
+[Someone must have written the function I want. Where do I look?](#someone-must-have-written-the-function-i-want-where-do-i-look)
+
+[How do I use conda environments?](#how-do-i-use-conda-environments)
+
 [Xarray and Dask](#xarray-and-dask)
+
 [Github](#github)
+
 [CESM Data](#cesm-data)
 
 
-### Where do I go for help?
+## Where do I go for help?
 
 Try one of the following resources.
 
@@ -24,7 +30,7 @@ Try one of the following resources.
 
 Avoid personal emails and prefer a public forum.
 
-### What do I do if my question is not answered on this page?
+## What do I do if my question is not answered on this page?
 
 If your question is related to conda environments and you're affiliated with UCAR/NCAR,
 you can open a help ticket on the [NCAR Research Computing Helpdesk site](https://ithelp.ucar.edu/plugins/servlet/desk/site/rc).
