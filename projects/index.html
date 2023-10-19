@@ -87,7 +87,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     <link rel="author" title="About these documents" href="../about/" />
     <link rel="index" title="Index" href="../genindex/" />
     <link rel="search" title="Search" href="../search/" />
-    <link rel="prev" title="Calendar" href="../calendar/" />
+    <link rel="prev" title="Best Practices" href="../best-practices/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -212,7 +212,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../communication/">
-                        Communication
+                        Communication, Meetings, and Resources
                       </a>
                     </li>
                 
@@ -232,13 +232,6 @@ commentsRunWhenDOMLoaded(addUtterances);
                     <li class="nav-item">
                       <a class="nav-link dropdown-item nav-internal" href="../best-practices/">
                         Best Practices
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../calendar/">
-                        Calendar
                       </a>
                     </li>
                 
@@ -379,7 +372,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../communication/">
-                        Communication
+                        Communication, Meetings, and Resources
                       </a>
                     </li>
                 
@@ -399,13 +392,6 @@ commentsRunWhenDOMLoaded(addUtterances);
                     <li class="nav-item">
                       <a class="nav-link dropdown-item nav-internal" href="../best-practices/">
                         Best Practices
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../calendar/">
-                        Calendar
                       </a>
                     </li>
                 
@@ -522,7 +508,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h2><a class="reference external" href="https://geocat.ucar.edu/">GeoCAT</a><a class="headerlink" href="#geocat" title="Permalink to this heading">#</a></h2>
 <section id="geocat-comp">
 <h3><a class="reference external" href="https://geocat-comp.readthedocs.io/en/latest/">GeoCAT-comp</a><a class="headerlink" href="#geocat-comp" title="Permalink to this heading">#</a></h3>
-<p>GeoCAT-comp is computational component of the GeoCAT project. GeoCAT-comp provides implementations of computational functions for operating on geosciences data. Many of these functions originated in NCL and were translated into Python with the help of GeoCAT-comp; however, developers are welcome to come up with novel computational functions for geosciences data.</p>
+<p>GeoCAT-comp is a computational component of the GeoCAT project. GeoCAT-comp provides implementations of computational functions for operating on geosciences data. Many of these functions originated in NCL and were translated into Python with the help of GeoCAT-comp; however, developers are welcome to come up with novel computational functions for geosciences data.</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/NCAR/geocat-comp/projects/1">Version 1.0 Roadmap</a></p></li>
 <li><p><a class="reference external" href="https://github.com/NCAR/geocat-comp/projects/2">Version 1.1 Roadmap</a></p></li>
@@ -539,8 +525,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 </section>
 <section id="diagnostic-efforts">
 <h2>Diagnostic Efforts<a class="headerlink" href="#diagnostic-efforts" title="Permalink to this heading">#</a></h2>
-<section id="amp-diagnostics">
-<h3><a class="reference external" href="https://github.com/NCAR/CAM_diagnostics">AMP Diagnostics</a><a class="headerlink" href="#amp-diagnostics" title="Permalink to this heading">#</a></h3>
+<section id="atmosphere-diagnostics-framework-adf">
+<h3><a class="reference external" href="https://github.com/NCAR/CAM_diagnostics">Atmosphere Diagnostics Framework (ADF)</a><a class="headerlink" href="#atmosphere-diagnostics-framework-adf" title="Permalink to this heading">#</a></h3>
 <p>Python-based diagnostics focused on evaluation of the atmospheric component of CESM. Produces time series and climatology files, seasonal and annual mean maps and zonal averages, global mean statistics, and an optional static website.</p>
 </section>
 <section id="community-terrestrial-systems-model-ctsm-python-gallery">
@@ -551,17 +537,25 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h3><a class="reference external" href="https://github.com/NCAR/pop-tools">Parallel Ocean Program (POP)-tools</a><a class="headerlink" href="#parallel-ocean-program-pop-tools" title="Permalink to this heading">#</a></h3>
 <p>Tools to support analysis of POP2-CESM model solutions.</p>
 </section>
+<section id="modular-ocean-model-mom6-tools">
+<h3><a class="reference external" href="https://github.com/NCAR/mom6-tools">Modular Ocean Model (MOM6)-tools</a><a class="headerlink" href="#modular-ocean-model-mom6-tools" title="Permalink to this heading">#</a></h3>
+<p>In development: Tools to support analysis of MOM6-CESM model solutions.</p>
+</section>
 <section id="intake-esm">
 <h3><a class="reference external" href="https://github.com/intake/intake-esm">Intake-esm</a><a class="headerlink" href="#intake-esm" title="Permalink to this heading">#</a></h3>
-<p>An intake plugin for parsing an Earth System Model (ESM) catalog and loading assets into xarray datasets.</p>
+<p>An Intake plugin for parsing an Earth System Model (ESM) catalog and loading assets into xarray datasets.</p>
 </section>
 <section id="earth-system-model-catalog-generation-tools-ecgtools">
 <h3><a class="reference external" href="https://github.com/NCAR/ecgtools">Earth system model Catalog Generation Tools (ecgtools)</a><a class="headerlink" href="#earth-system-model-catalog-generation-tools-ecgtools" title="Permalink to this heading">#</a></h3>
-<p>Tool which enables one to build intake-esm catalogs.</p>
+<p>Tool which enables one to build intake-esm catalogs. Note that this is not currently managed but functional and still useful.</p>
 </section>
-<section id="funnel">
-<h3><a class="reference external" href="https://github.com/NCAR/esds-funnel">Funnel</a><a class="headerlink" href="#funnel" title="Permalink to this heading">#</a></h3>
-<p>Package which enables extensible diagnostic workflows, connecting intake-esm catalogs with operators and derived variables.</p>
+<section id="esm-catalog-utils">
+<h3><a class="reference external" href="https://esm-catalog-utils.readthedocs.io/en/latest/">Esm_catalog_utils</a><a class="headerlink" href="#esm-catalog-utils" title="Permalink to this heading">#</a></h3>
+<p>Utilities to build catalogs of ESM output that are usable by intake-esm.</p>
+</section>
+<section id="nbscuid">
+<h3><a class="reference external" href="https://github.com/rmshkv/nbscuid">Nbscuid</a><a class="headerlink" href="#nbscuid" title="Permalink to this heading">#</a></h3>
+<p>In development: package to enable running flexible, extensible notebook-based diagnostics workflows.</p>
 </section>
 </section>
 </section>
@@ -581,12 +575,12 @@ commentsRunWhenDOMLoaded(addUtterances);
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../calendar/"
+       href="../best-practices/"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Calendar</p>
+        <p class="prev-next-title">Best Practices</p>
       </div>
     </a>
 </div>
@@ -611,12 +605,14 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diagnostic-efforts">Diagnostic Efforts</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#amp-diagnostics">AMP Diagnostics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#atmosphere-diagnostics-framework-adf">Atmosphere Diagnostics Framework (ADF)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#community-terrestrial-systems-model-ctsm-python-gallery">Community Terrestrial Systems Model (CTSM) Python Gallery</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parallel-ocean-program-pop-tools">Parallel Ocean Program (POP)-tools</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modular-ocean-model-mom6-tools">Modular Ocean Model (MOM6)-tools</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#intake-esm">Intake-esm</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#earth-system-model-catalog-generation-tools-ecgtools">Earth system model Catalog Generation Tools (ecgtools)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#funnel">Funnel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#esm-catalog-utils">Esm_catalog_utils</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nbscuid">Nbscuid</a></li>
 </ul>
 </li>
 </ul>
