@@ -11,7 +11,7 @@ This event will be hybrid, in-person in NCAR's Mesa Lab Main Seminar Room and
 virtual over Zoom and/or Google Meet.
 
 Please register to the event through the [Registration
-Form](ADD LINK HERE) by **Friday, January 5, 2022**!
+Form](https://docs.google.com/forms/d/1Fmldl4rNqJAjXvbedkH9talP4z479s2OC6-xouFdYmg) by **Friday, January 5, 2024**!
 
 The 2024 ESDS Annual Event will cover tutorials on python and git, the NCAR environment,
 interactive visualization, dask, xarray, and more! There will also be breakout groups and
