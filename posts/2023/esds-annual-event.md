@@ -20,11 +20,11 @@ needs).
 
 Do not forget to check the materials and instructions compiled by section
 leaders to prepare for this event, outlined in this [ESDS blog
-post](EVENT PREP INFORMATION?)!
+post](https://ncar.github.io/esds/posts/2023/esds-event-prep/)!
 
 Here is the content schedule:
 
-**Day 1 (Thursday, November 10th), Mesa Lab Main Seminar Room and Online:**
+**Day 1 (Thursday, January 18th), Mesa Lab Main Seminar Room and Online:**
 
 
 * Starred events are planned to have a "flipped classrooom" format, where
@@ -32,9 +32,9 @@ Here is the content schedule:
   we will go over use cases, Q&A, and individual trouble shooting on each
   topic during its session.
 
-**Day 2 (Friday, November 11th):**
+**Day 2 (Friday, January 19th):**
 
-Please consider submitting a [hackathon or discussion group proposal](ADD LINK HERE)
+Please consider submitting a [hackathon or discussion group proposal](https://docs.google.com/presentation/d/1ju8yN5ydW1vvnBCoksXoYlxqL3ssrN8x6sZhfUJ_nYE/edit#slide=id.g29c40fd2a1f_2_0)
 ahead of January 5th. Our goal is to encourage small group collaborations.
 
 We are looking forward to seeing you all at the event!
