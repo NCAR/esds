@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2023-11-17T00:59:28.306242+00:00</updated>
+  <updated>2023-11-17T19:09:08.030121+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.6">ABlog</generator>
@@ -44,7 +44,7 @@
     <title>Analyzing and Visualizing CAM-SE Output in Python</title>
     <updated>2023-08-15T00:00:00+00:00</updated>
     <author>
-      <name>Deepak Cherian</name>
+      <name>Colin Zarzycki</name>
     </author>
     <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;We demonstrate a variety of options for analyzing and visualizing output from the Community Atmosphere Model (CAM) with the spectral element (SE) grid in Python. This notebook was developed for the ESDS &lt;a class="reference external" href="https://ncar.github.io/esds/posts/2023/unstructured-grid-collab-1/"&gt;Collaborative Work Time on Unstructured Grids&lt;/a&gt;, which took place on April 17, 2023. A recap of the related CAM-SE discussion can be found &lt;a class="reference external" href="https://ncar.github.io/esds/posts/2023/unstructured-grid-collab-1/#katie-dagon-cgd"&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;span class="xref myst"&gt;Regrid CAM-SE output using map file&lt;/span&gt;&lt;/p&gt;
@@ -81,7 +81,7 @@
     <title>Recap: Unstructured Grid Collaborative Work Time</title>
     <updated>2023-05-05T00:00:00+00:00</updated>
     <author>
-      <name>Deepak Cherian</name>
+      <name>Katie Dagon</name>
     </author>
     <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;ESDS hosted our first Collaborative Work Time event on April 17, 2023.
 The topic of the session was “Working With Unstructured Grids”.
@@ -103,7 +103,7 @@ A lucky overlap with the Improving Scientific Software conference, meant that co
     <title>Using Kerchunk with CESM Timeseries Data on the Cloud</title>
     <updated>2023-03-15T00:00:00+00:00</updated>
     <author>
-      <name>Deepak Cherian</name>
+      <name>Max Grover</name>
     </author>
     <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;We benchmark reading a subset of the CESM2-Large Ensemble stored as a collection of netCDF files on the cloud (Amazon / AWS) &lt;strong&gt;from Casper&lt;/strong&gt;.
 We use a single ensemble member historical experiment with daily data from 1850 to 2009, with a total dataset size of 600+ GB, from 13 netCDF4 files.&lt;/p&gt;
@@ -343,7 +343,7 @@ by Friday, November 4, 2022!</summary>
     <title>Sparse arrays and the CESM land model component</title>
     <updated>2022-02-24T00:00:00+00:00</updated>
     <author>
-      <name>Deepak Cherian</name>
+      <name>Katie Dagon</name>
     </author>
     <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;An underappreciated feature of Xarray + Dask is the ability to plug in &lt;a class="reference external" href="https://docs.xarray.dev/en/stable/user-guide/duckarrays.html"&gt;different array types&lt;/a&gt;. Usually we work with Xarray wrapping a Dask array which in turn uses &lt;em&gt;NumPy&lt;/em&gt; arrays for each block; or just Xarray wrapping NumPy arrays directly. NumPy arrays are dense in-memory arrays. Other array types exist:&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://sparse.pydata.org"&gt;sparse&lt;/a&gt; for sparse arrays&lt;/p&gt;
@@ -523,7 +523,7 @@ by Friday, November 4, 2022!</summary>
     <title>Reading WRF data into Xarray and Visualizing the Output using hvPlot</title>
     <updated>2021-10-15T00:00:00+00:00</updated>
     <author>
-      <name>Anderson Banihirwe</name>
+      <name>Max Grover</name>
     </author>
     <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;The &lt;em&gt;&lt;strong&gt;typical&lt;/strong&gt;&lt;/em&gt; data workflow within the Python ecosystem when working with Weather Research and Forecasting (WRF) data is to use the &lt;a class="reference external" href="https://wrf-python.readthedocs.io/en/latest/"&gt;wrf-python&lt;/a&gt; package! Traditionally, it can be difficult to utilize the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;xarray&lt;/span&gt;&lt;/code&gt; data model with WRF data, due to a few challenges:&lt;/p&gt;
 &lt;p&gt;WRF data not being CF-compliant (which makes it hard for xarray to properly construct the dataset out of the box using xr.open_dataset)&lt;/p&gt;
@@ -1000,7 +1000,7 @@ by Friday, November 4, 2022!</summary>
     <title>How to Use xarray.map_blocks for Vertical Interpolation of a 3D Field</title>
     <updated>2021-04-28T00:00:00+00:00</updated>
     <author>
-      <name>Matt Long</name>
+      <name>Max Grover</name>
     </author>
     <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;Within this example, we cover how to use &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;xarray.map_blocks&lt;/span&gt;&lt;/code&gt; to calculate the mixed-layer depth within the CESM POP model output.&lt;/p&gt;
 &lt;p&gt;This calculation is “embarassingly parallel” such that each calculation is done within a single a column. The calculation &lt;strong&gt;&lt;em&gt;should&lt;/em&gt;&lt;/strong&gt; be easily computed within each column across the model domain. This is where &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;map_blocks&lt;/span&gt;&lt;/code&gt; can be used to improve the performance of this metric.&lt;/p&gt;
