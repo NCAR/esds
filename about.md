@@ -27,7 +27,7 @@ described in our [governance document](https://docs.google.com/document/d/1xjNzJ
 ### Community Working Group
 * Katelyn FitzGerald, CISL
 * Julia Kent, CISL
-* Elena Romashkova, CGD
+* Lev Romashkov, CGD
 
 ### Events Working Group
 * Daniel Adriaansen, RAL
