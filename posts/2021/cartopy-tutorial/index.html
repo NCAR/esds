@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 
 
@@ -7,7 +6,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Cartopy Tutorial &#8212; NCAR-ESDS 0.1 documentation</title>
   
@@ -29,25 +28,22 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=66307ba7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
   <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/sphinx_highlight.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/documentation_options.js?v=19645805"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=30646c52"></script>
     <script kind="utterances">
 
     var commentsRunWhenDOMLoaded = cb => {
@@ -82,7 +78,7 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'posts/2021/cartopy-tutorial';</script>
     <link rel="author" title="About these documents" href="../../../about/" />
     <link rel="index" title="Index" href="../../../genindex/" />
@@ -535,6 +531,12 @@ commentsRunWhenDOMLoaded(addUtterances);
   
   
   <li>
+    <a href="../../2023/esds-annual-event/">
+      21 November - 2024 Earth System Data Science (ESDS) Annual Event
+    </a>
+  </li>
+  
+  <li>
     <a href="../../2023/scipy23/">
       28 August - ESDS at SciPy 2023
     </a>
@@ -558,12 +560,6 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
   </li>
   
-  <li>
-    <a href="../../2023/unstructured-grid-collab-1/">
-      05 May - Recap: Unstructured Grid Collaborative Work Time
-    </a>
-  </li>
-  
 </ul>
 </div>
 </div>
@@ -577,7 +573,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   
   
   <li>
-    <a href="../../../blog/2023/">2023 (7)</a>
+    <a href="../../../blog/2023/">2023 (8)</a>
   </li>
   
   
@@ -660,11 +656,11 @@ commentsRunWhenDOMLoaded(addUtterances);
                 <article class="bd-article" role="main">
                   
 <section class="tex2jax_ignore mathjax_ignore" id="cartopy-tutorial">
-<h1>Cartopy Tutorial<a class="headerlink" href="#cartopy-tutorial" title="Permalink to this heading">#</a></h1>
+<h1>Cartopy Tutorial<a class="headerlink" href="#cartopy-tutorial" title="Link to this heading">#</a></h1>
 <p>The NCAR/UCAR virtual Python Tutorial Seminar Series continues with an introduction to the Python package <code class="docutils literal notranslate"><span class="pre">cartopy</span></code> on <strong>Wednesday, April 28th at 1 PM Mountain</strong>. This session will be led by Michaela Sizemore.</p>
 <p>The content for this tutorial is hosted on Michaelsa’s <a class="reference external" href="https://github.com/michaelavs/cartopy_tutorial">Cartopy Tutorial Github Repository</a></p>
 <section id="preparation">
-<h2>Preparation<a class="headerlink" href="#preparation" title="Permalink to this heading">#</a></h2>
+<h2>Preparation<a class="headerlink" href="#preparation" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Check your conda install if this is the first tutorial in the series you are joining us for with <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">--version</span></code> and if necessary <a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">install by following these instructions</a>.</p></li>
 <li><p>Navigate to Michaela’s <a class="reference external" href="https://github.com/michaelavs/cartopy_tutorial">Cartopy Tutorial Github Repository</a>.</p></li>
@@ -676,7 +672,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>If you did not attend the live session, it will be beneficial to watch the recording from the live tutorial on <a class="reference external" href="https://youtu.be/xSzXvwzFsDU">Jupyter Notebooks</a> and on <a class="reference external" href="https://youtu.be/EiPRIdHQEmE">Matplotlib</a> before the Cartopy session.</p>
 </section>
 <section id="sign-up">
-<h2>Sign Up<a class="headerlink" href="#sign-up" title="Permalink to this heading">#</a></h2>
+<h2>Sign Up<a class="headerlink" href="#sign-up" title="Link to this heading">#</a></h2>
 <p>If you would like join the <em>learnpython&#64;ucar.edu</em> Google group to be informed of updates and events in the seminar series, please do so by following this <a class="reference external" href="https://groups.google.com/a/ucar.edu/g/learnpython/about">link</a> and clicking “Join Group” next to the group name.</p>
 <iframe src="https://calendar.google.com/calendar/embed?src=c_krmtmqm6kb5u7ke6t5on9l0rus%40group.calendar.google.com" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 </section>
@@ -786,7 +782,7 @@ commentsRunWhenDOMLoaded(addUtterances);
       
         <div class="footer-item">
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     <br/>
   </p>
 </div>

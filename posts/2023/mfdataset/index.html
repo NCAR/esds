@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 
 
@@ -7,7 +6,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Thinking through CESM data access &#8212; NCAR-ESDS 0.1 documentation</title>
   
@@ -29,25 +28,22 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=66307ba7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
   <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/sphinx_highlight.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/documentation_options.js?v=19645805"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=30646c52"></script>
     <script kind="utterances">
 
     var commentsRunWhenDOMLoaded = cb => {
@@ -82,7 +78,7 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'posts/2023/mfdataset';</script>
     <link rel="author" title="About these documents" href="../../../about/" />
     <link rel="index" title="Index" href="../../../genindex/" />
@@ -520,6 +516,12 @@ commentsRunWhenDOMLoaded(addUtterances);
   
   
   <li>
+    <a href="../esds-annual-event/">
+      21 November - 2024 Earth System Data Science (ESDS) Annual Event
+    </a>
+  </li>
+  
+  <li>
     <a href="../scipy23/">
       28 August - ESDS at SciPy 2023
     </a>
@@ -543,12 +545,6 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
   </li>
   
-  <li>
-    <a href="../cesm2-le-timeseries-kerchunk/">
-      15 March - Using Kerchunk with CESM Timeseries Data on the Cloud
-    </a>
-  </li>
-  
 </ul>
 </div>
 </div>
@@ -562,7 +558,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   
   
   <li>
-    <a href="../../../blog/2023/">2023 (7)</a>
+    <a href="../../../blog/2023/">2023 (8)</a>
   </li>
   
   
@@ -645,7 +641,7 @@ commentsRunWhenDOMLoaded(addUtterances);
                 <article class="bd-article" role="main">
                   
 <section class="tex2jax_ignore mathjax_ignore" id="thinking-through-cesm-data-access">
-<h1>Thinking through CESM data access<a class="headerlink" href="#thinking-through-cesm-data-access" title="Permalink to this heading">#</a></h1>
+<h1>Thinking through CESM data access<a class="headerlink" href="#thinking-through-cesm-data-access" title="Link to this heading">#</a></h1>
 <p>We want to read a large number of netCDF files, combine them to form a single dataset, and then analyze that. How do we think about it?</p>
 <p>In pseudocode we want</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># loop over every file and read in metadata</span>
@@ -658,9 +654,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <p>Xarray’s <a class="reference external" href="https://docs.xarray.dev/en/stable/generated/xarray.open_mfdataset.html#xarray.open_mfdataset"><code class="docutils literal notranslate"><span class="pre">open_mfdataset</span></code></a> implements this pattern with the option of parallelizing the loop over all files using <code class="docutils literal notranslate"><span class="pre">dask</span></code>. This can be quite handy.</p>
 <section id="creating-a-new-data-pipeline">
-<h2>Creating a new data pipeline<a class="headerlink" href="#creating-a-new-data-pipeline" title="Permalink to this heading">#</a></h2>
+<h2>Creating a new data pipeline<a class="headerlink" href="#creating-a-new-data-pipeline" title="Link to this heading">#</a></h2>
 <section id="first-create-a-list-of-files">
-<h3>First create a list of files<a class="headerlink" href="#first-create-a-list-of-files" title="Permalink to this heading">#</a></h3>
+<h3>First create a list of files<a class="headerlink" href="#first-create-a-list-of-files" title="Link to this heading">#</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">glob</span></code> package is good for this (<a class="reference external" href="https://docs.python.org/3/library/glob.html">docs</a>)</p>
 <blockquote>
 <div><p>The glob module finds all the pathnames matching a specified pattern according to the rules used by the Unix shell, although results are returned in arbitrary order. No tilde expansion is done, but *, ?, and character ranges expressed with [] will be correctly matched.</p>
@@ -754,7 +750,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </section>
 <section id="start-by-opening-a-single-file">
-<h3>Start by opening a single file<a class="headerlink" href="#start-by-opening-a-single-file" title="Permalink to this heading">#</a></h3>
+<h3>Start by opening a single file<a class="headerlink" href="#start-by-opening-a-single-file" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
@@ -1675,7 +1671,7 @@ Attributes:
 </div>
 </section>
 <section id="choosing-a-chunk-size">
-<h3>Choosing a chunk size<a class="headerlink" href="#choosing-a-chunk-size" title="Permalink to this heading">#</a></h3>
+<h3>Choosing a chunk size<a class="headerlink" href="#choosing-a-chunk-size" title="Link to this heading">#</a></h3>
 <p>This is a timeseries file with daily average output using the <code class="docutils literal notranslate"><span class="pre">noleap</span></code> calendar.</p>
 <p>We will concatenate ensemble members together to create a single dataset along a new dimension <code class="docutils literal notranslate"><span class="pre">&quot;ensemble&quot;</span></code>. Today, we <em>cannot</em> create an xarray dataset with chunksizes that span files. In other words, because there is one file per ensemble member, and we are concatenating ensemble members along a new dimension, the chunksize for the new dimension <strong>will</strong> be one. It is possible to rechunk later, but that will involve expensive communication that is best to avoid unless you really need to do so.</p>
 <p>We <em>could</em> chunk along space because we want to plot time series at a single point later. After some experimenting we choose a size of 16 along <code class="docutils literal notranslate"><span class="pre">lat</span></code>, 32 along <code class="docutils literal notranslate"><span class="pre">lon</span></code>, and all timesteps in a single chunk, for a chunksize of ~180MB.</p>
@@ -2221,7 +2217,7 @@ Attributes:
 </div>
 </section>
 <section id="test-with-a-small-subset">
-<h3>Test with a small subset<a class="headerlink" href="#test-with-a-small-subset" title="Permalink to this heading">#</a></h3>
+<h3>Test with a small subset<a class="headerlink" href="#test-with-a-small-subset" title="Link to this heading">#</a></h3>
 <p>Let’s trying reading just 3 files to make sure the output looks as we expect.</p>
 <p>We choose <code class="docutils literal notranslate"><span class="pre">combine=&quot;nested&quot;</span></code> instead of <code class="docutils literal notranslate"><span class="pre">combine=&quot;by_coords&quot;</span></code>. This will simply concatenate the files in the order provided. The term “nested” is used becasue it can accept a nested list-of-lists as input and concatenate along multiple dimensions. In contrast, <code class="docutils literal notranslate"><span class="pre">by_coords</span></code> will look at coordinate location values and make decisions about which dimensions to concatenate along. This can sometimes backfire, and it is almost always better to be explicit by providing the files in the right order, and specify <code class="docutils literal notranslate"><span class="pre">combine=&quot;nested&quot;</span></code>.</p>
 <div class="cell docutils container">
@@ -2909,7 +2905,7 @@ Sat Apr 29 19:51:41 2023: ncrcat b.e21.BHISTsmbb.f09_g17.LE2-1011.001.cam.h1.PRE
 <p>Notice that <em>all</em> variables have been concatenated along the <code class="docutils literal notranslate"><span class="pre">ensemble</span></code> dimension even if we know it to be a constant: e.g. <code class="docutils literal notranslate"><span class="pre">P0</span></code>.</p>
 </section>
 <section id="choosing-combine-options">
-<h3>Choosing combine options<a class="headerlink" href="#choosing-combine-options" title="Permalink to this heading">#</a></h3>
+<h3>Choosing combine options<a class="headerlink" href="#choosing-combine-options" title="Link to this heading">#</a></h3>
 <p>Xarray has a number of options to control this concatenation behaviour. The <a class="reference external" href="https://docs.xarray.dev/en/stable/user-guide/io.html#reading-multi-file-datasets">normal recommendation</a> is the hard-to-interpret sequence <code class="docutils literal notranslate"><span class="pre">data_vars=&quot;minimal&quot;,</span> <span class="pre">coords=&quot;minimal&quot;,</span> <span class="pre">compat=&quot;override&quot;</span></code>. What does this mean?</p>
 <ol class="arabic simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">&quot;minimal&quot;</span></code> for <code class="docutils literal notranslate"><span class="pre">data_vars</span></code> and <code class="docutils literal notranslate"><span class="pre">coords</span></code> means only concatenate variables that have the concatenation dimension already.</p></li>
@@ -3572,7 +3568,7 @@ Sat Apr 29 19:51:42 2023: ncrcat b.e21.BHISTsmbb.f09_g17.LE2-1251.011.cam.h1.PRE
 </div>
 </section>
 <section id="try-preprocessing-the-dataset-to-make-it-work-better">
-<h3>Try preprocessing the dataset to make it work better<a class="headerlink" href="#try-preprocessing-the-dataset-to-make-it-work-better" title="Permalink to this heading">#</a></h3>
+<h3>Try preprocessing the dataset to make it work better<a class="headerlink" href="#try-preprocessing-the-dataset-to-make-it-work-better" title="Link to this heading">#</a></h3>
 <p>Our dataset doesn’t really fit the assumptions of <code class="docutils literal notranslate"><span class="pre">open_mfdataset</span></code>. Luckily we can modify our datasets before the concatenation stage using the <code class="docutils literal notranslate"><span class="pre">preprocess</span></code> kwarg (<a class="reference external" href="https://docs.xarray.dev/en/stable/generated/xarray.open_mfdataset.html#xarray.open_mfdataset">docs</a>)</p>
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">preprocess</span></code>: If provided, call this function on each dataset prior to concatenation. You can find the file-name from which each dataset was loaded in ds.encoding[“source”].</p>
@@ -4824,9 +4820,9 @@ Attributes:
 </section>
 </section>
 <section id="read-and-concatenate-the-whole-dataset">
-<h2>Read and concatenate the whole dataset<a class="headerlink" href="#read-and-concatenate-the-whole-dataset" title="Permalink to this heading">#</a></h2>
+<h2>Read and concatenate the whole dataset<a class="headerlink" href="#read-and-concatenate-the-whole-dataset" title="Link to this heading">#</a></h2>
 <section id="create-a-dask-cluster">
-<h3>Create a dask cluster<a class="headerlink" href="#create-a-dask-cluster" title="Permalink to this heading">#</a></h3>
+<h3>Create a dask cluster<a class="headerlink" href="#create-a-dask-cluster" title="Link to this heading">#</a></h3>
 <p>We’ll use an adaptive cluster to be polite.</p>
 <p>The dask cluster helps by parallelizing the initial reading of every file.</p>
 <div class="cell docutils container">
@@ -5118,7 +5114,7 @@ Hosting the HTTP server on port 45848 instead
 </div>
 </section>
 <section id="read">
-<h3>Read<a class="headerlink" href="#read" title="Permalink to this heading">#</a></h3>
+<h3>Read<a class="headerlink" href="#read" title="Link to this heading">#</a></h3>
 <p>Now we can scale it up.</p>
 <p>We generalize a little by having <code class="docutils literal notranslate"><span class="pre">add_ensemble_dim</span></code> expand the dimensions of any variable with 3 or more dimensions.</p>
 <div class="cell docutils container">
@@ -5799,7 +5795,7 @@ Sat Apr 29 19:51:41 2023: ncrcat b.e21.BHISTsmbb.f09_g17.LE2-1011.001.cam.h1.PRE
 </section>
 </section>
 <section id="note-that-on-disk-chunking-matters">
-<h2>Note that on-disk chunking matters<a class="headerlink" href="#note-that-on-disk-chunking-matters" title="Permalink to this heading">#</a></h2>
+<h2>Note that on-disk chunking matters<a class="headerlink" href="#note-that-on-disk-chunking-matters" title="Link to this heading">#</a></h2>
 <p>Running</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ncdump</span> <span class="o">-</span><span class="n">sh</span> <span class="o">/</span><span class="n">glade</span><span class="o">/</span><span class="n">scratch</span><span class="o">/</span><span class="n">anukesh</span><span class="o">/</span><span class="n">CESM</span><span class="o">-</span><span class="n">LE</span><span class="o">/</span><span class="n">PRECT</span><span class="o">/</span><span class="n">ENSEMBLE</span><span class="o">/</span><span class="n">b</span><span class="o">.</span><span class="n">e21</span><span class="o">.</span><span class="n">BHISTsmbb</span><span class="o">.</span><span class="n">f09_g17</span><span class="o">.</span><span class="n">LE2</span><span class="o">-</span><span class="mf">1251.011</span><span class="o">.</span><span class="n">cam</span><span class="o">.</span><span class="n">h1</span><span class="o">.</span><span class="n">PRECT</span><span class="mf">.18500101</span><span class="o">-</span><span class="mf">21001231.</span><span class="n">nc</span>
 </pre></div>
@@ -5942,7 +5938,7 @@ Sat Apr 29 19:51:41 2023: ncrcat b.e21.BHISTsmbb.f09_g17.LE2-1011.001.cam.h1.PRE
       
         <div class="footer-item">
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     <br/>
   </p>
 </div>

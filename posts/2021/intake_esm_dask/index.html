@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 
 
@@ -7,7 +6,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>An Example of Using Intake-ESM &#8212; NCAR-ESDS 0.1 documentation</title>
   
@@ -29,25 +28,22 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=66307ba7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
   <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/sphinx_highlight.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/documentation_options.js?v=19645805"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=30646c52"></script>
     <script kind="utterances">
 
     var commentsRunWhenDOMLoaded = cb => {
@@ -82,7 +78,7 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'posts/2021/intake_esm_dask';</script>
     <link rel="author" title="About these documents" href="../../../about/" />
     <link rel="index" title="Index" href="../../../genindex/" />
@@ -515,13 +511,13 @@ commentsRunWhenDOMLoaded(addUtterances);
     </span>
   
   
-  <a href="../../../blog/tag/dask/">dask</a>
-  
-  
-  
-  
-  
   <a href="../../../blog/tag/cesm/">cesm</a>
+  
+  
+  
+  
+  
+  <a href="../../../blog/tag/dask/">dask</a>
   
   
   
@@ -548,6 +544,12 @@ commentsRunWhenDOMLoaded(addUtterances);
   
   
   <li>
+    <a href="../../2023/esds-annual-event/">
+      21 November - 2024 Earth System Data Science (ESDS) Annual Event
+    </a>
+  </li>
+  
+  <li>
     <a href="../../2023/scipy23/">
       28 August - ESDS at SciPy 2023
     </a>
@@ -571,12 +573,6 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
   </li>
   
-  <li>
-    <a href="../../2023/unstructured-grid-collab-1/">
-      05 May - Recap: Unstructured Grid Collaborative Work Time
-    </a>
-  </li>
-  
 </ul>
 </div>
 </div>
@@ -590,7 +586,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   
   
   <li>
-    <a href="../../../blog/2023/">2023 (7)</a>
+    <a href="../../../blog/2023/">2023 (8)</a>
   </li>
   
   
@@ -673,10 +669,10 @@ commentsRunWhenDOMLoaded(addUtterances);
                 <article class="bd-article" role="main">
                   
 <section class="tex2jax_ignore mathjax_ignore" id="an-example-of-using-intake-esm">
-<h1>An Example of Using Intake-ESM<a class="headerlink" href="#an-example-of-using-intake-esm" title="Permalink to this heading">#</a></h1>
+<h1>An Example of Using Intake-ESM<a class="headerlink" href="#an-example-of-using-intake-esm" title="Link to this heading">#</a></h1>
 <p>This past week, NCAR CISL updated the Casper Node to use PBS instead of Slurm for scheduling jobs. This led a post in which an example of spinning up dask clusters on the new configuration. This was also an opportunity to dig into dask, and try applying it to a sample task, specifically looking at ecosystem variables in the CESM-LE dataset, using notebooks included in Matt Long’s <a class="reference external" href="https://github.com/matt-long/krill-cesm-le">krill-cesm-le repository</a>, modified by Kristen Krumhardt.</p>
 <section id="setting-up-the-imports-dask">
-<h2>Setting up the imports/dask<a class="headerlink" href="#setting-up-the-imports-dask" title="Permalink to this heading">#</a></h2>
+<h2>Setting up the imports/dask<a class="headerlink" href="#setting-up-the-imports-dask" title="Link to this heading">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
 <span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">shutil</span>
@@ -704,7 +700,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </pre></div>
 </div>
 <section id="spin-up-dask-cluster">
-<h3>Spin up Dask Cluster<a class="headerlink" href="#spin-up-dask-cluster" title="Permalink to this heading">#</a></h3>
+<h3>Spin up Dask Cluster<a class="headerlink" href="#spin-up-dask-cluster" title="Link to this heading">#</a></h3>
 <p>Here, we spin up our dask cluster. At first, running this notebook resulted in a <code class="docutils literal notranslate"><span class="pre">killed</span> <span class="pre">worker</span></code> error. After further expection, we noticed that additional resources would be needed to read in the notebook since the data are so large (on the order of ~1-2 TB). Increasing the individual worker to a higher amount (ex. 256 GB) solved the issue. Scale up to as many workers as you think are neccessary for the calculation (this may take some trial and error).</p>
 <p>You should base your chunks on your analysis - so in this case, we are interested in the top 100 m in the ocean, so chunking by <code class="docutils literal notranslate"><span class="pre">z_t</span></code>, the vertical coordinate, will help reduce the memory.</p>
 <p>Good general advice for working with dask is to check the dask graph (accessed via the url when you call the client). When there are “orange” regions within your task graph, this means your workers are getting close to maxing out on memory.</p>
@@ -741,7 +737,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </section>
 </section>
 <section id="read-the-cesm-le-data">
-<h2>Read the CESM-LE data<a class="headerlink" href="#read-the-cesm-le-data" title="Permalink to this heading">#</a></h2>
+<h2>Read the CESM-LE data<a class="headerlink" href="#read-the-cesm-le-data" title="Link to this heading">#</a></h2>
 <p>We will use <a class="reference external" href="https://intake-esm.readthedocs.io/en/latest/"><code class="docutils literal notranslate"><span class="pre">intake-esm</span></code></a>, which is a data catalog tool.
 It enables querying a database for the files we want, then loading those directly as an <code class="docutils literal notranslate"><span class="pre">xarray.Dataset</span></code>.</p>
 <p>First step is to set the “collection” for the CESM-LE, which depends on a json file conforming to the <a class="reference external" href="https://github.com/NCAR/esm-collection-spec">ESM Catalog Specification</a>.</p>
@@ -765,7 +761,7 @@ It enables querying a database for the files we want, then loading those directl
 </pre></div>
 </div>
 <section id="apply-the-search-for-data">
-<h3>Apply the search for data<a class="headerlink" href="#apply-the-search-for-data" title="Permalink to this heading">#</a></h3>
+<h3>Apply the search for data<a class="headerlink" href="#apply-the-search-for-data" title="Link to this heading">#</a></h3>
 <p>Specify a list of variables and perform a search. Under the hood, the <code class="docutils literal notranslate"><span class="pre">search</span></code> functionality uses <a class="reference external" href="https://pandas.pydata.org/"><code class="docutils literal notranslate"><span class="pre">pandas</span></code></a> data frames. We can view that frame here using the <code class="docutils literal notranslate"><span class="pre">.df</span></code> syntax.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">col_sub</span> <span class="o">=</span> <span class="n">col</span><span class="o">.</span><span class="n">search</span><span class="p">(</span>
     <span class="n">experiment</span><span class="o">=</span><span class="n">experiments</span><span class="p">,</span>
@@ -787,7 +783,7 @@ It enables querying a database for the files we want, then loading those directl
 </section>
 </section>
 <section id="apply-an-operation">
-<h2>Apply an operation<a class="headerlink" href="#apply-an-operation" title="Permalink to this heading">#</a></h2>
+<h2>Apply an operation<a class="headerlink" href="#apply-an-operation" title="Link to this heading">#</a></h2>
 <p>Apply a calculation. In this case, we are calculating the average temperature within the top 100 m of the ocean.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">compute_TEMP_100m</span><span class="p">(</span><span class="n">ds</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;compute top 100m mean temperature&quot;&quot;&quot;</span>
@@ -806,7 +802,7 @@ It enables querying a database for the files we want, then loading those directl
 </pre></div>
 </div>
 <section id="combine-the-datasets">
-<h3>Combine the datasets<a class="headerlink" href="#combine-the-datasets" title="Permalink to this heading">#</a></h3>
+<h3>Combine the datasets<a class="headerlink" href="#combine-the-datasets" title="Link to this heading">#</a></h3>
 <p>Concatenate the datasets in time, i.e. 20C + RCP8.5 experiments.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ordered_dsets_keys</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;ocn,20C,pop.h&#39;</span><span class="p">,</span> <span class="s1">&#39;ocn,RCP85,pop.h&#39;</span><span class="p">]</span>
 <span class="c1">#ordered_dsets_keys = [&#39;ocn.20C.pop.h&#39;, &#39;ocn.RCP85.pop.h&#39;]</span>
@@ -821,7 +817,7 @@ It enables querying a database for the files we want, then loading those directl
 </div>
 </section>
 <section id="calculate-an-annual-mean">
-<h3>Calculate an annual mean<a class="headerlink" href="#calculate-an-annual-mean" title="Permalink to this heading">#</a></h3>
+<h3>Calculate an annual mean<a class="headerlink" href="#calculate-an-annual-mean" title="Link to this heading">#</a></h3>
 <p>Create an annual mean for temperature, using a <a class="reference external" href="https://github.com/matt-long/krill-cesm-le/blob/master/notebooks/util.py#L185">utility function</a> which deals with the times correctly.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ds_ann</span> <span class="o">=</span> <span class="n">util</span><span class="o">.</span><span class="n">ann_mean</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span> <span class="n">time_bnds_varname</span><span class="o">=</span><span class="s1">&#39;time_bound&#39;</span><span class="p">,</span> <span class="n">time_centered</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
@@ -829,7 +825,7 @@ It enables querying a database for the files we want, then loading those directl
 </section>
 </section>
 <section id="write-the-dataset-to-disk">
-<h2>Write the dataset to disk<a class="headerlink" href="#write-the-dataset-to-disk" title="Permalink to this heading">#</a></h2>
+<h2>Write the dataset to disk<a class="headerlink" href="#write-the-dataset-to-disk" title="Link to this heading">#</a></h2>
 <p>Here, we are just looking to write out a few of the variables.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
 <span class="c1"># Create a list of variables to write out</span>
@@ -965,7 +961,7 @@ It enables querying a database for the files we want, then loading those directl
       
         <div class="footer-item">
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     <br/>
   </p>
 </div>

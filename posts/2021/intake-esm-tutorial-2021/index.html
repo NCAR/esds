@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 
 
@@ -7,7 +6,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Intake-ESM Tutorial &#8212; NCAR-ESDS 0.1 documentation</title>
   
@@ -29,25 +28,22 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=66307ba7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
   <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/sphinx_highlight.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/documentation_options.js?v=19645805"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=30646c52"></script>
     <script kind="utterances">
 
     var commentsRunWhenDOMLoaded = cb => {
@@ -82,7 +78,7 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'posts/2021/intake-esm-tutorial-2021';</script>
     <link rel="author" title="About these documents" href="../../../about/" />
     <link rel="index" title="Index" href="../../../genindex/" />
@@ -515,12 +511,6 @@ commentsRunWhenDOMLoaded(addUtterances);
     </span>
   
   
-  <a href="../../../blog/tag/intake/">intake</a>
-  
-  
-  
-  
-  
   <a href="../../../blog/tag/python-tutorial-series/">python-tutorial-series</a>
   
   
@@ -528,6 +518,12 @@ commentsRunWhenDOMLoaded(addUtterances);
   
   
   <a href="../../../blog/tag/xarray/">xarray</a>
+  
+  
+  
+  
+  
+  <a href="../../../blog/tag/intake/">intake</a>
   
   
   
@@ -546,6 +542,12 @@ commentsRunWhenDOMLoaded(addUtterances);
 </h3>
 <ul>
   
+  
+  <li>
+    <a href="../../2023/esds-annual-event/">
+      21 November - 2024 Earth System Data Science (ESDS) Annual Event
+    </a>
+  </li>
   
   <li>
     <a href="../../2023/scipy23/">
@@ -571,12 +573,6 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
   </li>
   
-  <li>
-    <a href="../../2023/unstructured-grid-collab-1/">
-      05 May - Recap: Unstructured Grid Collaborative Work Time
-    </a>
-  </li>
-  
 </ul>
 </div>
 </div>
@@ -590,7 +586,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   
   
   <li>
-    <a href="../../../blog/2023/">2023 (7)</a>
+    <a href="../../../blog/2023/">2023 (8)</a>
   </li>
   
   
@@ -673,17 +669,17 @@ commentsRunWhenDOMLoaded(addUtterances);
                 <article class="bd-article" role="main">
                   
 <section class="tex2jax_ignore mathjax_ignore" id="intake-esm-tutorial">
-<h1>Intake-ESM Tutorial<a class="headerlink" href="#intake-esm-tutorial" title="Permalink to this heading">#</a></h1>
+<h1>Intake-ESM Tutorial<a class="headerlink" href="#intake-esm-tutorial" title="Link to this heading">#</a></h1>
 <p>The Project Pythia Python Tutorial Seminar Series continues with the Intake-ESM Tutorial on <strong>Wednesday, December 8 at 1 PM Mountain Standard Time</strong>. This session will be led by <a class="reference external" href="https://github.com/mgrover1">Max Grover</a>.</p>
 <p>The content for this tutorial is hosted in the <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> notebook file(s) within the <code class="docutils literal notranslate"><span class="pre">tutorial</span></code> directory of this repository.</p>
 <section id="bio">
-<h2>Bio<a class="headerlink" href="#bio" title="Permalink to this heading">#</a></h2>
+<h2>Bio<a class="headerlink" href="#bio" title="Link to this heading">#</a></h2>
 <p>Max works as software engineer within the Climate and Global Dynamics Lab here at NCAR. He graduated with a B.S in meteorology from <a class="reference external" href="https://www.valpo.edu/geography-meteorology/">Valparaiso University</a> in 2019 and will complete his M.S. in atmospheric science this spring at the <a class="reference external" href="https://atmos.illinois.edu/">University of Illinois Urbana-Champaign</a>.</p>
 <p>He works on Python-based tools to support climate model evaluation and contributes to the Earth System Data Science initiative. His research in graduate school focused on using observational data collected during the RELAMPAGO-CACTI campaign in Argentina to study mesoscale convective dynamics, primarily utilizing mobile radar observations as well as GOES-16 satellite imagery. This is not his first time working at UCAR – he took part in the Unidata summer internship program in 2019, working with Ryan May on contributing METAR parsing functionality to MetPy, which motivated him to pursue a career in software engineering.</p>
 <p>He enjoys hiking, visiting breweries, and spending time on the water (his summer job, prior to graduate school, was at a resort in southern Wisconsin where he worked as a tour boat captain on Delavan Lake). He is also a big fan of Hawaiian shirts, with a collection of more than 40.</p>
 </section>
 <section id="how-to-run">
-<h2>How-to-Run<a class="headerlink" href="#how-to-run" title="Permalink to this heading">#</a></h2>
+<h2>How-to-Run<a class="headerlink" href="#how-to-run" title="Link to this heading">#</a></h2>
 <p><strong>All of the tutorials in this organization can be followed by clicking the “Launch Binder” button at the top level or in each directory.</strong></p>
 <p>You may also download the environment to run locally:</p>
 <ul class="simple">
@@ -695,13 +691,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 </section>
 <section id="sign-up">
-<h2>Sign Up<a class="headerlink" href="#sign-up" title="Permalink to this heading">#</a></h2>
+<h2>Sign Up<a class="headerlink" href="#sign-up" title="Link to this heading">#</a></h2>
 <p>To receive the Zoom link and password, please join the <em>learnpython&#64;ucar.edu</em> Google group and Calendar.</p>
 <p>To join the <em>learnpython&#64;ucar.edu</em> Google Group, follow this <a class="reference external" href="https://groups.google.com/a/ucar.edu/g/learnpython/about">link</a> and click “Join Group” next to the group name.</p>
 <p>By attending this tutorial, you are subject to the <a class="reference external" href="https://www.ucar.edu/who-we-are/ethics-integrity/codes-conduct.">NCAR/UCAR Code of Conduct</a></p>
 </section>
 <section id="tutorial-recording">
-<h2>Tutorial Recording<a class="headerlink" href="#tutorial-recording" title="Permalink to this heading">#</a></h2>
+<h2>Tutorial Recording<a class="headerlink" href="#tutorial-recording" title="Link to this heading">#</a></h2>
 <p>This tutorial will be recorded and posted on our <a class="reference external" href="https://www.youtube.com/channel/UCoZPBqJal5uKpO8ZiwzavCw">YouTube channel</a>.
 [Note: A Project Pythia team member will replace this section with the embedded video once it is ready.]</p>
 </section>
@@ -813,7 +809,7 @@ commentsRunWhenDOMLoaded(addUtterances);
       
         <div class="footer-item">
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     <br/>
   </p>
 </div>

@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 
 
@@ -7,7 +6,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Virtual aggregate CESM MOM6 datasets with kerchunk &#8212; NCAR-ESDS 0.1 documentation</title>
   
@@ -29,25 +28,22 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=66307ba7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
   <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/sphinx_highlight.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/documentation_options.js?v=19645805"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=30646c52"></script>
     <script kind="utterances">
 
     var commentsRunWhenDOMLoaded = cb => {
@@ -82,7 +78,7 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'posts/2023/kerchunk-mom6';</script>
     <link rel="author" title="About these documents" href="../../../about/" />
     <link rel="index" title="Index" href="../../../genindex/" />
@@ -520,6 +516,12 @@ commentsRunWhenDOMLoaded(addUtterances);
   
   
   <li>
+    <a href="../esds-annual-event/">
+      21 November - 2024 Earth System Data Science (ESDS) Annual Event
+    </a>
+  </li>
+  
+  <li>
     <a href="../scipy23/">
       28 August - ESDS at SciPy 2023
     </a>
@@ -543,12 +545,6 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
   </li>
   
-  <li>
-    <a href="../unstructured-grid-collab-1/">
-      05 May - Recap: Unstructured Grid Collaborative Work Time
-    </a>
-  </li>
-  
 </ul>
 </div>
 </div>
@@ -562,7 +558,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   
   
   <li>
-    <a href="../../../blog/2023/">2023 (7)</a>
+    <a href="../../../blog/2023/">2023 (8)</a>
   </li>
   
   
@@ -645,7 +641,7 @@ commentsRunWhenDOMLoaded(addUtterances);
                 <article class="bd-article" role="main">
                   
 <section class="tex2jax_ignore mathjax_ignore" id="virtual-aggregate-cesm-mom6-datasets-with-kerchunk">
-<h1>Virtual aggregate CESM MOM6 datasets with kerchunk<a class="headerlink" href="#virtual-aggregate-cesm-mom6-datasets-with-kerchunk" title="Permalink to this heading">#</a></h1>
+<h1>Virtual aggregate CESM MOM6 datasets with kerchunk<a class="headerlink" href="#virtual-aggregate-cesm-mom6-datasets-with-kerchunk" title="Link to this heading">#</a></h1>
 <p>This notebook is adapted from the <a class="reference external" href="https://github.com/lsterzinger/2022-esip-kerchunk-tutorial/blob/main/01-Create_References.ipynb">work</a> by <a class="reference external" href="https://lucassterzinger.com/">Lucas Sterzinger</a> (an NCAR SIParCS intern in 2021).</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -658,7 +654,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 </div>
 <section id="what-is-kerchunk">
-<h2>What is kerchunk?<a class="headerlink" href="#what-is-kerchunk" title="Permalink to this heading">#</a></h2>
+<h2>What is kerchunk?<a class="headerlink" href="#what-is-kerchunk" title="Link to this heading">#</a></h2>
 <p>From the <a class="reference external" href="https://fsspec.github.io/kerchunk/">docs</a></p>
 <blockquote>
 <div><ol class="arabic simple">
@@ -684,7 +680,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </section>
 <section id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h2>
+<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
 <p>We’ll create a virtual aggregate Zarr dataset to represent CESM MOM6 ocean component outputs in the netCDF3 format.</p>
 <p>Output streams for this particular simulation are:</p>
 <ol class="arabic simple">
@@ -709,7 +705,7 @@ The Zarr specification for <a class="reference external" href="https://zarr.read
 </ol>
 </section>
 <section id="setup">
-<h2>Setup<a class="headerlink" href="#setup" title="Permalink to this heading">#</a></h2>
+<h2>Setup<a class="headerlink" href="#setup" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">load_ext</span> watermark
@@ -968,7 +964,7 @@ xarray  : 2023.2.0
 </div>
 </section>
 <section id="cesm-mom6-output">
-<h2>CESM MOM6 output<a class="headerlink" href="#cesm-mom6-output" title="Permalink to this heading">#</a></h2>
+<h2>CESM MOM6 output<a class="headerlink" href="#cesm-mom6-output" title="Link to this heading">#</a></h2>
 <p>There are a large number of files. Usually we use <a class="reference external" href="https://intake-esm.readthedocs.io/en/stable/">intake-esm</a> to catalog and access the files.
 The downside is that navigating the catalog can be painful, and reading from disk involves touching many files wiith <code class="docutils literal notranslate"><span class="pre">xarray.open_mfdataset</span></code>.
 This can take a while.</p>
@@ -1012,7 +1008,7 @@ This can take a while.</p>
 </div>
 </section>
 <section id="simple-example-generate-references-for-the-static-file">
-<h2>Simple example: generate references for the static file<a class="headerlink" href="#simple-example-generate-references-for-the-static-file" title="Permalink to this heading">#</a></h2>
+<h2>Simple example: generate references for the static file<a class="headerlink" href="#simple-example-generate-references-for-the-static-file" title="Link to this heading">#</a></h2>
 <p>kerchunk provides a <a class="reference external" href="https://fsspec.github.io/kerchunk/reference.html">number of “backends”</a> or helper functions to generate the “references” for a file format.</p>
 <p>CESM output uses netCDF3 so we’ll use <code class="docutils literal notranslate"><span class="pre">NetCDF3ToZarr</span></code>. Call <code class="docutils literal notranslate"><span class="pre">.translate</span></code> on the returned object to create a dictionary representation of a Zarr dataset.</p>
 <div class="admonition tip">
@@ -1160,7 +1156,7 @@ This can take a while.</p>
 </div>
 </div>
 <section id="understanding-the-references-dictionary">
-<h3>Understanding the references dictionary<a class="headerlink" href="#understanding-the-references-dictionary" title="Permalink to this heading">#</a></h3>
+<h3>Understanding the references dictionary<a class="headerlink" href="#understanding-the-references-dictionary" title="Link to this heading">#</a></h3>
 <p>Consider the entries: <code class="docutils literal notranslate"><span class="pre">xh/.zarray</span></code> and <code class="docutils literal notranslate"><span class="pre">'xh/0'</span></code></p>
 <p>If this dataset were indeed stored on disk as a Zarr <code class="docutils literal notranslate"><span class="pre">DirectoryStore</span></code>, then</p>
 <ul class="simple">
@@ -1171,7 +1167,7 @@ This can take a while.</p>
 <p>The value associated with <code class="docutils literal notranslate"><span class="pre">xh/0</span></code> identifies a byte range in a file that contains the actual values.</p>
 </section>
 <section id="inlining-data">
-<h3>Inlining data<a class="headerlink" href="#inlining-data" title="Permalink to this heading">#</a></h3>
+<h3>Inlining data<a class="headerlink" href="#inlining-data" title="Link to this heading">#</a></h3>
 <p>First note that the <code class="docutils literal notranslate"><span class="pre">xh</span></code> variable is stored as a reference to a byte range in the static file.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1217,7 +1213,7 @@ This can take a while.</p>
 </div>
 </section>
 <section id="utilities">
-<h3>Utilities<a class="headerlink" href="#utilities" title="Permalink to this heading">#</a></h3>
+<h3>Utilities<a class="headerlink" href="#utilities" title="Link to this heading">#</a></h3>
 <p>Make this a function for reuse later.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1255,7 +1251,7 @@ This can take a while.</p>
 </section>
 </section>
 <section id="generate-references-for-the-sfc-and-h-datasets">
-<h2>Generate references for the <code class="docutils literal notranslate"><span class="pre">sfc</span></code> and <code class="docutils literal notranslate"><span class="pre">h</span></code> datasets<a class="headerlink" href="#generate-references-for-the-sfc-and-h-datasets" title="Permalink to this heading">#</a></h2>
+<h2>Generate references for the <code class="docutils literal notranslate"><span class="pre">sfc</span></code> and <code class="docutils literal notranslate"><span class="pre">h</span></code> datasets<a class="headerlink" href="#generate-references-for-the-sfc-and-h-datasets" title="Link to this heading">#</a></h2>
 <p>This bit generates individual JSONs for the <code class="docutils literal notranslate"><span class="pre">sfc</span></code> and <code class="docutils literal notranslate"><span class="pre">h</span></code> datasets:</p>
 <ol class="arabic simple">
 <li><p>For each <code class="docutils literal notranslate"><span class="pre">.nc</span></code> file generate references with <code class="docutils literal notranslate"><span class="pre">gen_ref</span></code></p></li>
@@ -1323,7 +1319,7 @@ This can take a while.</p>
 </div>
 </section>
 <section id="demo-reading-a-dataset">
-<h2>Demo: reading a dataset<a class="headerlink" href="#demo-reading-a-dataset" title="Permalink to this heading">#</a></h2>
+<h2>Demo: reading a dataset<a class="headerlink" href="#demo-reading-a-dataset" title="Link to this heading">#</a></h2>
 <p>To read the dataset with Xarray, the JSON files needs to be represented as a Zarr dataset.</p>
 <p>Use <code class="docutils literal notranslate"><span class="pre">fsspec</span></code> to do this.</p>
 <div class="cell docutils container">
@@ -4117,7 +4113,7 @@ Attributes:
 </div>
 </section>
 <section id="combine-datasets-to-single-zarr-with-groups">
-<h2>Combine datasets to single Zarr with groups<a class="headerlink" href="#combine-datasets-to-single-zarr-with-groups" title="Permalink to this heading">#</a></h2>
+<h2>Combine datasets to single Zarr with groups<a class="headerlink" href="#combine-datasets-to-single-zarr-with-groups" title="Link to this heading">#</a></h2>
 <p>To create the <code class="docutils literal notranslate"><span class="pre">sfc</span></code> group, we read the <code class="docutils literal notranslate"><span class="pre">sfc.json</span></code> file and add <code class="docutils literal notranslate"><span class="pre">sfc/</span></code> to every key.</p>
 <p>Repeat for the <code class="docutils literal notranslate"><span class="pre">h</span></code> dataset, and add a top level <code class="docutils literal notranslate"><span class="pre">.zgroup</span></code> entry.</p>
 <p>Now we have dict representation of a virtual Zarr dataset! Write that to a JSON file.</p>
@@ -4168,9 +4164,9 @@ Wall time: 469 ms
 </div>
 </section>
 <section id="reading-the-combined-dataset">
-<h2>Reading the combined dataset<a class="headerlink" href="#reading-the-combined-dataset" title="Permalink to this heading">#</a></h2>
+<h2>Reading the combined dataset<a class="headerlink" href="#reading-the-combined-dataset" title="Link to this heading">#</a></h2>
 <section id="create-the-filesystem-and-mapper">
-<h3>Create the filesystem and mapper<a class="headerlink" href="#create-the-filesystem-and-mapper" title="Permalink to this heading">#</a></h3>
+<h3>Create the filesystem and mapper<a class="headerlink" href="#create-the-filesystem-and-mapper" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fs</span> <span class="o">=</span> <span class="n">fsspec</span><span class="o">.</span><span class="n">filesystem</span><span class="p">(</span>
@@ -4185,7 +4181,7 @@ Wall time: 469 ms
 </div>
 </section>
 <section id="simple-xarray-open-dataset">
-<h3>Simple xarray.open_dataset<a class="headerlink" href="#simple-xarray-open-dataset" title="Permalink to this heading">#</a></h3>
+<h3>Simple xarray.open_dataset<a class="headerlink" href="#simple-xarray-open-dataset" title="Link to this heading">#</a></h3>
 <p>Specify the <code class="docutils literal notranslate"><span class="pre">group</span></code> kwarg to extract a single group</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -4649,7 +4645,7 @@ Attributes:
 </div>
 </section>
 <section id="using-datatree">
-<h3>Using datatree<a class="headerlink" href="#using-datatree" title="Permalink to this heading">#</a></h3>
+<h3>Using datatree<a class="headerlink" href="#using-datatree" title="Link to this heading">#</a></h3>
 <p>Open all groups at one go using <a class="reference external" href="https://xarray-datatree.readthedocs.io/en/latest/">datatree</a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -6687,7 +6683,7 @@ Attributes:
 </section>
 </section>
 <section id="next">
-<h2>Next<a class="headerlink" href="#next" title="Permalink to this heading">#</a></h2>
+<h2>Next<a class="headerlink" href="#next" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p>We could even consider adding higher-level <code class="docutils literal notranslate"><span class="pre">lnd</span></code>, <code class="docutils literal notranslate"><span class="pre">atm</span></code>, <code class="docutils literal notranslate"><span class="pre">ocn</span></code> groups so that single virtual dataset represents all output streams for all components from a single simulation.</p></li>
 <li><p>In <code class="docutils literal notranslate"><span class="pre">intake-esm</span></code> terminology, a single JSON file representating an aggregate dataset could be a single asset.</p></li>
@@ -6817,7 +6813,7 @@ Attributes:
       
         <div class="footer-item">
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     <br/>
   </p>
 </div>

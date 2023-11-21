@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 
 
@@ -7,7 +6,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Paired Programming using VS Code &#8212; NCAR-ESDS 0.1 documentation</title>
   
@@ -29,25 +28,22 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=66307ba7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
   <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/sphinx_highlight.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/documentation_options.js?v=19645805"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=30646c52"></script>
     <script kind="utterances">
 
     var commentsRunWhenDOMLoaded = cb => {
@@ -82,7 +78,7 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'posts/2021/paired_programming_vs';</script>
     <link rel="author" title="About these documents" href="../../../about/" />
     <link rel="index" title="Index" href="../../../genindex/" />
@@ -515,7 +511,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     </span>
   
   
-  <a href="../../../blog/tag/remote-access/">remote-access</a>
+  <a href="../../../blog/tag/editor/">editor</a>
   
   
   
@@ -527,7 +523,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   
   
   
-  <a href="../../../blog/tag/editor/">editor</a>
+  <a href="../../../blog/tag/remote-access/">remote-access</a>
   
   
   
@@ -546,6 +542,12 @@ commentsRunWhenDOMLoaded(addUtterances);
 </h3>
 <ul>
   
+  
+  <li>
+    <a href="../../2023/esds-annual-event/">
+      21 November - 2024 Earth System Data Science (ESDS) Annual Event
+    </a>
+  </li>
   
   <li>
     <a href="../../2023/scipy23/">
@@ -571,12 +573,6 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
   </li>
   
-  <li>
-    <a href="../../2023/unstructured-grid-collab-1/">
-      05 May - Recap: Unstructured Grid Collaborative Work Time
-    </a>
-  </li>
-  
 </ul>
 </div>
 </div>
@@ -590,7 +586,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   
   
   <li>
-    <a href="../../../blog/2023/">2023 (7)</a>
+    <a href="../../../blog/2023/">2023 (8)</a>
   </li>
   
   
@@ -673,7 +669,7 @@ commentsRunWhenDOMLoaded(addUtterances);
                 <article class="bd-article" role="main">
                   
 <section class="tex2jax_ignore mathjax_ignore" id="paired-programming-using-vs-code">
-<h1>Paired Programming using VS Code<a class="headerlink" href="#paired-programming-using-vs-code" title="Permalink to this heading">#</a></h1>
+<h1>Paired Programming using VS Code<a class="headerlink" href="#paired-programming-using-vs-code" title="Link to this heading">#</a></h1>
 <p>A common task when developing notebooks or packages is collaborating with others. It can be challenging to do this when using JupyterHub since two people cannot access the same notebook at same time. One solution to this is to use Visual Studio Code (VS Code) to remotely access Casper/Cheyenne, use a virtual meeting plaform (Zoom, Google Meet), and interactively collaborate on development.</p>
 <p>This process includes a few steps:</p>
 <ol class="arabic simple">
@@ -684,12 +680,12 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li><p>Collaborate!</p></li>
 </ol>
 <section id="download-vs-code">
-<h2>1. Download VS Code<a class="headerlink" href="#download-vs-code" title="Permalink to this heading">#</a></h2>
+<h2>1. Download VS Code<a class="headerlink" href="#download-vs-code" title="Link to this heading">#</a></h2>
 <p>Visual studio code is free and openly available. You can find the documentation/download information for your <a class="reference external" href="https://code.visualstudio.com/">specific machine here</a></p>
 <p>Once you download it, use Self Service to ensure you have the ability to install the software, then open the application once it is installed.</p>
 </section>
 <section id="setup-remote-login">
-<h2>2. Setup Remote Login<a class="headerlink" href="#setup-remote-login" title="Permalink to this heading">#</a></h2>
+<h2>2. Setup Remote Login<a class="headerlink" href="#setup-remote-login" title="Link to this heading">#</a></h2>
 <p>Once you have VS Code installed, you will need to install the <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack">Remote Development Extension Pack</a>. These extensions are one of the aspects that make this editor so powerful.</p>
 <p>Open a terminal in VS Code after installing the extension, and type in the following :</p>
 <p>At the top of the VS Code window, select <code class="docutils literal notranslate"><span class="pre">Remote-SSH:</span> <span class="pre">Connect</span> <span class="pre">to</span> <span class="pre">Host</span></code> and enter:</p>
@@ -708,20 +704,20 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>For more details on this process, check out the official <a class="reference external" href="https://code.visualstudio.com/docs/remote/ssh">VS Code documentation</a></p>
 </section>
 <section id="enable-sharing">
-<h2>3. Enable Sharing<a class="headerlink" href="#enable-sharing" title="Permalink to this heading">#</a></h2>
+<h2>3. Enable Sharing<a class="headerlink" href="#enable-sharing" title="Link to this heading">#</a></h2>
 <p>As mentioned previously, you can share your window interactively with collaborators! The extension that makes this possible is the <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare-pack">Live Share Extension Pack</a>.</p>
 <p>Once you install the extension, on the left side of the screen, you will see an arrow icon which is a shortcut to the Live Share tool. Click on that, and connect your Github account. Once you connect your Github account, it will copy the link to you shared session.</p>
 <p>At the bottom of the window, you will see your name with a lock next to it. Click on this to find additional sharing options - you can copy the link to the shared session again if you would like.</p>
 <p>Additional details about this extension can be <a class="reference external" href="https://code.visualstudio.com/learn/collaboration/live-share">found here</a>!</p>
 </section>
 <section id="setup-your-virtual-meeting">
-<h2>4. Setup Your Virtual Meeting<a class="headerlink" href="#setup-your-virtual-meeting" title="Permalink to this heading">#</a></h2>
+<h2>4. Setup Your Virtual Meeting<a class="headerlink" href="#setup-your-virtual-meeting" title="Link to this heading">#</a></h2>
 <p>Launch your virtual meeting! You can use plaforms such as <a class="reference external" href="https://meet.google.com">Google Meet</a> or <a class="reference external" href="https://zoom.us/">Zoom</a></p>
 <p>Once you launch your meeting with collaborators, share the link generated from the previous step (make sure they have followed the same steps, downloading VS Code with all the extensions mentioned).</p>
 <p>Within the Live extension pack, there is also an audio option if you prefer not using video services.</p>
 </section>
 <section id="collaborate">
-<h2>5. Collaborate!<a class="headerlink" href="#collaborate" title="Permalink to this heading">#</a></h2>
+<h2>5. Collaborate!<a class="headerlink" href="#collaborate" title="Link to this heading">#</a></h2>
 <p>Once you have everything setup, get to work! You may need to double check the permissions for the sharing extension. Something else that may be helpful is th chat which can be found within the Live Share shortcut on the left side of the screen. Looking at the <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare-pack">documentation for Live Share</a> can be helpful!</p>
 <p>I hope this helps you get started using VS Code for paired-programming!</p>
 </section>
@@ -834,7 +830,7 @@ commentsRunWhenDOMLoaded(addUtterances);
       
         <div class="footer-item">
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     <br/>
   </p>
 </div>

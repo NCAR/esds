@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 
 
@@ -7,7 +6,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Cloud-optimized access to CESM Timeseries netCDF files in the Cloud with kerchunk &#8212; NCAR-ESDS 0.1 documentation</title>
   
@@ -29,25 +28,22 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=66307ba7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
   <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/sphinx_highlight.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/documentation_options.js?v=19645805"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=30646c52"></script>
     <script kind="utterances">
 
     var commentsRunWhenDOMLoaded = cb => {
@@ -82,7 +78,7 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'posts/2023/cesm2-le-timeseries-kerchunk';</script>
     <link rel="author" title="About these documents" href="../../../about/" />
     <link rel="index" title="Index" href="../../../genindex/" />
@@ -495,14 +491,14 @@ commentsRunWhenDOMLoaded(addUtterances);
     </span>
   
   
-  <a href="../../../blog/author/deepak-cherian/">Deepak Cherian</a>
+  <a href="../../../blog/author/max-grover/">Max Grover</a>
   
   ,
   
   
   
   
-  <a href="../../../blog/author/max-grover/">Max Grover</a>
+  <a href="../../../blog/author/deepak-cherian/">Deepak Cherian</a>
   
   
   
@@ -522,13 +518,13 @@ commentsRunWhenDOMLoaded(addUtterances);
     </span>
   
   
+  <a href="../../../blog/tag/netcdf/">netcdf</a>
+  
+  
+  
+  
+  
   <a href="../../../blog/tag/benchmark/">benchmark</a>
-  
-  
-  
-  
-  
-  <a href="../../../blog/tag/cesm/">cesm</a>
   
   
   
@@ -540,7 +536,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   
   
   
-  <a href="../../../blog/tag/netcdf/">netcdf</a>
+  <a href="../../../blog/tag/cesm/">cesm</a>
   
   
   
@@ -559,6 +555,12 @@ commentsRunWhenDOMLoaded(addUtterances);
 </h3>
 <ul>
   
+  
+  <li>
+    <a href="../esds-annual-event/">
+      21 November - 2024 Earth System Data Science (ESDS) Annual Event
+    </a>
+  </li>
   
   <li>
     <a href="../scipy23/">
@@ -584,12 +586,6 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
   </li>
   
-  <li>
-    <a href="../unstructured-grid-collab-1/">
-      05 May - Recap: Unstructured Grid Collaborative Work Time
-    </a>
-  </li>
-  
 </ul>
 </div>
 </div>
@@ -603,7 +599,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   
   
   <li>
-    <a href="../../../blog/2023/">2023 (7)</a>
+    <a href="../../../blog/2023/">2023 (8)</a>
   </li>
   
   
@@ -686,9 +682,9 @@ commentsRunWhenDOMLoaded(addUtterances);
                 <article class="bd-article" role="main">
                   
 <section class="tex2jax_ignore mathjax_ignore" id="cloud-optimized-access-to-cesm-timeseries-netcdf-files-in-the-cloud-with-kerchunk">
-<h1>Cloud-optimized access to CESM Timeseries netCDF files in the Cloud with <code class="docutils literal notranslate"><span class="pre">kerchunk</span></code><a class="headerlink" href="#cloud-optimized-access-to-cesm-timeseries-netcdf-files-in-the-cloud-with-kerchunk" title="Permalink to this heading">#</a></h1>
+<h1>Cloud-optimized access to CESM Timeseries netCDF files in the Cloud with <code class="docutils literal notranslate"><span class="pre">kerchunk</span></code><a class="headerlink" href="#cloud-optimized-access-to-cesm-timeseries-netcdf-files-in-the-cloud-with-kerchunk" title="Link to this heading">#</a></h1>
 <section id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h2>
+<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
 <p>We benchmark reading a subset of the CESM2-Large Ensemble stored as a collection of netCDF files on the cloud (Amazon / AWS) <strong>from Casper</strong>.
 We use a single ensemble member historical experiment with daily data from 1850 to 2009, with a total dataset size of 600+ GB, from 13 netCDF4 files.</p>
 <p>We read in two ways:</p>
@@ -723,7 +719,7 @@ We use a single ensemble member historical experiment with daily data from 1850 
 </div>
 </section>
 <section id="imports">
-<h2>Imports<a class="headerlink" href="#imports" title="Permalink to this heading">#</a></h2>
+<h2>Imports<a class="headerlink" href="#imports" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">load_ext</span> watermark
@@ -2672,7 +2668,7 @@ sys      : 3.11.0 | packaged by conda-forge | (main, Jan 14 2023, 12:27:40) [GCC
 </div>
 </section>
 <section id="gather-a-list-of-files-available-from-an-amazon-s3-bucket">
-<h2>Gather a list of files available from an Amazon s3 bucket<a class="headerlink" href="#gather-a-list-of-files-available-from-an-amazon-s3-bucket" title="Permalink to this heading">#</a></h2>
+<h2>Gather a list of files available from an Amazon s3 bucket<a class="headerlink" href="#gather-a-list-of-files-available-from-an-amazon-s3-bucket" title="Link to this heading">#</a></h2>
 <p>As mentioned previously, s3 is Amazon’s object store file system. For this example, I moved a single ensemble member’s worth of <strong>daily historical timeseries output</strong> from the CESM2-LE dataset.</p>
 <p>We use <code class="docutils literal notranslate"><span class="pre">fsspec</span></code> to create a filesystem-like representation:</p>
 <div class="cell docutils container">
@@ -2740,7 +2736,7 @@ sys      : 3.11.0 | packaged by conda-forge | (main, Jan 14 2023, 12:27:40) [GCC
 </div>
 </section>
 <section id="approach">
-<h2>Approach<a class="headerlink" href="#approach" title="Permalink to this heading">#</a></h2>
+<h2>Approach<a class="headerlink" href="#approach" title="Link to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">kerchunk</span></code> works by first reading a “reference” file that maps virtual chunks of data to byte ranges stored in specific files. This “reference” file looks like a Zarr dataset, and is read using the Zarr library. <a class="reference external" href="https://ncar.github.io/esds/posts/2023/kerchunk-mom6/">Previously</a>, we demonstrated the use of Kerchunk to create virtual aggregate datasets without modifying the files on disk.</p>
 <p>Here, the goal is to demonstrate cloud-optimized data access enabled by using Zarr as an intermediate layer to access underlying netCDF files.</p>
 <p>The approach is similar:</p>
@@ -2750,7 +2746,7 @@ sys      : 3.11.0 | packaged by conda-forge | (main, Jan 14 2023, 12:27:40) [GCC
 </ul>
 </section>
 <section id="generate-the-mapper-files">
-<h2>Generate the Mapper Files<a class="headerlink" href="#generate-the-mapper-files" title="Permalink to this heading">#</a></h2>
+<h2>Generate the Mapper Files<a class="headerlink" href="#generate-the-mapper-files" title="Link to this heading">#</a></h2>
 <p>Set the output directory of the json mapping files</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2776,7 +2772,7 @@ sys      : 3.11.0 | packaged by conda-forge | (main, Jan 14 2023, 12:27:40) [GCC
 </div>
 </div>
 <section id="spin-up-a-cluster">
-<h3>Spin up a Cluster<a class="headerlink" href="#spin-up-a-cluster" title="Permalink to this heading">#</a></h3>
+<h3>Spin up a Cluster<a class="headerlink" href="#spin-up-a-cluster" title="Link to this heading">#</a></h3>
 <p>We will spin up a dask cluster to add distributed/parallel computing - we are spinning up 10 workers, each with 25 GB of RAM and a single processor</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2915,7 +2911,7 @@ Hosting the HTTP server on port 43962 instead
 </div>
 </section>
 <section id="create-reference-file-for-each-netcdf-file">
-<h3>Create reference file for each netCDF file<a class="headerlink" href="#create-reference-file-for-each-netcdf-file" title="Permalink to this heading">#</a></h3>
+<h3>Create reference file for each netCDF file<a class="headerlink" href="#create-reference-file-for-each-netcdf-file" title="Link to this heading">#</a></h3>
 <p>We can compute these reference files in parallel!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2933,7 +2929,7 @@ Wall time: 3min 25s
 </div>
 </section>
 <section id="merge-the-reference-files-together">
-<h3>Merge the reference files together<a class="headerlink" href="#merge-the-reference-files-together" title="Permalink to this heading">#</a></h3>
+<h3>Merge the reference files together<a class="headerlink" href="#merge-the-reference-files-together" title="Link to this heading">#</a></h3>
 <p>The previous process produced a <strong>single reference file for each netCDF file</strong> - let’s merge these all together to create single store.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2986,7 +2982,7 @@ Wall time: 3.29 s
 </section>
 <hr class="docutils" />
 <section id="read-directly-from-s3-without-kerchunk">
-<h2>Read directly from S3 (without <code class="docutils literal notranslate"><span class="pre">kerchunk</span></code>)<a class="headerlink" href="#read-directly-from-s3-without-kerchunk" title="Permalink to this heading">#</a></h2>
+<h2>Read directly from S3 (without <code class="docutils literal notranslate"><span class="pre">kerchunk</span></code>)<a class="headerlink" href="#read-directly-from-s3-without-kerchunk" title="Link to this heading">#</a></h2>
 <p>We went through all that work previously, but let’s take a look at what the performance would be <em><strong>without</strong></em> using this new <code class="docutils literal notranslate"><span class="pre">Kerchunk</span></code> package.</p>
 <p>To open the files, use <code class="docutils literal notranslate"><span class="pre">fsspec</span></code> again and generate a list of URLs.</p>
 <div class="cell docutils container">
@@ -4888,7 +4884,7 @@ Wall time: 17min 12s
 </div>
 </section>
 <section id="benchmark-reading-in-from-kerchunk-mappings">
-<h2>Benchmark Reading in from <code class="docutils literal notranslate"><span class="pre">Kerchunk</span></code> mappings<a class="headerlink" href="#benchmark-reading-in-from-kerchunk-mappings" title="Permalink to this heading">#</a></h2>
+<h2>Benchmark Reading in from <code class="docutils literal notranslate"><span class="pre">Kerchunk</span></code> mappings<a class="headerlink" href="#benchmark-reading-in-from-kerchunk-mappings" title="Link to this heading">#</a></h2>
 <p>Now, we can try reading in using our reference files (created from <code class="docutils literal notranslate"><span class="pre">Kerchunk</span></code>)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -5416,7 +5412,7 @@ Attributes:
             dtype=&#x27;object&#x27;, length=16426, calendar=&#x27;noleap&#x27;, freq=&#x27;D&#x27;))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>zlon</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-7e58af90-e0fc-4ee8-9347-9f7b8d7796c9' class='xr-index-data-in' type='checkbox'/><label for='index-7e58af90-e0fc-4ee8-9347-9f7b8d7796c9' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Float64Index([0.0], dtype=&#x27;float64&#x27;, name=&#x27;zlon&#x27;))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-36240a49-25bc-40bb-b49a-3acaac2556de' class='xr-section-summary-in' type='checkbox'  checked><label for='section-36240a49-25bc-40bb-b49a-3acaac2556de' class='xr-section-summary' >Attributes: <span>(9)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>Conventions :</span></dt><dd>CF-1.0</dd><dt><span>case :</span></dt><dd>b.e21.BHISTcmip6.f09_g17.LE2-1001.001</dd><dt><span>host :</span></dt><dd>mom2</dd><dt><span>initial_file :</span></dt><dd>b.e21.B1850.f09_g17.CMIP6-piControl.001.cam.i.1001-01-01-00000.nc</dd><dt><span>logname :</span></dt><dd>sunseon</dd><dt><span>model_doi_url :</span></dt><dd>https://doi.org/10.5065/D67H1H0V</dd><dt><span>source :</span></dt><dd>CAM</dd><dt><span>time_period_freq :</span></dt><dd>day_1</dd><dt><span>topography_file :</span></dt><dd>/mnt/lustre/share/CESM/cesm_input/atm/cam/topo/fv_0.9x1.25_nc3000_Nsw042_Nrs008_Co060_Fi001_ZR_sgh30_24km_GRNL_c170103.nc</dd></dl></div></li></ul></div></div></div></div>
 </div>
 <section id="plot-the-output-from-the-mapper-method">
-<h3>Plot the output from the Mapper Method<a class="headerlink" href="#plot-the-output-from-the-mapper-method" title="Permalink to this heading">#</a></h3>
+<h3>Plot the output from the Mapper Method<a class="headerlink" href="#plot-the-output-from-the-mapper-method" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
@@ -5590,7 +5586,7 @@ Wall time: 44.2 s
       
         <div class="footer-item">
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     <br/>
   </p>
 </div>

@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 
 
@@ -7,7 +6,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Analyzing and visualizing CAM-SE output in Python &#8212; NCAR-ESDS 0.1 documentation</title>
   
@@ -29,25 +28,22 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=66307ba7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
   <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/sphinx_highlight.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/documentation_options.js?v=19645805"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=30646c52"></script>
     <script kind="utterances">
 
     var commentsRunWhenDOMLoaded = cb => {
@@ -82,7 +78,7 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'posts/2023/cam-se-analysis';</script>
     <link rel="author" title="About these documents" href="../../../about/" />
     <link rel="index" title="Index" href="../../../genindex/" />
@@ -495,13 +491,6 @@ commentsRunWhenDOMLoaded(addUtterances);
     </span>
   
   
-  <a href="../../../blog/author/deepak-cherian/">Deepak Cherian</a>
-  
-  ,
-  
-  
-  
-  
   <a href="../../../blog/author/teagan-king/">Teagan King</a>
   
   ,
@@ -509,7 +498,21 @@ commentsRunWhenDOMLoaded(addUtterances);
   
   
   
+  <a href="../../../blog/author/colin-zarzycki/">Colin Zarzycki</a>
+  
+  ,
+  
+  
+  
+  
   <a href="../../../blog/author/john-truesdale/">John Truesdale</a>
+  
+  ,
+  
+  
+  
+  
+  <a href="../../../blog/author/deepak-cherian/">Deepak Cherian</a>
   
   ,
   
@@ -524,13 +527,6 @@ commentsRunWhenDOMLoaded(addUtterances);
   
   
   <a href="../../../blog/author/steve-yeager/">Steve Yeager</a>
-  
-  ,
-  
-  
-  
-  
-  <a href="../../../blog/author/colin-zarzycki/">Colin Zarzycki</a>
   
   
   
@@ -550,7 +546,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     </span>
   
   
-  <a href="../../../blog/tag/cam/">cam</a>
+  <a href="../../../blog/tag/visualization/">visualization</a>
   
   
   
@@ -568,19 +564,19 @@ commentsRunWhenDOMLoaded(addUtterances);
   
   
   
-  <a href="../../../blog/tag/visualization/">visualization</a>
-  
-  
-  
-  
-  
-  <a href="../../../blog/tag/cesm/">cesm</a>
+  <a href="../../../blog/tag/cam/">cam</a>
   
   
   
   
   
   <a href="../../../blog/tag/unstructured-grids/">unstructured grids</a>
+  
+  
+  
+  
+  
+  <a href="../../../blog/tag/cesm/">cesm</a>
   
   
   
@@ -599,6 +595,12 @@ commentsRunWhenDOMLoaded(addUtterances);
 </h3>
 <ul>
   
+  
+  <li>
+    <a href="../esds-annual-event/">
+      21 November - 2024 Earth System Data Science (ESDS) Annual Event
+    </a>
+  </li>
   
   <li>
     <a href="../scipy23/">
@@ -624,12 +626,6 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
   </li>
   
-  <li>
-    <a href="../cesm2-le-timeseries-kerchunk/">
-      15 March - Using Kerchunk with CESM Timeseries Data on the Cloud
-    </a>
-  </li>
-  
 </ul>
 </div>
 </div>
@@ -643,7 +639,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   
   
   <li>
-    <a href="../../../blog/2023/">2023 (7)</a>
+    <a href="../../../blog/2023/">2023 (8)</a>
   </li>
   
   
@@ -726,22 +722,22 @@ commentsRunWhenDOMLoaded(addUtterances);
                 <article class="bd-article" role="main">
                   
 <section class="tex2jax_ignore mathjax_ignore" id="analyzing-and-visualizing-cam-se-output-in-python">
-<h1>Analyzing and visualizing CAM-SE output in Python<a class="headerlink" href="#analyzing-and-visualizing-cam-se-output-in-python" title="Permalink to this heading">#</a></h1>
+<h1>Analyzing and visualizing CAM-SE output in Python<a class="headerlink" href="#analyzing-and-visualizing-cam-se-output-in-python" title="Link to this heading">#</a></h1>
 <section id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">#</a></h2>
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
 <p>We demonstrate a variety of options for analyzing and visualizing output from the Community Atmosphere Model (CAM) with the spectral element (SE) grid in Python. This notebook was developed for the ESDS <a class="reference external" href="https://ncar.github.io/esds/posts/2023/unstructured-grid-collab-1/">Collaborative Work Time on Unstructured Grids</a>, which took place on April 17, 2023. A recap of the related CAM-SE discussion can be found <a class="reference external" href="https://ncar.github.io/esds/posts/2023/unstructured-grid-collab-1/#katie-dagon-cgd">here</a>.</p>
 </section>
 <section id="contents">
-<h2>Contents<a class="headerlink" href="#contents" title="Permalink to this heading">#</a></h2>
+<h2>Contents<a class="headerlink" href="#contents" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
-<li><p><span class="xref myst">Regrid CAM-SE output using map file</span></p></li>
-<li><p><span class="xref myst">Use a CAM-SE remap function to scale up</span></p></li>
-<li><p><span class="xref myst">Regrid CAM-SE output using xESMF</span></p></li>
-<li><p><span class="xref myst">Direct sparse matrix multiply-add</span></p></li>
+<li><p><a class="reference internal" href="#section1"><span class="xref myst">Regrid CAM-SE output using map file</span></a></p></li>
+<li><p><a class="reference internal" href="#section2"><span class="xref myst">Use a CAM-SE remap function to scale up</span></a></p></li>
+<li><p><a class="reference internal" href="#section3"><span class="xref myst">Regrid CAM-SE output using xESMF</span></a></p></li>
+<li><p><a class="reference internal" href="#section4"><span class="xref myst">Direct sparse matrix multiply-add</span></a></p></li>
 </ol>
 </section>
 <section id="imports">
-<h2>Imports<a class="headerlink" href="#imports" title="Permalink to this heading">#</a></h2>
+<h2>Imports<a class="headerlink" href="#imports" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">load_ext</span> watermark
@@ -774,7 +770,7 @@ opt_einsum   : 3.3.0
 </div>
 </section>
 <section id="spin-up-a-cluster">
-<h2>Spin up a Cluster<a class="headerlink" href="#spin-up-a-cluster" title="Permalink to this heading">#</a></h2>
+<h2>Spin up a Cluster<a class="headerlink" href="#spin-up-a-cluster" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cluster</span> <span class="o">=</span> <span class="n">ncar_jobqueue</span><span class="o">.</span><span class="n">NCARCluster</span><span class="p">()</span>
@@ -864,7 +860,7 @@ opt_einsum   : 3.3.0
 </div></div></div>
 </div>
 <section id="distributed-client-with-adaptive-scaling">
-<h3>Distributed client with adaptive scaling<a class="headerlink" href="#distributed-client-with-adaptive-scaling" title="Permalink to this heading">#</a></h3>
+<h3>Distributed client with adaptive scaling<a class="headerlink" href="#distributed-client-with-adaptive-scaling" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">client</span> <span class="o">=</span> <span class="n">distributed</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="n">cluster</span><span class="p">)</span>
@@ -998,7 +994,7 @@ opt_einsum   : 3.3.0
 </section>
 </section>
 <section id="set-cam-se-output-location-and-map-file">
-<h2>Set CAM-SE output location and map file<a class="headerlink" href="#set-cam-se-output-location-and-map-file" title="Permalink to this heading">#</a></h2>
+<h2>Set CAM-SE output location and map file<a class="headerlink" href="#set-cam-se-output-location-and-map-file" title="Link to this heading">#</a></h2>
 <p>Here we are using 3-hourly surface temperature (TS) output from a historical simulation using the ne120 grid (0.25deg resolution).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1021,10 +1017,10 @@ opt_einsum   : 3.3.0
 <p><a id='section1'></a></p>
 </section>
 <section id="regrid-cam-se-output-using-map-file">
-<h2>1. Regrid CAM-SE output using map file<a class="headerlink" href="#regrid-cam-se-output-using-map-file" title="Permalink to this heading">#</a></h2>
+<h2>1. Regrid CAM-SE output using map file<a class="headerlink" href="#regrid-cam-se-output-using-map-file" title="Link to this heading">#</a></h2>
 <p>This method aims to produce a Python-based alternative to the <a class="reference external" href="https://nco.sourceforge.net/nco.html#ncremap-netCDF-Remapper">ncremap</a> tool from the <a class="reference external" href="https://nco.sourceforge.net/nco.html">NCO package</a>. The benefits of this method could include remapping within a Python script or notebook, for example to visualize unstructured data without having to write a netCDF file, remap, and read it back in. See related discussion from <a class="reference external" href="https://github.com/UXARRAY/uxarray/issues/183#issuecomment-1343388433">this issue</a> in the UXarray github repository, and <a class="reference external" href="https://uxarray.readthedocs.io/en/latest/examples/005-to-geodataframe-for-holoviz.html">this example notebook</a> with visualization examples from the UXarray documentation.</p>
 <section id="read-in-map-file-weights">
-<h3>Read in map file (weights)<a class="headerlink" href="#read-in-map-file-weights" title="Permalink to this heading">#</a></h3>
+<h3>Read in map file (weights)<a class="headerlink" href="#read-in-map-file-weights" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">weights</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">map_path</span> <span class="o">+</span> <span class="n">map_file</span><span class="p">)</span>
@@ -1429,7 +1425,7 @@ Attributes:
 </div>
 </section>
 <section id="make-source-destination-grids">
-<h3>Make source / destination grids<a class="headerlink" href="#make-source-destination-grids" title="Permalink to this heading">#</a></h3>
+<h3>Make source / destination grids<a class="headerlink" href="#make-source-destination-grids" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">srclat</span> <span class="o">=</span> <span class="n">weights</span><span class="p">[</span><span class="s1">&#39;yc_a&#39;</span><span class="p">]</span>
@@ -1462,7 +1458,7 @@ Map contains 884736 rows, 777602 cols and 2654208 nnz values
 </div>
 </section>
 <section id="create-sparse-matrix-map">
-<h3>Create sparse matrix map<a class="headerlink" href="#create-sparse-matrix-map" title="Permalink to this heading">#</a></h3>
+<h3>Create sparse matrix map<a class="headerlink" href="#create-sparse-matrix-map" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sparse_map</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">sparse</span><span class="o">.</span><span class="n">coo_matrix</span><span class="p">((</span><span class="n">nnzvals</span><span class="p">,</span> <span class="p">(</span><span class="n">rows</span><span class="p">,</span> <span class="n">cols</span><span class="p">)),</span> <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="n">n_b</span><span class="p">,</span> <span class="n">n_a</span><span class="p">))</span>
@@ -1479,7 +1475,7 @@ Map contains 884736 rows, 777602 cols and 2654208 nnz values
 </div>
 </section>
 <section id="read-in-cam-se-output">
-<h3>Read in CAM-SE output<a class="headerlink" href="#read-in-cam-se-output" title="Permalink to this heading">#</a></h3>
+<h3>Read in CAM-SE output<a class="headerlink" href="#read-in-cam-se-output" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tsfile</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">data_path</span> <span class="o">+</span> <span class="n">data_file</span><span class="p">,</span> <span class="n">chunks</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;time&quot;</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span> <span class="s2">&quot;ncol&quot;</span><span class="p">:</span> <span class="mi">50000</span><span class="p">})</span>
@@ -3474,7 +3470,7 @@ Attributes:
 </div>
 </section>
 <section id="extract-surface-temperature-variable-ts">
-<h3>Extract surface temperature variable (TS)<a class="headerlink" href="#extract-surface-temperature-variable-ts" title="Permalink to this heading">#</a></h3>
+<h3>Extract surface temperature variable (TS)<a class="headerlink" href="#extract-surface-temperature-variable-ts" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ts</span> <span class="o">=</span> <span class="n">tsfile</span><span class="o">.</span><span class="n">TS</span>
@@ -3960,7 +3956,7 @@ Attributes:
 </div>
 </section>
 <section id="apply-sparse-map-onto-first-timestep-of-ts">
-<h3>Apply sparse map onto first timestep of TS<a class="headerlink" href="#apply-sparse-map-onto-first-timestep-of-ts" title="Permalink to this heading">#</a></h3>
+<h3>Apply sparse map onto first timestep of TS<a class="headerlink" href="#apply-sparse-map-onto-first-timestep-of-ts" title="Link to this heading">#</a></h3>
 <p>Note: this is a time consuming step, so demonstrating only the first time index here</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -3990,7 +3986,7 @@ Wall time: 33 s
 </div>
 </section>
 <section id="reshape-1-d-vector-to-destination-grid">
-<h3>Reshape 1-D vector to destination grid<a class="headerlink" href="#reshape-1-d-vector-to-destination-grid" title="Permalink to this heading">#</a></h3>
+<h3>Reshape 1-D vector to destination grid<a class="headerlink" href="#reshape-1-d-vector-to-destination-grid" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_out</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">field_target</span><span class="p">,</span> <span class="n">dst_grid_dims</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="s1">&#39;F&#39;</span><span class="p">)</span>
@@ -4006,7 +4002,7 @@ Wall time: 33 s
 </div>
 </section>
 <section id="reshape-destination-grid-to-build-structured-data-array">
-<h3>Reshape destination grid to build structured data array<a class="headerlink" href="#reshape-destination-grid-to-build-structured-data-array" title="Permalink to this heading">#</a></h3>
+<h3>Reshape destination grid to build structured data array<a class="headerlink" href="#reshape-destination-grid-to-build-structured-data-array" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lat2d</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">dstlat</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">dst_grid_dims</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="s1">&#39;F&#39;</span><span class="p">)</span>
@@ -4029,7 +4025,7 @@ Wall time: 33 s
 </div>
 </section>
 <section id="build-data-array-with-dimension-and-coordinates">
-<h3>Build data array with dimension and coordinates<a class="headerlink" href="#build-data-array-with-dimension-and-coordinates" title="Permalink to this heading">#</a></h3>
+<h3>Build data array with dimension and coordinates<a class="headerlink" href="#build-data-array-with-dimension-and-coordinates" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ts_remap</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span>
@@ -4461,7 +4457,7 @@ Coordinates:
 </div>
 </section>
 <section id="visualize">
-<h3>Visualize<a class="headerlink" href="#visualize" title="Permalink to this heading">#</a></h3>
+<h3>Visualize<a class="headerlink" href="#visualize" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
@@ -4481,10 +4477,10 @@ Wall time: 2.61 s
 </section>
 </section>
 <section id="use-a-cam-se-remap-function-to-scale-up">
-<h2>2. Use a CAM-SE remap function to scale up<a class="headerlink" href="#use-a-cam-se-remap-function-to-scale-up" title="Permalink to this heading">#</a></h2>
+<h2>2. Use a CAM-SE remap function to scale up<a class="headerlink" href="#use-a-cam-se-remap-function-to-scale-up" title="Link to this heading">#</a></h2>
 <p>This method builds on the first example, by creating a function to streamline the remapping process. See related <a class="reference external" href="https://github.com/sgyeager/mypyutils/blob/main/mypyutils/regrid_utils.py">regridding script</a>.</p>
 <section id="define-a-function-to-remap-using-weights-file">
-<h3>Define a function to remap using weights file<a class="headerlink" href="#define-a-function-to-remap-using-weights-file" title="Permalink to this heading">#</a></h3>
+<h3>Define a function to remap using weights file<a class="headerlink" href="#define-a-function-to-remap-using-weights-file" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">remap_camse</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span> <span class="n">dsw</span><span class="p">,</span> <span class="n">varlst</span><span class="o">=</span><span class="p">[]):</span>
@@ -4531,7 +4527,7 @@ Wall time: 2.61 s
 </div>
 </section>
 <section id="id1">
-<h3>Read in CAM-SE output<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<h3>Read in CAM-SE output<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tsfile</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">data_path</span> <span class="o">+</span> <span class="n">data_file</span><span class="p">,</span> <span class="n">chunks</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;time&quot;</span><span class="p">:</span> <span class="mi">50</span><span class="p">})</span>
@@ -6466,7 +6462,7 @@ Attributes:
 </div>
 </section>
 <section id="id2">
-<h3>Read in map file (weights)<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<h3>Read in map file (weights)<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">weights</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">map_path</span> <span class="o">+</span> <span class="n">map_file</span><span class="p">)</span>
@@ -6871,7 +6867,7 @@ Attributes:
 </div>
 </section>
 <section id="apply-remap-function-onto-first-timestep-of-ts">
-<h3>Apply remap function onto first timestep of TS<a class="headerlink" href="#apply-remap-function-onto-first-timestep-of-ts" title="Permalink to this heading">#</a></h3>
+<h3>Apply remap function onto first timestep of TS<a class="headerlink" href="#apply-remap-function-onto-first-timestep-of-ts" title="Link to this heading">#</a></h3>
 <p>Note: this is a time consuming step, so demonstrating only the first time index here</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -8137,7 +8133,7 @@ Attributes:
 </div>
 </section>
 <section id="id3">
-<h3>Visualize<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<h3>Visualize<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
@@ -8157,10 +8153,10 @@ Wall time: 115 ms
 </section>
 </section>
 <section id="regrid-cam-se-output-using-xesmf">
-<h2>3. Regrid CAM-SE output using xESMF<a class="headerlink" href="#regrid-cam-se-output-using-xesmf" title="Permalink to this heading">#</a></h2>
+<h2>3. Regrid CAM-SE output using xESMF<a class="headerlink" href="#regrid-cam-se-output-using-xesmf" title="Link to this heading">#</a></h2>
 <p>This method utilizes the <a class="reference external" href="https://xesmf.readthedocs.io/en/latest/index.html">xESMF package</a> which has built-in regridding functionality. See a related discussion and example in <a class="reference external" href="https://ncar.github.io/esds/posts/2022/cam-se-regridding/">this ESDS blog post</a>.</p>
 <section id="define-regridding-function-that-constructs-an-xesmf-regridder">
-<h3>Define regridding function that constructs an xESMF regridder<a class="headerlink" href="#define-regridding-function-that-constructs-an-xesmf-regridder" title="Permalink to this heading">#</a></h3>
+<h3>Define regridding function that constructs an xESMF regridder<a class="headerlink" href="#define-regridding-function-that-constructs-an-xesmf-regridder" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">regrid_cam_se</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">weight_file</span><span class="p">):</span>
@@ -8241,7 +8237,7 @@ Wall time: 115 ms
 </div>
 </section>
 <section id="id4">
-<h3>Read in CAM-SE output<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
+<h3>Read in CAM-SE output<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tsfile</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">data_path</span> <span class="o">+</span> <span class="n">data_file</span><span class="p">,</span> <span class="n">chunks</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;time&quot;</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span> <span class="s2">&quot;ncol&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">})</span>
@@ -8251,7 +8247,7 @@ Wall time: 115 ms
 </div>
 </section>
 <section id="apply-the-regridder">
-<h3>Apply the regridder<a class="headerlink" href="#apply-the-regridder" title="Permalink to this heading">#</a></h3>
+<h3>Apply the regridder<a class="headerlink" href="#apply-the-regridder" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">regridded</span> <span class="o">=</span> <span class="n">regrid_cam_se</span><span class="p">(</span><span class="n">tsfile</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">map_path</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">map_file</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -10146,7 +10142,7 @@ Attributes:
 </div>
 </section>
 <section id="id5">
-<h3>Visualize<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
+<h3>Visualize<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
@@ -10166,10 +10162,10 @@ Wall time: 10.5 s
 </section>
 </section>
 <section id="direct-sparse-matrix-multiply-add">
-<h2>4. Direct sparse matrix multiply-add<a class="headerlink" href="#direct-sparse-matrix-multiply-add" title="Permalink to this heading">#</a></h2>
+<h2>4. Direct sparse matrix multiply-add<a class="headerlink" href="#direct-sparse-matrix-multiply-add" title="Link to this heading">#</a></h2>
 <p>This method uses the weights to create a <code class="docutils literal notranslate"><span class="pre">pydata/sparse</span></code> matrix, then uses <code class="docutils literal notranslate"><span class="pre">xr.dot</span></code> (≡ <code class="docutils literal notranslate"><span class="pre">np.einsum</span></code>). This approach is identical to methods 1, 2; but with <code class="docutils literal notranslate"><span class="pre">pydata/sparse</span></code> which in theory should work well with Dask. This <em>should</em> support chunking along <code class="docutils literal notranslate"><span class="pre">ncol</span></code> but doesn’t work because of <a class="reference external" href="https://github.com/pydata/sparse/issues/589">a sparse bug</a>. So instead we work-around the bug using the <a class="reference external" href="https://dgasmith.github.io/opt_einsum/">very cool opt_einsum package</a>.</p>
 <section id="define-a-function-that-reads-in-map-file-weights-and-constructs-a-sparse-array">
-<h3>Define a function that reads in map file (weights) and constructs a sparse array<a class="headerlink" href="#define-a-function-that-reads-in-map-file-weights-and-constructs-a-sparse-array" title="Permalink to this heading">#</a></h3>
+<h3>Define a function that reads in map file (weights) and constructs a sparse array<a class="headerlink" href="#define-a-function-that-reads-in-map-file-weights-and-constructs-a-sparse-array" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">read_xesmf_weights_file</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
@@ -10221,7 +10217,7 @@ Wall time: 10.5 s
 </div>
 </section>
 <section id="read-in-weights">
-<h3>Read in weights<a class="headerlink" href="#read-in-weights" title="Permalink to this heading">#</a></h3>
+<h3>Read in weights<a class="headerlink" href="#read-in-weights" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xsparse_wgts</span> <span class="o">=</span> <span class="n">read_xesmf_weights_file</span><span class="p">(</span><span class="n">map_path</span> <span class="o">+</span> <span class="n">map_file</span><span class="p">)</span>
@@ -10631,7 +10627,7 @@ Attributes:
 </div>
 </section>
 <section id="id6">
-<h3>Read in CAM-SE output<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
+<h3>Read in CAM-SE output<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tsfile</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">data_path</span> <span class="o">+</span> <span class="n">data_file</span><span class="p">,</span> <span class="n">chunks</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;time&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;ncol&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">})</span>
@@ -12566,7 +12562,7 @@ Attributes:
 </div>
 </section>
 <section id="compute">
-<h3>Compute<a class="headerlink" href="#compute" title="Permalink to this heading">#</a></h3>
+<h3>Compute<a class="headerlink" href="#compute" title="Link to this heading">#</a></h3>
 <p>Now that we have weights, we compute the “dot product” using <a class="reference external" href="https://docs.xarray.dev/en/stable/generated/xarray.dot.html">xr.dot</a>. <code class="docutils literal notranslate"><span class="pre">xr.dot</span></code> uses <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.einsum.html">numpy.einsum</a> under the hood, which dispatches to <code class="docutils literal notranslate"><span class="pre">sparse.einsum</span></code>. If we do this we get an error due to <a class="reference external" href="https://github.com/pydata/sparse/issues/589">a bug</a>.</p>
 <div class="cell tag_raises-exception docutils container">
 <div class="cell_input docutils container">
@@ -12595,7 +12591,7 @@ Attributes:
 </div>
 </section>
 <section id="instead-use-opt-einsum">
-<h3>Instead use opt_einsum<a class="headerlink" href="#instead-use-opt-einsum" title="Permalink to this heading">#</a></h3>
+<h3>Instead use opt_einsum<a class="headerlink" href="#instead-use-opt-einsum" title="Link to this heading">#</a></h3>
 <p>Turns out we can use the very cool <a class="reference external" href="https://dgasmith.github.io/opt_einsum/">opt_einsum</a> package instead. <code class="docutils literal notranslate"><span class="pre">opt_einsum.contract</span></code> is a drop-in replacement for <code class="docutils literal notranslate"><span class="pre">numpy.einsum</span></code> (which  powers <code class="docutils literal notranslate"><span class="pre">xr.dot</span></code>) so we’ll just <a class="reference external" href="https://en.wikipedia.org/wiki/Monkey_patch">monkey-patch</a> this in to avoid redoing a <a class="reference external" href="https://github.com/pydata/xarray/blob/68bae08874d05e448eb5c9f522afb62e39146f33/xarray/core/computation.py#L1622">bunch of xarray code</a> that converts dimension names to the “subscript string” that <code class="docutils literal notranslate"><span class="pre">opt_einsum.contract</span></code> expects. Seems like xarray could <a class="reference external" href="https://github.com/pydata/xarray/issues/7764">support opt_einsum</a> as an opt-in.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -12722,7 +12718,7 @@ Attributes:
 </div>
 </section>
 <section id="define-a-function-to-apply-weights-using-this-method">
-<h3>Define a function to apply weights using this method<a class="headerlink" href="#define-a-function-to-apply-weights-using-this-method" title="Permalink to this heading">#</a></h3>
+<h3>Define a function to apply weights using this method<a class="headerlink" href="#define-a-function-to-apply-weights-using-this-method" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">apply_weights</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">weights</span><span class="p">):</span>
@@ -12759,7 +12755,7 @@ Attributes:
 </div>
 </section>
 <section id="apply-weights">
-<h3>Apply weights<a class="headerlink" href="#apply-weights" title="Permalink to this heading">#</a></h3>
+<h3>Apply weights<a class="headerlink" href="#apply-weights" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">regridded</span> <span class="o">=</span> <span class="n">apply_weights</span><span class="p">(</span><span class="n">tsfile</span><span class="p">,</span> <span class="n">xsparse_wgts</span><span class="o">.</span><span class="n">chunk</span><span class="p">())</span>
@@ -14642,7 +14638,7 @@ Attributes:
 </div>
 </section>
 <section id="id7">
-<h3>Visualize<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h3>
+<h3>Visualize<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
@@ -14660,7 +14656,7 @@ Wall time: 878 ms
 </div>
 </section>
 <section id="chunking-in-space">
-<h3>Chunking in space<a class="headerlink" href="#chunking-in-space" title="Permalink to this heading">#</a></h3>
+<h3>Chunking in space<a class="headerlink" href="#chunking-in-space" title="Link to this heading">#</a></h3>
 <p>Let’s try chunking along <code class="docutils literal notranslate"><span class="pre">lon</span></code>. This is useless since you’ll always read all <code class="docutils literal notranslate"><span class="pre">ncol</span></code> in, but it illustrates the point. Note that these chunk sizes are very small, so this is probably only useful for a much higher-resolution output grid.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -16559,7 +16555,7 @@ Attributes:
 </div>
 </section>
 <section id="id8">
-<h3>Visualize<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h3>
+<h3>Visualize<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
@@ -16577,7 +16573,7 @@ Wall time: 3.67 s
 </div>
 </section>
 <section id="timing-performance-for-core-multiply-add">
-<h3>Timing performance for core multiply-add<a class="headerlink" href="#timing-performance-for-core-multiply-add" title="Permalink to this heading">#</a></h3>
+<h3>Timing performance for core multiply-add<a class="headerlink" href="#timing-performance-for-core-multiply-add" title="Link to this heading">#</a></h3>
 <p>Testing the model or the core operation that would happen on every dask block. <code class="docutils literal notranslate"><span class="pre">data.data</span></code> is a numpy array, and <code class="docutils literal notranslate"><span class="pre">xsparse_weights.data</span></code> is a <code class="docutils literal notranslate"><span class="pre">sparse.COO</span></code> array.</p>
 <p>Does the order of operations matter?</p>
 <div class="cell docutils container">
@@ -16616,7 +16612,7 @@ Wall time: 3.67 s
 </div>
 </div>
 <section id="summary-of-the-timing-test">
-<h4>Summary of the timing test:<a class="headerlink" href="#summary-of-the-timing-test" title="Permalink to this heading">#</a></h4>
+<h4>Summary of the timing test:<a class="headerlink" href="#summary-of-the-timing-test" title="Link to this heading">#</a></h4>
 <ul class="simple">
 <li><p>Order of operations matters, particularly when calling <code class="docutils literal notranslate"><span class="pre">np.einsum</span></code>.</p></li>
 <li><p>For best performance use <code class="docutils literal notranslate"><span class="pre">opt_einsum.contract</span></code> and provide the field variable first, and weights second.</p></li>
@@ -16625,11 +16621,11 @@ Wall time: 3.67 s
 </section>
 </section>
 <section id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h2>
-<p>In this blog post we’ve explored 4 methods to remap and visualize CAM-SE unstructured output in Python. Methods <span class="xref myst">1</span> and <span class="xref myst">2</span> provide a basic version of remapping using an ESMF weights file, mimicking the NCO tool <code class="docutils literal notranslate"><span class="pre">ncremap</span></code> while allowing the user to perform the remapping in a Python or Jupyter notebook environment. <span class="xref myst">Method 3</span> demonstrates the use of xESMF for this purpose, with similar performance. <span class="xref myst">Method 4</span> expands on the approach of methods 1 and 2 to allow for scaling with Dask.</p>
+<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
+<p>In this blog post we’ve explored 4 methods to remap and visualize CAM-SE unstructured output in Python. Methods <a class="reference internal" href="#section1"><span class="xref myst">1</span></a> and <a class="reference internal" href="#section2"><span class="xref myst">2</span></a> provide a basic version of remapping using an ESMF weights file, mimicking the NCO tool <code class="docutils literal notranslate"><span class="pre">ncremap</span></code> while allowing the user to perform the remapping in a Python or Jupyter notebook environment. <a class="reference internal" href="#section3"><span class="xref myst">Method 3</span></a> demonstrates the use of xESMF for this purpose, with similar performance. <a class="reference internal" href="#section4"><span class="xref myst">Method 4</span></a> expands on the approach of methods 1 and 2 to allow for scaling with Dask.</p>
 <p>We look forward to feedback from users on this code, and in particular which methods work well for different applications!</p>
 <section id="further-reading">
-<h3>Further reading<a class="headerlink" href="#further-reading" title="Permalink to this heading">#</a></h3>
+<h3>Further reading<a class="headerlink" href="#further-reading" title="Link to this heading">#</a></h3>
 <p>Here are some additional methods to explore that came up in discussions around this topic. Let us know if you try these out!</p>
 <ul class="simple">
 <li><p>Triangulate using Datashader and Holoviews: <a class="reference external" href="https://github.com/UXARRAY/uxarray/issues/183#issuecomment-1343274909">Example 1</a>, <a class="reference external" href="https://ncar.github.io/esds/posts/2021/cesm-datashader/">Example 2</a></p></li>
@@ -16800,7 +16796,7 @@ Wall time: 3.67 s
       
         <div class="footer-item">
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     <br/>
   </p>
 </div>

@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 
 
@@ -7,7 +6,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Batch Processing Jupyter Notebooks with Papermill &#8212; NCAR-ESDS 0.1 documentation</title>
   
@@ -29,25 +28,22 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=66307ba7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
   <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/sphinx_highlight.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/documentation_options.js?v=19645805"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=30646c52"></script>
     <script kind="utterances">
 
     var commentsRunWhenDOMLoaded = cb => {
@@ -82,7 +78,7 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'posts/2022/batch-processing-notebooks-with-papermill';</script>
     <link rel="author" title="About these documents" href="../../../about/" />
     <link rel="index" title="Index" href="../../../genindex/" />
@@ -495,14 +491,14 @@ commentsRunWhenDOMLoaded(addUtterances);
     </span>
   
   
-  <a href="../../../blog/author/anderson-banihirwe/">Anderson Banihirwe</a>
+  <a href="../../../blog/author/matthew-long/">Matthew Long</a>
   
   ,
   
   
   
   
-  <a href="../../../blog/author/matthew-long/">Matthew Long</a>
+  <a href="../../../blog/author/anderson-banihirwe/">Anderson Banihirwe</a>
   
   
   
@@ -522,19 +518,13 @@ commentsRunWhenDOMLoaded(addUtterances);
     </span>
   
   
-  <a href="../../../blog/tag/python/">python</a>
-  
-  
-  
-  
-  
-  <a href="../../../blog/tag/papermill/">papermill</a>
-  
-  
-  
-  
-  
   <a href="../../../blog/tag/notebooks/">notebooks</a>
+  
+  
+  
+  
+  
+  <a href="../../../blog/tag/automation/">automation</a>
   
   
   
@@ -546,7 +536,13 @@ commentsRunWhenDOMLoaded(addUtterances);
   
   
   
-  <a href="../../../blog/tag/automation/">automation</a>
+  <a href="../../../blog/tag/papermill/">papermill</a>
+  
+  
+  
+  
+  
+  <a href="../../../blog/tag/python/">python</a>
   
   
   
@@ -565,6 +561,12 @@ commentsRunWhenDOMLoaded(addUtterances);
 </h3>
 <ul>
   
+  
+  <li>
+    <a href="../../2023/esds-annual-event/">
+      21 November - 2024 Earth System Data Science (ESDS) Annual Event
+    </a>
+  </li>
   
   <li>
     <a href="../../2023/scipy23/">
@@ -590,12 +592,6 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
   </li>
   
-  <li>
-    <a href="../../2023/unstructured-grid-collab-1/">
-      05 May - Recap: Unstructured Grid Collaborative Work Time
-    </a>
-  </li>
-  
 </ul>
 </div>
 </div>
@@ -609,7 +605,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   
   
   <li>
-    <a href="../../../blog/2023/">2023 (7)</a>
+    <a href="../../../blog/2023/">2023 (8)</a>
   </li>
   
   
@@ -692,9 +688,9 @@ commentsRunWhenDOMLoaded(addUtterances);
                 <article class="bd-article" role="main">
                   
 <section class="tex2jax_ignore mathjax_ignore" id="batch-processing-jupyter-notebooks-with-papermill">
-<h1>Batch Processing Jupyter Notebooks with Papermill<a class="headerlink" href="#batch-processing-jupyter-notebooks-with-papermill" title="Permalink to this heading">#</a></h1>
+<h1>Batch Processing Jupyter Notebooks with Papermill<a class="headerlink" href="#batch-processing-jupyter-notebooks-with-papermill" title="Link to this heading">#</a></h1>
 <section id="background-and-motivation">
-<h2>Background and Motivation<a class="headerlink" href="#background-and-motivation" title="Permalink to this heading">#</a></h2>
+<h2>Background and Motivation<a class="headerlink" href="#background-and-motivation" title="Link to this heading">#</a></h2>
 <p><a class="reference external" href="https://jupyter.org/">Jupyter notebooks</a> are really good for doing the heavy lifting of data analysis by:</p>
 <ul class="simple">
 <li><p>Allowing you to showcase your work in a single place. You can see the complete “paper trail” of what was done. This includes the code, results, visuals and the narrative accompanying your analysis.</p></li>
@@ -709,13 +705,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>Some of these drawbacks can be addressed with the help of Papermill.</p>
 </section>
 <section id="what-is-papermill">
-<h2>What is Papermill?<a class="headerlink" href="#what-is-papermill" title="Permalink to this heading">#</a></h2>
+<h2>What is Papermill?<a class="headerlink" href="#what-is-papermill" title="Link to this heading">#</a></h2>
 <p><a class="reference external" href="https://papermill.readthedocs.io/en/latest/"><strong>Papermill</strong></a> is a Python library that aims to allow users to run and parametrize Jupyter notebooks in a way that is easy to maintain and reuse. In this post, we will walk through how to use Papermill’s approach to parametrize a notebook that loads an Xarray dataset and plots a map of the data.</p>
 </section>
 <section id="how-to-use-papermill">
-<h2>How to use Papermill<a class="headerlink" href="#how-to-use-papermill" title="Permalink to this heading">#</a></h2>
+<h2>How to use Papermill<a class="headerlink" href="#how-to-use-papermill" title="Link to this heading">#</a></h2>
 <section id="step-1-prepare-the-notebook">
-<h3>Step 1: Prepare the notebook<a class="headerlink" href="#step-1-prepare-the-notebook" title="Permalink to this heading">#</a></h3>
+<h3>Step 1: Prepare the notebook<a class="headerlink" href="#step-1-prepare-the-notebook" title="Link to this heading">#</a></h3>
 <p>To transform your notebook into a Papermill-enabled notebook (a notebook that can be run with Papermill), you need to add the <code class="docutils literal notranslate"><span class="pre">parameters</span></code> tag to cells that contains the parameters you intend to parametrize when running the notebook with Papermill:</p>
 <ol class="arabic simple">
 <li><p>Select the cell to parameterize</p></li>
@@ -725,7 +721,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p><img alt="" src="../../../_images/papermill-parameters.png" /></p>
 </section>
 <section id="step-2-prepare-the-execution-environment">
-<h3>Step 2: Prepare the execution environment<a class="headerlink" href="#step-2-prepare-the-execution-environment" title="Permalink to this heading">#</a></h3>
+<h3>Step 2: Prepare the execution environment<a class="headerlink" href="#step-2-prepare-the-execution-environment" title="Link to this heading">#</a></h3>
 <p>Once you are ready to run your notebook with Papermill, you need to prepare the execution environment by ensuring the following packages are installed in the enviroment from which you plan to invoke Papermill:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://papermill.readthedocs.io/en/latest/"><strong>papermill</strong></a></p></li>
@@ -748,10 +744,10 @@ $<span class="w"> </span>python3<span class="w"> </span>-m<span class="w"> </spa
 </div>
 </section>
 <section id="step-3-running-the-notebook">
-<h3>Step 3: Running the notebook<a class="headerlink" href="#step-3-running-the-notebook" title="Permalink to this heading">#</a></h3>
+<h3>Step 3: Running the notebook<a class="headerlink" href="#step-3-running-the-notebook" title="Link to this heading">#</a></h3>
 <p>Now that you have the environment ready and the notebook is parametrized, you can run the notebook. There are two ways to run the notebook:</p>
 <section id="option-1-from-the-command-line">
-<h4>Option 1: from the command line<a class="headerlink" href="#option-1-from-the-command-line" title="Permalink to this heading">#</a></h4>
+<h4>Option 1: from the command line<a class="headerlink" href="#option-1-from-the-command-line" title="Link to this heading">#</a></h4>
 <p>To run the notebook from the command line, you need to run the following command</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>activate<span class="w"> </span>myenv
 $<span class="w"> </span>papermill<span class="w"> </span>sample-notebook.ipynb<span class="w"> </span>output-notebook.ipynb<span class="w"> </span>-p<span class="w"> </span>dataset<span class="w"> </span>air_temperature<span class="w"> </span>-p<span class="w"> </span>variable<span class="w"> </span>air<span class="w"> </span>-k<span class="w"> </span>my-analysis-env
@@ -768,7 +764,7 @@ Executing:<span class="w"> </span><span class="m">100</span>%<span class="p">|</
 <p><img alt="" src="../../../_images/papermill-executed-notebook.png" /></p>
 </section>
 <section id="option-2-from-another-python-script-or-jupyter-notebook">
-<h4>Option 2: from another Python script or Jupyter notebook<a class="headerlink" href="#option-2-from-another-python-script-or-jupyter-notebook" title="Permalink to this heading">#</a></h4>
+<h4>Option 2: from another Python script or Jupyter notebook<a class="headerlink" href="#option-2-from-another-python-script-or-jupyter-notebook" title="Link to this heading">#</a></h4>
 <p>To run the notebook from another Python script or Jupyter notebook, you need to use the <code class="docutils literal notranslate"><span class="pre">papermill.execute_notebook</span></code> function.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># contents of `papermill_runner.py`</span>
 <span class="kn">import</span> <span class="nn">papermill</span> <span class="k">as</span> <span class="nn">pm</span>
@@ -814,7 +810,7 @@ Executing:<span class="w"> </span><span class="m">100</span>%<span class="p">|</
 </section>
 </section>
 <section id="final-thoughts">
-<h2>Final Thoughts<a class="headerlink" href="#final-thoughts" title="Permalink to this heading">#</a></h2>
+<h2>Final Thoughts<a class="headerlink" href="#final-thoughts" title="Link to this heading">#</a></h2>
 <p>Papermill is well-suited for</p>
 <ul class="simple">
 <li><p>Users who would like to run a notebook template with different input values (parameters).</p></li>
@@ -938,7 +934,7 @@ Executing:<span class="w"> </span><span class="m">100</span>%<span class="p">|</
       
         <div class="footer-item">
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     <br/>
   </p>
 </div>

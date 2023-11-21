@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 
 
@@ -7,7 +6,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Creating Visualizations of Intake-ESM Catalogs &#8212; NCAR-ESDS 0.1 documentation</title>
   
@@ -29,25 +28,22 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=66307ba7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
   <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/sphinx_highlight.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/documentation_options.js?v=19645805"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=30646c52"></script>
     <script kind="utterances">
 
     var commentsRunWhenDOMLoaded = cb => {
@@ -82,7 +78,7 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'posts/2021/graphviz_example';</script>
     <link rel="author" title="About these documents" href="../../../about/" />
     <link rel="index" title="Index" href="../../../genindex/" />
@@ -521,13 +517,13 @@ commentsRunWhenDOMLoaded(addUtterances);
   
   
   
-  <a href="../../../blog/tag/cesm/">cesm</a>
-  
-  
-  
-  
-  
   <a href="../../../blog/tag/intake/">intake</a>
+  
+  
+  
+  
+  
+  <a href="../../../blog/tag/cesm/">cesm</a>
   
   
   
@@ -546,6 +542,12 @@ commentsRunWhenDOMLoaded(addUtterances);
 </h3>
 <ul>
   
+  
+  <li>
+    <a href="../../2023/esds-annual-event/">
+      21 November - 2024 Earth System Data Science (ESDS) Annual Event
+    </a>
+  </li>
   
   <li>
     <a href="../../2023/scipy23/">
@@ -571,12 +573,6 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
   </li>
   
-  <li>
-    <a href="../../2023/unstructured-grid-collab-1/">
-      05 May - Recap: Unstructured Grid Collaborative Work Time
-    </a>
-  </li>
-  
 </ul>
 </div>
 </div>
@@ -590,7 +586,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   
   
   <li>
-    <a href="../../../blog/2023/">2023 (7)</a>
+    <a href="../../../blog/2023/">2023 (8)</a>
   </li>
   
   
@@ -673,10 +669,10 @@ commentsRunWhenDOMLoaded(addUtterances);
                 <article class="bd-article" role="main">
                   
 <section class="tex2jax_ignore mathjax_ignore" id="creating-visualizations-of-intake-esm-catalogs">
-<h1>Creating Visualizations of Intake-ESM Catalogs<a class="headerlink" href="#creating-visualizations-of-intake-esm-catalogs" title="Permalink to this heading">#</a></h1>
+<h1>Creating Visualizations of Intake-ESM Catalogs<a class="headerlink" href="#creating-visualizations-of-intake-esm-catalogs" title="Link to this heading">#</a></h1>
 <p>A common initial task when working with a new dataset is figuring out what data is available. This is especially true when working with climate ensembles with several components and time-frequency output (ex. Community Earth System Model Large Ensemble, CESM-LE). Here, we will examine different methods of investigating this catalog</p>
 <section id="imports">
-<h2>Imports<a class="headerlink" href="#imports" title="Permalink to this heading">#</a></h2>
+<h2>Imports<a class="headerlink" href="#imports" title="Link to this heading">#</a></h2>
 <p>Here, we will use <a class="reference external" href="https://intake-esm.readthedocs.io/en/latest/">intake-esm</a> and <a class="reference external" href="https://graphviz.readthedocs.io/en/stable/manual.html">graphviz</a>, which can be installed using the following (including jupyterlab too!)</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">jupyterlab</span> <span class="n">intake</span><span class="o">-</span><span class="n">esm</span> <span class="n">graphviz</span>
 </pre></div>
@@ -692,7 +688,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </section>
 <section id="read-in-intake-esm-catalog">
-<h2>Read in intake-esm catalog<a class="headerlink" href="#read-in-intake-esm-catalog" title="Permalink to this heading">#</a></h2>
+<h2>Read in intake-esm catalog<a class="headerlink" href="#read-in-intake-esm-catalog" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">col</span> <span class="o">=</span> <span class="n">intake</span><span class="o">.</span><span class="n">open_esm_datastore</span><span class="p">(</span>
@@ -1110,10 +1106,10 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </section>
 <section id="using-graphviz-in-a-jupyter-notebook">
-<h2>Using Graphviz in a Jupyter Notebook<a class="headerlink" href="#using-graphviz-in-a-jupyter-notebook" title="Permalink to this heading">#</a></h2>
+<h2>Using Graphviz in a Jupyter Notebook<a class="headerlink" href="#using-graphviz-in-a-jupyter-notebook" title="Link to this heading">#</a></h2>
 <p><a class="reference external" href="https://graphviz.readthedocs.io/en/stable/manual.html">Graphviz</a> offers an interface to create network graphs</p>
 <section id="main-components-of-graphviz">
-<h3>Main “components” of <a class="reference external" href="https://graphviz.readthedocs.io/en/stable/manual.html">Graphviz</a><a class="headerlink" href="#main-components-of-graphviz" title="Permalink to this heading">#</a></h3>
+<h3>Main “components” of <a class="reference external" href="https://graphviz.readthedocs.io/en/stable/manual.html">Graphviz</a><a class="headerlink" href="#main-components-of-graphviz" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Digraph class</p>
 <ul>
@@ -1134,7 +1130,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 </section>
 <section id="example-of-case-visualization">
-<h3>Example of case visualization<a class="headerlink" href="#example-of-case-visualization" title="Permalink to this heading">#</a></h3>
+<h3>Example of case visualization<a class="headerlink" href="#example-of-case-visualization" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create Digraph object</span>
@@ -1176,7 +1172,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </section>
 <section id="looping-through-the-cesm-le-catalog">
-<h3>Looping through the CESM-LE catalog<a class="headerlink" href="#looping-through-the-cesm-le-catalog" title="Permalink to this heading">#</a></h3>
+<h3>Looping through the CESM-LE catalog<a class="headerlink" href="#looping-through-the-cesm-le-catalog" title="Link to this heading">#</a></h3>
 <p>Let’s apply this to our data catalog, assigning the dataframe with dataset attributes to <code class="docutils literal notranslate"><span class="pre">df</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1232,7 +1228,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </section>
 </section>
 <section id="conclusion">
-<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this heading">#</a></h2>
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading">#</a></h2>
 <p><a class="reference external" href="https://graphviz.readthedocs.io/en/stable/manual.html">Graphviz</a> can be a helpful tool when visualizing what data is within your data catalog - I hope this provides a good starting point in terms of using this with <a class="reference external" href="https://intake-esm.readthedocs.io/en/latest/">intake-esm</a> catalogs!</p>
 </section>
 </section>
@@ -1348,7 +1344,7 @@ commentsRunWhenDOMLoaded(addUtterances);
       
         <div class="footer-item">
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     <br/>
   </p>
 </div>

@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 
 
@@ -7,7 +6,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Debugging dask workflows: Detrending &#8212; NCAR-ESDS 0.1 documentation</title>
   
@@ -29,25 +28,22 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=66307ba7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
   <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/sphinx_highlight.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/documentation_options.js?v=19645805"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=30646c52"></script>
     <script kind="utterances">
 
     var commentsRunWhenDOMLoaded = cb => {
@@ -82,7 +78,7 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'posts/2022/dask-debug-detrend';</script>
     <link rel="author" title="About these documents" href="../../../about/" />
     <link rel="index" title="Index" href="../../../genindex/" />
@@ -515,13 +511,13 @@ commentsRunWhenDOMLoaded(addUtterances);
     </span>
   
   
-  <a href="../../../blog/tag/dask/">dask</a>
-  
-  
-  
-  
-  
   <a href="../../../blog/tag/debug/">debug</a>
+  
+  
+  
+  
+  
+  <a href="../../../blog/tag/dask/">dask</a>
   
   
   
@@ -540,6 +536,12 @@ commentsRunWhenDOMLoaded(addUtterances);
 </h3>
 <ul>
   
+  
+  <li>
+    <a href="../../2023/esds-annual-event/">
+      21 November - 2024 Earth System Data Science (ESDS) Annual Event
+    </a>
+  </li>
   
   <li>
     <a href="../../2023/scipy23/">
@@ -565,12 +567,6 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
   </li>
   
-  <li>
-    <a href="../../2023/unstructured-grid-collab-1/">
-      05 May - Recap: Unstructured Grid Collaborative Work Time
-    </a>
-  </li>
-  
 </ul>
 </div>
 </div>
@@ -584,7 +580,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   
   
   <li>
-    <a href="../../../blog/2023/">2023 (7)</a>
+    <a href="../../../blog/2023/">2023 (8)</a>
   </li>
   
   
@@ -667,7 +663,7 @@ commentsRunWhenDOMLoaded(addUtterances);
                 <article class="bd-article" role="main">
                   
 <section class="tex2jax_ignore mathjax_ignore" id="debugging-dask-workflows-detrending">
-<h1>Debugging dask workflows: Detrending<a class="headerlink" href="#debugging-dask-workflows-detrending" title="Permalink to this heading">#</a></h1>
+<h1>Debugging dask workflows: Detrending<a class="headerlink" href="#debugging-dask-workflows-detrending" title="Link to this heading">#</a></h1>
 <p>Detrending - subtracting a trend, commonly a linear fit, from the data - along the time dimension is a common workflow in the climate sciences.</p>
 <p>Here’s an example</p>
 <div class="cell tag_hide-input docutils container">
@@ -713,7 +709,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li><p><a class="reference external" href="https://github.com/pydata/xarray/discussions/6280">Memory errors with detrending + rolling operations</a></p></li>
 </ol>
 <section id="challenges-of-detrending">
-<h2>Challenges of detrending<a class="headerlink" href="#challenges-of-detrending" title="Permalink to this heading">#</a></h2>
+<h2>Challenges of detrending<a class="headerlink" href="#challenges-of-detrending" title="Link to this heading">#</a></h2>
 <p>Detrending has 3 steps:</p>
 <ol class="arabic simple">
 <li><p>Fit a polynomial using polyfit</p></li>
@@ -734,7 +730,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>In this notebook, I explore the detrending problem a little bit to find what other challenges affect detrending workflows.</p>
 </section>
 <section id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h2>
+<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p>We use simple techniques like tracking chunk sizes and number of tasks to isolate a few problems, particularly in <code class="docutils literal notranslate"><span class="pre">polyval</span></code>.</p></li>
 <li><p>Fixing <code class="docutils literal notranslate"><span class="pre">polyval</span></code> doesn’t improve the calculation, so we then examine the dask graph for <code class="docutils literal notranslate"><span class="pre">polyfit</span></code> in a smaller artificial problem that replicates the main issues.</p></li>
@@ -748,7 +744,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </section>
 <section id="setup">
-<h2>Setup<a class="headerlink" href="#setup" title="Permalink to this heading">#</a></h2>
+<h2>Setup<a class="headerlink" href="#setup" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">dask.array</span>
@@ -1069,7 +1065,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </section>
 <section id="example-detrending-operation">
-<h2>Example detrending operation<a class="headerlink" href="#example-detrending-operation" title="Permalink to this heading">#</a></h2>
+<h2>Example detrending operation<a class="headerlink" href="#example-detrending-operation" title="Link to this heading">#</a></h2>
 <p>I’ll use the example dataset in <a class="reference external" href="https://github.com/pydata/xarray/discussions/6280">Memory errors with detrending + rolling operations</a> but make it smaller in time.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2092,7 +2088,7 @@ Coordinates:
 <p>What is going wrong?</p>
 </section>
 <section id="lets-look-at-detrend">
-<h2>Lets look at detrend<a class="headerlink" href="#lets-look-at-detrend" title="Permalink to this heading">#</a></h2>
+<h2>Lets look at detrend<a class="headerlink" href="#lets-look-at-detrend" title="Link to this heading">#</a></h2>
 <p>Detrend has 3 steps:</p>
 <ol class="arabic simple">
 <li><p>polyfit</p></li>
@@ -3030,7 +3026,7 @@ Coordinates:
 </div>
 </section>
 <section id="building-a-better-polyval">
-<h2>Building a better polyval<a class="headerlink" href="#building-a-better-polyval" title="Permalink to this heading">#</a></h2>
+<h2>Building a better polyval<a class="headerlink" href="#building-a-better-polyval" title="Link to this heading">#</a></h2>
 <p>To do this, we need to look closely at the code of <a class="reference external" href="https://github.com/pydata/xarray/blob/f8bae5974ee2c3f67346298da12621af4cae8cf8/xarray/core/computation.py#L1847">polyval</a>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">polyval</span><span class="p">(</span><span class="n">coord</span><span class="p">,</span> <span class="n">coeffs</span><span class="p">,</span> <span class="n">degree_dim</span><span class="o">=</span><span class="s2">&quot;degree&quot;</span><span class="p">):</span>
     <span class="kn">from</span> <span class="nn">.dataarray</span> <span class="kn">import</span> <span class="n">DataArray</span>
@@ -4363,7 +4359,7 @@ Coordinates:
 </div>
 </section>
 <section id="an-older-dask-version">
-<h2>An older dask version<a class="headerlink" href="#an-older-dask-version" title="Permalink to this heading">#</a></h2>
+<h2>An older dask version<a class="headerlink" href="#an-older-dask-version" title="Link to this heading">#</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>The following cells describe an issue present for <code class="docutils literal notranslate"><span class="pre">dask&gt;2.30.0</span></code> and <code class="docutils literal notranslate"><span class="pre">dask</span> <span class="pre">&lt;</span> <span class="pre">2022.03.0</span></code>.</p>
@@ -4395,9 +4391,9 @@ Coordinates:
 <p>Hmm…. that single <code class="docutils literal notranslate"><span class="pre">tensordot</span></code> task still looks problematic. It is probably why we see very skewed memory consumption (mostly one worker).</p>
 <p>Sadly and surprisingly, that wasn’t fixed by our new polyval!</p>
 <section id="let-s-look-at-polyfit-again">
-<h3>Let’s look at polyfit again<a class="headerlink" href="#let-s-look-at-polyfit-again" title="Permalink to this heading">#</a></h3>
+<h3>Let’s look at polyfit again<a class="headerlink" href="#let-s-look-at-polyfit-again" title="Link to this heading">#</a></h3>
 <section id="a-dask-bug">
-<h4>A dask bug<a class="headerlink" href="#a-dask-bug" title="Permalink to this heading">#</a></h4>
+<h4>A dask bug<a class="headerlink" href="#a-dask-bug" title="Link to this heading">#</a></h4>
 <p>But now for a much smaller problem.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -4879,7 +4875,7 @@ Dimensions without coordinates: ocean_time, eta_rho, xi_rho</pre><div class='xr-
 </section>
 </section>
 <section id="is-it-fixed">
-<h2>Is it fixed?<a class="headerlink" href="#is-it-fixed" title="Permalink to this heading">#</a></h2>
+<h2>Is it fixed?<a class="headerlink" href="#is-it-fixed" title="Link to this heading">#</a></h2>
 <p>Thanks to some <a class="reference external" href="https://github.com/dask/dask/pull/7980">upstream work</a> in dask, we expect the <code class="docutils literal notranslate"><span class="pre">tensordot</span></code> problem is fixed. So let’s try it again.</p>
 <p>Upgrading dask to <code class="docutils literal notranslate"><span class="pre">dask==2022.03.0</span></code> shows a much better graph.</p>
 <div class="cell docutils container">
@@ -4908,7 +4904,7 @@ Dimensions without coordinates: ocean_time, eta_rho, xi_rho</pre><div class='xr-
 <p>Yes! we now see 3 tensordot tasks for this smaller problem instead of 1 in the previous buggy version.</p>
 </section>
 <section id="attempt-2">
-<h2>Attempt 2<a class="headerlink" href="#attempt-2" title="Permalink to this heading">#</a></h2>
+<h2>Attempt 2<a class="headerlink" href="#attempt-2" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># these are arguments provided to detrend</span>
@@ -6701,7 +6697,7 @@ Coordinates:
 </div>
 </section>
 <section id="finally">
-<h2>Finally<a class="headerlink" href="#finally" title="Permalink to this heading">#</a></h2>
+<h2>Finally<a class="headerlink" href="#finally" title="Link to this heading">#</a></h2>
 <p>Here’s everything put together:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -7243,7 +7239,7 @@ Coordinates:
 <p>It works!</p>
 </section>
 <section id="id1">
-<h2>Summary<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<h2>Summary<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
 <p>In this notebook, I explore the detrending problem a little bit to find what other challenges affect detrending workflows.</p>
 <ol class="arabic simple">
 <li><p>We use simple techniques like tracking chunk sizes and number of tasks to isolate a few problems.</p></li>
@@ -7254,7 +7250,7 @@ Coordinates:
 </ol>
 </section>
 <section id="future-work">
-<h2>Future work<a class="headerlink" href="#future-work" title="Permalink to this heading">#</a></h2>
+<h2>Future work<a class="headerlink" href="#future-work" title="Link to this heading">#</a></h2>
 <ol class="arabic">
 <li><p>Some <a class="reference external" href="https://github.com/pydata/xarray/issues/6411">improvements</a> to <code class="docutils literal notranslate"><span class="pre">xarray.polyval</span></code> are needed so that it can handle a chunked coordinate as input.</p></li>
 <li><p>Dask could also detect that a giant 5GB chunk is constructed by this line in polyval:</p>
@@ -7387,7 +7383,7 @@ Coordinates:
       
         <div class="footer-item">
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     <br/>
   </p>
 </div>

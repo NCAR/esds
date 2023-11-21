@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 
 
@@ -7,7 +6,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Reading WRF data into Xarray and Visualizing the Output using hvPlot &#8212; NCAR-ESDS 0.1 documentation</title>
   
@@ -29,25 +28,22 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=66307ba7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
   <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/sphinx_highlight.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/documentation_options.js?v=19645805"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=30646c52"></script>
     <script kind="utterances">
 
     var commentsRunWhenDOMLoaded = cb => {
@@ -82,7 +78,7 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'posts/2021/xarray-wrf-example';</script>
     <link rel="author" title="About these documents" href="../../../about/" />
     <link rel="index" title="Index" href="../../../genindex/" />
@@ -495,14 +491,14 @@ commentsRunWhenDOMLoaded(addUtterances);
     </span>
   
   
-  <a href="../../../blog/author/anderson-banihirwe/">Anderson Banihirwe</a>
+  <a href="../../../blog/author/max-grover/">Max Grover</a>
   
   ,
   
   
   
   
-  <a href="../../../blog/author/max-grover/">Max Grover</a>
+  <a href="../../../blog/author/anderson-banihirwe/">Anderson Banihirwe</a>
   
   
   
@@ -522,12 +518,6 @@ commentsRunWhenDOMLoaded(addUtterances);
     </span>
   
   
-  <a href="../../../blog/tag/wrf/">WRF</a>
-  
-  
-  
-  
-  
   <a href="../../../blog/tag/visualization/">visualization</a>
   
   
@@ -535,6 +525,12 @@ commentsRunWhenDOMLoaded(addUtterances);
   
   
   <a href="../../../blog/tag/dask/">dask</a>
+  
+  
+  
+  
+  
+  <a href="../../../blog/tag/wrf/">WRF</a>
   
   
   
@@ -553,6 +549,12 @@ commentsRunWhenDOMLoaded(addUtterances);
 </h3>
 <ul>
   
+  
+  <li>
+    <a href="../../2023/esds-annual-event/">
+      21 November - 2024 Earth System Data Science (ESDS) Annual Event
+    </a>
+  </li>
   
   <li>
     <a href="../../2023/scipy23/">
@@ -578,12 +580,6 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
   </li>
   
-  <li>
-    <a href="../../2023/unstructured-grid-collab-1/">
-      05 May - Recap: Unstructured Grid Collaborative Work Time
-    </a>
-  </li>
-  
 </ul>
 </div>
 </div>
@@ -597,7 +593,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   
   
   <li>
-    <a href="../../../blog/2023/">2023 (7)</a>
+    <a href="../../../blog/2023/">2023 (8)</a>
   </li>
   
   
@@ -680,7 +676,7 @@ commentsRunWhenDOMLoaded(addUtterances);
                 <article class="bd-article" role="main">
                   
 <section class="tex2jax_ignore mathjax_ignore" id="reading-wrf-data-into-xarray-and-visualizing-the-output-using-hvplot">
-<h1>Reading WRF data into Xarray and Visualizing the Output using hvPlot<a class="headerlink" href="#reading-wrf-data-into-xarray-and-visualizing-the-output-using-hvplot" title="Permalink to this heading">#</a></h1>
+<h1>Reading WRF data into Xarray and Visualizing the Output using hvPlot<a class="headerlink" href="#reading-wrf-data-into-xarray-and-visualizing-the-output-using-hvplot" title="Link to this heading">#</a></h1>
 <p>The <em><strong>typical</strong></em> data workflow within the Python ecosystem when working with Weather Research and Forecasting (WRF) data is to use the <a class="reference external" href="https://wrf-python.readthedocs.io/en/latest/">wrf-python</a> package! Traditionally, it can be difficult to utilize the <code class="docutils literal notranslate"><span class="pre">xarray</span></code> data model with WRF data, due to a few challenges:</p>
 <ol class="arabic simple">
 <li><p>WRF data not being CF-compliant (which makes it hard for xarray to properly construct the dataset out of the box using xr.open_dataset)</p></li>
@@ -692,20 +688,20 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>By the end of this example, we will generate an interactive plot which looks like the following!</p>
 <p><img alt="xarray-wrf-gif" src="../../../_images/xarray_wrf_blog_post.gif" /></p>
 <section id="installing-xwrf">
-<h2>Installing <a class="reference external" href="https://github.com/NCAR/xwrf"><code class="docutils literal notranslate"><span class="pre">xwrf</span></code></a><a class="headerlink" href="#installing-xwrf" title="Permalink to this heading">#</a></h2>
+<h2>Installing <a class="reference external" href="https://github.com/NCAR/xwrf"><code class="docutils literal notranslate"><span class="pre">xwrf</span></code></a><a class="headerlink" href="#installing-xwrf" title="Link to this heading">#</a></h2>
 <p>Before we start <em><strong>using</strong></em> <a class="reference external" href="https://github.com/NCAR/xwrf"><code class="docutils literal notranslate"><span class="pre">xwrf</span></code></a>, we need to install it. We can install by following these steps!</p>
 <ol class="arabic simple">
 <li><p>Install this in your python environment using pip (<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">git+https://github.com/NCAR/xwrf.git</span></code>)</p></li>
 <li><p>Open up a notebook and use the imports shown below!</p></li>
 </ol>
 <section id="what-exactly-is-xwrf">
-<h3>What exactly is <a class="reference external" href="https://github.com/NCAR/xwrf"><code class="docutils literal notranslate"><span class="pre">xwrf</span></code></a>?<a class="headerlink" href="#what-exactly-is-xwrf" title="Permalink to this heading">#</a></h3>
+<h3>What exactly is <a class="reference external" href="https://github.com/NCAR/xwrf"><code class="docutils literal notranslate"><span class="pre">xwrf</span></code></a>?<a class="headerlink" href="#what-exactly-is-xwrf" title="Link to this heading">#</a></h3>
 <p>xwrf provides an <em><strong><a class="reference external" href="http://xarray.pydata.org/en/stable/internals/how-to-add-new-backend.html">xarray backend</a></strong></em>, which helps with reading in the file. When you are working with non-cf-compliant datasets (ex. WRF output), this backends transform the file into a format that is easier to work with (ex. helpful coordinate information).</p>
 <p>You <strong>could</strong> complete this task using a preprocess function (see <a class="reference external" href="http://xarray.pydata.org/en/stable/generated/xarray.open_mfdataset.html">xarray open_mfdataset documentation</a>), but this would get tricky once you add more advanced IO functionality.</p>
 </section>
 </section>
 <section id="imports">
-<h2>Imports<a class="headerlink" href="#imports" title="Permalink to this heading">#</a></h2>
+<h2>Imports<a class="headerlink" href="#imports" title="Link to this heading">#</a></h2>
 <p>Here, we only need a few packages; <code class="docutils literal notranslate"><span class="pre">xwrf</span></code>, <code class="docutils literal notranslate"><span class="pre">dask</span></code>, <code class="docutils literal notranslate"><span class="pre">hvplot</span></code>/<code class="docutils literal notranslate"><span class="pre">holoviews</span></code>, and <code class="docutils literal notranslate"><span class="pre">xarray</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2260,7 +2256,7 @@ roTBs2RqAAAAAElFTkSuQmCC'
 </div>
 </section>
 <section id="spin-up-a-cluster">
-<h2>Spin up a Cluster<a class="headerlink" href="#spin-up-a-cluster" title="Permalink to this heading">#</a></h2>
+<h2>Spin up a Cluster<a class="headerlink" href="#spin-up-a-cluster" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cluster</span> <span class="o">=</span> <span class="n">NCARCluster</span><span class="p">()</span>
@@ -2396,7 +2392,7 @@ roTBs2RqAAAAAElFTkSuQmCC'
 </div>
 </section>
 <section id="grab-a-list-of-files">
-<h2>Grab a list of files<a class="headerlink" href="#grab-a-list-of-files" title="Permalink to this heading">#</a></h2>
+<h2>Grab a list of files<a class="headerlink" href="#grab-a-list-of-files" title="Link to this heading">#</a></h2>
 <p>We are using some sample data provided by Cindy Bruyere, who works in the Mesoscale &amp; Microscale Meteorology Lab at NCAR! She proposed this challenge of finding a more performant way of getting WRF data into the Xarray data model. The data here is from a regional model simulation over Australia!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2415,7 +2411,7 @@ roTBs2RqAAAAAElFTkSuQmCC'
 </div>
 </section>
 <section id="examine-of-the-files">
-<h2>Examine of the files<a class="headerlink" href="#examine-of-the-files" title="Permalink to this heading">#</a></h2>
+<h2>Examine of the files<a class="headerlink" href="#examine-of-the-files" title="Link to this heading">#</a></h2>
 <p>We can open up one of the files, and inspect which variables are included, as well as descriptions of those variables!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2814,7 +2810,7 @@ Attributes: (12/73)
 </div>
 <p>Well <em><strong>that</strong></em> wasn’t super helpful. Xarray has trouble unpacking the variables in the files, primarily in regards to the coordinates! It lumps the coordinates together with the variables, makes this difficult to work with. As mentioned previously, the data are not <a class="reference external" href="https://cfconventions.org/">CF-compliant</a> (aka it’s not neccessarily Xarray’s fault), which makes it challenging to parse correctly. This is where <code class="docutils literal notranslate"><span class="pre">xwrf</span></code> can help!</p>
 <section id="investigate-the-variables">
-<h3>Investigate the Variables<a class="headerlink" href="#investigate-the-variables" title="Permalink to this heading">#</a></h3>
+<h3>Investigate the Variables<a class="headerlink" href="#investigate-the-variables" title="Link to this heading">#</a></h3>
 <p>Before we read the data in using <code class="docutils literal notranslate"><span class="pre">xwrf</span></code>, we can take a look at which variables we would like to subset! The <code class="docutils literal notranslate"><span class="pre">description</span></code> attribute provides a helpful variable name, which we can take a look at using the following loop!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2945,7 +2941,7 @@ variable: XLAT_M, description: Latitude on mass grid
 </section>
 </section>
 <section id="read-in-the-dataset">
-<h2>Read in the Dataset<a class="headerlink" href="#read-in-the-dataset" title="Permalink to this heading">#</a></h2>
+<h2>Read in the Dataset<a class="headerlink" href="#read-in-the-dataset" title="Link to this heading">#</a></h2>
 <p>Let’s load in the data using the <code class="docutils literal notranslate"><span class="pre">xwrf</span></code> backend! We subset for our variables using the <code class="docutils literal notranslate"><span class="pre">preprocess</span></code> function below.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2978,7 +2974,7 @@ Wall time: 18.1 s
 </div>
 </section>
 <section id="investigate-the-data">
-<h2>Investigate the Data<a class="headerlink" href="#investigate-the-data" title="Permalink to this heading">#</a></h2>
+<h2>Investigate the Data<a class="headerlink" href="#investigate-the-data" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span>
@@ -3878,7 +3874,7 @@ Attributes: (12/73)
  113.310974 120.54721  169.45282  176.68903 ]</dd><dt><span>MAP_PROJ :</span></dt><dd>1</dd><dt><span>MMINLU :</span></dt><dd>MODIFIED_IGBP_MODIS_NOAH</dd><dt><span>NUM_LAND_CAT :</span></dt><dd>21</dd><dt><span>ISWATER :</span></dt><dd>17</dd><dt><span>ISLAKE :</span></dt><dd>21</dd><dt><span>ISICE :</span></dt><dd>15</dd><dt><span>ISURBAN :</span></dt><dd>13</dd><dt><span>ISOILWATER :</span></dt><dd>14</dd><dt><span>grid_id :</span></dt><dd>1</dd><dt><span>parent_id :</span></dt><dd>1</dd><dt><span>i_parent_start :</span></dt><dd>1</dd><dt><span>j_parent_start :</span></dt><dd>1</dd><dt><span>i_parent_end :</span></dt><dd>481</dd><dt><span>j_parent_end :</span></dt><dd>379</dd><dt><span>parent_grid_ratio :</span></dt><dd>1</dd><dt><span>sr_x :</span></dt><dd>1</dd><dt><span>sr_y :</span></dt><dd>1</dd><dt><span>NUM_METGRID_SOIL_LEVELS :</span></dt><dd>4</dd><dt><span>FLAG_METGRID :</span></dt><dd>1</dd><dt><span>FLAG_EXCLUDED_MIDDLE :</span></dt><dd>0</dd><dt><span>FLAG_SOIL_LAYERS :</span></dt><dd>1</dd><dt><span>FLAG_SNOW :</span></dt><dd>1</dd><dt><span>FLAG_PSFC :</span></dt><dd>1</dd><dt><span>FLAG_SM000007 :</span></dt><dd>1</dd><dt><span>FLAG_SM007028 :</span></dt><dd>1</dd><dt><span>FLAG_SM028100 :</span></dt><dd>1</dd><dt><span>FLAG_SM100289 :</span></dt><dd>1</dd><dt><span>FLAG_ST000007 :</span></dt><dd>1</dd><dt><span>FLAG_ST007028 :</span></dt><dd>1</dd><dt><span>FLAG_ST028100 :</span></dt><dd>1</dd><dt><span>FLAG_ST100289 :</span></dt><dd>1</dd><dt><span>FLAG_SLP :</span></dt><dd>1</dd><dt><span>FLAG_SST :</span></dt><dd>1</dd><dt><span>FLAG_SNOWH :</span></dt><dd>1</dd><dt><span>FLAG_SOILHGT :</span></dt><dd>1</dd><dt><span>FLAG_MF_XY :</span></dt><dd>1</dd><dt><span>FLAG_LAI12M :</span></dt><dd>1</dd><dt><span>FLAG_VAR_SSO :</span></dt><dd>1</dd><dt><span>FLAG_LAKE_DEPTH :</span></dt><dd>1</dd><dt><span>FLAG_URB_PARAM :</span></dt><dd>1</dd><dt><span>FLAG_FRC_URB2D :</span></dt><dd>1</dd><dt><span>FLAG_IMPERV :</span></dt><dd>1</dd><dt><span>FLAG_CANFRA :</span></dt><dd>1</dd><dt><span>FLAG_EROD :</span></dt><dd>1</dd><dt><span>FLAG_CLAYFRAC :</span></dt><dd>1</dd><dt><span>FLAG_SANDFRAC :</span></dt><dd>1</dd></dl></div></li></ul></div></div></div></div>
 </div>
 <section id="investigate-the-vertical-levels">
-<h3>Investigate the Vertical Levels<a class="headerlink" href="#investigate-the-vertical-levels" title="Permalink to this heading">#</a></h3>
+<h3>Investigate the Vertical Levels<a class="headerlink" href="#investigate-the-vertical-levels" title="Link to this heading">#</a></h3>
 <p>Each of the variables as a vertical dimension of <code class="docutils literal notranslate"><span class="pre">num_metgrid_levels</span></code>, indicating the index (from 0 to 37) of the vertical level. This value isn’t super helpful; what <strong>would be helpful</strong> is a vertical dimension corresponding to the pressure level.</p>
 <p>If we look at a single grid point, you will notice that the bottom level (<code class="docutils literal notranslate"><span class="pre">num_metgrid_levels=0</span></code>) is the bottom pressure level. These change across time!</p>
 <div class="cell docutils container">
@@ -4865,7 +4861,7 @@ Attributes: (12/73)
 </div>
 </section>
 <section id="modify-the-time-values-as-well">
-<h3>Modify the Time values as well…<a class="headerlink" href="#modify-the-time-values-as-well" title="Permalink to this heading">#</a></h3>
+<h3>Modify the Time values as well…<a class="headerlink" href="#modify-the-time-values-as-well" title="Link to this heading">#</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">Time</span></code> dimension has a similar issue here where the values are integers, rather than usable time values. We can modify this by setting <code class="docutils literal notranslate"><span class="pre">Time</span></code> to be equal to the time values <code class="docutils literal notranslate"><span class="pre">Times</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -5408,7 +5404,7 @@ Coordinates:
 </section>
 </section>
 <section id="plot-the-output-using-hvplot">
-<h2>Plot the Output using hvPlot<a class="headerlink" href="#plot-the-output-using-hvplot" title="Permalink to this heading">#</a></h2>
+<h2>Plot the Output using hvPlot<a class="headerlink" href="#plot-the-output-using-hvplot" title="Link to this heading">#</a></h2>
 <p>We can use <code class="docutils literal notranslate"><span class="pre">hvPlot</span></code> here to visualize the output. We use <code class="docutils literal notranslate"><span class="pre">quadmesh</span></code> to plot, which is able to use the coordinate information. Since we are not working with velocity variables, we use <code class="docutils literal notranslate"><span class="pre">XLONG_M</span></code> and <code class="docutils literal notranslate"><span class="pre">XLAT_M</span></code> for the longitude and latitude.</p>
 <p>We also specify we only want our variables temperature (<code class="docutils literal notranslate"><span class="pre">TT</span></code>) and relative humidity (<code class="docutils literal notranslate"><span class="pre">RH</span></code>), grouping by the time (<code class="docutils literal notranslate"><span class="pre">Time</span></code>) and pressure level (<code class="docutils literal notranslate"><span class="pre">plev</span></code>)</p>
 <div class="cell docutils container">
@@ -5463,7 +5459,7 @@ Coordinates:
 </div>
 </section>
 <section id="conclusions">
-<h2>Conclusions<a class="headerlink" href="#conclusions" title="Permalink to this heading">#</a></h2>
+<h2>Conclusions<a class="headerlink" href="#conclusions" title="Link to this heading">#</a></h2>
 <p>Within this post, we covered how to read in WRF data using a new experimental package, <code class="docutils literal notranslate"><span class="pre">xwrf</span></code>! We also included some example pre-processing, and a method of plotting interactive visualizations using the WRF data! We hope this helpful within your analysis, and look forward on making more progress on these examples in the future, especially as it relates to calculations utilizing Dask!</p>
 </section>
 </section>
@@ -5589,7 +5585,7 @@ Coordinates:
       
         <div class="footer-item">
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     <br/>
   </p>
 </div>

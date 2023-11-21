@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 
 
@@ -7,7 +6,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Dask Distributed Summit 2021 Takeaways &#8212; NCAR-ESDS 0.1 documentation</title>
   
@@ -29,25 +28,22 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=66307ba7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
   <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/sphinx_highlight.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/documentation_options.js?v=19645805"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=30646c52"></script>
     <script kind="utterances">
 
     var commentsRunWhenDOMLoaded = cb => {
@@ -82,7 +78,7 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'posts/2021/dask-summit-takeaway';</script>
     <link rel="author" title="About these documents" href="../../../about/" />
     <link rel="index" title="Index" href="../../../genindex/" />
@@ -548,6 +544,12 @@ commentsRunWhenDOMLoaded(addUtterances);
   
   
   <li>
+    <a href="../../2023/esds-annual-event/">
+      21 November - 2024 Earth System Data Science (ESDS) Annual Event
+    </a>
+  </li>
+  
+  <li>
     <a href="../../2023/scipy23/">
       28 August - ESDS at SciPy 2023
     </a>
@@ -571,12 +573,6 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
   </li>
   
-  <li>
-    <a href="../../2023/unstructured-grid-collab-1/">
-      05 May - Recap: Unstructured Grid Collaborative Work Time
-    </a>
-  </li>
-  
 </ul>
 </div>
 </div>
@@ -590,7 +586,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   
   
   <li>
-    <a href="../../../blog/2023/">2023 (7)</a>
+    <a href="../../../blog/2023/">2023 (8)</a>
   </li>
   
   
@@ -673,9 +669,9 @@ commentsRunWhenDOMLoaded(addUtterances);
                 <article class="bd-article" role="main">
                   
 <section class="tex2jax_ignore mathjax_ignore" id="dask-distributed-summit-2021-takeaways">
-<h1>Dask Distributed Summit 2021 Takeaways<a class="headerlink" href="#dask-distributed-summit-2021-takeaways" title="Permalink to this heading">#</a></h1>
+<h1>Dask Distributed Summit 2021 Takeaways<a class="headerlink" href="#dask-distributed-summit-2021-takeaways" title="Link to this heading">#</a></h1>
 <section id="pangeo-session">
-<h2><a class="reference external" href="https://zoom.us/rec/play/bVuz_sZOnzsH8fJdrsvH7T_XgXBg64cRSgbV4PERZByVgoLzUDXXoc1pq02Hcfg1oxE7uzAa919Jly1p.tmy6yMikcfgRVHi2?startTime=1621447260000&amp;_x_zm_rtaid=P6Q_HcGvQa-lvvjzHzq4Rg.1621536889692.ea182bc019aed9fbea835c35b62d5ca5&amp;_x_zm_rhtaid=831">Pangeo Session</a><a class="headerlink" href="#pangeo-session" title="Permalink to this heading">#</a></h2>
+<h2><a class="reference external" href="https://zoom.us/rec/play/bVuz_sZOnzsH8fJdrsvH7T_XgXBg64cRSgbV4PERZByVgoLzUDXXoc1pq02Hcfg1oxE7uzAa919Jly1p.tmy6yMikcfgRVHi2?startTime=1621447260000&amp;amp;_x_zm_rtaid=P6Q_HcGvQa-lvvjzHzq4Rg.1621536889692.ea182bc019aed9fbea835c35b62d5ca5&amp;amp;_x_zm_rhtaid=831">Pangeo Session</a><a class="headerlink" href="#pangeo-session" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Cloud optimized datasets help improve speed of analysis</p>
 <ul>
@@ -718,7 +714,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </li>
 </ul>
 <section id="pangeo-session-talk-links">
-<h3><a class="reference external" href="https://summit.dask.org/schedule/presentation/1/pangeo/">Pangeo Session Talk Links</a><a class="headerlink" href="#pangeo-session-talk-links" title="Permalink to this heading">#</a></h3>
+<h3><a class="reference external" href="https://summit.dask.org/schedule/presentation/1/pangeo/">Pangeo Session Talk Links</a><a class="headerlink" href="#pangeo-session-talk-links" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Chelle: notebook can be found in folder AWS-notebooks</p>
 <ul>
@@ -756,7 +752,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </section>
 </section>
 <section id="growth-and-history-of-anaconda-numpy-scipy-dask">
-<h2><a class="reference external" href="https://zoom.us/rec/share/_KQiagnZBnW0xPIHAHZZs553JuFsJXfkQpdwUmTca7-QE91safAQCefSYr6-Kz3R.EDHHYf_864Dw3v8Q?startTime=1621515755000">Growth and History of Anaconda + Numpy + SciPy + Dask</a><a class="headerlink" href="#growth-and-history-of-anaconda-numpy-scipy-dask" title="Permalink to this heading">#</a></h2>
+<h2><a class="reference external" href="https://zoom.us/rec/share/_KQiagnZBnW0xPIHAHZZs553JuFsJXfkQpdwUmTca7-QE91safAQCefSYr6-Kz3R.EDHHYf_864Dw3v8Q?startTime=1621515755000">Growth and History of Anaconda + Numpy + SciPy + Dask</a><a class="headerlink" href="#growth-and-history-of-anaconda-numpy-scipy-dask" title="Link to this heading">#</a></h2>
 <p>This session was a keynote focused on how these packages + ecosystem grew</p>
 <ul class="simple">
 <li><p>Key question: how do you get from a few passionate few to productive many?</p>
@@ -825,7 +821,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 </section>
 <section id="xarray-user-forum-updates">
-<h2><a class="reference external" href="https://zoom.us/rec/share/3AnbFtOiRIARD3A6MdM1F0PrMvpASQxJQNWbt6pppYpRrx33EFGQYy-wLQWVQZ-H.bl2gwN915ju9aidF?startTime=1621402478000">Xarray User Forum + Updates</a><a class="headerlink" href="#xarray-user-forum-updates" title="Permalink to this heading">#</a></h2>
+<h2><a class="reference external" href="https://zoom.us/rec/share/3AnbFtOiRIARD3A6MdM1F0PrMvpASQxJQNWbt6pppYpRrx33EFGQYy-wLQWVQZ-H.bl2gwN915ju9aidF?startTime=1621402478000">Xarray User Forum + Updates</a><a class="headerlink" href="#xarray-user-forum-updates" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Xarray now includes a backend api, allowing contributors to add new backends for reading + operating on datasets</p>
 <ul>
@@ -859,7 +855,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </li>
 </ul>
 <section id="xarray-user-forum-talk-links">
-<h3><a class="reference external" href="https://summit.dask.org/schedule/presentation/51/xarray-user-forum/">Xarray User Forum Talk Links</a><a class="headerlink" href="#xarray-user-forum-talk-links" title="Permalink to this heading">#</a></h3>
+<h3><a class="reference external" href="https://summit.dask.org/schedule/presentation/51/xarray-user-forum/">Xarray User Forum Talk Links</a><a class="headerlink" href="#xarray-user-forum-talk-links" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Aureliana Barghini’s Talk</p>
 <ul>
@@ -886,19 +882,19 @@ commentsRunWhenDOMLoaded(addUtterances);
 </section>
 </section>
 <section id="dask-on-high-performance-computing-systems">
-<h2><a class="reference external" href="https://zoom.us/rec/share/25oqsPdh_ZeZSFmvvbOLzJ0Sa8Q7py6GiLrVra8UHJmi0rZ1YLm69Jpt9NUiN4Cm.1MS7-WLlIPa3Ewku?startTime=1621519269000">Dask on High Performance Computing Systems</a><a class="headerlink" href="#dask-on-high-performance-computing-systems" title="Permalink to this heading">#</a></h2>
+<h2><a class="reference external" href="https://zoom.us/rec/share/25oqsPdh_ZeZSFmvvbOLzJ0Sa8Q7py6GiLrVra8UHJmi0rZ1YLm69Jpt9NUiN4Cm.1MS7-WLlIPa3Ewku?startTime=1621519269000">Dask on High Performance Computing Systems</a><a class="headerlink" href="#dask-on-high-performance-computing-systems" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Dask-jobqueue provides a uniform api to spinning up dask-clusters, interfacing with scheduler</p></li>
 <li><p>MPI-based communication with Dask shows promising results</p></li>
 <li><p>We are fortunate to have the HPC system we have (Cheyenne/Casper)</p>
 <ul>
 <li><p>In terms of data access, integration of compute and login nodes</p></li>
-<li><p><span class="xref myst">NCAR JupyterHub</span> which enables improved access to Jupyter environment</p></li>
+<li><p><a class="reference internal" href="#jupyterhub.ucar.edu"><span class="xref myst">NCAR JupyterHub</span></a> which enables improved access to Jupyter environment</p></li>
 </ul>
 </li>
 </ul>
 <section id="dask-on-hpc-talk-links">
-<h3><a class="reference external" href="https://summit.dask.org/schedule/presentation/34/dask-in-hpc/">Dask on HPC Talk Links</a><a class="headerlink" href="#dask-on-hpc-talk-links" title="Permalink to this heading">#</a></h3>
+<h3><a class="reference external" href="https://summit.dask.org/schedule/presentation/34/dask-in-hpc/">Dask on HPC Talk Links</a><a class="headerlink" href="#dask-on-hpc-talk-links" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Anderson</p>
 <ul>
@@ -923,7 +919,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </section>
 </section>
 <section id="how-can-we-tie-this-back-to-esds">
-<h2>How can we tie this back to ESDS?<a class="headerlink" href="#how-can-we-tie-this-back-to-esds" title="Permalink to this heading">#</a></h2>
+<h2>How can we tie this back to ESDS?<a class="headerlink" href="#how-can-we-tie-this-back-to-esds" title="Link to this heading">#</a></h2>
 <p>Several of these sessions included speakers/organizers from within NCAR, such as Anderson Banihirwe <a class="reference external" href="https://github.com/andersy005">(&#64;andersy005)</a> and Deepak Cherian <a class="reference external" href="https://github.com/dcherian">(&#64;dcherian)</a>. They, along with several others with NCAR, could be considered the “passionate few”. They are core developers of upstream projects such as Xarray and Dask, which are critical components to the scientific python ecosystem, especially for geoscience. The key to ESDS is growing the userbase, moving toward the “productive many”.</p>
 <p>We should see the ESDS initiative as an opportunity to test out these ideas, and push to forge ahead with a grassroots movement focused around promoting open-science and open-devlopment, empowering people to be more productive in their data workflows. Here are a few key points for us to consider:</p>
 <ul class="simple">
@@ -1054,7 +1050,7 @@ commentsRunWhenDOMLoaded(addUtterances);
       
         <div class="footer-item">
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     <br/>
   </p>
 </div>
