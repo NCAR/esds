@@ -1,6 +1,6 @@
 ---
-author: Teagan King
-date: 2023-11-20
+author: Teagan King, Julia Kent
+date: 2023-11-21
 tags: tutorial hackathon events
 ---
 
