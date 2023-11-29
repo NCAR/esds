@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2023-11-21T19:13:43.464231+00:00</updated>
+  <updated>2023-11-29T22:39:07.113636+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.6">ABlog</generator>
@@ -16,7 +16,7 @@
     <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;ESDS is hosting an annual event on &lt;strong&gt;January 18th and 19th&lt;/strong&gt; (Thursday-Friday).
 This event will be hybrid, in-person in NCAR’s Mesa Lab Main Seminar Room as well as
 virtual.&lt;/p&gt;
-&lt;p&gt;Please register for the event through the &lt;a class="reference external" href="https://docs.google.com/forms/d/1Fmldl4rNqJAjXvbedkH9talP4z479s2OC6-xouFdYmg"&gt;Registration Form&lt;/a&gt; by &lt;strong&gt;Friday, January 5, 2024&lt;/strong&gt;!&lt;/p&gt;
+&lt;p&gt;Please register for the event through the &lt;a class="reference external" href="https://docs.google.com/forms/d/e/1FAIpQLSdidNODueH39lmDopDQ6MLSScN2Gk2S0-IAZ_VAJINnfzLdxA/viewform?usp=sf_link"&gt;Registration Form&lt;/a&gt; by &lt;strong&gt;Friday, January 5, 2024&lt;/strong&gt;!&lt;/p&gt;
 &lt;/p&gt;
 </content>
     <link href="ncar.github.io/esds/posts/2023/esds-annual-event/" rel="alternate"/>
@@ -64,7 +64,7 @@ virtual.Please register for the event through the Registration Form by Friday, J
     <title>Analyzing and Visualizing CAM-SE Output in Python</title>
     <updated>2023-08-15T00:00:00+00:00</updated>
     <author>
-      <name>Steve Yeager</name>
+      <name>Teagan King</name>
     </author>
     <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;We demonstrate a variety of options for analyzing and visualizing output from the Community Atmosphere Model (CAM) with the spectral element (SE) grid in Python. This notebook was developed for the ESDS &lt;a class="reference external" href="https://ncar.github.io/esds/posts/2023/unstructured-grid-collab-1/"&gt;Collaborative Work Time on Unstructured Grids&lt;/a&gt;, which took place on April 17, 2023. A recap of the related CAM-SE discussion can be found &lt;a class="reference external" href="https://ncar.github.io/esds/posts/2023/unstructured-grid-collab-1/#katie-dagon-cgd"&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference internal" href="#section1"&gt;&lt;span class="xref myst"&gt;Regrid CAM-SE output using map file&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;

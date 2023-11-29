@@ -10,7 +10,7 @@ ESDS is hosting an annual event on **January 18th and 19th** (Thursday-Friday).
 This event will be hybrid, in-person in NCAR's Mesa Lab Main Seminar Room as well as
 virtual.
 
-Please register for the event through the [Registration Form](https://docs.google.com/forms/d/1Fmldl4rNqJAjXvbedkH9talP4z479s2OC6-xouFdYmg) by **Friday, January 5, 2024**!
+Please register for the event through the [Registration Form](https://docs.google.com/forms/d/e/1FAIpQLSdidNODueH39lmDopDQ6MLSScN2Gk2S0-IAZ_VAJINnfzLdxA/viewform?usp=sf_link) by **Friday, January 5, 2024**!
 
 The 2024 ESDS Annual Event will cover tutorials on Python, Git, the NCAR Environment,
 JupyterHub, Xarray, Dask, and Interactive unstructured grids visualization with UXarray!
