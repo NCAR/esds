@@ -20,7 +20,7 @@ jobs:
 
       # Install dependencies
       - name: Setup Conda Environment
-        uses: conda-incubator/setup-miniconda@v2
+        uses: conda-incubator/setup-miniconda@v3
         with:
           environment-file: environment.yml
           activate-environment: esds-blog
