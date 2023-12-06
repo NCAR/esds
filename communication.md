@@ -20,7 +20,7 @@ This repository and webpage is a space where we can post progress on this initia
 
 ### [ESDS Forum](https://docs.google.com/document/d/e/2PACX-1vQeHIGSSz_8A8gZVL87xDjYXEwqB4CkRk85yf0TACb-rVgubjb3ukiulEYuUwHZGVXhgYNpaRC2SNAt/pub)
 
-Every other Monday from 2-3pm MT, we hold the ESDS Forum over [Google Meet](meet.google.com/uya-vqhi-twg), which provides a venue for discussion, coordination and showcasing work in progress. Examples include:
+Every other Monday from 2-3pm MT, we hold the ESDS Forum over [Google Meet](meet.google.com/mfb-whpi-tnj), which provides a venue for discussion, coordination and showcasing work in progress. Examples include:
 
 - Workflow demos
 - Overview of packages and analysis tools
