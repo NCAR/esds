@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2023-12-13T17:35:43.971643+00:00</updated>
+  <updated>2023-12-18T16:31:47.633183+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.6">ABlog</generator>
@@ -101,7 +101,7 @@ virtual.Please register for the event through the Registration Form by Friday, J
     <title>Recap: Unstructured Grid Collaborative Work Time</title>
     <updated>2023-05-05T00:00:00+00:00</updated>
     <author>
-      <name>Falko Judt</name>
+      <name>Deepak Cherian</name>
     </author>
     <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;ESDS hosted our first Collaborative Work Time event on April 17, 2023.
 The topic of the session was “Working With Unstructured Grids”.
@@ -123,7 +123,7 @@ A lucky overlap with the Improving Scientific Software conference, meant that co
     <title>Using Kerchunk with CESM Timeseries Data on the Cloud</title>
     <updated>2023-03-15T00:00:00+00:00</updated>
     <author>
-      <name>Max Grover</name>
+      <name>Deepak Cherian</name>
     </author>
     <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;We benchmark reading a subset of the CESM2-Large Ensemble stored as a collection of netCDF files on the cloud (Amazon / AWS) &lt;strong&gt;from Casper&lt;/strong&gt;.
 We use a single ensemble member historical experiment with daily data from 1850 to 2009, with a total dataset size of 600+ GB, from 13 netCDF4 files.&lt;/p&gt;
@@ -177,7 +177,7 @@ NCAR/UCAR/UCP on November 10-11, 2022. This blog post serves to consolidate and 
     <title>Regridding using xESMF and an existing weights file</title>
     <updated>2022-12-06T00:00:00+00:00</updated>
     <author>
-      <name>Christine Shields</name>
+      <name>Deepak Cherian</name>
     </author>
     <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;A fairly common request is to use an existing ESMF weights file to regrid a Xarray Dataset  (&lt;a class="reference external" href="https://github.com/UXARRAY/uxarray/issues/172"&gt;1&lt;/a&gt;,  &lt;a class="reference external" href="https://github.com/pangeo-data/xESMF/issues/202"&gt;2&lt;/a&gt;). Applying weights in general should be easy: read weights then &lt;a class="reference external" href="https://github.com/UXARRAY/uxarray/issues/172#issuecomment-1310601230"&gt;apply them&lt;/a&gt; using &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;dot&lt;/span&gt;&lt;/code&gt; or &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;tensordot&lt;/span&gt;&lt;/code&gt; on the input dataset.&lt;/p&gt;
 &lt;p&gt;In the Xarray/Dask/Pangeo ecosystem, &lt;a class="reference external" href="https://xesmf.readthedocs.io"&gt;xESMF&lt;/a&gt; provides an interface to ESMF for convenient regridding, includiing parallelization with Dask. Here we demonstrate how to use an existing ESMF weights file with xESMF specifically for CAM-SE.&lt;/p&gt;
