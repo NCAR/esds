@@ -15,7 +15,7 @@ To do that you need to:
 
 At this point you can preview your built site with your preferred method. Here are some options:
 
-1. Navigating to `_build/index.html` and opening in your prefrered browser (often possible with a right click).
+1. Navigating to `_build/index.html` and opening in your preferred browser (often possible with a right click).
 2. View via localhost by using Python `python -m SimpleHTTPServer`
 3. Or view via localhost by using Node.js with `npm install http-server -g` and `http-server name-of-file`
 
