@@ -87,7 +87,7 @@ html_sidebars = {
         'postcard.html',
         'recentposts.html',
         'archives.html',
-    ]
+    ],
     #    "**": ["search-field.html", "sidebar-nav-bs.html"]
 }
 
