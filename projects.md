@@ -4,20 +4,23 @@ This page includes a list of ongoing projects related to the ESDS initiative!
 
 ## [GeoCAT](https://geocat.ucar.edu/)
 
-### [GeoCAT-comp](https://geocat-comp.readthedocs.io/en/latest/)
+The [Geoscience Community Analysis Toolkit (GeoCAT) team](https://geocat.ucar.edu/) at NSF NCAR develops and contributes to resources and tools for geoscience data analysis and visualization. Below are several of the projects they support.
 
-GeoCAT-comp is a computational component of the GeoCAT project. GeoCAT-comp provides implementations of computational functions for operating on geosciences data. Many of these functions originated in NCL and were translated into Python with the help of GeoCAT-comp; however, developers are welcome to come up with novel computational functions for geosciences data.
+### [GeoCAT-comp](https://geocat-comp.readthedocs.io/)
 
-- [Version 1.0 Roadmap](https://github.com/NCAR/geocat-comp/projects/1)
-- [Version 1.1 Roadmap](https://github.com/NCAR/geocat-comp/projects/2)
+GeoCAT-comp provides implementations of computational functions for operating on geoscience data. Many of these functions are inspired by functionality in NCL.
 
-### [GeoCAT-viz](https://geocat-viz.readthedocs.io/en/latest/)
+### [GeoCAT-viz](https://geocat-viz.readthedocs.io/)
 
-The GeoCAT-viz repo contains tools to help plot data, including convenience and plotting functions that are used to facilitate plotting geosciences data with Matplotlib, Cartopy, and possibly other Python ecosystem plotting packages.
+GeoCAT-viz contains tools to aid in visualizing geoscience data, including convenience and plotting functions that are used to facilitate plotting with Matplotlib, Cartopy, and other visualization packages.
 
-### [GeoCAT-examples](https://geocat-examples.readthedocs.io/en/latest/)
+### [GeoCAT-examples](https://geocat-examples.readthedocs.io)
 
-This gallery contains visualization examples from many plotting categories of geosciences data (under the Gallery tab) and usage examples for the functions of the GeoCAT computational component, GeoCAT-comp (under the GeoCAT-comp Examples tab).
+GeoCAT-examples provides a gallery of analysis and visualization examples replicating in Python the functionality and visualizations from example scripts on [NCL Applications page](https://www.ncl.ucar.edu/Applications/).
+
+### [UXarray](https://uxarray.readthedocs.io/)
+
+The GeoCAT team also leads the software development efforts of [Project Raijin](https://raijin.ucar.edu/), implementing the UXarray package in collaboration with other academic and research partners.  UXarray strives to provide Xarray-like functionality for working with data on unstructured grids.
 
 ## Diagnostic Efforts
 
