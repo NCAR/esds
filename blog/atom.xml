@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>ncar.github.io/esds/</id>
   <title>NCAR ESDS</title>
-  <updated>2024-02-05T23:17:09.011349+00:00</updated>
+  <updated>2024-02-06T02:27:19.777175+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.6">ABlog</generator>
@@ -11,7 +11,7 @@
     <title>2024 Earth System Data Science (ESDS) Annual Event</title>
     <updated>2023-11-21T00:00:00+00:00</updated>
     <author>
-      <name>Julia Kent</name>
+      <name>Teagan King</name>
     </author>
     <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;ESDS is hosting an annual event on &lt;strong&gt;January 18th and 19th&lt;/strong&gt; (Thursday-Friday).
 This event will be hybrid, in-person in NCAR’s Mesa Lab Main Seminar Room as well as
@@ -64,7 +64,7 @@ virtual.The event will be hosted at the Mesa Lab Main Seminar Room, located at 1
     <title>Analyzing and Visualizing CAM-SE Output in Python</title>
     <updated>2023-08-15T00:00:00+00:00</updated>
     <author>
-      <name>Teagan King</name>
+      <name>Steve Yeager</name>
     </author>
     <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;We demonstrate a variety of options for analyzing and visualizing output from the Community Atmosphere Model (CAM) with the spectral element (SE) grid in Python. This notebook was developed for the ESDS &lt;a class="reference external" href="https://ncar.github.io/esds/posts/2023/unstructured-grid-collab-1/"&gt;Collaborative Work Time on Unstructured Grids&lt;/a&gt;, which took place on April 17, 2023. A recap of the related CAM-SE discussion can be found &lt;a class="reference external" href="https://ncar.github.io/esds/posts/2023/unstructured-grid-collab-1/#katie-dagon-cgd"&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference internal" href="#section1"&gt;&lt;span class="xref myst"&gt;Regrid CAM-SE output using map file&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
@@ -101,7 +101,7 @@ virtual.The event will be hosted at the Mesa Lab Main Seminar Room, located at 1
     <title>Recap: Unstructured Grid Collaborative Work Time</title>
     <updated>2023-05-05T00:00:00+00:00</updated>
     <author>
-      <name>Falko Judt</name>
+      <name>Orhan Eroglu</name>
     </author>
     <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;ESDS hosted our first Collaborative Work Time event on April 17, 2023.
 The topic of the session was “Working With Unstructured Grids”.
@@ -123,7 +123,7 @@ A lucky overlap with the Improving Scientific Software conference, meant that co
     <title>Using Kerchunk with CESM Timeseries Data on the Cloud</title>
     <updated>2023-03-15T00:00:00+00:00</updated>
     <author>
-      <name>Max Grover</name>
+      <name>Deepak Cherian</name>
     </author>
     <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;We benchmark reading a subset of the CESM2-Large Ensemble stored as a collection of netCDF files on the cloud (Amazon / AWS) &lt;strong&gt;from Casper&lt;/strong&gt;.
 We use a single ensemble member historical experiment with daily data from 1850 to 2009, with a total dataset size of 600+ GB, from 13 netCDF4 files.&lt;/p&gt;
@@ -177,7 +177,7 @@ NCAR/UCAR/UCP on November 10-11, 2022. This blog post serves to consolidate and 
     <title>Regridding using xESMF and an existing weights file</title>
     <updated>2022-12-06T00:00:00+00:00</updated>
     <author>
-      <name>Christine Shields</name>
+      <name>Deepak Cherian</name>
     </author>
     <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;A fairly common request is to use an existing ESMF weights file to regrid a Xarray Dataset  (&lt;a class="reference external" href="https://github.com/UXARRAY/uxarray/issues/172"&gt;1&lt;/a&gt;,  &lt;a class="reference external" href="https://github.com/pangeo-data/xESMF/issues/202"&gt;2&lt;/a&gt;). Applying weights in general should be easy: read weights then &lt;a class="reference external" href="https://github.com/UXARRAY/uxarray/issues/172#issuecomment-1310601230"&gt;apply them&lt;/a&gt; using &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;dot&lt;/span&gt;&lt;/code&gt; or &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;tensordot&lt;/span&gt;&lt;/code&gt; on the input dataset.&lt;/p&gt;
 &lt;p&gt;In the Xarray/Dask/Pangeo ecosystem, &lt;a class="reference external" href="https://xesmf.readthedocs.io"&gt;xESMF&lt;/a&gt; provides an interface to ESMF for convenient regridding, includiing parallelization with Dask. Here we demonstrate how to use an existing ESMF weights file with xESMF specifically for CAM-SE.&lt;/p&gt;
@@ -543,7 +543,7 @@ by Friday, November 4, 2022!</summary>
     <title>Reading WRF data into Xarray and Visualizing the Output using hvPlot</title>
     <updated>2021-10-15T00:00:00+00:00</updated>
     <author>
-      <name>Max Grover</name>
+      <name>Anderson Banihirwe</name>
     </author>
     <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;The &lt;em&gt;&lt;strong&gt;typical&lt;/strong&gt;&lt;/em&gt; data workflow within the Python ecosystem when working with Weather Research and Forecasting (WRF) data is to use the &lt;a class="reference external" href="https://wrf-python.readthedocs.io/en/latest/"&gt;wrf-python&lt;/a&gt; package! Traditionally, it can be difficult to utilize the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;xarray&lt;/span&gt;&lt;/code&gt; data model with WRF data, due to a few challenges:&lt;/p&gt;
 &lt;p&gt;WRF data not being CF-compliant (which makes it hard for xarray to properly construct the dataset out of the box using xr.open_dataset)&lt;/p&gt;
