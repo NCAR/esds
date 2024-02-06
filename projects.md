@@ -20,7 +20,7 @@ GeoCAT-examples provides a gallery of analysis and visualization examples replic
 
 ### [UXarray](https://uxarray.readthedocs.io/)
 
-The GeoCAT team also leads the development UXarray package in collaboration with other academic and research partners.  UXarray strives to provide Xarray-like functionality for working with data on unstructured grids.
+The GeoCAT team also leads the software development efforts of [Project Raijin](https://raijin.ucar.edu/), implementing the UXarray package in collaboration with other academic and research partners.  UXarray strives to provide Xarray-like functionality for working with data on unstructured grids.
 
 ## Diagnostic Efforts
 
