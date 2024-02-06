@@ -7,7 +7,7 @@ tags: tutorial hackathon events
 # 2024 ESDS Annual Event Recap
 
 The ESDS Events Working Group hosted the 2024 ESDS Annual Event January 18-19th
-in a hybrid format at the NSF NCAR Mesa Lab and online. 
+in a hybrid format at the NSF NCAR Mesa Lab and online.
 
 This blog post shares a brief overview of the event followed by resources and takeaways
 from the event.
@@ -27,5 +27,3 @@ can find the [full agenda here](https://docs.google.com/spreadsheets/d/1XNZW8NWo
 ### Collaborative Work Time
 
 ## Takeaways
-
-
