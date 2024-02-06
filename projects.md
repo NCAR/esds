@@ -8,7 +8,7 @@ The [Geoscience Community Analysis Toolkit (GeoCAT) team](https://geocat.ucar.ed
 
 ### [GeoCAT-comp](https://geocat-comp.readthedocs.io/)
 
-GeoCAT-comp provides implementations of computational functions for operating on geoscience data. Many of these functions are inspired by functionality in NCL. 
+GeoCAT-comp provides implementations of computational functions for operating on geoscience data. Many of these functions are inspired by functionality in NCL.
 
 ### [GeoCAT-viz](https://geocat-viz.readthedocs.io/)
 
