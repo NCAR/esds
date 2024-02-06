@@ -93,7 +93,7 @@ html_sidebars = {
 
 
 blog_baseurl = 'ncar.github.io/esds/'
-blog_title = 'NCAR ESDS'
+blog_title = 'ESDS'
 blog_path = 'blog'
 fontawesome_included = True
 blog_post_pattern = 'posts/*/*'
