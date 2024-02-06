@@ -12,7 +12,7 @@ GeoCAT-comp provides implementations of computational functions for operating on
 
 ### [GeoCAT-viz](https://geocat-viz.readthedocs.io/)
 
-GeoCAT-viz contains tools to aid in visulaizing geoscience data, including convenience and plotting functions that are used to facilitate plotting with Matplotlib, Cartopy, and other visualization packages.
+GeoCAT-viz contains tools to aid in visualizing geoscience data, including convenience and plotting functions that are used to facilitate plotting with Matplotlib, Cartopy, and other visualization packages.
 
 ### [GeoCAT-examples](https://geocat-examples.readthedocs.io)
 
