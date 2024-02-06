@@ -24,6 +24,6 @@ A group of researchers and software engineers put together a helpful guide for d
 
 ## Managing Computational Resources
 
-### [CISL Best Practices](https://www2.cisl.ucar.edu/user-support/cisl-best-practices)
+### [NSF NCAR HPC Best Practices](https://arc.ucar.edu/knowledge_base/70549811)
 
-If you are using NCAR Computational and Information Systems Lab (CISL) resources such as Casper/Cheyenne, this is a great place to start with learning to make the most of your computing and storage allocations.
+If you are using NSF NCAR Computational and Information Systems Lab (CISL) resources such as Casper and Derecho, this is a great place to start with learning to make the most of your computing and storage allocations.

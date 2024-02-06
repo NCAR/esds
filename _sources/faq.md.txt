@@ -1,11 +1,10 @@
 # Frequently Asked Questions
 
-This contains relevant questions and answers from common workflow issues and questions posted on Zulip.
+This page contains answers to frequently asked questions from the [ESDS Zulip](https://ncar.github.io/esds/communication/#zulip) and [office hours](https://ncar.github.io/esds/office-hours/).
 
-**_This page is meant to be a list of FAQ regarding climate datasets, motivated by a variety of employees across UCAR/NCAR_**
-
-## Help Topics:
+## Help topics:
 [Where do I go for help?](#where-do-i-go-for-help)
+
 [What do I do if my question is not answered on this page?](#what-do-i-do-if-my-question-is-not-answered-on-this-page)
 
 [Someone must have written the function I want. Where do I look?](#someone-must-have-written-the-function-i-want-where-do-i-look)
@@ -14,7 +13,7 @@ This contains relevant questions and answers from common workflow issues and que
 
 [Xarray and Dask](#xarray-and-dask)
 
-[Github](#github)
+[GitHub](#github)
 
 [CESM Data](#cesm-data)
 
@@ -26,21 +25,21 @@ Try one of the following resources.
 1. Xarray's [How Do I do X?](https://xarray.pydata.org/en/stable/howdoi.html) page
 2. [Xarray Github Discussions](https://github.com/pydata/xarray/discussions)
 3. [Pangeo Discourse Forum](https://discourse.pangeo.org)
-4. NCAR Zulip under #python-questions, #python-dev, or #dask.
+4. ESDS Zulip under #python-questions, #python-dev, or #dask.
 
 Avoid personal emails and prefer a public forum.
 
 ## What do I do if my question is not answered on this page?
 
-If your question is related to conda environments and you're affiliated with UCAR/NCAR,
-you can open a help ticket on the [NCAR Research Computing Helpdesk site](https://ithelp.ucar.edu/plugins/servlet/desk/site/rc).
+If your question is related to conda environments and you're affiliated with NSF NCAR or UCAR,
+you can open a help ticket on the [NSF NCAR Research Computing Helpdesk site](https://ithelp.ucar.edu/plugins/servlet/desk/site/rc).
 If your issue is related to data science packages and workflows, you can open an issue
-[on our GitHub here](https://github.com/NCAR/esds/issues) or book an
-[office hour appointment](https://ncar.github.io/esds/office-hours/) with an ESDS core member!
+[on our GitHub repository here](https://github.com/NCAR/esds/issues) or book an
+[office hours appointment](https://ncar.github.io/esds/office-hours/) with an ESDS core member!
 
 ## Someone must have written the function I want. Where do I look?
 
-See the xarray [ecosystem](https://xarray.pydata.org/en/latest/ecosystem.html) page. Also see the [xarray-contrib](https://github.com/xarray-contrib/) and [pangeo-data](https://github.com/pangeo-data) organizations. Some NCAR relevant projects include:
+See the [xarray related projects page](https://xarray.pydata.org/en/latest/ecosystem.html). Also see the [xarray-contrib](https://github.com/xarray-contrib/) and [pangeo-data](https://github.com/pangeo-data) GitHub organizations. Some NSF NCAR relevant projects include:
 
 1. [GeoCAT-comp](https://geocat-comp.readthedocs.io/en/latest/)
 1. [GeoCAT-viz](https://geocat-viz.readthedocs.io/en/latest/)
@@ -60,11 +59,12 @@ See the xarray [ecosystem](https://xarray.pydata.org/en/latest/ecosystem.html) p
 ### General Advice
 
 Dealing with Python environments can be tricky... a good place to start is to checkout
-[this guide on dealing with Python environments](https://whiteboxml.com/blog/the-definitive-guide-to-python-virtual-environments-with-conda).
+[this guide to dealing with Python environments](https://whiteboxml.com/blog/the-definitive-guide-to-python-virtual-environments-with-conda).
+
 If you just need a refresher on the various conda commands, this [conda cheet sheet](https://docs.conda.io/projects/conda/en/latest/_downloads/843d9e0198f2a193a3484886fa28163c/conda-cheatsheet.pdf)
 is a wonderful quick reference.
 
-### Using conda on NCAR HPC resources
+### Using conda on NSF NCAR HPC resources
 
 ```{Warning}
 
@@ -73,33 +73,26 @@ To export your existing environments to the recommended installation of minicond
 
 ```
 
-The NCAR High Performance Computing (HPC) system has a conda installation for you to use. The most recent and detailed
+The NSF NCAR High Performance Computing (HPC) systems have a conda installation for you to use. The most recent and detailed
 instructions can be found on this [Using Conda and Python](https://arc.ucar.edu/knowledge_base/83853599) page.
 
-If you don't want the trouble of making your own conda environment, there are managed environments available. The NCAR
+If you don't want the trouble of making your own conda environment, there are managed environments available. The NSF NCAR
 Package Library (NPL) is an environment containing many common scientific Python pacakges such as Numpy, Xarray, and GeoCAT.
-You can access the NPL environment through the command line and the NCAR JupyterHub.
+You can access the NPL environment through the command line and the NSF NCAR JupyterHub.
 
 #### NPL on the command line
 
-1. Open up a terminal in Casper or Cheyenne
-2. Load the NCAR conda module:
+1. Open up a terminal on Casper or Derecho
+2. Load the conda module:
 
    ```bash
-   $ module load conda/latest
+   $ module load conda
    ```
 
-3. List the available NCAR managed environments:
+3. List the available managed environments:
 
    ```bash
    $ conda env list
-
-      base                  *  /glade/u/apps/opt/conda
-      npl                      /glade/u/apps/opt/conda/envs/npl
-      npl-2022b                /glade/u/apps/opt/conda/envs/npl-2022b
-      npl-2206                 /glade/u/apps/opt/conda/envs/npl-2206
-      npl-2207                 /glade/u/apps/opt/conda/envs/npl-2207
-      pygpu-dask               /glade/u/apps/opt/conda/envs/pygpu-dask
    ```
 
 4. Activate the environment you want to use. Here we are using the `npl` environment as an example. `npl` can be replaced
@@ -111,23 +104,23 @@ You can access the NPL environment through the command line and the NCAR Jupyter
 
 5. Now when you run a script, the modules within the `npl` environment will be available to your program.
 
-#### NPL on the NCAR JupyterHub
+#### NPL on the NSF NCAR JupyterHub
 
-1. Log in to the Production [NCAR JupyterHub](https://jupyterhub.hpc.ucar.edu/)
+1. Log in to the Production [NSF NCAR JupyterHub](https://jupyterhub.hpc.ucar.edu/)
 2. Start a [server](https://arc.ucar.edu/knowledge_base/70549913)
 3. With your Jupyter Notebook open, click on the kernel name in the upper right.
-   ![The NCAR JupyterHub with a blank JupyterNotebook open. A red arrow is pointing to the upper right where the current kernel is listed.](images/JupyterHub.png)
+   ![The NSF NCAR JupyterHub with a blank Jupyter Notebook open. A red arrow is pointing to the upper right where the current kernel is listed.](images/JupyterHub.png)
 4. A dialog will appear with all the verious kernels available to you. These kernels will (generally) have the same
    name as the conda environment that it uses. This may not be the case if you are managing your own environments and kernels.
    ![After clicking on the current kernel name, a dialog appears saying "Select Kernel" with a drop down menu](images/SelectKernel.png)
-5. Select the "npl (conda)" kernel from the list if you want to use the NCAR-managed NPL environment.
+5. Select the "npl (conda)" kernel from the list if you want to use the NSF NCAR-managed NPL environment.
    ![The "Select Kernel" dialog with the NPL (conda) kernel selected](images/NPLKernel.png)
 
-### Creating and accessing a new conda environment on the NCAR JupyterHub
+### Creating and accessing a new conda environment on the NSF NCAR JupyterHub
 
 You may want to move past using NPL, and create a new conda environment!
 For detailed instructions, check out the [Using Conda and Python](https://arc.ucar.edu/knowledge_base/83853599) page on
-the NCAR Advanced Research Computing site. Heres a summary of the basic steps:
+the NSF NCAR Advanced Research Computing site. Heres a summary of the basic steps:
 
 1. Create the environment
 
@@ -154,13 +147,13 @@ the NCAR Advanced Research Computing site. Heres a summary of the basic steps:
 
    ```{Note}
 
-   The [`ipykernel`](https://github.com/ipython/ipykernel) package is required for your environment to be available from the NCAR [JupyterHub](https://jupyterhub.hpc.ucar.edu/)
+   The [`ipykernel`](https://github.com/ipython/ipykernel) package is required for your environment to be available from the NSF NCAR [JupyterHub](https://jupyterhub.hpc.ucar.edu/)
 
    ```
 
 3. Accessing your conda environment
 
-   Your environment should now automatically show up as an available kernel in any Jupyter server on the NCAR HPC systems.
+   Your environment should now automatically show up as an available kernel in any Jupyter server on the NSF NCAR HPC systems.
    If you want to give your kernel a name that is different from the environment name, you can use the following command:
 
    ```bash
@@ -238,10 +231,10 @@ and use it elsewhere. These are the basic steps:
 ### General tips
 
 1. Read the xarray documentation on [optimizing workflow with dask](https://xarray.pydata.org/en/stable/dask.html#optimization-tips).
-1. Read the [Best practices for dask array](https://docs.dask.org/en/stable/array-best-practices.html)
+1. Read the [Best practices for Dask array](https://docs.dask.org/en/stable/array-best-practices.html)
 1. Keep track of chunk sizes throughout your workflow. This is especially important when reading in data using `xr.open_mfdataset`. Aim for 100-200MB size
    chunks.
-1. Choose chunking appropriate to your analysis. If you're working with time series then chunk more in space and less along time.
+1. Choose chunking appropriate to your analysis. If you're working with time series, then chunk more in space and less along time.
 1. Avoid indexing with `.where` as much as possible. In particulate `.where(..., drop=True)` will trigger a compute since it needs
    to know where NaNs are present to drop them. Instead see if you can write your statement as a `.clip`, `.sel`, `.isel`, or
    `.query` statement.
@@ -280,7 +273,7 @@ ds = xr.open_mfdataset(
 
 See [videos](https://xarray.pydata.org/en/latest/tutorials-and-videos.html) and [notebooks](https://xarray-contrib.github.io/xarray-tutorial/).
 
-### How do I debug my code when using dask?
+### How do I debug my code when using Dask?
 
 An option is to use `.compute(scheduler="single-threaded")`. This will run your code as a serial for loop. When an error is raised you can use the `%debug`
 magic to drop in to the stack and debug from there. See [this post](https://cherian.net/posts/python-debugging.html) for more debugging tips
@@ -330,20 +323,20 @@ Distributed writes to netCDF are hard.
 
 ### My Dask workers are taking a long time to start. How can I monitor them?
 
-Dask worker requests are added to the job queues on Casper and Cheyenne with the `cluster.scale()` method. After this method is called, you can verify that they are waiting in the queue with this command:
+Dask worker requests are added to the job queues on Casper and Derecho with the `cluster.scale()` method. After this method is called, you can verify that they are waiting in the queue with this command:
 
-- `qstat -u <my_username>` on Cheyenne, and the same command will work on Casper after April 2021.
+- `qstat -u <my_username>` on Derecho, and the same command will work on Casper after April 2021.
 
 If you see no pending worker jobs, then verify that you have called `cluster.scale()`.
 
-## Github
+## GitHub
 
-### Setting up Github Authentication
+### Setting up GitHub Authentication
 
-Beginning August 13, 2021, Github will no longer accept account passwords when authenticating git operations. There are essentially two options, which Github provides proper documentation for getting setup:
+Beginning August 13, 2021, GitHub will no longer accept account passwords when authenticating git operations. There are essentially two options, which GitHub provides proper documentation for getting setup:
 
 1. [Setup two-factor authentication](https://docs.github.com/en/github/authenticating-to-github/securing-your-account-with-two-factor-authentication-2fa)
-1. [Connect to Github via SSH](https://docs.github.com/en/github-ae@latest/github/authenticating-to-github/connecting-to-github-with-ssh)
+1. [Connect to GitHub via SSH](https://docs.github.com/en/github-ae@latest/github/authenticating-to-github/connecting-to-github-with-ssh)
 
 ## CESM Data
 
