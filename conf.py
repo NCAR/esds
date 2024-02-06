@@ -17,9 +17,9 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'NCAR-ESDS'
-copyright = '2021, NCAR Earth System Data Science Team'
-author = 'NCAR Earth System Data Science Team'
+project = 'ESDS'
+copyright = '2024, Earth System Data Science (ESDS) Team'
+author = 'Earth System Data Science (ESDS) Team'
 
 # The full version, including alpha/beta/rc tags
 release = '0.1'
