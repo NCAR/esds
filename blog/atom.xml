@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>ncar.github.io/esds/</id>
   <title>ESDS</title>
-  <updated>2024-02-06T17:47:29.490409+00:00</updated>
+  <updated>2024-02-12T23:19:17.828143+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.6">ABlog</generator>
@@ -11,7 +11,7 @@
     <title>2024 Earth System Data Science (ESDS) Annual Event</title>
     <updated>2023-11-21T00:00:00+00:00</updated>
     <author>
-      <name>Julia Kent</name>
+      <name>Teagan King</name>
     </author>
     <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;ESDS is hosting an annual event on &lt;strong&gt;January 18th and 19th&lt;/strong&gt; (Thursday-Friday).
 This event will be hybrid, in-person in NCAR’s Mesa Lab Main Seminar Room as well as
@@ -101,7 +101,7 @@ virtual.The event will be hosted at the Mesa Lab Main Seminar Room, located at 1
     <title>Recap: Unstructured Grid Collaborative Work Time</title>
     <updated>2023-05-05T00:00:00+00:00</updated>
     <author>
-      <name>Deepak Cherian</name>
+      <name>Falko Judt</name>
     </author>
     <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;ESDS hosted our first Collaborative Work Time event on April 17, 2023.
 The topic of the session was “Working With Unstructured Grids”.
@@ -543,7 +543,7 @@ by Friday, November 4, 2022!</summary>
     <title>Reading WRF data into Xarray and Visualizing the Output using hvPlot</title>
     <updated>2021-10-15T00:00:00+00:00</updated>
     <author>
-      <name>Anderson Banihirwe</name>
+      <name>Max Grover</name>
     </author>
     <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;The &lt;em&gt;&lt;strong&gt;typical&lt;/strong&gt;&lt;/em&gt; data workflow within the Python ecosystem when working with Weather Research and Forecasting (WRF) data is to use the &lt;a class="reference external" href="https://wrf-python.readthedocs.io/en/latest/"&gt;wrf-python&lt;/a&gt; package! Traditionally, it can be difficult to utilize the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;xarray&lt;/span&gt;&lt;/code&gt; data model with WRF data, due to a few challenges:&lt;/p&gt;
 &lt;p&gt;WRF data not being CF-compliant (which makes it hard for xarray to properly construct the dataset out of the box using xr.open_dataset)&lt;/p&gt;
