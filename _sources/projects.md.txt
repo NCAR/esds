@@ -24,6 +24,10 @@ The GeoCAT team also leads the software development efforts of [Project Raijin](
 
 ## Diagnostic Efforts
 
+### [CESM Unified Postprocessing and Diagnostics (CUPiD)](https://github.com/NCAR/CUPiD)
+
+CUPiD is Python framework for generating unified diagnostics from all CESM components.
+
 ### [Atmosphere Diagnostics Framework (ADF)](https://github.com/NCAR/CAM_diagnostics)
 
 Python-based diagnostics focused on evaluation of the atmospheric component of CESM. Produces time series and climatology files, seasonal and annual mean maps and zonal averages, global mean statistics, and an optional static website.
