@@ -42,7 +42,7 @@ Interactive Unstructured Grids Visualization with UXarray - Orhan Eroglu, Philip
 ### Collaborative Work Time
 CUPiD - Teagan Kind and Mike Levy
 
-Jupyter Notebook Jam Session - Dan Adriaansen 
+Jupyter Notebook Jam Session - Dan Adriaansen
 
 GeoCAT Community Forum - Anissa Zacharias and Katelyn FitzGerald
 
@@ -55,7 +55,7 @@ Tropical Cyclone Track Extraction from Unstructured Grids - Dave Ahijevych
 ## Acknowledgements
 Thanks to the following individuals who helped make this event happen!
 
-Events Working Group: Teagan King, John Clyne, Orhan Eroglu,... 
+Events Working Group: Teagan King, John Clyne, Orhan Eroglu,...
 Tutorials: Julia Kent, Anissa Zacharias, Philip Chmielowiec, Stas Jaroszynski,...
 Collaborative Work Time Hosts: ...
 Support: Taysia Peterson and staff from Enterprise Multimedia Services (EMMS)
