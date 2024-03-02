@@ -10,8 +10,7 @@ The [ESDS Events Working Group](https://ncar.github.io/esds/about/#events-workin
 hosted the 2024 ESDS Annual Event January 18-19th in a hybrid format at the NSF NCAR
 Mesa Lab and online.
 
-This blog post shares a brief overview of the event followed by resources and takeaways
-from the event.
+This blog post shares a brief overview and resources from the event.
 
 ## Overview
 
@@ -60,9 +59,12 @@ Tropical Cyclone Track Extraction from Unstructured Grids - Dave Ahijevych
 ## Acknowledgements
 Thanks to the following individuals who helped make this event happen!
 
-Events Working Group: Daniel Adriaansen, Drew Camron, John Clyne, Orhan Eroglu, Katelyn FitzGerald, Falko Judt, Julia Kent, Teagan King, and Mike Levy
-Tutorials: Julia Kent, Cora Schneck, Katelyn FitzGerald, Mea Trahan, Negin Sobhani, Brian Vanderwende, Orhan Eroglu, Philip Chmielowiec, Scott Pearse, Nihanth Cherukuru, and Stas Jaroszynski
-Collaborative Work Time Hosts: Mike Levy, Teagan King, Dan Adriaansen, Anissa Zacharias, Katelyn FitzGerald, Nick Cote, and Dave Ahijevych
-Support: Taysia Peterson and staff from Enterprise Multimedia Services (EMMS)
+**Events Working Group**: Daniel Adriaansen, Drew Camron, John Clyne, Orhan Eroglu, Katelyn FitzGerald, Falko Judt, Julia Kent, Teagan King, and Mike Levy
+
+**Tutorials**: Julia Kent, Cora Schneck, Katelyn FitzGerald, Mea Trahan, Negin Sobhani, Brian Vanderwende, Orhan Eroglu, Philip Chmielowiec, Scott Pearse, Nihanth Cherukuru, and Stas Jaroszynski
+
+**Collaborative Work Time Hosts**: Mike Levy, Teagan King, Dan Adriaansen, Anissa Zacharias, Katelyn FitzGerald, Nick Cote, and Dave Ahijevych
+
+**Support**: Taysia Peterson and staff from Enterprise Multimedia Services (EMMS)
 
 And thanks to everyone for your participation!
