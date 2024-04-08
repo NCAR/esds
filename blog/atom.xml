@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>ncar.github.io/esds/</id>
   <title>ESDS</title>
-  <updated>2024-04-02T02:44:26.940080+00:00</updated>
+  <updated>2024-04-08T21:31:44.933785+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.6">ABlog</generator>
@@ -11,7 +11,7 @@
     <title>2024 ESDS Annual Event Recap</title>
     <updated>2024-03-01T00:00:00+00:00</updated>
     <author>
-      <name>Katelyn FitzGerald</name>
+      <name>Teagan King</name>
     </author>
     <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;The &lt;a class="reference external" href="https://ncar.github.io/esds/about/#events-working-group"&gt;ESDS Events Working Group&lt;/a&gt;
 hosted the 2024 ESDS Annual Event January 18-19th in a hybrid format at the NSF NCAR
@@ -84,7 +84,7 @@ virtual.The event will be hosted at the Mesa Lab Main Seminar Room, located at 1
     <title>Analyzing and Visualizing CAM-SE Output in Python</title>
     <updated>2023-08-15T00:00:00+00:00</updated>
     <author>
-      <name>Katie Dagon</name>
+      <name>Teagan King</name>
     </author>
     <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;We demonstrate a variety of options for analyzing and visualizing output from the Community Atmosphere Model (CAM) with the spectral element (SE) grid in Python. This notebook was developed for the ESDS &lt;a class="reference external" href="https://ncar.github.io/esds/posts/2023/unstructured-grid-collab-1/"&gt;Collaborative Work Time on Unstructured Grids&lt;/a&gt;, which took place on April 17, 2023. A recap of the related CAM-SE discussion can be found &lt;a class="reference external" href="https://ncar.github.io/esds/posts/2023/unstructured-grid-collab-1/#katie-dagon-cgd"&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference internal" href="#section1"&gt;&lt;span class="xref myst"&gt;Regrid CAM-SE output using map file&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
@@ -197,7 +197,7 @@ NCAR/UCAR/UCP on November 10-11, 2022. This blog post serves to consolidate and 
     <title>Regridding using xESMF and an existing weights file</title>
     <updated>2022-12-06T00:00:00+00:00</updated>
     <author>
-      <name>Deepak Cherian</name>
+      <name>Christine Shields</name>
     </author>
     <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;A fairly common request is to use an existing ESMF weights file to regrid a Xarray Dataset  (&lt;a class="reference external" href="https://github.com/UXARRAY/uxarray/issues/172"&gt;1&lt;/a&gt;,  &lt;a class="reference external" href="https://github.com/pangeo-data/xESMF/issues/202"&gt;2&lt;/a&gt;). Applying weights in general should be easy: read weights then &lt;a class="reference external" href="https://github.com/UXARRAY/uxarray/issues/172#issuecomment-1310601230"&gt;apply them&lt;/a&gt; using &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;dot&lt;/span&gt;&lt;/code&gt; or &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;tensordot&lt;/span&gt;&lt;/code&gt; on the input dataset.&lt;/p&gt;
 &lt;p&gt;In the Xarray/Dask/Pangeo ecosystem, &lt;a class="reference external" href="https://xesmf.readthedocs.io"&gt;xESMF&lt;/a&gt; provides an interface to ESMF for convenient regridding, includiing parallelization with Dask. Here we demonstrate how to use an existing ESMF weights file with xESMF specifically for CAM-SE.&lt;/p&gt;
