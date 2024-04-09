@@ -15,6 +15,7 @@ including a variety of blog posts and resources for the community
 :maxdepth: 2
 :hidden:
 about
+accessibility
 faq
 blog
 communication
