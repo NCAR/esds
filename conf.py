@@ -52,7 +52,7 @@ templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 # Set language which will propagate to the top-level HTML tag
-language = "en"
+language = 'en'
 
 # -- Options for HTML output -------------------------------------------------
 
