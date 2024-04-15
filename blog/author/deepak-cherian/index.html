@@ -576,14 +576,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   
   
   
-  <a href="../katie-dagon/">Katie Dagon</a>
-  
-  ,
-  
-  
-  
-  
-  <a href="../colin-zarzycki/">Colin Zarzycki</a>
+  <a href="../teagan-king/">Teagan King</a>
   
   ,
   
@@ -597,6 +590,13 @@ commentsRunWhenDOMLoaded(addUtterances);
   
   
   
+  <a href="../colin-zarzycki/">Colin Zarzycki</a>
+  
+  ,
+  
+  
+  
+  
   <a href="#">Deepak Cherian</a>
   
   ,
@@ -604,7 +604,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   
   
   
-  <a href="../teagan-king/">Teagan King</a>
+  <a href="../katie-dagon/">Katie Dagon</a>
   
   
   
@@ -630,13 +630,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   
   
   
-  <a href="../../tag/unstructured-grids/">unstructured grids</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/cesm/">cesm</a>
+  <a href="../../tag/visualization/">visualization</a>
   
   
   
@@ -648,13 +642,19 @@ commentsRunWhenDOMLoaded(addUtterances);
   
   
   
+  <a href="../../tag/cesm/">cesm</a>
+  
+  
+  
+  
+  
+  <a href="../../tag/unstructured-grids/">unstructured grids</a>
+  
+  
+  
+  
+  
   <a href="../../tag/xesmf/">xesmf</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/visualization/">visualization</a>
   
   
   
@@ -665,7 +665,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     </ul>
     <p class="ablog-post-excerpt"><p>We demonstrate a variety of options for analyzing and visualizing output from the Community Atmosphere Model (CAM) with the spectral element (SE) grid in Python. This notebook was developed for the ESDS <a class="reference external" href="https://ncar.github.io/esds/posts/2023/unstructured-grid-collab-1/">Collaborative Work Time on Unstructured Grids</a>, which took place on April 17, 2023. A recap of the related CAM-SE discussion can be found <a class="reference external" href="https://ncar.github.io/esds/posts/2023/unstructured-grid-collab-1/#katie-dagon-cgd">here</a>.</p>
 <p><a class="reference internal" href="#section1"><span class="xref myst">Regrid CAM-SE output using map file</span></a></p>
-<img alt="../../../_images/817331336ac2ab88e948f527c691a3538a3d43641bd5be2eb8296e7597bb4851.png" src="../../../_images/817331336ac2ab88e948f527c691a3538a3d43641bd5be2eb8296e7597bb4851.png" /></p>
+<img alt="../../../_images/817331336ac2ab88e948f527c691a3538a3d43641bd5be2eb8296e7597bb4851.png" src="../../../_images/817331336ac2ab88e948f527c691a3538a3d43641bd5be2eb8296e7597bb4851.png" style="width: 546px; height: 442px;" /></p>
 
     <p class="ablog-post-expand"><a href="../../../posts/2023/cam-se-analysis/"><em>Read more ...</em></a></p>
     <hr/>
@@ -806,13 +806,13 @@ A lucky overlap with the Improving Scientific Software conference, meant that co
     </span>
   
   
-  <a href="../../tag/netcdf/">netcdf</a>
-  
-  
-  
-  
-  
   <a href="../../tag/zarr/">zarr</a>
+  
+  
+  
+  
+  
+  <a href="../../tag/benchmark/">benchmark</a>
   
   
   
@@ -824,7 +824,7 @@ A lucky overlap with the Improving Scientific Software conference, meant that co
   
   
   
-  <a href="../../tag/benchmark/">benchmark</a>
+  <a href="../../tag/netcdf/">netcdf</a>
   
   
   
@@ -955,7 +955,7 @@ We use a single ensemble member historical experiment with daily data from 1850 
     </ul>
     <p class="ablog-post-excerpt"><p>A fairly common request is to use an existing ESMF weights file to regrid a Xarray Dataset  (<a class="reference external" href="https://github.com/UXARRAY/uxarray/issues/172">1</a>,  <a class="reference external" href="https://github.com/pangeo-data/xESMF/issues/202">2</a>). Applying weights in general should be easy: read weights then <a class="reference external" href="https://github.com/UXARRAY/uxarray/issues/172#issuecomment-1310601230">apply them</a> using <code class="docutils literal notranslate"><span class="pre">dot</span></code> or <code class="docutils literal notranslate"><span class="pre">tensordot</span></code> on the input dataset.</p>
 <p>In the Xarray/Dask/Pangeo ecosystem, <a class="reference external" href="https://xesmf.readthedocs.io">xESMF</a> provides an interface to ESMF for convenient regridding, includiing parallelization with Dask. Here we demonstrate how to use an existing ESMF weights file with xESMF specifically for CAM-SE.</p>
-<img alt="../../../_images/fd44e9f7bac7bfb9e60950a50b7f51ec81040235662db40028a587eea1fe403e.png" src="../../../_images/fd44e9f7bac7bfb9e60950a50b7f51ec81040235662db40028a587eea1fe403e.png" /></p>
+<img alt="../../../_images/fd44e9f7bac7bfb9e60950a50b7f51ec81040235662db40028a587eea1fe403e.png" src="../../../_images/fd44e9f7bac7bfb9e60950a50b7f51ec81040235662db40028a587eea1fe403e.png" style="width: 600px;" /></p>
 
     <p class="ablog-post-expand"><a href="../../../posts/2022/cam-se-regridding/"><em>Read more ...</em></a></p>
     <hr/>
@@ -1022,7 +1022,7 @@ We use a single ensemble member historical experiment with daily data from 1850 
     </ul>
     <p class="ablog-post-excerpt"><p>Detrending - subtracting a trend, commonly a linear fit, from the data - along the time dimension is a common workflow in the climate sciences.</p>
 <p>Here’s an example</p>
-<img alt="../../../_images/e25cf220f15e78e7aa8d54f8e9d18a52e56c57a24b0f30bbd7bc7410543329f9.png" src="../../../_images/e25cf220f15e78e7aa8d54f8e9d18a52e56c57a24b0f30bbd7bc7410543329f9.png" /></p>
+<img alt="../../../_images/e25cf220f15e78e7aa8d54f8e9d18a52e56c57a24b0f30bbd7bc7410543329f9.png" src="../../../_images/e25cf220f15e78e7aa8d54f8e9d18a52e56c57a24b0f30bbd7bc7410543329f9.png" style="width: 375px; height: 261px;" /></p>
 
     <p class="ablog-post-expand"><a href="../../../posts/2022/dask-debug-detrend/"><em>Read more ...</em></a></p>
     <hr/>
@@ -1108,7 +1108,7 @@ We use a single ensemble member historical experiment with daily data from 1850 
     </ul>
     <p class="ablog-post-excerpt"><p>An underappreciated feature of Xarray + Dask is the ability to plug in <a class="reference external" href="https://docs.xarray.dev/en/stable/user-guide/duckarrays.html">different array types</a>. Usually we work with Xarray wrapping a Dask array which in turn uses <em>NumPy</em> arrays for each block; or just Xarray wrapping NumPy arrays directly. NumPy arrays are dense in-memory arrays. Other array types exist:</p>
 <p><a class="reference external" href="https://sparse.pydata.org">sparse</a> for sparse arrays</p>
-<img alt="../../../_images/c4d9bf482f609b5c8823a94f55faa35a854a944a89bdc967aff406eb134a52c5.png" src="../../../_images/c4d9bf482f609b5c8823a94f55faa35a854a944a89bdc967aff406eb134a52c5.png" /></p>
+<img alt="../../../_images/c4d9bf482f609b5c8823a94f55faa35a854a944a89bdc967aff406eb134a52c5.png" src="../../../_images/c4d9bf482f609b5c8823a94f55faa35a854a944a89bdc967aff406eb134a52c5.png" style="width: 546px; height: 442px;" /></p>
 
     <p class="ablog-post-expand"><a href="../../../posts/2022/sparse-PFT-gridding/"><em>Read more ...</em></a></p>
     <hr/>

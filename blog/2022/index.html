@@ -629,7 +629,7 @@ NCAR/UCAR/UCP on November 10-11, 2022. This blog post serves to consolidate and 
     </ul>
     <p class="ablog-post-excerpt"><p>A fairly common request is to use an existing ESMF weights file to regrid a Xarray Dataset  (<a class="reference external" href="https://github.com/UXARRAY/uxarray/issues/172">1</a>,  <a class="reference external" href="https://github.com/pangeo-data/xESMF/issues/202">2</a>). Applying weights in general should be easy: read weights then <a class="reference external" href="https://github.com/UXARRAY/uxarray/issues/172#issuecomment-1310601230">apply them</a> using <code class="docutils literal notranslate"><span class="pre">dot</span></code> or <code class="docutils literal notranslate"><span class="pre">tensordot</span></code> on the input dataset.</p>
 <p>In the Xarray/Dask/Pangeo ecosystem, <a class="reference external" href="https://xesmf.readthedocs.io">xESMF</a> provides an interface to ESMF for convenient regridding, includiing parallelization with Dask. Here we demonstrate how to use an existing ESMF weights file with xESMF specifically for CAM-SE.</p>
-<img alt="../../_images/fd44e9f7bac7bfb9e60950a50b7f51ec81040235662db40028a587eea1fe403e.png" src="../../_images/fd44e9f7bac7bfb9e60950a50b7f51ec81040235662db40028a587eea1fe403e.png" /></p>
+<img alt="../../_images/fd44e9f7bac7bfb9e60950a50b7f51ec81040235662db40028a587eea1fe403e.png" src="../../_images/fd44e9f7bac7bfb9e60950a50b7f51ec81040235662db40028a587eea1fe403e.png" style="width: 600px;" /></p>
 
     <p class="ablog-post-expand"><a href="../../posts/2022/cam-se-regridding/"><em>Read more ...</em></a></p>
     <hr/>
@@ -679,13 +679,7 @@ NCAR/UCAR/UCP on November 10-11, 2022. This blog post serves to consolidate and 
     </span>
   
   
-  <a href="../tag/xarray/">xarray</a>
-  
-  
-  
-  
-  
-  <a href="../tag/jupyter/">jupyter</a>
+  <a href="../tag/geocat-comp/">geocat-comp</a>
   
   
   
@@ -697,13 +691,19 @@ NCAR/UCAR/UCP on November 10-11, 2022. This blog post serves to consolidate and 
   
   
   
-  <a href="../tag/geocat-comp/">geocat-comp</a>
+  <a href="../tag/jupyter/">jupyter</a>
   
   
   
   
   
   <a href="../tag/climate/">climate</a>
+  
+  
+  
+  
+  
+  <a href="../tag/xarray/">xarray</a>
   
   
   
@@ -1089,7 +1089,7 @@ by <strong>Friday, November 4, 2022</strong>!</p>
     </ul>
     <p class="ablog-post-excerpt"><p>Detrending - subtracting a trend, commonly a linear fit, from the data - along the time dimension is a common workflow in the climate sciences.</p>
 <p>Here’s an example</p>
-<img alt="../../_images/e25cf220f15e78e7aa8d54f8e9d18a52e56c57a24b0f30bbd7bc7410543329f9.png" src="../../_images/e25cf220f15e78e7aa8d54f8e9d18a52e56c57a24b0f30bbd7bc7410543329f9.png" /></p>
+<img alt="../../_images/e25cf220f15e78e7aa8d54f8e9d18a52e56c57a24b0f30bbd7bc7410543329f9.png" src="../../_images/e25cf220f15e78e7aa8d54f8e9d18a52e56c57a24b0f30bbd7bc7410543329f9.png" style="width: 375px; height: 261px;" /></p>
 
     <p class="ablog-post-expand"><a href="../../posts/2022/dask-debug-detrend/"><em>Read more ...</em></a></p>
     <hr/>
@@ -1119,14 +1119,14 @@ by <strong>Friday, November 4, 2022</strong>!</p>
     </span>
   
   
-  <a href="../author/matthew-long/">Matthew Long</a>
+  <a href="../author/anderson-banihirwe/">Anderson Banihirwe</a>
   
   ,
   
   
   
   
-  <a href="../author/anderson-banihirwe/">Anderson Banihirwe</a>
+  <a href="../author/matthew-long/">Matthew Long</a>
   
   
   
@@ -1146,18 +1146,6 @@ by <strong>Friday, November 4, 2022</strong>!</p>
     </span>
   
   
-  <a href="../tag/jupyter/">jupyter</a>
-  
-  
-  
-  
-  
-  <a href="../tag/notebooks/">notebooks</a>
-  
-  
-  
-  
-  
   <a href="../tag/python/">python</a>
   
   
@@ -1171,6 +1159,18 @@ by <strong>Friday, November 4, 2022</strong>!</p>
   
   
   <a href="../tag/automation/">automation</a>
+  
+  
+  
+  
+  
+  <a href="../tag/jupyter/">jupyter</a>
+  
+  
+  
+  
+  
+  <a href="../tag/notebooks/">notebooks</a>
   
   
   
@@ -1327,7 +1327,7 @@ by <strong>Friday, November 4, 2022</strong>!</p>
     </ul>
     <p class="ablog-post-excerpt"><p>An underappreciated feature of Xarray + Dask is the ability to plug in <a class="reference external" href="https://docs.xarray.dev/en/stable/user-guide/duckarrays.html">different array types</a>. Usually we work with Xarray wrapping a Dask array which in turn uses <em>NumPy</em> arrays for each block; or just Xarray wrapping NumPy arrays directly. NumPy arrays are dense in-memory arrays. Other array types exist:</p>
 <p><a class="reference external" href="https://sparse.pydata.org">sparse</a> for sparse arrays</p>
-<img alt="../../_images/c4d9bf482f609b5c8823a94f55faa35a854a944a89bdc967aff406eb134a52c5.png" src="../../_images/c4d9bf482f609b5c8823a94f55faa35a854a944a89bdc967aff406eb134a52c5.png" /></p>
+<img alt="../../_images/c4d9bf482f609b5c8823a94f55faa35a854a944a89bdc967aff406eb134a52c5.png" src="../../_images/c4d9bf482f609b5c8823a94f55faa35a854a944a89bdc967aff406eb134a52c5.png" style="width: 546px; height: 442px;" /></p>
 
     <p class="ablog-post-expand"><a href="../../posts/2022/sparse-PFT-gridding/"><em>Read more ...</em></a></p>
     <hr/>
