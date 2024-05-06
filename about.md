@@ -9,6 +9,19 @@ encourage each Lab, Center, Program or Office (LCPO) to support our efforts by d
 to serve on the ESDS Leadership Committee and/or Working Groups as
 described in our [governance document](https://docs.google.com/document/d/1xjNzJqZjeRzUg5BMipQVUsy2xA1SRlEiyJLpPmUAs9E/edit?usp=sharing).
 
+## ESDS Representatives
+* Daniel Adriaansen, RAL
+* Drew Camron, Unidata
+* John Clyne, CISL
+* Orhan Eroglu, CISL
+* Katelyn Fitzgerald, CISL
+* Falko Judt, MMM
+* Julia Kent, CISL
+* Teagan King, CGD
+* Mike Levy, CGD
+* Ryan May, Unidata
+* Lev Romashkov, CGD
+* Susan Stringer, EOL
 
 ## ESDS Committees and Working Groups
 
@@ -16,13 +29,12 @@ described in our [governance document](https://docs.google.com/document/d/1xjNzJ
 * Daniel Adriaansen, RAL
 * Drew Camron, Unidata
 * John Clyne, CISL
-* Katie Dagon, CGD (stepping down, ~Feb 2024)
 * Orhan Eroglu, CISL
 * Falko Judt, MMM
 * Teagan King, CGD
 * Mike Levy, CGD
 * Ryan May, Unidata
-* Ulrike Romatschke, EOL
+* Susan Stringer, EOL
 
 ### Community Working Group
 * Katelyn FitzGerald, CISL
@@ -42,12 +54,12 @@ described in our [governance document](https://docs.google.com/document/d/1xjNzJ
 * Anderson Banihirwe, CISL
 * Deepak Cherian, CGD
 * Heather Craker, CISL
+* Katie Dagon, CGD
 * Max Grover, CGD
 * Thomas Hauser, CISL
 * Matt Long, CGD
 * Kevin Paul, CISL
-
-
+* Ulrike Romatschke, EOL
 
 ## Vision
 

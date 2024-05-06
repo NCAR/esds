@@ -51,6 +51,8 @@ templates_path = ['_templates']
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
+# Set language which will propagate to the top-level HTML tag
+language = 'en'
 
 # -- Options for HTML output -------------------------------------------------
 
