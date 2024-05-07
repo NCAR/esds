@@ -16,7 +16,7 @@ Peterson roughly one week prior to the event with Zoom details.
 
 ## Registration
 
-*Comming soon*
+*Coming soon*
 
 ## What is it?
 
