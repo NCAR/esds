@@ -11,7 +11,7 @@ The [ESDS Events Working Group](https://ncar.github.io/esds/about/#events-workin
 
 The event will be hosted at the Mesa Lab, located at 1850 Table
 Mesa Dr, Boulder, CO 80305. In order to attend the event virtually,
-registered participants will be receiving an email from Taysia
+registered participants will receive an email from Taysia
 Peterson roughly one week prior to the event with Zoom details.
 
 ## Registration
