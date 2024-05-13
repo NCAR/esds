@@ -34,7 +34,7 @@ containing a notebook that walks through the workshop content.
 
 ## Who should attend?
 
-Anyone interested in creating containers to host Python based
+All UCAR staff interested in creating containers to host Python based
 interactive visualizations as web servers.
 
 
