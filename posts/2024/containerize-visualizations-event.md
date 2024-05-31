@@ -17,6 +17,7 @@ Peterson roughly one week prior to the event with Zoom details.
 
 ## Registration
 
+*Registration closes on June 17th*
 [Link to registration form](https://docs.google.com/forms/d/e/1FAIpQLSdpp2cNXYz1C4PWOn01p3x4FgcV8gohOREjx2MIBDm0_Xk7FQ/viewform?usp=sf_link)
 
 ## What is it?
