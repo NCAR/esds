@@ -8,6 +8,7 @@ tags: tutorial hackathon events
 
 The [ESDS Events Working Group](https://ncar.github.io/esds/about/#events-working-group) is hosting a hybrid workshop on June 20th, from 9am until noon. 
 
+[Link to the event page in Sundog](https://sundog.ucar.edu/page/8591)
 
 The event will be hosted at the Mesa Lab, located at 1850 Table
 Mesa Dr, Boulder, CO 80305. In order to attend the event virtually,
@@ -16,7 +17,7 @@ Peterson roughly one week prior to the event with Zoom details.
 
 ## Registration
 
-*Coming soon*
+[Link to registration form](https://docs.google.com/forms/d/e/1FAIpQLSdpp2cNXYz1C4PWOn01p3x4FgcV8gohOREjx2MIBDm0_Xk7FQ/viewform?usp=sf_link)
 
 ## What is it?
 
