@@ -1,0 +1,837 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Workshop - From Jupyter Notebook to Web Server: Automating Container Deployments with GitHub Actions &#8212; ESDS 0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=66307ba7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=87e54e7c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../../_static/documentation_options.js?v=19645805"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=30646c52"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "NCAR/esds");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'posts/2024/automation-github-workshop';</script>
+    <link rel="author" title="About these documents" href="../../../about/" />
+    <link rel="index" title="Index" href="../../../genindex/" />
+    <link rel="search" title="Search" href="../../../search/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../../blog/atom.xml"
+  title="ESDS"
+/>
+
+
+
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search/"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this site... "
+         aria-label="Search this site... "
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">ESDS 0.1 documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../about/">
+    About Us
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../accessibility/">
+    Accessibility
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../faq/">
+    Frequently Asked Questions
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../blog/">
+    Blog
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../communication/">
+    Communication, Meetings, and Resources
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../office-hours/">
+    Office Hours
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../best-practices/">
+    Best Practices
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../projects/">
+    Projects
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search/"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this site... "
+         aria-label="Search this site... "
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/ncar/esds" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../about/">
+    About Us
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../accessibility/">
+    Accessibility
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../faq/">
+    Frequently Asked Questions
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../blog/">
+    Blog
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../communication/">
+    Communication, Meetings, and Resources
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../office-hours/">
+    Office Hours
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../best-practices/">
+    Best Practices
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../projects/">
+    Projects
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search/"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this site... "
+         aria-label="Search this site... "
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/ncar/esds" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search/"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this site... "
+         aria-label="Search this site... "
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+        <div class="sidebar-primary-item">
+
+<div class="ablog-sidebar-item ablog__postcard">
+
+
+<h2>
+  
+  
+  <i class="fa fa-calendar"></i>
+  
+  <span>28 June 2024</span>
+  
+</h2>
+<ul>
+  <div class="ablog-sidebar-item ablog__postcard2">
+
+
+<li id="ablog-sidebar-item author ablog__author">
+  <span>
+    
+    <i class="fa-fw fa fa-user"></i>
+    
+    </span>
+  
+  
+  <a href="../../../blog/author/nick-cote/">Nick Cote</a>
+  
+  
+  
+</li>
+
+
+
+
+
+<li id="ablog-sidebar-item tags ablog__tags">
+  <span>
+    
+    
+    <i class="fa-fw fa fa-tag"></i>
+    
+    </span>
+  
+  
+  <a href="../../../blog/tag/tutorial-hackathon-events/">tutorial hackathon events</a>
+  
+  
+  
+</li>
+
+
+</div>
+</ul>
+</div>
+</div>
+        <div class="sidebar-primary-item">
+
+<div class="ablog-sidebar-item ablog__recentposts">
+<h3>
+  <a href="../../../blog/">Recent Posts</a>
+</h3>
+<ul>
+  
+  
+  <li>
+    <a href="../containerize-visualizations-event/">
+      07 May - Workshop - From Jupyter Notebook to Web Server: Containerizing Interactive Visualizations
+    </a>
+  </li>
+  
+  <li>
+    <a href="../esds-annual-event-recap/">
+      01 March - 2024 ESDS Annual Event Recap
+    </a>
+  </li>
+  
+  <li>
+    <a href="../../2023/esds-annual-event/">
+      21 November - 2024 Earth System Data Science (ESDS) Annual Event
+    </a>
+  </li>
+  
+  <li>
+    <a href="../../2023/scipy23/">
+      28 August - ESDS at SciPy 2023
+    </a>
+  </li>
+  
+  <li>
+    <a href="../../2023/mfdataset/">
+      16 August - Thinking through CESM data access
+    </a>
+  </li>
+  
+</ul>
+</div>
+</div>
+        <div class="sidebar-primary-item">
+
+<div class="ablog-sidebar-item ablog__archive">
+<h3>
+  <a href="../../../blog/archive/">Archives</a>
+</h3>
+<ul>
+  
+  
+  <li>
+    <a href="../../../blog/2024/">2024 (3)</a>
+  </li>
+  
+  
+  
+  <li>
+    <a href="../../../blog/2023/">2023 (8)</a>
+  </li>
+  
+  
+  
+  <li>
+    <a href="../../../blog/2022/">2022 (13)</a>
+  </li>
+  
+  
+  
+  <li>
+    <a href="../../../blog/2021/">2021 (52)</a>
+  </li>
+  
+  
+  
+  <li>
+    <a href="../../../blog/2020/">2020 (6)</a>
+  </li>
+  
+  
+  
+  <li>
+    <a href="../../../blog/2019/">2019 (2)</a>
+  </li>
+  
+  
+</ul>
+</div>
+</div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">Workshop -...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+<section class="tex2jax_ignore mathjax_ignore" id="workshop-from-jupyter-notebook-to-web-server-automating-container-deployments-with-github-actions">
+<h1>Workshop - From Jupyter Notebook to Web Server: Automating Container Deployments with GitHub Actions<a class="headerlink" href="#workshop-from-jupyter-notebook-to-web-server-automating-container-deployments-with-github-actions" title="Link to this heading">#</a></h1>
+<p>The <a class="reference external" href="https://ncar.github.io/esds/about/#events-working-group">ESDS Events Working Group</a> is hosting a hybrid workshop on August 8, from 9am-noon.</p>
+<p><a class="reference external" href="https://sundog.ucar.edu/page/8688">Link to the event page in Sundog</a></p>
+<p>The event will be hosted at the Mesa Lab, located at 1850 Table
+Mesa Dr, Boulder, CO 80305. In order to attend the event virtually,
+registered participants will receive an email from Taysia
+Peterson roughly one week prior to the event with Zoom details.</p>
+<section id="registration">
+<h2>Registration<a class="headerlink" href="#registration" title="Link to this heading">#</a></h2>
+<p><em>Registration closes on August 4th</em></p>
+<p><a class="reference external" href="https://docs.google.com/forms/d/e/1FAIpQLSe7H7UXy1xgFMLm8YlqxQapC5ZHFwUTFV12ioESE_5v7DC4lg/viewform?usp=sf_link">Link to registration form</a></p>
+</section>
+<section id="what-is-it">
+<h2>What is it?<a class="headerlink" href="#what-is-it" title="Link to this heading">#</a></h2>
+<p>This is a follow on to the <a class="reference external" href="https://www.cisl.ucar.edu/events/jupyter-notebook-web-server-containerizing-interactive-visualizations">From Jupyter Notebook to Web Server: Containerizing Interactive Visualizations</a> workshop held on June 20th, 2024. It is not a prerequisite that participants attended that event. A <a class="reference external" href="https://youtu.be/Bhj2KdZcK70">recording</a> of that workshop is available to review.</p>
+<p>Participants will be guided through automation techniques available via GitHub for building container images and updating on-premise cloud applications. Attendees will develop a GitHub Action workflow to build a container image and push it to Docker Hub. The workshop will also cover creating a Helm chart, an application configuration, that can be used to deploy to the On-premise cloud pilot. The session further delves into using GitHub Actions to update the Helm chart with new build information and how it can enable an automation strategy known as GitOps. Here is a <a class="reference external" href="https://github.com/NicholasCote/nbviz-to-container">link to the code repository</a> containing a notebook that walks through the workshop content.</p>
+</section>
+<section id="who-should-attend">
+<h2>Who should attend?<a class="headerlink" href="#who-should-attend" title="Link to this heading">#</a></h2>
+<p>All UCAR staff interested in using GitHub actions for automation. It will focus specifically on using GitHub actions to build containers and update Helm charts used for on-premise cloud deployments.</p>
+</section>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading">#</a></h2>
+<p>A basic understanding of interacting with the command line.</p>
+<p>The following software should be installed on user machines:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>* [Docker](https://docs.docker.com/engine/install/)
+</pre></div>
+</div>
+<p><strong>What you need to attend:</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>* Laptop/computer with the prerequisite software installed
+</pre></div>
+</div>
+<p>Reach out to <a class="reference external" href="mailto:ncote&#37;&#52;&#48;ucar&#46;edu">ncote<span>&#64;</span>ucar<span>&#46;</span>edu</a> for questions</p>
+<p><a class="reference external" href="https://www.ucar.edu/who-we-are/ethics-integrity/codes-conduct/participants">Code of Conduct</a></p>
+</section>
+</section>
+
+<div class="section ablog__blog_comments">
+  
+  
+
+
+<div class="section ablog__prev-next">
+  <span class="ablog__prev">
+    
+    
+    <a href="../containerize-visualizations-event/">
+      
+      <i class="fa fa-arrow-circle-left"></i>
+      
+      <span>Workshop - From Jupyter Notebook to Web Server: Containerizing Interactive Visualizations</span>
+    </a>
+    
+  </span>
+  <span class="ablog__spacer">&nbsp;</span>
+  <span class="ablog__next">
+    
+  </span>
+</div>
+
+  
+  
+</div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#registration">Registration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-it">What is it?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#who-should-attend">Who should attend?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../../../_sources/posts/2024/automation-github-workshop.md.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024, Earth System Data Science (ESDS) Team.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

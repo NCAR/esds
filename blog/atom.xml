@@ -2,10 +2,26 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>ncar.github.io/esds/</id>
   <title>ESDS</title>
-  <updated>2024-05-31T19:01:21.708616+00:00</updated>
+  <updated>2024-06-28T22:23:18.096312+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.10">ABlog</generator>
+  <entry>
+    <id>ncar.github.io/esds/posts/2024/automation-github-workshop/</id>
+    <title>Workshop - From Jupyter Notebook to Web Server: Automating Container Deployments with GitHub Actions</title>
+    <updated>2024-06-28T00:00:00+00:00</updated>
+    <author>
+      <name>Nick Cote</name>
+    </author>
+    <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;The &lt;a class="reference external" href="https://ncar.github.io/esds/about/#events-working-group"&gt;ESDS Events Working Group&lt;/a&gt; is hosting a hybrid workshop on August 8, from 9am-noon.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://sundog.ucar.edu/page/8688"&gt;Link to the event page in Sundog&lt;/a&gt;&lt;/p&gt;
+&lt;/p&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/2024/automation-github-workshop/"/>
+    <summary>The ESDS Events Working Group is hosting a hybrid workshop on August 8, from 9am-noon.Link to the event page in Sundog</summary>
+    <category term="tutorialhackathonevents" label="tutorial hackathon events"/>
+    <published>2024-06-28T00:00:00+00:00</published>
+  </entry>
   <entry>
     <id>ncar.github.io/esds/posts/2024/containerize-visualizations-event/</id>
     <title>Workshop - From Jupyter Notebook to Web Server: Containerizing Interactive Visualizations</title>
@@ -104,7 +120,7 @@ virtual.The event will be hosted at the Mesa Lab Main Seminar Room, located at 1
     </author>
     <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;We demonstrate a variety of options for analyzing and visualizing output from the Community Atmosphere Model (CAM) with the spectral element (SE) grid in Python. This notebook was developed for the ESDS &lt;a class="reference external" href="https://ncar.github.io/esds/posts/2023/unstructured-grid-collab-1/"&gt;Collaborative Work Time on Unstructured Grids&lt;/a&gt;, which took place on April 17, 2023. A recap of the related CAM-SE discussion can be found &lt;a class="reference external" href="https://ncar.github.io/esds/posts/2023/unstructured-grid-collab-1/#katie-dagon-cgd"&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference internal" href="#section1"&gt;&lt;span class="xref myst"&gt;Regrid CAM-SE output using map file&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;img alt="ncar.github.io/esds/_images/817331336ac2ab88e948f527c691a3538a3d43641bd5be2eb8296e7597bb4851.png" src="ncar.github.io/esds/_images/817331336ac2ab88e948f527c691a3538a3d43641bd5be2eb8296e7597bb4851.png" style="width: 546px; height: 442px;" /&gt;&lt;/p&gt;
+&lt;img alt="ncar.github.io/esds/_images/817331336ac2ab88e948f527c691a3538a3d43641bd5be2eb8296e7597bb4851.png" src="ncar.github.io/esds/_images/817331336ac2ab88e948f527c691a3538a3d43641bd5be2eb8296e7597bb4851.png" /&gt;&lt;/p&gt;
 </content>
     <link href="ncar.github.io/esds/posts/2023/cam-se-analysis/"/>
     <summary>We demonstrate a variety of options for analyzing and visualizing output from the Community Atmosphere Model (CAM) with the spectral element (SE) grid in Python. This notebook was developed for the ESDS Collaborative Work Time on Unstructured Grids, which took place on April 17, 2023. A recap of the related CAM-SE discussion can be found here.Regrid CAM-SE output using map file</summary>
