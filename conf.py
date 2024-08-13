@@ -33,7 +33,6 @@ release = '0.1'
 extensions = [
     'myst_nb',
     'ablog',
-    'sphinx_comments',
     'sphinxext.rediraffe',
     'sphinx_design',
     'sphinx_copybutton',
@@ -110,11 +109,6 @@ myst_url_schemes = ['http', 'https', 'mailto']
 
 # Temporarily stored as off until we fix it
 jupyter_execute_notebooks = 'off'
-
-
-comments_config = {
-    'utterances': {'repo': 'NCAR/esds', 'optional': 'config', 'label': '💬 comment'},
-}
 
 
 def setup(app):
