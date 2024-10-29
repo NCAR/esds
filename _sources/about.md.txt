@@ -14,13 +14,12 @@ described in our [governance document](https://docs.google.com/document/d/1xjNzJ
 * Drew Camron, Unidata
 * John Clyne, CISL
 * Orhan Eroglu, CISL
-* Katelyn Fitzgerald, CISL
+* Katelyn FitzGerald, CISL
 * Falko Judt, MMM
 * Julia Kent, CISL
 * Teagan King, CGD
 * Mike Levy, CGD
 * Ryan May, Unidata
-* Lev Romashkov, CGD
 * Susan Stringer, EOL
 
 ## ESDS Committees and Working Groups
@@ -35,11 +34,12 @@ described in our [governance document](https://docs.google.com/document/d/1xjNzJ
 * Mike Levy, CGD
 * Ryan May, Unidata
 * Susan Stringer, EOL
+* Behrooz Roozitalab, ACOM
+* Jiwon Gim, ACOM
 
 ### Community Working Group
 * Katelyn FitzGerald, CISL
 * Julia Kent, CISL
-* Lev Romashkov, CGD
 
 ### Events Working Group
 * Daniel Adriaansen, RAL
@@ -60,6 +60,7 @@ described in our [governance document](https://docs.google.com/document/d/1xjNzJ
 * Matt Long, CGD
 * Kevin Paul, CISL
 * Ulrike Romatschke, EOL
+* Lev Romashkov, CGD
 
 ## Vision
 
