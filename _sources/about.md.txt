@@ -21,46 +21,9 @@ described in our [governance document](https://docs.google.com/document/d/1xjNzJ
 * Mike Levy, CGD
 * Ryan May, Unidata
 * Susan Stringer, EOL
-
-## ESDS Committees and Working Groups
-
-### Leadership Committee
-* Daniel Adriaansen, RAL
-* Drew Camron, Unidata
-* John Clyne, CISL
-* Orhan Eroglu, CISL
-* Falko Judt, MMM
-* Teagan King, CGD
-* Mike Levy, CGD
-* Ryan May, Unidata
-* Susan Stringer, EOL
+* Harsha Hampapura, DECS
 * Behrooz Roozitalab, ACOM
 * Jiwon Gim, ACOM
-
-### Community Working Group
-* Katelyn FitzGerald, CISL
-* Julia Kent, CISL
-
-### Events Working Group
-* Daniel Adriaansen, RAL
-* John Clyne, CISL
-* Orhan Eroglu, CISL
-* Katelyn FitzGerald, CISL
-* Julia Kent, CISL
-* Teagan King, CGD
-* Mike Levy, CGD
-
-### Past Committee Members
-* Anderson Banihirwe, CISL
-* Deepak Cherian, CGD
-* Heather Craker, CISL
-* Katie Dagon, CGD
-* Max Grover, CGD
-* Thomas Hauser, CISL
-* Matt Long, CGD
-* Kevin Paul, CISL
-* Ulrike Romatschke, EOL
-* Lev Romashkov, CGD
 
 ## Vision
 
@@ -77,11 +40,3 @@ Effective synthesis and analysis of large datasets is a rate-limiting step to ad
 **Open Development.** Science at NSF NCAR and UCAR is data intensive. We require sustained innovation in our ability to efficiently extract useful information from large, diverse data sets—thus software development is an intrinsic component of modern science. Open Development actively engages the target software user community in the development, support, maintenance, and documentation of software products. Open Development has proven effective at producing critical software tools—notably by adopting a particular, structured paradigm for collaboration. The primary goal of ESDS is to effect a cultural transformation at NCAR/UCAR centered around this Open Development paradigm, enabling us to work together in fundamentally new ways and promoting more extensive collaboration on analysis tools.
 
 **Reproducible Science.** Reproducible Science has the potential to be a transformative paradigm, helping to effect a transition toward making science actionable. Scientific papers remain the primary currency of scientific discourse, yet this model is deficient in several respects. Most significantly, papers are not easily extensible; they comprise a version of knowledge rendered into a static narrative. Software and its documentation, by contrast, encapsulate essential scientific knowledge in executable form, intrinsically embracing iterative refinement as fundamental, and enabling reproducibility, which is a cornerstone of best practices in computational science. Moreover, software yields a reusable product, opening opportunities for integration and extension of applications to address stakeholder requirements, including beyond our traditional research communities. This is critical in the context of NSF NCAR’s mission to translate science into actionable, societally-relevant information.
-
-## Near-term Goals
-
-1. Promote partnerships between software engineers and scientists to drive collaborative, Open Development of reusable geoscience workflows, novel approaches in machine learning, and Reproducible Science.
-1. Increase the literacy of the NSF NCAR and UCAR workforce with the best practices supporting the development and application of scalable analysis workflows as well as cultural principles underpinning a capacity for sustained innovation in the context of emerging disruptive computing technology; explicitly engage with the university community on these efforts, and promote broadening participation.
-1. Promote more extensive communication and sharing of workflows between scientists, leading to improved productivity, collaboration, and increased potential for efforts culminating in collective products.
-1. Coordinate and improve deployments of interactive computing environments and analysis-ready datasets.
-1. Identify and interlink existing initiatives related to ESDS across NCAR/UCAR.
