@@ -78,7 +78,6 @@ html_static_path = ['_static']
 html_sidebars = {
     'index': ['hello.html'],
     'about': ['hello.html'],
-    'faq': ['hello.html'],
     'communication': ['hello.html'],
     'blog': ['sidebar-nav-bs.html', 'tagcloud.html', 'archives.html'],
     'posts/**': [
