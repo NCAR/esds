@@ -1,4 +1,6 @@
 version: 2
+sphinx:
+  configuration: conf.py
 conda:
   environment: environment.yml
 build:
