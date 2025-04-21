@@ -20,7 +20,7 @@ jobs:
 
       # Install dependencies
       - name: Setup Conda Environment
-        uses: conda-incubator/setup-miniconda@v3
+        uses: conda-incubator/setup-miniconda@505e6394dae86d6a5c7fbb6e3fb8938e3e863830 #v3.1.1
         with:
           environment-file: environment.yml
           activate-environment: esds-blog
@@ -31,7 +31,7 @@ jobs:
           make dirhtml
       # Push the book's HTML to github-pages
       - name: GitHub Pages action
-        uses: peaceiris/actions-gh-pages@v4.0.0
+        uses: peaceiris/actions-gh-pages@4f9cc6602d3f66b9c108549d475ec49e8ef4d45e #v4.0.0
         if: github.ref == 'refs/heads/main'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
