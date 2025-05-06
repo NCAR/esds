@@ -18,11 +18,8 @@
 # -- Project information -----------------------------------------------------
 
 project = 'ESDS'
-copyright = '2024, Earth System Data Science (ESDS) Team'
-author = 'Earth System Data Science (ESDS) Team'
-
-# The full version, including alpha/beta/rc tags
-release = '0.1'
+copyright = '2024'
+author = 'Earth System Data Science (ESDS) community'
 
 
 # -- General configuration ---------------------------------------------------
@@ -58,13 +55,25 @@ language = 'en'
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
+
+html_logo = "_static/esds_logo.png"
+
 html_theme = 'pydata_sphinx_theme'
 
 # Add some more theme Options
 html_theme_options = {
     'github_url': 'https://github.com/ncar/esds',
     'google_analytics_id': 'UA-196809533-1',
-    'navbar_end': ['navbar-icon-links'],
+    'navbar_end': ['search-button', 'theme-switcher', 'navbar-icon-links'],
+    'navbar_persistent': [],
+    'icon_links': [
+        {
+            "name": "YouTube",
+            "url": "https://www.youtube.com/@ncar_ucar_esds",
+            "icon": "fa-brands fa-square-youtube",
+            "type": "fontawesome",
+        },
+    ],
 }
 
 rediraffe_redirects = 'redirects.txt'
@@ -73,7 +82,7 @@ rediraffe_redirects = 'redirects.txt'
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static']
+# html_static_path = ['_static']
 
 html_sidebars = {
     'index': ['hello.html'],
@@ -110,5 +119,5 @@ myst_url_schemes = ['http', 'https', 'mailto']
 jupyter_execute_notebooks = 'off'
 
 
-def setup(app):
-    app.add_css_file('custom.css')
+# def setup(app):
+#     app.add_css_file('custom.css')
