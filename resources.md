@@ -16,6 +16,14 @@ GeoCAT-viz contains tools to aid in visualizing geoscience data, including conve
 
 GeoCAT-examples provides a gallery of analysis and visualization examples replicating in Python the functionality and visualizations from example scripts on [NCL Applications page](https://www.ncl.ucar.edu/Applications/).
 
+### [NCAR HPC Documentation](https://ncar-hpc-docs.readthedocs.io/en/latest/)
+
+User documentation for the NSF NCAR high-performance computing (HPC) and storage resources managed by CISL includes searchable information specific to HPC resources, storage systems, authentication procedures and others, as well as additional how-to articles and troubleshooting articles.
+
+### [Pangeo](https://github.com/pangeo-data)
+
+A community effort for big data geoscience.
+
 ### [UXarray](https://uxarray.readthedocs.io/)
 
 The GeoCAT team also leads the software development efforts of [Project Raijin](https://raijin.ucar.edu/), implementing the UXarray package in collaboration with other academic and research partners.  UXarray strives to provide Xarray-like functionality for working with data on unstructured grids.
