@@ -21,7 +21,7 @@ described in our [governance document](https://docs.google.com/document/d/1xjNzJ
 * Mike Levy, CGD
 * Ryan May, Unidata
 * Susan Stringer, EOL
-* Harsha Hampapura, DECS
+* Harsha Hampapura, CISL
 * Behrooz Roozitalab, ACOM
 * Jiwon Gim, ACOM
 
