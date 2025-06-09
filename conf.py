@@ -17,12 +17,9 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'NCAR-ESDS'
-copyright = '2021, NCAR Earth System Data Science Team'
-author = 'NCAR Earth System Data Science Team'
-
-# The full version, including alpha/beta/rc tags
-release = '0.1'
+project = 'ESDS'
+copyright = '2024'
+author = 'Earth System Data Science (ESDS) community'
 
 
 # -- General configuration ---------------------------------------------------
@@ -33,7 +30,6 @@ release = '0.1'
 extensions = [
     'myst_nb',
     'ablog',
-    'sphinx_comments',
     'sphinxext.rediraffe',
     'sphinx_design',
     'sphinx_copybutton',
@@ -51,20 +47,33 @@ templates_path = ['_templates']
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
+# Set language which will propagate to the top-level HTML tag
+language = 'en'
 
 # -- Options for HTML output -------------------------------------------------
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
+
+html_logo = "_static/esds_logo.png"
+
 html_theme = 'pydata_sphinx_theme'
 
 # Add some more theme Options
 html_theme_options = {
     'github_url': 'https://github.com/ncar/esds',
-    'search_bar_text': 'Search this site... ',
     'google_analytics_id': 'UA-196809533-1',
-    'navbar_end': ['search-field.html', 'navbar-icon-links'],
+    'navbar_end': ['search-button', 'theme-switcher', 'navbar-icon-links'],
+    'navbar_persistent': [],
+    'icon_links': [
+        {
+            "name": "YouTube",
+            "url": "https://www.youtube.com/@ncar_ucar_esds",
+            "icon": "fa-brands fa-square-youtube",
+            "type": "fontawesome",
+        },
+    ],
 }
 
 rediraffe_redirects = 'redirects.txt'
@@ -73,27 +82,24 @@ rediraffe_redirects = 'redirects.txt'
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static']
+# html_static_path = ['_static']
 
 html_sidebars = {
     'index': ['hello.html'],
     'about': ['hello.html'],
-    'faq': ['hello.html'],
     'communication': ['hello.html'],
-    'blog': ['search-field.html', 'sidebar-nav-bs.html', 'tagcloud.html', 'archives.html'],
+    'blog': ['sidebar-nav-bs.html', 'tagcloud.html', 'archives.html'],
     'posts/**': [
-        'search-field.html',
         'sidebar-nav-bs.html',
         'postcard.html',
         'recentposts.html',
         'archives.html',
-    ]
-    #    "**": ["search-field.html", "sidebar-nav-bs.html"]
+    ],
 }
 
 
 blog_baseurl = 'ncar.github.io/esds/'
-blog_title = 'NCAR ESDS'
+blog_title = 'ESDS'
 blog_path = 'blog'
 fontawesome_included = True
 blog_post_pattern = 'posts/*/*'
@@ -113,10 +119,5 @@ myst_url_schemes = ['http', 'https', 'mailto']
 jupyter_execute_notebooks = 'off'
 
 
-comments_config = {
-    'utterances': {'repo': 'NCAR/esds', 'optional': 'config', 'label': '💬 comment'},
-}
-
-
-def setup(app):
-    app.add_css_file('custom.css')
+# def setup(app):
+#     app.add_css_file('custom.css')

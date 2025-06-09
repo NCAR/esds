@@ -1,6 +1,6 @@
-# NCAR Earth System Data Science Initiative
+# Earth System Data Science (ESDS) Initiative
 
-Hello! This is a place to store updates from the NCAR ESDS working group
+Hello! This is a place to store updates from the ESDS working group
 including a variety of blog posts and resources for the community
 
 ## Recent posts
@@ -15,11 +15,8 @@ including a variety of blog posts and resources for the community
 :maxdepth: 2
 :hidden:
 about
-faq
 blog
 communication
 office-hours
-best-practices
-calendar
-projects
+resources
 ```
