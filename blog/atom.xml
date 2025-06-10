@@ -2,10 +2,26 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>ncar.github.io/esds/</id>
   <title>ESDS</title>
-  <updated>2025-06-09T22:10:33.644876+00:00</updated>
+  <updated>2025-06-10T15:46:55.796057+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.10">ABlog</generator>
+  <entry>
+    <id>ncar.github.io/esds/posts/2025/collaborary/</id>
+    <title>ESDS Collaboratory</title>
+    <updated>2025-06-10T00:00:00+00:00</updated>
+    <author>
+      <name>Julia kent</name>
+    </author>
+    <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;Are you facing data or software challenges in your scientific workflows? Bring your work down to the Mesa Lab library on Wednesday June 25, 2025 for the first ever ESDS Collaboratory!&lt;/p&gt;
+&lt;p&gt;ESDS team members will be in the library from 9AM to 4PM to answer questions and exchange ideas. Feel free to come all day or just pop in when convenient.&lt;/p&gt;
+&lt;img alt="flyer" src="ncar.github.io/esds/_images/collaboratory-flyer.png" /&gt;&lt;/p&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/2025/collaborary/"/>
+    <summary>Are you facing data or software challenges in your scientific workflows? Bring your work down to the Mesa Lab library on Wednesday June 25, 2025 for the first ever ESDS Collaboratory!ESDS team members will be in the library from 9AM to 4PM to answer questions and exchange ideas. Feel free to come all day or just pop in when convenient.flyer</summary>
+    <category term="collaboratoryevents" label="collaboratory events"/>
+    <published>2025-06-10T00:00:00+00:00</published>
+  </entry>
   <entry>
     <id>ncar.github.io/esds/posts/2024/automation-github-workshop/</id>
     <title>Workshop - From Jupyter Notebook to Web Server: Automating Container Deployments with GitHub Actions</title>
