@@ -12,5 +12,4 @@ ESDS team members will be in the library from 9AM to 4PM to answer questions and
 
 These in-person working events will provide opportunities to encourage collaboration and communication between technical staff and the scientific community. Future events will rotate between UCAR buildings.
 
-
-![flyer](../images/ESDS Collaboratory Event - June 2025.pdf)
+![flyer](../images/collaboratory-flyer.png)
