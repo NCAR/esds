@@ -10,7 +10,7 @@ If your question is about an error message you are raising in your workflow, hel
 
 ```{admonition} ESDS Collaboratory on Wednesday, June 25!
 :class: admonition
-ESDS is organizing in-person "Collaboratory" days to encourage outreach, engagement, and the sharing of ideas between teams. These sessions will rotate through the ML, CG, and FL libraries (each lab housing one event per quarter). [For more information, chheck out this blog post.](posts/2025/collaboratory.html)
+ESDS is organizing in-person "Collaboratory" days to encourage outreach, engagement, and the sharing of ideas between teams. These sessions will rotate through the ML, CG, and FL libraries (each lab housing one event per quarter). [For more information, check out this blog post.](posts/2025/collaboratory.html)
 ```
 
 <iframe
