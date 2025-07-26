@@ -18,7 +18,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'ESDS Website'
-copyright = '2024, ESDS Community'
+copyright = '2021, ESDS Community'
 author = 'ESDS Community'
 
 
