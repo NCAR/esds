@@ -72,9 +72,8 @@ html_theme = 'pydata_sphinx_theme'
 
 # Add some more theme Options
 html_theme_options = {
-    'github_url': 'https://github.com/NCAR/esds'
-    'navbar_end': ['search-button', 'theme-switcher', 'navbar-icon-links'],
-    'navbar_persistent': [],
+    'github_url': 'https://github.com/NCAR/esds',
+    'navbar_end': ['theme-switcher', 'navbar-icon-links'],
     'icon_links': [
         {
             "name": "YouTube",
@@ -101,13 +100,8 @@ html_sidebars = {
     'index': ['hello.html'],
     'about': ['hello.html'],
     'communication': ['hello.html'],
-    'blog': ['sidebar-nav-bs.html', 'tagcloud.html', 'archives.html'],
-    'posts/**': [
-        'sidebar-nav-bs.html',
-        'postcard.html',
-        'recentposts.html',
-        'archives.html',
-    ],
+    'blog': ['ablog/recentposts.html', 'ablog/archives.html', 'ablog/tagcloud.html'],
+    'posts/**': ['ablog/postcard.html', 'ablog/recentposts.html', 'ablog/archives.html'],
 }
 
 
@@ -127,10 +121,8 @@ panels_add_bootstrap_css = False
 myst_enable_extensions = ['amsmath', 'colon_fence', 'deflist', 'html_image', 'dollarmath']
 myst_url_schemes = ['http', 'https', 'mailto']
 
-
 # Temporarily stored as off until we fix it
-jupyter_execute_notebooks = 'off'
-
+nb_execution_mode = 'off'
 
 # def setup(app):
 #     app.add_css_file('custom.css')
