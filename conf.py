@@ -17,9 +17,9 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'ESDS'
-copyright = '2024'
-author = 'Earth System Data Science (ESDS) community'
+project = 'ESDS Website'
+copyright = '2024, ESDS Community'
+author = 'ESDS Community'
 
 
 # -- General configuration ---------------------------------------------------
@@ -57,6 +57,16 @@ language = 'en'
 #
 
 html_logo = "_static/esds_logo.png"
+html_favicon = "_static/esds_logo.png"
+html_sourcelink_suffix = ""
+html_last_updated_fmt = ""
+
+html_context = {
+    "github_user": "NCAR",
+    "github_repo": "esds",
+    "github_version": "main",
+    "doc_path": "",
+}
 
 html_theme = 'pydata_sphinx_theme'
 
