@@ -72,8 +72,6 @@ html_theme = 'pydata_sphinx_theme'
 
 # Add some more theme Options
 html_theme_options = {
-    'github_url': 'https://github.com/ncar/esds',
-    'google_analytics_id': 'UA-196809533-1',
     'navbar_end': ['search-button', 'theme-switcher', 'navbar-icon-links'],
     'navbar_persistent': [],
     'icon_links': [
@@ -84,6 +82,10 @@ html_theme_options = {
             "type": "fontawesome",
         },
     ],
+}
+
+html_theme_options["analytics"] = {
+    "google_analytics_id": "UA-196809533-1",
 }
 
 rediraffe_redirects = 'redirects.txt'
