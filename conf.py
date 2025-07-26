@@ -72,6 +72,7 @@ html_theme = 'pydata_sphinx_theme'
 
 # Add some more theme Options
 html_theme_options = {
+    'github_url': 'https://github.com/NCAR/esds'
     'navbar_end': ['search-button', 'theme-switcher', 'navbar-icon-links'],
     'navbar_persistent': [],
     'icon_links': [
