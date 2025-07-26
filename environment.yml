@@ -25,7 +25,7 @@ dependencies:
   - sphinx
   - sphinx-autobuild
   - sphinx-comments
-  - sphinxcontrib-bibtex<2.0.0
+  - sphinxcontrib-bibtex
   - xarray>=0.18.2
   - sphinxext-rediraffe
   - sphinx-design
