@@ -1,4 +1,4 @@
-# About Us
+# About
 
 The Earth System Data Science (ESDS) initiative is a community
 with a common interest in advancing geoscientist’s ability to make
@@ -27,7 +27,7 @@ described in our [governance document](https://docs.google.com/document/d/1xjNzJ
 
 ## Vision
 
-_The Earth System Data Science initiative aims to profoundly increase the effectiveness of the NSF NCAR and UCAR workforce by promoting deeper collaboration centered on analytics, improving our capacity to deliver impactful, actionable, reproducible science and serve the university community by transforming how geoscientists synthesize and extract information from large, diverse data sets._
+The Earth System Data Science initiative aims to profoundly increase the effectiveness of the NSF NCAR and UCAR workforce by promoting deeper collaboration centered on analytics, improving our capacity to deliver impactful, actionable, reproducible science and serve the university community by transforming how geoscientists synthesize and extract information from large, diverse data sets._
 
 Effective synthesis and analysis of large datasets is a rate-limiting step to advancing science across NSF NCAR and UCAR and our community. Recent developments in open-source scientific software, notably those identified by the [Pangeo community](https://pangeo.io/), provide both inspiring technical solutions to Big Data geoscience problems and paradigms for large-scale collaboration. Analysis workflows across NSF NCAR and UCAR share much in common, despite disciplinary differences; thus, a focus on data and its transformation into useful information illuminates the potential for novel collaborations across the organization. Moreover, open, collaborative development focused on reproducible science holds transformative potential for how NSF NCAR and UCAR and the community approaches science.
 

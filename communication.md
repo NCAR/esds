@@ -1,4 +1,4 @@
-# Communication and Meetings
+# Community
 
 ## Email List
 
