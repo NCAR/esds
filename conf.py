@@ -68,10 +68,15 @@ html_context = {
     "doc_path": "",
 }
 
+html_static_path = ["_static"]
+html_css_files = ["custom.css"]
+html_show_sourcelink = False
+
 html_theme = 'pydata_sphinx_theme'
 
 # Add some more theme Options
 html_theme_options = {
+    'use_edit_page_button': True,
     'github_url': 'https://github.com/NCAR/esds',
     'navbar_end': ['theme-switcher', 'navbar-icon-links'],
     'icon_links': [
@@ -100,6 +105,8 @@ html_sidebars = {
     'index': ['hello.html'],
     'about': ['hello.html'],
     'communication': ['hello.html'],
+    'office-hours': ['hello.html'],
+    'resources': ['hello.html'],
     'blog': ['ablog/recentposts.html', 'ablog/archives.html', 'ablog/tagcloud.html'],
     'posts/**': ['ablog/postcard.html', 'ablog/recentposts.html', 'ablog/archives.html'],
 }
@@ -124,5 +131,3 @@ myst_url_schemes = ['http', 'https', 'mailto']
 # Temporarily stored as off until we fix it
 nb_execution_mode = 'off'
 
-# def setup(app):
-#     app.add_css_file('custom.css')

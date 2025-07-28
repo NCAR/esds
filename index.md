@@ -1,4 +1,4 @@
-# Earth System Data Science (ESDS) Initiative
+# Earth System Data Science
 
 Hello! This is a place to store updates from the ESDS working group
 including a variety of blog posts and resources for the community
