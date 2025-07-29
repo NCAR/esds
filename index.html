@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Earth System Data Science (ESDS) Initiative &#8212; ESDS  documentation</title>
+    <title>Earth System Data Science &#8212; ESDS Website  documentation</title>
   
   
   
@@ -31,9 +31,10 @@
 <link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=66307ba7" />
   
   <!-- So that users can add custom icons -->
   <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -41,31 +42,36 @@
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="_static/documentation_options.js?v=187304be"></script>
-    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/documentation_options.js?v=55b5f74b"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=30646c52"></script>
     <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-196809533-1"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'UA-196809533-1');
+            </script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
+    <link rel="icon" href="_static/esds_logo.png"/>
     <link rel="author" title="About these documents" href="about/" />
     <link rel="index" title="Index" href="genindex/" />
     <link rel="search" title="Search" href="search/" />
-    <link rel="next" title="About Us" href="about/" />
-
+    <link rel="next" title="About" href="about/" /> 
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
-
+    <meta name="docbuild:last-update" content="Jul 29, 2025"/> 
 <link
   rel="alternate"
   type="application/atom+xml"
   href="blog/atom.xml"
   title="ESDS"
 />
-
-
-
+  
   </head>
   
   
@@ -131,8 +137,8 @@
       
     
     
-    <img src="_static/esds_logo.png" class="logo__image only-light" alt="ESDS  documentation - Home"/>
-    <img src="_static/esds_logo.png" class="logo__image only-dark pst-js-only" alt="ESDS  documentation - Home"/>
+    <img src="_static/esds_logo.png" class="logo__image only-light" alt="ESDS Website  documentation - Home"/>
+    <img src="_static/esds_logo.png" class="logo__image only-dark pst-js-only" alt="ESDS Website  documentation - Home"/>
   
   
 </a></div>
@@ -149,7 +155,7 @@
     
 <li class="nav-item ">
   <a class="nav-link nav-internal" href="about/">
-    About Us
+    About
   </a>
 </li>
 
@@ -163,7 +169,7 @@
 
 <li class="nav-item ">
   <a class="nav-link nav-internal" href="communication/">
-    Communication and Meetings
+    Community
   </a>
 </li>
 
@@ -189,12 +195,16 @@
     
     <div class="navbar-header-items__end">
       
-      
-        <div class="navbar-item">
+        <div class="navbar-item navbar-persistent--container">
+          
 
-<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-</button></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
       
         <div class="navbar-item">
 
@@ -215,7 +225,7 @@
           
           
           
-          <a href="https://github.com/ncar/esds" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+          <a href="https://github.com/NCAR/esds" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
             <span class="sr-only">GitHub</span></a>
         </li>
         <li class="nav-item">
@@ -236,6 +246,15 @@
     
   </div>
   
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
   
 
   
@@ -273,7 +292,7 @@
     
 <li class="nav-item ">
   <a class="nav-link nav-internal" href="about/">
-    About Us
+    About
   </a>
 </li>
 
@@ -287,7 +306,7 @@
 
 <li class="nav-item ">
   <a class="nav-link nav-internal" href="communication/">
-    Communication and Meetings
+    Community
   </a>
 </li>
 
@@ -317,12 +336,6 @@
         
           <div class="navbar-item">
 
-<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-</button></div>
-        
-          <div class="navbar-item">
-
 <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
   <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
   <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
@@ -340,7 +353,7 @@
           
           
           
-          <a href="https://github.com/ncar/esds" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+          <a href="https://github.com/NCAR/esds" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
             <span class="sr-only">GitHub</span></a>
         </li>
         <li class="nav-item">
@@ -363,14 +376,13 @@
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item"><div class="bio-info">
-  <div class="name">Earth System Data Science initiative at NSF NCAR</div>
+  <div class="name">Earth System Data Science (ESDS) at NSF NCAR & UCAR</div>
 
   <div class="whatido">
     <p>Building an inclusive sociotechnical network to promote effective synthesis
     and interpretation of data relevant to solving problems in Earth system
     science and supporting decisions within stakeholder communities.</p>
 
-    <p>The Earth System Data Science initiative follows these <a href="https://www.ucar.edu/accessibility">accsesibility guidelines</a></p>
   </div>
 </div></div>
     </div>
@@ -402,9 +414,8 @@
                 
 <div id="searchbox"></div>
                 <article class="bd-article">
-                  
-<section class="tex2jax_ignore mathjax_ignore" id="earth-system-data-science-esds-initiative">
-<h1>Earth System Data Science (ESDS) Initiative<a class="headerlink" href="#earth-system-data-science-esds-initiative" title="Link to this heading">#</a></h1>
+                   <section class="tex2jax_ignore mathjax_ignore" id="earth-system-data-science">
+<h1>Earth System Data Science<a class="headerlink" href="#earth-system-data-science" title="Link to this heading">#</a></h1>
 <p>Hello! This is a place to store updates from the ESDS working group
 including a variety of blog posts and resources for the community</p>
 <section id="recent-posts">
@@ -583,7 +594,7 @@ by <strong>Friday, November 4, 2022</strong>!</p>
 <img alt="xarray-wrf-gif" class="ablog-post-excerpt" src="_images/xarray_wrf_blog_post.gif" />
 </li>
 <li class="ablog-post"><p class="ablog-post-title">2021-10-08 - <a class="reference internal" href="posts/2021/kay-et-al-cesm2-le/">CESM2-Large Ensemble Reproduction of a Figure from Kay et al. 2015 Using Intake-ESM and hvPlot</a></p>
-<p class="ablog-post-excerpt">This Jupyter Notebook demonstrates how one might use the NCAR Community Earth System Model v2 (CESM2) Large Ensemble (CESM2-LE) data hosted on AWS S3. The notebook shows how to reproduce figure 2 from the Kay et al. (2015) paper describing the CESM LENS dataset (<a class="reference internal" href="#doi:10.1175/BAMS-D-13-00255.1"><span class="xref myst">doi:10.1175/BAMS-D-13-00255.1</span></a>), with the LENS2 dataset.</p>
+<p class="ablog-post-excerpt">This Jupyter Notebook demonstrates how one might use the NCAR Community Earth System Model v2 (CESM2) Large Ensemble (CESM2-LE) data hosted on AWS S3. The notebook shows how to reproduce figure 2 from the Kay et al. (2015) paper describing the CESM LENS dataset (<a class="reference external" href="https://doi.org:10.1175/BAMS-D-13-00255.1">doi:10.1175/BAMS-D-13-00255.1</a>), with the LENS2 dataset.</p>
 <p class="ablog-post-excerpt">There was a previous notebook which explored this use case, put together by Joe Hamman and Anderson Banihirwe, accessible on the Pangeo Gallery using <a class="reference external" href="http://gallery.pangeo.io/repos/NCAR/cesm-lens-aws/notebooks/kay-et-al-2015.v3.html">this link</a>. The specific figure we are replicating is shown below.</p>
 <img alt="cesm1-lens" class="ablog-post-excerpt" src="_images/kay_et_al_2015_lens1.png" />
 </li>
@@ -839,8 +850,7 @@ science itself!</p>
 </section>
 
 <div class="section ablog__blog_comments">
-  
-  
+   
 </div>
 
                 </article>
@@ -857,7 +867,7 @@ science itself!</p>
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">About Us</p>
+        <p class="prev-next-title">About</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -885,13 +895,20 @@ science itself!</p>
   </nav></div>
 
   <div class="sidebar-secondary-item">
-  <div role="note" aria-label="source link">
-    <h3>This Page</h3>
-    <ul class="this-page-menu">
-      <li><a href="_sources/index.md.txt"
-            rel="nofollow">Show Source</a></li>
-    </ul>
-   </div></div>
+
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/NCAR/esds/edit/main/index.md">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+        
+          Edit on GitHub
+        
+      
+    </a>
+  </div>
+</div>
 
 </div></div>
               
@@ -918,7 +935,7 @@ science itself!</p>
 
   <p class="copyright">
     
-      © Copyright 2024.
+      © Copyright 2021, ESDS Community.
       <br/>
     
   </p>
@@ -927,7 +944,7 @@ science itself!</p>
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     <br/>
   </p>
 </div>

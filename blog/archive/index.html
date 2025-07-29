@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>All posts &#8212; ESDS  documentation</title>
+    <title>All posts &#8212; ESDS Website  documentation</title>
   
   
   
@@ -30,9 +30,10 @@
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=66307ba7" />
   
   <!-- So that users can add custom icons -->
   <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -40,30 +41,35 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=187304be"></script>
-    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/documentation_options.js?v=55b5f74b"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../_static/copybutton.js?v=30646c52"></script>
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-196809533-1"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'UA-196809533-1');
+            </script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'blog/archive';</script>
+    <link rel="icon" href="../../_static/esds_logo.png"/>
     <link rel="author" title="About these documents" href="../../about/" />
     <link rel="index" title="Index" href="../../genindex/" />
-    <link rel="search" title="Search" href="../../search/" />
-
+    <link rel="search" title="Search" href="../../search/" /> 
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
-
+    <meta name="docbuild:last-update" content="Jul 29, 2025"/> 
 <link
   rel="alternate"
   type="application/atom+xml"
   href="../../blog/atom.xml"
   title="ESDS"
 />
-
-
-
+  
   </head>
   
   
@@ -129,8 +135,8 @@
       
     
     
-    <img src="../../_static/esds_logo.png" class="logo__image only-light" alt="ESDS  documentation - Home"/>
-    <img src="../../_static/esds_logo.png" class="logo__image only-dark pst-js-only" alt="ESDS  documentation - Home"/>
+    <img src="../../_static/esds_logo.png" class="logo__image only-light" alt="ESDS Website  documentation - Home"/>
+    <img src="../../_static/esds_logo.png" class="logo__image only-dark pst-js-only" alt="ESDS Website  documentation - Home"/>
   
   
 </a></div>
@@ -147,7 +153,7 @@
     
 <li class="nav-item ">
   <a class="nav-link nav-internal" href="../../about/">
-    About Us
+    About
   </a>
 </li>
 
@@ -161,7 +167,7 @@
 
 <li class="nav-item ">
   <a class="nav-link nav-internal" href="../../communication/">
-    Communication and Meetings
+    Community
   </a>
 </li>
 
@@ -187,12 +193,16 @@
     
     <div class="navbar-header-items__end">
       
-      
-        <div class="navbar-item">
+        <div class="navbar-item navbar-persistent--container">
+          
 
-<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-</button></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
       
         <div class="navbar-item">
 
@@ -213,7 +223,7 @@
           
           
           
-          <a href="https://github.com/ncar/esds" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+          <a href="https://github.com/NCAR/esds" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
             <span class="sr-only">GitHub</span></a>
         </li>
         <li class="nav-item">
@@ -234,6 +244,15 @@
     
   </div>
   
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
   
 
   
@@ -267,7 +286,7 @@
     
 <li class="nav-item ">
   <a class="nav-link nav-internal" href="../../about/">
-    About Us
+    About
   </a>
 </li>
 
@@ -281,7 +300,7 @@
 
 <li class="nav-item ">
   <a class="nav-link nav-internal" href="../../communication/">
-    Communication and Meetings
+    Community
   </a>
 </li>
 
@@ -311,12 +330,6 @@
         
           <div class="navbar-item">
 
-<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-</button></div>
-        
-          <div class="navbar-item">
-
 <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
   <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
   <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
@@ -334,7 +347,7 @@
           
           
           
-          <a href="https://github.com/ncar/esds" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+          <a href="https://github.com/NCAR/esds" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
             <span class="sr-only">GitHub</span></a>
         </li>
         <li class="nav-item">
@@ -406,48 +419,40 @@
                 
 <div id="searchbox"></div>
                 <article class="bd-article">
-                  
-
-
+                    
 <div class="section ablog__catalog_header">
   <h2>
-    <span>Posted in
-    <a href="../2025/">2025</a>
-  </span>
+    <span
+      >Posted in
+      <a href="../2025/">2025</a>
+    </span>
   </h2>
   
   <div class="section ablog__catalog_post">
     <p>
       
       <span>10 June 2025</span>
-      
-      -
-      <a href="../../posts/2025/collaborary/"
-        >ESDS Collaboratory</a
-      >
+       -
+      <a href="../../posts/2025/collaborary/">ESDS Collaboratory</a>
     </p>
   </div>
   
 </div>
-
-
-
+  
 <div class="section ablog__catalog_header">
   <h2>
-    <span>Posted in
-    <a href="../2024/">2024</a>
-  </span>
+    <span
+      >Posted in
+      <a href="../2024/">2024</a>
+    </span>
   </h2>
   
   <div class="section ablog__catalog_post">
     <p>
       
       <span>28 June 2024</span>
-      
-      -
-      <a href="../../posts/2024/automation-github-workshop/"
-        >Workshop - From Jupyter Notebook to Web Server: Automating Container Deployments with GitHub Actions</a
-      >
+       -
+      <a href="../../posts/2024/automation-github-workshop/">Workshop - From Jupyter Notebook to Web Server: Automating Container Deployments with GitHub Actions</a>
     </p>
   </div>
   
@@ -455,11 +460,8 @@
     <p>
       
       <span>07 May 2024</span>
-      
-      -
-      <a href="../../posts/2024/containerize-visualizations-event/"
-        >Workshop - From Jupyter Notebook to Web Server: Containerizing Interactive Visualizations</a
-      >
+       -
+      <a href="../../posts/2024/containerize-visualizations-event/">Workshop - From Jupyter Notebook to Web Server: Containerizing Interactive Visualizations</a>
     </p>
   </div>
   
@@ -467,34 +469,27 @@
     <p>
       
       <span>01 March 2024</span>
-      
-      -
-      <a href="../../posts/2024/esds-annual-event-recap/"
-        >2024 ESDS Annual Event Recap</a
-      >
+       -
+      <a href="../../posts/2024/esds-annual-event-recap/">2024 ESDS Annual Event Recap</a>
     </p>
   </div>
   
 </div>
-
-
-
+  
 <div class="section ablog__catalog_header">
   <h2>
-    <span>Posted in
-    <a href="../2023/">2023</a>
-  </span>
+    <span
+      >Posted in
+      <a href="../2023/">2023</a>
+    </span>
   </h2>
   
   <div class="section ablog__catalog_post">
     <p>
       
       <span>21 November 2023</span>
-      
-      -
-      <a href="../../posts/2023/esds-annual-event/"
-        >2024 Earth System Data Science (ESDS) Annual Event</a
-      >
+       -
+      <a href="../../posts/2023/esds-annual-event/">2024 Earth System Data Science (ESDS) Annual Event</a>
     </p>
   </div>
   
@@ -502,11 +497,8 @@
     <p>
       
       <span>28 August 2023</span>
-      
-      -
-      <a href="../../posts/2023/scipy23/"
-        >ESDS at SciPy 2023</a
-      >
+       -
+      <a href="../../posts/2023/scipy23/">ESDS at SciPy 2023</a>
     </p>
   </div>
   
@@ -514,11 +506,8 @@
     <p>
       
       <span>16 August 2023</span>
-      
-      -
-      <a href="../../posts/2023/mfdataset/"
-        >Thinking through CESM data access</a
-      >
+       -
+      <a href="../../posts/2023/mfdataset/">Thinking through CESM data access</a>
     </p>
   </div>
   
@@ -526,11 +515,8 @@
     <p>
       
       <span>15 August 2023</span>
-      
-      -
-      <a href="../../posts/2023/cam-se-analysis/"
-        >Analyzing and Visualizing CAM-SE Output in Python</a
-      >
+       -
+      <a href="../../posts/2023/cam-se-analysis/">Analyzing and Visualizing CAM-SE Output in Python</a>
     </p>
   </div>
   
@@ -538,11 +524,8 @@
     <p>
       
       <span>10 May 2023</span>
-      
-      -
-      <a href="../../posts/2023/office-hours-help/"
-        >ESDS Office Hours Support</a
-      >
+       -
+      <a href="../../posts/2023/office-hours-help/">ESDS Office Hours Support</a>
     </p>
   </div>
   
@@ -550,11 +533,8 @@
     <p>
       
       <span>05 May 2023</span>
-      
-      -
-      <a href="../../posts/2023/unstructured-grid-collab-1/"
-        >Recap: Unstructured Grid Collaborative Work Time</a
-      >
+       -
+      <a href="../../posts/2023/unstructured-grid-collab-1/">Recap: Unstructured Grid Collaborative Work Time</a>
     </p>
   </div>
   
@@ -562,11 +542,8 @@
     <p>
       
       <span>15 March 2023</span>
-      
-      -
-      <a href="../../posts/2023/cesm2-le-timeseries-kerchunk/"
-        >Using Kerchunk with CESM Timeseries Data on the Cloud</a
-      >
+       -
+      <a href="../../posts/2023/cesm2-le-timeseries-kerchunk/">Using Kerchunk with CESM Timeseries Data on the Cloud</a>
     </p>
   </div>
   
@@ -574,34 +551,27 @@
     <p>
       
       <span>07 March 2023</span>
-      
-      -
-      <a href="../../posts/2023/kerchunk-mom6/"
-        >Virtual aggregate CESM MOM6 datasets with kerchunk</a
-      >
+       -
+      <a href="../../posts/2023/kerchunk-mom6/">Virtual aggregate CESM MOM6 datasets with kerchunk</a>
     </p>
   </div>
   
 </div>
-
-
-
+  
 <div class="section ablog__catalog_header">
   <h2>
-    <span>Posted in
-    <a href="../2022/">2022</a>
-  </span>
+    <span
+      >Posted in
+      <a href="../2022/">2022</a>
+    </span>
   </h2>
   
   <div class="section ablog__catalog_post">
     <p>
       
       <span>19 December 2022</span>
-      
-      -
-      <a href="../../posts/2022/esds-event-recap/"
-        >Recap of a (Re)Introduction to Earth System Data Science (ESDS) Across NCAR/UCAR/UCP</a
-      >
+       -
+      <a href="../../posts/2022/esds-event-recap/">Recap of a (Re)Introduction to Earth System Data Science (ESDS) Across NCAR/UCAR/UCP</a>
     </p>
   </div>
   
@@ -609,11 +579,8 @@
     <p>
       
       <span>06 December 2022</span>
-      
-      -
-      <a href="../../posts/2022/cam-se-regridding/"
-        >Regridding using xESMF and an existing weights file</a
-      >
+       -
+      <a href="../../posts/2022/cam-se-regridding/">Regridding using xESMF and an existing weights file</a>
     </p>
   </div>
   
@@ -621,11 +588,8 @@
     <p>
       
       <span>29 November 2022</span>
-      
-      -
-      <a href="../../posts/2022/xarray-groupby-vs-geocat-climatology/"
-        >Calculating Temporal Averages with GeoCAT-comp vs Xarray</a
-      >
+       -
+      <a href="../../posts/2022/xarray-groupby-vs-geocat-climatology/">Calculating Temporal Averages with GeoCAT-comp vs Xarray</a>
     </p>
   </div>
   
@@ -633,11 +597,8 @@
     <p>
       
       <span>02 November 2022</span>
-      
-      -
-      <a href="../../posts/2022/esds-event-prep/"
-        >Preparation for a (Re)Introduction to Earth System Data Science (ESDS) Across NCAR/UCAR/UCP</a
-      >
+       -
+      <a href="../../posts/2022/esds-event-prep/">Preparation for a (Re)Introduction to Earth System Data Science (ESDS) Across NCAR/UCAR/UCP</a>
     </p>
   </div>
   
@@ -645,11 +606,8 @@
     <p>
       
       <span>18 October 2022</span>
-      
-      -
-      <a href="../../posts/2022/esds-fall-event/"
-        >A (Re)Introduction to Earth System Data Science (ESDS) Across NCAR/UCAR/UCP</a
-      >
+       -
+      <a href="../../posts/2022/esds-fall-event/">A (Re)Introduction to Earth System Data Science (ESDS) Across NCAR/UCAR/UCP</a>
     </p>
   </div>
   
@@ -657,11 +615,8 @@
     <p>
       
       <span>10 August 2022</span>
-      
-      -
-      <a href="../../posts/2022/office-hours-appointments/"
-        >New Office Hours Appointment System</a
-      >
+       -
+      <a href="../../posts/2022/office-hours-appointments/">New Office Hours Appointment System</a>
     </p>
   </div>
   
@@ -669,11 +624,8 @@
     <p>
       
       <span>12 May 2022</span>
-      
-      -
-      <a href="../../posts/2022/debugging/"
-        >What I’ve learned about debugging</a
-      >
+       -
+      <a href="../../posts/2022/debugging/">What I’ve learned about debugging</a>
     </p>
   </div>
   
@@ -681,11 +633,8 @@
     <p>
       
       <span>11 May 2022</span>
-      
-      -
-      <a href="../../posts/2022/yourfirst/"
-        >The Python Tutorial Series Returns this Summer!</a
-      >
+       -
+      <a href="../../posts/2022/yourfirst/">The Python Tutorial Series Returns this Summer!</a>
     </p>
   </div>
   
@@ -693,11 +642,8 @@
     <p>
       
       <span>31 March 2022</span>
-      
-      -
-      <a href="../../posts/2022/dask-debug-detrend/"
-        >Debugging dask workflows: Detrending</a
-      >
+       -
+      <a href="../../posts/2022/dask-debug-detrend/">Debugging dask workflows: Detrending</a>
     </p>
   </div>
   
@@ -705,11 +651,8 @@
     <p>
       
       <span>17 March 2022</span>
-      
-      -
-      <a href="../../posts/2022/batch-processing-notebooks-with-papermill/"
-        >Batch Processing Jupyter Notebooks with Papermill</a
-      >
+       -
+      <a href="../../posts/2022/batch-processing-notebooks-with-papermill/">Batch Processing Jupyter Notebooks with Papermill</a>
     </p>
   </div>
   
@@ -717,11 +660,8 @@
     <p>
       
       <span>04 March 2022</span>
-      
-      -
-      <a href="../../posts/2022/Thinking-with-Xarray/"
-        >“Thinking with Xarray” Tutorial</a
-      >
+       -
+      <a href="../../posts/2022/Thinking-with-Xarray/">“Thinking with Xarray” Tutorial</a>
     </p>
   </div>
   
@@ -729,11 +669,8 @@
     <p>
       
       <span>24 February 2022</span>
-      
-      -
-      <a href="../../posts/2022/sparse-PFT-gridding/"
-        >Sparse arrays and the CESM land model component</a
-      >
+       -
+      <a href="../../posts/2022/sparse-PFT-gridding/">Sparse arrays and the CESM land model component</a>
     </p>
   </div>
   
@@ -741,34 +678,27 @@
     <p>
       
       <span>07 February 2022</span>
-      
-      -
-      <a href="../../posts/2022/metpy_tutorial/"
-        >MetPy Tutorial</a
-      >
+       -
+      <a href="../../posts/2022/metpy_tutorial/">MetPy Tutorial</a>
     </p>
   </div>
   
 </div>
-
-
-
+  
 <div class="section ablog__catalog_header">
   <h2>
-    <span>Posted in
-    <a href="../2021/">2021</a>
-  </span>
+    <span
+      >Posted in
+      <a href="../2021/">2021</a>
+    </span>
   </h2>
   
   <div class="section ablog__catalog_post">
     <p>
       
       <span>02 December 2021</span>
-      
-      -
-      <a href="../../posts/2021/intake-esm-tutorial-2021/"
-        >Intake-ESM Tutorial</a
-      >
+       -
+      <a href="../../posts/2021/intake-esm-tutorial-2021/">Intake-ESM Tutorial</a>
     </p>
   </div>
   
@@ -776,11 +706,8 @@
     <p>
       
       <span>02 December 2021</span>
-      
-      -
-      <a href="../../posts/2021/esds-update-november-2021/"
-        >ESDS Update November 2021</a
-      >
+       -
+      <a href="../../posts/2021/esds-update-november-2021/">ESDS Update November 2021</a>
     </p>
   </div>
   
@@ -788,11 +715,8 @@
     <p>
       
       <span>19 November 2021</span>
-      
-      -
-      <a href="../../posts/2021/yearly-averages-xarray/"
-        >Correctly Calculating Annual Averages with Xarray</a
-      >
+       -
+      <a href="../../posts/2021/yearly-averages-xarray/">Correctly Calculating Annual Averages with Xarray</a>
     </p>
   </div>
   
@@ -800,11 +724,8 @@
     <p>
       
       <span>12 November 2021</span>
-      
-      -
-      <a href="../../posts/2021/weather-station-data-preprocess/"
-        >Processing Data from the NCAR Mesa Lab Weather Station</a
-      >
+       -
+      <a href="../../posts/2021/weather-station-data-preprocess/">Processing Data from the NCAR Mesa Lab Weather Station</a>
     </p>
   </div>
   
@@ -812,11 +733,8 @@
     <p>
       
       <span>08 November 2021</span>
-      
-      -
-      <a href="../../posts/2021/oop-tutorial/"
-        >Object Oriented Programming Tutorial</a
-      >
+       -
+      <a href="../../posts/2021/oop-tutorial/">Object Oriented Programming Tutorial</a>
     </p>
   </div>
   
@@ -824,11 +742,8 @@
     <p>
       
       <span>28 October 2021</span>
-      
-      -
-      <a href="../../posts/2021/esds-update-october-2021/"
-        >ESDS Update October 2021</a
-      >
+       -
+      <a href="../../posts/2021/esds-update-october-2021/">ESDS Update October 2021</a>
     </p>
   </div>
   
@@ -836,11 +751,8 @@
     <p>
       
       <span>25 October 2021</span>
-      
-      -
-      <a href="../../posts/2021/advanced-plotting-tutorial/"
-        >Advanced Plotting Tutorial</a
-      >
+       -
+      <a href="../../posts/2021/advanced-plotting-tutorial/">Advanced Plotting Tutorial</a>
     </p>
   </div>
   
@@ -848,11 +760,8 @@
     <p>
       
       <span>22 October 2021</span>
-      
-      -
-      <a href="../../posts/2021/intake-esm-derived-variables/"
-        >Using Intake-ESM's New Derived Variable Functionality</a
-      >
+       -
+      <a href="../../posts/2021/intake-esm-derived-variables/">Using Intake-ESM's New Derived Variable Functionality</a>
     </p>
   </div>
   
@@ -860,11 +769,8 @@
     <p>
       
       <span>15 October 2021</span>
-      
-      -
-      <a href="../../posts/2021/xarray-wrf-example/"
-        >Reading WRF data into Xarray and Visualizing the Output using hvPlot</a
-      >
+       -
+      <a href="../../posts/2021/xarray-wrf-example/">Reading WRF data into Xarray and Visualizing the Output using hvPlot</a>
     </p>
   </div>
   
@@ -872,11 +778,8 @@
     <p>
       
       <span>08 October 2021</span>
-      
-      -
-      <a href="../../posts/2021/kay-et-al-cesm2-le/"
-        >CESM2-Large Ensemble Reproduction of a Figure from Kay et al. 2015 Using Intake-ESM and hvPlot</a
-      >
+       -
+      <a href="../../posts/2021/kay-et-al-cesm2-le/">CESM2-Large Ensemble Reproduction of a Figure from Kay et al. 2015 Using Intake-ESM and hvPlot</a>
     </p>
   </div>
   
@@ -884,11 +787,8 @@
     <p>
       
       <span>01 October 2021</span>
-      
-      -
-      <a href="../../posts/2021/esds-update-september-2021/"
-        >ESDS Progress Over the Past Few Months</a
-      >
+       -
+      <a href="../../posts/2021/esds-update-september-2021/">ESDS Progress Over the Past Few Months</a>
     </p>
   </div>
   
@@ -896,11 +796,8 @@
     <p>
       
       <span>24 September 2021</span>
-      
-      -
-      <a href="../../posts/2021/jupyter-based-diagnostics-overview/"
-        >Reimagining Diagnostics Through the Use of the Jupyter Ecosystem</a
-      >
+       -
+      <a href="../../posts/2021/jupyter-based-diagnostics-overview/">Reimagining Diagnostics Through the Use of the Jupyter Ecosystem</a>
     </p>
   </div>
   
@@ -908,11 +805,8 @@
     <p>
       
       <span>17 September 2021</span>
-      
-      -
-      <a href="../../posts/2021/benchmarking-history-timeseries-intake/"
-        >Benchmarking Performance of History vs. Timeseries Files</a
-      >
+       -
+      <a href="../../posts/2021/benchmarking-history-timeseries-intake/">Benchmarking Performance of History vs. Timeseries Files</a>
     </p>
   </div>
   
@@ -920,11 +814,8 @@
     <p>
       
       <span>10 September 2021</span>
-      
-      -
-      <a href="../../posts/2021/regrid-observations-pop-grid/"
-        >Regridding High Resolution Observations to a High Resolution Model Grid</a
-      >
+       -
+      <a href="../../posts/2021/regrid-observations-pop-grid/">Regridding High Resolution Observations to a High Resolution Model Grid</a>
     </p>
   </div>
   
@@ -932,11 +823,8 @@
     <p>
       
       <span>03 September 2021</span>
-      
-      -
-      <a href="../../posts/2021/geocat-comp-tutorial/"
-        >GeoCAT-Comp Tutorial</a
-      >
+       -
+      <a href="../../posts/2021/geocat-comp-tutorial/">GeoCAT-Comp Tutorial</a>
     </p>
   </div>
   
@@ -944,11 +832,8 @@
     <p>
       
       <span>27 August 2021</span>
-      
-      -
-      <a href="../../posts/2021/intake-obs-cesm2le-comparison/"
-        >Comparing Atmospheric Model Output with Observations Using Intake-ESM</a
-      >
+       -
+      <a href="../../posts/2021/intake-obs-cesm2le-comparison/">Comparing Atmospheric Model Output with Observations Using Intake-ESM</a>
     </p>
   </div>
   
@@ -956,11 +841,8 @@
     <p>
       
       <span>20 August 2021</span>
-      
-      -
-      <a href="../../posts/2021/intake-esm-holoviews-diagnostics/"
-        >Examining Diagnostics Using Intake-ESM and hvPlot</a
-      >
+       -
+      <a href="../../posts/2021/intake-esm-holoviews-diagnostics/">Examining Diagnostics Using Intake-ESM and hvPlot</a>
     </p>
   </div>
   
@@ -968,11 +850,8 @@
     <p>
       
       <span>19 August 2021</span>
-      
-      -
-      <a href="../../posts/2021/geocat-tutorial/"
-        >Plotting with GeoCAT Tutorial</a
-      >
+       -
+      <a href="../../posts/2021/geocat-tutorial/">Plotting with GeoCAT Tutorial</a>
     </p>
   </div>
   
@@ -980,11 +859,8 @@
     <p>
       
       <span>13 August 2021</span>
-      
-      -
-      <a href="../../posts/2021/cesm-datashader/"
-        >Plotting CESM Data on an Unstructured Grid using Geoviews and Datashader</a
-      >
+       -
+      <a href="../../posts/2021/cesm-datashader/">Plotting CESM Data on an Unstructured Grid using Geoviews and Datashader</a>
     </p>
   </div>
   
@@ -992,11 +868,8 @@
     <p>
       
       <span>06 August 2021</span>
-      
-      -
-      <a href="../../posts/2021/intake-cesm2-le-glade-example/"
-        >Using Intake-ESM to Analyze Data from CESM2-LE</a
-      >
+       -
+      <a href="../../posts/2021/intake-cesm2-le-glade-example/">Using Intake-ESM to Analyze Data from CESM2-LE</a>
     </p>
   </div>
   
@@ -1004,11 +877,8 @@
     <p>
       
       <span>30 July 2021</span>
-      
-      -
-      <a href="../../posts/2021/project-pythia-overview/"
-        >Project Pythia Portal Overview</a
-      >
+       -
+      <a href="../../posts/2021/project-pythia-overview/">Project Pythia Portal Overview</a>
     </p>
   </div>
   
@@ -1016,11 +886,8 @@
     <p>
       
       <span>26 July 2021</span>
-      
-      -
-      <a href="../../posts/2021/scipy-2021-takeaways/"
-        >SciPy Conference 2021 Takeaways</a
-      >
+       -
+      <a href="../../posts/2021/scipy-2021-takeaways/">SciPy Conference 2021 Takeaways</a>
     </p>
   </div>
   
@@ -1028,11 +895,8 @@
     <p>
       
       <span>23 July 2021</span>
-      
-      -
-      <a href="../../posts/2021/dask-tutorial-update/"
-        >Dask Tutorial UPDATED DATES</a
-      >
+       -
+      <a href="../../posts/2021/dask-tutorial-update/">Dask Tutorial UPDATED DATES</a>
     </p>
   </div>
   
@@ -1040,11 +904,8 @@
     <p>
       
       <span>08 July 2021</span>
-      
-      -
-      <a href="../../posts/2021/dask-tutorial/"
-        >Dask Tutorial</a
-      >
+       -
+      <a href="../../posts/2021/dask-tutorial/">Dask Tutorial</a>
     </p>
   </div>
   
@@ -1052,11 +913,8 @@
     <p>
       
       <span>02 July 2021</span>
-      
-      -
-      <a href="../../posts/2021/scaling-with-dask-class-takeaways/"
-        >Scaling Python with Dask Class Takeaways</a
-      >
+       -
+      <a href="../../posts/2021/scaling-with-dask-class-takeaways/">Scaling Python with Dask Class Takeaways</a>
     </p>
   </div>
   
@@ -1064,11 +922,8 @@
     <p>
       
       <span>25 June 2021</span>
-      
-      -
-      <a href="../../posts/2021/model_documentation_jupyterbook/"
-        >Creating Model Documentation Using Jupyterbook and Intake-esm</a
-      >
+       -
+      <a href="../../posts/2021/model_documentation_jupyterbook/">Creating Model Documentation Using Jupyterbook and Intake-esm</a>
     </p>
   </div>
   
@@ -1076,11 +931,8 @@
     <p>
       
       <span>17 June 2021</span>
-      
-      -
-      <a href="../../posts/2021/cesm-workshop-2021-diagnostics/"
-        >CESM Diagnostics Discussion</a
-      >
+       -
+      <a href="../../posts/2021/cesm-workshop-2021-diagnostics/">CESM Diagnostics Discussion</a>
     </p>
   </div>
   
@@ -1088,11 +940,8 @@
     <p>
       
       <span>11 June 2021</span>
-      
-      -
-      <a href="../../posts/2021/graphviz_example/"
-        >Creating Visualizations of Intake-ESM Catalogs</a
-      >
+       -
+      <a href="../../posts/2021/graphviz_example/">Creating Visualizations of Intake-ESM Catalogs</a>
     </p>
   </div>
   
@@ -1100,11 +949,8 @@
     <p>
       
       <span>04 June 2021</span>
-      
-      -
-      <a href="../../posts/2021/xarray-tutorial/"
-        >Xarray Tutorial</a
-      >
+       -
+      <a href="../../posts/2021/xarray-tutorial/">Xarray Tutorial</a>
     </p>
   </div>
   
@@ -1112,11 +958,8 @@
     <p>
       
       <span>04 June 2021</span>
-      
-      -
-      <a href="../../posts/2021/ecgtools-history-files-example/"
-        >Building an Intake-esm catalog from CESM2 History Files</a
-      >
+       -
+      <a href="../../posts/2021/ecgtools-history-files-example/">Building an Intake-esm catalog from CESM2 History Files</a>
     </p>
   </div>
   
@@ -1124,11 +967,8 @@
     <p>
       
       <span>28 May 2021</span>
-      
-      -
-      <a href="../../posts/2021/dask-summit-takeaway/"
-        >Dask Distributed Summit 2021 Takeaways</a
-      >
+       -
+      <a href="../../posts/2021/dask-summit-takeaway/">Dask Distributed Summit 2021 Takeaways</a>
     </p>
   </div>
   
@@ -1136,11 +976,8 @@
     <p>
       
       <span>19 May 2021</span>
-      
-      -
-      <a href="../../posts/2021/pandas-tutorial/"
-        >Pandas Tutorial</a
-      >
+       -
+      <a href="../../posts/2021/pandas-tutorial/">Pandas Tutorial</a>
     </p>
   </div>
   
@@ -1148,11 +985,8 @@
     <p>
       
       <span>14 May 2021</span>
-      
-      -
-      <a href="../../posts/2021/intake_cmip6_debug/"
-        >Debugging Intake-ESM Process for Reading in CMIP6</a
-      >
+       -
+      <a href="../../posts/2021/intake_cmip6_debug/">Debugging Intake-ESM Process for Reading in CMIP6</a>
     </p>
   </div>
   
@@ -1160,11 +994,8 @@
     <p>
       
       <span>07 May 2021</span>
-      
-      -
-      <a href="../../posts/2021/git-and-github-tutorial/"
-        >Git and GitHub Tutorial</a
-      >
+       -
+      <a href="../../posts/2021/git-and-github-tutorial/">Git and GitHub Tutorial</a>
     </p>
   </div>
   
@@ -1172,11 +1003,8 @@
     <p>
       
       <span>06 May 2021</span>
-      
-      -
-      <a href="../../posts/2021/paired_programming_vs/"
-        >Paired Programming using VS Code</a
-      >
+       -
+      <a href="../../posts/2021/paired_programming_vs/">Paired Programming using VS Code</a>
     </p>
   </div>
   
@@ -1184,11 +1012,8 @@
     <p>
       
       <span>28 April 2021</span>
-      
-      -
-      <a href="../../posts/2021/map_blocks_example/"
-        >How to Use xarray.map_blocks for Vertical Interpolation of a 3D Field</a
-      >
+       -
+      <a href="../../posts/2021/map_blocks_example/">How to Use xarray.map_blocks for Vertical Interpolation of a 3D Field</a>
     </p>
   </div>
   
@@ -1196,11 +1021,8 @@
     <p>
       
       <span>26 April 2021</span>
-      
-      -
-      <a href="../../posts/2021/cartopy-tutorial/"
-        >Cartopy Tutorial</a
-      >
+       -
+      <a href="../../posts/2021/cartopy-tutorial/">Cartopy Tutorial</a>
     </p>
   </div>
   
@@ -1208,11 +1030,8 @@
     <p>
       
       <span>23 April 2021</span>
-      
-      -
-      <a href="../../posts/2021/multiple_index_xarray_xoak/"
-        >Indexing unstructured grids with the Power of Xoak</a
-      >
+       -
+      <a href="../../posts/2021/multiple_index_xarray_xoak/">Indexing unstructured grids with the Power of Xoak</a>
     </p>
   </div>
   
@@ -1220,11 +1039,8 @@
     <p>
       
       <span>15 April 2021</span>
-      
-      -
-      <a href="../../posts/2021/ncar-jobqueue-example/"
-        >NCAR-Jobqueue</a
-      >
+       -
+      <a href="../../posts/2021/ncar-jobqueue-example/">NCAR-Jobqueue</a>
     </p>
   </div>
   
@@ -1232,11 +1048,8 @@
     <p>
       
       <span>09 April 2021</span>
-      
-      -
-      <a href="../../posts/2021/object-oriented-programming-tutorial/"
-        >Object Oriented Programming Tutorial</a
-      >
+       -
+      <a href="../../posts/2021/object-oriented-programming-tutorial/">Object Oriented Programming Tutorial</a>
     </p>
   </div>
   
@@ -1244,11 +1057,8 @@
     <p>
       
       <span>09 April 2021</span>
-      
-      -
-      <a href="../../posts/2021/intake_esm_dask/"
-        >An Example of Using Intake-ESM</a
-      >
+       -
+      <a href="../../posts/2021/intake_esm_dask/">An Example of Using Intake-ESM</a>
     </p>
   </div>
   
@@ -1256,11 +1066,8 @@
     <p>
       
       <span>06 April 2021</span>
-      
-      -
-      <a href="../../posts/2021/casper_pbs_dask/"
-        >Using Dask on the New Casper PBS Scheduler</a
-      >
+       -
+      <a href="../../posts/2021/casper_pbs_dask/">Using Dask on the New Casper PBS Scheduler</a>
     </p>
   </div>
   
@@ -1268,11 +1075,8 @@
     <p>
       
       <span>02 April 2021</span>
-      
-      -
-      <a href="../../posts/2021/software-citation/"
-        >The Importance of Software Citation</a
-      >
+       -
+      <a href="../../posts/2021/software-citation/">The Importance of Software Citation</a>
     </p>
   </div>
   
@@ -1280,11 +1084,8 @@
     <p>
       
       <span>30 March 2021</span>
-      
-      -
-      <a href="../../posts/2021/matplotlib-faq/"
-        >Matplotlib Tutorial FAQ</a
-      >
+       -
+      <a href="../../posts/2021/matplotlib-faq/">Matplotlib Tutorial FAQ</a>
     </p>
   </div>
   
@@ -1292,11 +1093,8 @@
     <p>
       
       <span>26 March 2021</span>
-      
-      -
-      <a href="../../posts/2021/esds-blog/"
-        >NCAR-CGD ESDS Town Hall</a
-      >
+       -
+      <a href="../../posts/2021/esds-blog/">NCAR-CGD ESDS Town Hall</a>
     </p>
   </div>
   
@@ -1304,11 +1102,8 @@
     <p>
       
       <span>19 March 2021</span>
-      
-      -
-      <a href="../../posts/2021/numpy-faq/"
-        >NumPy Tutorial FAQ</a
-      >
+       -
+      <a href="../../posts/2021/numpy-faq/">NumPy Tutorial FAQ</a>
     </p>
   </div>
   
@@ -1316,11 +1111,8 @@
     <p>
       
       <span>19 March 2021</span>
-      
-      -
-      <a href="../../posts/2021/matplotlib-tutorial/"
-        >Matplotlib Tutorial</a
-      >
+       -
+      <a href="../../posts/2021/matplotlib-tutorial/">Matplotlib Tutorial</a>
     </p>
   </div>
   
@@ -1328,11 +1120,8 @@
     <p>
       
       <span>19 March 2021</span>
-      
-      -
-      <a href="../../posts/2021/Interactive_Dashboard/"
-        >HiRes-CESM Interactive Dashboard Example</a
-      >
+       -
+      <a href="../../posts/2021/Interactive_Dashboard/">HiRes-CESM Interactive Dashboard Example</a>
     </p>
   </div>
   
@@ -1340,11 +1129,8 @@
     <p>
       
       <span>03 March 2021</span>
-      
-      -
-      <a href="../../posts/2021/jupyter-notebooks-faq/"
-        >Jupyter Notebooks Tutorial FAQ</a
-      >
+       -
+      <a href="../../posts/2021/jupyter-notebooks-faq/">Jupyter Notebooks Tutorial FAQ</a>
     </p>
   </div>
   
@@ -1352,11 +1138,8 @@
     <p>
       
       <span>26 February 2021</span>
-      
-      -
-      <a href="../../posts/2021/numpy-tutorial/"
-        >Numpy Tutorial</a
-      >
+       -
+      <a href="../../posts/2021/numpy-tutorial/">Numpy Tutorial</a>
     </p>
   </div>
   
@@ -1364,11 +1147,8 @@
     <p>
       
       <span>19 February 2021</span>
-      
-      -
-      <a href="../../posts/2021/your-first-package-python-tutorial-faq/"
-        >Your First Package Python Tutorial FAQ</a
-      >
+       -
+      <a href="../../posts/2021/your-first-package-python-tutorial-faq/">Your First Package Python Tutorial FAQ</a>
     </p>
   </div>
   
@@ -1376,34 +1156,27 @@
     <p>
       
       <span>16 February 2021</span>
-      
-      -
-      <a href="../../posts/2021/python-tutorial-seminar-series-spring-2021/"
-        >Python Tutorial Seminar Series - Spring 2021</a
-      >
+       -
+      <a href="../../posts/2021/python-tutorial-seminar-series-spring-2021/">Python Tutorial Seminar Series - Spring 2021</a>
     </p>
   </div>
   
 </div>
-
-
-
+  
 <div class="section ablog__catalog_header">
   <h2>
-    <span>Posted in
-    <a href="../2020/">2020</a>
-  </span>
+    <span
+      >Posted in
+      <a href="../2020/">2020</a>
+    </span>
   </h2>
   
   <div class="section ablog__catalog_post">
     <p>
       
       <span>18 November 2020</span>
-      
-      -
-      <a href="../../posts/2020/python-tutorial-faq-part-3/"
-        >Python Tutorial FAQ - Part 3</a
-      >
+       -
+      <a href="../../posts/2020/python-tutorial-faq-part-3/">Python Tutorial FAQ - Part 3</a>
     </p>
   </div>
   
@@ -1411,11 +1184,8 @@
     <p>
       
       <span>05 November 2020</span>
-      
-      -
-      <a href="../../posts/2020/python-tutorial-faq-part-2/"
-        >Python Tutorial FAQ - Part 2</a
-      >
+       -
+      <a href="../../posts/2020/python-tutorial-faq-part-2/">Python Tutorial FAQ - Part 2</a>
     </p>
   </div>
   
@@ -1423,11 +1193,8 @@
     <p>
       
       <span>20 October 2020</span>
-      
-      -
-      <a href="../../posts/2020/python-tutorial-faq/"
-        >Python Tutorial FAQ</a
-      >
+       -
+      <a href="../../posts/2020/python-tutorial-faq/">Python Tutorial FAQ</a>
     </p>
   </div>
   
@@ -1435,11 +1202,8 @@
     <p>
       
       <span>18 September 2020</span>
-      
-      -
-      <a href="../../posts/2020/tutorial-seminar-series/"
-        >Tutorial Seminar Series</a
-      >
+       -
+      <a href="../../posts/2020/tutorial-seminar-series/">Tutorial Seminar Series</a>
     </p>
   </div>
   
@@ -1447,11 +1211,8 @@
     <p>
       
       <span>29 June 2020</span>
-      
-      -
-      <a href="../../posts/2020/writing-multiple-netcdf-files-in-parallel-with-xarray-and-dask/"
-        >Writing multiple netCDF files in parallel with xarray and dask</a
-      >
+       -
+      <a href="../../posts/2020/writing-multiple-netcdf-files-in-parallel-with-xarray-and-dask/">Writing multiple netCDF files in parallel with xarray and dask</a>
     </p>
   </div>
   
@@ -1459,34 +1220,27 @@
     <p>
       
       <span>08 May 2020</span>
-      
-      -
-      <a href="../../posts/2020/templating-isnt-just-for-web-developers/"
-        >Templating isn’t just for Web Developers!</a
-      >
+       -
+      <a href="../../posts/2020/templating-isnt-just-for-web-developers/">Templating isn’t just for Web Developers!</a>
     </p>
   </div>
   
 </div>
-
-
-
+  
 <div class="section ablog__catalog_header">
   <h2>
-    <span>Posted in
-    <a href="../2019/">2019</a>
-  </span>
+    <span
+      >Posted in
+      <a href="../2019/">2019</a>
+    </span>
   </h2>
   
   <div class="section ablog__catalog_post">
     <p>
       
       <span>09 December 2019</span>
-      
-      -
-      <a href="../../posts/2019/we-are-xdev/"
-        >We are Xdev!</a
-      >
+       -
+      <a href="../../posts/2019/we-are-xdev/">We are Xdev!</a>
     </p>
   </div>
   
@@ -1494,18 +1248,13 @@
     <p>
       
       <span>28 August 2019</span>
-      
-      -
-      <a href="../../posts/2020/Time/"
-        >The Significance of Time</a
-      >
+       -
+      <a href="../../posts/2020/Time/">The Significance of Time</a>
     </p>
   </div>
   
 </div>
-
-
-
+  
                 </article>
               
               
@@ -1545,7 +1294,7 @@
 
   <p class="copyright">
     
-      © Copyright 2024.
+      © Copyright 2021, ESDS Community.
       <br/>
     
   </p>
@@ -1554,7 +1303,7 @@
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     <br/>
   </p>
 </div>

@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Posts by Max Grover &#8212; ESDS  documentation</title>
+    <title>Posts by Max Grover &#8212; ESDS Website  documentation</title>
   
   
   
@@ -30,9 +30,10 @@
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=66307ba7" />
   
   <!-- So that users can add custom icons -->
   <script src="../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -40,30 +41,35 @@
   <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../../_static/documentation_options.js?v=187304be"></script>
-    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/documentation_options.js?v=55b5f74b"></script>
+    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../../_static/copybutton.js?v=30646c52"></script>
     <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-196809533-1"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'UA-196809533-1');
+            </script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'blog/author/max-grover';</script>
+    <link rel="icon" href="../../../_static/esds_logo.png"/>
     <link rel="author" title="About these documents" href="../../../about/" />
     <link rel="index" title="Index" href="../../../genindex/" />
-    <link rel="search" title="Search" href="../../../search/" />
-
+    <link rel="search" title="Search" href="../../../search/" /> 
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
-
+    <meta name="docbuild:last-update" content="Jul 29, 2025"/> 
 <link
   rel="alternate"
   type="application/atom+xml"
   href="../../../blog/atom.xml"
   title="Posts by Max Grover"
 />
-
-
-
+  
   </head>
   
   
@@ -129,8 +135,8 @@
       
     
     
-    <img src="../../../_static/esds_logo.png" class="logo__image only-light" alt="ESDS  documentation - Home"/>
-    <img src="../../../_static/esds_logo.png" class="logo__image only-dark pst-js-only" alt="ESDS  documentation - Home"/>
+    <img src="../../../_static/esds_logo.png" class="logo__image only-light" alt="ESDS Website  documentation - Home"/>
+    <img src="../../../_static/esds_logo.png" class="logo__image only-dark pst-js-only" alt="ESDS Website  documentation - Home"/>
   
   
 </a></div>
@@ -147,7 +153,7 @@
     
 <li class="nav-item ">
   <a class="nav-link nav-internal" href="../../../about/">
-    About Us
+    About
   </a>
 </li>
 
@@ -161,7 +167,7 @@
 
 <li class="nav-item ">
   <a class="nav-link nav-internal" href="../../../communication/">
-    Communication and Meetings
+    Community
   </a>
 </li>
 
@@ -187,12 +193,16 @@
     
     <div class="navbar-header-items__end">
       
-      
-        <div class="navbar-item">
+        <div class="navbar-item navbar-persistent--container">
+          
 
-<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-</button></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
       
         <div class="navbar-item">
 
@@ -213,7 +223,7 @@
           
           
           
-          <a href="https://github.com/ncar/esds" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+          <a href="https://github.com/NCAR/esds" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
             <span class="sr-only">GitHub</span></a>
         </li>
         <li class="nav-item">
@@ -234,6 +244,15 @@
     
   </div>
   
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
   
 
   
@@ -267,7 +286,7 @@
     
 <li class="nav-item ">
   <a class="nav-link nav-internal" href="../../../about/">
-    About Us
+    About
   </a>
 </li>
 
@@ -281,7 +300,7 @@
 
 <li class="nav-item ">
   <a class="nav-link nav-internal" href="../../../communication/">
-    Communication and Meetings
+    Community
   </a>
 </li>
 
@@ -311,12 +330,6 @@
         
           <div class="navbar-item">
 
-<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-</button></div>
-        
-          <div class="navbar-item">
-
 <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
   <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
   <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
@@ -334,7 +347,7 @@
           
           
           
-          <a href="https://github.com/ncar/esds" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+          <a href="https://github.com/NCAR/esds" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
             <span class="sr-only">GitHub</span></a>
         </li>
         <li class="nav-item">
@@ -406,95 +419,59 @@
                 
 <div id="searchbox"></div>
                 <article class="bd-article">
-                  
-
+                   
 <div class="section ablog__collection">
   <h1>
     
-      <span>Posts by
-      
-    Max Grover
-    
-  </span>
+    <span
+      >Posts by  Max Grover 
+    </span>
   </h1>
-  
-  
+   
   <div class="section ablog-post">
     <h2 class="ablog-post-title">
       <a href="../../../posts/2023/cesm2-le-timeseries-kerchunk/">Using Kerchunk with CESM Timeseries Data on the Cloud</a>
     </h2>
     <ul class="ablog-archive">
       <li>
-        
-        
+         
         <i class="fa fa-calendar"></i>
         
         <span>15 March 2023</span>
         
       </li>
       <div class="ablog-sidebar-item ablog__postcard2">
-
-
-<li id="ablog-sidebar-item author ablog__author">
-  <span>
-    
-    <i class="fa-fw fa fa-user"></i>
-    
+   
+  <li id="ablog-sidebar-item author ablog__author">
+    <span>
+      
+      <i class="fa-fw fa fa-user"></i>
+      
     </span>
-  
-  
-  <a href="#">Max Grover</a>
-  
-  ,
-  
-  
-  
-  
-  <a href="../deepak-cherian/">Deepak Cherian</a>
-  
-  
-  
-</li>
-
-
-
-
-
-<li id="ablog-sidebar-item tags ablog__tags">
-  <span>
-    
-    
-    <i class="fa-fw fa fa-tags"></i>
-    
-    
+     
+    <a href="#">Max Grover</a>
+     ,    
+    <a href="../deepak-cherian/">Deepak Cherian</a>
+      
+  </li>
+      
+  <li id="ablog-sidebar-item tags ablog__tags">
+    <span>
+       
+      <i class="fa-fw fa fa-tags"></i>
+       
     </span>
-  
-  
-  <a href="../../tag/benchmark/">benchmark</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/cesm/">cesm</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/netcdf/">netcdf</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/zarr/">zarr</a>
-  
-  
-  
-</li>
-
-
+     
+    <a href="../../tag/benchmark/">benchmark</a>
+        
+    <a href="../../tag/cesm/">cesm</a>
+        
+    <a href="../../tag/netcdf/">netcdf</a>
+        
+    <a href="../../tag/zarr/">zarr</a>
+      
+  </li>
+   
 </div>
     </ul>
     <p class="ablog-post-excerpt"><p>We benchmark reading a subset of the CESM2-Large Ensemble stored as a collection of netCDF files on the cloud (Amazon / AWS) <strong>from Casper</strong>.
@@ -502,8 +479,10 @@ We use a single ensemble member historical experiment with daily data from 1850 
 <p>We read in two ways:</p>
 </p>
 
-    <p class="ablog-post-expand"><a href="../../../posts/2023/cesm2-le-timeseries-kerchunk/"><em>Read more ...</em></a></p>
-    <hr/>
+    <p class="ablog-post-expand">
+      <a href="../../../posts/2023/cesm2-le-timeseries-kerchunk/"><em>Read more ...</em></a>
+    </p>
+    <hr />
   </div>
   
   <div class="section ablog-post">
@@ -512,71 +491,50 @@ We use a single ensemble member historical experiment with daily data from 1850 
     </h2>
     <ul class="ablog-archive">
       <li>
-        
-        
+         
         <i class="fa fa-calendar"></i>
         
         <span>02 December 2021</span>
         
       </li>
       <div class="ablog-sidebar-item ablog__postcard2">
-
-
-<li id="ablog-sidebar-item author ablog__author">
-  <span>
-    
-    <i class="fa-fw fa fa-user"></i>
-    
+   
+  <li id="ablog-sidebar-item author ablog__author">
+    <span>
+      
+      <i class="fa-fw fa fa-user"></i>
+      
     </span>
-  
-  
-  <a href="#">Max Grover</a>
-  
-  
-  
-</li>
-
-
-
-
-
-<li id="ablog-sidebar-item tags ablog__tags">
-  <span>
-    
-    
-    <i class="fa-fw fa fa-tags"></i>
-    
-    
+     
+    <a href="#">Max Grover</a>
+      
+  </li>
+      
+  <li id="ablog-sidebar-item tags ablog__tags">
+    <span>
+       
+      <i class="fa-fw fa fa-tags"></i>
+       
     </span>
-  
-  
-  <a href="../../tag/python-tutorial-series/">python-tutorial-series</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/xarray/">xarray</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/intake/">intake</a>
-  
-  
-  
-</li>
-
-
+     
+    <a href="../../tag/python-tutorial-series/">python-tutorial-series</a>
+        
+    <a href="../../tag/xarray/">xarray</a>
+        
+    <a href="../../tag/intake/">intake</a>
+      
+  </li>
+   
 </div>
     </ul>
     <p class="ablog-post-excerpt"><p>The Project Pythia Python Tutorial Seminar Series continues with the Intake-ESM Tutorial on <strong>Wednesday, December 8 at 1 PM Mountain Standard Time</strong>. This session will be led by <a class="reference external" href="https://github.com/mgrover1">Max Grover</a>.</p>
 <p>The content for this tutorial is hosted in the <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> notebook file(s) within the <code class="docutils literal notranslate"><span class="pre">tutorial</span></code> directory of this repository.</p>
 </p>
 
-    <p class="ablog-post-expand"><a href="../../../posts/2021/intake-esm-tutorial-2021/"><em>Read more ...</em></a></p>
-    <hr/>
+    <p class="ablog-post-expand">
+      <a href="../../../posts/2021/intake-esm-tutorial-2021/"><em>Read more ...</em></a>
+    </p>
+    <hr />
   </div>
   
   <div class="section ablog-post">
@@ -585,83 +543,54 @@ We use a single ensemble member historical experiment with daily data from 1850 
     </h2>
     <ul class="ablog-archive">
       <li>
-        
-        
+         
         <i class="fa fa-calendar"></i>
         
         <span>02 December 2021</span>
         
       </li>
       <div class="ablog-sidebar-item ablog__postcard2">
-
-
-<li id="ablog-sidebar-item author ablog__author">
-  <span>
-    
-    <i class="fa-fw fa fa-user"></i>
-    
+   
+  <li id="ablog-sidebar-item author ablog__author">
+    <span>
+      
+      <i class="fa-fw fa fa-user"></i>
+      
     </span>
-  
-  
-  <a href="#">Max Grover</a>
-  
-  
-  
-</li>
-
-
-
-
-
-<li id="ablog-sidebar-item tags ablog__tags">
-  <span>
-    
-    
-    <i class="fa-fw fa fa-tags"></i>
-    
-    
+     
+    <a href="#">Max Grover</a>
+      
+  </li>
+      
+  <li id="ablog-sidebar-item tags ablog__tags">
+    <span>
+       
+      <i class="fa-fw fa fa-tags"></i>
+       
     </span>
-  
-  
-  <a href="../../tag/update/">update</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/faq/">faq</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/xarray/">xarray</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/dask/">dask</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/matplotlib/">matplotlib</a>
-  
-  
-  
-</li>
-
-
+     
+    <a href="../../tag/update/">update</a>
+        
+    <a href="../../tag/faq/">faq</a>
+        
+    <a href="../../tag/xarray/">xarray</a>
+        
+    <a href="../../tag/dask/">dask</a>
+        
+    <a href="../../tag/matplotlib/">matplotlib</a>
+      
+  </li>
+   
 </div>
     </ul>
     <p class="ablog-post-excerpt"><p>November was an active month! There were a couple of ESDS Forum talks, a variety of answered Python questions during office hours, and a Python tutorial!</p>
 <p>Check out the following ESDS update for the month of November 2021.</p>
 <img alt="november-2021-office-hours" src="../../../_images/november_office_hour_stats.png" /></p>
 
-    <p class="ablog-post-expand"><a href="../../../posts/2021/esds-update-november-2021/"><em>Read more ...</em></a></p>
-    <hr/>
+    <p class="ablog-post-expand">
+      <a href="../../../posts/2021/esds-update-november-2021/"><em>Read more ...</em></a>
+    </p>
+    <hr />
   </div>
   
   <div class="section ablog-post">
@@ -670,77 +599,52 @@ We use a single ensemble member historical experiment with daily data from 1850 
     </h2>
     <ul class="ablog-archive">
       <li>
-        
-        
+         
         <i class="fa fa-calendar"></i>
         
         <span>19 November 2021</span>
         
       </li>
       <div class="ablog-sidebar-item ablog__postcard2">
-
-
-<li id="ablog-sidebar-item author ablog__author">
-  <span>
-    
-    <i class="fa-fw fa fa-user"></i>
-    
+   
+  <li id="ablog-sidebar-item author ablog__author">
+    <span>
+      
+      <i class="fa-fw fa fa-user"></i>
+      
     </span>
-  
-  
-  <a href="#">Max Grover</a>
-  
-  
-  
-</li>
-
-
-
-
-
-<li id="ablog-sidebar-item tags ablog__tags">
-  <span>
-    
-    
-    <i class="fa-fw fa fa-tags"></i>
-    
-    
+     
+    <a href="#">Max Grover</a>
+      
+  </li>
+      
+  <li id="ablog-sidebar-item tags ablog__tags">
+    <span>
+       
+      <i class="fa-fw fa fa-tags"></i>
+       
     </span>
-  
-  
-  <a href="../../tag/cesm/">cesm</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/diagnostics/">diagnostics</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/xarray/">xarray</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/cesm2-le/">cesm2-le</a>
-  
-  
-  
-</li>
-
-
+     
+    <a href="../../tag/cesm/">cesm</a>
+        
+    <a href="../../tag/diagnostics/">diagnostics</a>
+        
+    <a href="../../tag/xarray/">xarray</a>
+        
+    <a href="../../tag/cesm2-le/">cesm2-le</a>
+      
+  </li>
+   
 </div>
     </ul>
     <p class="ablog-post-excerpt"><p>A common component of people’s workflows is calculating annual averages, which helps <strong>reduce</strong> the frequency of datasets, making them easier to work with. Two of the data frequencies you may be looking to convert to annual include:</p>
 <p>Daily (365 days in each year)</p>
 <img alt="comparison" src="../../../_images/incorrect_vs_correct_weighting.png" /></p>
 
-    <p class="ablog-post-expand"><a href="../../../posts/2021/yearly-averages-xarray/"><em>Read more ...</em></a></p>
-    <hr/>
+    <p class="ablog-post-expand">
+      <a href="../../../posts/2021/yearly-averages-xarray/"><em>Read more ...</em></a>
+    </p>
+    <hr />
   </div>
   
   <div class="section ablog-post">
@@ -749,71 +653,50 @@ We use a single ensemble member historical experiment with daily data from 1850 
     </h2>
     <ul class="ablog-archive">
       <li>
-        
-        
+         
         <i class="fa fa-calendar"></i>
         
         <span>12 November 2021</span>
         
       </li>
       <div class="ablog-sidebar-item ablog__postcard2">
-
-
-<li id="ablog-sidebar-item author ablog__author">
-  <span>
-    
-    <i class="fa-fw fa fa-user"></i>
-    
+   
+  <li id="ablog-sidebar-item author ablog__author">
+    <span>
+      
+      <i class="fa-fw fa fa-user"></i>
+      
     </span>
-  
-  
-  <a href="#">Max Grover</a>
-  
-  
-  
-</li>
-
-
-
-
-
-<li id="ablog-sidebar-item tags ablog__tags">
-  <span>
-    
-    
-    <i class="fa-fw fa fa-tags"></i>
-    
-    
+     
+    <a href="#">Max Grover</a>
+      
+  </li>
+      
+  <li id="ablog-sidebar-item tags ablog__tags">
+    <span>
+       
+      <i class="fa-fw fa fa-tags"></i>
+       
     </span>
-  
-  
-  <a href="../../tag/xarray/">xarray</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/time/">time</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/preprocess/">preprocess</a>
-  
-  
-  
-</li>
-
-
+     
+    <a href="../../tag/xarray/">xarray</a>
+        
+    <a href="../../tag/time/">time</a>
+        
+    <a href="../../tag/preprocess/">preprocess</a>
+      
+  </li>
+   
 </div>
     </ul>
     <p class="ablog-post-excerpt"><p>There is a weather station located at the Mesa Lab, situated along the Foothills of the Rockies in Boulder, Colorado!</p>
 <p>By the end of this post, you will be able to plot an interactive visualization of the weather data collected at the Mesa Lab, as shown below!</p>
 <img alt="mesa_lab_gif" src="../../../_images/mesa_lab_weather.gif" /></p>
 
-    <p class="ablog-post-expand"><a href="../../../posts/2021/weather-station-data-preprocess/"><em>Read more ...</em></a></p>
-    <hr/>
+    <p class="ablog-post-expand">
+      <a href="../../../posts/2021/weather-station-data-preprocess/"><em>Read more ...</em></a>
+    </p>
+    <hr />
   </div>
   
   <div class="section ablog-post">
@@ -822,83 +705,54 @@ We use a single ensemble member historical experiment with daily data from 1850 
     </h2>
     <ul class="ablog-archive">
       <li>
-        
-        
+         
         <i class="fa fa-calendar"></i>
         
         <span>28 October 2021</span>
         
       </li>
       <div class="ablog-sidebar-item ablog__postcard2">
-
-
-<li id="ablog-sidebar-item author ablog__author">
-  <span>
-    
-    <i class="fa-fw fa fa-user"></i>
-    
+   
+  <li id="ablog-sidebar-item author ablog__author">
+    <span>
+      
+      <i class="fa-fw fa fa-user"></i>
+      
     </span>
-  
-  
-  <a href="#">Max Grover</a>
-  
-  
-  
-</li>
-
-
-
-
-
-<li id="ablog-sidebar-item tags ablog__tags">
-  <span>
-    
-    
-    <i class="fa-fw fa fa-tags"></i>
-    
-    
+     
+    <a href="#">Max Grover</a>
+      
+  </li>
+      
+  <li id="ablog-sidebar-item tags ablog__tags">
+    <span>
+       
+      <i class="fa-fw fa fa-tags"></i>
+       
     </span>
-  
-  
-  <a href="../../tag/update/">update</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/faq/">faq</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/xarray/">xarray</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/dask/">dask</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/matplotlib/">matplotlib</a>
-  
-  
-  
-</li>
-
-
+     
+    <a href="../../tag/update/">update</a>
+        
+    <a href="../../tag/faq/">faq</a>
+        
+    <a href="../../tag/xarray/">xarray</a>
+        
+    <a href="../../tag/dask/">dask</a>
+        
+    <a href="../../tag/matplotlib/">matplotlib</a>
+      
+  </li>
+   
 </div>
     </ul>
     <p class="ablog-post-excerpt"><p>October has been an active month! There were a variety of talks, a variety of answered Python questions during office hours, and a Python tutorial!</p>
 <p>Check out the following ESDS update for the month of October 2021.</p>
 <img alt="october-2021-office-hours" src="../../../_images/october_2021_question_topics.png" /></p>
 
-    <p class="ablog-post-expand"><a href="../../../posts/2021/esds-update-october-2021/"><em>Read more ...</em></a></p>
-    <hr/>
+    <p class="ablog-post-expand">
+      <a href="../../../posts/2021/esds-update-october-2021/"><em>Read more ...</em></a>
+    </p>
+    <hr />
   </div>
   
   <div class="section ablog-post">
@@ -907,71 +761,50 @@ We use a single ensemble member historical experiment with daily data from 1850 
     </h2>
     <ul class="ablog-archive">
       <li>
-        
-        
+         
         <i class="fa fa-calendar"></i>
         
         <span>22 October 2021</span>
         
       </li>
       <div class="ablog-sidebar-item ablog__postcard2">
-
-
-<li id="ablog-sidebar-item author ablog__author">
-  <span>
-    
-    <i class="fa-fw fa fa-user"></i>
-    
+   
+  <li id="ablog-sidebar-item author ablog__author">
+    <span>
+      
+      <i class="fa-fw fa fa-user"></i>
+      
     </span>
-  
-  
-  <a href="#">Max Grover</a>
-  
-  
-  
-</li>
-
-
-
-
-
-<li id="ablog-sidebar-item tags ablog__tags">
-  <span>
-    
-    
-    <i class="fa-fw fa fa-tags"></i>
-    
-    
+     
+    <a href="#">Max Grover</a>
+      
+  </li>
+      
+  <li id="ablog-sidebar-item tags ablog__tags">
+    <span>
+       
+      <i class="fa-fw fa fa-tags"></i>
+       
     </span>
-  
-  
-  <a href="../../tag/intake/">intake</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/diagnostics/">diagnostics</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/cesm/">cesm</a>
-  
-  
-  
-</li>
-
-
+     
+    <a href="../../tag/intake/">intake</a>
+        
+    <a href="../../tag/diagnostics/">diagnostics</a>
+        
+    <a href="../../tag/cesm/">cesm</a>
+      
+  </li>
+   
 </div>
     </ul>
     <p class="ablog-post-excerpt"><p>Last week, <a class="reference external" href="https://github.com/andersy005">Anderson Banihirwe</a> added a new feature to intake-esm, enabling users to add “derived variables” to catalogs! This is an exciting addition, and although this has not been included in a release yet, you are welcome to test out the functionality!</p>
 <p>Keep in mind that this is an initial prototype and the API is likely to change.</p>
 </p>
 
-    <p class="ablog-post-expand"><a href="../../../posts/2021/intake-esm-derived-variables/"><em>Read more ...</em></a></p>
-    <hr/>
+    <p class="ablog-post-expand">
+      <a href="../../../posts/2021/intake-esm-derived-variables/"><em>Read more ...</em></a>
+    </p>
+    <hr />
   </div>
   
   <div class="section ablog-post">
@@ -980,78 +813,52 @@ We use a single ensemble member historical experiment with daily data from 1850 
     </h2>
     <ul class="ablog-archive">
       <li>
-        
-        
+         
         <i class="fa fa-calendar"></i>
         
         <span>15 October 2021</span>
         
       </li>
       <div class="ablog-sidebar-item ablog__postcard2">
-
-
-<li id="ablog-sidebar-item author ablog__author">
-  <span>
-    
-    <i class="fa-fw fa fa-user"></i>
-    
+   
+  <li id="ablog-sidebar-item author ablog__author">
+    <span>
+      
+      <i class="fa-fw fa fa-user"></i>
+      
     </span>
-  
-  
-  <a href="#">Max Grover</a>
-  
-  ,
-  
-  
-  
-  
-  <a href="../anderson-banihirwe/">Anderson Banihirwe</a>
-  
-  
-  
-</li>
-
-
-
-
-
-<li id="ablog-sidebar-item tags ablog__tags">
-  <span>
-    
-    
-    <i class="fa-fw fa fa-tags"></i>
-    
-    
+     
+    <a href="#">Max Grover</a>
+     ,    
+    <a href="../anderson-banihirwe/">Anderson Banihirwe</a>
+      
+  </li>
+      
+  <li id="ablog-sidebar-item tags ablog__tags">
+    <span>
+       
+      <i class="fa-fw fa fa-tags"></i>
+       
     </span>
-  
-  
-  <a href="../../tag/wrf/">WRF</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/visualization/">visualization</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/dask/">dask</a>
-  
-  
-  
-</li>
-
-
+     
+    <a href="../../tag/wrf/">WRF</a>
+        
+    <a href="../../tag/visualization/">visualization</a>
+        
+    <a href="../../tag/dask/">dask</a>
+      
+  </li>
+   
 </div>
     </ul>
     <p class="ablog-post-excerpt"><p>The <em><strong>typical</strong></em> data workflow within the Python ecosystem when working with Weather Research and Forecasting (WRF) data is to use the <a class="reference external" href="https://wrf-python.readthedocs.io/en/latest/">wrf-python</a> package! Traditionally, it can be difficult to utilize the <code class="docutils literal notranslate"><span class="pre">xarray</span></code> data model with WRF data, due to a few challenges:</p>
 <p>WRF data not being CF-compliant (which makes it hard for xarray to properly construct the dataset out of the box using xr.open_dataset)</p>
 <img alt="xarray-wrf-gif" src="../../../_images/xarray_wrf_blog_post.gif" /></p>
 
-    <p class="ablog-post-expand"><a href="../../../posts/2021/xarray-wrf-example/"><em>Read more ...</em></a></p>
-    <hr/>
+    <p class="ablog-post-expand">
+      <a href="../../../posts/2021/xarray-wrf-example/"><em>Read more ...</em></a>
+    </p>
+    <hr />
   </div>
   
   <div class="section ablog-post">
@@ -1060,83 +867,54 @@ We use a single ensemble member historical experiment with daily data from 1850 
     </h2>
     <ul class="ablog-archive">
       <li>
-        
-        
+         
         <i class="fa fa-calendar"></i>
         
         <span>08 October 2021</span>
         
       </li>
       <div class="ablog-sidebar-item ablog__postcard2">
-
-
-<li id="ablog-sidebar-item author ablog__author">
-  <span>
-    
-    <i class="fa-fw fa fa-user"></i>
-    
+   
+  <li id="ablog-sidebar-item author ablog__author">
+    <span>
+      
+      <i class="fa-fw fa fa-user"></i>
+      
     </span>
-  
-  
-  <a href="#">Max Grover</a>
-  
-  
-  
-</li>
-
-
-
-
-
-<li id="ablog-sidebar-item tags ablog__tags">
-  <span>
-    
-    
-    <i class="fa-fw fa fa-tags"></i>
-    
-    
+     
+    <a href="#">Max Grover</a>
+      
+  </li>
+      
+  <li id="ablog-sidebar-item tags ablog__tags">
+    <span>
+       
+      <i class="fa-fw fa fa-tags"></i>
+       
     </span>
-  
-  
-  <a href="../../tag/intake/">intake</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/cesm2-le/">cesm2-le</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/cesm/">cesm</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/diagnostics/">diagnostics</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/visualization/">visualization</a>
-  
-  
-  
-</li>
-
-
+     
+    <a href="../../tag/intake/">intake</a>
+        
+    <a href="../../tag/cesm2-le/">cesm2-le</a>
+        
+    <a href="../../tag/cesm/">cesm</a>
+        
+    <a href="../../tag/diagnostics/">diagnostics</a>
+        
+    <a href="../../tag/visualization/">visualization</a>
+      
+  </li>
+   
 </div>
     </ul>
-    <p class="ablog-post-excerpt"><p>This Jupyter Notebook demonstrates how one might use the NCAR Community Earth System Model v2 (CESM2) Large Ensemble (CESM2-LE) data hosted on AWS S3. The notebook shows how to reproduce figure 2 from the Kay et al. (2015) paper describing the CESM LENS dataset (<a class="reference internal" href="#doi:10.1175/BAMS-D-13-00255.1"><span class="xref myst">doi:10.1175/BAMS-D-13-00255.1</span></a>), with the LENS2 dataset.</p>
+    <p class="ablog-post-excerpt"><p>This Jupyter Notebook demonstrates how one might use the NCAR Community Earth System Model v2 (CESM2) Large Ensemble (CESM2-LE) data hosted on AWS S3. The notebook shows how to reproduce figure 2 from the Kay et al. (2015) paper describing the CESM LENS dataset (<a class="reference external" href="https://doi.org:10.1175/BAMS-D-13-00255.1">doi:10.1175/BAMS-D-13-00255.1</a>), with the LENS2 dataset.</p>
 <p>There was a previous notebook which explored this use case, put together by Joe Hamman and Anderson Banihirwe, accessible on the Pangeo Gallery using <a class="reference external" href="http://gallery.pangeo.io/repos/NCAR/cesm-lens-aws/notebooks/kay-et-al-2015.v3.html">this link</a>. The specific figure we are replicating is shown below.</p>
 <img alt="cesm1-lens" src="../../../_images/kay_et_al_2015_lens1.png" /></p>
 
-    <p class="ablog-post-expand"><a href="../../../posts/2021/kay-et-al-cesm2-le/"><em>Read more ...</em></a></p>
-    <hr/>
+    <p class="ablog-post-expand">
+      <a href="../../../posts/2021/kay-et-al-cesm2-le/"><em>Read more ...</em></a>
+    </p>
+    <hr />
   </div>
   
   <div class="section ablog-post">
@@ -1145,58 +923,46 @@ We use a single ensemble member historical experiment with daily data from 1850 
     </h2>
     <ul class="ablog-archive">
       <li>
-        
-        
+         
         <i class="fa fa-calendar"></i>
         
         <span>01 October 2021</span>
         
       </li>
       <div class="ablog-sidebar-item ablog__postcard2">
-
-
-<li id="ablog-sidebar-item author ablog__author">
-  <span>
-    
-    <i class="fa-fw fa fa-user"></i>
-    
+   
+  <li id="ablog-sidebar-item author ablog__author">
+    <span>
+      
+      <i class="fa-fw fa fa-user"></i>
+      
     </span>
-  
-  
-  <a href="#">Max Grover</a>
-  
-  
-  
-</li>
-
-
-
-
-
-<li id="ablog-sidebar-item tags ablog__tags">
-  <span>
-    
-    
-    <i class="fa-fw fa fa-tag"></i>
-    
+     
+    <a href="#">Max Grover</a>
+      
+  </li>
+      
+  <li id="ablog-sidebar-item tags ablog__tags">
+    <span>
+       
+      <i class="fa-fw fa fa-tag"></i>
+      
     </span>
-  
-  
-  <a href="../../tag/update/">update</a>
-  
-  
-  
-</li>
-
-
+     
+    <a href="../../tag/update/">update</a>
+      
+  </li>
+   
 </div>
     </ul>
     <p class="ablog-post-excerpt"><p>The first ESDS “meeting” took place in mid March 2021, with the kickoff event being the CGD town hall (<a class="reference external" href="https://ncar.github.io/esds/posts/2021/esds-blog/">here is the blog post detailing the topics at that meeting</a>). Since that meeting, we have moved forward, holding a variety of Work in Progress talks, partnering with Xdev to offer Python Tutorials, and publish a series of blog posts aimed at documenting scientific workflows here at NCAR.</p>
 <p>Most of our blog posts thus far have been focused on Python tutorials, workflow examples, or conference summaries. One <strong><em>new type of post</em></strong> we will be posting now are monthly summaries on ESDS activities. Since we have not posted one yet, we grouped up all of our activities since early March. Going forward, we will post on a monthly basis!</p>
 <img alt="office hours questions" src="../../../_images/office_hours_questions.png" /></p>
 
-    <p class="ablog-post-expand"><a href="../../../posts/2021/esds-update-september-2021/"><em>Read more ...</em></a></p>
-    <hr/>
+    <p class="ablog-post-expand">
+      <a href="../../../posts/2021/esds-update-september-2021/"><em>Read more ...</em></a>
+    </p>
+    <hr />
   </div>
   
   <div class="section ablog-post">
@@ -1205,83 +971,54 @@ We use a single ensemble member historical experiment with daily data from 1850 
     </h2>
     <ul class="ablog-archive">
       <li>
-        
-        
+         
         <i class="fa fa-calendar"></i>
         
         <span>24 September 2021</span>
         
       </li>
       <div class="ablog-sidebar-item ablog__postcard2">
-
-
-<li id="ablog-sidebar-item author ablog__author">
-  <span>
-    
-    <i class="fa-fw fa fa-user"></i>
-    
+   
+  <li id="ablog-sidebar-item author ablog__author">
+    <span>
+      
+      <i class="fa-fw fa fa-user"></i>
+      
     </span>
-  
-  
-  <a href="#">Max Grover</a>
-  
-  
-  
-</li>
-
-
-
-
-
-<li id="ablog-sidebar-item tags ablog__tags">
-  <span>
-    
-    
-    <i class="fa-fw fa fa-tags"></i>
-    
-    
+     
+    <a href="#">Max Grover</a>
+      
+  </li>
+      
+  <li id="ablog-sidebar-item tags ablog__tags">
+    <span>
+       
+      <i class="fa-fw fa fa-tags"></i>
+       
     </span>
-  
-  
-  <a href="../../tag/diagnostics/">diagnostics</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/jupyter/">jupyter</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/intake/">intake</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/cesm/">cesm</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/visualization/">visualization</a>
-  
-  
-  
-</li>
-
-
+     
+    <a href="../../tag/diagnostics/">diagnostics</a>
+        
+    <a href="../../tag/jupyter/">jupyter</a>
+        
+    <a href="../../tag/intake/">intake</a>
+        
+    <a href="../../tag/cesm/">cesm</a>
+        
+    <a href="../../tag/visualization/">visualization</a>
+      
+  </li>
+   
 </div>
     </ul>
     <p class="ablog-post-excerpt"><p>Typically, diagnostics packages are written with following structure, using script-based workflows</p>
 <p>Read files and do some preprocessing</p>
 <img alt="cesm-marbl-book-overview" src="../../../_images/cesm_marbl_book_overview.png" /></p>
 
-    <p class="ablog-post-expand"><a href="../../../posts/2021/jupyter-based-diagnostics-overview/"><em>Read more ...</em></a></p>
-    <hr/>
+    <p class="ablog-post-expand">
+      <a href="../../../posts/2021/jupyter-based-diagnostics-overview/"><em>Read more ...</em></a>
+    </p>
+    <hr />
   </div>
   
   <div class="section ablog-post">
@@ -1290,83 +1027,54 @@ We use a single ensemble member historical experiment with daily data from 1850 
     </h2>
     <ul class="ablog-archive">
       <li>
-        
-        
+         
         <i class="fa fa-calendar"></i>
         
         <span>17 September 2021</span>
         
       </li>
       <div class="ablog-sidebar-item ablog__postcard2">
-
-
-<li id="ablog-sidebar-item author ablog__author">
-  <span>
-    
-    <i class="fa-fw fa fa-user"></i>
-    
+   
+  <li id="ablog-sidebar-item author ablog__author">
+    <span>
+      
+      <i class="fa-fw fa fa-user"></i>
+      
     </span>
-  
-  
-  <a href="#">Max Grover</a>
-  
-  
-  
-</li>
-
-
-
-
-
-<li id="ablog-sidebar-item tags ablog__tags">
-  <span>
-    
-    
-    <i class="fa-fw fa fa-tags"></i>
-    
-    
+     
+    <a href="#">Max Grover</a>
+      
+  </li>
+      
+  <li id="ablog-sidebar-item tags ablog__tags">
+    <span>
+       
+      <i class="fa-fw fa fa-tags"></i>
+       
     </span>
-  
-  
-  <a href="../../tag/ecgtools/">ecgtools</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/intake/">intake</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/dask/">dask</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/cesm/">cesm</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/benchmark/">benchmark</a>
-  
-  
-  
-</li>
-
-
+     
+    <a href="../../tag/ecgtools/">ecgtools</a>
+        
+    <a href="../../tag/intake/">intake</a>
+        
+    <a href="../../tag/dask/">dask</a>
+        
+    <a href="../../tag/cesm/">cesm</a>
+        
+    <a href="../../tag/benchmark/">benchmark</a>
+      
+  </li>
+   
 </div>
     </ul>
     <p class="ablog-post-excerpt"><p>In this example, we will look at how long reading data from the Community Earth System Model (CESM), applying calculations, and visualizing the output takes using the following packages:</p>
 <p><a class="reference external" href="https://ecgtools.readthedocs.io/en/latest/"><code class="docutils literal notranslate"><span class="pre">ecgtools</span></code></a></p>
 </p>
 
-    <p class="ablog-post-expand"><a href="../../../posts/2021/benchmarking-history-timeseries-intake/"><em>Read more ...</em></a></p>
-    <hr/>
+    <p class="ablog-post-expand">
+      <a href="../../../posts/2021/benchmarking-history-timeseries-intake/"><em>Read more ...</em></a>
+    </p>
+    <hr />
   </div>
   
   <div class="section ablog-post">
@@ -1375,77 +1083,52 @@ We use a single ensemble member historical experiment with daily data from 1850 
     </h2>
     <ul class="ablog-archive">
       <li>
-        
-        
+         
         <i class="fa fa-calendar"></i>
         
         <span>10 September 2021</span>
         
       </li>
       <div class="ablog-sidebar-item ablog__postcard2">
-
-
-<li id="ablog-sidebar-item author ablog__author">
-  <span>
-    
-    <i class="fa-fw fa fa-user"></i>
-    
+   
+  <li id="ablog-sidebar-item author ablog__author">
+    <span>
+      
+      <i class="fa-fw fa fa-user"></i>
+      
     </span>
-  
-  
-  <a href="#">Max Grover</a>
-  
-  
-  
-</li>
-
-
-
-
-
-<li id="ablog-sidebar-item tags ablog__tags">
-  <span>
-    
-    
-    <i class="fa-fw fa fa-tags"></i>
-    
-    
+     
+    <a href="#">Max Grover</a>
+      
+  </li>
+      
+  <li id="ablog-sidebar-item tags ablog__tags">
+    <span>
+       
+      <i class="fa-fw fa fa-tags"></i>
+       
     </span>
-  
-  
-  <a href="../../tag/diagnostics/">diagnostics</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/observations/">observations</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/cesm/">cesm</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/intake/">intake</a>
-  
-  
-  
-</li>
-
-
+     
+    <a href="../../tag/diagnostics/">diagnostics</a>
+        
+    <a href="../../tag/observations/">observations</a>
+        
+    <a href="../../tag/cesm/">cesm</a>
+        
+    <a href="../../tag/intake/">intake</a>
+      
+  </li>
+   
 </div>
     </ul>
     <p class="ablog-post-excerpt"><p>In this example, we will cover how to leverage a useful package from the <a class="reference external" href="http://www.pangeo.io">Pangeo Ecosystem</a>, <a class="reference external" href="https://pangeo-xesmf.readthedocs.io/en/latest/">xESMF</a>. One important note when using this package, is <strong>make sure you are using the most up-to-date documentation/version</strong>, a few years ago, development moved to the <a class="reference external" href="https://github.com/pangeo-data/xESMF">pangeo-data</a> branch of the package, installable using the following:</p>
 <p>For this example, we will download a file from the <a class="reference external" href="https://www.ncei.noaa.gov/products/world-ocean-atlas">World Ocean Atlas</a>, which includes a variety of ocean observations assembled from the World Ocean Database.</p>
 <img alt="../../../_images/5d1735a9cd17c21c74dd23dc6b8463e12d0a07af0cbb389b5a01c91e30c7141c.png" src="../../../_images/5d1735a9cd17c21c74dd23dc6b8463e12d0a07af0cbb389b5a01c91e30c7141c.png" /></p>
 
-    <p class="ablog-post-expand"><a href="../../../posts/2021/regrid-observations-pop-grid/"><em>Read more ...</em></a></p>
-    <hr/>
+    <p class="ablog-post-expand">
+      <a href="../../../posts/2021/regrid-observations-pop-grid/"><em>Read more ...</em></a>
+    </p>
+    <hr />
   </div>
   
   <div class="section ablog-post">
@@ -1454,71 +1137,50 @@ We use a single ensemble member historical experiment with daily data from 1850 
     </h2>
     <ul class="ablog-archive">
       <li>
-        
-        
+         
         <i class="fa fa-calendar"></i>
         
         <span>27 August 2021</span>
         
       </li>
       <div class="ablog-sidebar-item ablog__postcard2">
-
-
-<li id="ablog-sidebar-item author ablog__author">
-  <span>
-    
-    <i class="fa-fw fa fa-user"></i>
-    
+   
+  <li id="ablog-sidebar-item author ablog__author">
+    <span>
+      
+      <i class="fa-fw fa fa-user"></i>
+      
     </span>
-  
-  
-  <a href="#">Max Grover</a>
-  
-  
-  
-</li>
-
-
-
-
-
-<li id="ablog-sidebar-item tags ablog__tags">
-  <span>
-    
-    
-    <i class="fa-fw fa fa-tags"></i>
-    
-    
+     
+    <a href="#">Max Grover</a>
+      
+  </li>
+      
+  <li id="ablog-sidebar-item tags ablog__tags">
+    <span>
+       
+      <i class="fa-fw fa fa-tags"></i>
+       
     </span>
-  
-  
-  <a href="../../tag/intake/">intake</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/observations/">observations</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/cesm2-le/">cesm2-le</a>
-  
-  
-  
-</li>
-
-
+     
+    <a href="../../tag/intake/">intake</a>
+        
+    <a href="../../tag/observations/">observations</a>
+        
+    <a href="../../tag/cesm2-le/">cesm2-le</a>
+      
+  </li>
+   
 </div>
     </ul>
     <p class="ablog-post-excerpt"><p>Comparing models and observations is a critical component of climate diagnostic packages. This process can be challenging though - given the number of observational datasets to compare against, and the difference in spatiotemporal resolutions. In the previous iteration of the diagnostics package used for atmospheric data from the Community Earth System Model (CESM), they used pre-computed, observational datasets stored in a directory on the GLADE filesystem (<code class="docutils literal notranslate"><span class="pre">/glade/p/cesm/amwg/amwg_diagnostics/obs_data</span></code>)</p>
 <p>Within this example, we walk though generating an <code class="docutils literal notranslate"><span class="pre">intake-esm</span></code> catalog from the observational data, reading in CESM data, and compare models and observations</p>
 </p>
 
-    <p class="ablog-post-expand"><a href="../../../posts/2021/intake-obs-cesm2le-comparison/"><em>Read more ...</em></a></p>
-    <hr/>
+    <p class="ablog-post-expand">
+      <a href="../../../posts/2021/intake-obs-cesm2le-comparison/"><em>Read more ...</em></a>
+    </p>
+    <hr />
   </div>
   
   <div class="section ablog-post">
@@ -1527,77 +1189,52 @@ We use a single ensemble member historical experiment with daily data from 1850 
     </h2>
     <ul class="ablog-archive">
       <li>
-        
-        
+         
         <i class="fa fa-calendar"></i>
         
         <span>20 August 2021</span>
         
       </li>
       <div class="ablog-sidebar-item ablog__postcard2">
-
-
-<li id="ablog-sidebar-item author ablog__author">
-  <span>
-    
-    <i class="fa-fw fa fa-user"></i>
-    
+   
+  <li id="ablog-sidebar-item author ablog__author">
+    <span>
+      
+      <i class="fa-fw fa fa-user"></i>
+      
     </span>
-  
-  
-  <a href="#">Max Grover</a>
-  
-  
-  
-</li>
-
-
-
-
-
-<li id="ablog-sidebar-item tags ablog__tags">
-  <span>
-    
-    
-    <i class="fa-fw fa fa-tags"></i>
-    
-    
+     
+    <a href="#">Max Grover</a>
+      
+  </li>
+      
+  <li id="ablog-sidebar-item tags ablog__tags">
+    <span>
+       
+      <i class="fa-fw fa fa-tags"></i>
+       
     </span>
-  
-  
-  <a href="../../tag/cesm/">cesm</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/intake/">intake</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/visualization/">visualization</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/diagnostics/">diagnostics</a>
-  
-  
-  
-</li>
-
-
+     
+    <a href="../../tag/cesm/">cesm</a>
+        
+    <a href="../../tag/intake/">intake</a>
+        
+    <a href="../../tag/visualization/">visualization</a>
+        
+    <a href="../../tag/diagnostics/">diagnostics</a>
+      
+  </li>
+   
 </div>
     </ul>
     <p class="ablog-post-excerpt"><p>In previous weeks, we have looked at <a class="reference external" href="https://ncar.github.io/esds/posts/2021/ecgtools-history-files-example/">building Intake-ESM catalogs from history files</a> and <a class="reference external" href="https://ncar.github.io/esds/posts/2021/cesm-datashader/">visualizing CESM output using Holoviews and Datashader</a>, but this week we are putting together a few of those pieces to visualize a comparison between model runs.</p>
 <p>One of the first ESDS blog posts looked at <a class="reference external" href="https://ncar.github.io/esds/posts/2021/Interactive_Dashboard/">building an interactive dashboard to look at plots</a>, using high resolution ocean model output as the dataset. One of the limitations of that approach is that the images are static - we are pulling in <code class="docutils literal notranslate"><span class="pre">png</span></code>s, and rending on the page, as opposed to more interactive options. In this example, we will read in data generated from <a class="reference external" href="https://ecgtools.readthedocs.io/en/latest/">ecgtools</a>, from a directory only accessible via NCAR’s high performance computing center.</p>
 </p>
 
-    <p class="ablog-post-expand"><a href="../../../posts/2021/intake-esm-holoviews-diagnostics/"><em>Read more ...</em></a></p>
-    <hr/>
+    <p class="ablog-post-expand">
+      <a href="../../../posts/2021/intake-esm-holoviews-diagnostics/"><em>Read more ...</em></a>
+    </p>
+    <hr />
   </div>
   
   <div class="section ablog-post">
@@ -1606,71 +1243,50 @@ We use a single ensemble member historical experiment with daily data from 1850 
     </h2>
     <ul class="ablog-archive">
       <li>
-        
-        
+         
         <i class="fa fa-calendar"></i>
         
         <span>13 August 2021</span>
         
       </li>
       <div class="ablog-sidebar-item ablog__postcard2">
-
-
-<li id="ablog-sidebar-item author ablog__author">
-  <span>
-    
-    <i class="fa-fw fa fa-user"></i>
-    
+   
+  <li id="ablog-sidebar-item author ablog__author">
+    <span>
+      
+      <i class="fa-fw fa fa-user"></i>
+      
     </span>
-  
-  
-  <a href="#">Max Grover</a>
-  
-  
-  
-</li>
-
-
-
-
-
-<li id="ablog-sidebar-item tags ablog__tags">
-  <span>
-    
-    
-    <i class="fa-fw fa fa-tags"></i>
-    
-    
+     
+    <a href="#">Max Grover</a>
+      
+  </li>
+      
+  <li id="ablog-sidebar-item tags ablog__tags">
+    <span>
+       
+      <i class="fa-fw fa fa-tags"></i>
+       
     </span>
-  
-  
-  <a href="../../tag/unstructured-grids/">unstructured grids</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/cesm/">cesm</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/visualization/">visualization</a>
-  
-  
-  
-</li>
-
-
+     
+    <a href="../../tag/unstructured-grids/">unstructured grids</a>
+        
+    <a href="../../tag/cesm/">cesm</a>
+        
+    <a href="../../tag/visualization/">visualization</a>
+      
+  </li>
+   
 </div>
     </ul>
     <p class="ablog-post-excerpt"><p>This week, during Xdev office hours, <a class="reference external" href="https://staff.ucar.edu/users/yeager">Steve Yeager</a> raised a question regarding plotting unstructured grid data within Python. He was interested in plotting output from the <a class="reference external" href="https://www.cesm.ucar.edu/models/atm-cam/#:~:text=The%20Community%20Earth%20System%20Model,Department%20of%20Energy%20(DOE).">Community Atmosphere Model</a>, which supports unstructured grids, essentially a combination of triangles allowing for higher resolution in certain parts of the domain. This can be adventageous when wanting to achieve the benefits of high resolution within the primary domain, while maintaining the global scale of the model. This week, <a class="reference external" href="https://twitter.com/NCAR_Science/status/1425583582819483652?s=20">NCAR Science</a> tweeted a great explanation of how revolutionary this capability is in the context of resolving processes over Greenland.</p>
 <p>Unstructured grids can be difficult to plot directly within Python since they do not follow the typical <code class="docutils literal notranslate"><span class="pre">lat</span></code>, <code class="docutils literal notranslate"><span class="pre">lon</span></code> (x, y) convention. There is some preprocessing that needs to be applied before plotting.</p>
 </p>
 
-    <p class="ablog-post-expand"><a href="../../../posts/2021/cesm-datashader/"><em>Read more ...</em></a></p>
-    <hr/>
+    <p class="ablog-post-expand">
+      <a href="../../../posts/2021/cesm-datashader/"><em>Read more ...</em></a>
+    </p>
+    <hr />
   </div>
   
   <div class="section ablog-post">
@@ -1679,71 +1295,50 @@ We use a single ensemble member historical experiment with daily data from 1850 
     </h2>
     <ul class="ablog-archive">
       <li>
-        
-        
+         
         <i class="fa fa-calendar"></i>
         
         <span>06 August 2021</span>
         
       </li>
       <div class="ablog-sidebar-item ablog__postcard2">
-
-
-<li id="ablog-sidebar-item author ablog__author">
-  <span>
-    
-    <i class="fa-fw fa fa-user"></i>
-    
+   
+  <li id="ablog-sidebar-item author ablog__author">
+    <span>
+      
+      <i class="fa-fw fa fa-user"></i>
+      
     </span>
-  
-  
-  <a href="#">Max Grover</a>
-  
-  
-  
-</li>
-
-
-
-
-
-<li id="ablog-sidebar-item tags ablog__tags">
-  <span>
-    
-    
-    <i class="fa-fw fa fa-tags"></i>
-    
-    
+     
+    <a href="#">Max Grover</a>
+      
+  </li>
+      
+  <li id="ablog-sidebar-item tags ablog__tags">
+    <span>
+       
+      <i class="fa-fw fa fa-tags"></i>
+       
     </span>
-  
-  
-  <a href="../../tag/intake/">intake</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/cesm/">cesm</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/cesm2-le/">cesm2-le</a>
-  
-  
-  
-</li>
-
-
+     
+    <a href="../../tag/intake/">intake</a>
+        
+    <a href="../../tag/cesm/">cesm</a>
+        
+    <a href="../../tag/cesm2-le/">cesm2-le</a>
+      
+  </li>
+   
 </div>
     </ul>
     <p class="ablog-post-excerpt"><p>In mid June, the <a class="reference external" href="https://www.cesm.ucar.edu/projects/community-projects/LENS2/">CESM2 Large Ensemble</a> dataset was made available to the public. This model was run in collaboration with the <a class="reference external" href="https://ibsclimate.org/">IBS Center for Climate Physics</a> and the <a class="reference external" href="https://ncar.ucar.edu/">National Center for Atmospheric Research</a> This dataset includes 100 ensemble members, at one degree spatial resolution, with each ensemble member including data from 1850 to 2100. If you are interested in learning more about how this ensemble was setup, be sure to check out <a class="reference external" href="https://www.cesm.ucar.edu/projects/community-projects/LENS2/">the main webpage</a> or read the pre-print of <a class="reference external" href="https://esd.copernicus.org/preprints/esd-2021-50/">Rodgers et al. 2021</a> which describes this dataset in detail.</p>
 <p>One of these challenges with this dataset is dealing with the massive amount of output. The data are available through the <a class="reference external" href="https://www.cesm.ucar.edu/projects/community-projects/LENS2/data-sets.html">NCAR Climate Data Gateway</a> and via the <a class="reference external" href="https://climatedata.ibs.re.kr/data/cesm2-lens">IBS OpenDAP Server</a>. There is also a subset of the dataset available on the GLADE file system on NCAR HPC resources available within the directory <code class="docutils literal notranslate"><span class="pre">/glade/campaign/cgd/cesm/CESM2-LE/timeseries/</span></code>.</p>
 <img alt="intake-esm catalogs" src="../../../_images/intake_esm_catalogs.png" /></p>
 
-    <p class="ablog-post-expand"><a href="../../../posts/2021/intake-cesm2-le-glade-example/"><em>Read more ...</em></a></p>
-    <hr/>
+    <p class="ablog-post-expand">
+      <a href="../../../posts/2021/intake-cesm2-le-glade-example/"><em>Read more ...</em></a>
+    </p>
+    <hr />
   </div>
   
   <div class="section ablog-post">
@@ -1752,71 +1347,50 @@ We use a single ensemble member historical experiment with daily data from 1850 
     </h2>
     <ul class="ablog-archive">
       <li>
-        
-        
+         
         <i class="fa fa-calendar"></i>
         
         <span>30 July 2021</span>
         
       </li>
       <div class="ablog-sidebar-item ablog__postcard2">
-
-
-<li id="ablog-sidebar-item author ablog__author">
-  <span>
-    
-    <i class="fa-fw fa fa-user"></i>
-    
+   
+  <li id="ablog-sidebar-item author ablog__author">
+    <span>
+      
+      <i class="fa-fw fa fa-user"></i>
+      
     </span>
-  
-  
-  <a href="#">Max Grover</a>
-  
-  
-  
-</li>
-
-
-
-
-
-<li id="ablog-sidebar-item tags ablog__tags">
-  <span>
-    
-    
-    <i class="fa-fw fa fa-tags"></i>
-    
-    
+     
+    <a href="#">Max Grover</a>
+      
+  </li>
+      
+  <li id="ablog-sidebar-item tags ablog__tags">
+    <span>
+       
+      <i class="fa-fw fa fa-tags"></i>
+       
     </span>
-  
-  
-  <a href="../../tag/pythia/">pythia</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/training/">training</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/education/">education</a>
-  
-  
-  
-</li>
-
-
+     
+    <a href="../../tag/pythia/">pythia</a>
+        
+    <a href="../../tag/training/">training</a>
+        
+    <a href="../../tag/education/">education</a>
+      
+  </li>
+   
 </div>
     </ul>
     <p class="ablog-post-excerpt"><p>Last year, the Project Pythia team was formed to “provide a public, web-accessible training resource that will help educate current, and aspiring, earth scientists to more effectively use both the Scientific Python Ecosystem and Cloud Computing to make sense of huge volumes of numerical scientific data.”</p>
 <p>The team is formally a collaboration between three main organizations, although contributors come from throughout the scientific Python community:</p>
 <img alt="Pythia Portal" src="../../../_images/pythia_portal.png" /></p>
 
-    <p class="ablog-post-expand"><a href="../../../posts/2021/project-pythia-overview/"><em>Read more ...</em></a></p>
-    <hr/>
+    <p class="ablog-post-expand">
+      <a href="../../../posts/2021/project-pythia-overview/"><em>Read more ...</em></a>
+    </p>
+    <hr />
   </div>
   
   <div class="section ablog-post">
@@ -1825,71 +1399,50 @@ We use a single ensemble member historical experiment with daily data from 1850 
     </h2>
     <ul class="ablog-archive">
       <li>
-        
-        
+         
         <i class="fa fa-calendar"></i>
         
         <span>26 July 2021</span>
         
       </li>
       <div class="ablog-sidebar-item ablog__postcard2">
-
-
-<li id="ablog-sidebar-item author ablog__author">
-  <span>
-    
-    <i class="fa-fw fa fa-user"></i>
-    
+   
+  <li id="ablog-sidebar-item author ablog__author">
+    <span>
+      
+      <i class="fa-fw fa fa-user"></i>
+      
     </span>
-  
-  
-  <a href="#">Max Grover</a>
-  
-  
-  
-</li>
-
-
-
-
-
-<li id="ablog-sidebar-item tags ablog__tags">
-  <span>
-    
-    
-    <i class="fa-fw fa fa-tags"></i>
-    
-    
+     
+    <a href="#">Max Grover</a>
+      
+  </li>
+      
+  <li id="ablog-sidebar-item tags ablog__tags">
+    <span>
+       
+      <i class="fa-fw fa fa-tags"></i>
+       
     </span>
-  
-  
-  <a href="../../tag/conference/">conference</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/scipy/">scipy</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/open-source/">open-source</a>
-  
-  
-  
-</li>
-
-
+     
+    <a href="../../tag/conference/">conference</a>
+        
+    <a href="../../tag/scipy/">scipy</a>
+        
+    <a href="../../tag/open-source/">open-source</a>
+      
+  </li>
+   
 </div>
     </ul>
     <p class="ablog-post-excerpt"><p>A couple weeks ago, I had an opportunity to (virtually) attend the Scientific Computing with Python (SciPy) Conference! The conference consisted of three primary sections:</p>
 <p>Tutorials (Monday/Tuesday)</p>
 </p>
 
-    <p class="ablog-post-expand"><a href="../../../posts/2021/scipy-2021-takeaways/"><em>Read more ...</em></a></p>
-    <hr/>
+    <p class="ablog-post-expand">
+      <a href="../../../posts/2021/scipy-2021-takeaways/"><em>Read more ...</em></a>
+    </p>
+    <hr />
   </div>
   
   <div class="section ablog-post">
@@ -1898,65 +1451,48 @@ We use a single ensemble member historical experiment with daily data from 1850 
     </h2>
     <ul class="ablog-archive">
       <li>
-        
-        
+         
         <i class="fa fa-calendar"></i>
         
         <span>02 July 2021</span>
         
       </li>
       <div class="ablog-sidebar-item ablog__postcard2">
-
-
-<li id="ablog-sidebar-item author ablog__author">
-  <span>
-    
-    <i class="fa-fw fa fa-user"></i>
-    
+   
+  <li id="ablog-sidebar-item author ablog__author">
+    <span>
+      
+      <i class="fa-fw fa fa-user"></i>
+      
     </span>
-  
-  
-  <a href="#">Max Grover</a>
-  
-  
-  
-</li>
-
-
-
-
-
-<li id="ablog-sidebar-item tags ablog__tags">
-  <span>
-    
-    
-    <i class="fa-fw fa fa-tags"></i>
-    
-    
+     
+    <a href="#">Max Grover</a>
+      
+  </li>
+      
+  <li id="ablog-sidebar-item tags ablog__tags">
+    <span>
+       
+      <i class="fa-fw fa fa-tags"></i>
+       
     </span>
-  
-  
-  <a href="../../tag/dask/">dask</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/tutorial/">tutorial</a>
-  
-  
-  
-</li>
-
-
+     
+    <a href="../../tag/dask/">dask</a>
+        
+    <a href="../../tag/tutorial/">tutorial</a>
+      
+  </li>
+   
 </div>
     </ul>
     <p class="ablog-post-excerpt"><p>This week, I had the opportunity to attend the <a class="reference external" href="https://coiled.io/scaling-python-with-dask/">Scaling Python with Dask</a> class offered by <a class="reference external" href="https://coiled.io/">Coiled</a>. The class provided an overview of a variety of topics, including:</p>
 <p>Parellelizing Python Code</p>
 <img alt="NCARCluster view" src="../../../_images/ncar_cluster.png" /></p>
 
-    <p class="ablog-post-expand"><a href="../../../posts/2021/scaling-with-dask-class-takeaways/"><em>Read more ...</em></a></p>
-    <hr/>
+    <p class="ablog-post-expand">
+      <a href="../../../posts/2021/scaling-with-dask-class-takeaways/"><em>Read more ...</em></a>
+    </p>
+    <hr />
   </div>
   
   <div class="section ablog-post">
@@ -1965,77 +1501,52 @@ We use a single ensemble member historical experiment with daily data from 1850 
     </h2>
     <ul class="ablog-archive">
       <li>
-        
-        
+         
         <i class="fa fa-calendar"></i>
         
         <span>25 June 2021</span>
         
       </li>
       <div class="ablog-sidebar-item ablog__postcard2">
-
-
-<li id="ablog-sidebar-item author ablog__author">
-  <span>
-    
-    <i class="fa-fw fa fa-user"></i>
-    
+   
+  <li id="ablog-sidebar-item author ablog__author">
+    <span>
+      
+      <i class="fa-fw fa fa-user"></i>
+      
     </span>
-  
-  
-  <a href="#">Max Grover</a>
-  
-  
-  
-</li>
-
-
-
-
-
-<li id="ablog-sidebar-item tags ablog__tags">
-  <span>
-    
-    
-    <i class="fa-fw fa fa-tags"></i>
-    
-    
+     
+    <a href="#">Max Grover</a>
+      
+  </li>
+      
+  <li id="ablog-sidebar-item tags ablog__tags">
+    <span>
+       
+      <i class="fa-fw fa fa-tags"></i>
+       
     </span>
-  
-  
-  <a href="../../tag/jupyter/">jupyter</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/cesm/">cesm</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/intake/">intake</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/documentation/">documentation</a>
-  
-  
-  
-</li>
-
-
+     
+    <a href="../../tag/jupyter/">jupyter</a>
+        
+    <a href="../../tag/cesm/">cesm</a>
+        
+    <a href="../../tag/intake/">intake</a>
+        
+    <a href="../../tag/documentation/">documentation</a>
+      
+  </li>
+   
 </div>
     </ul>
     <p class="ablog-post-excerpt"><p>A common step to any project is documenting your data and your data workflow. Fortunately, open tools in the scientific python ecosystem make that much easier! In this example, we will cover creating your github repo, creating the catalog, visualizing the catalog, and generating a static webpage you can share with collaborators!</p>
 <p>This week’s post is quite detailed, so just a warning! If you would like to look at the finished product, check out the following</p>
 <img alt="CESM book page" src="../../../_images/cesm_book_page.png" /></p>
 
-    <p class="ablog-post-expand"><a href="../../../posts/2021/model_documentation_jupyterbook/"><em>Read more ...</em></a></p>
-    <hr/>
+    <p class="ablog-post-expand">
+      <a href="../../../posts/2021/model_documentation_jupyterbook/"><em>Read more ...</em></a>
+    </p>
+    <hr />
   </div>
   
   <div class="section ablog-post">
@@ -2044,71 +1555,50 @@ We use a single ensemble member historical experiment with daily data from 1850 
     </h2>
     <ul class="ablog-archive">
       <li>
-        
-        
+         
         <i class="fa fa-calendar"></i>
         
         <span>17 June 2021</span>
         
       </li>
       <div class="ablog-sidebar-item ablog__postcard2">
-
-
-<li id="ablog-sidebar-item author ablog__author">
-  <span>
-    
-    <i class="fa-fw fa fa-user"></i>
-    
+   
+  <li id="ablog-sidebar-item author ablog__author">
+    <span>
+      
+      <i class="fa-fw fa fa-user"></i>
+      
     </span>
-  
-  
-  <a href="#">Max Grover</a>
-  
-  
-  
-</li>
-
-
-
-
-
-<li id="ablog-sidebar-item tags ablog__tags">
-  <span>
-    
-    
-    <i class="fa-fw fa fa-tags"></i>
-    
-    
+     
+    <a href="#">Max Grover</a>
+      
+  </li>
+      
+  <li id="ablog-sidebar-item tags ablog__tags">
+    <span>
+       
+      <i class="fa-fw fa fa-tags"></i>
+       
     </span>
-  
-  
-  <a href="../../tag/cesm/">cesm</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/diagnostics/">diagnostics</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/conference/">conference</a>
-  
-  
-  
-</li>
-
-
+     
+    <a href="../../tag/cesm/">cesm</a>
+        
+    <a href="../../tag/diagnostics/">diagnostics</a>
+        
+    <a href="../../tag/conference/">conference</a>
+      
+  </li>
+   
 </div>
     </ul>
     <p class="ablog-post-excerpt"><p>Every year, NCAR holds the <a class="reference external" href="https://www.cesm.ucar.edu/events/workshops/2021/">Community Earth System Model (CESM) Workshop</a> which brings together the CESM community to discuss relavant updates from the <a class="reference external" href="https://www.cesm.ucar.edu/working_groups/">working groups</a> as well as featured speakers and cross-working group discussions.</p>
 <p>During the Software Engineering Working Group (SEWG) session, following a variety of talks, there was an open discussion regarding the current state of CESM diagnostics and future plans for collaboration.</p>
 <img alt="diagnostics_image" src="../../../_images/cesm-diagnostics.svg" /></p>
 
-    <p class="ablog-post-expand"><a href="../../../posts/2021/cesm-workshop-2021-diagnostics/"><em>Read more ...</em></a></p>
-    <hr/>
+    <p class="ablog-post-expand">
+      <a href="../../../posts/2021/cesm-workshop-2021-diagnostics/"><em>Read more ...</em></a>
+    </p>
+    <hr />
   </div>
   
   <div class="section ablog-post">
@@ -2117,71 +1607,50 @@ We use a single ensemble member historical experiment with daily data from 1850 
     </h2>
     <ul class="ablog-archive">
       <li>
-        
-        
+         
         <i class="fa fa-calendar"></i>
         
         <span>11 June 2021</span>
         
       </li>
       <div class="ablog-sidebar-item ablog__postcard2">
-
-
-<li id="ablog-sidebar-item author ablog__author">
-  <span>
-    
-    <i class="fa-fw fa fa-user"></i>
-    
+   
+  <li id="ablog-sidebar-item author ablog__author">
+    <span>
+      
+      <i class="fa-fw fa fa-user"></i>
+      
     </span>
-  
-  
-  <a href="#">Max Grover</a>
-  
-  
-  
-</li>
-
-
-
-
-
-<li id="ablog-sidebar-item tags ablog__tags">
-  <span>
-    
-    
-    <i class="fa-fw fa fa-tags"></i>
-    
-    
+     
+    <a href="#">Max Grover</a>
+      
+  </li>
+      
+  <li id="ablog-sidebar-item tags ablog__tags">
+    <span>
+       
+      <i class="fa-fw fa fa-tags"></i>
+       
     </span>
-  
-  
-  <a href="../../tag/visualization/">visualization</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/intake/">intake</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/cesm/">cesm</a>
-  
-  
-  
-</li>
-
-
+     
+    <a href="../../tag/visualization/">visualization</a>
+        
+    <a href="../../tag/intake/">intake</a>
+        
+    <a href="../../tag/cesm/">cesm</a>
+      
+  </li>
+   
 </div>
     </ul>
     <p class="ablog-post-excerpt"><p>A common initial task when working with a new dataset is figuring out what data is available. This is especially true when working with climate ensembles with several components and time-frequency output (ex. Community Earth System Model Large Ensemble, CESM-LE). Here, we will examine different methods of investigating this catalog</p>
 <p>Here, we will use <a class="reference external" href="https://intake-esm.readthedocs.io/en/latest/">intake-esm</a> and <a class="reference external" href="https://graphviz.readthedocs.io/en/stable/manual.html">graphviz</a>, which can be installed using the following (including jupyterlab too!)</p>
 <img alt="../../../_images/e696afcdb2fcbec7e9268399b9609587a5f0f51f6c5249afe3b3a0fcd46f0376.svg" src="../../../_images/e696afcdb2fcbec7e9268399b9609587a5f0f51f6c5249afe3b3a0fcd46f0376.svg" /></p>
 
-    <p class="ablog-post-expand"><a href="../../../posts/2021/graphviz_example/"><em>Read more ...</em></a></p>
-    <hr/>
+    <p class="ablog-post-expand">
+      <a href="../../../posts/2021/graphviz_example/"><em>Read more ...</em></a>
+    </p>
+    <hr />
   </div>
   
   <div class="section ablog-post">
@@ -2190,65 +1659,48 @@ We use a single ensemble member historical experiment with daily data from 1850 
     </h2>
     <ul class="ablog-archive">
       <li>
-        
-        
+         
         <i class="fa fa-calendar"></i>
         
         <span>04 June 2021</span>
         
       </li>
       <div class="ablog-sidebar-item ablog__postcard2">
-
-
-<li id="ablog-sidebar-item author ablog__author">
-  <span>
-    
-    <i class="fa-fw fa fa-user"></i>
-    
+   
+  <li id="ablog-sidebar-item author ablog__author">
+    <span>
+      
+      <i class="fa-fw fa fa-user"></i>
+      
     </span>
-  
-  
-  <a href="#">Max Grover</a>
-  
-  
-  
-</li>
-
-
-
-
-
-<li id="ablog-sidebar-item tags ablog__tags">
-  <span>
-    
-    
-    <i class="fa-fw fa fa-tags"></i>
-    
-    
+     
+    <a href="#">Max Grover</a>
+      
+  </li>
+      
+  <li id="ablog-sidebar-item tags ablog__tags">
+    <span>
+       
+      <i class="fa-fw fa fa-tags"></i>
+       
     </span>
-  
-  
-  <a href="../../tag/intake/">intake</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/cesm/">cesm</a>
-  
-  
-  
-</li>
-
-
+     
+    <a href="../../tag/intake/">intake</a>
+        
+    <a href="../../tag/cesm/">cesm</a>
+      
+  </li>
+   
 </div>
     </ul>
     <p class="ablog-post-excerpt"><p>As mentioned in a couple of ESDS posts (<a class="reference external" href="https://ncar.github.io/esds/posts/intake_esm_dask/">intake-esm and Dask</a>, <a class="reference external" href="https://ncar.github.io/esds/posts/intake_cmip6_debug/">debugging intake-esm</a>), <a class="reference external" href="https://intake-esm.readthedocs.io/en/latest/">intake-esm</a> can be a helpful tool to work with when dealing with model data, especially CESM. One of the requirements for using intake-esm is having a catalog which is comprised of two pieces:</p>
 <p>A table of the relevant metadata (ex. file path, variable, stream, etc.)</p>
 <img alt="../../../_images/c844fe1ce42eb01887e1c4c239c0dff261f07ec69b4f44a736a1e1a020b82d45.png" src="../../../_images/c844fe1ce42eb01887e1c4c239c0dff261f07ec69b4f44a736a1e1a020b82d45.png" /></p>
 
-    <p class="ablog-post-expand"><a href="../../../posts/2021/ecgtools-history-files-example/"><em>Read more ...</em></a></p>
-    <hr/>
+    <p class="ablog-post-expand">
+      <a href="../../../posts/2021/ecgtools-history-files-example/"><em>Read more ...</em></a>
+    </p>
+    <hr />
   </div>
   
   <div class="section ablog-post">
@@ -2257,71 +1709,50 @@ We use a single ensemble member historical experiment with daily data from 1850 
     </h2>
     <ul class="ablog-archive">
       <li>
-        
-        
+         
         <i class="fa fa-calendar"></i>
         
         <span>28 May 2021</span>
         
       </li>
       <div class="ablog-sidebar-item ablog__postcard2">
-
-
-<li id="ablog-sidebar-item author ablog__author">
-  <span>
-    
-    <i class="fa-fw fa fa-user"></i>
-    
+   
+  <li id="ablog-sidebar-item author ablog__author">
+    <span>
+      
+      <i class="fa-fw fa fa-user"></i>
+      
     </span>
-  
-  
-  <a href="#">Max Grover</a>
-  
-  
-  
-</li>
-
-
-
-
-
-<li id="ablog-sidebar-item tags ablog__tags">
-  <span>
-    
-    
-    <i class="fa-fw fa fa-tags"></i>
-    
-    
+     
+    <a href="#">Max Grover</a>
+      
+  </li>
+      
+  <li id="ablog-sidebar-item tags ablog__tags">
+    <span>
+       
+      <i class="fa-fw fa fa-tags"></i>
+       
     </span>
-  
-  
-  <a href="../../tag/dask/">dask</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/conference/">conference</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/open-science/">open-science</a>
-  
-  
-  
-</li>
-
-
+     
+    <a href="../../tag/dask/">dask</a>
+        
+    <a href="../../tag/conference/">conference</a>
+        
+    <a href="../../tag/open-science/">open-science</a>
+      
+  </li>
+   
 </div>
     </ul>
     <p class="ablog-post-excerpt"><p>Cloud optimized datasets help improve speed of analysis</p>
 <p>Entire 4 TB datasets open up in a few seconds</p>
 </p>
 
-    <p class="ablog-post-expand"><a href="../../../posts/2021/dask-summit-takeaway/"><em>Read more ...</em></a></p>
-    <hr/>
+    <p class="ablog-post-expand">
+      <a href="../../../posts/2021/dask-summit-takeaway/"><em>Read more ...</em></a>
+    </p>
+    <hr />
   </div>
   
   <div class="section ablog-post">
@@ -2330,71 +1761,50 @@ We use a single ensemble member historical experiment with daily data from 1850 
     </h2>
     <ul class="ablog-archive">
       <li>
-        
-        
+         
         <i class="fa fa-calendar"></i>
         
         <span>14 May 2021</span>
         
       </li>
       <div class="ablog-sidebar-item ablog__postcard2">
-
-
-<li id="ablog-sidebar-item author ablog__author">
-  <span>
-    
-    <i class="fa-fw fa fa-user"></i>
-    
+   
+  <li id="ablog-sidebar-item author ablog__author">
+    <span>
+      
+      <i class="fa-fw fa fa-user"></i>
+      
     </span>
-  
-  
-  <a href="#">Max Grover</a>
-  
-  
-  
-</li>
-
-
-
-
-
-<li id="ablog-sidebar-item tags ablog__tags">
-  <span>
-    
-    
-    <i class="fa-fw fa fa-tags"></i>
-    
-    
+     
+    <a href="#">Max Grover</a>
+      
+  </li>
+      
+  <li id="ablog-sidebar-item tags ablog__tags">
+    <span>
+       
+      <i class="fa-fw fa fa-tags"></i>
+       
     </span>
-  
-  
-  <a href="../../tag/intake/">intake</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/cmip6/">cmip6</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/debug/">debug</a>
-  
-  
-  
-</li>
-
-
+     
+    <a href="../../tag/intake/">intake</a>
+        
+    <a href="../../tag/cmip6/">cmip6</a>
+        
+    <a href="../../tag/debug/">debug</a>
+      
+  </li>
+   
 </div>
     </ul>
     <p class="ablog-post-excerpt"><p>This post was motivated by a post from Steve Yeager <a class="reference external" href="https://github.com/sgyeager">&#64;sgyeager</a>, who ran into an error when attempting to read in CMIP6 data via intake-esm.</p>
 <p>For those who are unfamiliar with intake-esm, be sure to read over <a class="reference external" href="https://intake-esm.readthedocs.io/en/latest/index.html">the documentation</a>! The user guide even includes <a class="reference external" href="https://intake-esm.readthedocs.io/en/latest/user-guide/cmip6-tutorial.html">an entire portion of their site</a> on looking at CMIP6 data. These resources would be a great place to start.</p>
 </p>
 
-    <p class="ablog-post-expand"><a href="../../../posts/2021/intake_cmip6_debug/"><em>Read more ...</em></a></p>
-    <hr/>
+    <p class="ablog-post-expand">
+      <a href="../../../posts/2021/intake_cmip6_debug/"><em>Read more ...</em></a>
+    </p>
+    <hr />
   </div>
   
   <div class="section ablog-post">
@@ -2403,71 +1813,50 @@ We use a single ensemble member historical experiment with daily data from 1850 
     </h2>
     <ul class="ablog-archive">
       <li>
-        
-        
+         
         <i class="fa fa-calendar"></i>
         
         <span>06 May 2021</span>
         
       </li>
       <div class="ablog-sidebar-item ablog__postcard2">
-
-
-<li id="ablog-sidebar-item author ablog__author">
-  <span>
-    
-    <i class="fa-fw fa fa-user"></i>
-    
+   
+  <li id="ablog-sidebar-item author ablog__author">
+    <span>
+      
+      <i class="fa-fw fa fa-user"></i>
+      
     </span>
-  
-  
-  <a href="#">Max Grover</a>
-  
-  
-  
-</li>
-
-
-
-
-
-<li id="ablog-sidebar-item tags ablog__tags">
-  <span>
-    
-    
-    <i class="fa-fw fa fa-tags"></i>
-    
-    
+     
+    <a href="#">Max Grover</a>
+      
+  </li>
+      
+  <li id="ablog-sidebar-item tags ablog__tags">
+    <span>
+       
+      <i class="fa-fw fa fa-tags"></i>
+       
     </span>
-  
-  
-  <a href="../../tag/editor/">editor</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/paired-programming/">paired-programming</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/remote-access/">remote-access</a>
-  
-  
-  
-</li>
-
-
+     
+    <a href="../../tag/editor/">editor</a>
+        
+    <a href="../../tag/paired-programming/">paired-programming</a>
+        
+    <a href="../../tag/remote-access/">remote-access</a>
+      
+  </li>
+   
 </div>
     </ul>
     <p class="ablog-post-excerpt"><p>A common task when developing notebooks or packages is collaborating with others. It can be challenging to do this when using JupyterHub since two people cannot access the same notebook at same time. One solution to this is to use Visual Studio Code (VS Code) to remotely access Casper/Cheyenne, use a virtual meeting plaform (Zoom, Google Meet), and interactively collaborate on development.</p>
 <p>This process includes a few steps:</p>
 </p>
 
-    <p class="ablog-post-expand"><a href="../../../posts/2021/paired_programming_vs/"><em>Read more ...</em></a></p>
-    <hr/>
+    <p class="ablog-post-expand">
+      <a href="../../../posts/2021/paired_programming_vs/"><em>Read more ...</em></a>
+    </p>
+    <hr />
   </div>
   
   <div class="section ablog-post">
@@ -2476,78 +1865,52 @@ We use a single ensemble member historical experiment with daily data from 1850 
     </h2>
     <ul class="ablog-archive">
       <li>
-        
-        
+         
         <i class="fa fa-calendar"></i>
         
         <span>28 April 2021</span>
         
       </li>
       <div class="ablog-sidebar-item ablog__postcard2">
-
-
-<li id="ablog-sidebar-item author ablog__author">
-  <span>
-    
-    <i class="fa-fw fa fa-user"></i>
-    
+   
+  <li id="ablog-sidebar-item author ablog__author">
+    <span>
+      
+      <i class="fa-fw fa fa-user"></i>
+      
     </span>
-  
-  
-  <a href="../matt-long/">Matt Long</a>
-  
-  ,
-  
-  
-  
-  
-  <a href="#">Max Grover</a>
-  
-  
-  
-</li>
-
-
-
-
-
-<li id="ablog-sidebar-item tags ablog__tags">
-  <span>
-    
-    
-    <i class="fa-fw fa fa-tags"></i>
-    
-    
+     
+    <a href="../matt-long/">Matt Long</a>
+     ,    
+    <a href="#">Max Grover</a>
+      
+  </li>
+      
+  <li id="ablog-sidebar-item tags ablog__tags">
+    <span>
+       
+      <i class="fa-fw fa fa-tags"></i>
+       
     </span>
-  
-  
-  <a href="../../tag/xarray/">xarray</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/dask/">dask</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/pop/">pop</a>
-  
-  
-  
-</li>
-
-
+     
+    <a href="../../tag/xarray/">xarray</a>
+        
+    <a href="../../tag/dask/">dask</a>
+        
+    <a href="../../tag/pop/">pop</a>
+      
+  </li>
+   
 </div>
     </ul>
     <p class="ablog-post-excerpt"><p>Within this example, we cover how to use <code class="docutils literal notranslate"><span class="pre">xarray.map_blocks</span></code> to calculate the mixed-layer depth within the CESM POP model output.</p>
 <p>This calculation is “embarassingly parallel” such that each calculation is done within a single a column. The calculation <strong><em>should</em></strong> be easily computed within each column across the model domain. This is where <code class="docutils literal notranslate"><span class="pre">map_blocks</span></code> can be used to improve the performance of this metric.</p>
 <img alt="MLD example plot" src="../../../_images/mld_example_plot.png" /></p>
 
-    <p class="ablog-post-expand"><a href="../../../posts/2021/map_blocks_example/"><em>Read more ...</em></a></p>
-    <hr/>
+    <p class="ablog-post-expand">
+      <a href="../../../posts/2021/map_blocks_example/"><em>Read more ...</em></a>
+    </p>
+    <hr />
   </div>
   
   <div class="section ablog-post">
@@ -2556,71 +1919,50 @@ We use a single ensemble member historical experiment with daily data from 1850 
     </h2>
     <ul class="ablog-archive">
       <li>
-        
-        
+         
         <i class="fa fa-calendar"></i>
         
         <span>23 April 2021</span>
         
       </li>
       <div class="ablog-sidebar-item ablog__postcard2">
-
-
-<li id="ablog-sidebar-item author ablog__author">
-  <span>
-    
-    <i class="fa-fw fa fa-user"></i>
-    
+   
+  <li id="ablog-sidebar-item author ablog__author">
+    <span>
+      
+      <i class="fa-fw fa fa-user"></i>
+      
     </span>
-  
-  
-  <a href="#">Max Grover</a>
-  
-  
-  
-</li>
-
-
-
-
-
-<li id="ablog-sidebar-item tags ablog__tags">
-  <span>
-    
-    
-    <i class="fa-fw fa fa-tags"></i>
-    
-    
+     
+    <a href="#">Max Grover</a>
+      
+  </li>
+      
+  <li id="ablog-sidebar-item tags ablog__tags">
+    <span>
+       
+      <i class="fa-fw fa fa-tags"></i>
+       
     </span>
-  
-  
-  <a href="../../tag/xarray/">xarray</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/xoak/">xoak</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/">index</a>
-  
-  
-  
-</li>
-
-
+     
+    <a href="../../tag/xarray/">xarray</a>
+        
+    <a href="../../tag/xoak/">xoak</a>
+        
+    <a href="../../tag/">index</a>
+      
+  </li>
+   
 </div>
     </ul>
     <p class="ablog-post-excerpt"><p>This week, there a post within the Zulip regarding how to deal with indexing <a class="reference external" href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2017MS001257">CAM-SE</a> data. The tricky part here is that is an unstructured grid, where there is only one column to the data, <code class="docutils literal notranslate"><span class="pre">ncol</span></code>.</p>
 <p>Here is an example of the dataset we are working with. Notice that both lat and lon have the same dimension, <code class="docutils literal notranslate"><span class="pre">ncol</span></code>.</p>
 </p>
 
-    <p class="ablog-post-expand"><a href="../../../posts/2021/multiple_index_xarray_xoak/"><em>Read more ...</em></a></p>
-    <hr/>
+    <p class="ablog-post-expand">
+      <a href="../../../posts/2021/multiple_index_xarray_xoak/"><em>Read more ...</em></a>
+    </p>
+    <hr />
   </div>
   
   <div class="section ablog-post">
@@ -2629,71 +1971,50 @@ We use a single ensemble member historical experiment with daily data from 1850 
     </h2>
     <ul class="ablog-archive">
       <li>
-        
-        
+         
         <i class="fa fa-calendar"></i>
         
         <span>15 April 2021</span>
         
       </li>
       <div class="ablog-sidebar-item ablog__postcard2">
-
-
-<li id="ablog-sidebar-item author ablog__author">
-  <span>
-    
-    <i class="fa-fw fa fa-user"></i>
-    
+   
+  <li id="ablog-sidebar-item author ablog__author">
+    <span>
+      
+      <i class="fa-fw fa fa-user"></i>
+      
     </span>
-  
-  
-  <a href="#">Max Grover</a>
-  
-  
-  
-</li>
-
-
-
-
-
-<li id="ablog-sidebar-item tags ablog__tags">
-  <span>
-    
-    
-    <i class="fa-fw fa fa-tags"></i>
-    
-    
+     
+    <a href="#">Max Grover</a>
+      
+  </li>
+      
+  <li id="ablog-sidebar-item tags ablog__tags">
+    <span>
+       
+      <i class="fa-fw fa fa-tags"></i>
+       
     </span>
-  
-  
-  <a href="../../tag/jupyterhub/">jupyterhub</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/dask/">dask</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/ncar/">ncar</a>
-  
-  
-  
-</li>
-
-
+     
+    <a href="../../tag/jupyterhub/">jupyterhub</a>
+        
+    <a href="../../tag/dask/">dask</a>
+        
+    <a href="../../tag/ncar/">ncar</a>
+      
+  </li>
+   
 </div>
     </ul>
     <p class="ablog-post-excerpt"><p>Last week, we added posts detailing how to configure <a class="reference external" href="https://docs.dask.org/en/latest/">Dask</a> using the new PBS scheduler on <a class="reference external" href="https://www2.cisl.ucar.edu/resources/computational-systems/casper">Casper</a>. In this week’s example, we provide an example of the recent updates to <a class="reference external" href="https://github.com/NCAR/ncar-jobqueue">ncar-jobqueue</a>, added by <a class="reference external" href="https://github.com/andersy005">Anderson Banihirwe</a>, which allow users to easily configure dask on Casper without having to add many extra steps.</p>
 <p>You must update the package to use the newest updates. You can update using conda!</p>
 </p>
 
-    <p class="ablog-post-expand"><a href="../../../posts/2021/ncar-jobqueue-example/"><em>Read more ...</em></a></p>
-    <hr/>
+    <p class="ablog-post-expand">
+      <a href="../../../posts/2021/ncar-jobqueue-example/"><em>Read more ...</em></a>
+    </p>
+    <hr />
   </div>
   
   <div class="section ablog-post">
@@ -2702,71 +2023,50 @@ We use a single ensemble member historical experiment with daily data from 1850 
     </h2>
     <ul class="ablog-archive">
       <li>
-        
-        
+         
         <i class="fa fa-calendar"></i>
         
         <span>09 April 2021</span>
         
       </li>
       <div class="ablog-sidebar-item ablog__postcard2">
-
-
-<li id="ablog-sidebar-item author ablog__author">
-  <span>
-    
-    <i class="fa-fw fa fa-user"></i>
-    
+   
+  <li id="ablog-sidebar-item author ablog__author">
+    <span>
+      
+      <i class="fa-fw fa fa-user"></i>
+      
     </span>
-  
-  
-  <a href="#">Max Grover</a>
-  
-  
-  
-</li>
-
-
-
-
-
-<li id="ablog-sidebar-item tags ablog__tags">
-  <span>
-    
-    
-    <i class="fa-fw fa fa-tags"></i>
-    
-    
+     
+    <a href="#">Max Grover</a>
+      
+  </li>
+      
+  <li id="ablog-sidebar-item tags ablog__tags">
+    <span>
+       
+      <i class="fa-fw fa fa-tags"></i>
+       
     </span>
-  
-  
-  <a href="../../tag/dask/">dask</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/intake/">intake</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/cesm/">cesm</a>
-  
-  
-  
-</li>
-
-
+     
+    <a href="../../tag/dask/">dask</a>
+        
+    <a href="../../tag/intake/">intake</a>
+        
+    <a href="../../tag/cesm/">cesm</a>
+      
+  </li>
+   
 </div>
     </ul>
     <p class="ablog-post-excerpt"><p>This past week, NCAR CISL updated the Casper Node to use PBS instead of Slurm for scheduling jobs. This led a post in which an example of spinning up dask clusters on the new configuration. This was also an opportunity to dig into dask, and try applying it to a sample task, specifically looking at ecosystem variables in the CESM-LE dataset, using notebooks included in Matt Long’s <a class="reference external" href="https://github.com/matt-long/krill-cesm-le">krill-cesm-le repository</a>, modified by Kristen Krumhardt.</p>
 <p>Here, we spin up our dask cluster. At first, running this notebook resulted in a <code class="docutils literal notranslate"><span class="pre">killed</span> <span class="pre">worker</span></code> error. After further expection, we noticed that additional resources would be needed to read in the notebook since the data are so large (on the order of ~1-2 TB). Increasing the individual worker to a higher amount (ex. 256 GB) solved the issue. Scale up to as many workers as you think are neccessary for the calculation (this may take some trial and error).</p>
 </p>
 
-    <p class="ablog-post-expand"><a href="../../../posts/2021/intake_esm_dask/"><em>Read more ...</em></a></p>
-    <hr/>
+    <p class="ablog-post-expand">
+      <a href="../../../posts/2021/intake_esm_dask/"><em>Read more ...</em></a>
+    </p>
+    <hr />
   </div>
   
   <div class="section ablog-post">
@@ -2775,65 +2075,48 @@ We use a single ensemble member historical experiment with daily data from 1850 
     </h2>
     <ul class="ablog-archive">
       <li>
-        
-        
+         
         <i class="fa fa-calendar"></i>
         
         <span>06 April 2021</span>
         
       </li>
       <div class="ablog-sidebar-item ablog__postcard2">
-
-
-<li id="ablog-sidebar-item author ablog__author">
-  <span>
-    
-    <i class="fa-fw fa fa-user"></i>
-    
+   
+  <li id="ablog-sidebar-item author ablog__author">
+    <span>
+      
+      <i class="fa-fw fa fa-user"></i>
+      
     </span>
-  
-  
-  <a href="#">Max Grover</a>
-  
-  
-  
-</li>
-
-
-
-
-
-<li id="ablog-sidebar-item tags ablog__tags">
-  <span>
-    
-    
-    <i class="fa-fw fa fa-tags"></i>
-    
-    
+     
+    <a href="#">Max Grover</a>
+      
+  </li>
+      
+  <li id="ablog-sidebar-item tags ablog__tags">
+    <span>
+       
+      <i class="fa-fw fa fa-tags"></i>
+       
     </span>
-  
-  
-  <a href="../../tag/jupyterhub/">jupyterhub</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/dask/">dask</a>
-  
-  
-  
-</li>
-
-
+     
+    <a href="../../tag/jupyterhub/">jupyterhub</a>
+        
+    <a href="../../tag/dask/">dask</a>
+      
+  </li>
+   
 </div>
     </ul>
     <p class="ablog-post-excerpt"><p>Casper will complete a transition from Slurm to the PBS Pro workload manager on April 7, 2021. This has implications for how to spin up a Dask cluster, including via the <a class="reference external" href="https://jupyterhub.ucar.edu">NCAR Jupyterhub</a>.</p>
 <p>Below is an example script suitable for the new configuration using the <code class="docutils literal notranslate"><span class="pre">PBSCluster</span></code> function from <code class="docutils literal notranslate"><span class="pre">dask_jobqueue</span></code>. Note that the <code class="docutils literal notranslate"><span class="pre">ncar_jobqueue</span></code> package <a class="reference external" href="https://github.com/NCAR/ncar-jobqueue/issues/40">requires updating</a> to work with the new configuration.</p>
 </p>
 
-    <p class="ablog-post-expand"><a href="../../../posts/2021/casper_pbs_dask/"><em>Read more ...</em></a></p>
-    <hr/>
+    <p class="ablog-post-expand">
+      <a href="../../../posts/2021/casper_pbs_dask/"><em>Read more ...</em></a>
+    </p>
+    <hr />
   </div>
   
   <div class="section ablog-post">
@@ -2842,71 +2125,50 @@ We use a single ensemble member historical experiment with daily data from 1850 
     </h2>
     <ul class="ablog-archive">
       <li>
-        
-        
+         
         <i class="fa fa-calendar"></i>
         
         <span>02 April 2021</span>
         
       </li>
       <div class="ablog-sidebar-item ablog__postcard2">
-
-
-<li id="ablog-sidebar-item author ablog__author">
-  <span>
-    
-    <i class="fa-fw fa fa-user"></i>
-    
+   
+  <li id="ablog-sidebar-item author ablog__author">
+    <span>
+      
+      <i class="fa-fw fa fa-user"></i>
+      
     </span>
-  
-  
-  <a href="#">Max Grover</a>
-  
-  
-  
-</li>
-
-
-
-
-
-<li id="ablog-sidebar-item tags ablog__tags">
-  <span>
-    
-    
-    <i class="fa-fw fa fa-tags"></i>
-    
-    
+     
+    <a href="#">Max Grover</a>
+      
+  </li>
+      
+  <li id="ablog-sidebar-item tags ablog__tags">
+    <span>
+       
+      <i class="fa-fw fa fa-tags"></i>
+       
     </span>
-  
-  
-  <a href="../../tag/open-science/">open-science</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/citation/">citation</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/software/">software</a>
-  
-  
-  
-</li>
-
-
+     
+    <a href="../../tag/open-science/">open-science</a>
+        
+    <a href="../../tag/citation/">citation</a>
+        
+    <a href="../../tag/software/">software</a>
+      
+  </li>
+   
 </div>
     </ul>
     <p class="ablog-post-excerpt"><p>One of the questions that came up during the <a class="reference external" href="https://ncar.github.io/esds/posts/esds-blog/">ESDS Town Hall</a> was how do scientists/developers get credit toward their efforts in developing open-source code? Software that is used by the wider community should received the acknowledgment and recognition it deserves.</p>
 <p>Data and academic publication citations have become popular in the literature, but often times, software is not cited… which can be arguably just as important to the work as the data.</p>
 </p>
 
-    <p class="ablog-post-expand"><a href="../../../posts/2021/software-citation/"><em>Read more ...</em></a></p>
-    <hr/>
+    <p class="ablog-post-expand">
+      <a href="../../../posts/2021/software-citation/"><em>Read more ...</em></a>
+    </p>
+    <hr />
   </div>
   
   <div class="section ablog-post">
@@ -2915,71 +2177,50 @@ We use a single ensemble member historical experiment with daily data from 1850 
     </h2>
     <ul class="ablog-archive">
       <li>
-        
-        
+         
         <i class="fa fa-calendar"></i>
         
         <span>26 March 2021</span>
         
       </li>
       <div class="ablog-sidebar-item ablog__postcard2">
-
-
-<li id="ablog-sidebar-item author ablog__author">
-  <span>
-    
-    <i class="fa-fw fa fa-user"></i>
-    
+   
+  <li id="ablog-sidebar-item author ablog__author">
+    <span>
+      
+      <i class="fa-fw fa fa-user"></i>
+      
     </span>
-  
-  
-  <a href="#">Max Grover</a>
-  
-  
-  
-</li>
-
-
-
-
-
-<li id="ablog-sidebar-item tags ablog__tags">
-  <span>
-    
-    
-    <i class="fa-fw fa fa-tags"></i>
-    
-    
+     
+    <a href="#">Max Grover</a>
+      
+  </li>
+      
+  <li id="ablog-sidebar-item tags ablog__tags">
+    <span>
+       
+      <i class="fa-fw fa fa-tags"></i>
+       
     </span>
-  
-  
-  <a href="../../tag/townhall/">townhall</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/cgd/">cgd</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/questions/">questions</a>
-  
-  
-  
-</li>
-
-
+     
+    <a href="../../tag/townhall/">townhall</a>
+        
+    <a href="../../tag/cgd/">cgd</a>
+        
+    <a href="../../tag/questions/">questions</a>
+      
+  </li>
+   
 </div>
     </ul>
     <p class="ablog-post-excerpt"><p>Last week, there was a town hall focused on gathering input on the Earth System Data Science initiative at NCAR. The meeting began with an introduction about the initiative, the vision, goals, and how the team is planning to start working toward these goals.</p>
 <p>The Question/Answer portion of the town hall was very informative and brought up some great topics for discussion. They have been collected from both the chat and Google Doc, sorted by category.</p>
 </p>
 
-    <p class="ablog-post-expand"><a href="../../../posts/2021/esds-blog/"><em>Read more ...</em></a></p>
-    <hr/>
+    <p class="ablog-post-expand">
+      <a href="../../../posts/2021/esds-blog/"><em>Read more ...</em></a>
+    </p>
+    <hr />
   </div>
   
   <div class="section ablog-post">
@@ -2988,68 +2229,50 @@ We use a single ensemble member historical experiment with daily data from 1850 
     </h2>
     <ul class="ablog-archive">
       <li>
-        
-        
+         
         <i class="fa fa-calendar"></i>
         
         <span>19 March 2021</span>
         
       </li>
       <div class="ablog-sidebar-item ablog__postcard2">
-
-
-<li id="ablog-sidebar-item author ablog__author">
-  <span>
-    
-    <i class="fa-fw fa fa-user"></i>
-    
+   
+  <li id="ablog-sidebar-item author ablog__author">
+    <span>
+      
+      <i class="fa-fw fa fa-user"></i>
+      
     </span>
-  
-  
-  <a href="#">Max Grover</a>
-  
-  
-  
-</li>
-
-
-
-
-
-<li id="ablog-sidebar-item tags ablog__tags">
-  <span>
-    
-    
-    <i class="fa-fw fa fa-tags"></i>
-    
-    
+     
+    <a href="#">Max Grover</a>
+      
+  </li>
+      
+  <li id="ablog-sidebar-item tags ablog__tags">
+    <span>
+       
+      <i class="fa-fw fa fa-tags"></i>
+       
     </span>
-  
-  
-  <a href="../../tag/dashboard/">dashboard</a>
-  
-  
-  
-  
-  
-  <a href="../../tag/jupyter/">jupyter</a>
-  
-  
-  
-</li>
-
-
+     
+    <a href="../../tag/dashboard/">dashboard</a>
+        
+    <a href="../../tag/jupyter/">jupyter</a>
+      
+  </li>
+   
 </div>
     </ul>
     <p class="ablog-post-excerpt"><p>In this example, our goal is to create an interactive dashboard, using images already output on a remote server.</p>
 <p>We are specifically interested in looking at plots created using the <a class="reference external" href="https://github.com/marbl-ecosys/HiRes-CESM-analysis">HighRes-CESM-Analysis</a> repository.</p>
 <img alt="https://img.shields.io/badge/%E2%86%91_Deploy_to-Heroku-7056bf.svg" src="http://img.shields.io/badge/%E2%86%91_launch_dashboard_on-Heroku-7056bf.svg" /></p>
 
-    <p class="ablog-post-expand"><a href="../../../posts/2021/Interactive_Dashboard/"><em>Read more ...</em></a></p>
-    <hr/>
+    <p class="ablog-post-expand">
+      <a href="../../../posts/2021/Interactive_Dashboard/"><em>Read more ...</em></a>
+    </p>
+    <hr />
   </div>
-  
-  
+   
 </div>
 
                 </article>
@@ -3091,7 +2314,7 @@ We use a single ensemble member historical experiment with daily data from 1850 
 
   <p class="copyright">
     
-      © Copyright 2024.
+      © Copyright 2021, ESDS Community.
       <br/>
     
   </p>
@@ -3100,7 +2323,7 @@ We use a single ensemble member historical experiment with daily data from 1850 
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     <br/>
   </p>
 </div>

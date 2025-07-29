@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>What I’ve learned about debugging &#8212; ESDS  documentation</title>
+    <title>What I’ve learned about debugging &#8212; ESDS Website  documentation</title>
   
   
   
@@ -31,9 +31,10 @@
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=66307ba7" />
   
   <!-- So that users can add custom icons -->
   <script src="../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -41,30 +42,35 @@
   <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../../_static/documentation_options.js?v=187304be"></script>
-    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/documentation_options.js?v=55b5f74b"></script>
+    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../../_static/copybutton.js?v=30646c52"></script>
     <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-196809533-1"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'UA-196809533-1');
+            </script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'posts/2022/debugging';</script>
+    <link rel="icon" href="../../../_static/esds_logo.png"/>
     <link rel="author" title="About these documents" href="../../../about/" />
     <link rel="index" title="Index" href="../../../genindex/" />
-    <link rel="search" title="Search" href="../../../search/" />
-
+    <link rel="search" title="Search" href="../../../search/" /> 
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
-
+    <meta name="docbuild:last-update" content="Jul 29, 2025"/> 
 <link
   rel="alternate"
   type="application/atom+xml"
   href="../../../blog/atom.xml"
   title="ESDS"
 />
-
-
-
+  
   </head>
   
   
@@ -130,8 +136,8 @@
       
     
     
-    <img src="../../../_static/esds_logo.png" class="logo__image only-light" alt="ESDS  documentation - Home"/>
-    <img src="../../../_static/esds_logo.png" class="logo__image only-dark pst-js-only" alt="ESDS  documentation - Home"/>
+    <img src="../../../_static/esds_logo.png" class="logo__image only-light" alt="ESDS Website  documentation - Home"/>
+    <img src="../../../_static/esds_logo.png" class="logo__image only-dark pst-js-only" alt="ESDS Website  documentation - Home"/>
   
   
 </a></div>
@@ -148,7 +154,7 @@
     
 <li class="nav-item ">
   <a class="nav-link nav-internal" href="../../../about/">
-    About Us
+    About
   </a>
 </li>
 
@@ -162,7 +168,7 @@
 
 <li class="nav-item ">
   <a class="nav-link nav-internal" href="../../../communication/">
-    Communication and Meetings
+    Community
   </a>
 </li>
 
@@ -188,12 +194,16 @@
     
     <div class="navbar-header-items__end">
       
-      
-        <div class="navbar-item">
+        <div class="navbar-item navbar-persistent--container">
+          
 
-<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-</button></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
       
         <div class="navbar-item">
 
@@ -214,7 +224,7 @@
           
           
           
-          <a href="https://github.com/ncar/esds" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+          <a href="https://github.com/NCAR/esds" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
             <span class="sr-only">GitHub</span></a>
         </li>
         <li class="nav-item">
@@ -235,6 +245,15 @@
     
   </div>
   
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
   
 
   
@@ -272,7 +291,7 @@
     
 <li class="nav-item ">
   <a class="nav-link nav-internal" href="../../../about/">
-    About Us
+    About
   </a>
 </li>
 
@@ -286,7 +305,7 @@
 
 <li class="nav-item ">
   <a class="nav-link nav-internal" href="../../../communication/">
-    Communication and Meetings
+    Community
   </a>
 </li>
 
@@ -316,12 +335,6 @@
         
           <div class="navbar-item">
 
-<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-</button></div>
-        
-          <div class="navbar-item">
-
 <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
   <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
   <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
@@ -339,7 +352,7 @@
           
           
           
-          <a href="https://github.com/ncar/esds" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+          <a href="https://github.com/NCAR/esds" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
             <span class="sr-only">GitHub</span></a>
         </li>
         <li class="nav-item">
@@ -362,153 +375,120 @@
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
-
 <div class="ablog-sidebar-item ablog__postcard">
-
-
-<h2>
-  
-  
-  <i class="fa fa-calendar"></i>
-  
-  <span>12 May 2022</span>
-  
-</h2>
-<ul>
-  <div class="ablog-sidebar-item ablog__postcard2">
-
-
-<li id="ablog-sidebar-item author ablog__author">
-  <span>
+   
+  <h2>
+     
+    <i class="fa fa-calendar"></i>
     
-    <i class="fa-fw fa fa-user"></i>
+    <span>12 May 2022</span>
     
+  </h2>
+  <ul>
+    <div class="ablog-sidebar-item ablog__postcard2">
+   
+  <li id="ablog-sidebar-item author ablog__author">
+    <span>
+      
+      <i class="fa-fw fa fa-user"></i>
+      
     </span>
-  
-  
-  <a href="../../../blog/author/julia-kent/">Julia Kent</a>
-  
-  
-  
-</li>
-
-
-
-
-
-<li id="ablog-sidebar-item tags ablog__tags">
-  <span>
-    
-    
-    <i class="fa-fw fa fa-tag"></i>
-    
+     
+    <a href="../../../blog/author/julia-kent/">Julia Kent</a>
+      
+  </li>
+      
+  <li id="ablog-sidebar-item tags ablog__tags">
+    <span>
+       
+      <i class="fa-fw fa fa-tag"></i>
+      
     </span>
-  
-  
-  <a href="../../../blog/tag/debug/">debug</a>
-  
-  
-  
-</li>
-
-
+     
+    <a href="../../../blog/tag/debug/">debug</a>
+      
+  </li>
+   
 </div>
-</ul>
+  </ul>
 </div>
 </div>
         <div class="sidebar-primary-item">
-
 <div class="ablog-sidebar-item ablog__recentposts">
-<h3>
-  <a href="../../../blog/">Recent Posts</a>
-</h3>
-<ul>
-  
-  
-  <li>
-    <a href="../../2025/collaborary/">
-      10 June - ESDS Collaboratory
-    </a>
-  </li>
-  
-  <li>
-    <a href="../../2024/automation-github-workshop/">
-      28 June - Workshop - From Jupyter Notebook to Web Server: Automating Container Deployments with GitHub Actions
-    </a>
-  </li>
-  
-  <li>
-    <a href="../../2024/containerize-visualizations-event/">
-      07 May - Workshop - From Jupyter Notebook to Web Server: Containerizing Interactive Visualizations
-    </a>
-  </li>
-  
-  <li>
-    <a href="../../2024/esds-annual-event-recap/">
-      01 March - 2024 ESDS Annual Event Recap
-    </a>
-  </li>
-  
-  <li>
-    <a href="../../2023/esds-annual-event/">
-      21 November - 2024 Earth System Data Science (ESDS) Annual Event
-    </a>
-  </li>
-  
-</ul>
+  <h3>
+    <a href="../../../blog/">Recent Posts</a>
+  </h3>
+  <ul>
+     
+    <li>
+      <a href="../../2025/collaborary/">
+        10 June - ESDS Collaboratory
+      </a>
+    </li>
+    
+    <li>
+      <a href="../../2024/automation-github-workshop/">
+        28 June - Workshop - From Jupyter Notebook to Web Server: Automating Container Deployments with GitHub Actions
+      </a>
+    </li>
+    
+    <li>
+      <a href="../../2024/containerize-visualizations-event/">
+        07 May - Workshop - From Jupyter Notebook to Web Server: Containerizing Interactive Visualizations
+      </a>
+    </li>
+    
+    <li>
+      <a href="../../2024/esds-annual-event-recap/">
+        01 March - 2024 ESDS Annual Event Recap
+      </a>
+    </li>
+    
+    <li>
+      <a href="../../2023/esds-annual-event/">
+        21 November - 2024 Earth System Data Science (ESDS) Annual Event
+      </a>
+    </li>
+    
+  </ul>
 </div>
 </div>
         <div class="sidebar-primary-item">
-
-<div class="ablog-sidebar-item ablog__archive">
-<h3>
-  <a href="../../../blog/archive/">Archives</a>
-</h3>
-<ul>
-  
-  
-  <li>
-    <a href="../../../blog/2025/">2025 (1)</a>
-  </li>
-  
-  
-  
-  <li>
-    <a href="../../../blog/2024/">2024 (3)</a>
-  </li>
-  
-  
-  
-  <li>
-    <a href="../../../blog/2023/">2023 (8)</a>
-  </li>
-  
-  
-  
-  <li>
-    <a href="../../../blog/2022/">2022 (13)</a>
-  </li>
-  
-  
-  
-  <li>
-    <a href="../../../blog/2021/">2021 (52)</a>
-  </li>
-  
-  
-  
-  <li>
-    <a href="../../../blog/2020/">2020 (6)</a>
-  </li>
-  
-  
-  
-  <li>
-    <a href="../../../blog/2019/">2019 (2)</a>
-  </li>
-  
-  
-</ul>
+<div class="ablog-sidebar-item ablog__archives">
+  <h3>
+    <a href="../../../blog/archive/">Archives</a>
+  </h3>
+  <ul>
+     
+    <li>
+      <a href="../../../blog/2025/">2025 (1)</a>
+    </li>
+      
+    <li>
+      <a href="../../../blog/2024/">2024 (3)</a>
+    </li>
+      
+    <li>
+      <a href="../../../blog/2023/">2023 (8)</a>
+    </li>
+      
+    <li>
+      <a href="../../../blog/2022/">2022 (13)</a>
+    </li>
+      
+    <li>
+      <a href="../../../blog/2021/">2021 (52)</a>
+    </li>
+      
+    <li>
+      <a href="../../../blog/2020/">2020 (6)</a>
+    </li>
+      
+    <li>
+      <a href="../../../blog/2019/">2019 (2)</a>
+    </li>
+     
+  </ul>
 </div>
 </div>
     </div>
@@ -564,8 +544,7 @@
                 
 <div id="searchbox"></div>
                 <article class="bd-article">
-                  
-<section class="tex2jax_ignore mathjax_ignore" id="what-ive-learned-about-debugging">
+                   <section class="tex2jax_ignore mathjax_ignore" id="what-ive-learned-about-debugging">
 <h1>What I’ve learned about debugging<a class="headerlink" href="#what-ive-learned-about-debugging" title="Link to this heading">#</a></h1>
 <p>It can be easy to get discouraged when working on a coding problem. When you think you’ve solved a problem in your code, it turns out that you misunderstood or didn’t fully grasp the root of the problem. Then, you’re facing a new coding challenge where the computer continually returns a different result than expected. This can turn into a game of cat and mouse as you chase down the bugs that are in the way of your new shiny feature being implemented.</p>
 <p>When this happens to me, I feel disheartened and imposter syndrome creeps up - and then I can shut down, wishing that coding was easier. For me, the silver lining here is that a lot of my work is geared towards educating geoscientists to be better coders. Despite always being STEM-oriented in my passions and work, coding can be hard. This is the experience for a lot of people, and certainly is the experience for a lot of the scientists I have worked with. Reflecting on my own struggles in my own software development practices, can help me teach coding from empathetic and helpful perspectives.</p>
@@ -613,14 +592,10 @@
 </section>
 
 <div class="section ablog__blog_comments">
-  
-  
-
-
+     
 <div class="section ablog__prev-next">
   <span class="ablog__prev">
-    
-    
+     
     <a href="../yourfirst/">
       
       <i class="fa fa-arrow-circle-left"></i>
@@ -631,19 +606,16 @@
   </span>
   <span class="ablog__spacer">&nbsp;</span>
   <span class="ablog__next">
-    
-    
+     
     <a href="../office-hours-appointments/">
       <span>New Office Hours Appointment System</span>
       
-      <i class="fa fa-arrow-circle-right" ></i>
+      <i class="fa fa-arrow-circle-right"></i>
       
     </a>
     
   </span>
 </div>
-
-  
   
 </div>
 
@@ -687,13 +659,20 @@
   </nav></div>
 
   <div class="sidebar-secondary-item">
-  <div role="note" aria-label="source link">
-    <h3>This Page</h3>
-    <ul class="this-page-menu">
-      <li><a href="../../../_sources/posts/2022/debugging.md.txt"
-            rel="nofollow">Show Source</a></li>
-    </ul>
-   </div></div>
+
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/NCAR/esds/edit/main/posts/2022/debugging.md">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+        
+          Edit on GitHub
+        
+      
+    </a>
+  </div>
+</div>
 
 </div></div>
               
@@ -720,7 +699,7 @@
 
   <p class="copyright">
     
-      © Copyright 2024.
+      © Copyright 2021, ESDS Community.
       <br/>
     
   </p>
@@ -729,7 +708,7 @@
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     <br/>
   </p>
 </div>

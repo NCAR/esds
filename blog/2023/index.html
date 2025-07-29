@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Posted in 2023 &#8212; ESDS  documentation</title>
+    <title>Posted in 2023 &#8212; ESDS Website  documentation</title>
   
   
   
@@ -30,9 +30,10 @@
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=66307ba7" />
   
   <!-- So that users can add custom icons -->
   <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -40,30 +41,35 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=187304be"></script>
-    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/documentation_options.js?v=55b5f74b"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../_static/copybutton.js?v=30646c52"></script>
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-196809533-1"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'UA-196809533-1');
+            </script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'blog/2023';</script>
+    <link rel="icon" href="../../_static/esds_logo.png"/>
     <link rel="author" title="About these documents" href="../../about/" />
     <link rel="index" title="Index" href="../../genindex/" />
-    <link rel="search" title="Search" href="../../search/" />
-
+    <link rel="search" title="Search" href="../../search/" /> 
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
-
+    <meta name="docbuild:last-update" content="Jul 29, 2025"/> 
 <link
   rel="alternate"
   type="application/atom+xml"
   href="../../blog/atom.xml"
   title="Posted in 2023"
 />
-
-
-
+  
   </head>
   
   
@@ -129,8 +135,8 @@
       
     
     
-    <img src="../../_static/esds_logo.png" class="logo__image only-light" alt="ESDS  documentation - Home"/>
-    <img src="../../_static/esds_logo.png" class="logo__image only-dark pst-js-only" alt="ESDS  documentation - Home"/>
+    <img src="../../_static/esds_logo.png" class="logo__image only-light" alt="ESDS Website  documentation - Home"/>
+    <img src="../../_static/esds_logo.png" class="logo__image only-dark pst-js-only" alt="ESDS Website  documentation - Home"/>
   
   
 </a></div>
@@ -147,7 +153,7 @@
     
 <li class="nav-item ">
   <a class="nav-link nav-internal" href="../../about/">
-    About Us
+    About
   </a>
 </li>
 
@@ -161,7 +167,7 @@
 
 <li class="nav-item ">
   <a class="nav-link nav-internal" href="../../communication/">
-    Communication and Meetings
+    Community
   </a>
 </li>
 
@@ -187,12 +193,16 @@
     
     <div class="navbar-header-items__end">
       
-      
-        <div class="navbar-item">
+        <div class="navbar-item navbar-persistent--container">
+          
 
-<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-</button></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
       
         <div class="navbar-item">
 
@@ -213,7 +223,7 @@
           
           
           
-          <a href="https://github.com/ncar/esds" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+          <a href="https://github.com/NCAR/esds" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
             <span class="sr-only">GitHub</span></a>
         </li>
         <li class="nav-item">
@@ -234,6 +244,15 @@
     
   </div>
   
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
   
 
   
@@ -267,7 +286,7 @@
     
 <li class="nav-item ">
   <a class="nav-link nav-internal" href="../../about/">
-    About Us
+    About
   </a>
 </li>
 
@@ -281,7 +300,7 @@
 
 <li class="nav-item ">
   <a class="nav-link nav-internal" href="../../communication/">
-    Communication and Meetings
+    Community
   </a>
 </li>
 
@@ -311,12 +330,6 @@
         
           <div class="navbar-item">
 
-<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-</button></div>
-        
-          <div class="navbar-item">
-
 <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
   <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
   <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
@@ -334,7 +347,7 @@
           
           
           
-          <a href="https://github.com/ncar/esds" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+          <a href="https://github.com/NCAR/esds" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
             <span class="sr-only">GitHub</span></a>
         </li>
         <li class="nav-item">
@@ -406,76 +419,53 @@
                 
 <div id="searchbox"></div>
                 <article class="bd-article">
-                  
-
+                   
 <div class="section ablog__collection">
   <h1>
     
-      <span>Posted in
-      
-    2023
-    
-  </span>
+    <span
+      >Posted in  2023 
+    </span>
   </h1>
-  
-  
+   
   <div class="section ablog-post">
     <h2 class="ablog-post-title">
       <a href="../../posts/2023/esds-annual-event/">2024 Earth System Data Science (ESDS) Annual Event</a>
     </h2>
     <ul class="ablog-archive">
       <li>
-        
-        
+         
         <i class="fa fa-calendar"></i>
         
         <span>21 November 2023</span>
         
       </li>
       <div class="ablog-sidebar-item ablog__postcard2">
-
-
-<li id="ablog-sidebar-item author ablog__author">
-  <span>
-    
-    <i class="fa-fw fa fa-user"></i>
-    
+   
+  <li id="ablog-sidebar-item author ablog__author">
+    <span>
+      
+      <i class="fa-fw fa fa-user"></i>
+      
     </span>
-  
-  
-  <a href="../author/teagan-king/">Teagan King</a>
-  
-  ,
-  
-  
-  
-  
-  <a href="../author/julia-kent/">Julia Kent</a>
-  
-  
-  
-</li>
-
-
-
-
-
-<li id="ablog-sidebar-item tags ablog__tags">
-  <span>
-    
-    
-    <i class="fa-fw fa fa-tag"></i>
-    
+     
+    <a href="../author/teagan-king/">Teagan King</a>
+     ,    
+    <a href="../author/julia-kent/">Julia Kent</a>
+      
+  </li>
+      
+  <li id="ablog-sidebar-item tags ablog__tags">
+    <span>
+       
+      <i class="fa-fw fa fa-tag"></i>
+      
     </span>
-  
-  
-  <a href="../tag/tutorial-hackathon-events/">tutorial hackathon events</a>
-  
-  
-  
-</li>
-
-
+     
+    <a href="../tag/tutorial-hackathon-events/">tutorial hackathon events</a>
+      
+  </li>
+   
 </div>
     </ul>
     <p class="ablog-post-excerpt"><p>ESDS is hosting an annual event on <strong>January 18th and 19th</strong> (Thursday-Friday).
@@ -484,8 +474,10 @@ virtual.</p>
 <p>The event will be hosted at the Mesa Lab Main Seminar Room, located at 1850 Table Mesa Dr, Boulder, CO 80305. In order to attend the event virtually, registered participants will be receiving an email from Taysia Peterson roughly one week prior to the event with Zoom details.</p>
 </p>
 
-    <p class="ablog-post-expand"><a href="../../posts/2023/esds-annual-event/"><em>Read more ...</em></a></p>
-    <hr/>
+    <p class="ablog-post-expand">
+      <a href="../../posts/2023/esds-annual-event/"><em>Read more ...</em></a>
+    </p>
+    <hr />
   </div>
   
   <div class="section ablog-post">
@@ -494,71 +486,50 @@ virtual.</p>
     </h2>
     <ul class="ablog-archive">
       <li>
-        
-        
+         
         <i class="fa fa-calendar"></i>
         
         <span>28 August 2023</span>
         
       </li>
       <div class="ablog-sidebar-item ablog__postcard2">
-
-
-<li id="ablog-sidebar-item author ablog__author">
-  <span>
-    
-    <i class="fa-fw fa fa-user"></i>
-    
+   
+  <li id="ablog-sidebar-item author ablog__author">
+    <span>
+      
+      <i class="fa-fw fa fa-user"></i>
+      
     </span>
-  
-  
-  <a href="../author/elena-romashkova/">Elena Romashkova</a>
-  
-  
-  
-</li>
-
-
-
-
-
-<li id="ablog-sidebar-item tags ablog__tags">
-  <span>
-    
-    
-    <i class="fa-fw fa fa-tags"></i>
-    
-    
+     
+    <a href="../author/elena-romashkova/">Elena Romashkova</a>
+      
+  </li>
+      
+  <li id="ablog-sidebar-item tags ablog__tags">
+    <span>
+       
+      <i class="fa-fw fa fa-tags"></i>
+       
     </span>
-  
-  
-  <a href="../tag/conference/">conference</a>
-  
-  
-  
-  
-  
-  <a href="../tag/scipy/">scipy</a>
-  
-  
-  
-  
-  
-  <a href="../tag/open-source/">open-source</a>
-  
-  
-  
-</li>
-
-
+     
+    <a href="../tag/conference/">conference</a>
+        
+    <a href="../tag/scipy/">scipy</a>
+        
+    <a href="../tag/open-source/">open-source</a>
+      
+  </li>
+   
 </div>
     </ul>
     <p class="ablog-post-excerpt"><p>ESDS had a sizable presence at <a class="reference external" href="https://www.scipy2023.scipy.org/">SciPy 2023</a> this year! Many of us shared our work in a formal capacity through tutorials, talks, and posters–most of these were recorded and have resources available publicly online, which we’ve compiled below. There were also lots of opportunities to make connections with people doing work in the broader scientific Python ecosystem outside of our organization. It was very cool to see lots of different tools, projects, and workflows.</p>
 <p>The <a class="reference external" href="https://conference.scipy.org/proceedings/">conference proceedings</a> from this and prior years are now published as well.  You can find published slides, posters, and articles for some of the conference’s presentations at the link above.</p>
 </p>
 
-    <p class="ablog-post-expand"><a href="../../posts/2023/scipy23/"><em>Read more ...</em></a></p>
-    <hr/>
+    <p class="ablog-post-expand">
+      <a href="../../posts/2023/scipy23/"><em>Read more ...</em></a>
+    </p>
+    <hr />
   </div>
   
   <div class="section ablog-post">
@@ -567,43 +538,35 @@ virtual.</p>
     </h2>
     <ul class="ablog-archive">
       <li>
-        
-        
+         
         <i class="fa fa-calendar"></i>
         
         <span>16 August 2023</span>
         
       </li>
       <div class="ablog-sidebar-item ablog__postcard2">
-
-
-<li id="ablog-sidebar-item author ablog__author">
-  <span>
-    
-    <i class="fa-fw fa fa-user"></i>
-    
+   
+  <li id="ablog-sidebar-item author ablog__author">
+    <span>
+      
+      <i class="fa-fw fa fa-user"></i>
+      
     </span>
-  
-  
-  <a href="../author/deepak-cherian/">Deepak Cherian</a>
-  
-  
-  
-</li>
-
-
-
-
-
-
+     
+    <a href="../author/deepak-cherian/">Deepak Cherian</a>
+      
+  </li>
+       
 </div>
     </ul>
     <p class="ablog-post-excerpt"><p>We want to read a large number of netCDF files, combine them to form a single dataset, and then analyze that. How do we think about it?</p>
 <p>In pseudocode we want</p>
 </p>
 
-    <p class="ablog-post-expand"><a href="../../posts/2023/mfdataset/"><em>Read more ...</em></a></p>
-    <hr/>
+    <p class="ablog-post-expand">
+      <a href="../../posts/2023/mfdataset/"><em>Read more ...</em></a>
+    </p>
+    <hr />
   </div>
   
   <div class="section ablog-post">
@@ -612,124 +575,66 @@ virtual.</p>
     </h2>
     <ul class="ablog-archive">
       <li>
-        
-        
+         
         <i class="fa fa-calendar"></i>
         
         <span>15 August 2023</span>
         
       </li>
       <div class="ablog-sidebar-item ablog__postcard2">
-
-
-<li id="ablog-sidebar-item author ablog__author">
-  <span>
-    
-    <i class="fa-fw fa fa-user"></i>
-    
+   
+  <li id="ablog-sidebar-item author ablog__author">
+    <span>
+      
+      <i class="fa-fw fa fa-user"></i>
+      
     </span>
-  
-  
-  <a href="../author/katie-dagon/">Katie Dagon</a>
-  
-  ,
-  
-  
-  
-  
-  <a href="../author/deepak-cherian/">Deepak Cherian</a>
-  
-  ,
-  
-  
-  
-  
-  <a href="../author/teagan-king/">Teagan King</a>
-  
-  ,
-  
-  
-  
-  
-  <a href="../author/john-truesdale/">John Truesdale</a>
-  
-  ,
-  
-  
-  
-  
-  <a href="../author/steve-yeager/">Steve Yeager</a>
-  
-  ,
-  
-  
-  
-  
-  <a href="../author/colin-zarzycki/">Colin Zarzycki</a>
-  
-  
-  
-</li>
-
-
-
-
-
-<li id="ablog-sidebar-item tags ablog__tags">
-  <span>
-    
-    
-    <i class="fa-fw fa fa-tags"></i>
-    
-    
+     
+    <a href="../author/katie-dagon/">Katie Dagon</a>
+     ,    
+    <a href="../author/deepak-cherian/">Deepak Cherian</a>
+     ,    
+    <a href="../author/teagan-king/">Teagan King</a>
+     ,    
+    <a href="../author/john-truesdale/">John Truesdale</a>
+     ,    
+    <a href="../author/steve-yeager/">Steve Yeager</a>
+     ,    
+    <a href="../author/colin-zarzycki/">Colin Zarzycki</a>
+      
+  </li>
+      
+  <li id="ablog-sidebar-item tags ablog__tags">
+    <span>
+       
+      <i class="fa-fw fa fa-tags"></i>
+       
     </span>
-  
-  
-  <a href="../tag/cam/">cam</a>
-  
-  
-  
-  
-  
-  <a href="../tag/cesm/">cesm</a>
-  
-  
-  
-  
-  
-  <a href="../tag/sparse/">sparse</a>
-  
-  
-  
-  
-  
-  <a href="../tag/unstructured-grids/">unstructured grids</a>
-  
-  
-  
-  
-  
-  <a href="../tag/visualization/">visualization</a>
-  
-  
-  
-  
-  
-  <a href="../tag/xesmf/">xesmf</a>
-  
-  
-  
-</li>
-
-
+     
+    <a href="../tag/cam/">cam</a>
+        
+    <a href="../tag/cesm/">cesm</a>
+        
+    <a href="../tag/sparse/">sparse</a>
+        
+    <a href="../tag/unstructured-grids/">unstructured grids</a>
+        
+    <a href="../tag/visualization/">visualization</a>
+        
+    <a href="../tag/xesmf/">xesmf</a>
+      
+  </li>
+   
 </div>
     </ul>
     <p class="ablog-post-excerpt"><p>We demonstrate a variety of options for analyzing and visualizing output from the Community Atmosphere Model (CAM) with the spectral element (SE) grid in Python. This notebook was developed for the ESDS <a class="reference external" href="https://ncar.github.io/esds/posts/2023/unstructured-grid-collab-1/">Collaborative Work Time on Unstructured Grids</a>, which took place on April 17, 2023. A recap of the related CAM-SE discussion can be found <a class="reference external" href="https://ncar.github.io/esds/posts/2023/unstructured-grid-collab-1/#katie-dagon-cgd">here</a>.</p>
 <p><a class="reference internal" href="#section1"><span class="xref myst">Regrid CAM-SE output using map file</span></a></p>
 <img alt="../../_images/817331336ac2ab88e948f527c691a3538a3d43641bd5be2eb8296e7597bb4851.png" src="../../_images/817331336ac2ab88e948f527c691a3538a3d43641bd5be2eb8296e7597bb4851.png" /></p>
 
-    <p class="ablog-post-expand"><a href="../../posts/2023/cam-se-analysis/"><em>Read more ...</em></a></p>
-    <hr/>
+    <p class="ablog-post-expand">
+      <a href="../../posts/2023/cam-se-analysis/"><em>Read more ...</em></a>
+    </p>
+    <hr />
   </div>
   
   <div class="section ablog-post">
@@ -738,58 +643,46 @@ virtual.</p>
     </h2>
     <ul class="ablog-archive">
       <li>
-        
-        
+         
         <i class="fa fa-calendar"></i>
         
         <span>10 May 2023</span>
         
       </li>
       <div class="ablog-sidebar-item ablog__postcard2">
-
-
-<li id="ablog-sidebar-item author ablog__author">
-  <span>
-    
-    <i class="fa-fw fa fa-user"></i>
-    
+   
+  <li id="ablog-sidebar-item author ablog__author">
+    <span>
+      
+      <i class="fa-fw fa fa-user"></i>
+      
     </span>
-  
-  
-  <a href="../author/julia-kent/">Julia Kent</a>
-  
-  
-  
-</li>
-
-
-
-
-
-<li id="ablog-sidebar-item tags ablog__tags">
-  <span>
-    
-    
-    <i class="fa-fw fa fa-tag"></i>
-    
+     
+    <a href="../author/julia-kent/">Julia Kent</a>
+      
+  </li>
+      
+  <li id="ablog-sidebar-item tags ablog__tags">
+    <span>
+       
+      <i class="fa-fw fa fa-tag"></i>
+      
     </span>
-  
-  
-  <a href="../tag/office-hours/">office-hours</a>
-  
-  
-  
-</li>
-
-
+     
+    <a href="../tag/office-hours/">office-hours</a>
+      
+  </li>
+   
 </div>
     </ul>
     <p class="ablog-post-excerpt"><p>A core goal of the ESDS community is to enhance the efficiency of the NCAR/UCAR workforce by fostering deeper collaboration across labs. <a class="reference external" href="https://ncar.github.io/esds/office-hours/">ESDS Office Hours</a> help achieve this goal by serving a dual purpose: helping scientists to more quickly overcome software challenges, which allows them to refocus on their scientific pursuits, and fostering connections among workers across different labs. Office Hours assistants benefit from having a scientific colleague as a “client”, enabling them to refine scientific use cases for their software development and fostering a greater sense of camaraderie. ESDS is always open to additional Office Hours assistants with diverse skill sets to join our team. If you are interested in becoming a part of the ESDS Office Hours team or if you would like to explore a similar service for your own team, this blog post is for you.</p>
 <p>If you’re curious about the ESDS Office Hours system, see our previous <a class="reference internal" href="../../posts/2022/office-hours-appointments/#office-hours-appointments"><span class="std std-ref">New Office Hours Appointment System blog post</span></a>).</p>
 <img alt="" src="../../_images/appointmentsummary.png" /></p>
 
-    <p class="ablog-post-expand"><a href="../../posts/2023/office-hours-help/"><em>Read more ...</em></a></p>
-    <hr/>
+    <p class="ablog-post-expand">
+      <a href="../../posts/2023/office-hours-help/"><em>Read more ...</em></a>
+    </p>
+    <hr />
   </div>
   
   <div class="section ablog-post">
@@ -798,71 +691,42 @@ virtual.</p>
     </h2>
     <ul class="ablog-archive">
       <li>
-        
-        
+         
         <i class="fa fa-calendar"></i>
         
         <span>05 May 2023</span>
         
       </li>
       <div class="ablog-sidebar-item ablog__postcard2">
-
-
-<li id="ablog-sidebar-item author ablog__author">
-  <span>
-    
-    <i class="fa-fw fa fa-user"></i>
-    
+   
+  <li id="ablog-sidebar-item author ablog__author">
+    <span>
+      
+      <i class="fa-fw fa fa-user"></i>
+      
     </span>
-  
-  
-  <a href="../author/deepak-cherian/">Deepak Cherian</a>
-  
-  ,
-  
-  
-  
-  
-  <a href="../author/katie-dagon/">Katie Dagon</a>
-  
-  ,
-  
-  
-  
-  
-  <a href="../author/falko-judt/">Falko Judt</a>
-  
-  ,
-  
-  
-  
-  
-  <a href="../author/orhan-eroglu/">Orhan Eroglu</a>
-  
-  
-  
-</li>
-
-
-
-
-
-<li id="ablog-sidebar-item tags ablog__tags">
-  <span>
-    
-    
-    <i class="fa-fw fa fa-tag"></i>
-    
+     
+    <a href="../author/deepak-cherian/">Deepak Cherian</a>
+     ,    
+    <a href="../author/katie-dagon/">Katie Dagon</a>
+     ,    
+    <a href="../author/falko-judt/">Falko Judt</a>
+     ,    
+    <a href="../author/orhan-eroglu/">Orhan Eroglu</a>
+      
+  </li>
+      
+  <li id="ablog-sidebar-item tags ablog__tags">
+    <span>
+       
+      <i class="fa-fw fa fa-tag"></i>
+      
     </span>
-  
-  
-  <a href="../tag/tutorial-hackathon-events/">tutorial hackathon events</a>
-  
-  
-  
-</li>
-
-
+     
+    <a href="../tag/tutorial-hackathon-events/">tutorial hackathon events</a>
+      
+  </li>
+   
 </div>
     </ul>
     <p class="ablog-post-excerpt"><p>ESDS hosted our first Collaborative Work Time event on April 17, 2023.
@@ -872,8 +736,10 @@ Our goal is to encourage cross-lab collaboration and build lasting science-softw
 A lucky overlap with the Improving Scientific Software conference, meant that collaborators from the Department of Energy were also able to attend in-person.</p>
 <img alt="Photo of unstructured grids collaborative work time session." class="align-center" src="../../_images/unstructured-grid-collab-1.jpg" style="width: 70%;" /></p>
 
-    <p class="ablog-post-expand"><a href="../../posts/2023/unstructured-grid-collab-1/"><em>Read more ...</em></a></p>
-    <hr/>
+    <p class="ablog-post-expand">
+      <a href="../../posts/2023/unstructured-grid-collab-1/"><em>Read more ...</em></a>
+    </p>
+    <hr />
   </div>
   
   <div class="section ablog-post">
@@ -882,76 +748,44 @@ A lucky overlap with the Improving Scientific Software conference, meant that co
     </h2>
     <ul class="ablog-archive">
       <li>
-        
-        
+         
         <i class="fa fa-calendar"></i>
         
         <span>15 March 2023</span>
         
       </li>
       <div class="ablog-sidebar-item ablog__postcard2">
-
-
-<li id="ablog-sidebar-item author ablog__author">
-  <span>
-    
-    <i class="fa-fw fa fa-user"></i>
-    
+   
+  <li id="ablog-sidebar-item author ablog__author">
+    <span>
+      
+      <i class="fa-fw fa fa-user"></i>
+      
     </span>
-  
-  
-  <a href="../author/max-grover/">Max Grover</a>
-  
-  ,
-  
-  
-  
-  
-  <a href="../author/deepak-cherian/">Deepak Cherian</a>
-  
-  
-  
-</li>
-
-
-
-
-
-<li id="ablog-sidebar-item tags ablog__tags">
-  <span>
-    
-    
-    <i class="fa-fw fa fa-tags"></i>
-    
-    
+     
+    <a href="../author/max-grover/">Max Grover</a>
+     ,    
+    <a href="../author/deepak-cherian/">Deepak Cherian</a>
+      
+  </li>
+      
+  <li id="ablog-sidebar-item tags ablog__tags">
+    <span>
+       
+      <i class="fa-fw fa fa-tags"></i>
+       
     </span>
-  
-  
-  <a href="../tag/benchmark/">benchmark</a>
-  
-  
-  
-  
-  
-  <a href="../tag/cesm/">cesm</a>
-  
-  
-  
-  
-  
-  <a href="../tag/netcdf/">netcdf</a>
-  
-  
-  
-  
-  
-  <a href="../tag/zarr/">zarr</a>
-  
-  
-  
-</li>
-
-
+     
+    <a href="../tag/benchmark/">benchmark</a>
+        
+    <a href="../tag/cesm/">cesm</a>
+        
+    <a href="../tag/netcdf/">netcdf</a>
+        
+    <a href="../tag/zarr/">zarr</a>
+      
+  </li>
+   
 </div>
     </ul>
     <p class="ablog-post-excerpt"><p>We benchmark reading a subset of the CESM2-Large Ensemble stored as a collection of netCDF files on the cloud (Amazon / AWS) <strong>from Casper</strong>.
@@ -959,8 +793,10 @@ We use a single ensemble member historical experiment with daily data from 1850 
 <p>We read in two ways:</p>
 </p>
 
-    <p class="ablog-post-expand"><a href="../../posts/2023/cesm2-le-timeseries-kerchunk/"><em>Read more ...</em></a></p>
-    <hr/>
+    <p class="ablog-post-expand">
+      <a href="../../posts/2023/cesm2-le-timeseries-kerchunk/"><em>Read more ...</em></a>
+    </p>
+    <hr />
   </div>
   
   <div class="section ablog-post">
@@ -969,46 +805,37 @@ We use a single ensemble member historical experiment with daily data from 1850 
     </h2>
     <ul class="ablog-archive">
       <li>
-        
-        
+         
         <i class="fa fa-calendar"></i>
         
         <span>07 March 2023</span>
         
       </li>
       <div class="ablog-sidebar-item ablog__postcard2">
-
-
-<li id="ablog-sidebar-item author ablog__author">
-  <span>
-    
-    <i class="fa-fw fa fa-user"></i>
-    
+   
+  <li id="ablog-sidebar-item author ablog__author">
+    <span>
+      
+      <i class="fa-fw fa fa-user"></i>
+      
     </span>
-  
-  
-  <a href="../author/deepak-cherian/">Deepak Cherian</a>
-  
-  
-  
-</li>
-
-
-
-
-
-
+     
+    <a href="../author/deepak-cherian/">Deepak Cherian</a>
+      
+  </li>
+       
 </div>
     </ul>
     <p class="ablog-post-excerpt"><p>This notebook is adapted from the <a class="reference external" href="https://github.com/lsterzinger/2022-esip-kerchunk-tutorial/blob/main/01-Create_References.ipynb">work</a> by <a class="reference external" href="https://lucassterzinger.com/">Lucas Sterzinger</a> (an NCAR SIParCS intern in 2021).</p>
 <p>This notebook was updated to</p>
 </p>
 
-    <p class="ablog-post-expand"><a href="../../posts/2023/kerchunk-mom6/"><em>Read more ...</em></a></p>
-    <hr/>
+    <p class="ablog-post-expand">
+      <a href="../../posts/2023/kerchunk-mom6/"><em>Read more ...</em></a>
+    </p>
+    <hr />
   </div>
-  
-  
+   
 </div>
 
                 </article>
@@ -1050,7 +877,7 @@ We use a single ensemble member historical experiment with daily data from 1850 
 
   <p class="copyright">
     
-      © Copyright 2024.
+      © Copyright 2021, ESDS Community.
       <br/>
     
   </p>
@@ -1059,7 +886,7 @@ We use a single ensemble member historical experiment with daily data from 1850 
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     <br/>
   </p>
 </div>

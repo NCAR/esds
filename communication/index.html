@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Communication and Meetings &#8212; ESDS  documentation</title>
+    <title>Community &#8212; ESDS Website  documentation</title>
   
   
   
@@ -31,9 +31,10 @@
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=66307ba7" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -41,32 +42,37 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=187304be"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/documentation_options.js?v=55b5f74b"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=30646c52"></script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-196809533-1"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'UA-196809533-1');
+            </script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'communication';</script>
+    <link rel="icon" href="../_static/esds_logo.png"/>
     <link rel="author" title="About these documents" href="../about/" />
     <link rel="index" title="Index" href="../genindex/" />
     <link rel="search" title="Search" href="../search/" />
     <link rel="next" title="Office Hours" href="../office-hours/" />
-    <link rel="prev" title="Blog" href="../blog/" />
-
+    <link rel="prev" title="Blog" href="../blog/" /> 
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
-
+    <meta name="docbuild:last-update" content="Jul 29, 2025"/> 
 <link
   rel="alternate"
   type="application/atom+xml"
   href="../blog/atom.xml"
   title="ESDS"
 />
-
-
-
+  
   </head>
   
   
@@ -132,8 +138,8 @@
       
     
     
-    <img src="../_static/esds_logo.png" class="logo__image only-light" alt="ESDS  documentation - Home"/>
-    <img src="../_static/esds_logo.png" class="logo__image only-dark pst-js-only" alt="ESDS  documentation - Home"/>
+    <img src="../_static/esds_logo.png" class="logo__image only-light" alt="ESDS Website  documentation - Home"/>
+    <img src="../_static/esds_logo.png" class="logo__image only-dark pst-js-only" alt="ESDS Website  documentation - Home"/>
   
   
 </a></div>
@@ -150,7 +156,7 @@
     
 <li class="nav-item ">
   <a class="nav-link nav-internal" href="../about/">
-    About Us
+    About
   </a>
 </li>
 
@@ -164,7 +170,7 @@
 
 <li class="nav-item current active">
   <a class="nav-link nav-internal" href="#">
-    Communication and Meetings
+    Community
   </a>
 </li>
 
@@ -190,12 +196,16 @@
     
     <div class="navbar-header-items__end">
       
-      
-        <div class="navbar-item">
+        <div class="navbar-item navbar-persistent--container">
+          
 
-<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-</button></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
       
         <div class="navbar-item">
 
@@ -216,7 +226,7 @@
           
           
           
-          <a href="https://github.com/ncar/esds" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+          <a href="https://github.com/NCAR/esds" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
             <span class="sr-only">GitHub</span></a>
         </li>
         <li class="nav-item">
@@ -237,6 +247,15 @@
     
   </div>
   
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
   
 
   
@@ -272,7 +291,7 @@
     
 <li class="nav-item ">
   <a class="nav-link nav-internal" href="../about/">
-    About Us
+    About
   </a>
 </li>
 
@@ -286,7 +305,7 @@
 
 <li class="nav-item current active">
   <a class="nav-link nav-internal" href="#">
-    Communication and Meetings
+    Community
   </a>
 </li>
 
@@ -316,12 +335,6 @@
         
           <div class="navbar-item">
 
-<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-</button></div>
-        
-          <div class="navbar-item">
-
 <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
   <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
   <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
@@ -339,7 +352,7 @@
           
           
           
-          <a href="https://github.com/ncar/esds" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+          <a href="https://github.com/NCAR/esds" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
             <span class="sr-only">GitHub</span></a>
         </li>
         <li class="nav-item">
@@ -362,14 +375,13 @@
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item"><div class="bio-info">
-  <div class="name">Earth System Data Science initiative at NSF NCAR</div>
+  <div class="name">Earth System Data Science (ESDS) at NSF NCAR & UCAR</div>
 
   <div class="whatido">
     <p>Building an inclusive sociotechnical network to promote effective synthesis
     and interpretation of data relevant to solving problems in Earth system
     science and supporting decisions within stakeholder communities.</p>
 
-    <p>The Earth System Data Science initiative follows these <a href="https://www.ucar.edu/accessibility">accsesibility guidelines</a></p>
   </div>
 </div></div>
     </div>
@@ -409,7 +421,7 @@
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Communication and Meetings</span></li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Community</span></li>
   </ul>
 </nav>
 </div>
@@ -425,9 +437,8 @@
                 
 <div id="searchbox"></div>
                 <article class="bd-article">
-                  
-<section class="tex2jax_ignore mathjax_ignore" id="communication-and-meetings">
-<h1>Communication and Meetings<a class="headerlink" href="#communication-and-meetings" title="Link to this heading">#</a></h1>
+                   <section class="tex2jax_ignore mathjax_ignore" id="community">
+<h1>Community<a class="headerlink" href="#community" title="Link to this heading">#</a></h1>
 <section id="email-list">
 <h2>Email List<a class="headerlink" href="#email-list" title="Link to this heading">#</a></h2>
 <p>If you would like to join the ESDS Email List to be informed of community updates, we recommend you do so by joining the ESDS Google Group by clicking the button below, then click “Join Group.”</p>
@@ -474,7 +485,7 @@
 </section>
 <section id="esds-forum">
 <h2>ESDS Forum<a class="headerlink" href="#esds-forum" title="Link to this heading">#</a></h2>
-<p>Every other Monday from 2-3pm MT, we hold the ESDS Forum over <a class="reference internal" href="#meet.google.com/mfb-whpi-tnj"><span class="xref myst">Google Meet</span></a>, which provides a venue for discussion, coordination and showcasing work in progress. Examples include:</p>
+<p>Every other Monday from 2-3pm MT, we hold the ESDS Forum over <a class="reference external" href="https://meet.google.com/mfb-whpi-tnj">Google Meet</a>, which provides a venue for discussion, coordination and showcasing work in progress. Examples include:</p>
 <ul class="simple">
 <li><p>Workflow demos</p></li>
 <li><p>Overview of packages and analysis tools</p></li>
@@ -522,8 +533,7 @@
 </section>
 
 <div class="section ablog__blog_comments">
-  
-  
+   
 </div>
 
                 </article>
@@ -579,13 +589,20 @@
   </nav></div>
 
   <div class="sidebar-secondary-item">
-  <div role="note" aria-label="source link">
-    <h3>This Page</h3>
-    <ul class="this-page-menu">
-      <li><a href="../_sources/communication.md.txt"
-            rel="nofollow">Show Source</a></li>
-    </ul>
-   </div></div>
+
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/NCAR/esds/edit/main/communication.md">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+        
+          Edit on GitHub
+        
+      
+    </a>
+  </div>
+</div>
 
 </div></div>
               
@@ -612,7 +629,7 @@
 
   <p class="copyright">
     
-      © Copyright 2024.
+      © Copyright 2021, ESDS Community.
       <br/>
     
   </p>
@@ -621,7 +638,7 @@
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     <br/>
   </p>
 </div>
