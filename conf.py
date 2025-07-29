@@ -17,9 +17,9 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'ESDS'
-copyright = '2024'
-author = 'Earth System Data Science (ESDS) community'
+project = 'ESDS Website'
+copyright = '2021, ESDS Community'
+author = 'ESDS Community'
 
 
 # -- General configuration ---------------------------------------------------
@@ -57,15 +57,28 @@ language = 'en'
 #
 
 html_logo = "_static/esds_logo.png"
+html_favicon = "_static/esds_logo.png"
+html_sourcelink_suffix = ""
+html_last_updated_fmt = ""
+
+html_context = {
+    "github_user": "NCAR",
+    "github_repo": "esds",
+    "github_version": "main",
+    "doc_path": "",
+}
+
+html_static_path = ["_static"]
+html_css_files = ["custom.css"]
+html_show_sourcelink = False
 
 html_theme = 'pydata_sphinx_theme'
 
 # Add some more theme Options
 html_theme_options = {
-    'github_url': 'https://github.com/ncar/esds',
-    'google_analytics_id': 'UA-196809533-1',
-    'navbar_end': ['search-button', 'theme-switcher', 'navbar-icon-links'],
-    'navbar_persistent': [],
+    'use_edit_page_button': True,
+    'github_url': 'https://github.com/NCAR/esds',
+    'navbar_end': ['theme-switcher', 'navbar-icon-links'],
     'icon_links': [
         {
             "name": "YouTube",
@@ -74,6 +87,10 @@ html_theme_options = {
             "type": "fontawesome",
         },
     ],
+}
+
+html_theme_options["analytics"] = {
+    "google_analytics_id": "UA-196809533-1",
 }
 
 rediraffe_redirects = 'redirects.txt'
@@ -88,13 +105,10 @@ html_sidebars = {
     'index': ['hello.html'],
     'about': ['hello.html'],
     'communication': ['hello.html'],
-    'blog': ['sidebar-nav-bs.html', 'tagcloud.html', 'archives.html'],
-    'posts/**': [
-        'sidebar-nav-bs.html',
-        'postcard.html',
-        'recentposts.html',
-        'archives.html',
-    ],
+    'office-hours': ['hello.html'],
+    'resources': ['hello.html'],
+    'blog': ['ablog/recentposts.html', 'ablog/archives.html', 'ablog/tagcloud.html'],
+    'posts/**': ['ablog/postcard.html', 'ablog/recentposts.html', 'ablog/archives.html'],
 }
 
 
@@ -114,10 +128,6 @@ panels_add_bootstrap_css = False
 myst_enable_extensions = ['amsmath', 'colon_fence', 'deflist', 'html_image', 'dollarmath']
 myst_url_schemes = ['http', 'https', 'mailto']
 
-
 # Temporarily stored as off until we fix it
-jupyter_execute_notebooks = 'off'
+nb_execution_mode = 'off'
 
-
-# def setup(app):
-#     app.add_css_file('custom.css')

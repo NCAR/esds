@@ -1,4 +1,4 @@
-# Communication and Meetings
+# Community
 
 ## Email List
 
@@ -49,7 +49,7 @@ Slack is an asynchronous messaging platform which can be used for both private m
 
 ## ESDS Forum
 
-Every other Monday from 2-3pm MT, we hold the ESDS Forum over [Google Meet](meet.google.com/mfb-whpi-tnj), which provides a venue for discussion, coordination and showcasing work in progress. Examples include:
+Every other Monday from 2-3pm MT, we hold the ESDS Forum over [Google Meet](https://meet.google.com/mfb-whpi-tnj), which provides a venue for discussion, coordination and showcasing work in progress. Examples include:
 
 - Workflow demos
 - Overview of packages and analysis tools

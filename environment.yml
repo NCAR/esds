@@ -17,20 +17,17 @@ dependencies:
   - matplotlib
   - myst-nb>=0.12.0
   - netcdf4
-  - pip
   - pydata-sphinx-theme>=0.4.3
   - python-graphviz
-  - python=3.9
   - scipy
   - seaborn
   - sparse
   - sphinx
   - sphinx-autobuild
   - sphinx-comments
-  - sphinxcontrib-bibtex<2.0.0
+  - sphinxcontrib-bibtex
   - xarray>=0.18.2
   - sphinxext-rediraffe
   - sphinx-design
   - sphinx-copybutton
-  - pip:
-      - sphinxext-opengraph
+  - sphinxext-opengraph
