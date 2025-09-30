@@ -1,19 +1,18 @@
 # About
 
-The Earth System Data Science (ESDS) initiative is a community
-with a common interest in advancing geoscientist’s ability to make
-effective use of modern, open tools and technologies to support
-their Data Science needs. ESDS welcomes participation from all
+The NSF NCAR & UCAR Earth System Data Science (ESDS) initiative is a community
+with a common interest in advancing geoscientists' ability to make
+effective use of modern, open tools, and technologies to support
+their data science needs. ESDS welcomes participation from all
 NSF NCAR and UCAR Lab/Centers/Programs/Offices (LCPOs). We are primarily a volunteer organization, and
 encourage each Lab, Center, Program or Office (LCPO) to support our efforts by delegating representatives
-to serve on the ESDS Leadership Committee and/or Working Groups as
+to serve on the ESDS leadership committee and/or working groups as
 described in our [governance document](https://docs.google.com/document/d/1xjNzJqZjeRzUg5BMipQVUsy2xA1SRlEiyJLpPmUAs9E/edit?usp=sharing).
 
 ## ESDS Representatives
-* Daniel Adriaansen, RAL
+
 * Drew Camron, Unidata
 * John Clyne, CISL
-* Orhan Eroglu, CISL
 * Katelyn FitzGerald, CISL
 * Falko Judt, MMM
 * Julia Kent, CISL
@@ -23,7 +22,6 @@ described in our [governance document](https://docs.google.com/document/d/1xjNzJ
 * Susan Stringer, EOL
 * Harsha Hampapura, CISL
 * Behrooz Roozitalab, ACOM
-* Jiwon Gim, ACOM
 
 ## Vision
 
