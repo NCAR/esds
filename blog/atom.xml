@@ -2,22 +2,38 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>ncar.github.io/esds/</id>
   <title>ESDS</title>
-  <updated>2025-08-18T15:33:20.048914+00:00</updated>
+  <updated>2025-11-17T22:30:50.642490+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.12">ABlog</generator>
   <entry>
-    <id>ncar.github.io/esds/posts/2025/collaborary/</id>
+    <id>ncar.github.io/esds/posts/2025/collaboratory_november/</id>
+    <title>ESDS Collaboratory</title>
+    <updated>2025-11-17T00:00:00+00:00</updated>
+    <author>
+      <name>Katelyn FitzGerald</name>
+    </author>
+    <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;Are you facing data or software challenges in your scientific workflows? Bring your work down to the Damon Room in the Mesa Lab on Wednesday November 19th, 2025!&lt;/p&gt;
+&lt;p&gt;ESDS team members will be in the library from 8AM to 4PM to answer questions and exchange ideas. Feel free to come all day or just pop in whenever is convenient.&lt;/p&gt;
+&lt;/p&gt;
+</content>
+    <link href="ncar.github.io/esds/posts/2025/collaboratory_november/"/>
+    <summary>Are you facing data or software challenges in your scientific workflows? Bring your work down to the Damon Room in the Mesa Lab on Wednesday November 19th, 2025!ESDS team members will be in the library from 8AM to 4PM to answer questions and exchange ideas. Feel free to come all day or just pop in whenever is convenient.</summary>
+    <category term="collaboratoryevents" label="collaboratory events"/>
+    <published>2025-11-17T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>ncar.github.io/esds/posts/2025/collaboratory_june/</id>
     <title>ESDS Collaboratory</title>
     <updated>2025-06-10T00:00:00+00:00</updated>
     <author>
-      <name>Julia kent</name>
+      <name>Julia Kent</name>
     </author>
     <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;Are you facing data or software challenges in your scientific workflows? Bring your work down to the Mesa Lab library on Wednesday June 25, 2025 for the first ever ESDS Collaboratory!&lt;/p&gt;
 &lt;p&gt;ESDS team members will be in the library from 9AM to 4PM to answer questions and exchange ideas. Feel free to come all day or just pop in when convenient.&lt;/p&gt;
 &lt;img alt="flyer" src="ncar.github.io/esds/_images/collaboratory-flyer.png" /&gt;&lt;/p&gt;
 </content>
-    <link href="ncar.github.io/esds/posts/2025/collaborary/"/>
+    <link href="ncar.github.io/esds/posts/2025/collaboratory_june/"/>
     <summary>Are you facing data or software challenges in your scientific workflows? Bring your work down to the Mesa Lab library on Wednesday June 25, 2025 for the first ever ESDS Collaboratory!ESDS team members will be in the library from 9AM to 4PM to answer questions and exchange ideas. Feel free to come all day or just pop in when convenient.flyer</summary>
     <category term="collaboratoryevents" label="collaboratory events"/>
     <published>2025-06-10T00:00:00+00:00</published>
