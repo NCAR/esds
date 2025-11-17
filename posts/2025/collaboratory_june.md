@@ -1,5 +1,5 @@
 ---
-author: Julia kent
+author: Julia Kent
 date: 2025-06-10
 tags: collaboratory events
 ---
