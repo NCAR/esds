@@ -14,7 +14,7 @@ described in our [governance document](https://docs.google.com/document/d/1xjNzJ
 * Drew Camron, Unidata
 * John Clyne, CISL
 * Katelyn FitzGerald, CISL
-* Falko Judt, MMM
+* Rubaiat Islam, MMM
 * Julia Kent, CISL
 * Teagan King, CGD
 * Mike Levy, CGD
