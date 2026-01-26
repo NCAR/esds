@@ -22,7 +22,7 @@ dependencies:
   - scipy
   - seaborn
   - sparse
-  - sphinx
+  - sphinx<9
   - sphinx-autobuild
   - sphinx-comments
   - sphinxcontrib-bibtex
