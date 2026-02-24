@@ -2,7 +2,7 @@
 
 ## Email List
 
-If you would like to join the ESDS Email List to be informed of community updates, we recommend you do so by joining the ESDS Google Group by clicking the button below, then click "Join Group."
+If you would like to join the ESDS email list to be informed of community updates, we recommend you do so by joining the ESDS Google Group by clicking the button below, then click "Join Group."
 
 <a href="https://groups.google.com/a/ucar.edu/g/esds" target="_blank">
   <button style="
@@ -49,7 +49,7 @@ Slack is an asynchronous messaging platform which can be used for both private m
 
 ## ESDS Forum
 
-Every other Monday from 2-3pm MT, we hold the ESDS Forum over [Google Meet](https://meet.google.com/mfb-whpi-tnj), which provides a venue for discussion, coordination and showcasing work in progress. Examples include:
+The first Tuesday of every month from 1-2pm MT, we hold the ESDS Forum over [Google Meet](https://meet.google.com/mfb-whpi-tnj), which provides a venue for discussion, coordination and showcasing work in progress. Examples include:
 
 - Workflow demos
 - Overview of packages and analysis tools
