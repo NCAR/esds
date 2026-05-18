@@ -70,7 +70,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
-    <meta name="docbuild:last-update" content="Apr 27, 2026"/>
+    <meta name="docbuild:last-update" content="May 18, 2026"/>
   
     
     <script src="../../../_static/searchtools.js"></script>
@@ -587,7 +587,7 @@
 <p><strong>A.</strong> This is the expected behavior. You can double check your environment by typing <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">env</span> <span class="pre">list</span></code> from your Jupyter terminal to see all of your environments. The one with the asterisks next to it is your activated environment.</p>
 <hr class="docutils" />
 <p><strong>Q.</strong> The Jupyter workspace autocompletion of quotation marks and parenthesis is causing errors. Is there a way to disable this?</p>
-<p><strong>A.</strong> Yes according to this this <a class="reference external" href="https://stackoverflow.com/questions/44216326/how-to-disable-auto-quotes-and-auto-brackets-in-jupyter-5-0#:~:text=2%20Answers&amp;amp;text=After%20executing%20the%20Python%20command,auto%2Dclosing%20quotes%20and%20brackets">stack overflow post</a>, in any code cell type:</p>
+<p><strong>A.</strong> Yes according to this this <a class="reference external" href="https://stackoverflow.com/questions/44216326/how-to-disable-auto-quotes-and-auto-brackets-in-jupyter-5-0#:~:text=2%20Answers&amp;text=After%20executing%20the%20Python%20command,auto%2Dclosing%20quotes%20and%20brackets">stack overflow post</a>, in any code cell type:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">notebook.services.config</span><span class="w"> </span><span class="kn">import</span> <span class="n">ConfigManager</span>
 <span class="n">c</span> <span class="o">=</span> <span class="n">ConfigManager</span><span class="p">()</span>
 <span class="n">c</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="s1">&#39;notebook&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;CodeCell&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;cm_config&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;autoCloseBrackets&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">}}})</span>

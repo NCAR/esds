@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>ncar.github.io/esds/</id>
   <title>ESDS</title>
-  <updated>2026-04-27T16:24:47.827678+00:00</updated>
+  <updated>2026-05-18T18:47:04.643461+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.13">ABlog</generator>
@@ -1282,7 +1282,7 @@ by Friday, November 4, 2022!</summary>
       <name>Julia Kent</name>
     </author>
     <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;Here is a compilation of questions and issues that arose during the &lt;a class="reference external" href="https://colab.research.google.com/drive/1zcjaGXofLzUXkQzJKnANE9Z3yFUt0q7E?usp=sharing"&gt;Numpy&lt;/a&gt; session of the Python Tutorial Seminar Series.&lt;/p&gt;
-&lt;p&gt;The live video recording of this content can be found &lt;a class="reference external" href="https://www.youtube.com/watch?v=kstc-6uz7AQ&amp;amp;amp;t=10s"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The live video recording of this content can be found &lt;a class="reference external" href="https://www.youtube.com/watch?v=kstc-6uz7AQ&amp;amp;t=10s"&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;/p&gt;
 </content>
     <link href="ncar.github.io/esds/posts/2021/numpy-faq/"/>
