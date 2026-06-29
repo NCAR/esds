@@ -8,11 +8,6 @@ If your question is about an error message you are raising in your workflow, hel
 
 **NOTE:** Office hours are designed for NSF NCAR and UCAR staff.
 
-```{admonition} ESDS Collaboratory on Wednesday, November 19th!
-:class: admonition
-ESDS is organizing in-person "Collaboratory" days to encourage outreach, engagement, and the sharing of ideas between teams. These sessions will rotate between the Mesa Lab and Foothills Lab. For more information, check out [this blog post](../posts/2025/collaboratory_november).
-```
-
 <iframe
   src="https://app.squarespacescheduling.com/schedule.php?owner=26907589"
   title="Schedule Appointment"
