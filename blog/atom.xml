@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>ncar.github.io/esds/</id>
   <title>ESDS</title>
-  <updated>2026-06-22T02:38:31.062079+00:00</updated>
+  <updated>2026-06-29T21:58:12.021942+00:00</updated>
   <link href="ncar.github.io/esds/"/>
   <link href="ncar.github.io/esds/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.13">ABlog</generator>
@@ -265,7 +265,7 @@ NCAR/UCAR/UCP on November 10-11, 2022. This blog post serves to consolidate and 
     </author>
     <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;A fairly common request is to use an existing ESMF weights file to regrid a Xarray Dataset  (&lt;a class="reference external" href="https://github.com/UXARRAY/uxarray/issues/172"&gt;1&lt;/a&gt;,  &lt;a class="reference external" href="https://github.com/pangeo-data/xESMF/issues/202"&gt;2&lt;/a&gt;). Applying weights in general should be easy: read weights then &lt;a class="reference external" href="https://github.com/UXARRAY/uxarray/issues/172#issuecomment-1310601230"&gt;apply them&lt;/a&gt; using &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;dot&lt;/span&gt;&lt;/code&gt; or &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;tensordot&lt;/span&gt;&lt;/code&gt; on the input dataset.&lt;/p&gt;
 &lt;p&gt;In the Xarray/Dask/Pangeo ecosystem, &lt;a class="reference external" href="https://xesmf.readthedocs.io"&gt;xESMF&lt;/a&gt; provides an interface to ESMF for convenient regridding, includiing parallelization with Dask. Here we demonstrate how to use an existing ESMF weights file with xESMF specifically for CAM-SE.&lt;/p&gt;
-&lt;img alt="ncar.github.io/esds/_images/fd44e9f7bac7bfb9e60950a50b7f51ec81040235662db40028a587eea1fe403e.png" src="ncar.github.io/esds/_images/fd44e9f7bac7bfb9e60950a50b7f51ec81040235662db40028a587eea1fe403e.png" style="width: 600px;" /&gt;&lt;/p&gt;
+&lt;img alt="ncar.github.io/esds/_images/fd44e9f7bac7bfb9e60950a50b7f51ec81040235662db40028a587eea1fe403e.png" src="ncar.github.io/esds/_images/fd44e9f7bac7bfb9e60950a50b7f51ec81040235662db40028a587eea1fe403e.png" width="600" /&gt;&lt;/p&gt;
 </content>
     <link href="ncar.github.io/esds/posts/2022/cam-se-regridding/"/>
     <summary>A fairly common request is to use an existing ESMF weights file to regrid a Xarray Dataset  (1,  2). Applying weights in general should be easy: read weights then apply them using dot or tensordot on the input dataset.In the Xarray/Dask/Pangeo ecosystem, xESMF provides an interface to ESMF for convenient regridding, includiing parallelization with Dask. Here we demonstrate how to use an existing ESMF weights file with xESMF specifically for CAM-SE.</summary>
@@ -398,7 +398,7 @@ by Friday, November 4, 2022!</summary>
     </author>
     <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;Detrending - subtracting a trend, commonly a linear fit, from the data - along the time dimension is a common workflow in the climate sciences.&lt;/p&gt;
 &lt;p&gt;Here’s an example&lt;/p&gt;
-&lt;img alt="ncar.github.io/esds/_images/e25cf220f15e78e7aa8d54f8e9d18a52e56c57a24b0f30bbd7bc7410543329f9.png" src="ncar.github.io/esds/_images/e25cf220f15e78e7aa8d54f8e9d18a52e56c57a24b0f30bbd7bc7410543329f9.png" style="width: 375px; height: 261px;" /&gt;&lt;/p&gt;
+&lt;img alt="ncar.github.io/esds/_images/e25cf220f15e78e7aa8d54f8e9d18a52e56c57a24b0f30bbd7bc7410543329f9.png" height="261" src="ncar.github.io/esds/_images/e25cf220f15e78e7aa8d54f8e9d18a52e56c57a24b0f30bbd7bc7410543329f9.png" width="375" /&gt;&lt;/p&gt;
 </content>
     <link href="ncar.github.io/esds/posts/2022/dask-debug-detrend/"/>
     <summary>Detrending - subtracting a trend, commonly a linear fit, from the data - along the time dimension is a common workflow in the climate sciences.Here’s an example</summary>
@@ -451,7 +451,7 @@ by Friday, November 4, 2022!</summary>
     </author>
     <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;An underappreciated feature of Xarray + Dask is the ability to plug in &lt;a class="reference external" href="https://docs.xarray.dev/en/stable/user-guide/duckarrays.html"&gt;different array types&lt;/a&gt;. Usually we work with Xarray wrapping a Dask array which in turn uses &lt;em&gt;NumPy&lt;/em&gt; arrays for each block; or just Xarray wrapping NumPy arrays directly. NumPy arrays are dense in-memory arrays. Other array types exist:&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://sparse.pydata.org"&gt;sparse&lt;/a&gt; for sparse arrays&lt;/p&gt;
-&lt;img alt="ncar.github.io/esds/_images/c4d9bf482f609b5c8823a94f55faa35a854a944a89bdc967aff406eb134a52c5.png" src="ncar.github.io/esds/_images/c4d9bf482f609b5c8823a94f55faa35a854a944a89bdc967aff406eb134a52c5.png" style="width: 546px; height: 442px;" /&gt;&lt;/p&gt;
+&lt;img alt="ncar.github.io/esds/_images/c4d9bf482f609b5c8823a94f55faa35a854a944a89bdc967aff406eb134a52c5.png" height="442" src="ncar.github.io/esds/_images/c4d9bf482f609b5c8823a94f55faa35a854a944a89bdc967aff406eb134a52c5.png" width="546" /&gt;&lt;/p&gt;
 </content>
     <link href="ncar.github.io/esds/posts/2022/sparse-PFT-gridding/"/>
     <summary>An underappreciated feature of Xarray + Dask is the ability to plug in different array types. Usually we work with Xarray wrapping a Dask array which in turn uses NumPy arrays for each block; or just Xarray wrapping NumPy arrays directly. NumPy arrays are dense in-memory arrays. Other array types exist:sparse for sparse arrays</summary>
