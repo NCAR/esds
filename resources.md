@@ -2,69 +2,69 @@
 
 ## NSF NCAR Resources
 ### HPC Systems
-User documentation: https://ncar-hpc-docs.readthedocs.io/
+[User documentation](https://ncar-hpc-docs.readthedocs.io/)
 
-System status: https://arc.ucar.edu/system_status
+[System status](https://arc.ucar.edu/system_status)
 
-Allocation and project info: https://samuel.k8s.ucar.edu/
+[Allocation and project info](https://samuel.k8s.ucar.edu/)
 
-Storage systems: https://ncar-hpc-docs.readthedocs.io/en/latest/storage-systems/#storage-resources
-- Globally Accessible Data Environment (GLADE) - https://ncar-hpc-docs.readthedocs.io/en/latest/storage-systems/glade/
+[Storage systems](https://ncar-hpc-docs.readthedocs.io/en/latest/storage-systems/#storage-resources)
+- [Globally Accessible Data Environment (GLADE)](https://ncar-hpc-docs.readthedocs.io/en/latest/storage-systems/glade/)
 
 #### Services:
 Open on Demand (OOD)
-- Portal: https://ondemand.hpc.ucar.edu/
-- Documentation section: https://ncar-hpc-docs.readthedocs.io/en/latest/compute-systems/ood/
+- [Portal](https://ondemand.hpc.ucar.edu/)
+- [Documentation section](https://ncar-hpc-docs.readthedocs.io/en/latest/compute-systems/ood/)
 
 #### User environment: 
-Documentation: https://ncar-hpc-docs.readthedocs.io/en/latest/environment-and-software/user-environment/
+[Documentation](https://ncar-hpc-docs.readthedocs.io/en/latest/environment-and-software/user-environment/)
 
 Python package and environment managers:
-- conda: https://ncar-hpc-docs.readthedocs.io/en/latest/environment-and-software/user-environment/package-managers/conda/
-- Pixi: https://ncar-hpc-docs.readthedocs.io/en/latest/environment-and-software/user-environment/package-managers/pixi/
-- uv: https://ncar-hpc-docs.readthedocs.io/en/latest/environment-and-software/user-environment/package-managers/uv/
+- [conda](https://ncar-hpc-docs.readthedocs.io/en/latest/environment-and-software/user-environment/package-managers/conda/)
+- [Pixi](https://ncar-hpc-docs.readthedocs.io/en/latest/environment-and-software/user-environment/package-managers/pixi/)
+- [uv](https://ncar-hpc-docs.readthedocs.io/en/latest/environment-and-software/user-environment/package-managers/uv/)
 
 ### Data Repositories & Resources
 Geoscience Data Exchange (GDEX):
-- Website: https://gdex.ucar.edu/
-- Example notebooks: https://gdex.ucar.edu/resources/gdex-notebook-examples/
+- [Website](https://gdex.ucar.edu/)
+- [Example notebooks](https://gdex.ucar.edu/resources/gdex-notebook-examples/)
 
-Climate Data Guide: https://climatedataguide.ucar.edu/
+[Climate Data Guide](https://climatedataguide.ucar.edu/)
 
 ## External & Community Resources
 
 ### Learning Resources
 Project Pythia - geoscience-focused learning resources
-- Foundations - https://foundations.projectpythia.org/
-- Cookbooks - https://cookbooks.projectpythia.org/
+- [Foundations](https://foundations.projectpythia.org/)
+- [Cookbooks](https://cookbooks.projectpythia.org/)
 
 Scientific Python - developer-focused learning resources and reference materials
-- Library Development Guide: https://learn.scientific-python.org/development/
-- Template: https://github.com/scientific-python/cookie
-- Repo Review: https://learn.scientific-python.org/development/guides/repo-review/
-- Lecture Notes: https://lectures.scientific-python.org/
+- [Library Development Guide](https://learn.scientific-python.org/development/)
+- [Template](https://github.com/scientific-python/cookie)
+- [Repo Review](https://learn.scientific-python.org/development/guides/repo-review/)
+- [Lecture Notes](https://lectures.scientific-python.org/)
 
 The Carpentries - high quality learning resources for software and data science
-- Lesson catalog: https://carpentries.org/lessons/
+- [Lesson catalog](https://carpentries.org/lessons/)
 
 PyOpenSci - scientist-focused resources for Python package development
-- https://www.pyopensci.org/learn/
+- [Learning resources](https://www.pyopensci.org/learn/)
 
-The Zen of Scientific Computing: https://scicomp.aalto.fi/scicomp/zen-of-scicomp
+[The Zen of Scientific Computing](https://scicomp.aalto.fi/scicomp/zen-of-scicomp)
 
 ### Tools
 GitHub:
-- Documentation: https://docs.github.com/en/get-started (w/ high quality resources for learning Git as well)
+- [Documentation](https://docs.github.com/en/get-started) (w/ high quality resources for learning Git as well)
 
 ### Software
 PyTorch:
-- Tutorials: https://docs.pytorch.org/tutorials/index.html
+- [Tutorials](https://docs.pytorch.org/tutorials/index.html)
 
 Xarray:
-- User Guide: https://docs.xarray.dev/en/stable/user-guide/index.html
-- Tutorial: https://tutorial.xarray.dev/intro.html
-- Tutorials and Videos page: https://tutorial.xarray.dev/intro.html
+- [User Guide](https://docs.xarray.dev/en/stable/user-guide/index.html)
+- [Tutorial](https://tutorial.xarray.dev/intro.html)
+- [Tutorials and Videos page](https://tutorial.xarray.dev/intro.html)
 
 Dask:
-- Documentation: https://docs.dask.org/en/stable/
-- Debugging and Performance: https://docs.dask.org/en/stable/debugging-performance.html
+- [Documentation](https://docs.dask.org/en/stable/)
+- [Debugging and Performance](https://docs.dask.org/en/stable/debugging-performance.html)
