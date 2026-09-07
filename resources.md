@@ -16,7 +16,7 @@ Open on Demand (OOD)
 - [Portal](https://ondemand.hpc.ucar.edu/)
 - [Documentation section](https://ncar-hpc-docs.readthedocs.io/en/latest/compute-systems/ood/)
 
-#### User environment: 
+#### User Environment: 
 [Documentation](https://ncar-hpc-docs.readthedocs.io/en/latest/environment-and-software/user-environment/)
 
 Python package and environment managers:
@@ -30,6 +30,17 @@ Geoscience Data Exchange (GDEX):
 - [Example notebooks](https://gdex.ucar.edu/resources/gdex-notebook-examples/)
 
 [Climate Data Guide](https://climatedataguide.ucar.edu/)
+
+### Software
+UXarray:
+- [Documentation](https://uxarray.readthedocs.io/)
+- [Cookbook](https://projectpythia.org/unstructured-grid-viz-cookbook/)
+
+CREDIT:
+- [Documentation](https://miles-credit.readthedocs.io/)
+
+GeoCAT:
+- [Website](https://geocat.ucar.edu/software/)
 
 ## External & Community Resources
 
@@ -68,3 +79,7 @@ Xarray:
 Dask:
 - [Documentation](https://docs.dask.org/en/stable/)
 - [Debugging and Performance](https://docs.dask.org/en/stable/debugging-performance.html)
+
+### Communities
+
+[Pangeo](https://pangeo.io/) - a community focused on open, reproducible, scalable geoscience
