@@ -39,6 +39,9 @@ UXarray:
 CREDIT:
 - [Documentation](https://miles-credit.readthedocs.io/)
 
+BEACON:
+- [Documentation](https://ral.ucar.edu/what-we-do/testing-and-evaluation/beacon-ai-testbed)
+
 GeoCAT:
 - [Website](https://geocat.ucar.edu/software/)
 
