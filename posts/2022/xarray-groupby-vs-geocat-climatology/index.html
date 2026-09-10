@@ -27,8 +27,8 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
@@ -37,10 +37,10 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=66307ba7" />
   
   <!-- So that users can add custom icons -->
-  <script defer src="../../../_static/scripts/fontawesome.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer src="../../../_static/scripts/fontawesome.js?digest=cb8930eaaf36d9849b67"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9" />
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67" />
 
     <script src="../../../_static/documentation_options.js?v=55b5f74b"></script>
     <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
@@ -74,7 +74,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
-    <meta name="docbuild:last-update" content="Jul 27, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 10, 2026"/>
   
     
     <script src="../../../_static/searchtools.js"></script>
@@ -619,27 +619,27 @@
     <span class="c1"># Generate axes, using Cartopy</span>
     <span class="n">projection</span> <span class="o">=</span> <span class="n">cart</span><span class="o">.</span><span class="n">crs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">()</span>
     <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="n">projection</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cart</span><span class="o">.</span><span class="n">feature</span><span class="o">.</span><span class="n">LAND</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cart</span><span class="o">.</span><span class="n">feature</span><span class="o">.</span><span class="n">LAND</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">'k'</span><span class="p">)</span>
 
     <span class="c1"># Draw coastlines</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">coastlines</span><span class="p">()</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">gridlines</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
 
-    <span class="k">if</span> <span class="s1">&#39;Difference&#39;</span> <span class="ow">in</span> <span class="n">title</span><span class="p">:</span>
+    <span class="k">if</span> <span class="s1">'Difference'</span> <span class="ow">in</span> <span class="n">title</span><span class="p">:</span>
         <span class="c1"># Contourf-plot data (for filled contours)</span>
         <span class="n">p</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span>
             <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span>
             <span class="n">vmin</span><span class="o">=-</span><span class="mf">0.1</span><span class="p">,</span>
             <span class="n">vmax</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span>
             <span class="n">levels</span><span class="o">=</span><span class="mi">11</span><span class="p">,</span>
-            <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;bwr&#39;</span><span class="p">,</span>
+            <span class="n">cmap</span><span class="o">=</span><span class="s1">'bwr'</span><span class="p">,</span>
             <span class="n">add_colorbar</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
             <span class="n">transform</span><span class="o">=</span><span class="n">projection</span><span class="p">,</span>
-            <span class="n">extend</span><span class="o">=</span><span class="s1">&#39;neither&#39;</span><span class="p">,</span>
+            <span class="n">extend</span><span class="o">=</span><span class="s1">'neither'</span><span class="p">,</span>
         <span class="p">)</span>
 
         <span class="c1"># Add horizontal colorbar</span>
-        <span class="n">cbar</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="s1">&#39;horizontal&#39;</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+        <span class="n">cbar</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="s1">'horizontal'</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
         <span class="n">cbar</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">labelsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
         <span class="n">cbar</span><span class="o">.</span><span class="n">set_ticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
     <span class="k">else</span><span class="p">:</span>
@@ -649,14 +649,14 @@
             <span class="n">vmin</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
             <span class="n">vmax</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>
             <span class="n">levels</span><span class="o">=</span><span class="mi">11</span><span class="p">,</span>
-            <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;inferno&#39;</span><span class="p">,</span>
+            <span class="n">cmap</span><span class="o">=</span><span class="s1">'inferno'</span><span class="p">,</span>
             <span class="n">add_colorbar</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
             <span class="n">transform</span><span class="o">=</span><span class="n">projection</span><span class="p">,</span>
-            <span class="n">extend</span><span class="o">=</span><span class="s1">&#39;neither&#39;</span><span class="p">,</span>
+            <span class="n">extend</span><span class="o">=</span><span class="s1">'neither'</span><span class="p">,</span>
         <span class="p">)</span>
 
         <span class="c1"># Add horizontal colorbar</span>
-        <span class="n">cbar</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="s1">&#39;horizontal&#39;</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+        <span class="n">cbar</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="s1">'horizontal'</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
         <span class="n">cbar</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">labelsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
         <span class="n">cbar</span><span class="o">.</span><span class="n">set_ticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
 
@@ -679,12 +679,12 @@
     <span class="n">gv</span><span class="o">.</span><span class="n">set_titles_and_labels</span><span class="p">(</span>
         <span class="n">ax</span><span class="p">,</span>
         <span class="n">maintitle</span><span class="o">=</span><span class="n">title</span><span class="p">,</span>
-        <span class="n">lefttitle</span><span class="o">=</span><span class="s2">&quot;Winter Average&quot;</span><span class="p">,</span>
+        <span class="n">lefttitle</span><span class="o">=</span><span class="s2">"Winter Average"</span><span class="p">,</span>
         <span class="n">lefttitlefontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span>
         <span class="n">righttitle</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">units</span><span class="p">,</span>
         <span class="n">righttitlefontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span>
-        <span class="n">xlabel</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
-        <span class="n">ylabel</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="n">xlabel</span><span class="o">=</span><span class="s2">""</span><span class="p">,</span>
+        <span class="n">ylabel</span><span class="o">=</span><span class="s2">""</span><span class="p">,</span>
     <span class="p">)</span>
 
     <span class="c1"># Show the plot</span>
@@ -699,7 +699,7 @@
 <p>The data we will be using is a subset from RDA dataset ds277.0 - ‘NOAA NCEP Optimum Interpolation Sea Surface Temperature Analysis’. It contains monthly average sea surface temperatures over the eastern equitorial Pacific from 1982 to 1986. We will be computing seasonal averages from this data and comparing the two different methods for doing this calculation.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;603321.sst.sst.mnmean.nc&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">'603321.sst.sst.mnmean.nc'</span><span class="p">)</span>
 <span class="n">ds</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">sst</span>  <span class="c1"># Pull out the sea surface temperature data</span>
 <span class="n">ds</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span>
     <span class="n">time</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">49</span><span class="p">)</span>
@@ -715,7 +715,7 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Resample the data by quarters, compute the average, and group by month.</span>
-<span class="n">seasonal_average_weighted_incorrectly</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;time.season&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">seasonal_average_weighted_incorrectly</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'time.season'</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 <span class="n">seasonal_average_weighted_incorrectly</span>
 </pre></div>
 </div>
@@ -1212,7 +1212,7 @@ Attributes: (12/13)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">custom_plot</span><span class="p">(</span><span class="n">seasonal_average_weighted_incorrectly</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">season</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span> <span class="s2">&quot;Incorrect Winter Average Temps&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">custom_plot</span><span class="p">(</span><span class="n">seasonal_average_weighted_incorrectly</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">season</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span> <span class="s2">"Incorrect Winter Average Temps"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1227,7 +1227,7 @@ Attributes: (12/13)
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># What the time dimension looks like before resampling</span>
-<span class="n">ds</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">]</span>
+<span class="n">ds</span><span class="p">[</span><span class="s1">'time'</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -1696,7 +1696,7 @@ Attributes:
 <p><code class="docutils literal notranslate"><span class="pre">climatology_average</span></code> takes in the data, the frequency for the averages (seasonal averages in this case), and the name of the time dimension. Note that the output now has a <code class="docutils literal notranslate"><span class="pre">season</span></code> dimension with strings representing the different months in each meteorological season.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">seasonal_average_weighted_correctly</span> <span class="o">=</span> <span class="n">gc</span><span class="o">.</span><span class="n">climatology_average</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span> <span class="s1">&#39;season&#39;</span><span class="p">,</span> <span class="s1">&#39;time&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">seasonal_average_weighted_correctly</span> <span class="o">=</span> <span class="n">gc</span><span class="o">.</span><span class="n">climatology_average</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span> <span class="s1">'season'</span><span class="p">,</span> <span class="s1">'time'</span><span class="p">)</span>
 <span class="n">seasonal_average_weighted_correctly</span>
 </pre></div>
 </div>
@@ -2193,7 +2193,7 @@ Attributes: (12/13)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">custom_plot</span><span class="p">(</span><span class="n">seasonal_average_weighted_correctly</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">season</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span> <span class="s1">&#39;Correct Winter Average Temps&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">custom_plot</span><span class="p">(</span><span class="n">seasonal_average_weighted_correctly</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">season</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span> <span class="s1">'Correct Winter Average Temps'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2209,14 +2209,14 @@ Attributes: (12/13)
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">diff</span> <span class="o">=</span> <span class="n">seasonal_average_weighted_correctly</span> <span class="o">-</span> <span class="n">seasonal_average_weighted_incorrectly</span>
-<span class="n">diff</span> <span class="o">=</span> <span class="n">diff</span><span class="o">.</span><span class="n">assign_attrs</span><span class="p">({</span><span class="s1">&#39;units&#39;</span><span class="p">:</span> <span class="s1">&#39;delta degC&#39;</span><span class="p">})</span>  <span class="c1"># provide the units</span>
+<span class="n">diff</span> <span class="o">=</span> <span class="n">diff</span><span class="o">.</span><span class="n">assign_attrs</span><span class="p">({</span><span class="s1">'units'</span><span class="p">:</span> <span class="s1">'delta degC'</span><span class="p">})</span>  <span class="c1"># provide the units</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">custom_plot</span><span class="p">(</span><span class="n">diff</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">season</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span> <span class="s1">&#39;Difference: Correct Average - Incorrect Average&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">custom_plot</span><span class="p">(</span><span class="n">diff</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">season</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span> <span class="s1">'Difference: Correct Average - Incorrect Average'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2336,8 +2336,8 @@ Attributes: (12/13)
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9"></script>
-<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -2371,7 +2371,7 @@ Attributes: (12/13)
         <div class="footer-item">
 <p class="theme-version">
   <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.20.0.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.21.0.
 </p></div>
       
     </div>

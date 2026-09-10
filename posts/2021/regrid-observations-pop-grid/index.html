@@ -27,8 +27,8 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
@@ -37,10 +37,10 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=66307ba7" />
   
   <!-- So that users can add custom icons -->
-  <script defer src="../../../_static/scripts/fontawesome.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer src="../../../_static/scripts/fontawesome.js?digest=cb8930eaaf36d9849b67"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9" />
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67" />
 
     <script src="../../../_static/documentation_options.js?v=55b5f74b"></script>
     <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
@@ -74,7 +74,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
-    <meta name="docbuild:last-update" content="Jul 27, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 10, 2026"/>
   
     
     <script src="../../../_static/searchtools.js"></script>
@@ -604,7 +604,7 @@
 <span class="kn">from</span><span class="w"> </span><span class="nn">ncar_jobqueue</span><span class="w"> </span><span class="kn">import</span> <span class="n">NCARCluster</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">pop_tools.grid</span><span class="w"> </span><span class="kn">import</span> <span class="n">_compute_corners</span>
 
-<span class="n">hv</span><span class="o">.</span><span class="n">extension</span><span class="p">(</span><span class="s1">&#39;bokeh&#39;</span><span class="p">)</span>
+<span class="n">hv</span><span class="o">.</span><span class="n">extension</span><span class="p">(</span><span class="s1">'bokeh'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2145,7 +2145,7 @@ roTBs2RqAAAAAElFTkSuQmCC'
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cluster</span> <span class="o">=</span> <span class="n">NCARCluster</span><span class="p">(</span><span class="n">memory</span><span class="o">=</span><span class="s1">&#39;20 GB&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cluster</span> <span class="o">=</span> <span class="n">NCARCluster</span><span class="p">(</span><span class="n">memory</span><span class="o">=</span><span class="s1">'20 GB'</span><span class="p">)</span>
 <span class="n">cluster</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
 <span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">cluster</span><span class="p">)</span>
 <span class="n">client</span>
@@ -2303,8 +2303,8 @@ woa18_decav_t01_04. 100%[===================&gt;] 407.90M  52.9MB/s    in 8.0s
 <p>One could also use an example from the <a class="reference external" href="https://pangeo-forge.readthedocs.io/en/latest/index.html">Pangeo-Forge documentation</a> to accomplish this data-access task, since there is a <a class="reference external" href="https://pangeo-forge.readthedocs.io/en/latest/tutorials/xarray_zarr/multi_variable_recipe.html">“recipe” for using data from the World Ocean Atlas</a>.</p>
 <p>I suggest following that documentation, and in the <a class="reference external" href="https://pangeo-forge.readthedocs.io/en/latest/tutorials/xarray_zarr/multi_variable_recipe.html#step-2-define-the-file-pattern">“Define the File Pattern”</a> section, replace the <code class="docutils literal notranslate"><span class="pre">format_function</span></code> with the following:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">format_function</span><span class="p">(</span><span class="n">variable</span><span class="p">,</span> <span class="n">time</span><span class="p">):</span>
-    <span class="k">return</span> <span class="p">(</span><span class="s2">&quot;https://www.ncei.noaa.gov/thredds-ocean/fileServer/ncei/woa/&quot;</span>
-            <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">variable</span><span class="si">}</span><span class="s2">/decav/0.25/woa18_decav_</span><span class="si">{</span><span class="n">variable</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}{</span><span class="n">time</span><span class="si">:</span><span class="s2">02d</span><span class="si">}</span><span class="s2">_04.nc&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">(</span><span class="s2">"https://www.ncei.noaa.gov/thredds-ocean/fileServer/ncei/woa/"</span>
+            <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">variable</span><span class="si">}</span><span class="s2">/decav/0.25/woa18_decav_</span><span class="si">{</span><span class="n">variable</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}{</span><span class="n">time</span><span class="si">:</span><span class="s2">02d</span><span class="si">}</span><span class="s2">_04.nc"</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>In the original example, they were looking at the 5 degree output; whereas in this example, we are interested in the 0.25 degree data - fortunately, it is an easy fix!</p>
@@ -2314,7 +2314,7 @@ woa18_decav_t01_04. 100%[===================&gt;] 407.90M  52.9MB/s    in 8.0s
 <p>We need to specify <code class="docutils literal notranslate"><span class="pre">decode_times</span> <span class="pre">=</span> <span class="pre">False</span></code> here since the times can be a bit difficult to work with. The calendar units have units <code class="docutils literal notranslate"><span class="pre">months</span> <span class="pre">since</span> <span class="pre">1955-01-01</span> <span class="pre">00:00:00</span></code>, but effectively, this dataset is a set of decadal averages (<code class="docutils literal notranslate"><span class="pre">decav</span></code>), for the month of January (<code class="docutils literal notranslate"><span class="pre">01</span></code>)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">obs_ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;woa18_decav_t01_04.nc&#39;</span><span class="p">,</span> <span class="n">decode_times</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">obs_ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">'woa18_decav_t01_04.nc'</span><span class="p">,</span> <span class="n">decode_times</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">obs_ds</span>
 </pre></div>
 </div>
@@ -3166,7 +3166,7 @@ Attributes:
 <p>We can also subset for just <code class="docutils literal notranslate"><span class="pre">TEMP</span></code> here, in addition to the bounds information, which can be utilized by <code class="docutils literal notranslate"><span class="pre">xESMF</span></code> during regridding.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">obs_ds</span> <span class="o">=</span> <span class="n">obs_ds</span><span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="s1">&#39;t_an&#39;</span><span class="p">:</span> <span class="s1">&#39;TEMP&#39;</span><span class="p">})[[</span><span class="s1">&#39;TEMP&#39;</span><span class="p">,</span> <span class="s1">&#39;lat_bnds&#39;</span><span class="p">,</span> <span class="s1">&#39;lon_bnds&#39;</span><span class="p">]]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">obs_ds</span> <span class="o">=</span> <span class="n">obs_ds</span><span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="s1">'t_an'</span><span class="p">:</span> <span class="s1">'TEMP'</span><span class="p">})[[</span><span class="s1">'TEMP'</span><span class="p">,</span> <span class="s1">'lat_bnds'</span><span class="p">,</span> <span class="s1">'lon_bnds'</span><span class="p">]]</span>
 <span class="n">obs_ds</span>
 </pre></div>
 </div>
@@ -3577,9 +3577,9 @@ Attributes: (12/49)
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_catalog</span> <span class="o">=</span> <span class="n">intake</span><span class="o">.</span><span class="n">open_esm_datastore</span><span class="p">(</span>
-    <span class="s2">&quot;/glade/work/mgrover/hires-fulljra-catalog.json&quot;</span><span class="p">,</span>
-    <span class="n">csv_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;converters&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;variables&quot;</span><span class="p">:</span> <span class="n">ast</span><span class="o">.</span><span class="n">literal_eval</span><span class="p">}},</span>
-    <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;/&quot;</span><span class="p">,</span>
+    <span class="s2">"/glade/work/mgrover/hires-fulljra-catalog.json"</span><span class="p">,</span>
+    <span class="n">csv_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s2">"converters"</span><span class="p">:</span> <span class="p">{</span><span class="s2">"variables"</span><span class="p">:</span> <span class="n">ast</span><span class="o">.</span><span class="n">literal_eval</span><span class="p">}},</span>
+    <span class="n">sep</span><span class="o">=</span><span class="s2">"/"</span><span class="p">,</span>
 <span class="p">)</span>
 <span class="n">data_catalog</span>
 </pre></div>
@@ -3647,7 +3647,7 @@ Attributes: (12/49)
 <p>Let’s subset for temperature (<code class="docutils literal notranslate"><span class="pre">TEMP</span></code>) here</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_catalog_subset</span> <span class="o">=</span> <span class="n">data_catalog</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">variables</span><span class="o">=</span><span class="s1">&#39;TEMP&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_catalog_subset</span> <span class="o">=</span> <span class="n">data_catalog</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">variables</span><span class="o">=</span><span class="s1">'TEMP'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -3656,14 +3656,14 @@ Attributes: (12/49)
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dsets</span> <span class="o">=</span> <span class="n">data_catalog_subset</span><span class="o">.</span><span class="n">to_dataset_dict</span><span class="p">(</span>
-    <span class="n">cdf_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;chunks&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;nlat&#39;</span><span class="p">:</span> <span class="mi">800</span><span class="p">,</span> <span class="s1">&#39;nlon&#39;</span><span class="p">:</span> <span class="mi">900</span><span class="p">,</span> <span class="s1">&#39;z_t&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">}}</span>
+    <span class="n">cdf_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s1">'chunks'</span><span class="p">:</span> <span class="p">{</span><span class="s1">'nlat'</span><span class="p">:</span> <span class="mi">800</span><span class="p">,</span> <span class="s1">'nlon'</span><span class="p">:</span> <span class="mi">900</span><span class="p">,</span> <span class="s1">'z_t'</span><span class="p">:</span> <span class="mi">4</span><span class="p">}}</span>
 <span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--&gt; The keys in the returned dictionary of datasets are constructed as follows:
-	&#39;component/stream/case&#39;
+	'component/stream/case'
 </pre></div>
 </div>
 <div class="output text_html">
@@ -3692,7 +3692,7 @@ Attributes: (12/49)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_keys([&#39;ocn/pop.h/g.e20.G.TL319_t13.control.001&#39;, &#39;ocn/pop.h/g.e20.G.TL319_t13.control.001_hfreq&#39;])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_keys(['ocn/pop.h/g.e20.G.TL319_t13.control.001', 'ocn/pop.h/g.e20.G.TL319_t13.control.001_hfreq'])
 </pre></div>
 </div>
 </div>
@@ -3703,8 +3703,8 @@ Attributes: (12/49)
 <p>We choose February from year 24 through January of year 53 since the time represents the <strong>end</strong> of the time bounds</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">start_time</span> <span class="o">=</span> <span class="n">cftime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">24</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">calendar</span><span class="o">=</span><span class="s1">&#39;noleap&#39;</span><span class="p">,</span> <span class="n">has_year_zero</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">end_time</span> <span class="o">=</span> <span class="n">cftime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">53</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">calendar</span><span class="o">=</span><span class="s1">&#39;noleap&#39;</span><span class="p">,</span> <span class="n">has_year_zero</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">start_time</span> <span class="o">=</span> <span class="n">cftime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">24</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">calendar</span><span class="o">=</span><span class="s1">'noleap'</span><span class="p">,</span> <span class="n">has_year_zero</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">end_time</span> <span class="o">=</span> <span class="n">cftime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">53</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">calendar</span><span class="o">=</span><span class="s1">'noleap'</span><span class="p">,</span> <span class="n">has_year_zero</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -3722,7 +3722,7 @@ Attributes: (12/49)
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model_ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span>
-    <span class="n">dset_list</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="n">data_vars</span><span class="o">=</span><span class="s2">&quot;minimal&quot;</span><span class="p">,</span> <span class="n">coords</span><span class="o">=</span><span class="s2">&quot;minimal&quot;</span><span class="p">,</span> <span class="n">compat</span><span class="o">=</span><span class="s2">&quot;override&quot;</span>
+    <span class="n">dset_list</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="s1">'time'</span><span class="p">,</span> <span class="n">data_vars</span><span class="o">=</span><span class="s2">"minimal"</span><span class="p">,</span> <span class="n">coords</span><span class="o">=</span><span class="s2">"minimal"</span><span class="p">,</span> <span class="n">compat</span><span class="o">=</span><span class="s2">"override"</span>
 <span class="p">)</span>
 </pre></div>
 </div>
@@ -4553,7 +4553,7 @@ Attributes:
 <p>We are only interested in <code class="docutils literal notranslate"><span class="pre">TEMP</span></code> here, so we can subset for that when computing the climatology</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model_monthly_mean</span> <span class="o">=</span> <span class="n">geocat</span><span class="o">.</span><span class="n">comp</span><span class="o">.</span><span class="n">climatology</span><span class="p">(</span><span class="n">model_ds</span><span class="p">[[</span><span class="s1">&#39;TEMP&#39;</span><span class="p">]],</span> <span class="s1">&#39;month&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model_monthly_mean</span> <span class="o">=</span> <span class="n">geocat</span><span class="o">.</span><span class="n">comp</span><span class="o">.</span><span class="n">climatology</span><span class="p">(</span><span class="n">model_ds</span><span class="p">[[</span><span class="s1">'TEMP'</span><span class="p">]],</span> <span class="s1">'month'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -4565,10 +4565,10 @@ Attributes:
 <p>As mentioned before, our observational dataset already has the <code class="docutils literal notranslate"><span class="pre">bounds</span></code> information, which is important for determing grid corners during the regridding process. For the POP dataset, we need to add a helper function to add this information</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">gen_corner_calc</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span> <span class="n">cell_corner_lat</span><span class="o">=</span><span class="s1">&#39;ULAT&#39;</span><span class="p">,</span> <span class="n">cell_corner_lon</span><span class="o">=</span><span class="s1">&#39;ULONG&#39;</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">gen_corner_calc</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span> <span class="n">cell_corner_lat</span><span class="o">=</span><span class="s1">'ULAT'</span><span class="p">,</span> <span class="n">cell_corner_lon</span><span class="o">=</span><span class="s1">'ULONG'</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Generates corner information and creates single dataset with output</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
     <span class="n">cell_corner_lat</span> <span class="o">=</span> <span class="n">ds</span><span class="p">[</span><span class="n">cell_corner_lat</span><span class="p">]</span>
     <span class="n">cell_corner_lon</span> <span class="o">=</span> <span class="n">ds</span><span class="p">[</span><span class="n">cell_corner_lon</span><span class="p">]</span>
@@ -4616,8 +4616,8 @@ Attributes:
 <p>We can also rename our latitude and longitude names</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model_monthly_mean</span> <span class="o">=</span> <span class="n">model_monthly_mean</span><span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="s1">&#39;TLAT&#39;</span><span class="p">:</span> <span class="s1">&#39;lat&#39;</span><span class="p">,</span> <span class="s1">&#39;TLONG&#39;</span><span class="p">:</span> <span class="s1">&#39;lon&#39;</span><span class="p">})</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span>
-    <span class="p">[</span><span class="s1">&#39;ULAT&#39;</span><span class="p">,</span> <span class="s1">&#39;ULONG&#39;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model_monthly_mean</span> <span class="o">=</span> <span class="n">model_monthly_mean</span><span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="s1">'TLAT'</span><span class="p">:</span> <span class="s1">'lat'</span><span class="p">,</span> <span class="s1">'TLONG'</span><span class="p">:</span> <span class="s1">'lon'</span><span class="p">})</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span>
+    <span class="p">[</span><span class="s1">'ULAT'</span><span class="p">,</span> <span class="s1">'ULONG'</span><span class="p">]</span>
 <span class="p">)</span>
 </pre></div>
 </div>
@@ -4625,8 +4625,8 @@ Attributes:
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model_monthly_mean</span><span class="p">[</span><span class="s1">&#39;lon_b&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">((</span><span class="s1">&#39;nlat_b&#39;</span><span class="p">,</span> <span class="s1">&#39;nlon_b&#39;</span><span class="p">),</span> <span class="n">lon_corners</span><span class="p">)</span>
-<span class="n">model_monthly_mean</span><span class="p">[</span><span class="s1">&#39;lat_b&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">((</span><span class="s1">&#39;nlat_b&#39;</span><span class="p">,</span> <span class="s1">&#39;nlon_b&#39;</span><span class="p">),</span> <span class="n">lat_corners</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model_monthly_mean</span><span class="p">[</span><span class="s1">'lon_b'</span><span class="p">]</span> <span class="o">=</span> <span class="p">((</span><span class="s1">'nlat_b'</span><span class="p">,</span> <span class="s1">'nlon_b'</span><span class="p">),</span> <span class="n">lon_corners</span><span class="p">)</span>
+<span class="n">model_monthly_mean</span><span class="p">[</span><span class="s1">'lat_b'</span><span class="p">]</span> <span class="o">=</span> <span class="p">((</span><span class="s1">'nlat_b'</span><span class="p">,</span> <span class="s1">'nlon_b'</span><span class="p">),</span> <span class="n">lat_corners</span><span class="p">)</span>
 <span class="n">model_monthly_mean</span>
 </pre></div>
 </div>
@@ -5311,15 +5311,15 @@ Attributes:
 <p>We will need to keep the units in mind too - the observational dataset uses meters and the vertical depth; whereas the model depth units are in centimeters. We can simply multiply the observational depth by 100 when doing the conversion.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">obs_ds</span><span class="p">[</span><span class="s1">&#39;depth&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">obs_ds</span><span class="o">.</span><span class="n">depth</span> <span class="o">*</span> <span class="mi">100</span>
-<span class="n">obs_ds</span><span class="p">[</span><span class="s1">&#39;depth&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;units&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;centimeters&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">obs_ds</span><span class="p">[</span><span class="s1">'depth'</span><span class="p">]</span> <span class="o">=</span> <span class="n">obs_ds</span><span class="o">.</span><span class="n">depth</span> <span class="o">*</span> <span class="mi">100</span>
+<span class="n">obs_ds</span><span class="p">[</span><span class="s1">'depth'</span><span class="p">]</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">'units'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'centimeters'</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">obs_ds</span> <span class="o">=</span> <span class="n">obs_ds</span><span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="s1">&#39;depth&#39;</span><span class="p">:</span> <span class="s1">&#39;z_t&#39;</span><span class="p">})</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">obs_ds</span> <span class="o">=</span> <span class="n">obs_ds</span><span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="s1">'depth'</span><span class="p">:</span> <span class="s1">'z_t'</span><span class="p">})</span>
 <span class="n">obs_ds</span><span class="o">.</span><span class="n">z_t</span>
 </pre></div>
 </div>
@@ -5710,7 +5710,7 @@ Attributes:
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">obs_ds</span> <span class="o">=</span> <span class="n">obs_ds</span><span class="o">.</span><span class="n">interp</span><span class="p">({</span><span class="s1">&#39;z_t&#39;</span><span class="p">:</span> <span class="n">model_monthly_mean</span><span class="o">.</span><span class="n">z_t</span><span class="o">.</span><span class="n">values</span><span class="p">})</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">obs_ds</span> <span class="o">=</span> <span class="n">obs_ds</span><span class="o">.</span><span class="n">interp</span><span class="p">({</span><span class="s1">'z_t'</span><span class="p">:</span> <span class="n">model_monthly_mean</span><span class="o">.</span><span class="n">z_t</span><span class="o">.</span><span class="n">values</span><span class="p">})</span>
 <span class="n">obs_ds</span><span class="o">.</span><span class="n">z_t</span>
 </pre></div>
 </div>
@@ -6123,7 +6123,7 @@ Attributes:
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">regrid</span> <span class="o">=</span> <span class="n">xe</span><span class="o">.</span><span class="n">Regridder</span><span class="p">(</span><span class="n">obs_ds</span><span class="p">,</span> <span class="n">model_monthly_mean</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;conservative&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">regrid</span> <span class="o">=</span> <span class="n">xe</span><span class="o">.</span><span class="n">Regridder</span><span class="p">(</span><span class="n">obs_ds</span><span class="p">,</span> <span class="n">model_monthly_mean</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">'conservative'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -6131,18 +6131,18 @@ Attributes:
 <p>Generating these weights can be quite computationally expensive, so they are often saved to disk to prevent needing to recompute them in the future. The MCT-based coupler in CESM uses these weight files to map fields being passed from one component to another, so many weight files are available in <code class="docutils literal notranslate"><span class="pre">/glade/p/cesmdata/cseg/inputdata/cpl/cpl6</span></code> and <code class="docutils literal notranslate"><span class="pre">/glade/p/cesmdata/cseg/inputdata/cpl/gridmaps</span></code>, on NCAR HPC resources. The naming syntax we use here is slightly different than the convention that has evolved in the CESM mapping files: <code class="docutils literal notranslate"><span class="pre">woa_{pop_grid}_{regrid_method}.nc</span></code>, where we are using the tenth degree (<code class="docutils literal notranslate"><span class="pre">tx0.1v3</span></code>) pop grid and a conservative regridding method.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">regrid</span><span class="o">.</span><span class="n">to_netcdf</span><span class="p">(</span><span class="s1">&#39;woa_tx0.1v3_conservative.nc&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">regrid</span><span class="o">.</span><span class="n">to_netcdf</span><span class="p">(</span><span class="s1">'woa_tx0.1v3_conservative.nc'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;woa_tx0.1v3_conservative.nc&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'woa_tx0.1v3_conservative.nc'
 </pre></div>
 </div>
 </div>
 </div>
 <p>If you already generated this weights file, you can use the following line:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">regrid</span> <span class="o">=</span> <span class="n">xe</span><span class="o">.</span><span class="n">Regridder</span><span class="p">(</span><span class="n">obs_ds</span><span class="p">,</span> <span class="n">model_monthly_mean</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;conservative&#39;</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="s1">&#39;woa_tx0.1v3_conservative.nc&#39;</span> <span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">regrid</span> <span class="o">=</span> <span class="n">xe</span><span class="o">.</span><span class="n">Regridder</span><span class="p">(</span><span class="n">obs_ds</span><span class="p">,</span> <span class="n">model_monthly_mean</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">'conservative'</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="s1">'woa_tx0.1v3_conservative.nc'</span> <span class="p">)</span>
 </pre></div>
 </div>
 <div class="cell docutils container">
@@ -6599,8 +6599,8 @@ Attributes:
 <p>For the observational data, our time still has odd units… we can change the time to be <code class="docutils literal notranslate"><span class="pre">month</span></code> and set it equal to one since we are working with the January monthly average</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">regridded_observations</span> <span class="o">=</span> <span class="n">regridded_observations</span><span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="s1">&#39;time&#39;</span><span class="p">:</span> <span class="s1">&#39;month&#39;</span><span class="p">})</span>
-<span class="n">regridded_observations</span><span class="p">[</span><span class="s1">&#39;month&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">regridded_observations</span> <span class="o">=</span> <span class="n">regridded_observations</span><span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="s1">'time'</span><span class="p">:</span> <span class="s1">'month'</span><span class="p">})</span>
+<span class="n">regridded_observations</span><span class="p">[</span><span class="s1">'month'</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -6619,8 +6619,8 @@ Attributes:
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">difference</span><span class="p">[</span><span class="s1">&#39;nlat&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">difference</span><span class="o">.</span><span class="n">nlat</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
-<span class="n">difference</span><span class="p">[</span><span class="s1">&#39;nlon&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">difference</span><span class="o">.</span><span class="n">nlon</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">difference</span><span class="p">[</span><span class="s1">'nlat'</span><span class="p">]</span> <span class="o">=</span> <span class="n">difference</span><span class="o">.</span><span class="n">nlat</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+<span class="n">difference</span><span class="p">[</span><span class="s1">'nlon'</span><span class="p">]</span> <span class="o">=</span> <span class="n">difference</span><span class="o">.</span><span class="n">nlon</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -6628,7 +6628,7 @@ Attributes:
 <p>Since this can take a while to compute, we can save our output to a <code class="docutils literal notranslate"><span class="pre">Zarr</span></code> store, which we can read in later if we want to refer back to the output</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">difference</span><span class="o">.</span><span class="n">to_zarr</span><span class="p">(</span><span class="s1">&#39;hires_pop_obs_comparison.zarr&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">difference</span><span class="o">.</span><span class="n">to_zarr</span><span class="p">(</span><span class="s1">'hires_pop_obs_comparison.zarr'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -6640,7 +6640,7 @@ Attributes:
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">difference</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_zarr</span><span class="p">(</span><span class="s1">&#39;hires_pop_obs_comparison.zarr&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">difference</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_zarr</span><span class="p">(</span><span class="s1">'hires_pop_obs_comparison.zarr'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -7345,21 +7345,21 @@ Data variables:
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">create_cmap</span><span class="p">(</span><span class="n">levs</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Creates a colormap using matplotlib.colors</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">levs</span><span class="p">)</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;N levels must be even.&#39;</span>
+<span class="sd">    """</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">levs</span><span class="p">)</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">'N levels must be even.'</span>
     <span class="k">return</span> <span class="n">colors</span><span class="o">.</span><span class="n">LinearSegmentedColormap</span><span class="o">.</span><span class="n">from_list</span><span class="p">(</span>
-        <span class="n">name</span><span class="o">=</span><span class="s1">&#39;red_white_blue&#39;</span><span class="p">,</span>
+        <span class="n">name</span><span class="o">=</span><span class="s1">'red_white_blue'</span><span class="p">,</span>
         <span class="n">colors</span><span class="o">=</span><span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)],</span>
         <span class="n">N</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">levs</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span>
     <span class="p">)</span>
 
 
 <span class="k">def</span><span class="w"> </span><span class="nf">generate_cbar</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span> <span class="n">var</span><span class="p">,</span> <span class="n">lev</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Read in min/max values from a dataset and generate contour levels and a colorbar</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="n">ds</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">z_t</span><span class="o">=</span><span class="n">lev</span><span class="p">)</span>
     <span class="n">max_diff</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nanmax</span><span class="p">(</span><span class="n">ds</span><span class="p">[</span><span class="n">var</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">))</span>
     <span class="n">min_diff</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nanmin</span><span class="p">(</span><span class="n">ds</span><span class="p">[</span><span class="n">var</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">))</span>
@@ -7373,7 +7373,7 @@ Data variables:
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">levels</span><span class="p">,</span> <span class="n">cmap</span> <span class="o">=</span> <span class="n">generate_cbar</span><span class="p">(</span><span class="n">difference</span><span class="p">,</span> <span class="s1">&#39;TEMP&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">levels</span><span class="p">,</span> <span class="n">cmap</span> <span class="o">=</span> <span class="n">generate_cbar</span><span class="p">(</span><span class="n">difference</span><span class="p">,</span> <span class="s1">'TEMP'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -7381,8 +7381,8 @@ Data variables:
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">difference</span><span class="o">.</span><span class="n">load</span><span class="p">()</span>
-<span class="n">difference</span><span class="o">.</span><span class="n">TEMP</span><span class="o">.</span><span class="n">hvplot</span><span class="o">.</span><span class="n">quadmesh</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;nlon&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;nlat&#39;</span><span class="p">,</span> <span class="n">rasterize</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">opts</span><span class="p">(</span>
-    <span class="n">width</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">color_levels</span><span class="o">=</span><span class="n">levels</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cmap</span><span class="p">,</span> <span class="n">bgcolor</span><span class="o">=</span><span class="s1">&#39;lightgray&#39;</span>
+<span class="n">difference</span><span class="o">.</span><span class="n">TEMP</span><span class="o">.</span><span class="n">hvplot</span><span class="o">.</span><span class="n">quadmesh</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">'nlon'</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">'nlat'</span><span class="p">,</span> <span class="n">rasterize</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">opts</span><span class="p">(</span>
+    <span class="n">width</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">color_levels</span><span class="o">=</span><span class="n">levels</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cmap</span><span class="p">,</span> <span class="n">bgcolor</span><span class="o">=</span><span class="s1">'lightgray'</span>
 <span class="p">)</span>
 </pre></div>
 </div>
@@ -7542,8 +7542,8 @@ Data variables:
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9"></script>
-<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -7577,7 +7577,7 @@ Data variables:
         <div class="footer-item">
 <p class="theme-version">
   <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.20.0.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.21.0.
 </p></div>
       
     </div>

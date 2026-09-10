@@ -27,8 +27,8 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
@@ -37,10 +37,10 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=66307ba7" />
   
   <!-- So that users can add custom icons -->
-  <script defer src="../../../_static/scripts/fontawesome.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer src="../../../_static/scripts/fontawesome.js?digest=cb8930eaaf36d9849b67"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9" />
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67" />
 
     <script src="../../../_static/documentation_options.js?v=55b5f74b"></script>
     <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
@@ -74,7 +74,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
-    <meta name="docbuild:last-update" content="Jul 27, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 10, 2026"/>
   
     
     <script src="../../../_static/searchtools.js"></script>
@@ -598,14 +598,14 @@
 <p>The overall workflow is the same - you inport dask related packages, configure your cluster, the scale your job depending on the number of jobs you would like. In last week’s example, we used the following example:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cluster</span> <span class="o">=</span> <span class="n">PBSCluster</span><span class="p">(</span>
     <span class="n">cores</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="c1"># The number of cores you want</span>
-    <span class="n">memory</span><span class="o">=</span><span class="s1">&#39;10GB&#39;</span><span class="p">,</span> <span class="c1"># Amount of memory</span>
+    <span class="n">memory</span><span class="o">=</span><span class="s1">'10GB'</span><span class="p">,</span> <span class="c1"># Amount of memory</span>
     <span class="n">processes</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="c1"># How many processes</span>
-    <span class="n">queue</span><span class="o">=</span><span class="s1">&#39;casper&#39;</span><span class="p">,</span> <span class="c1"># The type of queue to utilize (/glade/u/apps/dav/opt/usr/bin/execcasper)</span>
-    <span class="n">local_directory</span><span class="o">=</span><span class="s1">&#39;$TMPDIR&#39;</span><span class="p">,</span> <span class="c1"># Use your local directory</span>
-    <span class="n">resource_spec</span><span class="o">=</span><span class="s1">&#39;select=1:ncpus=1:mem=10GB&#39;</span><span class="p">,</span> <span class="c1"># Specify resources</span>
-    <span class="n">project</span><span class="o">=</span><span class="s1">&#39;project_id&#39;</span><span class="p">,</span> <span class="c1"># Input your project ID here</span>
-    <span class="n">walltime</span><span class="o">=</span><span class="s1">&#39;02:00:00&#39;</span><span class="p">,</span> <span class="c1"># Amount of wall time</span>
-    <span class="n">interface</span><span class="o">=</span><span class="s1">&#39;ib0&#39;</span><span class="p">,</span> <span class="c1"># Interface to use</span>
+    <span class="n">queue</span><span class="o">=</span><span class="s1">'casper'</span><span class="p">,</span> <span class="c1"># The type of queue to utilize (/glade/u/apps/dav/opt/usr/bin/execcasper)</span>
+    <span class="n">local_directory</span><span class="o">=</span><span class="s1">'$TMPDIR'</span><span class="p">,</span> <span class="c1"># Use your local directory</span>
+    <span class="n">resource_spec</span><span class="o">=</span><span class="s1">'select=1:ncpus=1:mem=10GB'</span><span class="p">,</span> <span class="c1"># Specify resources</span>
+    <span class="n">project</span><span class="o">=</span><span class="s1">'project_id'</span><span class="p">,</span> <span class="c1"># Input your project ID here</span>
+    <span class="n">walltime</span><span class="o">=</span><span class="s1">'02:00:00'</span><span class="p">,</span> <span class="c1"># Amount of wall time</span>
+    <span class="n">interface</span><span class="o">=</span><span class="s1">'ib0'</span><span class="p">,</span> <span class="c1"># Interface to use</span>
 <span class="p">)</span>
 </pre></div>
 </div>
@@ -613,13 +613,13 @@
 <p><code class="docutils literal notranslate"><span class="pre">cluster</span> <span class="pre">=</span> <span class="pre">PBSCluster(queue='casper')</span></code></p>
 <p>Although, you would still need to port the Dask dashboard using this line</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Change your url to the dask dashboard so you can see it</span>
-<span class="n">dask</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">set</span><span class="p">({</span><span class="s1">&#39;distributed.dashboard.link&#39;</span><span class="p">:</span><span class="s1">&#39;https://jupyterhub.hpc.ucar.edu/stable/user/</span><span class="si">{USER}</span><span class="s1">/proxy/</span><span class="si">{port}</span><span class="s1">/status&#39;</span><span class="p">})</span>
+<span class="n">dask</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">set</span><span class="p">({</span><span class="s1">'distributed.dashboard.link'</span><span class="p">:</span><span class="s1">'https://jupyterhub.hpc.ucar.edu/stable/user/</span><span class="si">{USER}</span><span class="s1">/proxy/</span><span class="si">{port}</span><span class="s1">/status'</span><span class="p">})</span>
 </pre></div>
 </div>
 <p>Instead, using ncar-jobqueue, we use the following:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">ncar_jobqueue</span><span class="w"> </span><span class="kn">import</span> <span class="n">NCARCluster</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">dask.distributed</span><span class="w"> </span><span class="kn">import</span> <span class="n">Client</span>
-<span class="n">cluster</span> <span class="o">=</span> <span class="n">NCARCluster</span><span class="p">(</span><span class="n">project</span><span class="o">=</span><span class="s1">&#39;XXXXXXXX&#39;</span><span class="p">)</span>
+<span class="n">cluster</span> <span class="o">=</span> <span class="n">NCARCluster</span><span class="p">(</span><span class="n">project</span><span class="o">=</span><span class="s1">'XXXXXXXX'</span><span class="p">)</span>
 <span class="n">cluster</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="n">jobs</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">cluster</span><span class="p">)</span>
 </pre></div>
@@ -721,8 +721,8 @@
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9"></script>
-<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -756,7 +756,7 @@
         <div class="footer-item">
 <p class="theme-version">
   <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.20.0.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.21.0.
 </p></div>
       
     </div>

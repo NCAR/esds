@@ -27,8 +27,8 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
@@ -37,10 +37,10 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=66307ba7" />
   
   <!-- So that users can add custom icons -->
-  <script defer src="../../../_static/scripts/fontawesome.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer src="../../../_static/scripts/fontawesome.js?digest=cb8930eaaf36d9849b67"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9" />
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67" />
 
     <script src="../../../_static/documentation_options.js?v=55b5f74b"></script>
     <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
@@ -74,7 +74,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
-    <meta name="docbuild:last-update" content="Jul 27, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 10, 2026"/>
   
     
     <script src="../../../_static/searchtools.js"></script>
@@ -599,7 +599,7 @@
 <span class="kn">import</span><span class="w"> </span><span class="nn">xarray</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">xr</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">metpy.units</span><span class="w"> </span><span class="kn">import</span> <span class="n">units</span>
 
-<span class="n">hv</span><span class="o">.</span><span class="n">extension</span><span class="p">(</span><span class="s1">&#39;bokeh&#39;</span><span class="p">)</span>
+<span class="n">hv</span><span class="o">.</span><span class="n">extension</span><span class="p">(</span><span class="s1">'bokeh'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -3597,7 +3597,7 @@ roTBs2RqAAAAAElFTkSuQmCC'
 <p>We can load it in using <code class="docutils literal notranslate"><span class="pre">xarray</span></code>, as shown below!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cdf_ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;mlab.20161201.cdf&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cdf_ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">'mlab.20161201.cdf'</span><span class="p">)</span>
 <span class="n">cdf_ds</span>
 </pre></div>
 </div>
@@ -3985,7 +3985,7 @@ Data variables: (12/20)
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cdf_ds</span><span class="p">[[</span><span class="s1">&#39;base_time&#39;</span><span class="p">,</span> <span class="s1">&#39;samp_secs&#39;</span><span class="p">,</span> <span class="s1">&#39;time_offset&#39;</span><span class="p">]]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cdf_ds</span><span class="p">[[</span><span class="s1">'base_time'</span><span class="p">,</span> <span class="s1">'samp_secs'</span><span class="p">,</span> <span class="s1">'time_offset'</span><span class="p">]]</span>
 </pre></div>
 </div>
 </div>
@@ -4804,24 +4804,24 @@ Dimensions without coordinates: time</pre><div class='xr-wrap' hidden><div class
 <p>That array is hard to read though… we can pass this into <code class="docutils literal notranslate"><span class="pre">pandas.to_datetime</span></code> to handle the conversion!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">times</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">new_time</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;s&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">times</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">new_time</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s1">'s'</span><span class="p">)</span>
 <span class="n">times</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>DatetimeIndex([&#39;2016-12-01 00:00:00&#39;, &#39;2016-12-01 00:05:00&#39;,
-               &#39;2016-12-01 00:10:00&#39;, &#39;2016-12-01 00:15:00&#39;,
-               &#39;2016-12-01 00:20:00&#39;, &#39;2016-12-01 00:25:00&#39;,
-               &#39;2016-12-01 00:30:00&#39;, &#39;2016-12-01 00:35:00&#39;,
-               &#39;2016-12-01 00:40:00&#39;, &#39;2016-12-01 00:45:00&#39;,
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>DatetimeIndex(['2016-12-01 00:00:00', '2016-12-01 00:05:00',
+               '2016-12-01 00:10:00', '2016-12-01 00:15:00',
+               '2016-12-01 00:20:00', '2016-12-01 00:25:00',
+               '2016-12-01 00:30:00', '2016-12-01 00:35:00',
+               '2016-12-01 00:40:00', '2016-12-01 00:45:00',
                ...
-               &#39;2016-12-01 23:10:00&#39;, &#39;2016-12-01 23:15:00&#39;,
-               &#39;2016-12-01 23:20:00&#39;, &#39;2016-12-01 23:25:00&#39;,
-               &#39;2016-12-01 23:30:00&#39;, &#39;2016-12-01 23:35:00&#39;,
-               &#39;2016-12-01 23:40:00&#39;, &#39;2016-12-01 23:45:00&#39;,
-               &#39;2016-12-01 23:50:00&#39;, &#39;2016-12-01 23:55:00&#39;],
-              dtype=&#39;datetime64[ns]&#39;, length=288, freq=None)
+               '2016-12-01 23:10:00', '2016-12-01 23:15:00',
+               '2016-12-01 23:20:00', '2016-12-01 23:25:00',
+               '2016-12-01 23:30:00', '2016-12-01 23:35:00',
+               '2016-12-01 23:40:00', '2016-12-01 23:45:00',
+               '2016-12-01 23:50:00', '2016-12-01 23:55:00'],
+              dtype='datetime64[ns]', length=288, freq=None)
 </pre></div>
 </div>
 </div>
@@ -4829,7 +4829,7 @@ Dimensions without coordinates: time</pre><div class='xr-wrap' hidden><div class
 <p>That looks better! We can now add this to our dimensions for the dataset.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cdf_ds</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">times</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cdf_ds</span><span class="p">[</span><span class="s1">'time'</span><span class="p">]</span> <span class="o">=</span> <span class="n">times</span>
 <span class="n">cdf_ds</span>
 </pre></div>
 </div>
@@ -5218,8 +5218,8 @@ Data variables: (12/20)
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">fix_times</span><span class="p">(</span><span class="n">ds</span><span class="p">):</span>
-    <span class="n">ds</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">((</span><span class="n">ds</span><span class="o">.</span><span class="n">base_time</span> <span class="o">+</span> <span class="n">ds</span><span class="o">.</span><span class="n">time_offset</span><span class="p">)</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;s&#39;</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">ds</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;base_time&#39;</span><span class="p">,</span> <span class="s1">&#39;samp_secs&#39;</span><span class="p">,</span> <span class="s1">&#39;time_offset&#39;</span><span class="p">])</span>
+    <span class="n">ds</span><span class="p">[</span><span class="s1">'time'</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">((</span><span class="n">ds</span><span class="o">.</span><span class="n">base_time</span> <span class="o">+</span> <span class="n">ds</span><span class="o">.</span><span class="n">time_offset</span><span class="p">)</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s1">'s'</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">ds</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">'base_time'</span><span class="p">,</span> <span class="s1">'samp_secs'</span><span class="p">,</span> <span class="s1">'time_offset'</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -5227,7 +5227,7 @@ Data variables: (12/20)
 <p>We can then pass our <code class="docutils literal notranslate"><span class="pre">fix_time</span></code> function into <code class="docutils literal notranslate"><span class="pre">xr.open_mfdataset</span></code> using the <code class="docutils literal notranslate"><span class="pre">preprocess</span></code> argument</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_mfdataset</span><span class="p">(</span><span class="s1">&#39;*.cdf&#39;</span><span class="p">,</span> <span class="n">engine</span><span class="o">=</span><span class="s1">&#39;netcdf4&#39;</span><span class="p">,</span> <span class="n">concat_dim</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="n">preprocess</span><span class="o">=</span><span class="n">fix_times</span><span class="p">)</span><span class="o">.</span><span class="n">load</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_mfdataset</span><span class="p">(</span><span class="s1">'*.cdf'</span><span class="p">,</span> <span class="n">engine</span><span class="o">=</span><span class="s1">'netcdf4'</span><span class="p">,</span> <span class="n">concat_dim</span><span class="o">=</span><span class="s1">'time'</span><span class="p">,</span> <span class="n">preprocess</span><span class="o">=</span><span class="n">fix_times</span><span class="p">)</span><span class="o">.</span><span class="n">load</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -5263,20 +5263,20 @@ Data variables: (12/20)
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds_standard_units</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 
 <span class="c1"># Convert windspeed</span>
-<span class="n">ds_standard_units</span><span class="p">[</span><span class="s1">&#39;wspd&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">wspd</span><span class="o">.</span><span class="n">values</span> <span class="o">*</span> <span class="n">units</span><span class="p">(</span><span class="s1">&#39;m/s&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s1">&#39;mph&#39;</span><span class="p">))</span>
-<span class="n">ds_standard_units</span><span class="o">.</span><span class="n">wspd</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;units&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;mph&#39;</span>
+<span class="n">ds_standard_units</span><span class="p">[</span><span class="s1">'wspd'</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="s1">'time'</span><span class="p">,</span> <span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">wspd</span><span class="o">.</span><span class="n">values</span> <span class="o">*</span> <span class="n">units</span><span class="p">(</span><span class="s1">'m/s'</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s1">'mph'</span><span class="p">))</span>
+<span class="n">ds_standard_units</span><span class="o">.</span><span class="n">wspd</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">'units'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'mph'</span>
 
 <span class="c1"># Convert max windspeed</span>
-<span class="n">ds_standard_units</span><span class="p">[</span><span class="s1">&#39;wmax&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">wmax</span><span class="o">.</span><span class="n">values</span> <span class="o">*</span> <span class="n">units</span><span class="p">(</span><span class="s1">&#39;m/s&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s1">&#39;mph&#39;</span><span class="p">))</span>
-<span class="n">ds_standard_units</span><span class="o">.</span><span class="n">wmax</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;units&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;mph&#39;</span>
+<span class="n">ds_standard_units</span><span class="p">[</span><span class="s1">'wmax'</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="s1">'time'</span><span class="p">,</span> <span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">wmax</span><span class="o">.</span><span class="n">values</span> <span class="o">*</span> <span class="n">units</span><span class="p">(</span><span class="s1">'m/s'</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s1">'mph'</span><span class="p">))</span>
+<span class="n">ds_standard_units</span><span class="o">.</span><span class="n">wmax</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">'units'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'mph'</span>
 
 <span class="c1"># Convert windspeed</span>
-<span class="n">ds_standard_units</span><span class="p">[</span><span class="s1">&#39;tdry&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">tdry</span><span class="o">.</span><span class="n">values</span> <span class="o">*</span> <span class="n">units</span><span class="p">(</span><span class="s1">&#39;degC&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s1">&#39;degF&#39;</span><span class="p">))</span>
-<span class="n">ds_standard_units</span><span class="o">.</span><span class="n">tdry</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;units&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;degF&#39;</span>
+<span class="n">ds_standard_units</span><span class="p">[</span><span class="s1">'tdry'</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="s1">'time'</span><span class="p">,</span> <span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">tdry</span><span class="o">.</span><span class="n">values</span> <span class="o">*</span> <span class="n">units</span><span class="p">(</span><span class="s1">'degC'</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s1">'degF'</span><span class="p">))</span>
+<span class="n">ds_standard_units</span><span class="o">.</span><span class="n">tdry</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">'units'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'degF'</span>
 
 <span class="c1"># Convert max windspeed</span>
-<span class="n">ds_standard_units</span><span class="p">[</span><span class="s1">&#39;dp&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">dp</span><span class="o">.</span><span class="n">values</span> <span class="o">*</span> <span class="n">units</span><span class="p">(</span><span class="s1">&#39;degC&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s1">&#39;degF&#39;</span><span class="p">))</span>
-<span class="n">ds_standard_units</span><span class="o">.</span><span class="n">dp</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;units&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;degF&#39;</span>
+<span class="n">ds_standard_units</span><span class="p">[</span><span class="s1">'dp'</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="s1">'time'</span><span class="p">,</span> <span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">dp</span><span class="o">.</span><span class="n">values</span> <span class="o">*</span> <span class="n">units</span><span class="p">(</span><span class="s1">'degC'</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s1">'degF'</span><span class="p">))</span>
+<span class="n">ds_standard_units</span><span class="o">.</span><span class="n">dp</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">'units'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'degF'</span>
 </pre></div>
 </div>
 </div>
@@ -5288,10 +5288,10 @@ Data variables: (12/20)
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wind_speed_plot</span> <span class="o">=</span> <span class="n">ds_standard_units</span><span class="o">.</span><span class="n">wspd</span><span class="o">.</span><span class="n">hvplot</span><span class="o">.</span><span class="n">line</span><span class="p">(</span>
-    <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Wind Speed (mph)&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;darkblue&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Wind Speed&#39;</span>
+    <span class="n">ylabel</span><span class="o">=</span><span class="s1">'Wind Speed (mph)'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'darkblue'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'Wind Speed'</span>
 <span class="p">)</span>
 <span class="n">wind_speed_max_plot</span> <span class="o">=</span> <span class="n">ds_standard_units</span><span class="o">.</span><span class="n">wmax</span><span class="o">.</span><span class="n">hvplot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
-    <span class="n">color</span><span class="o">=</span><span class="s1">&#39;lightblue&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Peak Wind Speed&#39;</span>
+    <span class="n">color</span><span class="o">=</span><span class="s1">'lightblue'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'Peak Wind Speed'</span>
 <span class="p">)</span>
 <span class="n">wind_speed_max_plot</span> <span class="o">*</span> <span class="n">wind_speed_plot</span>
 </pre></div>
@@ -5338,9 +5338,9 @@ Data variables: (12/20)
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temperature_plot</span> <span class="o">=</span> <span class="n">ds_standard_units</span><span class="o">.</span><span class="n">tdry</span><span class="o">.</span><span class="n">hvplot</span><span class="o">.</span><span class="n">line</span><span class="p">(</span>
-    <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Temperature (degF)&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Temperature&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span>
+    <span class="n">ylabel</span><span class="o">=</span><span class="s1">'Temperature (degF)'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'red'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'Temperature'</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span>
 <span class="p">)</span>
-<span class="n">dewpoint_plot</span> <span class="o">=</span> <span class="n">ds_standard_units</span><span class="o">.</span><span class="n">dp</span><span class="o">.</span><span class="n">hvplot</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Dewpoint&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
+<span class="n">dewpoint_plot</span> <span class="o">=</span> <span class="n">ds_standard_units</span><span class="o">.</span><span class="n">dp</span><span class="o">.</span><span class="n">hvplot</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">'green'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'Dewpoint'</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
 <span class="n">temperature_plot</span> <span class="o">*</span> <span class="n">dewpoint_plot</span>
 </pre></div>
 </div>
@@ -5386,8 +5386,8 @@ Data variables: (12/20)
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">hv</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span>
-    <span class="p">(</span><span class="n">wind_speed_max_plot</span> <span class="o">*</span> <span class="n">wind_speed_plot</span><span class="p">)</span><span class="o">.</span><span class="n">opts</span><span class="p">(</span><span class="n">legend_position</span><span class="o">=</span><span class="s1">&#39;top_left&#39;</span><span class="p">)</span>
-    <span class="o">+</span> <span class="p">(</span><span class="n">temperature_plot</span> <span class="o">*</span> <span class="n">dewpoint_plot</span><span class="p">)</span><span class="o">.</span><span class="n">opts</span><span class="p">(</span><span class="n">legend_position</span><span class="o">=</span><span class="s1">&#39;top_left&#39;</span><span class="p">)</span>
+    <span class="p">(</span><span class="n">wind_speed_max_plot</span> <span class="o">*</span> <span class="n">wind_speed_plot</span><span class="p">)</span><span class="o">.</span><span class="n">opts</span><span class="p">(</span><span class="n">legend_position</span><span class="o">=</span><span class="s1">'top_left'</span><span class="p">)</span>
+    <span class="o">+</span> <span class="p">(</span><span class="n">temperature_plot</span> <span class="o">*</span> <span class="n">dewpoint_plot</span><span class="p">)</span><span class="o">.</span><span class="n">opts</span><span class="p">(</span><span class="n">legend_position</span><span class="o">=</span><span class="s1">'top_left'</span><span class="p">)</span>
 <span class="p">)</span><span class="o">.</span><span class="n">cols</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -5542,8 +5542,8 @@ Data variables: (12/20)
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9"></script>
-<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -5577,7 +5577,7 @@ Data variables: (12/20)
         <div class="footer-item">
 <p class="theme-version">
   <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.20.0.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.21.0.
 </p></div>
       
     </div>

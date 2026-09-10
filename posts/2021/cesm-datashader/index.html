@@ -27,8 +27,8 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
@@ -37,10 +37,10 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=66307ba7" />
   
   <!-- So that users can add custom icons -->
-  <script defer src="../../../_static/scripts/fontawesome.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer src="../../../_static/scripts/fontawesome.js?digest=cb8930eaaf36d9849b67"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9" />
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67" />
 
     <script src="../../../_static/documentation_options.js?v=55b5f74b"></script>
     <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
@@ -76,7 +76,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
-    <meta name="docbuild:last-update" content="Jul 27, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 10, 2026"/>
   
     
     <script src="../../../_static/searchtools.js"></script>
@@ -624,7 +624,7 @@
 <span class="kn">from</span><span class="w"> </span><span class="nn">holoviews.operation.datashader</span><span class="w"> </span><span class="kn">import</span> <span class="n">datashade</span><span class="p">,</span> <span class="n">rasterize</span><span class="p">,</span> <span class="n">regrid</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">scipy.spatial</span><span class="w"> </span><span class="kn">import</span> <span class="n">Delaunay</span>
 
-<span class="n">hv</span><span class="o">.</span><span class="n">extension</span><span class="p">(</span><span class="s2">&quot;bokeh&quot;</span><span class="p">)</span>
+<span class="n">hv</span><span class="o">.</span><span class="n">extension</span><span class="p">(</span><span class="s2">"bokeh"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2170,7 +2170,7 @@ roTBs2RqAAAAAElFTkSuQmCC'
 <p>In this case, we are using test data provided by Steve Yeager</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;/glade/scratch/yeager/TREFHT_CAMne120.nc&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">'/glade/scratch/yeager/TREFHT_CAMne120.nc'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2575,14 +2575,14 @@ Attributes: (12/14)
 <p>We can use the <code class="docutils literal notranslate"><span class="pre">Delaunay</span></code> triangulation function from <code class="docutils literal notranslate"><span class="pre">scipy.spatial</span></code> to calculate the vertices from our latitudes and longitudes</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">triangulate</span><span class="p">(</span><span class="n">vertices</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;Longitude&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;Latitude&quot;</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">triangulate</span><span class="p">(</span><span class="n">vertices</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">"Longitude"</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">"Latitude"</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Generate a triangular mesh for the given x,y,z vertices, using Delaunay triangulation.</span>
 <span class="sd">    For large n, typically results in about double the number of triangles as vertices.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="n">triang</span> <span class="o">=</span> <span class="n">Delaunay</span><span class="p">(</span><span class="n">vertices</span><span class="p">[[</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">]]</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Given&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">vertices</span><span class="p">),</span> <span class="s2">&quot;vertices, created&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">triang</span><span class="o">.</span><span class="n">simplices</span><span class="p">),</span> <span class="s1">&#39;triangles.&#39;</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">triang</span><span class="o">.</span><span class="n">simplices</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;v0&#39;</span><span class="p">,</span> <span class="s1">&#39;v1&#39;</span><span class="p">,</span> <span class="s1">&#39;v2&#39;</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'Given'</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">vertices</span><span class="p">),</span> <span class="s2">"vertices, created"</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">triang</span><span class="o">.</span><span class="n">simplices</span><span class="p">),</span> <span class="s1">'triangles.'</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">triang</span><span class="o">.</span><span class="n">simplices</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">'v0'</span><span class="p">,</span> <span class="s1">'v1'</span><span class="p">,</span> <span class="s1">'v2'</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -2611,7 +2611,7 @@ Wall time: 85.5 ms
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
-<span class="n">verts</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">pts</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Longitude&#39;</span><span class="p">,</span> <span class="s1">&#39;Latitude&#39;</span><span class="p">,</span> <span class="s1">&#39;temp&#39;</span><span class="p">])</span>
+<span class="n">verts</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">pts</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">'Longitude'</span><span class="p">,</span> <span class="s1">'Latitude'</span><span class="p">,</span> <span class="s1">'temp'</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -2660,15 +2660,15 @@ Wall time: 6.74 s
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
 <span class="n">trimesh</span> <span class="o">=</span> <span class="n">rasterize</span><span class="p">(</span>
     <span class="n">gv</span><span class="o">.</span><span class="n">TriMesh</span><span class="p">(</span>
-        <span class="p">(</span><span class="n">tris</span><span class="p">,</span> <span class="n">hv</span><span class="o">.</span><span class="n">Points</span><span class="p">(</span><span class="n">verts</span><span class="p">,</span> <span class="n">vdims</span><span class="o">=</span><span class="s1">&#39;temp&#39;</span><span class="p">)),</span>
-        <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Reference height temperature (K)&quot;</span><span class="p">,</span>
+        <span class="p">(</span><span class="n">tris</span><span class="p">,</span> <span class="n">hv</span><span class="o">.</span><span class="n">Points</span><span class="p">(</span><span class="n">verts</span><span class="p">,</span> <span class="n">vdims</span><span class="o">=</span><span class="s1">'temp'</span><span class="p">)),</span>
+        <span class="n">label</span><span class="o">=</span><span class="s2">"Reference height temperature (K)"</span><span class="p">,</span>
         <span class="n">crs</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(),</span>
     <span class="p">),</span>
-    <span class="n">aggregator</span><span class="o">=</span><span class="n">ds</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s1">&#39;temp&#39;</span><span class="p">),</span>
+    <span class="n">aggregator</span><span class="o">=</span><span class="n">ds</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s1">'temp'</span><span class="p">),</span>
 <span class="p">)</span>
 
 <span class="p">(</span><span class="n">trimesh</span><span class="p">)</span><span class="o">.</span><span class="n">opts</span><span class="p">(</span>
-    <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;magma&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">Robinson</span><span class="p">()</span>
+    <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">'magma'</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">Robinson</span><span class="p">()</span>
 <span class="p">)</span> <span class="o">*</span> <span class="n">gf</span><span class="o">.</span><span class="n">coastline</span> <span class="o">*</span> <span class="n">gf</span><span class="o">.</span><span class="n">borders</span>
 </pre></div>
 </div>
@@ -2819,8 +2819,8 @@ Wall time: 206 ms
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9"></script>
-<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -2854,7 +2854,7 @@ Wall time: 206 ms
         <div class="footer-item">
 <p class="theme-version">
   <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.20.0.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.21.0.
 </p></div>
       
     </div>

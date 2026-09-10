@@ -27,8 +27,8 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
@@ -37,10 +37,10 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=66307ba7" />
   
   <!-- So that users can add custom icons -->
-  <script defer src="../../../_static/scripts/fontawesome.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer src="../../../_static/scripts/fontawesome.js?digest=cb8930eaaf36d9849b67"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9" />
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67" />
 
     <script src="../../../_static/documentation_options.js?v=55b5f74b"></script>
     <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
@@ -74,7 +74,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
-    <meta name="docbuild:last-update" content="Jul 27, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 10, 2026"/>
   
     
     <script src="../../../_static/searchtools.js"></script>
@@ -597,12 +597,12 @@
 </div>
 <p>Next, we read in the data using <code class="docutils literal notranslate"><span class="pre">xarray</span></code> and subset for temperature and salinity, subsetting for a smaller portion of the domain for testing purposes</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">merge</span><span class="p">((</span>
-    <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;/glade/p/cgd/oce/projects/cesm2-marbl/xpersist_cache/3d_fields/TEMP-presentday-monclim.nc&#39;</span><span class="p">,</span> <span class="n">chunks</span><span class="o">=</span><span class="p">{}),</span>
-    <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;/glade/p/cgd/oce/projects/cesm2-marbl/xpersist_cache/3d_fields/SALT-presentday-monclim.nc&#39;</span><span class="p">,</span> <span class="n">chunks</span><span class="o">=</span><span class="p">{}),</span>
+    <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">'/glade/p/cgd/oce/projects/cesm2-marbl/xpersist_cache/3d_fields/TEMP-presentday-monclim.nc'</span><span class="p">,</span> <span class="n">chunks</span><span class="o">=</span><span class="p">{}),</span>
+    <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">'/glade/p/cgd/oce/projects/cesm2-marbl/xpersist_cache/3d_fields/SALT-presentday-monclim.nc'</span><span class="p">,</span> <span class="n">chunks</span><span class="o">=</span><span class="p">{}),</span>
 <span class="p">))</span>
 
 
-<span class="n">ds</span> <span class="o">=</span> <span class="n">ds</span><span class="p">[[</span><span class="s1">&#39;TEMP&#39;</span><span class="p">,</span> <span class="s1">&#39;SALT&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">persist</span><span class="p">()</span>
+<span class="n">ds</span> <span class="o">=</span> <span class="n">ds</span><span class="p">[[</span><span class="s1">'TEMP'</span><span class="p">,</span> <span class="s1">'SALT'</span><span class="p">]]</span><span class="o">.</span><span class="n">persist</span><span class="p">()</span>
 
 <span class="c1"># subset for testing purposes</span>
 <span class="n">ds</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">member_id</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">nlat</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">nlon</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
@@ -612,8 +612,8 @@
 <section id="data-operation">
 <h2>Data Operation<a class="headerlink" href="#data-operation" title="Link to this heading">#</a></h2>
 <p>Next, we setup a function to compute the mixed layer depth (MLD). The MLD is defined as the point in the water column where the potential density (<code class="docutils literal notranslate"><span class="pre">sigma</span></code>) exceeds the surface density by a specified threshold (<code class="docutils literal notranslate"><span class="pre">dsigma</span></code>).</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">mld_dsigma</span><span class="p">(</span><span class="n">SALT</span><span class="p">,</span> <span class="n">TEMP</span><span class="p">,</span> <span class="n">dsigma</span><span class="o">=</span><span class="mf">0.03</span><span class="p">,</span> <span class="n">rho_chunks</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;nlat&#39;</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span> <span class="s1">&#39;nlon&#39;</span><span class="p">:</span> <span class="mi">16</span><span class="p">}):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">mld_dsigma</span><span class="p">(</span><span class="n">SALT</span><span class="p">,</span> <span class="n">TEMP</span><span class="p">,</span> <span class="n">dsigma</span><span class="o">=</span><span class="mf">0.03</span><span class="p">,</span> <span class="n">rho_chunks</span><span class="o">=</span><span class="p">{</span><span class="s1">'nlat'</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span> <span class="s1">'nlon'</span><span class="p">:</span> <span class="mi">16</span><span class="p">}):</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Compute MLD based on ∆σ criterion. Uses xarray.map_blocks.</span>
 
 <span class="sd">    Parameters</span>
@@ -634,39 +634,39 @@
 <span class="sd">    MLD : xarray.DataArray</span>
 <span class="sd">      The MLD (m) defined as the point in the water column where</span>
 <span class="sd">      density exceeds rho[0] + dsigma.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
     <span class="c1"># determine dimensionality</span>
     <span class="n">dims_in</span> <span class="o">=</span> <span class="n">SALT</span><span class="o">.</span><span class="n">dims</span>
-    <span class="k">assert</span> <span class="n">dims_in</span> <span class="o">==</span> <span class="n">TEMP</span><span class="o">.</span><span class="n">dims</span><span class="p">,</span> <span class="s1">&#39;dimension mismatch&#39;</span>
-    <span class="k">assert</span> <span class="s1">&#39;z_t&#39;</span> <span class="ow">in</span> <span class="n">SALT</span><span class="o">.</span><span class="n">coords</span><span class="p">,</span> <span class="s1">&#39;z_t not found in SALT coords&#39;</span>
+    <span class="k">assert</span> <span class="n">dims_in</span> <span class="o">==</span> <span class="n">TEMP</span><span class="o">.</span><span class="n">dims</span><span class="p">,</span> <span class="s1">'dimension mismatch'</span>
+    <span class="k">assert</span> <span class="s1">'z_t'</span> <span class="ow">in</span> <span class="n">SALT</span><span class="o">.</span><span class="n">coords</span><span class="p">,</span> <span class="s1">'z_t not found in SALT coords'</span>
 
     <span class="c1"># drop ancillary coordinates</span>
     <span class="n">SALT</span> <span class="o">=</span> <span class="n">SALT</span><span class="o">.</span><span class="n">reset_coords</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="n">TEMP</span> <span class="o">=</span> <span class="n">TEMP</span><span class="o">.</span><span class="n">reset_coords</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
-    <span class="c1"># compute density - this is where there is a tradeoff in using a &quot;core dimension&quot; for chunking</span>
-    <span class="n">rho</span> <span class="o">=</span> <span class="n">pop_tools</span><span class="o">.</span><span class="n">eos</span><span class="p">(</span><span class="n">SALT</span><span class="o">.</span><span class="n">chunk</span><span class="p">({</span><span class="s1">&#39;z_t&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">}),</span>
-                        <span class="n">TEMP</span><span class="o">.</span><span class="n">chunk</span><span class="p">({</span><span class="s1">&#39;z_t&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">}),</span>
+    <span class="c1"># compute density - this is where there is a tradeoff in using a "core dimension" for chunking</span>
+    <span class="n">rho</span> <span class="o">=</span> <span class="n">pop_tools</span><span class="o">.</span><span class="n">eos</span><span class="p">(</span><span class="n">SALT</span><span class="o">.</span><span class="n">chunk</span><span class="p">({</span><span class="s1">'z_t'</span><span class="p">:</span> <span class="mi">10</span><span class="p">}),</span>
+                        <span class="n">TEMP</span><span class="o">.</span><span class="n">chunk</span><span class="p">({</span><span class="s1">'z_t'</span><span class="p">:</span> <span class="mi">10</span><span class="p">}),</span>
                         <span class="n">depth</span><span class="o">=</span><span class="n">SALT</span><span class="o">.</span><span class="n">z_t</span> <span class="o">*</span> <span class="mf">0.</span><span class="p">)</span><span class="o">.</span><span class="n">compute</span><span class="p">()</span>
 
     <span class="c1"># add these coordinates which creep in somewhere, I think when xarray does the unstack</span>
-    <span class="c1"># without these, I get an error: not expecting {&#39;nlat&#39;, &#39;nlon&#39;}</span>
+    <span class="c1"># without these, I get an error: not expecting {'nlat', 'nlon'}</span>
     <span class="c1"># chunking here is arbitrary and maybe suitable for the global POP_gx1v7 grid</span>
-    <span class="k">if</span> <span class="s1">&#39;nlat&#39;</span> <span class="ow">in</span> <span class="n">rho</span><span class="o">.</span><span class="n">dims</span> <span class="ow">and</span> <span class="s1">&#39;nlon&#39;</span> <span class="ow">in</span> <span class="n">rho</span><span class="o">.</span><span class="n">dims</span><span class="p">:</span>
+    <span class="k">if</span> <span class="s1">'nlat'</span> <span class="ow">in</span> <span class="n">rho</span><span class="o">.</span><span class="n">dims</span> <span class="ow">and</span> <span class="s1">'nlon'</span> <span class="ow">in</span> <span class="n">rho</span><span class="o">.</span><span class="n">dims</span><span class="p">:</span>
         <span class="n">rho</span> <span class="o">=</span> <span class="n">rho</span><span class="o">.</span><span class="n">assign_coords</span><span class="p">({</span>
-            <span class="s1">&#39;nlat&#39;</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">SALT</span><span class="o">.</span><span class="n">nlat</span><span class="p">)),</span> <span class="n">dims</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;nlat&#39;</span><span class="p">)),</span>
-            <span class="s1">&#39;nlon&#39;</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">SALT</span><span class="o">.</span><span class="n">nlon</span><span class="p">)),</span> <span class="n">dims</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;nlon&#39;</span><span class="p">)),</span>
+            <span class="s1">'nlat'</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">SALT</span><span class="o">.</span><span class="n">nlat</span><span class="p">)),</span> <span class="n">dims</span><span class="o">=</span><span class="p">(</span><span class="s1">'nlat'</span><span class="p">)),</span>
+            <span class="s1">'nlon'</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">SALT</span><span class="o">.</span><span class="n">nlon</span><span class="p">)),</span> <span class="n">dims</span><span class="o">=</span><span class="p">(</span><span class="s1">'nlon'</span><span class="p">)),</span>
         <span class="p">})</span>
 
-    <span class="c1"># Compute density - this will help the workflow from being &quot;bogged down&quot; with too many tasks</span>
+    <span class="c1"># Compute density - this will help the workflow from being "bogged down" with too many tasks</span>
     <span class="n">rho</span> <span class="o">=</span> <span class="n">rho</span><span class="o">.</span><span class="n">chunk</span><span class="p">(</span><span class="n">rho_chunks</span><span class="p">)</span><span class="o">.</span><span class="n">persist</span><span class="p">()</span>
 
     <span class="c1"># Setup a template</span>
-    <span class="n">template</span> <span class="o">=</span> <span class="n">rho</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">z_t</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;z_t&#39;</span><span class="p">)</span>
-    <span class="n">template</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;long_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;MLD&#39;</span>
-    <span class="n">template</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;units&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">SALT</span><span class="o">.</span><span class="n">z_t</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;units&#39;</span><span class="p">]</span>
-    <span class="n">template</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;MLD&#39;</span>
+    <span class="n">template</span> <span class="o">=</span> <span class="n">rho</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">z_t</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">'z_t'</span><span class="p">)</span>
+    <span class="n">template</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">'long_name'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'MLD'</span>
+    <span class="n">template</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">'units'</span><span class="p">]</span> <span class="o">=</span> <span class="n">SALT</span><span class="o">.</span><span class="n">z_t</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">'units'</span><span class="p">]</span>
+    <span class="n">template</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s1">'MLD'</span>
 
     <span class="c1"># compute and return MLD - this is where the parallelization comes in</span>
     <span class="k">return</span> <span class="n">xr</span><span class="o">.</span><span class="n">map_blocks</span><span class="p">(</span>
@@ -683,12 +683,12 @@
 <p>The data are returned unstacked with the dimensions ordered as they arrived in <code class="docutils literal notranslate"><span class="pre">rho_in</span></code>.</p>
 <p>We define the function here, then immediately call it to test it; arbitrarily, we’re calling it on TEMP rather than density.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">interp_mld_dsigma</span><span class="p">(</span><span class="n">rho_in</span><span class="p">,</span> <span class="n">dsigma</span><span class="o">=</span><span class="mf">0.03</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;compute MLD at point using interpolation&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""compute MLD at point using interpolation"""</span>
 
-    <span class="n">non_vertical_dims</span> <span class="o">=</span> <span class="p">[</span><span class="n">d</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">rho_in</span><span class="o">.</span><span class="n">dims</span> <span class="k">if</span> <span class="n">d</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;z_t&#39;</span><span class="p">]]</span>
+    <span class="n">non_vertical_dims</span> <span class="o">=</span> <span class="p">[</span><span class="n">d</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">rho_in</span><span class="o">.</span><span class="n">dims</span> <span class="k">if</span> <span class="n">d</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'z_t'</span><span class="p">]]</span>
     <span class="n">rho_stack</span> <span class="o">=</span> <span class="n">rho_in</span><span class="o">.</span><span class="n">stack</span><span class="p">(</span><span class="n">non_vertical_dims</span><span class="o">=</span><span class="n">non_vertical_dims</span><span class="p">)</span>
     <span class="n">mld_stack</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">full_like</span><span class="p">(</span><span class="n">rho_stack</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">z_t</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)),</span> <span class="n">fill_value</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
-    <span class="n">N</span> <span class="o">=</span> <span class="n">rho_stack</span><span class="o">.</span><span class="n">sizes</span><span class="p">[</span><span class="s2">&quot;non_vertical_dims&quot;</span><span class="p">]</span>
+    <span class="n">N</span> <span class="o">=</span> <span class="n">rho_stack</span><span class="o">.</span><span class="n">sizes</span><span class="p">[</span><span class="s2">"non_vertical_dims"</span><span class="p">]</span>
     <span class="n">z_t</span> <span class="o">=</span> <span class="n">rho_in</span><span class="o">.</span><span class="n">z_t</span>
 
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
@@ -726,15 +726,15 @@
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
 
-<span class="n">ds</span><span class="o">.</span><span class="n">TEMP</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">subset_to_singletons</span><span class="p">)</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="s1">&#39;z_t&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;profile&#39;</span><span class="p">)</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">TEMP</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">subset_to_singletons</span><span class="p">)</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="s1">'z_t'</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">'.'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'profile'</span><span class="p">)</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">TEMP</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">subset_to_singletons</span><span class="p">)</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">z_t</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span>
-            <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;tab:red&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;surface&#39;</span><span class="p">)</span>
+            <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">'tab:red'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'surface'</span><span class="p">)</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">TEMP</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">subset_to_singletons</span><span class="p">)</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">z_t</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">+</span><span class="n">dsigma</span><span class="p">,</span>
-            <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;tab:blue&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;S at mld&#39;</span><span class="p">)</span>
+            <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">'tab:blue'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'S at mld'</span><span class="p">)</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">temp_depth</span><span class="o">*</span><span class="mf">1e2</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;MLD&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">temp_depth</span><span class="o">*</span><span class="mf">1e2</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">'k'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'MLD'</span><span class="p">)</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="p">(</span><span class="mf">1.02</span><span class="p">,</span> <span class="mi">0</span><span class="p">));</span>
 <span class="n">ylm</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">()</span>
@@ -757,13 +757,13 @@
 <p>When working through these computations, it is important to use the dask dashboard to determine where there are bottlenecks within the analysis.</p>
 <p>Also, it can be helpful to understand the nature of the computation. In this case, this computation is considered to CPU heavy, so the key is increasing the number cores being utilized, using a line like this at the beginning:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Increase # of threads, more compute heavy</span>
-<span class="n">cluster</span> <span class="o">=</span> <span class="n">ncar_jobqueue</span><span class="o">.</span><span class="n">NCARCluster</span><span class="p">(</span><span class="n">cores</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">processes</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">memory</span><span class="o">=</span><span class="s1">&#39;80 GB&#39;</span><span class="p">,</span> <span class="n">project</span><span class="o">=</span><span class="s1">&#39;project_number&#39;</span><span class="p">)</span>
+<span class="n">cluster</span> <span class="o">=</span> <span class="n">ncar_jobqueue</span><span class="o">.</span><span class="n">NCARCluster</span><span class="p">(</span><span class="n">cores</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">processes</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">memory</span><span class="o">=</span><span class="s1">'80 GB'</span><span class="p">,</span> <span class="n">project</span><span class="o">=</span><span class="s1">'project_number'</span><span class="p">)</span>
 <span class="n">cluster</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="n">jobs</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
 <span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">cluster</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Another method of optimization could be increasing/decreasing the chunksize within the <code class="docutils literal notranslate"><span class="pre">mld</span></code> function</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mld</span> <span class="o">=</span> <span class="n">mld_dsigma</span><span class="p">(</span><span class="n">ds_whole</span><span class="o">.</span><span class="n">SALT</span><span class="p">,</span> <span class="n">ds_whole</span><span class="o">.</span><span class="n">TEMP</span><span class="p">,</span> <span class="n">rho_chunks</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;nlat&#39;</span><span class="p">:</span> <span class="mi">16</span><span class="o">*</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;nlon&#39;</span><span class="p">:</span> <span class="mi">16</span><span class="o">*</span><span class="mi">2</span><span class="p">})</span><span class="o">.</span><span class="n">compute</span><span class="p">()</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mld</span> <span class="o">=</span> <span class="n">mld_dsigma</span><span class="p">(</span><span class="n">ds_whole</span><span class="o">.</span><span class="n">SALT</span><span class="p">,</span> <span class="n">ds_whole</span><span class="o">.</span><span class="n">TEMP</span><span class="p">,</span> <span class="n">rho_chunks</span><span class="o">=</span><span class="p">{</span><span class="s1">'nlat'</span><span class="p">:</span> <span class="mi">16</span><span class="o">*</span><span class="mi">2</span><span class="p">,</span> <span class="s1">'nlon'</span><span class="p">:</span> <span class="mi">16</span><span class="o">*</span><span class="mi">2</span><span class="p">})</span><span class="o">.</span><span class="n">compute</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>There are no clear correct answers here - it will depend on the specific use case, and the nature of the computation, but hopefully these starting points will help!</p>
@@ -866,8 +866,8 @@
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9"></script>
-<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -901,7 +901,7 @@
         <div class="footer-item">
 <p class="theme-version">
   <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.20.0.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.21.0.
 </p></div>
       
     </div>

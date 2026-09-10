@@ -27,8 +27,8 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
@@ -37,10 +37,10 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=66307ba7" />
   
   <!-- So that users can add custom icons -->
-  <script defer src="../../../_static/scripts/fontawesome.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer src="../../../_static/scripts/fontawesome.js?digest=cb8930eaaf36d9849b67"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9" />
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67" />
 
     <script src="../../../_static/documentation_options.js?v=55b5f74b"></script>
     <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
@@ -74,7 +74,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
-    <meta name="docbuild:last-update" content="Jul 27, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 10, 2026"/>
   
     
     <script src="../../../_static/searchtools.js"></script>
@@ -603,7 +603,7 @@
 <span class="kn">import</span><span class="w"> </span><span class="nn">util</span>
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
-<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">'ignore'</span><span class="p">)</span>
 </pre></div>
 </div>
 <section id="spin-up-dask-cluster">
@@ -622,20 +622,20 @@
 <span class="c1"># Setup your PBSCluster</span>
 <span class="n">cluster</span> <span class="o">=</span> <span class="n">PBSCluster</span><span class="p">(</span>
     <span class="n">cores</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="c1"># The number of cores you want</span>
-    <span class="n">memory</span><span class="o">=</span><span class="s1">&#39;256 GB&#39;</span><span class="p">,</span> <span class="c1"># Amount of memory</span>
+    <span class="n">memory</span><span class="o">=</span><span class="s1">'256 GB'</span><span class="p">,</span> <span class="c1"># Amount of memory</span>
     <span class="n">processes</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="c1"># How many processes</span>
-    <span class="n">queue</span><span class="o">=</span><span class="s1">&#39;casper&#39;</span><span class="p">,</span> <span class="c1"># The type of queue to utilize (/glade/u/apps/dav/opt/usr/bin/execcasper)</span>
-    <span class="n">local_directory</span><span class="o">=</span><span class="s1">&#39;$TMPDIR&#39;</span><span class="p">,</span> <span class="c1"># Use your local directory</span>
-    <span class="n">resource_spec</span><span class="o">=</span><span class="s1">&#39;select=1:ncpus=2:mem=256GB&#39;</span><span class="p">,</span> <span class="c1"># Specify resources</span>
-    <span class="n">project</span><span class="o">=</span><span class="s1">&#39;project_id&#39;</span><span class="p">,</span> <span class="c1"># Input your project ID here</span>
-    <span class="n">walltime</span><span class="o">=</span><span class="s1">&#39;02:00:00&#39;</span><span class="p">,</span> <span class="c1"># Amount of wall time</span>
-    <span class="n">interface</span><span class="o">=</span><span class="s1">&#39;ib0&#39;</span><span class="p">,</span> <span class="c1"># Interface to use</span>
+    <span class="n">queue</span><span class="o">=</span><span class="s1">'casper'</span><span class="p">,</span> <span class="c1"># The type of queue to utilize (/glade/u/apps/dav/opt/usr/bin/execcasper)</span>
+    <span class="n">local_directory</span><span class="o">=</span><span class="s1">'$TMPDIR'</span><span class="p">,</span> <span class="c1"># Use your local directory</span>
+    <span class="n">resource_spec</span><span class="o">=</span><span class="s1">'select=1:ncpus=2:mem=256GB'</span><span class="p">,</span> <span class="c1"># Specify resources</span>
+    <span class="n">project</span><span class="o">=</span><span class="s1">'project_id'</span><span class="p">,</span> <span class="c1"># Input your project ID here</span>
+    <span class="n">walltime</span><span class="o">=</span><span class="s1">'02:00:00'</span><span class="p">,</span> <span class="c1"># Amount of wall time</span>
+    <span class="n">interface</span><span class="o">=</span><span class="s1">'ib0'</span><span class="p">,</span> <span class="c1"># Interface to use</span>
 <span class="p">)</span>
 <span class="c1"># Scale up</span>
 <span class="n">cluster</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
 
 <span class="c1"># Change your url to the dask dashboard so you can see it</span>
-<span class="n">dask</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">set</span><span class="p">({</span><span class="s1">&#39;distributed.dashboard.link&#39;</span><span class="p">:</span><span class="s1">&#39;https://jupyterhub.hpc.ucar.edu/stable/user/</span><span class="si">{USER}</span><span class="s1">/proxy/</span><span class="si">{port}</span><span class="s1">/status&#39;</span><span class="p">})</span>
+<span class="n">dask</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">set</span><span class="p">({</span><span class="s1">'distributed.dashboard.link'</span><span class="p">:</span><span class="s1">'https://jupyterhub.hpc.ucar.edu/stable/user/</span><span class="si">{USER}</span><span class="s1">/proxy/</span><span class="si">{port}</span><span class="s1">/status'</span><span class="p">})</span>
 
 <span class="c1"># Setup your client</span>
 <span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">cluster</span><span class="p">)</span>
@@ -648,20 +648,20 @@
 <p>We will use <a class="reference external" href="https://intake-esm.readthedocs.io/en/latest/"><code class="docutils literal notranslate"><span class="pre">intake-esm</span></code></a>, which is a data catalog tool.
 It enables querying a database for the files we want, then loading those directly as an <code class="docutils literal notranslate"><span class="pre">xarray.Dataset</span></code>.</p>
 <p>First step is to set the “collection” for the CESM-LE, which depends on a json file conforming to the <a class="reference external" href="https://github.com/NCAR/esm-collection-spec">ESM Catalog Specification</a>.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">catalog_file</span> <span class="o">=</span> <span class="s1">&#39;/glade/u/home/kristenk/TTE_CESM-LE/krill-cesm-le/notebooks/data/glade-cesm1-le.json&#39;</span>
-<span class="n">variables</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;TEMP&#39;</span><span class="p">,</span> <span class="s1">&#39;diatC&#39;</span><span class="p">]</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">catalog_file</span> <span class="o">=</span> <span class="s1">'/glade/u/home/kristenk/TTE_CESM-LE/krill-cesm-le/notebooks/data/glade-cesm1-le.json'</span>
+<span class="n">variables</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'TEMP'</span><span class="p">,</span> <span class="s1">'diatC'</span><span class="p">]</span>
 
-<span class="n">experiments</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;20C&#39;</span><span class="p">,</span> <span class="s1">&#39;RCP85&#39;</span><span class="p">]</span>
-<span class="n">stream</span> <span class="o">=</span> <span class="s1">&#39;pop.h&#39;</span>
+<span class="n">experiments</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'20C'</span><span class="p">,</span> <span class="s1">'RCP85'</span><span class="p">]</span>
+<span class="n">stream</span> <span class="o">=</span> <span class="s1">'pop.h'</span>
 
 <span class="n">col</span> <span class="o">=</span> <span class="n">intake</span><span class="o">.</span><span class="n">open_esm_datastore</span><span class="p">(</span><span class="n">catalog_file</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Now we search the collection for the ensemble members (unique <code class="docutils literal notranslate"><span class="pre">member_id</span></code>’s) that have a chlorophyll field (<code class="docutils literal notranslate"><span class="pre">diatChl</span></code>). This is necessary because the ocean biogeochemistry was corrupted in some members and the data were deleted.</p>
 <p>In this cell, <code class="docutils literal notranslate"><span class="pre">member_id</span></code> is a list of the ensemble members we want to operate on.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">col_sub</span> <span class="o">=</span> <span class="n">col</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">experiment</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;20C&#39;</span><span class="p">],</span>
-                     <span class="n">stream</span><span class="o">=</span><span class="s1">&#39;pop.h&#39;</span><span class="p">,</span>
-                     <span class="n">variable</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;diatChl&#39;</span><span class="p">])</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">col_sub</span> <span class="o">=</span> <span class="n">col</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">experiment</span><span class="o">=</span><span class="p">[</span><span class="s1">'20C'</span><span class="p">],</span>
+                     <span class="n">stream</span><span class="o">=</span><span class="s1">'pop.h'</span><span class="p">,</span>
+                     <span class="n">variable</span><span class="o">=</span><span class="p">[</span><span class="s1">'diatChl'</span><span class="p">])</span>
 
 <span class="n">member_id</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">col_sub</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">member_id</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">member_id</span><span class="p">)</span>
@@ -684,7 +684,7 @@ It enables querying a database for the files we want, then loading those directl
 </div>
 <p>Use <code class="docutils literal notranslate"><span class="pre">.to_dataset_dict</span></code> to read in the datasets as a dictionary, specifying the chunk size. This is also a point where it is recommended you take a look at the <code class="docutils literal notranslate"><span class="pre">chunksize</span></code> for the dask array, ensuring that it is a reasonable number (~100-200 mb). Test it out on one of the variables (ex. <code class="docutils literal notranslate"><span class="pre">TEMP</span></code>).</p>
 <p>Since we are only interested in the top 100 m, we can chunk by <code class="docutils literal notranslate"><span class="pre">z_t</span></code> by 10 which should reduce the memory usage.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">dsets</span> <span class="o">=</span> <span class="n">col_sub</span><span class="o">.</span><span class="n">to_dataset_dict</span><span class="p">(</span><span class="n">cdf_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;chunks&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;time&#39;</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;z_t&#39;</span><span class="p">:</span><span class="mi">10</span><span class="p">},</span> <span class="s1">&#39;decode_times&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">})</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">dsets</span> <span class="o">=</span> <span class="n">col_sub</span><span class="o">.</span><span class="n">to_dataset_dict</span><span class="p">(</span><span class="n">cdf_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s1">'chunks'</span><span class="p">:</span> <span class="p">{</span><span class="s1">'time'</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span> <span class="s1">'z_t'</span><span class="p">:</span><span class="mi">10</span><span class="p">},</span> <span class="s1">'decode_times'</span><span class="p">:</span> <span class="kc">False</span><span class="p">})</span>
 </pre></div>
 </div>
 </section>
@@ -693,31 +693,31 @@ It enables querying a database for the files we want, then loading those directl
 <h2>Apply an operation<a class="headerlink" href="#apply-an-operation" title="Link to this heading">#</a></h2>
 <p>Apply a calculation. In this case, we are calculating the average temperature within the top 100 m of the ocean.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">compute_TEMP_100m</span><span class="p">(</span><span class="n">ds</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;compute top 100m mean temperature&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""compute top 100m mean temperature"""</span>
 
-    <span class="n">ds</span><span class="p">[</span><span class="s1">&#39;TEMP_100m_mean&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">TEMP</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">z_t</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s1">&#39;z_t&#39;</span><span class="p">)</span>
+    <span class="n">ds</span><span class="p">[</span><span class="s1">'TEMP_100m_mean'</span><span class="p">]</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">TEMP</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">z_t</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s1">'z_t'</span><span class="p">)</span>
     <span class="n">ds</span><span class="o">.</span><span class="n">TEMP_100m_mean</span><span class="o">.</span><span class="n">attrs</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">TEMP</span><span class="o">.</span><span class="n">attrs</span>
-    <span class="n">ds</span><span class="o">.</span><span class="n">TEMP_100m_mean</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;long_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Mean temperature over top 100m&#39;</span>
+    <span class="n">ds</span><span class="o">.</span><span class="n">TEMP_100m_mean</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">'long_name'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'Mean temperature over top 100m'</span>
 
-    <span class="k">return</span> <span class="n">ds</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;TEMP&#39;</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">ds</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">'TEMP'</span><span class="p">])</span>
 </pre></div>
 </div>
 <p>Now apply this function to the dataset(s)</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># compute top 100m temperature</span>
 <span class="n">dsets2</span> <span class="o">=</span> <span class="p">{</span><span class="n">key</span><span class="p">:</span> <span class="n">compute_TEMP_100m</span><span class="p">(</span><span class="n">ds</span><span class="p">)</span> <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">ds</span> <span class="ow">in</span> <span class="n">dsets2</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;computed top 100m temp&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'computed top 100m temp'</span><span class="p">)</span>
 </pre></div>
 </div>
 <section id="combine-the-datasets">
 <h3>Combine the datasets<a class="headerlink" href="#combine-the-datasets" title="Link to this heading">#</a></h3>
 <p>Concatenate the datasets in time, i.e. 20C + RCP8.5 experiments.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ordered_dsets_keys</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;ocn,20C,pop.h&#39;</span><span class="p">,</span> <span class="s1">&#39;ocn,RCP85,pop.h&#39;</span><span class="p">]</span>
-<span class="c1">#ordered_dsets_keys = [&#39;ocn.20C.pop.h&#39;, &#39;ocn.RCP85.pop.h&#39;]</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ordered_dsets_keys</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'ocn,20C,pop.h'</span><span class="p">,</span> <span class="s1">'ocn,RCP85,pop.h'</span><span class="p">]</span>
+<span class="c1">#ordered_dsets_keys = ['ocn.20C.pop.h', 'ocn.RCP85.pop.h']</span>
 <span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span>
     <span class="p">[</span><span class="n">dsets2</span><span class="p">[</span><span class="n">exp</span><span class="p">]</span> <span class="k">for</span> <span class="n">exp</span> <span class="ow">in</span> <span class="n">ordered_dsets_keys</span><span class="p">],</span>
-    <span class="n">dim</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">,</span>
-    <span class="n">data_vars</span><span class="o">=</span><span class="s1">&#39;minimal&#39;</span><span class="p">,</span>
-    <span class="c1">#compat=&#39;override&#39; ## added this</span>
+    <span class="n">dim</span><span class="o">=</span><span class="s1">'time'</span><span class="p">,</span>
+    <span class="n">data_vars</span><span class="o">=</span><span class="s1">'minimal'</span><span class="p">,</span>
+    <span class="c1">#compat='override' ## added this</span>
 <span class="p">)</span>
 <span class="n">time_encoding</span> <span class="o">=</span> <span class="n">dsets2</span><span class="p">[</span><span class="n">ordered_dsets_keys</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">encoding</span>
 </pre></div>
@@ -726,7 +726,7 @@ It enables querying a database for the files we want, then loading those directl
 <section id="calculate-an-annual-mean">
 <h3>Calculate an annual mean<a class="headerlink" href="#calculate-an-annual-mean" title="Link to this heading">#</a></h3>
 <p>Create an annual mean for temperature, using a <a class="reference external" href="https://github.com/matt-long/krill-cesm-le/blob/master/notebooks/util.py#L185">utility function</a> which deals with the times correctly.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ds_ann</span> <span class="o">=</span> <span class="n">util</span><span class="o">.</span><span class="n">ann_mean</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span> <span class="n">time_bnds_varname</span><span class="o">=</span><span class="s1">&#39;time_bound&#39;</span><span class="p">,</span> <span class="n">time_centered</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ds_ann</span> <span class="o">=</span> <span class="n">util</span><span class="o">.</span><span class="n">ann_mean</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span> <span class="n">time_bnds_varname</span><span class="o">=</span><span class="s1">'time_bound'</span><span class="p">,</span> <span class="n">time_centered</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
@@ -736,7 +736,7 @@ It enables querying a database for the files we want, then loading those directl
 <p>Here, we are just looking to write out a few of the variables.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
 <span class="c1"># Create a list of variables to write out</span>
-<span class="n">keep_vars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;time_bound&#39;</span><span class="p">,</span> <span class="s1">&#39;TAREA&#39;</span><span class="p">,</span> <span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;dz&#39;</span><span class="p">,</span> <span class="s1">&#39;KMT&#39;</span><span class="p">,</span> <span class="s1">&#39;member_id&#39;</span><span class="p">,</span> <span class="s1">&#39;TLAT&#39;</span><span class="p">,</span> <span class="s1">&#39;TLONG&#39;</span><span class="p">,</span> <span class="s1">&#39;TEMP_100m_mean&#39;</span><span class="p">]</span>
+<span class="n">keep_vars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'time_bound'</span><span class="p">,</span> <span class="s1">'TAREA'</span><span class="p">,</span> <span class="s1">'time'</span><span class="p">,</span> <span class="s1">'dz'</span><span class="p">,</span> <span class="s1">'KMT'</span><span class="p">,</span> <span class="s1">'member_id'</span><span class="p">,</span> <span class="s1">'TLAT'</span><span class="p">,</span> <span class="s1">'TLONG'</span><span class="p">,</span> <span class="s1">'TEMP_100m_mean'</span><span class="p">]</span>
 
 <span class="c1"># Subset for these variables</span>
 <span class="n">ds_out</span> <span class="o">=</span> <span class="n">ds_ann</span><span class="p">[</span><span class="n">keep_vars</span><span class="p">])</span>
@@ -745,7 +745,7 @@ It enables querying a database for the files we want, then loading those directl
 <span class="n">ds_out</span><span class="o">.</span><span class="n">compute</span><span class="p">()</span>
 
 <span class="c1"># Write out to scratch since this is likely a large file</span>
-<span class="n">ds_out</span><span class="o">.</span><span class="n">to_netcdf</span><span class="p">(</span><span class="s1">&#39;/glade/scratch/username/CESM-LE-output/CESM-LE-TEMP_100m_mean.nc&#39;</span><span class="p">)</span>
+<span class="n">ds_out</span><span class="o">.</span><span class="n">to_netcdf</span><span class="p">(</span><span class="s1">'/glade/scratch/username/CESM-LE-output/CESM-LE-TEMP_100m_mean.nc'</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>While this is a rather specific example, I hope this illustrates how useful <a class="reference external" href="https://github.com/intake/intake-esm">intake-esm</a> can be and the power of <a class="reference external" href="https://docs.dask.org/en/latest/">dask</a> for computing these computationally expensive calculations on large datasets.</p>
@@ -854,8 +854,8 @@ It enables querying a database for the files we want, then loading those directl
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9"></script>
-<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -889,7 +889,7 @@ It enables querying a database for the files we want, then loading those directl
         <div class="footer-item">
 <p class="theme-version">
   <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.20.0.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.21.0.
 </p></div>
       
     </div>

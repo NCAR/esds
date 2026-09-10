@@ -27,8 +27,8 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
@@ -37,10 +37,10 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=66307ba7" />
   
   <!-- So that users can add custom icons -->
-  <script defer src="../../../_static/scripts/fontawesome.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer src="../../../_static/scripts/fontawesome.js?digest=cb8930eaaf36d9849b67"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9" />
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67" />
 
     <script src="../../../_static/documentation_options.js?v=55b5f74b"></script>
     <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
@@ -74,7 +74,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
-    <meta name="docbuild:last-update" content="Jul 27, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 10, 2026"/>
   
     
     <script src="../../../_static/searchtools.js"></script>
@@ -594,63 +594,63 @@
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">glob</span>
 
 <span class="n">files</span> <span class="o">=</span> <span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span>
-    <span class="s2">&quot;/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/*smbb**h1**18500101-21001231*&quot;</span>
+    <span class="s2">"/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/*smbb**h1**18500101-21001231*"</span>
 <span class="p">)</span>
 <span class="n">files</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1251.011.cam.h1.PRECT.18500101-21001231.nc&#39;,
- &#39;/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1251.012.cam.h1.PRECT.18500101-21001231.nc&#39;,
- &#39;/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1281.019.cam.h1.PRECT.18500101-21001231.nc&#39;,
- &#39;/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1071.004.cam.h1.PRECT.18500101-21001231.nc&#39;,
- &#39;/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1171.009.cam.h1.PRECT.18500101-21001231.nc&#39;,
- &#39;/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1151.008.cam.h1.PRECT.18500101-21001231.nc&#39;,
- &#39;/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1231.018.cam.h1.PRECT.18500101-21001231.nc&#39;,
- &#39;/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1301.014.cam.h1.PRECT.18500101-21001231.nc&#39;,
- &#39;/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1111.006.cam.h1.PRECT.18500101-21001231.nc&#39;,
- &#39;/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1301.013.cam.h1.PRECT.18500101-21001231.nc&#39;,
- &#39;/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1251.018.cam.h1.PRECT.18500101-21001231.nc&#39;,
- &#39;/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1281.015.cam.h1.PRECT.18500101-21001231.nc&#39;,
- &#39;/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1251.016.cam.h1.PRECT.18500101-21001231.nc&#39;,
- &#39;/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1091.005.cam.h1.PRECT.18500101-21001231.nc&#39;,
- &#39;/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1251.020.cam.h1.PRECT.18500101-21001231.nc&#39;,
- &#39;/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1251.015.cam.h1.PRECT.18500101-21001231.nc&#39;,
- &#39;/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1251.013.cam.h1.PRECT.18500101-21001231.nc&#39;,
- &#39;/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1301.017.cam.h1.PRECT.18500101-21001231.nc&#39;,
- &#39;/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1301.011.cam.h1.PRECT.18500101-21001231.nc&#39;,
- &#39;/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1011.001.cam.h1.PRECT.18500101-21001231.nc&#39;,
- &#39;/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1281.011.cam.h1.PRECT.18500101-21001231.nc&#39;,
- &#39;/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1281.018.cam.h1.PRECT.18500101-21001231.nc&#39;,
- &#39;/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1301.018.cam.h1.PRECT.18500101-21001231.nc&#39;,
- &#39;/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1231.014.cam.h1.PRECT.18500101-21001231.nc&#39;,
- &#39;/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1281.013.cam.h1.PRECT.18500101-21001231.nc&#39;,
- &#39;/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1231.019.cam.h1.PRECT.18500101-21001231.nc&#39;,
- &#39;/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1231.015.cam.h1.PRECT.18500101-21001231.nc&#39;,
- &#39;/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1281.016.cam.h1.PRECT.18500101-21001231.nc&#39;,
- &#39;/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1131.007.cam.h1.PRECT.18500101-21001231.nc&#39;,
- &#39;/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1301.012.cam.h1.PRECT.18500101-21001231.nc&#39;,
- &#39;/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1231.020.cam.h1.PRECT.18500101-21001231.nc&#39;,
- &#39;/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1051.003.cam.h1.PRECT.18500101-21001231.nc&#39;,
- &#39;/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1191.010.cam.h1.PRECT.18500101-21001231.nc&#39;,
- &#39;/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1231.016.cam.h1.PRECT.18500101-21001231.nc&#39;,
- &#39;/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1231.013.cam.h1.PRECT.18500101-21001231.nc&#39;,
- &#39;/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1281.014.cam.h1.PRECT.18500101-21001231.nc&#39;,
- &#39;/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1301.019.cam.h1.PRECT.18500101-21001231.nc&#39;,
- &#39;/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1231.011.cam.h1.PRECT.18500101-21001231.nc&#39;,
- &#39;/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1301.016.cam.h1.PRECT.18500101-21001231.nc&#39;,
- &#39;/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1231.012.cam.h1.PRECT.18500101-21001231.nc&#39;,
- &#39;/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1301.015.cam.h1.PRECT.18500101-21001231.nc&#39;,
- &#39;/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1251.019.cam.h1.PRECT.18500101-21001231.nc&#39;,
- &#39;/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1281.017.cam.h1.PRECT.18500101-21001231.nc&#39;,
- &#39;/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1251.014.cam.h1.PRECT.18500101-21001231.nc&#39;,
- &#39;/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1231.017.cam.h1.PRECT.18500101-21001231.nc&#39;,
- &#39;/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1301.020.cam.h1.PRECT.18500101-21001231.nc&#39;,
- &#39;/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1281.020.cam.h1.PRECT.18500101-21001231.nc&#39;,
- &#39;/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1251.017.cam.h1.PRECT.18500101-21001231.nc&#39;,
- &#39;/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1031.002.cam.h1.PRECT.18500101-21001231.nc&#39;,
- &#39;/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1281.012.cam.h1.PRECT.18500101-21001231.nc&#39;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>['/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1251.011.cam.h1.PRECT.18500101-21001231.nc',
+ '/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1251.012.cam.h1.PRECT.18500101-21001231.nc',
+ '/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1281.019.cam.h1.PRECT.18500101-21001231.nc',
+ '/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1071.004.cam.h1.PRECT.18500101-21001231.nc',
+ '/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1171.009.cam.h1.PRECT.18500101-21001231.nc',
+ '/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1151.008.cam.h1.PRECT.18500101-21001231.nc',
+ '/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1231.018.cam.h1.PRECT.18500101-21001231.nc',
+ '/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1301.014.cam.h1.PRECT.18500101-21001231.nc',
+ '/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1111.006.cam.h1.PRECT.18500101-21001231.nc',
+ '/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1301.013.cam.h1.PRECT.18500101-21001231.nc',
+ '/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1251.018.cam.h1.PRECT.18500101-21001231.nc',
+ '/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1281.015.cam.h1.PRECT.18500101-21001231.nc',
+ '/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1251.016.cam.h1.PRECT.18500101-21001231.nc',
+ '/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1091.005.cam.h1.PRECT.18500101-21001231.nc',
+ '/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1251.020.cam.h1.PRECT.18500101-21001231.nc',
+ '/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1251.015.cam.h1.PRECT.18500101-21001231.nc',
+ '/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1251.013.cam.h1.PRECT.18500101-21001231.nc',
+ '/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1301.017.cam.h1.PRECT.18500101-21001231.nc',
+ '/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1301.011.cam.h1.PRECT.18500101-21001231.nc',
+ '/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1011.001.cam.h1.PRECT.18500101-21001231.nc',
+ '/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1281.011.cam.h1.PRECT.18500101-21001231.nc',
+ '/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1281.018.cam.h1.PRECT.18500101-21001231.nc',
+ '/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1301.018.cam.h1.PRECT.18500101-21001231.nc',
+ '/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1231.014.cam.h1.PRECT.18500101-21001231.nc',
+ '/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1281.013.cam.h1.PRECT.18500101-21001231.nc',
+ '/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1231.019.cam.h1.PRECT.18500101-21001231.nc',
+ '/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1231.015.cam.h1.PRECT.18500101-21001231.nc',
+ '/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1281.016.cam.h1.PRECT.18500101-21001231.nc',
+ '/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1131.007.cam.h1.PRECT.18500101-21001231.nc',
+ '/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1301.012.cam.h1.PRECT.18500101-21001231.nc',
+ '/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1231.020.cam.h1.PRECT.18500101-21001231.nc',
+ '/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1051.003.cam.h1.PRECT.18500101-21001231.nc',
+ '/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1191.010.cam.h1.PRECT.18500101-21001231.nc',
+ '/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1231.016.cam.h1.PRECT.18500101-21001231.nc',
+ '/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1231.013.cam.h1.PRECT.18500101-21001231.nc',
+ '/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1281.014.cam.h1.PRECT.18500101-21001231.nc',
+ '/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1301.019.cam.h1.PRECT.18500101-21001231.nc',
+ '/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1231.011.cam.h1.PRECT.18500101-21001231.nc',
+ '/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1301.016.cam.h1.PRECT.18500101-21001231.nc',
+ '/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1231.012.cam.h1.PRECT.18500101-21001231.nc',
+ '/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1301.015.cam.h1.PRECT.18500101-21001231.nc',
+ '/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1251.019.cam.h1.PRECT.18500101-21001231.nc',
+ '/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1281.017.cam.h1.PRECT.18500101-21001231.nc',
+ '/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1251.014.cam.h1.PRECT.18500101-21001231.nc',
+ '/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1231.017.cam.h1.PRECT.18500101-21001231.nc',
+ '/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1301.020.cam.h1.PRECT.18500101-21001231.nc',
+ '/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1281.020.cam.h1.PRECT.18500101-21001231.nc',
+ '/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1251.017.cam.h1.PRECT.18500101-21001231.nc',
+ '/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1031.002.cam.h1.PRECT.18500101-21001231.nc',
+ '/glade/scratch/anukesh/CESM-LE/PRECT/ENSEMBLE/PRECT/b.e21.BHISTsmbb.f09_g17.LE2-1281.012.cam.h1.PRECT.18500101-21001231.nc']
 </pre></div>
 </div>
 </div>
@@ -1610,7 +1610,7 @@ Attributes:
 </div></blockquote>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">single</span><span class="o">.</span><span class="n">PRECT</span><span class="o">.</span><span class="n">chunk</span><span class="p">({</span><span class="s2">&quot;time&quot;</span><span class="p">:</span> <span class="mi">365</span> <span class="o">*</span> <span class="mi">5</span><span class="p">})</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">single</span><span class="o">.</span><span class="n">PRECT</span><span class="o">.</span><span class="n">chunk</span><span class="p">({</span><span class="s2">"time"</span><span class="p">:</span> <span class="mi">365</span> <span class="o">*</span> <span class="mi">5</span><span class="p">})</span>
 </pre></div>
 </div>
 </div>
@@ -2145,11 +2145,11 @@ Attributes:
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xr</span><span class="o">.</span><span class="n">open_mfdataset</span><span class="p">(</span>
     <span class="c1"># make sure we sort</span>
     <span class="nb">sorted</span><span class="p">(</span><span class="n">files</span><span class="p">)[:</span><span class="mi">3</span><span class="p">],</span>
-    <span class="c1"># concatenate along a new dimension called &quot;ensemble&quot;</span>
-    <span class="n">concat_dim</span><span class="o">=</span><span class="s2">&quot;ensemble&quot;</span><span class="p">,</span>
+    <span class="c1"># concatenate along a new dimension called "ensemble"</span>
+    <span class="n">concat_dim</span><span class="o">=</span><span class="s2">"ensemble"</span><span class="p">,</span>
     <span class="c1"># just concatenate them together</span>
-    <span class="n">combine</span><span class="o">=</span><span class="s2">&quot;nested&quot;</span><span class="p">,</span>
-    <span class="n">chunks</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;lat&quot;</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span> <span class="s2">&quot;lon&quot;</span><span class="p">:</span> <span class="mi">32</span><span class="p">},</span>
+    <span class="n">combine</span><span class="o">=</span><span class="s2">"nested"</span><span class="p">,</span>
+    <span class="n">chunks</span><span class="o">=</span><span class="p">{</span><span class="s2">"lat"</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span> <span class="s2">"lon"</span><span class="p">:</span> <span class="mi">32</span><span class="p">},</span>
     <span class="n">parallel</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
 <span class="p">)</span>
 </pre></div>
@@ -2837,14 +2837,14 @@ Sat Apr 29 19:51:41 2023: ncrcat b.e21.BHISTsmbb.f09_g17.LE2-1011.001.cam.h1.PRE
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">combined</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_mfdataset</span><span class="p">(</span>
     <span class="c1"># make sure we sort</span>
     <span class="nb">sorted</span><span class="p">(</span><span class="n">files</span><span class="p">[:</span><span class="mi">3</span><span class="p">]),</span>
-    <span class="c1"># concatenate along a new dimension called &quot;ensemble&quot;</span>
-    <span class="n">concat_dim</span><span class="o">=</span><span class="s2">&quot;ensemble&quot;</span><span class="p">,</span>
-    <span class="n">chunks</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;lat&quot;</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span> <span class="s2">&quot;lon&quot;</span><span class="p">:</span> <span class="mi">32</span><span class="p">},</span>
-    <span class="n">data_vars</span><span class="o">=</span><span class="s2">&quot;minimal&quot;</span><span class="p">,</span>
-    <span class="n">coords</span><span class="o">=</span><span class="s2">&quot;minimal&quot;</span><span class="p">,</span>
-    <span class="n">compat</span><span class="o">=</span><span class="s2">&quot;override&quot;</span><span class="p">,</span>
+    <span class="c1"># concatenate along a new dimension called "ensemble"</span>
+    <span class="n">concat_dim</span><span class="o">=</span><span class="s2">"ensemble"</span><span class="p">,</span>
+    <span class="n">chunks</span><span class="o">=</span><span class="p">{</span><span class="s2">"lat"</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span> <span class="s2">"lon"</span><span class="p">:</span> <span class="mi">32</span><span class="p">},</span>
+    <span class="n">data_vars</span><span class="o">=</span><span class="s2">"minimal"</span><span class="p">,</span>
+    <span class="n">coords</span><span class="o">=</span><span class="s2">"minimal"</span><span class="p">,</span>
+    <span class="n">compat</span><span class="o">=</span><span class="s2">"override"</span><span class="p">,</span>
     <span class="c1"># just concatenate them together</span>
-    <span class="n">combine</span><span class="o">=</span><span class="s2">&quot;nested&quot;</span><span class="p">,</span>
+    <span class="n">combine</span><span class="o">=</span><span class="s2">"nested"</span><span class="p">,</span>
     <span class="n">parallel</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
 <span class="p">)</span>
 <span class="n">combined</span>
@@ -3481,7 +3481,7 @@ Sat Apr 29 19:51:42 2023: ncrcat b.e21.BHISTsmbb.f09_g17.LE2-1251.011.cam.h1.PRE
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;time&#39;, &#39;lat&#39;, &#39;lon&#39;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>('time', 'lat', 'lon')
 </pre></div>
 </div>
 </div>
@@ -3498,7 +3498,7 @@ Sat Apr 29 19:51:42 2023: ncrcat b.e21.BHISTsmbb.f09_g17.LE2-1251.011.cam.h1.PRE
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">add_ensemble_dim</span><span class="p">(</span><span class="n">ds</span><span class="p">):</span>
-    <span class="n">ds</span><span class="p">[</span><span class="s2">&quot;PRECT&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">PRECT</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="s2">&quot;ensemble&quot;</span><span class="p">)</span>
+    <span class="n">ds</span><span class="p">[</span><span class="s2">"PRECT"</span><span class="p">]</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">PRECT</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="s2">"ensemble"</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">ds</span>
 
 
@@ -3506,13 +3506,13 @@ Sat Apr 29 19:51:42 2023: ncrcat b.e21.BHISTsmbb.f09_g17.LE2-1251.011.cam.h1.PRE
     <span class="c1"># make sure we sort</span>
     <span class="nb">sorted</span><span class="p">(</span><span class="n">files</span><span class="p">)[:</span><span class="mi">3</span><span class="p">],</span>
     <span class="c1"># chunk the dataset from each file properly</span>
-    <span class="n">chunks</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;lat&quot;</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span> <span class="s2">&quot;lon&quot;</span><span class="p">:</span> <span class="mi">32</span><span class="p">},</span>
-    <span class="c1"># concatenate along a new dimension called &quot;ensemble&quot;</span>
-    <span class="n">concat_dim</span><span class="o">=</span><span class="s2">&quot;ensemble&quot;</span><span class="p">,</span>
-    <span class="n">data_vars</span><span class="o">=</span><span class="s2">&quot;minimal&quot;</span><span class="p">,</span>
-    <span class="n">coords</span><span class="o">=</span><span class="s2">&quot;minimal&quot;</span><span class="p">,</span>
-    <span class="n">compat</span><span class="o">=</span><span class="s2">&quot;override&quot;</span><span class="p">,</span>
-    <span class="n">combine</span><span class="o">=</span><span class="s2">&quot;nested&quot;</span><span class="p">,</span>
+    <span class="n">chunks</span><span class="o">=</span><span class="p">{</span><span class="s2">"lat"</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span> <span class="s2">"lon"</span><span class="p">:</span> <span class="mi">32</span><span class="p">},</span>
+    <span class="c1"># concatenate along a new dimension called "ensemble"</span>
+    <span class="n">concat_dim</span><span class="o">=</span><span class="s2">"ensemble"</span><span class="p">,</span>
+    <span class="n">data_vars</span><span class="o">=</span><span class="s2">"minimal"</span><span class="p">,</span>
+    <span class="n">coords</span><span class="o">=</span><span class="s2">"minimal"</span><span class="p">,</span>
+    <span class="n">compat</span><span class="o">=</span><span class="s2">"override"</span><span class="p">,</span>
+    <span class="n">combine</span><span class="o">=</span><span class="s2">"nested"</span><span class="p">,</span>
     <span class="n">parallel</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="n">preprocess</span><span class="o">=</span><span class="n">add_ensemble_dim</span><span class="p">,</span>
 <span class="p">)</span>
@@ -4751,15 +4751,15 @@ Attributes:
 
 <span class="n">cluster</span> <span class="o">=</span> <span class="n">dask_jobqueue</span><span class="o">.</span><span class="n">PBSCluster</span><span class="p">(</span>
     <span class="n">cores</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>  <span class="c1"># The number of cores you want</span>
-    <span class="n">memory</span><span class="o">=</span><span class="s2">&quot;23GB&quot;</span><span class="p">,</span>  <span class="c1"># Amount of memory</span>
+    <span class="n">memory</span><span class="o">=</span><span class="s2">"23GB"</span><span class="p">,</span>  <span class="c1"># Amount of memory</span>
     <span class="n">processes</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>  <span class="c1"># How many processes</span>
-    <span class="n">queue</span><span class="o">=</span><span class="s2">&quot;casper&quot;</span><span class="p">,</span>  <span class="c1"># The type of queue to utilize (/glade/u/apps/dav/opt/usr/bin/execcasper)</span>
-    <span class="n">local_directory</span><span class="o">=</span><span class="s2">&quot;/local_scratch/pbs.$PBS_JOBID/dask/spill&quot;</span><span class="p">,</span>
-    <span class="n">log_directory</span><span class="o">=</span><span class="s2">&quot;/glade/scratch/dcherian/dask/&quot;</span><span class="p">,</span>
-    <span class="n">resource_spec</span><span class="o">=</span><span class="s2">&quot;select=1:ncpus=4:mem=23GB&quot;</span><span class="p">,</span>  <span class="c1"># Specify resources</span>
-    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;ncgd0011&quot;</span><span class="p">,</span>  <span class="c1"># Input your project ID here</span>
-    <span class="n">walltime</span><span class="o">=</span><span class="s2">&quot;02:00:00&quot;</span><span class="p">,</span>  <span class="c1"># Amount of wall time</span>
-    <span class="n">interface</span><span class="o">=</span><span class="s2">&quot;ib0&quot;</span><span class="p">,</span>  <span class="c1"># Interface to use</span>
+    <span class="n">queue</span><span class="o">=</span><span class="s2">"casper"</span><span class="p">,</span>  <span class="c1"># The type of queue to utilize (/glade/u/apps/dav/opt/usr/bin/execcasper)</span>
+    <span class="n">local_directory</span><span class="o">=</span><span class="s2">"/local_scratch/pbs.$PBS_JOBID/dask/spill"</span><span class="p">,</span>
+    <span class="n">log_directory</span><span class="o">=</span><span class="s2">"/glade/scratch/dcherian/dask/"</span><span class="p">,</span>
+    <span class="n">resource_spec</span><span class="o">=</span><span class="s2">"select=1:ncpus=4:mem=23GB"</span><span class="p">,</span>  <span class="c1"># Specify resources</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">"ncgd0011"</span><span class="p">,</span>  <span class="c1"># Input your project ID here</span>
+    <span class="n">walltime</span><span class="o">=</span><span class="s2">"02:00:00"</span><span class="p">,</span>  <span class="c1"># Amount of wall time</span>
+    <span class="n">interface</span><span class="o">=</span><span class="s2">"ib0"</span><span class="p">,</span>  <span class="c1"># Interface to use</span>
 <span class="p">)</span>
 <span class="c1"># create an adaptive cluster with one job always requested,</span>
 <span class="c1"># scale to a maximum of 6 jobs</span>
@@ -5044,7 +5044,7 @@ Hosting the HTTP server on port 45848 instead
     <span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="n">name</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">variable</span> <span class="ow">in</span> <span class="n">ds</span><span class="o">.</span><span class="n">variables</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">variable</span><span class="o">.</span><span class="n">ndim</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">]</span>
     <span class="c1"># add a new dimension `ensemble` of size 1</span>
     <span class="c1"># and replace the existing 3D variables.</span>
-    <span class="n">ds</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">ds</span><span class="p">[</span><span class="n">names</span><span class="p">]</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="s2">&quot;ensemble&quot;</span><span class="p">))</span>
+    <span class="n">ds</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">ds</span><span class="p">[</span><span class="n">names</span><span class="p">]</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="s2">"ensemble"</span><span class="p">))</span>
     <span class="k">return</span> <span class="n">ds</span>
 
 
@@ -5052,16 +5052,16 @@ Hosting the HTTP server on port 45848 instead
     <span class="c1"># make sure we sort</span>
     <span class="nb">sorted</span><span class="p">(</span><span class="n">files</span><span class="p">),</span>
     <span class="c1"># chunk each individual file</span>
-    <span class="n">chunks</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;time&quot;</span><span class="p">:</span> <span class="mi">365</span> <span class="o">*</span> <span class="mi">5</span><span class="p">},</span>
+    <span class="n">chunks</span><span class="o">=</span><span class="p">{</span><span class="s2">"time"</span><span class="p">:</span> <span class="mi">365</span> <span class="o">*</span> <span class="mi">5</span><span class="p">},</span>
     <span class="c1"># Add the ensemble dimension to 3D variables</span>
     <span class="n">preprocess</span><span class="o">=</span><span class="n">add_ensemble_dim</span><span class="p">,</span>
-    <span class="c1"># concatenate along a new dimension called &quot;ensemble&quot;</span>
-    <span class="n">concat_dim</span><span class="o">=</span><span class="s2">&quot;ensemble&quot;</span><span class="p">,</span>
+    <span class="c1"># concatenate along a new dimension called "ensemble"</span>
+    <span class="n">concat_dim</span><span class="o">=</span><span class="s2">"ensemble"</span><span class="p">,</span>
     <span class="c1"># only concatenate variables with the `ensemble` dimension.</span>
-    <span class="n">data_vars</span><span class="o">=</span><span class="s2">&quot;minimal&quot;</span><span class="p">,</span>
-    <span class="n">coords</span><span class="o">=</span><span class="s2">&quot;minimal&quot;</span><span class="p">,</span>
-    <span class="n">compat</span><span class="o">=</span><span class="s2">&quot;override&quot;</span><span class="p">,</span>
-    <span class="n">combine</span><span class="o">=</span><span class="s2">&quot;nested&quot;</span><span class="p">,</span>
+    <span class="n">data_vars</span><span class="o">=</span><span class="s2">"minimal"</span><span class="p">,</span>
+    <span class="n">coords</span><span class="o">=</span><span class="s2">"minimal"</span><span class="p">,</span>
+    <span class="n">compat</span><span class="o">=</span><span class="s2">"override"</span><span class="p">,</span>
+    <span class="n">combine</span><span class="o">=</span><span class="s2">"nested"</span><span class="p">,</span>
     <span class="c1"># parallelize reading of each file using dask</span>
     <span class="n">parallel</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
 <span class="p">)</span>
@@ -5722,14 +5722,14 @@ Sat Apr 29 19:51:41 2023: ncrcat b.e21.BHISTsmbb.f09_g17.LE2-1011.001.cam.h1.PRE
 </div>
 <p>shows</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">float</span> <span class="n">PRECT</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">lat</span><span class="p">,</span> <span class="n">lon</span><span class="p">)</span> <span class="p">;</span>
-		<span class="n">PRECT</span><span class="p">:</span><span class="n">units</span> <span class="o">=</span> <span class="s2">&quot;m/s&quot;</span> <span class="p">;</span>
-		<span class="n">PRECT</span><span class="p">:</span><span class="n">long_name</span> <span class="o">=</span> <span class="s2">&quot;Total (convective and large-scale) precipitation rate (liq + ice)&quot;</span> <span class="p">;</span>
-		<span class="n">PRECT</span><span class="p">:</span><span class="n">cell_methods</span> <span class="o">=</span> <span class="s2">&quot;time: mean&quot;</span> <span class="p">;</span>
-		<span class="n">PRECT</span><span class="p">:</span><span class="n">_Storage</span> <span class="o">=</span> <span class="s2">&quot;chunked&quot;</span> <span class="p">;</span>
+		<span class="n">PRECT</span><span class="p">:</span><span class="n">units</span> <span class="o">=</span> <span class="s2">"m/s"</span> <span class="p">;</span>
+		<span class="n">PRECT</span><span class="p">:</span><span class="n">long_name</span> <span class="o">=</span> <span class="s2">"Total (convective and large-scale) precipitation rate (liq + ice)"</span> <span class="p">;</span>
+		<span class="n">PRECT</span><span class="p">:</span><span class="n">cell_methods</span> <span class="o">=</span> <span class="s2">"time: mean"</span> <span class="p">;</span>
+		<span class="n">PRECT</span><span class="p">:</span><span class="n">_Storage</span> <span class="o">=</span> <span class="s2">"chunked"</span> <span class="p">;</span>
 		<span class="n">PRECT</span><span class="p">:</span><span class="n">_ChunkSizes</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">192</span><span class="p">,</span> <span class="mi">288</span> <span class="p">;</span>
 		<span class="n">PRECT</span><span class="p">:</span><span class="n">_DeflateLevel</span> <span class="o">=</span> <span class="mi">1</span> <span class="p">;</span>
-		<span class="n">PRECT</span><span class="p">:</span><span class="n">_Shuffle</span> <span class="o">=</span> <span class="s2">&quot;true&quot;</span> <span class="p">;</span>
-		<span class="n">PRECT</span><span class="p">:</span><span class="n">_Endianness</span> <span class="o">=</span> <span class="s2">&quot;little&quot;</span> <span class="p">;</span>
+		<span class="n">PRECT</span><span class="p">:</span><span class="n">_Shuffle</span> <span class="o">=</span> <span class="s2">"true"</span> <span class="p">;</span>
+		<span class="n">PRECT</span><span class="p">:</span><span class="n">_Endianness</span> <span class="o">=</span> <span class="s2">"little"</span> <span class="p">;</span>
 </pre></div>
 </div>
 <p>This bit is important: <code class="docutils literal notranslate"><span class="pre">PRECT:_ChunkSizes</span> <span class="pre">=</span> <span class="pre">1,</span> <span class="pre">192,</span> <span class="pre">288</span> <span class="pre">;</span></code> The data on-disk is chunked to have a chunksize of 1 along time, and all spatial points in one chunk. This is orthogonal to our proposed chunking scheme of chunking small in space and big in time (<code class="docutils literal notranslate"><span class="pre">chunks={&quot;lat&quot;:</span> <span class="pre">16,</span> <span class="pre">&quot;lon&quot;:</span> <span class="pre">32}</span></code>).</p>
@@ -5844,8 +5844,8 @@ Sat Apr 29 19:51:41 2023: ncrcat b.e21.BHISTsmbb.f09_g17.LE2-1011.001.cam.h1.PRE
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9"></script>
-<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -5879,7 +5879,7 @@ Sat Apr 29 19:51:41 2023: ncrcat b.e21.BHISTsmbb.f09_g17.LE2-1011.001.cam.h1.PRE
         <div class="footer-item">
 <p class="theme-version">
   <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.20.0.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.21.0.
 </p></div>
       
     </div>

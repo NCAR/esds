@@ -27,8 +27,8 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
@@ -37,10 +37,10 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=66307ba7" />
   
   <!-- So that users can add custom icons -->
-  <script defer src="../../../_static/scripts/fontawesome.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer src="../../../_static/scripts/fontawesome.js?digest=cb8930eaaf36d9849b67"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9" />
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67" />
 
     <script src="../../../_static/documentation_options.js?v=55b5f74b"></script>
     <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
@@ -74,7 +74,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
-    <meta name="docbuild:last-update" content="Jul 27, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 10, 2026"/>
   
     
     <script src="../../../_static/searchtools.js"></script>
@@ -664,18 +664,18 @@ Executing:<span class="w"> </span><span class="m">100</span>%<span class="p">|</
 <span class="kn">import</span><span class="w"> </span><span class="nn">papermill</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pm</span>
 
 <span class="n">parameters</span> <span class="o">=</span> <span class="p">[{</span>
-    <span class="s2">&quot;dataset&quot;</span><span class="p">:</span> <span class="s2">&quot;air_temperature&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;variable&quot;</span><span class="p">:</span> <span class="s2">&quot;air&quot;</span>
+    <span class="s2">"dataset"</span><span class="p">:</span> <span class="s2">"air_temperature"</span><span class="p">,</span>
+    <span class="s2">"variable"</span><span class="p">:</span> <span class="s2">"air"</span>
 <span class="p">},</span> <span class="p">{</span>
-    <span class="s2">&quot;dataset&quot;</span><span class="p">:</span> <span class="s2">&quot;rasm&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;variable&quot;</span><span class="p">:</span> <span class="s2">&quot;Tair&quot;</span>
+    <span class="s2">"dataset"</span><span class="p">:</span> <span class="s2">"rasm"</span><span class="p">,</span>
+    <span class="s2">"variable"</span><span class="p">:</span> <span class="s2">"Tair"</span>
 <span class="p">}]</span>
 
 <span class="k">for</span> <span class="n">params</span> <span class="ow">in</span> <span class="n">parameters</span><span class="p">:</span>
     <span class="n">pm</span><span class="o">.</span><span class="n">execute_notebook</span><span class="p">(</span>
-        <span class="s2">&quot;sample-notebook.ipynb&quot;</span><span class="p">,</span>
-        <span class="sa">f</span><span class="s2">&quot;output-notebook-</span><span class="si">{</span><span class="n">params</span><span class="p">[</span><span class="s1">&#39;dataset&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">params</span><span class="p">[</span><span class="s1">&#39;variable&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">.ipynb&quot;</span><span class="p">,</span>
-        <span class="n">kernel_name</span><span class="o">=</span><span class="s2">&quot;my-analysis-env&quot;</span><span class="p">,</span>
+        <span class="s2">"sample-notebook.ipynb"</span><span class="p">,</span>
+        <span class="sa">f</span><span class="s2">"output-notebook-</span><span class="si">{</span><span class="n">params</span><span class="p">[</span><span class="s1">'dataset'</span><span class="p">]</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">params</span><span class="p">[</span><span class="s1">'variable'</span><span class="p">]</span><span class="si">}</span><span class="s2">.ipynb"</span><span class="p">,</span>
+        <span class="n">kernel_name</span><span class="o">=</span><span class="s2">"my-analysis-env"</span><span class="p">,</span>
         <span class="n">parameters</span><span class="o">=</span><span class="n">params</span>
     <span class="p">)</span>
 </pre></div>
@@ -814,8 +814,8 @@ Executing:<span class="w"> </span><span class="m">100</span>%<span class="p">|</
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9"></script>
-<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -849,7 +849,7 @@ Executing:<span class="w"> </span><span class="m">100</span>%<span class="p">|</
         <div class="footer-item">
 <p class="theme-version">
   <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.20.0.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.21.0.
 </p></div>
       
     </div>

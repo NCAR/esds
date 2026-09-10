@@ -27,8 +27,8 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
@@ -37,10 +37,10 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=66307ba7" />
   
   <!-- So that users can add custom icons -->
-  <script defer src="../../../_static/scripts/fontawesome.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer src="../../../_static/scripts/fontawesome.js?digest=cb8930eaaf36d9849b67"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9" />
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67" />
 
     <script src="../../../_static/documentation_options.js?v=55b5f74b"></script>
     <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
@@ -74,7 +74,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
-    <meta name="docbuild:last-update" content="Jul 27, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 10, 2026"/>
   
     
     <script src="../../../_static/searchtools.js"></script>
@@ -605,7 +605,7 @@
 <span class="kn">from</span><span class="w"> </span><span class="nn">ecgtools.builder</span><span class="w"> </span><span class="kn">import</span> <span class="n">INVALID_ASSET</span><span class="p">,</span> <span class="n">TRACEBACK</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">ncar_jobqueue</span><span class="w"> </span><span class="kn">import</span> <span class="n">NCARCluster</span>
 
-<span class="n">hv</span><span class="o">.</span><span class="n">extension</span><span class="p">(</span><span class="s1">&#39;bokeh&#39;</span><span class="p">)</span>
+<span class="n">hv</span><span class="o">.</span><span class="n">extension</span><span class="p">(</span><span class="s1">'bokeh'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2152,48 +2152,48 @@ roTBs2RqAAAAAElFTkSuQmCC'
 <h3>Investigate the File Structure and Sample Dataset<a class="headerlink" href="#investigate-the-file-structure-and-sample-dataset" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">files</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s1">&#39;/glade/p/cesm/amwg/amwg_diagnostics/obs_data/*&#39;</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">files</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s1">'/glade/p/cesm/amwg/amwg_diagnostics/obs_data/*'</span><span class="p">))</span>
 <span class="n">files</span><span class="p">[::</span><span class="mi">20</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;/glade/p/cesm/amwg/amwg_diagnostics/obs_data/AIRS_01_climo.nc&#39;,
- &#39;/glade/p/cesm/amwg/amwg_diagnostics/obs_data/ARM_annual_cycle_twp_c2_cmbe_sound_p_f.cdf&#39;,
- &#39;/glade/p/cesm/amwg/amwg_diagnostics/obs_data/CERES-EBAF_01_climo.nc&#39;,
- &#39;/glade/p/cesm/amwg/amwg_diagnostics/obs_data/CERES2_04_climo.nc&#39;,
- &#39;/glade/p/cesm/amwg/amwg_diagnostics/obs_data/CERES_07_climo.nc&#39;,
- &#39;/glade/p/cesm/amwg/amwg_diagnostics/obs_data/CLOUDSATCOSP_07_climo.nc&#39;,
- &#39;/glade/p/cesm/amwg/amwg_diagnostics/obs_data/CLOUDSAT_10_climo.nc&#39;,
- &#39;/glade/p/cesm/amwg/amwg_diagnostics/obs_data/ECMWF_09_climo.nc&#39;,
- &#39;/glade/p/cesm/amwg/amwg_diagnostics/obs_data/EP.ERAI_DJF_climo.nc&#39;,
- &#39;/glade/p/cesm/amwg/amwg_diagnostics/obs_data/ERAI_04_climo.nc&#39;,
- &#39;/glade/p/cesm/amwg/amwg_diagnostics/obs_data/ERBE_07_climo.nc&#39;,
- &#39;/glade/p/cesm/amwg/amwg_diagnostics/obs_data/ERS_12_climo.nc&#39;,
- &#39;/glade/p/cesm/amwg/amwg_diagnostics/obs_data/GPCP_JJA_climo.nc&#39;,
- &#39;/glade/p/cesm/amwg/amwg_diagnostics/obs_data/HadISST_CL_03_climo.nc&#39;,
- &#39;/glade/p/cesm/amwg/amwg_diagnostics/obs_data/HadISST_PD_02_climo.nc&#39;,
- &#39;/glade/p/cesm/amwg/amwg_diagnostics/obs_data/HadISST_PI_05_climo.nc&#39;,
- &#39;/glade/p/cesm/amwg/amwg_diagnostics/obs_data/ISCCPCOSP_07_climo.nc&#39;,
- &#39;/glade/p/cesm/amwg/amwg_diagnostics/obs_data/ISCCPFD_07_climo.nc&#39;,
- &#39;/glade/p/cesm/amwg/amwg_diagnostics/obs_data/ISCCP_12_climo.nc&#39;,
- &#39;/glade/p/cesm/amwg/amwg_diagnostics/obs_data/JRA25_SON_climo.nc&#39;,
- &#39;/glade/p/cesm/amwg/amwg_diagnostics/obs_data/LEGATES_04_climo.nc&#39;,
- &#39;/glade/p/cesm/amwg/amwg_diagnostics/obs_data/MERRAW_19x2_09_climo.nc&#39;,
- &#39;/glade/p/cesm/amwg/amwg_diagnostics/obs_data/MERRA_12_climo.nc&#39;,
- &#39;/glade/p/cesm/amwg/amwg_diagnostics/obs_data/MISRCOSP_JJA_climo.nc&#39;,
- &#39;/glade/p/cesm/amwg/amwg_diagnostics/obs_data/MODIS_ANN_climo.nc&#39;,
- &#39;/glade/p/cesm/amwg/amwg_diagnostics/obs_data/NVAP_03_climo.nc&#39;,
- &#39;/glade/p/cesm/amwg/amwg_diagnostics/obs_data/PRECL_07_climo.nc&#39;,
- &#39;/glade/p/cesm/amwg/amwg_diagnostics/obs_data/SSMI_09_climo.nc&#39;,
- &#39;/glade/p/cesm/amwg/amwg_diagnostics/obs_data/SSMI_SEAICE_DJF_climo.nc&#39;,
- &#39;/glade/p/cesm/amwg/amwg_diagnostics/obs_data/TRMM_MAM_climo.nc&#39;,
- &#39;/glade/p/cesm/amwg/amwg_diagnostics/obs_data/WARREN_DJF_climo.nc&#39;,
- &#39;/glade/p/cesm/amwg/amwg_diagnostics/obs_data/WILLMOTT_04_climo.nc&#39;,
- &#39;/glade/p/cesm/amwg/amwg_diagnostics/obs_data/XIEARKIN_09_climo.nc&#39;,
- &#39;/glade/p/cesm/amwg/amwg_diagnostics/obs_data/mlsg_10_climo.nc&#39;,
- &#39;/glade/p/cesm/amwg/amwg_diagnostics/obs_data/mlso_ANN_climo.nc&#39;,
- &#39;/glade/p/cesm/amwg/amwg_diagnostics/obs_data/mlsw_MAM_climo.nc&#39;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>['/glade/p/cesm/amwg/amwg_diagnostics/obs_data/AIRS_01_climo.nc',
+ '/glade/p/cesm/amwg/amwg_diagnostics/obs_data/ARM_annual_cycle_twp_c2_cmbe_sound_p_f.cdf',
+ '/glade/p/cesm/amwg/amwg_diagnostics/obs_data/CERES-EBAF_01_climo.nc',
+ '/glade/p/cesm/amwg/amwg_diagnostics/obs_data/CERES2_04_climo.nc',
+ '/glade/p/cesm/amwg/amwg_diagnostics/obs_data/CERES_07_climo.nc',
+ '/glade/p/cesm/amwg/amwg_diagnostics/obs_data/CLOUDSATCOSP_07_climo.nc',
+ '/glade/p/cesm/amwg/amwg_diagnostics/obs_data/CLOUDSAT_10_climo.nc',
+ '/glade/p/cesm/amwg/amwg_diagnostics/obs_data/ECMWF_09_climo.nc',
+ '/glade/p/cesm/amwg/amwg_diagnostics/obs_data/EP.ERAI_DJF_climo.nc',
+ '/glade/p/cesm/amwg/amwg_diagnostics/obs_data/ERAI_04_climo.nc',
+ '/glade/p/cesm/amwg/amwg_diagnostics/obs_data/ERBE_07_climo.nc',
+ '/glade/p/cesm/amwg/amwg_diagnostics/obs_data/ERS_12_climo.nc',
+ '/glade/p/cesm/amwg/amwg_diagnostics/obs_data/GPCP_JJA_climo.nc',
+ '/glade/p/cesm/amwg/amwg_diagnostics/obs_data/HadISST_CL_03_climo.nc',
+ '/glade/p/cesm/amwg/amwg_diagnostics/obs_data/HadISST_PD_02_climo.nc',
+ '/glade/p/cesm/amwg/amwg_diagnostics/obs_data/HadISST_PI_05_climo.nc',
+ '/glade/p/cesm/amwg/amwg_diagnostics/obs_data/ISCCPCOSP_07_climo.nc',
+ '/glade/p/cesm/amwg/amwg_diagnostics/obs_data/ISCCPFD_07_climo.nc',
+ '/glade/p/cesm/amwg/amwg_diagnostics/obs_data/ISCCP_12_climo.nc',
+ '/glade/p/cesm/amwg/amwg_diagnostics/obs_data/JRA25_SON_climo.nc',
+ '/glade/p/cesm/amwg/amwg_diagnostics/obs_data/LEGATES_04_climo.nc',
+ '/glade/p/cesm/amwg/amwg_diagnostics/obs_data/MERRAW_19x2_09_climo.nc',
+ '/glade/p/cesm/amwg/amwg_diagnostics/obs_data/MERRA_12_climo.nc',
+ '/glade/p/cesm/amwg/amwg_diagnostics/obs_data/MISRCOSP_JJA_climo.nc',
+ '/glade/p/cesm/amwg/amwg_diagnostics/obs_data/MODIS_ANN_climo.nc',
+ '/glade/p/cesm/amwg/amwg_diagnostics/obs_data/NVAP_03_climo.nc',
+ '/glade/p/cesm/amwg/amwg_diagnostics/obs_data/PRECL_07_climo.nc',
+ '/glade/p/cesm/amwg/amwg_diagnostics/obs_data/SSMI_09_climo.nc',
+ '/glade/p/cesm/amwg/amwg_diagnostics/obs_data/SSMI_SEAICE_DJF_climo.nc',
+ '/glade/p/cesm/amwg/amwg_diagnostics/obs_data/TRMM_MAM_climo.nc',
+ '/glade/p/cesm/amwg/amwg_diagnostics/obs_data/WARREN_DJF_climo.nc',
+ '/glade/p/cesm/amwg/amwg_diagnostics/obs_data/WILLMOTT_04_climo.nc',
+ '/glade/p/cesm/amwg/amwg_diagnostics/obs_data/XIEARKIN_09_climo.nc',
+ '/glade/p/cesm/amwg/amwg_diagnostics/obs_data/mlsg_10_climo.nc',
+ '/glade/p/cesm/amwg/amwg_diagnostics/obs_data/mlso_ANN_climo.nc',
+ '/glade/p/cesm/amwg/amwg_diagnostics/obs_data/mlsw_MAM_climo.nc']
 </pre></div>
 </div>
 </div>
@@ -2202,7 +2202,7 @@ roTBs2RqAAAAAElFTkSuQmCC'
 <p>Let’s open up one of those datasets</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;/glade/p/cesm/amwg/amwg_diagnostics/obs_data/CERES-EBAF_01_climo.nc&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">'/glade/p/cesm/amwg/amwg_diagnostics/obs_data/CERES-EBAF_01_climo.nc'</span><span class="p">)</span>
 <span class="n">ds</span>
 </pre></div>
 </div>
@@ -2687,7 +2687,7 @@ Attributes:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;AIRS_01_climo&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'AIRS_01_climo'
 </pre></div>
 </div>
 </div>
@@ -2700,12 +2700,12 @@ Attributes:
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">path</span><span class="o">.</span><span class="n">stem</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">path</span><span class="o">.</span><span class="n">stem</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">'_'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;AIRS&#39;, &#39;01&#39;, &#39;climo&#39;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>['AIRS', '01', 'climo']
 </pre></div>
 </div>
 </div>
@@ -3140,7 +3140,7 @@ Attributes:
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">parse_amwg_obs</span><span class="p">(</span><span class="n">file</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Atmospheric observational data used within the AMWG diagnostic package</span>
+<span class="w">    </span><span class="sd">"""Atmospheric observational data used within the AMWG diagnostic package</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
@@ -3152,34 +3152,34 @@ Attributes:
 <span class="sd">    info: dict</span>
 <span class="sd">       Dictionary with information to add as columns in the data catalog</span>
 
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="n">file</span> <span class="o">=</span> <span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
     <span class="n">info_list</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">info</span> <span class="o">=</span> <span class="p">{}</span>
 
     <span class="k">try</span><span class="p">:</span>
         <span class="n">stem</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">stem</span>
-        <span class="n">split</span> <span class="o">=</span> <span class="n">stem</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">)</span>
-        <span class="n">info</span><span class="p">[</span><span class="s1">&#39;source&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">split</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">split</span> <span class="o">=</span> <span class="n">stem</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">'_'</span><span class="p">)</span>
+        <span class="n">info</span><span class="p">[</span><span class="s1">'source'</span><span class="p">]</span> <span class="o">=</span> <span class="n">split</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
         <span class="n">temporal</span> <span class="o">=</span> <span class="n">split</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">split</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
             <span class="n">month_number</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">temporal</span><span class="p">)</span>
-            <span class="n">info</span><span class="p">[</span><span class="s1">&#39;time_period&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;monthly&#39;</span>
-            <span class="n">info</span><span class="p">[</span><span class="s1">&#39;temporal&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2020</span><span class="p">,</span> <span class="n">month_number</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%b&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+            <span class="n">info</span><span class="p">[</span><span class="s1">'time_period'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'monthly'</span>
+            <span class="n">info</span><span class="p">[</span><span class="s1">'temporal'</span><span class="p">]</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2020</span><span class="p">,</span> <span class="n">month_number</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">'%b'</span><span class="p">)</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
 
         <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">temporal</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
-            <span class="n">info</span><span class="p">[</span><span class="s1">&#39;time_period&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;seasonal&#39;</span>
-            <span class="n">info</span><span class="p">[</span><span class="s1">&#39;temporal&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">temporal</span>
+            <span class="n">info</span><span class="p">[</span><span class="s1">'time_period'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'seasonal'</span>
+            <span class="n">info</span><span class="p">[</span><span class="s1">'temporal'</span><span class="p">]</span> <span class="o">=</span> <span class="n">temporal</span>
 
         <span class="k">else</span><span class="p">:</span>
-            <span class="n">info</span><span class="p">[</span><span class="s1">&#39;time_period&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
-            <span class="n">info</span><span class="p">[</span><span class="s1">&#39;temporal&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+            <span class="n">info</span><span class="p">[</span><span class="s1">'time_period'</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+            <span class="n">info</span><span class="p">[</span><span class="s1">'temporal'</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
 
         <span class="k">with</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">chunks</span><span class="o">=</span><span class="p">{},</span> <span class="n">decode_times</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="k">as</span> <span class="n">ds</span><span class="p">:</span>
-            <span class="n">variables</span> <span class="o">=</span> <span class="p">[</span><span class="n">v</span> <span class="k">for</span> <span class="n">v</span><span class="p">,</span> <span class="n">da</span> <span class="ow">in</span> <span class="n">ds</span><span class="o">.</span><span class="n">variables</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="s1">&#39;time&#39;</span> <span class="ow">in</span> <span class="n">da</span><span class="o">.</span><span class="n">dims</span><span class="p">]</span>
-            <span class="n">info</span><span class="p">[</span><span class="s1">&#39;variables&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">variables</span>
+            <span class="n">variables</span> <span class="o">=</span> <span class="p">[</span><span class="n">v</span> <span class="k">for</span> <span class="n">v</span><span class="p">,</span> <span class="n">da</span> <span class="ow">in</span> <span class="n">ds</span><span class="o">.</span><span class="n">variables</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="s1">'time'</span> <span class="ow">in</span> <span class="n">da</span><span class="o">.</span><span class="n">dims</span><span class="p">]</span>
+            <span class="n">info</span><span class="p">[</span><span class="s1">'variables'</span><span class="p">]</span> <span class="o">=</span> <span class="n">variables</span>
 
-            <span class="n">info</span><span class="p">[</span><span class="s1">&#39;path&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+            <span class="n">info</span><span class="p">[</span><span class="s1">'path'</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
 
         <span class="k">return</span> <span class="n">info</span>
 
@@ -3191,7 +3191,7 @@ Attributes:
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;time&#39;</span> <span class="ow">in</span> <span class="n">ds</span><span class="p">[</span><span class="s1">&#39;T&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dims</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">'time'</span> <span class="ow">in</span> <span class="n">ds</span><span class="p">[</span><span class="s1">'T'</span><span class="p">]</span><span class="o">.</span><span class="n">dims</span>
 </pre></div>
 </div>
 </div>
@@ -3209,11 +3209,11 @@ Attributes:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;source&#39;: &#39;AIRS&#39;,
- &#39;time_period&#39;: &#39;monthly&#39;,
- &#39;temporal&#39;: &#39;JAN&#39;,
- &#39;variables&#39;: [&#39;T&#39;, &#39;time&#39;, &#39;RELHUM&#39;, &#39;O3&#39;, &#39;SHUM&#39;],
- &#39;path&#39;: &#39;/glade/p/cesm/amwg/amwg_diagnostics/obs_data/AIRS_01_climo.nc&#39;}
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{'source': 'AIRS',
+ 'time_period': 'monthly',
+ 'temporal': 'JAN',
+ 'variables': ['T', 'time', 'RELHUM', 'O3', 'SHUM'],
+ 'path': '/glade/p/cesm/amwg/amwg_diagnostics/obs_data/AIRS_01_climo.nc'}
 </pre></div>
 </div>
 </div>
@@ -3359,7 +3359,7 @@ Attributes:
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="n">Builder</span><span class="p">(</span>
     <span class="c1"># Directory with the output</span>
-    <span class="sa">f</span><span class="s2">&quot;/glade/p/cesm/amwg/amwg_diagnostics/obs_data/&quot;</span><span class="p">,</span>
+    <span class="sa">f</span><span class="s2">"/glade/p/cesm/amwg/amwg_diagnostics/obs_data/"</span><span class="p">,</span>
     <span class="n">depth</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
     <span class="c1"># Number of jobs to execute - should be equal to # threads you are using</span>
     <span class="n">njobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span>
@@ -3509,21 +3509,21 @@ Attributes:
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span><span class="o">.</span><span class="n">save</span><span class="p">(</span>
     <span class="c1"># File path - could save as .csv (uncompressed csv) or .csv.gz (compressed csv)</span>
-    <span class="s2">&quot;/glade/work/mgrover/intake-esm-catalogs/amwg_obs_datasets.csv&quot;</span><span class="p">,</span>
+    <span class="s2">"/glade/work/mgrover/intake-esm-catalogs/amwg_obs_datasets.csv"</span><span class="p">,</span>
     <span class="c1"># Column name including filepath</span>
-    <span class="n">path_column_name</span><span class="o">=</span><span class="s1">&#39;path&#39;</span><span class="p">,</span>
+    <span class="n">path_column_name</span><span class="o">=</span><span class="s1">'path'</span><span class="p">,</span>
     <span class="c1"># Column name including variables</span>
-    <span class="n">variable_column_name</span><span class="o">=</span><span class="s1">&#39;variables&#39;</span><span class="p">,</span>
+    <span class="n">variable_column_name</span><span class="o">=</span><span class="s1">'variables'</span><span class="p">,</span>
     <span class="c1"># Data file format - could be netcdf or zarr (in this case, netcdf)</span>
-    <span class="n">data_format</span><span class="o">=</span><span class="s2">&quot;netcdf&quot;</span><span class="p">,</span>
+    <span class="n">data_format</span><span class="o">=</span><span class="s2">"netcdf"</span><span class="p">,</span>
     <span class="c1"># Which attributes to groupby when reading in variables using intake-esm</span>
-    <span class="n">groupby_attrs</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;source&quot;</span><span class="p">,</span> <span class="s2">&quot;time_period&quot;</span><span class="p">],</span>
+    <span class="n">groupby_attrs</span><span class="o">=</span><span class="p">[</span><span class="s2">"source"</span><span class="p">,</span> <span class="s2">"time_period"</span><span class="p">],</span>
     <span class="c1"># Aggregations which are fed into xarray when reading in data using intake</span>
     <span class="n">aggregations</span><span class="o">=</span><span class="p">[</span>
         <span class="p">{</span>
-            <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;join_new&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;attribute_name&#39;</span><span class="p">:</span> <span class="s1">&#39;temporal&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;options&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;coords&#39;</span><span class="p">:</span> <span class="s1">&#39;minimal&#39;</span><span class="p">,</span> <span class="s1">&#39;compat&#39;</span><span class="p">:</span> <span class="s1">&#39;override&#39;</span><span class="p">},</span>
+            <span class="s1">'type'</span><span class="p">:</span> <span class="s1">'join_new'</span><span class="p">,</span>
+            <span class="s1">'attribute_name'</span><span class="p">:</span> <span class="s1">'temporal'</span><span class="p">,</span>
+            <span class="s1">'options'</span><span class="p">:</span> <span class="p">{</span><span class="s1">'coords'</span><span class="p">:</span> <span class="s1">'minimal'</span><span class="p">,</span> <span class="s1">'compat'</span><span class="p">:</span> <span class="s1">'override'</span><span class="p">},</span>
         <span class="p">},</span>
     <span class="p">],</span>
 <span class="p">)</span>
@@ -3548,9 +3548,9 @@ Attributes:
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">obs_catalog</span> <span class="o">=</span> <span class="n">intake</span><span class="o">.</span><span class="n">open_esm_datastore</span><span class="p">(</span>
-    <span class="s2">&quot;/glade/work/mgrover/intake-esm-catalogs/amwg_obs_datasets.json&quot;</span><span class="p">,</span>
-    <span class="n">csv_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;converters&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;variables&quot;</span><span class="p">:</span> <span class="n">ast</span><span class="o">.</span><span class="n">literal_eval</span><span class="p">}},</span>
-    <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;/&quot;</span><span class="p">,</span>
+    <span class="s2">"/glade/work/mgrover/intake-esm-catalogs/amwg_obs_datasets.json"</span><span class="p">,</span>
+    <span class="n">csv_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s2">"converters"</span><span class="p">:</span> <span class="p">{</span><span class="s2">"variables"</span><span class="p">:</span> <span class="n">ast</span><span class="o">.</span><span class="n">literal_eval</span><span class="p">}},</span>
+    <span class="n">sep</span><span class="o">=</span><span class="s2">"/"</span><span class="p">,</span>
 <span class="p">)</span>
 </pre></div>
 </div>
@@ -3559,7 +3559,7 @@ Attributes:
 <p>We are interested in Temperature (<code class="docutils literal notranslate"><span class="pre">T</span></code>), from the <code class="docutils literal notranslate"><span class="pre">AIRS</span></code> dataset, <a class="reference external" href="https://airs.jpl.nasa.gov/data/get-data/obs4mips/">which comes from NASA</a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">obs_catalog_subset</span> <span class="o">=</span> <span class="n">obs_catalog</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">variables</span><span class="o">=</span><span class="s1">&#39;T&#39;</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="s1">&#39;AIRS&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">obs_catalog_subset</span> <span class="o">=</span> <span class="n">obs_catalog</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">variables</span><span class="o">=</span><span class="s1">'T'</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="s1">'AIRS'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -3572,7 +3572,7 @@ Attributes:
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--&gt; The keys in the returned dictionary of datasets are constructed as follows:
-	&#39;source/time_period&#39;
+	'source/time_period'
 </pre></div>
 </div>
 <div class="output text_html">
@@ -3602,15 +3602,15 @@ Attributes:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_keys([&#39;AIRS/seasonal&#39;, &#39;AIRS/monthly&#39;])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_keys(['AIRS/seasonal', 'AIRS/monthly'])
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">seasonal_obs_ds</span> <span class="o">=</span> <span class="n">dsets</span><span class="p">[</span><span class="s1">&#39;AIRS/seasonal&#39;</span><span class="p">]</span>
-<span class="n">monthly_obs_ds</span> <span class="o">=</span> <span class="n">dsets</span><span class="p">[</span><span class="s1">&#39;AIRS/monthly&#39;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">seasonal_obs_ds</span> <span class="o">=</span> <span class="n">dsets</span><span class="p">[</span><span class="s1">'AIRS/seasonal'</span><span class="p">]</span>
+<span class="n">monthly_obs_ds</span> <span class="o">=</span> <span class="n">dsets</span><span class="p">[</span><span class="s1">'AIRS/monthly'</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -3625,7 +3625,7 @@ Attributes:
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">seasonal_obs_plot</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n">seasonal_obs_ds</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">lev</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">hvplot</span><span class="o">.</span><span class="n">quadmesh</span><span class="p">(</span>
-        <span class="n">rasterize</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">groupby</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;lev&#39;</span><span class="p">,</span> <span class="s1">&#39;temporal&#39;</span><span class="p">],</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;magma&#39;</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">Robinson</span><span class="p">()</span>
+        <span class="n">rasterize</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">groupby</span><span class="o">=</span><span class="p">[</span><span class="s1">'lev'</span><span class="p">,</span> <span class="s1">'temporal'</span><span class="p">],</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">'magma'</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">Robinson</span><span class="p">()</span>
     <span class="p">)</span>
     <span class="o">*</span> <span class="n">gf</span><span class="o">.</span><span class="n">coastline</span>
 <span class="p">)</span>
@@ -3674,7 +3674,7 @@ Attributes:
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">monthly_obs_plot</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n">monthly_obs_ds</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">lev</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">hvplot</span><span class="o">.</span><span class="n">quadmesh</span><span class="p">(</span>
-        <span class="n">rasterize</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">groupby</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;lev&#39;</span><span class="p">,</span> <span class="s1">&#39;temporal&#39;</span><span class="p">],</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;magma&#39;</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">Robinson</span><span class="p">()</span>
+        <span class="n">rasterize</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">groupby</span><span class="o">=</span><span class="p">[</span><span class="s1">'lev'</span><span class="p">,</span> <span class="s1">'temporal'</span><span class="p">],</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">'magma'</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">Robinson</span><span class="p">()</span>
     <span class="p">)</span>
     <span class="o">*</span> <span class="n">gf</span><span class="o">.</span><span class="n">coastline</span>
 <span class="p">)</span>
@@ -3723,7 +3723,7 @@ Attributes:
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cesm_data_catalog</span> <span class="o">=</span> <span class="n">intake</span><span class="o">.</span><span class="n">open_esm_datastore</span><span class="p">(</span>
-    <span class="s1">&#39;/glade/collections/cmip/catalog/intake-esm-datastore/catalogs/glade-cesm2-le.json&#39;</span>
+    <span class="s1">'/glade/collections/cmip/catalog/intake-esm-datastore/catalogs/glade-cesm2-le.json'</span>
 <span class="p">)</span>
 </pre></div>
 </div>
@@ -3737,7 +3737,7 @@ Attributes:
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cluster</span> <span class="o">=</span> <span class="n">NCARCluster</span><span class="p">(</span><span class="n">memory</span><span class="o">=</span><span class="s1">&#39;10 GB&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cluster</span> <span class="o">=</span> <span class="n">NCARCluster</span><span class="p">(</span><span class="n">memory</span><span class="o">=</span><span class="s1">'10 GB'</span><span class="p">)</span>
 <span class="n">cluster</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
 <span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">cluster</span><span class="p">)</span>
 </pre></div>
@@ -4759,7 +4759,7 @@ Attributes:
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cesm_data_catalog_subset</span> <span class="o">=</span> <span class="n">cesm_data_catalog</span><span class="o">.</span><span class="n">search</span><span class="p">(</span>
-    <span class="n">variable</span><span class="o">=</span><span class="s1">&#39;T&#39;</span><span class="p">,</span> <span class="n">control_branch_year</span><span class="o">=</span><span class="mi">1001</span><span class="p">,</span> <span class="n">frequency</span><span class="o">=</span><span class="s1">&#39;month_1&#39;</span><span class="p">,</span> <span class="n">experiment</span><span class="o">=</span><span class="s1">&#39;historical&#39;</span>
+    <span class="n">variable</span><span class="o">=</span><span class="s1">'T'</span><span class="p">,</span> <span class="n">control_branch_year</span><span class="o">=</span><span class="mi">1001</span><span class="p">,</span> <span class="n">frequency</span><span class="o">=</span><span class="s1">'month_1'</span><span class="p">,</span> <span class="n">experiment</span><span class="o">=</span><span class="s1">'historical'</span>
 <span class="p">)</span>
 </pre></div>
 </div>
@@ -4768,13 +4768,13 @@ Attributes:
 <p>Since we taking the average over time, we choose to chunk by vertical levels (<code class="docutils literal notranslate"><span class="pre">lev</span></code>)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dsets</span> <span class="o">=</span> <span class="n">cesm_data_catalog_subset</span><span class="o">.</span><span class="n">to_dataset_dict</span><span class="p">(</span><span class="n">cdf_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;chunks&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;lev&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">}})</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dsets</span> <span class="o">=</span> <span class="n">cesm_data_catalog_subset</span><span class="o">.</span><span class="n">to_dataset_dict</span><span class="p">(</span><span class="n">cdf_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s1">'chunks'</span><span class="p">:</span> <span class="p">{</span><span class="s1">'lev'</span><span class="p">:</span> <span class="mi">5</span><span class="p">}})</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--&gt; The keys in the returned dictionary of datasets are constructed as follows:
-	&#39;component.experiment.stream.forcing_variant.control_branch_year.variable&#39;
+	'component.experiment.stream.forcing_variant.control_branch_year.variable'
 </pre></div>
 </div>
 <div class="output text_html">
@@ -4799,7 +4799,7 @@ Attributes:
 <p>We only have a single key - with the <code class="docutils literal notranslate"><span class="pre">component.experiment.stream.forcing_variant.control_branch_year.variable</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span> <span class="o">=</span> <span class="n">dsets</span><span class="p">[</span><span class="s1">&#39;atm.historical.cam.h0.cmip6.1001.T&#39;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span> <span class="o">=</span> <span class="n">dsets</span><span class="p">[</span><span class="s1">'atm.historical.cam.h0.cmip6.1001.T'</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -5328,8 +5328,8 @@ Attributes:
 <p>Over the summer, additional functionality was added to GeoCAT, with functions supporting <a class="reference external" href="https://geocat-comp.readthedocs.io/en/latest/user_api/generated/geocat.comp.climatologies.climatology.html#geocat.comp.climatologies.climatology"><code class="docutils literal notranslate"><span class="pre">climatology</span></code> calculations</a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cesm_monthly_mean_temperature</span> <span class="o">=</span> <span class="n">geocat</span><span class="o">.</span><span class="n">comp</span><span class="o">.</span><span class="n">climatology</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="s1">&#39;month&#39;</span><span class="p">)</span>
-<span class="n">cesm_seasonal_mean_temperature</span> <span class="o">=</span> <span class="n">geocat</span><span class="o">.</span><span class="n">comp</span><span class="o">.</span><span class="n">climatology</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="s1">&#39;season&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cesm_monthly_mean_temperature</span> <span class="o">=</span> <span class="n">geocat</span><span class="o">.</span><span class="n">comp</span><span class="o">.</span><span class="n">climatology</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="s1">'month'</span><span class="p">)</span>
+<span class="n">cesm_seasonal_mean_temperature</span> <span class="o">=</span> <span class="n">geocat</span><span class="o">.</span><span class="n">comp</span><span class="o">.</span><span class="n">climatology</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="s1">'season'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -5835,10 +5835,10 @@ Attributes:
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cesm_seasonal_temperature_plot</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n">cesm_seasonal_mean_temperature</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">member_id</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">lev</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">hvplot</span><span class="o">.</span><span class="n">quadmesh</span><span class="p">(</span>
         <span class="n">rasterize</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-        <span class="n">groupby</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;lev&#39;</span><span class="p">,</span> <span class="s1">&#39;season&#39;</span><span class="p">],</span>
-        <span class="n">x</span><span class="o">=</span><span class="s1">&#39;lon&#39;</span><span class="p">,</span>
-        <span class="n">y</span><span class="o">=</span><span class="s1">&#39;lat&#39;</span><span class="p">,</span>
-        <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;magma&#39;</span><span class="p">,</span>
+        <span class="n">groupby</span><span class="o">=</span><span class="p">[</span><span class="s1">'lev'</span><span class="p">,</span> <span class="s1">'season'</span><span class="p">],</span>
+        <span class="n">x</span><span class="o">=</span><span class="s1">'lon'</span><span class="p">,</span>
+        <span class="n">y</span><span class="o">=</span><span class="s1">'lat'</span><span class="p">,</span>
+        <span class="n">cmap</span><span class="o">=</span><span class="s1">'magma'</span><span class="p">,</span>
         <span class="n">projection</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">Robinson</span><span class="p">(),</span>
         <span class="n">project</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="p">)</span>
@@ -5890,10 +5890,10 @@ Attributes:
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cesm_monthly_temperature_plot</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n">cesm_monthly_mean_temperature</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">member_id</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">lev</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">hvplot</span><span class="o">.</span><span class="n">quadmesh</span><span class="p">(</span>
         <span class="n">rasterize</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-        <span class="n">groupby</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;lev&#39;</span><span class="p">,</span> <span class="s1">&#39;month&#39;</span><span class="p">],</span>
-        <span class="n">x</span><span class="o">=</span><span class="s1">&#39;lon&#39;</span><span class="p">,</span>
-        <span class="n">y</span><span class="o">=</span><span class="s1">&#39;lat&#39;</span><span class="p">,</span>
-        <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;magma&#39;</span><span class="p">,</span>
+        <span class="n">groupby</span><span class="o">=</span><span class="p">[</span><span class="s1">'lev'</span><span class="p">,</span> <span class="s1">'month'</span><span class="p">],</span>
+        <span class="n">x</span><span class="o">=</span><span class="s1">'lon'</span><span class="p">,</span>
+        <span class="n">y</span><span class="o">=</span><span class="s1">'lat'</span><span class="p">,</span>
+        <span class="n">cmap</span><span class="o">=</span><span class="s1">'magma'</span><span class="p">,</span>
         <span class="n">projection</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">Robinson</span><span class="p">(),</span>
         <span class="n">project</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="p">)</span>
@@ -6066,8 +6066,8 @@ Attributes:
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9"></script>
-<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -6101,7 +6101,7 @@ Attributes:
         <div class="footer-item">
 <p class="theme-version">
   <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.20.0.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.21.0.
 </p></div>
       
     </div>

@@ -27,8 +27,8 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
@@ -37,10 +37,10 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=66307ba7" />
   
   <!-- So that users can add custom icons -->
-  <script defer src="../../../_static/scripts/fontawesome.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer src="../../../_static/scripts/fontawesome.js?digest=cb8930eaaf36d9849b67"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9" />
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67" />
 
     <script src="../../../_static/documentation_options.js?v=55b5f74b"></script>
     <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
@@ -74,7 +74,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
-    <meta name="docbuild:last-update" content="Jul 27, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 10, 2026"/>
   
     
     <script src="../../../_static/searchtools.js"></script>
@@ -594,9 +594,9 @@ This is a really simple example; derived variables could include more sophsticat
 <p>This has shortcomings in the context of an automated process. For example, imagine the following.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> 
 
-<span class="n">But</span> <span class="n">what</span> <span class="k">if</span> <span class="n">we</span> <span class="n">could</span> <span class="n">couple</span> <span class="n">those</span> <span class="n">first</span> <span class="n">two</span> <span class="n">steps</span><span class="err">?</span> <span class="n">What</span> <span class="k">if</span> <span class="n">we</span> <span class="n">could</span> <span class="n">have</span> <span class="n">some</span> <span class="nb">set</span> <span class="n">of</span> <span class="o">**</span><span class="n">variable</span> <span class="n">definitions</span><span class="o">**</span><span class="p">,</span> <span class="n">consisting</span> <span class="n">of</span> <span class="n">variable</span> <span class="n">requirements</span><span class="p">,</span> <span class="n">such</span> <span class="k">as</span> <span class="err">`</span><span class="n">dependent</span> <span class="n">variables</span><span class="err">`</span><span class="p">,</span> <span class="ow">and</span> <span class="n">a</span> <span class="n">function</span> <span class="n">which</span> <span class="n">derives</span> <span class="n">the</span> <span class="n">quantity</span><span class="o">.</span> <span class="n">This</span> <span class="ow">is</span> <span class="n">what</span> <span class="n">the</span> <span class="err">`</span><span class="n">derived_variable</span><span class="err">`</span> <span class="n">funtionality</span> <span class="n">offers</span> <span class="ow">in</span> <span class="err">`</span><span class="n">intake</span><span class="o">-</span><span class="n">esm</span><span class="err">`!</span> <span class="n">This</span> <span class="n">enables</span> <span class="n">users</span> <span class="n">to</span> <span class="n">share</span> <span class="n">a</span> <span class="s2">&quot;registry&quot;</span> <span class="n">of</span> <span class="n">derived</span> <span class="n">variables</span> <span class="n">across</span> <span class="n">catalogs</span><span class="err">!</span>
+<span class="n">But</span> <span class="n">what</span> <span class="k">if</span> <span class="n">we</span> <span class="n">could</span> <span class="n">couple</span> <span class="n">those</span> <span class="n">first</span> <span class="n">two</span> <span class="n">steps</span><span class="err">?</span> <span class="n">What</span> <span class="k">if</span> <span class="n">we</span> <span class="n">could</span> <span class="n">have</span> <span class="n">some</span> <span class="nb">set</span> <span class="n">of</span> <span class="o">**</span><span class="n">variable</span> <span class="n">definitions</span><span class="o">**</span><span class="p">,</span> <span class="n">consisting</span> <span class="n">of</span> <span class="n">variable</span> <span class="n">requirements</span><span class="p">,</span> <span class="n">such</span> <span class="k">as</span> <span class="err">`</span><span class="n">dependent</span> <span class="n">variables</span><span class="err">`</span><span class="p">,</span> <span class="ow">and</span> <span class="n">a</span> <span class="n">function</span> <span class="n">which</span> <span class="n">derives</span> <span class="n">the</span> <span class="n">quantity</span><span class="o">.</span> <span class="n">This</span> <span class="ow">is</span> <span class="n">what</span> <span class="n">the</span> <span class="err">`</span><span class="n">derived_variable</span><span class="err">`</span> <span class="n">funtionality</span> <span class="n">offers</span> <span class="ow">in</span> <span class="err">`</span><span class="n">intake</span><span class="o">-</span><span class="n">esm</span><span class="err">`!</span> <span class="n">This</span> <span class="n">enables</span> <span class="n">users</span> <span class="n">to</span> <span class="n">share</span> <span class="n">a</span> <span class="s2">"registry"</span> <span class="n">of</span> <span class="n">derived</span> <span class="n">variables</span> <span class="n">across</span> <span class="n">catalogs</span><span class="err">!</span>
 
-<span class="n">Let</span><span class="s1">&#39;s get started with an example!</span>
+<span class="n">Let</span><span class="s1">'s get started with an example!</span>
 </pre></div>
 </div>
 </section>
@@ -620,7 +620,7 @@ This is a really simple example; derived variables could include more sophsticat
 <span class="kn">from</span><span class="w"> </span><span class="nn">intake_esm.derived</span><span class="w"> </span><span class="kn">import</span> <span class="n">DerivedVariableRegistry</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">ncar_jobqueue</span><span class="w"> </span><span class="kn">import</span> <span class="n">NCARCluster</span>
 
-<span class="n">hv</span><span class="o">.</span><span class="n">extension</span><span class="p">(</span><span class="s1">&#39;bokeh&#39;</span><span class="p">)</span>
+<span class="n">hv</span><span class="o">.</span><span class="n">extension</span><span class="p">(</span><span class="s1">'bokeh'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2316,9 +2316,9 @@ Hosting the HTTP server on port 40217 instead
 <p>In order to register this derived variable we need to add a <a class="reference external" href="https://www.python.org/dev/peps/pep-0318/">decorator</a> for our function, as seen below. This allows us to define our derived variable, dependent variables, and the function associated with the calculation.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nd">@dvr</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">variable</span><span class="o">=</span><span class="s1">&#39;wind_speed&#39;</span><span class="p">,</span> <span class="n">dependent_variables</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;U&#39;</span><span class="p">,</span> <span class="s1">&#39;V&#39;</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nd">@dvr</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">variable</span><span class="o">=</span><span class="s1">'wind_speed'</span><span class="p">,</span> <span class="n">dependent_variables</span><span class="o">=</span><span class="p">[</span><span class="s1">'U'</span><span class="p">,</span> <span class="s1">'V'</span><span class="p">])</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">calc_wind_speed</span><span class="p">(</span><span class="n">ds</span><span class="p">):</span>
-    <span class="n">ds</span><span class="p">[</span><span class="s1">&#39;wind_speed&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">U</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">ds</span><span class="o">.</span><span class="n">V</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">ds</span><span class="p">[</span><span class="s1">'wind_speed'</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">U</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">ds</span><span class="o">.</span><span class="n">V</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">ds</span>
 </pre></div>
 </div>
@@ -2332,7 +2332,7 @@ Hosting the HTTP server on port 40217 instead
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>DerivedVariableRegistry({&#39;wind_speed&#39;: DerivedVariable(func=&lt;function calc_wind_speed at 0x2b84d46c84c0&gt;, variable=&#39;wind_speed&#39;, dependent_variables=[&#39;U&#39;, &#39;V&#39;])})
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>DerivedVariableRegistry({'wind_speed': DerivedVariable(func=&lt;function calc_wind_speed at 0x2b84d46c84c0&gt;, variable='wind_speed', dependent_variables=['U', 'V'])})
 </pre></div>
 </div>
 </div>
@@ -2345,7 +2345,7 @@ Hosting the HTTP server on port 40217 instead
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_catalog</span> <span class="o">=</span> <span class="n">intake</span><span class="o">.</span><span class="n">open_esm_datastore</span><span class="p">(</span>
-    <span class="s1">&#39;https://raw.githubusercontent.com/NCAR/cesm-lens-aws/master/intake-catalogs/aws-cesm1-le.json&#39;</span><span class="p">,</span>
+    <span class="s1">'https://raw.githubusercontent.com/NCAR/cesm-lens-aws/master/intake-catalogs/aws-cesm1-le.json'</span><span class="p">,</span>
     <span class="n">registry</span><span class="o">=</span><span class="n">dvr</span><span class="p">,</span>
 <span class="p">)</span>
 </pre></div>
@@ -2438,7 +2438,7 @@ Hosting the HTTP server on port 40217 instead
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">catalog_subset</span> <span class="o">=</span> <span class="n">data_catalog</span><span class="o">.</span><span class="n">search</span><span class="p">(</span>
-    <span class="n">variable</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;wind_speed&#39;</span><span class="p">],</span> <span class="n">frequency</span><span class="o">=</span><span class="s1">&#39;monthly&#39;</span><span class="p">,</span> <span class="n">experiment</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;20C&#39;</span><span class="p">,</span> <span class="s1">&#39;RCP85&#39;</span><span class="p">]</span>
+    <span class="n">variable</span><span class="o">=</span><span class="p">[</span><span class="s1">'wind_speed'</span><span class="p">],</span> <span class="n">frequency</span><span class="o">=</span><span class="s1">'monthly'</span><span class="p">,</span> <span class="n">experiment</span><span class="o">=</span><span class="p">[</span><span class="s1">'20C'</span><span class="p">,</span> <span class="s1">'RCP85'</span><span class="p">]</span>
 <span class="p">)</span>
 
 <span class="n">catalog_subset</span>
@@ -2526,14 +2526,14 @@ Hosting the HTTP server on port 40217 instead
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dsets</span> <span class="o">=</span> <span class="n">catalog_subset</span><span class="o">.</span><span class="n">to_dataset_dict</span><span class="p">(</span>
-    <span class="n">xarray_open_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;backend_kwargs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;storage_options&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;anon&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">}}}</span>
+    <span class="n">xarray_open_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s1">'backend_kwargs'</span><span class="p">:</span> <span class="p">{</span><span class="s1">'storage_options'</span><span class="p">:</span> <span class="p">{</span><span class="s1">'anon'</span><span class="p">:</span> <span class="kc">True</span><span class="p">}}}</span>
 <span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--&gt; The keys in the returned dictionary of datasets are constructed as follows:
-	&#39;component.experiment.frequency&#39;
+	'component.experiment.frequency'
 </pre></div>
 </div>
 <div class="output text_html">
@@ -2557,7 +2557,7 @@ Hosting the HTTP server on port 40217 instead
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span> <span class="o">=</span> <span class="n">dsets</span><span class="p">[</span><span class="s1">&#39;atm.RCP85.monthly&#39;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span> <span class="o">=</span> <span class="n">dsets</span><span class="p">[</span><span class="s1">'atm.RCP85.monthly'</span><span class="p">]</span>
 <span class="n">ds</span>
 </pre></div>
 </div>
@@ -3525,7 +3525,7 @@ Attributes: (12/21)
 <p>Let’s apply an annual average to the data - since all the years are 365 days long, we do not need any special weighting</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">annual_mean</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;time.year&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">annual_mean</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'time.year'</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s1">'time'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -3537,13 +3537,13 @@ Attributes: (12/21)
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">annual_mean</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">lev</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">8</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span><span class="o">.</span><span class="n">wind_speed</span><span class="o">.</span><span class="n">hvplot</span><span class="o">.</span><span class="n">quadmesh</span><span class="p">(</span>
-    <span class="n">x</span><span class="o">=</span><span class="s1">&#39;lon&#39;</span><span class="p">,</span>
-    <span class="n">y</span><span class="o">=</span><span class="s1">&#39;lat&#39;</span><span class="p">,</span>
+    <span class="n">x</span><span class="o">=</span><span class="s1">'lon'</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="s1">'lat'</span><span class="p">,</span>
     <span class="n">geo</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="n">rasterize</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-    <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;viridis&#39;</span><span class="p">,</span>
+    <span class="n">cmap</span><span class="o">=</span><span class="s1">'viridis'</span><span class="p">,</span>
     <span class="n">coastline</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-    <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Wind Speed (m/s)&#39;</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s1">'Wind Speed (m/s)'</span><span class="p">,</span>
 <span class="p">)</span>
 </pre></div>
 </div>
@@ -3687,8 +3687,8 @@ Attributes: (12/21)
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9"></script>
-<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -3722,7 +3722,7 @@ Attributes: (12/21)
         <div class="footer-item">
 <p class="theme-version">
   <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.20.0.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.21.0.
 </p></div>
       
     </div>

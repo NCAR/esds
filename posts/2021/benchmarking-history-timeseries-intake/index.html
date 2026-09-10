@@ -27,8 +27,8 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
@@ -37,10 +37,10 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=66307ba7" />
   
   <!-- So that users can add custom icons -->
-  <script defer src="../../../_static/scripts/fontawesome.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer src="../../../_static/scripts/fontawesome.js?digest=cb8930eaaf36d9849b67"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9" />
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67" />
 
     <script src="../../../_static/documentation_options.js?v=55b5f74b"></script>
     <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
@@ -74,7 +74,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
-    <meta name="docbuild:last-update" content="Jul 27, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 10, 2026"/>
   
     
     <script src="../../../_static/searchtools.js"></script>
@@ -607,7 +607,7 @@
 <span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
 
-<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">"ignore"</span><span class="p">)</span>
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">holoviews</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">hv</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">hvplot</span>
@@ -621,7 +621,7 @@
 <span class="kn">from</span><span class="w"> </span><span class="nn">IPython.core.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">HTML</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">ncar_jobqueue</span><span class="w"> </span><span class="kn">import</span> <span class="n">NCARCluster</span>
 
-<span class="n">hv</span><span class="o">.</span><span class="n">extension</span><span class="p">(</span><span class="s1">&#39;bokeh&#39;</span><span class="p">)</span>
+<span class="n">hv</span><span class="o">.</span><span class="n">extension</span><span class="p">(</span><span class="s1">'bokeh'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -3618,7 +3618,7 @@ roTBs2RqAAAAAElFTkSuQmCC'
 <p>The cluster here is using a set number of workers (19) other tests in the future could investigate the <em><strong>scalability</strong></em> by modifying the computational resources used, using different cluster configurations</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cluster</span> <span class="o">=</span> <span class="n">NCARCluster</span><span class="p">(</span><span class="n">memory</span><span class="o">=</span><span class="s1">&#39;25 GB&#39;</span><span class="p">,</span> <span class="n">cores</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">walltime</span><span class="o">=</span><span class="s1">&#39;06:00:00&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cluster</span> <span class="o">=</span> <span class="n">NCARCluster</span><span class="p">(</span><span class="n">memory</span><span class="o">=</span><span class="s1">'25 GB'</span><span class="p">,</span> <span class="n">cores</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">walltime</span><span class="o">=</span><span class="s1">'06:00:00'</span><span class="p">)</span>
 <span class="n">cluster</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mi">19</span><span class="p">)</span>
 <span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">cluster</span><span class="p">)</span>
 <span class="n">cluster</span>
@@ -3635,9 +3635,9 @@ roTBs2RqAAAAAElFTkSuQmCC'
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">history_catalog</span> <span class="o">=</span> <span class="n">intake</span><span class="o">.</span><span class="n">open_esm_datastore</span><span class="p">(</span>
-    <span class="s1">&#39;cesm-hist-smyle-fosi.json&#39;</span><span class="p">,</span>
-    <span class="n">csv_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;converters&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;variables&quot;</span><span class="p">:</span> <span class="n">ast</span><span class="o">.</span><span class="n">literal_eval</span><span class="p">}},</span>
-    <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;/&quot;</span><span class="p">,</span>
+    <span class="s1">'cesm-hist-smyle-fosi.json'</span><span class="p">,</span>
+    <span class="n">csv_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s2">"converters"</span><span class="p">:</span> <span class="p">{</span><span class="s2">"variables"</span><span class="p">:</span> <span class="n">ast</span><span class="o">.</span><span class="n">literal_eval</span><span class="p">}},</span>
+    <span class="n">sep</span><span class="o">=</span><span class="s2">"/"</span><span class="p">,</span>
 <span class="p">)</span>
 <span class="n">history_catalog</span>
 </pre></div>
@@ -3705,7 +3705,7 @@ roTBs2RqAAAAAElFTkSuQmCC'
 <p>The timeseries file does not require any additional arguments 👌</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">timeseries_catalog</span> <span class="o">=</span> <span class="n">intake</span><span class="o">.</span><span class="n">open_esm_datastore</span><span class="p">(</span><span class="s1">&#39;cesm-tseries-smyle-fosi.json&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">timeseries_catalog</span> <span class="o">=</span> <span class="n">intake</span><span class="o">.</span><span class="n">open_esm_datastore</span><span class="p">(</span><span class="s1">'cesm-tseries-smyle-fosi.json'</span><span class="p">)</span>
 <span class="n">timeseries_catalog</span>
 </pre></div>
 </div>
@@ -3794,7 +3794,7 @@ roTBs2RqAAAAAElFTkSuQmCC'
 <p>We are only interested in monthly (<code class="docutils literal notranslate"><span class="pre">frequency='month_1'</span></code>) ocean (<code class="docutils literal notranslate"><span class="pre">component='ocn'</span></code>) output in this case</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">monthly_ocean_timeseries</span> <span class="o">=</span> <span class="n">timeseries_catalog</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">component</span><span class="o">=</span><span class="s1">&#39;ocn&#39;</span><span class="p">,</span> <span class="n">frequency</span><span class="o">=</span><span class="s1">&#39;month_1&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">monthly_ocean_timeseries</span> <span class="o">=</span> <span class="n">timeseries_catalog</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">component</span><span class="o">=</span><span class="s1">'ocn'</span><span class="p">,</span> <span class="n">frequency</span><span class="o">=</span><span class="s1">'month_1'</span><span class="p">)</span>
 <span class="n">monthly_ocean_timeseries</span>
 </pre></div>
 </div>
@@ -3880,7 +3880,7 @@ roTBs2RqAAAAAElFTkSuQmCC'
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">monthly_ocean_history</span> <span class="o">=</span> <span class="n">history_catalog</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">component</span><span class="o">=</span><span class="s1">&#39;ocn&#39;</span><span class="p">,</span> <span class="n">frequency</span><span class="o">=</span><span class="s1">&#39;month_1&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">monthly_ocean_history</span> <span class="o">=</span> <span class="n">history_catalog</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">component</span><span class="o">=</span><span class="s1">'ocn'</span><span class="p">,</span> <span class="n">frequency</span><span class="o">=</span><span class="s1">'month_1'</span><span class="p">)</span>
 <span class="n">monthly_ocean_history</span>
 </pre></div>
 </div>
@@ -3963,26 +3963,26 @@ roTBs2RqAAAAAElFTkSuQmCC'
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">test_timeseries_file</span><span class="p">(</span>
-    <span class="n">num_years</span><span class="p">,</span> <span class="n">chunk_strategy</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="n">long_term_average</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">monthly_average</span><span class="o">=</span><span class="kc">False</span>
+    <span class="n">num_years</span><span class="p">,</span> <span class="n">chunk_strategy</span><span class="o">=</span><span class="s1">'time'</span><span class="p">,</span> <span class="n">long_term_average</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">monthly_average</span><span class="o">=</span><span class="kc">False</span>
 <span class="p">):</span>
-    <span class="n">chunk_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;time&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;time&#39;</span><span class="p">:</span> <span class="mi">240</span><span class="p">},</span> <span class="s1">&#39;spatial&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;nlon&#39;</span><span class="p">:</span> <span class="mi">160</span><span class="p">,</span> <span class="s1">&#39;nlat&#39;</span><span class="p">:</span> <span class="mi">192</span><span class="p">}}</span>
-    <span class="n">subset</span> <span class="o">=</span> <span class="n">monthly_ocean_timeseries</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">variable</span><span class="o">=</span><span class="s1">&#39;FG_CO2&#39;</span><span class="p">)</span>
+    <span class="n">chunk_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'time'</span><span class="p">:</span> <span class="p">{</span><span class="s1">'time'</span><span class="p">:</span> <span class="mi">240</span><span class="p">},</span> <span class="s1">'spatial'</span><span class="p">:</span> <span class="p">{</span><span class="s1">'nlon'</span><span class="p">:</span> <span class="mi">160</span><span class="p">,</span> <span class="s1">'nlat'</span><span class="p">:</span> <span class="mi">192</span><span class="p">}}</span>
+    <span class="n">subset</span> <span class="o">=</span> <span class="n">monthly_ocean_timeseries</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">variable</span><span class="o">=</span><span class="s1">'FG_CO2'</span><span class="p">)</span>
 
     <span class="c1"># Start the timing when we read in the dataset using .to_dataset_dict()</span>
     <span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
     <span class="n">dsets</span> <span class="o">=</span> <span class="n">subset</span><span class="o">.</span><span class="n">to_dataset_dict</span><span class="p">(</span>
-        <span class="s1">&#39;FG_CO2&#39;</span><span class="p">,</span>
-        <span class="n">cdf_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;use_cftime&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s1">&#39;chunks&#39;</span><span class="p">:</span> <span class="n">chunk_dict</span><span class="p">[</span><span class="n">chunk_strategy</span><span class="p">]},</span>
+        <span class="s1">'FG_CO2'</span><span class="p">,</span>
+        <span class="n">cdf_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s1">'use_cftime'</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s1">'chunks'</span><span class="p">:</span> <span class="n">chunk_dict</span><span class="p">[</span><span class="n">chunk_strategy</span><span class="p">]},</span>
         <span class="n">progressbar</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
     <span class="p">)</span>
     <span class="n">keys</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">dsets</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
     <span class="n">ds</span> <span class="o">=</span> <span class="n">dsets</span><span class="p">[</span><span class="n">keys</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
 
     <span class="k">if</span> <span class="n">long_term_average</span><span class="p">:</span>
-        <span class="n">ds</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">compute</span><span class="p">()</span>
+        <span class="n">ds</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s1">'time'</span><span class="p">)</span><span class="o">.</span><span class="n">compute</span><span class="p">()</span>
 
     <span class="k">if</span> <span class="n">monthly_average</span><span class="p">:</span>
-        <span class="n">ds</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;time.month&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">compute</span><span class="p">()</span>
+        <span class="n">ds</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'time.month'</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s1">'time'</span><span class="p">)</span><span class="o">.</span><span class="n">compute</span><span class="p">()</span>
 
     <span class="n">end</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
     <span class="k">return</span> <span class="n">end</span> <span class="o">-</span> <span class="n">start</span>
@@ -4000,17 +4000,17 @@ roTBs2RqAAAAAElFTkSuQmCC'
 
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
 
-<span class="k">with</span> <span class="n">performance_report</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;timeseries-computation.html&quot;</span><span class="p">):</span>
+<span class="k">with</span> <span class="n">performance_report</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">"timeseries-computation.html"</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="n">years</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Starting year </span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Starting year </span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
         <span class="c1"># Compute without computation</span>
         <span class="n">wall_time</span> <span class="o">=</span> <span class="n">test_timeseries_file</span><span class="p">(</span><span class="n">year</span><span class="p">)</span>
         <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
             <span class="p">{</span>
-                <span class="s1">&#39;catalog&#39;</span><span class="p">:</span> <span class="s1">&#39;timeseries&#39;</span><span class="p">,</span>
-                <span class="s1">&#39;computation&#39;</span><span class="p">:</span> <span class="s1">&#39;file_access&#39;</span><span class="p">,</span>
-                <span class="s1">&#39;num_years&#39;</span><span class="p">:</span> <span class="n">year</span><span class="p">,</span>
-                <span class="s1">&#39;wall_time&#39;</span><span class="p">:</span> <span class="n">wall_time</span><span class="p">,</span>
+                <span class="s1">'catalog'</span><span class="p">:</span> <span class="s1">'timeseries'</span><span class="p">,</span>
+                <span class="s1">'computation'</span><span class="p">:</span> <span class="s1">'file_access'</span><span class="p">,</span>
+                <span class="s1">'num_years'</span><span class="p">:</span> <span class="n">year</span><span class="p">,</span>
+                <span class="s1">'wall_time'</span><span class="p">:</span> <span class="n">wall_time</span><span class="p">,</span>
             <span class="p">},</span>
             <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
         <span class="p">)</span>
@@ -4019,10 +4019,10 @@ roTBs2RqAAAAAElFTkSuQmCC'
         <span class="n">wall_time</span> <span class="o">=</span> <span class="n">test_timeseries_file</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">long_term_average</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
         <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
             <span class="p">{</span>
-                <span class="s1">&#39;catalog&#39;</span><span class="p">:</span> <span class="s1">&#39;timeseries&#39;</span><span class="p">,</span>
-                <span class="s1">&#39;computation&#39;</span><span class="p">:</span> <span class="s1">&#39;long_term_average&#39;</span><span class="p">,</span>
-                <span class="s1">&#39;num_years&#39;</span><span class="p">:</span> <span class="n">year</span><span class="p">,</span>
-                <span class="s1">&#39;wall_time&#39;</span><span class="p">:</span> <span class="n">wall_time</span><span class="p">,</span>
+                <span class="s1">'catalog'</span><span class="p">:</span> <span class="s1">'timeseries'</span><span class="p">,</span>
+                <span class="s1">'computation'</span><span class="p">:</span> <span class="s1">'long_term_average'</span><span class="p">,</span>
+                <span class="s1">'num_years'</span><span class="p">:</span> <span class="n">year</span><span class="p">,</span>
+                <span class="s1">'wall_time'</span><span class="p">:</span> <span class="n">wall_time</span><span class="p">,</span>
             <span class="p">},</span>
             <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
         <span class="p">)</span>
@@ -4031,10 +4031,10 @@ roTBs2RqAAAAAElFTkSuQmCC'
         <span class="n">wall_time</span> <span class="o">=</span> <span class="n">test_timeseries_file</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">monthly_average</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
         <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
             <span class="p">{</span>
-                <span class="s1">&#39;catalog&#39;</span><span class="p">:</span> <span class="s1">&#39;timeseries&#39;</span><span class="p">,</span>
-                <span class="s1">&#39;computation&#39;</span><span class="p">:</span> <span class="s1">&#39;monthly_average&#39;</span><span class="p">,</span>
-                <span class="s1">&#39;num_years&#39;</span><span class="p">:</span> <span class="n">year</span><span class="p">,</span>
-                <span class="s1">&#39;wall_time&#39;</span><span class="p">:</span> <span class="n">wall_time</span><span class="p">,</span>
+                <span class="s1">'catalog'</span><span class="p">:</span> <span class="s1">'timeseries'</span><span class="p">,</span>
+                <span class="s1">'computation'</span><span class="p">:</span> <span class="s1">'monthly_average'</span><span class="p">,</span>
+                <span class="s1">'num_years'</span><span class="p">:</span> <span class="n">year</span><span class="p">,</span>
+                <span class="s1">'wall_time'</span><span class="p">:</span> <span class="n">wall_time</span><span class="p">,</span>
             <span class="p">},</span>
             <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
         <span class="p">)</span>
@@ -4062,7 +4062,7 @@ Starting year 60
 <p class="expanded admonition-title">Hide code cell source</p>
 </summary>
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">HTML</span><span class="p">(</span><span class="s1">&#39;timeseries-computation.html&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">HTML</span><span class="p">(</span><span class="s1">'timeseries-computation.html'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -4159,14 +4159,14 @@ Starting year 60
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file_read_in</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">computation</span> <span class="o">==</span> <span class="s1">&#39;file_access&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">hvplot</span><span class="p">(</span>
-    <span class="n">x</span><span class="o">=</span><span class="s1">&#39;num_years&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;wall_time&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Time (s)&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;No computation&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file_read_in</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">computation</span> <span class="o">==</span> <span class="s1">'file_access'</span><span class="p">]</span><span class="o">.</span><span class="n">hvplot</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="s1">'num_years'</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">'wall_time'</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">'Time (s)'</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'No computation'</span>
 <span class="p">)</span>
-<span class="n">long_term_mean</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">computation</span> <span class="o">==</span> <span class="s1">&#39;long_term_average&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">hvplot</span><span class="p">(</span>
-    <span class="n">x</span><span class="o">=</span><span class="s1">&#39;num_years&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;wall_time&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Time (s)&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Long term mean&#39;</span>
+<span class="n">long_term_mean</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">computation</span> <span class="o">==</span> <span class="s1">'long_term_average'</span><span class="p">]</span><span class="o">.</span><span class="n">hvplot</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="s1">'num_years'</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">'wall_time'</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">'Time (s)'</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'Long term mean'</span>
 <span class="p">)</span>
-<span class="n">monthly_average</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">computation</span> <span class="o">==</span> <span class="s1">&#39;monthly_average&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">hvplot</span><span class="p">(</span>
-    <span class="n">x</span><span class="o">=</span><span class="s1">&#39;num_years&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;wall_time&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Time (s)&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Monthly climatology&#39;</span>
+<span class="n">monthly_average</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">computation</span> <span class="o">==</span> <span class="s1">'monthly_average'</span><span class="p">]</span><span class="o">.</span><span class="n">hvplot</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="s1">'num_years'</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">'wall_time'</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">'Time (s)'</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'Monthly climatology'</span>
 <span class="p">)</span>
 
 <span class="c1"># We combine all the plots, and specify we want a single column</span>
@@ -4215,27 +4215,27 @@ Starting year 60
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">test_history_file</span><span class="p">(</span>
-    <span class="n">num_years</span><span class="p">,</span> <span class="n">chunk_strategy</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="n">long_term_average</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">monthly_average</span><span class="o">=</span><span class="kc">False</span>
+    <span class="n">num_years</span><span class="p">,</span> <span class="n">chunk_strategy</span><span class="o">=</span><span class="s1">'time'</span><span class="p">,</span> <span class="n">long_term_average</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">monthly_average</span><span class="o">=</span><span class="kc">False</span>
 <span class="p">):</span>
-    <span class="n">chunk_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;time&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;time&#39;</span><span class="p">:</span> <span class="mi">240</span><span class="p">},</span> <span class="s1">&#39;spatial&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;nlon&#39;</span><span class="p">:</span> <span class="mi">160</span><span class="p">,</span> <span class="s1">&#39;nlat&#39;</span><span class="p">:</span> <span class="mi">192</span><span class="p">}}</span>
+    <span class="n">chunk_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'time'</span><span class="p">:</span> <span class="p">{</span><span class="s1">'time'</span><span class="p">:</span> <span class="mi">240</span><span class="p">},</span> <span class="s1">'spatial'</span><span class="p">:</span> <span class="p">{</span><span class="s1">'nlon'</span><span class="p">:</span> <span class="mi">160</span><span class="p">,</span> <span class="s1">'nlat'</span><span class="p">:</span> <span class="mi">192</span><span class="p">}}</span>
     <span class="n">subset</span> <span class="o">=</span> <span class="n">monthly_ocean_history</span><span class="o">.</span><span class="n">search</span><span class="p">(</span>
-        <span class="n">date</span><span class="o">=</span><span class="n">monthly_ocean_history</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">date</span><span class="p">[:</span> <span class="n">num_years</span> <span class="o">*</span> <span class="mi">12</span><span class="p">],</span> <span class="n">variables</span><span class="o">=</span><span class="s1">&#39;FG_CO2&#39;</span>
+        <span class="n">date</span><span class="o">=</span><span class="n">monthly_ocean_history</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">date</span><span class="p">[:</span> <span class="n">num_years</span> <span class="o">*</span> <span class="mi">12</span><span class="p">],</span> <span class="n">variables</span><span class="o">=</span><span class="s1">'FG_CO2'</span>
     <span class="p">)</span>
     <span class="c1"># Start the timing when we read in the dataset using .to_dataset_dict()</span>
     <span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
     <span class="n">dsets</span> <span class="o">=</span> <span class="n">subset</span><span class="o">.</span><span class="n">to_dataset_dict</span><span class="p">(</span>
-        <span class="s1">&#39;FG_CO2&#39;</span><span class="p">,</span>
-        <span class="n">cdf_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;use_cftime&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s1">&#39;chunks&#39;</span><span class="p">:</span> <span class="n">chunk_dict</span><span class="p">[</span><span class="n">chunk_strategy</span><span class="p">]},</span>
+        <span class="s1">'FG_CO2'</span><span class="p">,</span>
+        <span class="n">cdf_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s1">'use_cftime'</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s1">'chunks'</span><span class="p">:</span> <span class="n">chunk_dict</span><span class="p">[</span><span class="n">chunk_strategy</span><span class="p">]},</span>
         <span class="n">progressbar</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
     <span class="p">)</span>
     <span class="n">keys</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">dsets</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
     <span class="n">ds</span> <span class="o">=</span> <span class="n">dsets</span><span class="p">[</span><span class="n">keys</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
 
     <span class="k">if</span> <span class="n">long_term_average</span><span class="p">:</span>
-        <span class="n">ds</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">compute</span><span class="p">()</span>
+        <span class="n">ds</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s1">'time'</span><span class="p">)</span><span class="o">.</span><span class="n">compute</span><span class="p">()</span>
 
     <span class="k">if</span> <span class="n">monthly_average</span><span class="p">:</span>
-        <span class="n">ds</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;time.month&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">compute</span><span class="p">()</span>
+        <span class="n">ds</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'time.month'</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s1">'time'</span><span class="p">)</span><span class="o">.</span><span class="n">compute</span><span class="p">()</span>
 
     <span class="n">end</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
     <span class="k">return</span> <span class="n">end</span> <span class="o">-</span> <span class="n">start</span>
@@ -4250,18 +4250,18 @@ Starting year 60
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
-<span class="k">with</span> <span class="n">performance_report</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;history-computation.html&quot;</span><span class="p">):</span>
+<span class="k">with</span> <span class="n">performance_report</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">"history-computation.html"</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="n">years</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Starting year </span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Starting year </span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
 
         <span class="c1"># Compute without computation</span>
         <span class="n">wall_time</span> <span class="o">=</span> <span class="n">test_history_file</span><span class="p">(</span><span class="n">year</span><span class="p">)</span>
         <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
             <span class="p">{</span>
-                <span class="s1">&#39;catalog&#39;</span><span class="p">:</span> <span class="s1">&#39;history&#39;</span><span class="p">,</span>
-                <span class="s1">&#39;computation&#39;</span><span class="p">:</span> <span class="s1">&#39;file_access&#39;</span><span class="p">,</span>
-                <span class="s1">&#39;num_years&#39;</span><span class="p">:</span> <span class="n">year</span><span class="p">,</span>
-                <span class="s1">&#39;wall_time&#39;</span><span class="p">:</span> <span class="n">wall_time</span><span class="p">,</span>
+                <span class="s1">'catalog'</span><span class="p">:</span> <span class="s1">'history'</span><span class="p">,</span>
+                <span class="s1">'computation'</span><span class="p">:</span> <span class="s1">'file_access'</span><span class="p">,</span>
+                <span class="s1">'num_years'</span><span class="p">:</span> <span class="n">year</span><span class="p">,</span>
+                <span class="s1">'wall_time'</span><span class="p">:</span> <span class="n">wall_time</span><span class="p">,</span>
             <span class="p">},</span>
             <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
         <span class="p">)</span>
@@ -4270,10 +4270,10 @@ Starting year 60
         <span class="n">wall_time</span> <span class="o">=</span> <span class="n">test_history_file</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">long_term_average</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
         <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
             <span class="p">{</span>
-                <span class="s1">&#39;catalog&#39;</span><span class="p">:</span> <span class="s1">&#39;history&#39;</span><span class="p">,</span>
-                <span class="s1">&#39;computation&#39;</span><span class="p">:</span> <span class="s1">&#39;long_term_average&#39;</span><span class="p">,</span>
-                <span class="s1">&#39;num_years&#39;</span><span class="p">:</span> <span class="n">year</span><span class="p">,</span>
-                <span class="s1">&#39;wall_time&#39;</span><span class="p">:</span> <span class="n">wall_time</span><span class="p">,</span>
+                <span class="s1">'catalog'</span><span class="p">:</span> <span class="s1">'history'</span><span class="p">,</span>
+                <span class="s1">'computation'</span><span class="p">:</span> <span class="s1">'long_term_average'</span><span class="p">,</span>
+                <span class="s1">'num_years'</span><span class="p">:</span> <span class="n">year</span><span class="p">,</span>
+                <span class="s1">'wall_time'</span><span class="p">:</span> <span class="n">wall_time</span><span class="p">,</span>
             <span class="p">},</span>
             <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
         <span class="p">)</span>
@@ -4282,10 +4282,10 @@ Starting year 60
         <span class="n">wall_time</span> <span class="o">=</span> <span class="n">test_history_file</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">monthly_average</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
         <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
             <span class="p">{</span>
-                <span class="s1">&#39;catalog&#39;</span><span class="p">:</span> <span class="s1">&#39;history&#39;</span><span class="p">,</span>
-                <span class="s1">&#39;computation&#39;</span><span class="p">:</span> <span class="s1">&#39;monthly_average&#39;</span><span class="p">,</span>
-                <span class="s1">&#39;num_years&#39;</span><span class="p">:</span> <span class="n">year</span><span class="p">,</span>
-                <span class="s1">&#39;wall_time&#39;</span><span class="p">:</span> <span class="n">wall_time</span><span class="p">,</span>
+                <span class="s1">'catalog'</span><span class="p">:</span> <span class="s1">'history'</span><span class="p">,</span>
+                <span class="s1">'computation'</span><span class="p">:</span> <span class="s1">'monthly_average'</span><span class="p">,</span>
+                <span class="s1">'num_years'</span><span class="p">:</span> <span class="n">year</span><span class="p">,</span>
+                <span class="s1">'wall_time'</span><span class="p">:</span> <span class="n">wall_time</span><span class="p">,</span>
             <span class="p">},</span>
             <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
         <span class="p">)</span>
@@ -4314,7 +4314,7 @@ Starting year 60
 <p class="expanded admonition-title">Hide code cell source</p>
 </summary>
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">HTML</span><span class="p">(</span><span class="s1">&#39;history-computation.html&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">HTML</span><span class="p">(</span><span class="s1">'history-computation.html'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -4414,14 +4414,14 @@ Starting year 60
 <h3>Plot a Comparison of Wall time for Different Computations<a class="headerlink" href="#plot-a-comparison-of-wall-time-for-different-computations" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file_read_in</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">computation</span> <span class="o">==</span> <span class="s1">&#39;file_access&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">hvplot</span><span class="p">(</span>
-    <span class="n">x</span><span class="o">=</span><span class="s1">&#39;num_years&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;wall_time&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Time (s)&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;No computation&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file_read_in</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">computation</span> <span class="o">==</span> <span class="s1">'file_access'</span><span class="p">]</span><span class="o">.</span><span class="n">hvplot</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="s1">'num_years'</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">'wall_time'</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">'Time (s)'</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'No computation'</span>
 <span class="p">)</span>
-<span class="n">long_term_mean</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">computation</span> <span class="o">==</span> <span class="s1">&#39;long_term_average&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">hvplot</span><span class="p">(</span>
-    <span class="n">x</span><span class="o">=</span><span class="s1">&#39;num_years&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;wall_time&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Time (s)&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Long term mean&#39;</span>
+<span class="n">long_term_mean</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">computation</span> <span class="o">==</span> <span class="s1">'long_term_average'</span><span class="p">]</span><span class="o">.</span><span class="n">hvplot</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="s1">'num_years'</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">'wall_time'</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">'Time (s)'</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'Long term mean'</span>
 <span class="p">)</span>
-<span class="n">monthly_average</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">computation</span> <span class="o">==</span> <span class="s1">&#39;monthly_average&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">hvplot</span><span class="p">(</span>
-    <span class="n">x</span><span class="o">=</span><span class="s1">&#39;num_years&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;wall_time&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Time (s)&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Monthly climatology&#39;</span>
+<span class="n">monthly_average</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">computation</span> <span class="o">==</span> <span class="s1">'monthly_average'</span><span class="p">]</span><span class="o">.</span><span class="n">hvplot</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="s1">'num_years'</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">'wall_time'</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">'Time (s)'</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'Monthly climatology'</span>
 <span class="p">)</span>
 
 <span class="p">(</span><span class="n">file_read_in</span> <span class="o">+</span> <span class="n">long_term_mean</span> <span class="o">+</span> <span class="n">monthly_average</span><span class="p">)</span><span class="o">.</span><span class="n">cols</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
@@ -4473,11 +4473,11 @@ Starting year 60
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
     <span class="n">df_timeseries</span><span class="o">.</span><span class="n">hvplot</span><span class="p">(</span>
-        <span class="n">x</span><span class="o">=</span><span class="s1">&#39;num_years&#39;</span><span class="p">,</span>
-        <span class="n">y</span><span class="o">=</span><span class="s1">&#39;wall_time&#39;</span><span class="p">,</span>
-        <span class="n">by</span><span class="o">=</span><span class="s1">&#39;computation&#39;</span><span class="p">,</span>
-        <span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;Number of Years&#39;</span><span class="p">,</span>
-        <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Wall Time (s)&#39;</span><span class="p">,</span>
+        <span class="n">x</span><span class="o">=</span><span class="s1">'num_years'</span><span class="p">,</span>
+        <span class="n">y</span><span class="o">=</span><span class="s1">'wall_time'</span><span class="p">,</span>
+        <span class="n">by</span><span class="o">=</span><span class="s1">'computation'</span><span class="p">,</span>
+        <span class="n">xlabel</span><span class="o">=</span><span class="s1">'Number of Years'</span><span class="p">,</span>
+        <span class="n">ylabel</span><span class="o">=</span><span class="s1">'Wall Time (s)'</span><span class="p">,</span>
         <span class="n">width</span><span class="o">=</span><span class="mi">550</span><span class="p">,</span>
     <span class="p">)</span>
     <span class="o">+</span> <span class="n">df_timeseries</span><span class="o">.</span><span class="n">hvplot</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">420</span><span class="p">)</span>
@@ -4526,11 +4526,11 @@ Starting year 60
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
     <span class="n">df_history</span><span class="o">.</span><span class="n">hvplot</span><span class="p">(</span>
-        <span class="n">x</span><span class="o">=</span><span class="s1">&#39;num_years&#39;</span><span class="p">,</span>
-        <span class="n">y</span><span class="o">=</span><span class="s1">&#39;wall_time&#39;</span><span class="p">,</span>
-        <span class="n">by</span><span class="o">=</span><span class="s1">&#39;computation&#39;</span><span class="p">,</span>
-        <span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;Number of Years&#39;</span><span class="p">,</span>
-        <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Wall Time (s)&#39;</span><span class="p">,</span>
+        <span class="n">x</span><span class="o">=</span><span class="s1">'num_years'</span><span class="p">,</span>
+        <span class="n">y</span><span class="o">=</span><span class="s1">'wall_time'</span><span class="p">,</span>
+        <span class="n">by</span><span class="o">=</span><span class="s1">'computation'</span><span class="p">,</span>
+        <span class="n">xlabel</span><span class="o">=</span><span class="s1">'Number of Years'</span><span class="p">,</span>
+        <span class="n">ylabel</span><span class="o">=</span><span class="s1">'Wall Time (s)'</span><span class="p">,</span>
         <span class="n">width</span><span class="o">=</span><span class="mi">550</span><span class="p">,</span>
     <span class="p">)</span>
     <span class="o">+</span> <span class="n">df_history</span><span class="o">.</span><span class="n">hvplot</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">420</span><span class="p">)</span>
@@ -4586,11 +4586,11 @@ Starting year 60
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
     <span class="n">df</span><span class="o">.</span><span class="n">hvplot</span><span class="p">(</span>
-        <span class="n">x</span><span class="o">=</span><span class="s1">&#39;num_years&#39;</span><span class="p">,</span>
-        <span class="n">y</span><span class="o">=</span><span class="s1">&#39;wall_time&#39;</span><span class="p">,</span>
-        <span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;catalog&#39;</span><span class="p">,</span> <span class="s1">&#39;computation&#39;</span><span class="p">],</span>
-        <span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;Number of Years&#39;</span><span class="p">,</span>
-        <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Wall Time (s)&#39;</span><span class="p">,</span>
+        <span class="n">x</span><span class="o">=</span><span class="s1">'num_years'</span><span class="p">,</span>
+        <span class="n">y</span><span class="o">=</span><span class="s1">'wall_time'</span><span class="p">,</span>
+        <span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">'catalog'</span><span class="p">,</span> <span class="s1">'computation'</span><span class="p">],</span>
+        <span class="n">xlabel</span><span class="o">=</span><span class="s1">'Number of Years'</span><span class="p">,</span>
+        <span class="n">ylabel</span><span class="o">=</span><span class="s1">'Wall Time (s)'</span><span class="p">,</span>
         <span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span>
     <span class="p">)</span>
     <span class="o">+</span> <span class="n">df</span><span class="o">.</span><span class="n">hvplot</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">420</span><span class="p">)</span>
@@ -4649,8 +4649,8 @@ Starting year 60
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cesm_history_builder</span> <span class="o">=</span> <span class="n">Builder</span><span class="p">(</span>
-    <span class="s2">&quot;/glade/campaign/cesm/development/espwg/SMYLE/initial_conditions/SMYLE-FOSI&quot;</span><span class="p">,</span>
-    <span class="n">exclude_patterns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;*/rest/*&quot;</span><span class="p">,</span> <span class="s2">&quot;*/logs/*&quot;</span><span class="p">,</span> <span class="s2">&quot;*/proc/*&quot;</span><span class="p">],</span>
+    <span class="s2">"/glade/campaign/cesm/development/espwg/SMYLE/initial_conditions/SMYLE-FOSI"</span><span class="p">,</span>
+    <span class="n">exclude_patterns</span><span class="o">=</span><span class="p">[</span><span class="s2">"*/rest/*"</span><span class="p">,</span> <span class="s2">"*/logs/*"</span><span class="p">,</span> <span class="s2">"*/proc/*"</span><span class="p">],</span>
 <span class="p">)</span>
 </pre></div>
 </div>
@@ -4690,7 +4690,7 @@ Starting year 60
 [Parallel(n_jobs=-1)]: Done 6015 out of 6015 | elapsed:   59.1s finished
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Builder(root_path=PosixPath(&#39;/glade/campaign/cesm/development/espwg/SMYLE/initial_conditions/SMYLE-FOSI&#39;), extension=&#39;.nc&#39;, depth=0, exclude_patterns=[&#39;*/rest/*&#39;, &#39;*/logs/*&#39;, &#39;*/proc/*&#39;], njobs=-1)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Builder(root_path=PosixPath('/glade/campaign/cesm/development/espwg/SMYLE/initial_conditions/SMYLE-FOSI'), extension='.nc', depth=0, exclude_patterns=['*/rest/*', '*/logs/*', '*/proc/*'], njobs=-1)
 </pre></div>
 </div>
 </div>
@@ -4864,21 +4864,21 @@ Starting year 60
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cesm_history_builder</span><span class="o">.</span><span class="n">save</span><span class="p">(</span>
     <span class="c1"># File path - could save as .csv (uncompressed csv) or .csv.gz (compressed csv)</span>
-    <span class="s2">&quot;cesm-hist-smyle-fosi.csv&quot;</span><span class="p">,</span>
+    <span class="s2">"cesm-hist-smyle-fosi.csv"</span><span class="p">,</span>
     <span class="c1"># Column name including filepath</span>
-    <span class="n">path_column_name</span><span class="o">=</span><span class="s1">&#39;path&#39;</span><span class="p">,</span>
+    <span class="n">path_column_name</span><span class="o">=</span><span class="s1">'path'</span><span class="p">,</span>
     <span class="c1"># Column name including variables</span>
-    <span class="n">variable_column_name</span><span class="o">=</span><span class="s1">&#39;variables&#39;</span><span class="p">,</span>
+    <span class="n">variable_column_name</span><span class="o">=</span><span class="s1">'variables'</span><span class="p">,</span>
     <span class="c1"># Data file format - could be netcdf or zarr (in this case, netcdf)</span>
-    <span class="n">data_format</span><span class="o">=</span><span class="s2">&quot;netcdf&quot;</span><span class="p">,</span>
+    <span class="n">data_format</span><span class="o">=</span><span class="s2">"netcdf"</span><span class="p">,</span>
     <span class="c1"># Which attributes to groupby when reading in variables using intake-esm</span>
-    <span class="n">groupby_attrs</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;component&quot;</span><span class="p">,</span> <span class="s2">&quot;stream&quot;</span><span class="p">,</span> <span class="s2">&quot;case&quot;</span><span class="p">],</span>
+    <span class="n">groupby_attrs</span><span class="o">=</span><span class="p">[</span><span class="s2">"component"</span><span class="p">,</span> <span class="s2">"stream"</span><span class="p">,</span> <span class="s2">"case"</span><span class="p">],</span>
     <span class="c1"># Aggregations which are fed into xarray when reading in data using intake</span>
     <span class="n">aggregations</span><span class="o">=</span><span class="p">[</span>
         <span class="p">{</span>
-            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;join_existing&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;attribute_name&quot;</span><span class="p">:</span> <span class="s2">&quot;date&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;options&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;dim&quot;</span><span class="p">:</span> <span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="s2">&quot;coords&quot;</span><span class="p">:</span> <span class="s2">&quot;minimal&quot;</span><span class="p">,</span> <span class="s2">&quot;compat&quot;</span><span class="p">:</span> <span class="s2">&quot;override&quot;</span><span class="p">},</span>
+            <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"join_existing"</span><span class="p">,</span>
+            <span class="s2">"attribute_name"</span><span class="p">:</span> <span class="s2">"date"</span><span class="p">,</span>
+            <span class="s2">"options"</span><span class="p">:</span> <span class="p">{</span><span class="s2">"dim"</span><span class="p">:</span> <span class="s2">"time"</span><span class="p">,</span> <span class="s2">"coords"</span><span class="p">:</span> <span class="s2">"minimal"</span><span class="p">,</span> <span class="s2">"compat"</span><span class="p">:</span> <span class="s2">"override"</span><span class="p">},</span>
         <span class="p">}</span>
     <span class="p">],</span>
 <span class="p">)</span>
@@ -4898,8 +4898,8 @@ Starting year 60
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cesm_timeseries_builder</span> <span class="o">=</span> <span class="n">Builder</span><span class="p">(</span>
-    <span class="s2">&quot;/glade/campaign/cesm/development/espwg/SMYLE/initial_conditions/SMYLE-FOSI&quot;</span><span class="p">,</span>
-    <span class="n">exclude_patterns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;*/rest/*&quot;</span><span class="p">,</span> <span class="s2">&quot;*/logs/*&quot;</span><span class="p">,</span> <span class="s2">&quot;*/hist/*&quot;</span><span class="p">],</span>
+    <span class="s2">"/glade/campaign/cesm/development/espwg/SMYLE/initial_conditions/SMYLE-FOSI"</span><span class="p">,</span>
+    <span class="n">exclude_patterns</span><span class="o">=</span><span class="p">[</span><span class="s2">"*/rest/*"</span><span class="p">,</span> <span class="s2">"*/logs/*"</span><span class="p">,</span> <span class="s2">"*/hist/*"</span><span class="p">],</span>
 <span class="p">)</span>
 </pre></div>
 </div>
@@ -4927,7 +4927,7 @@ Starting year 60
   self.get_directories().get_filelist()._parse(
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Builder(root_path=PosixPath(&#39;/glade/campaign/cesm/development/espwg/SMYLE/initial_conditions/SMYLE-FOSI&#39;), extension=&#39;.nc&#39;, depth=0, exclude_patterns=[&#39;*/rest/*&#39;, &#39;*/logs/*&#39;, &#39;*/hist/*&#39;], njobs=-1)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Builder(root_path=PosixPath('/glade/campaign/cesm/development/espwg/SMYLE/initial_conditions/SMYLE-FOSI'), extension='.nc', depth=0, exclude_patterns=['*/rest/*', '*/logs/*', '*/hist/*'], njobs=-1)
 </pre></div>
 </div>
 </div>
@@ -4939,22 +4939,22 @@ Starting year 60
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cesm_timeseries_builder</span><span class="o">.</span><span class="n">save</span><span class="p">(</span>
     <span class="c1"># File path - could save as .csv (uncompressed csv) or .csv.gz (compressed csv)</span>
-    <span class="s2">&quot;cesm-tseries-smyle-fosi.csv&quot;</span><span class="p">,</span>
+    <span class="s2">"cesm-tseries-smyle-fosi.csv"</span><span class="p">,</span>
     <span class="c1"># Column name including filepath</span>
-    <span class="n">path_column_name</span><span class="o">=</span><span class="s1">&#39;path&#39;</span><span class="p">,</span>
+    <span class="n">path_column_name</span><span class="o">=</span><span class="s1">'path'</span><span class="p">,</span>
     <span class="c1"># Column name including variables</span>
-    <span class="n">variable_column_name</span><span class="o">=</span><span class="s1">&#39;variable&#39;</span><span class="p">,</span>
+    <span class="n">variable_column_name</span><span class="o">=</span><span class="s1">'variable'</span><span class="p">,</span>
     <span class="c1"># Data file format - could be netcdf or zarr (in this case, netcdf)</span>
-    <span class="n">data_format</span><span class="o">=</span><span class="s2">&quot;netcdf&quot;</span><span class="p">,</span>
+    <span class="n">data_format</span><span class="o">=</span><span class="s2">"netcdf"</span><span class="p">,</span>
     <span class="c1"># Which attributes to groupby when reading in variables using intake-esm</span>
-    <span class="n">groupby_attrs</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;component&quot;</span><span class="p">,</span> <span class="s2">&quot;stream&quot;</span><span class="p">,</span> <span class="s2">&quot;case&quot;</span><span class="p">],</span>
+    <span class="n">groupby_attrs</span><span class="o">=</span><span class="p">[</span><span class="s2">"component"</span><span class="p">,</span> <span class="s2">"stream"</span><span class="p">,</span> <span class="s2">"case"</span><span class="p">],</span>
     <span class="c1"># Aggregations which are fed into xarray when reading in data using intake</span>
     <span class="n">aggregations</span><span class="o">=</span><span class="p">[</span>
-        <span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;union&quot;</span><span class="p">,</span> <span class="s2">&quot;attribute_name&quot;</span><span class="p">:</span> <span class="s2">&quot;variable&quot;</span><span class="p">},</span>
+        <span class="p">{</span><span class="s2">"type"</span><span class="p">:</span> <span class="s2">"union"</span><span class="p">,</span> <span class="s2">"attribute_name"</span><span class="p">:</span> <span class="s2">"variable"</span><span class="p">},</span>
         <span class="p">{</span>
-            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;join_existing&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;attribute_name&quot;</span><span class="p">:</span> <span class="s2">&quot;time_range&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;options&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;dim&quot;</span><span class="p">:</span> <span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="s2">&quot;coords&quot;</span><span class="p">:</span> <span class="s2">&quot;minimal&quot;</span><span class="p">,</span> <span class="s2">&quot;compat&quot;</span><span class="p">:</span> <span class="s2">&quot;override&quot;</span><span class="p">},</span>
+            <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"join_existing"</span><span class="p">,</span>
+            <span class="s2">"attribute_name"</span><span class="p">:</span> <span class="s2">"time_range"</span><span class="p">,</span>
+            <span class="s2">"options"</span><span class="p">:</span> <span class="p">{</span><span class="s2">"dim"</span><span class="p">:</span> <span class="s2">"time"</span><span class="p">,</span> <span class="s2">"coords"</span><span class="p">:</span> <span class="s2">"minimal"</span><span class="p">,</span> <span class="s2">"compat"</span><span class="p">:</span> <span class="s2">"override"</span><span class="p">},</span>
         <span class="p">},</span>
     <span class="p">],</span>
 <span class="p">)</span>
@@ -5102,8 +5102,8 @@ Starting year 60
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9"></script>
-<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -5137,7 +5137,7 @@ Starting year 60
         <div class="footer-item">
 <p class="theme-version">
   <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.20.0.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.21.0.
 </p></div>
       
     </div>

@@ -27,8 +27,8 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
@@ -37,10 +37,10 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=66307ba7" />
   
   <!-- So that users can add custom icons -->
-  <script defer src="../../../_static/scripts/fontawesome.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer src="../../../_static/scripts/fontawesome.js?digest=cb8930eaaf36d9849b67"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9" />
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67" />
 
     <script src="../../../_static/documentation_options.js?v=55b5f74b"></script>
     <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
@@ -74,7 +74,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
-    <meta name="docbuild:last-update" content="Jul 27, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 10, 2026"/>
   
     
     <script src="../../../_static/searchtools.js"></script>
@@ -1214,7 +1214,7 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span> <span class="o">=</span> <span class="n">intake</span><span class="o">.</span><span class="n">open_esm_datastore</span><span class="p">(</span>
-    <span class="s1">&#39;/glade/collections/cmip/catalog/intake-esm-datastore/catalogs/glade-cesm2-le.json&#39;</span>
+    <span class="s1">'/glade/collections/cmip/catalog/intake-esm-datastore/catalogs/glade-cesm2-le.json'</span>
 <span class="p">)</span>
 </pre></div>
 </div>
@@ -1335,34 +1335,34 @@
 <p>We can use the wildcard here <code class="docutils literal notranslate"><span class="pre">*</span></code> to look for where both captial and lowercase <code class="docutils literal notranslate"><span class="pre">temperature</span></code> show up in the <code class="docutils literal notranslate"><span class="pre">long_name</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">component</span><span class="o">=</span><span class="s1">&#39;atm&#39;</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;temperature*&#39;</span><span class="p">,</span> <span class="s1">&#39;Temperature*&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">long_name</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">component</span><span class="o">=</span><span class="s1">'atm'</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="p">[</span><span class="s1">'temperature*'</span><span class="p">,</span> <span class="s1">'Temperature*'</span><span class="p">])</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">long_name</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;sea surface temperature&#39;,
-       &#39;Minimum reference height temperature over output period&#39;,
-       &#39;Tropopause Temperature&#39;, &#39;Reference height temperature&#39;,
-       &#39;Total temperature tendency&#39;,
-       &#39;Minimum surface temperature over output period&#39;,
-       &#39;Temperature tendency&#39;,
-       &#39;Maximum reference height temperature over output period&#39;,
-       &#39;Temperature&#39;, &#39;Maximum surface temperature over output period&#39;,
-       &#39;Potential Temperature&#39;, &#39;Temperature Variance&#39;,
-       &#39;Surface temperature (radiative)&#39;,
-       &#39;Temperature at  700 mbar pressure surface&#39;,
-       &#39;Temperature at 700 mbar pressure surface&#39;,
-       &#39;Temperature at 200 mbar pressure surface&#39;,
-       &#39;Temperature at  200 mbar pressure surface&#39;,
-       &#39;Temperature at 1000 mbar pressure surface&#39;,
-       &#39;Temperature at  100 mbar pressure surface&#39;,
-       &#39;Temperature at   50 mbar pressure surface&#39;,
-       &#39;Temperature at 500 mbar pressure surface&#39;,
-       &#39;Temperature at  500 mbar pressure surface&#39;,
-       &#39;Lowest model level temperature&#39;,
-       &#39;Temperature at   10 mbar pressure surface&#39;,
-       &#39;Temperature at 850 mbar pressure surface&#39;,
-       &#39;Temperature at  850 mbar pressure surface&#39;], dtype=object)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array(['sea surface temperature',
+       'Minimum reference height temperature over output period',
+       'Tropopause Temperature', 'Reference height temperature',
+       'Total temperature tendency',
+       'Minimum surface temperature over output period',
+       'Temperature tendency',
+       'Maximum reference height temperature over output period',
+       'Temperature', 'Maximum surface temperature over output period',
+       'Potential Temperature', 'Temperature Variance',
+       'Surface temperature (radiative)',
+       'Temperature at  700 mbar pressure surface',
+       'Temperature at 700 mbar pressure surface',
+       'Temperature at 200 mbar pressure surface',
+       'Temperature at  200 mbar pressure surface',
+       'Temperature at 1000 mbar pressure surface',
+       'Temperature at  100 mbar pressure surface',
+       'Temperature at   50 mbar pressure surface',
+       'Temperature at 500 mbar pressure surface',
+       'Temperature at  500 mbar pressure surface',
+       'Lowest model level temperature',
+       'Temperature at   10 mbar pressure surface',
+       'Temperature at 850 mbar pressure surface',
+       'Temperature at  850 mbar pressure surface'], dtype=object)
 </pre></div>
 </div>
 </div>
@@ -1373,7 +1373,7 @@
 <p>Let’s go with <code class="docutils literal notranslate"><span class="pre">Lowest</span> <span class="pre">model</span> <span class="pre">level</span> <span class="pre">temperature</span></code> since this represents the closest to the surface without being at the <strong>actual</strong> surface of the earth. We pass the <code class="docutils literal notranslate"><span class="pre">component</span></code> and <code class="docutils literal notranslate"><span class="pre">long_name</span></code> into the query, which reduces the number of datasets to 8!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">subset</span> <span class="o">=</span> <span class="n">cat</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">component</span><span class="o">=</span><span class="s1">&#39;atm&#39;</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">&#39;Lowest model level temperature&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">subset</span> <span class="o">=</span> <span class="n">cat</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">component</span><span class="o">=</span><span class="s1">'atm'</span><span class="p">,</span> <span class="n">long_name</span><span class="o">=</span><span class="s1">'Lowest model level temperature'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1486,14 +1486,14 @@
 <p>We include the additional <code class="docutils literal notranslate"><span class="pre">dask.config.set()</span></code> to help with splitting up large chunks when reading in</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">dask</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="o">**</span><span class="p">{</span><span class="s1">&#39;array.slicing.split_large_chunks&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">}):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">dask</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="o">**</span><span class="p">{</span><span class="s1">'array.slicing.split_large_chunks'</span><span class="p">:</span> <span class="kc">True</span><span class="p">}):</span>
     <span class="n">dsets</span> <span class="o">=</span> <span class="n">subset</span><span class="o">.</span><span class="n">to_dataset_dict</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--&gt; The keys in the returned dictionary of datasets are constructed as follows:
-	&#39;component.experiment.stream.forcing_variant.control_branch_year.variable&#39;
+	'component.experiment.stream.forcing_variant.control_branch_year.variable'
 </pre></div>
 </div>
 <div class="output text_html">
@@ -1522,7 +1522,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_keys([&#39;atm.historical.cam.h1.smbb.1231.TBOT&#39;, &#39;atm.historical.cam.h1.smbb.1251.TBOT&#39;, &#39;atm.ssp370.cam.h1.smbb.1281.TBOT&#39;, &#39;atm.historical.cam.h1.smbb.1301.TBOT&#39;, &#39;atm.ssp370.cam.h1.smbb.1251.TBOT&#39;, &#39;atm.ssp370.cam.h1.smbb.1301.TBOT&#39;, &#39;atm.historical.cam.h1.smbb.1281.TBOT&#39;, &#39;atm.ssp370.cam.h1.smbb.1231.TBOT&#39;])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_keys(['atm.historical.cam.h1.smbb.1231.TBOT', 'atm.historical.cam.h1.smbb.1251.TBOT', 'atm.ssp370.cam.h1.smbb.1281.TBOT', 'atm.historical.cam.h1.smbb.1301.TBOT', 'atm.ssp370.cam.h1.smbb.1251.TBOT', 'atm.ssp370.cam.h1.smbb.1301.TBOT', 'atm.historical.cam.h1.smbb.1281.TBOT', 'atm.ssp370.cam.h1.smbb.1231.TBOT'])
 </pre></div>
 </div>
 </div>
@@ -1541,12 +1541,12 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">subset_ds</span><span class="p">(</span><span class="n">ds</span><span class="p">):</span>
-    <span class="c1"># Subset for TBOT and choose Boulder, Colorado&#39;s lat and lon and convert to degC</span>
-    <span class="n">da</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">TBOT</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">lat</span><span class="o">=</span><span class="mf">40.015</span><span class="p">,</span> <span class="n">lon</span><span class="o">=-</span><span class="mf">105.2705</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">)</span> <span class="o">-</span> <span class="mf">273.15</span>
-    <span class="n">da</span> <span class="o">=</span> <span class="n">da</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;time.year&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+    <span class="c1"># Subset for TBOT and choose Boulder, Colorado's lat and lon and convert to degC</span>
+    <span class="n">da</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">TBOT</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">lat</span><span class="o">=</span><span class="mf">40.015</span><span class="p">,</span> <span class="n">lon</span><span class="o">=-</span><span class="mf">105.2705</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">'nearest'</span><span class="p">)</span> <span class="o">-</span> <span class="mf">273.15</span>
+    <span class="n">da</span> <span class="o">=</span> <span class="n">da</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'time.year'</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 
     <span class="c1"># Make sure that time is the format of a string</span>
-    <span class="n">da</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">da</span><span class="o">.</span><span class="n">year</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+    <span class="n">da</span><span class="p">[</span><span class="s1">'year'</span><span class="p">]</span> <span class="o">=</span> <span class="n">da</span><span class="o">.</span><span class="n">year</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
 
     <span class="k">return</span> <span class="n">da</span>
 </pre></div>
@@ -1557,7 +1557,7 @@
 <h4>Look at one of the datasets<a class="headerlink" href="#look-at-one-of-the-datasets" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span> <span class="o">=</span> <span class="n">dsets</span><span class="p">[</span><span class="s1">&#39;atm.ssp370.cam.h1.smbb.1301.TBOT&#39;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span> <span class="o">=</span> <span class="n">dsets</span><span class="p">[</span><span class="s1">'atm.ssp370.cam.h1.smbb.1301.TBOT'</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -1594,15 +1594,15 @@
 <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
 
 <span class="c1"># Add some labels and increase the size</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Temperature (degC)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'Year'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'Temperature (degC)'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
 
 <span class="c1"># Add a legend</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Member IDs&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">'Member IDs'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
 
 <span class="c1"># Add a title</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span>
-    <span class="s1">&#39;Experiment: SSP370 </span><span class="se">\n</span><span class="s1"> Forcing Variant: Smoothed Biomass </span><span class="se">\n</span><span class="s1"> Control Branch Year: 1301 </span><span class="se">\n</span><span class="s1"> 2015 - 2100&#39;</span><span class="p">,</span>
+    <span class="s1">'Experiment: SSP370 </span><span class="se">\n</span><span class="s1"> Forcing Variant: Smoothed Biomass </span><span class="se">\n</span><span class="s1"> Control Branch Year: 1301 </span><span class="se">\n</span><span class="s1"> 2015 - 2100'</span><span class="p">,</span>
     <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
 <span class="p">);</span>
 </pre></div>
@@ -1727,8 +1727,8 @@
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9"></script>
-<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -1762,7 +1762,7 @@
         <div class="footer-item">
 <p class="theme-version">
   <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.20.0.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.21.0.
 </p></div>
       
     </div>

@@ -27,8 +27,8 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
@@ -37,10 +37,10 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=66307ba7" />
   
   <!-- So that users can add custom icons -->
-  <script defer src="../../../_static/scripts/fontawesome.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer src="../../../_static/scripts/fontawesome.js?digest=cb8930eaaf36d9849b67"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9" />
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67" />
 
     <script src="../../../_static/documentation_options.js?v=55b5f74b"></script>
     <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
@@ -74,7 +74,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
-    <meta name="docbuild:last-update" content="Jul 27, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 10, 2026"/>
   
     
     <script src="../../../_static/searchtools.js"></script>
@@ -890,8 +890,8 @@ The downside is that navigating the catalog can be painful, and reading from dis
 This can take a while.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">root</span> <span class="o">=</span> <span class="s2">&quot;/glade/campaign/cgd/oce/projects/pump/cesm/&quot;</span>
-<span class="n">casename</span> <span class="o">=</span> <span class="s2">&quot;gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">root</span> <span class="o">=</span> <span class="s2">"/glade/campaign/cgd/oce/projects/pump/cesm/"</span>
+<span class="n">casename</span> <span class="o">=</span> <span class="s2">"gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods"</span>
 </pre></div>
 </div>
 </div>
@@ -901,7 +901,7 @@ This can take a while.</p>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">glob</span><span class="w"> </span><span class="kn">import</span> <span class="n">glob</span>
 
-<span class="n">files</span> <span class="o">=</span> <span class="n">glob</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">root</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">casename</span><span class="si">}</span><span class="s2">/run/*mom6.*&quot;</span><span class="p">)</span>
+<span class="n">files</span> <span class="o">=</span> <span class="n">glob</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">root</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">casename</span><span class="si">}</span><span class="s2">/run/*mom6.*"</span><span class="p">)</span>
 <span class="nb">len</span><span class="p">(</span><span class="n">files</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -915,7 +915,7 @@ This can take a while.</p>
 <p>This static file (<code class="docutils literal notranslate"><span class="pre">gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods.mom6.static.nc</span></code>) has grid information</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">staticfile</span><span class="p">,)</span> <span class="o">=</span> <span class="n">glob</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">root</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">casename</span><span class="si">}</span><span class="s2">/run/*static*&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">staticfile</span><span class="p">,)</span> <span class="o">=</span> <span class="n">glob</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">root</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">casename</span><span class="si">}</span><span class="s2">/run/*static*"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">staticfile</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -945,132 +945,132 @@ This can take a while.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;version&#39;: 1,
- &#39;refs&#39;: {&#39;.zgroup&#39;: &#39;{&quot;zarr_format&quot;:2}&#39;,
-  &#39;xh/.zarray&#39;: &#39;{&quot;chunks&quot;:[540],&quot;compressor&quot;:null,&quot;dtype&quot;:&quot;&gt;f8&quot;,&quot;fill_value&quot;:null,&quot;filters&quot;:null,&quot;order&quot;:&quot;C&quot;,&quot;shape&quot;:[540],&quot;zarr_format&quot;:2}&#39;,
-  &#39;xh/0&#39;: [&#39;/glade/campaign/cgd/oce/projects/pump/cesm//gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods/run/gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods.mom6.static.nc&#39;,
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{'version': 1,
+ 'refs': {'.zgroup': '{"zarr_format":2}',
+  'xh/.zarray': '{"chunks":[540],"compressor":null,"dtype":"&gt;f8","fill_value":null,"filters":null,"order":"C","shape":[540],"zarr_format":2}',
+  'xh/0': ['/glade/campaign/cgd/oce/projects/pump/cesm//gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods/run/gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods.mom6.static.nc',
    23048,
    4320],
-  &#39;xh/.zattrs&#39;: &#39;{&quot;_ARRAY_DIMENSIONS&quot;:[&quot;xh&quot;],&quot;cartesian_axis&quot;:&quot;X&quot;,&quot;long_name&quot;:&quot;h point nominal longitude&quot;,&quot;units&quot;:&quot;degrees_east&quot;}&#39;,
-  &#39;yh/.zarray&#39;: &#39;{&quot;chunks&quot;:[458],&quot;compressor&quot;:null,&quot;dtype&quot;:&quot;&gt;f8&quot;,&quot;fill_value&quot;:null,&quot;filters&quot;:null,&quot;order&quot;:&quot;C&quot;,&quot;shape&quot;:[458],&quot;zarr_format&quot;:2}&#39;,
-  &#39;yh/0&#39;: [&#39;/glade/campaign/cgd/oce/projects/pump/cesm//gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods/run/gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods.mom6.static.nc&#39;,
+  'xh/.zattrs': '{"_ARRAY_DIMENSIONS":["xh"],"cartesian_axis":"X","long_name":"h point nominal longitude","units":"degrees_east"}',
+  'yh/.zarray': '{"chunks":[458],"compressor":null,"dtype":"&gt;f8","fill_value":null,"filters":null,"order":"C","shape":[458],"zarr_format":2}',
+  'yh/0': ['/glade/campaign/cgd/oce/projects/pump/cesm//gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods/run/gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods.mom6.static.nc',
    27368,
    3664],
-  &#39;yh/.zattrs&#39;: &#39;{&quot;_ARRAY_DIMENSIONS&quot;:[&quot;yh&quot;],&quot;cartesian_axis&quot;:&quot;Y&quot;,&quot;long_name&quot;:&quot;h point nominal latitude&quot;,&quot;units&quot;:&quot;degrees_north&quot;}&#39;,
-  &#39;xq/.zarray&#39;: &#39;{&quot;chunks&quot;:[540],&quot;compressor&quot;:null,&quot;dtype&quot;:&quot;&gt;f8&quot;,&quot;fill_value&quot;:null,&quot;filters&quot;:null,&quot;order&quot;:&quot;C&quot;,&quot;shape&quot;:[540],&quot;zarr_format&quot;:2}&#39;,
-  &#39;xq/0&#39;: [&#39;/glade/campaign/cgd/oce/projects/pump/cesm//gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods/run/gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods.mom6.static.nc&#39;,
+  'yh/.zattrs': '{"_ARRAY_DIMENSIONS":["yh"],"cartesian_axis":"Y","long_name":"h point nominal latitude","units":"degrees_north"}',
+  'xq/.zarray': '{"chunks":[540],"compressor":null,"dtype":"&gt;f8","fill_value":null,"filters":null,"order":"C","shape":[540],"zarr_format":2}',
+  'xq/0': ['/glade/campaign/cgd/oce/projects/pump/cesm//gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods/run/gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods.mom6.static.nc',
    31032,
    4320],
-  &#39;xq/.zattrs&#39;: &#39;{&quot;_ARRAY_DIMENSIONS&quot;:[&quot;xq&quot;],&quot;cartesian_axis&quot;:&quot;X&quot;,&quot;long_name&quot;:&quot;q point nominal longitude&quot;,&quot;units&quot;:&quot;degrees_east&quot;}&#39;,
-  &#39;yq/.zarray&#39;: &#39;{&quot;chunks&quot;:[458],&quot;compressor&quot;:null,&quot;dtype&quot;:&quot;&gt;f8&quot;,&quot;fill_value&quot;:null,&quot;filters&quot;:null,&quot;order&quot;:&quot;C&quot;,&quot;shape&quot;:[458],&quot;zarr_format&quot;:2}&#39;,
-  &#39;yq/0&#39;: [&#39;/glade/campaign/cgd/oce/projects/pump/cesm//gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods/run/gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods.mom6.static.nc&#39;,
+  'xq/.zattrs': '{"_ARRAY_DIMENSIONS":["xq"],"cartesian_axis":"X","long_name":"q point nominal longitude","units":"degrees_east"}',
+  'yq/.zarray': '{"chunks":[458],"compressor":null,"dtype":"&gt;f8","fill_value":null,"filters":null,"order":"C","shape":[458],"zarr_format":2}',
+  'yq/0': ['/glade/campaign/cgd/oce/projects/pump/cesm//gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods/run/gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods.mom6.static.nc',
    35352,
    3664],
-  &#39;yq/.zattrs&#39;: &#39;{&quot;_ARRAY_DIMENSIONS&quot;:[&quot;yq&quot;],&quot;cartesian_axis&quot;:&quot;Y&quot;,&quot;long_name&quot;:&quot;q point nominal latitude&quot;,&quot;units&quot;:&quot;degrees_north&quot;}&#39;,
-  &#39;geolon/.zarray&#39;: &#39;{&quot;chunks&quot;:[458,540],&quot;compressor&quot;:null,&quot;dtype&quot;:&quot;&gt;f4&quot;,&quot;fill_value&quot;:1.0000000200408773e+20,&quot;filters&quot;:null,&quot;order&quot;:&quot;C&quot;,&quot;shape&quot;:[458,540],&quot;zarr_format&quot;:2}&#39;,
-  &#39;geolon/0.0&#39;: [&#39;/glade/campaign/cgd/oce/projects/pump/cesm//gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods/run/gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods.mom6.static.nc&#39;,
+  'yq/.zattrs': '{"_ARRAY_DIMENSIONS":["yq"],"cartesian_axis":"Y","long_name":"q point nominal latitude","units":"degrees_north"}',
+  'geolon/.zarray': '{"chunks":[458,540],"compressor":null,"dtype":"&gt;f4","fill_value":1.0000000200408773e+20,"filters":null,"order":"C","shape":[458,540],"zarr_format":2}',
+  'geolon/0.0': ['/glade/campaign/cgd/oce/projects/pump/cesm//gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods/run/gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods.mom6.static.nc',
    39016,
    989280],
-  &#39;geolon/.zattrs&#39;: &#39;{&quot;_ARRAY_DIMENSIONS&quot;:[&quot;yh&quot;,&quot;xh&quot;],&quot;cell_methods&quot;:&quot;time: point&quot;,&quot;long_name&quot;:&quot;Longitude of tracer (T) points&quot;,&quot;units&quot;:&quot;degrees_east&quot;}&#39;,
-  &#39;geolat/.zarray&#39;: &#39;{&quot;chunks&quot;:[458,540],&quot;compressor&quot;:null,&quot;dtype&quot;:&quot;&gt;f4&quot;,&quot;fill_value&quot;:1.0000000200408773e+20,&quot;filters&quot;:null,&quot;order&quot;:&quot;C&quot;,&quot;shape&quot;:[458,540],&quot;zarr_format&quot;:2}&#39;,
-  &#39;geolat/0.0&#39;: [&#39;/glade/campaign/cgd/oce/projects/pump/cesm//gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods/run/gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods.mom6.static.nc&#39;,
+  'geolon/.zattrs': '{"_ARRAY_DIMENSIONS":["yh","xh"],"cell_methods":"time: point","long_name":"Longitude of tracer (T) points","units":"degrees_east"}',
+  'geolat/.zarray': '{"chunks":[458,540],"compressor":null,"dtype":"&gt;f4","fill_value":1.0000000200408773e+20,"filters":null,"order":"C","shape":[458,540],"zarr_format":2}',
+  'geolat/0.0': ['/glade/campaign/cgd/oce/projects/pump/cesm//gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods/run/gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods.mom6.static.nc',
    1028296,
    989280],
-  &#39;geolat/.zattrs&#39;: &#39;{&quot;_ARRAY_DIMENSIONS&quot;:[&quot;yh&quot;,&quot;xh&quot;],&quot;cell_methods&quot;:&quot;time: point&quot;,&quot;long_name&quot;:&quot;Latitude of tracer (T) points&quot;,&quot;units&quot;:&quot;degrees_north&quot;}&#39;,
-  &#39;geolon_c/.zarray&#39;: &#39;{&quot;chunks&quot;:[458,540],&quot;compressor&quot;:null,&quot;dtype&quot;:&quot;&gt;f4&quot;,&quot;fill_value&quot;:1.0000000200408773e+20,&quot;filters&quot;:null,&quot;order&quot;:&quot;C&quot;,&quot;shape&quot;:[458,540],&quot;zarr_format&quot;:2}&#39;,
-  &#39;geolon_c/0.0&#39;: [&#39;/glade/campaign/cgd/oce/projects/pump/cesm//gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods/run/gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods.mom6.static.nc&#39;,
+  'geolat/.zattrs': '{"_ARRAY_DIMENSIONS":["yh","xh"],"cell_methods":"time: point","long_name":"Latitude of tracer (T) points","units":"degrees_north"}',
+  'geolon_c/.zarray': '{"chunks":[458,540],"compressor":null,"dtype":"&gt;f4","fill_value":1.0000000200408773e+20,"filters":null,"order":"C","shape":[458,540],"zarr_format":2}',
+  'geolon_c/0.0': ['/glade/campaign/cgd/oce/projects/pump/cesm//gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods/run/gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods.mom6.static.nc',
    2017576,
    989280],
-  &#39;geolon_c/.zattrs&#39;: &#39;{&quot;_ARRAY_DIMENSIONS&quot;:[&quot;yq&quot;,&quot;xq&quot;],&quot;cell_methods&quot;:&quot;time: point&quot;,&quot;interp_method&quot;:&quot;none&quot;,&quot;long_name&quot;:&quot;Longitude of corner (Bu) points&quot;,&quot;units&quot;:&quot;degrees_east&quot;}&#39;,
-  &#39;geolat_c/.zarray&#39;: &#39;{&quot;chunks&quot;:[458,540],&quot;compressor&quot;:null,&quot;dtype&quot;:&quot;&gt;f4&quot;,&quot;fill_value&quot;:1.0000000200408773e+20,&quot;filters&quot;:null,&quot;order&quot;:&quot;C&quot;,&quot;shape&quot;:[458,540],&quot;zarr_format&quot;:2}&#39;,
-  &#39;geolat_c/0.0&#39;: [&#39;/glade/campaign/cgd/oce/projects/pump/cesm//gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods/run/gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods.mom6.static.nc&#39;,
+  'geolon_c/.zattrs': '{"_ARRAY_DIMENSIONS":["yq","xq"],"cell_methods":"time: point","interp_method":"none","long_name":"Longitude of corner (Bu) points","units":"degrees_east"}',
+  'geolat_c/.zarray': '{"chunks":[458,540],"compressor":null,"dtype":"&gt;f4","fill_value":1.0000000200408773e+20,"filters":null,"order":"C","shape":[458,540],"zarr_format":2}',
+  'geolat_c/0.0': ['/glade/campaign/cgd/oce/projects/pump/cesm//gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods/run/gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods.mom6.static.nc',
    3006856,
    989280],
-  &#39;geolat_c/.zattrs&#39;: &#39;{&quot;_ARRAY_DIMENSIONS&quot;:[&quot;yq&quot;,&quot;xq&quot;],&quot;cell_methods&quot;:&quot;time: point&quot;,&quot;interp_method&quot;:&quot;none&quot;,&quot;long_name&quot;:&quot;Latitude of corner (Bu) points&quot;,&quot;units&quot;:&quot;degrees_north&quot;}&#39;,
-  &#39;geolon_u/.zarray&#39;: &#39;{&quot;chunks&quot;:[458,540],&quot;compressor&quot;:null,&quot;dtype&quot;:&quot;&gt;f4&quot;,&quot;fill_value&quot;:1.0000000200408773e+20,&quot;filters&quot;:null,&quot;order&quot;:&quot;C&quot;,&quot;shape&quot;:[458,540],&quot;zarr_format&quot;:2}&#39;,
-  &#39;geolon_u/0.0&#39;: [&#39;/glade/campaign/cgd/oce/projects/pump/cesm//gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods/run/gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods.mom6.static.nc&#39;,
+  'geolat_c/.zattrs': '{"_ARRAY_DIMENSIONS":["yq","xq"],"cell_methods":"time: point","interp_method":"none","long_name":"Latitude of corner (Bu) points","units":"degrees_north"}',
+  'geolon_u/.zarray': '{"chunks":[458,540],"compressor":null,"dtype":"&gt;f4","fill_value":1.0000000200408773e+20,"filters":null,"order":"C","shape":[458,540],"zarr_format":2}',
+  'geolon_u/0.0': ['/glade/campaign/cgd/oce/projects/pump/cesm//gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods/run/gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods.mom6.static.nc',
    3996136,
    989280],
-  &#39;geolon_u/.zattrs&#39;: &#39;{&quot;_ARRAY_DIMENSIONS&quot;:[&quot;yh&quot;,&quot;xq&quot;],&quot;cell_methods&quot;:&quot;time: point&quot;,&quot;interp_method&quot;:&quot;none&quot;,&quot;long_name&quot;:&quot;Longitude of zonal velocity (Cu) points&quot;,&quot;units&quot;:&quot;degrees_east&quot;}&#39;,
-  &#39;geolat_u/.zarray&#39;: &#39;{&quot;chunks&quot;:[458,540],&quot;compressor&quot;:null,&quot;dtype&quot;:&quot;&gt;f4&quot;,&quot;fill_value&quot;:1.0000000200408773e+20,&quot;filters&quot;:null,&quot;order&quot;:&quot;C&quot;,&quot;shape&quot;:[458,540],&quot;zarr_format&quot;:2}&#39;,
-  &#39;geolat_u/0.0&#39;: [&#39;/glade/campaign/cgd/oce/projects/pump/cesm//gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods/run/gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods.mom6.static.nc&#39;,
+  'geolon_u/.zattrs': '{"_ARRAY_DIMENSIONS":["yh","xq"],"cell_methods":"time: point","interp_method":"none","long_name":"Longitude of zonal velocity (Cu) points","units":"degrees_east"}',
+  'geolat_u/.zarray': '{"chunks":[458,540],"compressor":null,"dtype":"&gt;f4","fill_value":1.0000000200408773e+20,"filters":null,"order":"C","shape":[458,540],"zarr_format":2}',
+  'geolat_u/0.0': ['/glade/campaign/cgd/oce/projects/pump/cesm//gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods/run/gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods.mom6.static.nc',
    4985416,
    989280],
-  &#39;geolat_u/.zattrs&#39;: &#39;{&quot;_ARRAY_DIMENSIONS&quot;:[&quot;yh&quot;,&quot;xq&quot;],&quot;cell_methods&quot;:&quot;time: point&quot;,&quot;interp_method&quot;:&quot;none&quot;,&quot;long_name&quot;:&quot;Latitude of zonal velocity (Cu) points&quot;,&quot;units&quot;:&quot;degrees_north&quot;}&#39;,
-  &#39;geolon_v/.zarray&#39;: &#39;{&quot;chunks&quot;:[458,540],&quot;compressor&quot;:null,&quot;dtype&quot;:&quot;&gt;f4&quot;,&quot;fill_value&quot;:1.0000000200408773e+20,&quot;filters&quot;:null,&quot;order&quot;:&quot;C&quot;,&quot;shape&quot;:[458,540],&quot;zarr_format&quot;:2}&#39;,
-  &#39;geolon_v/0.0&#39;: [&#39;/glade/campaign/cgd/oce/projects/pump/cesm//gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods/run/gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods.mom6.static.nc&#39;,
+  'geolat_u/.zattrs': '{"_ARRAY_DIMENSIONS":["yh","xq"],"cell_methods":"time: point","interp_method":"none","long_name":"Latitude of zonal velocity (Cu) points","units":"degrees_north"}',
+  'geolon_v/.zarray': '{"chunks":[458,540],"compressor":null,"dtype":"&gt;f4","fill_value":1.0000000200408773e+20,"filters":null,"order":"C","shape":[458,540],"zarr_format":2}',
+  'geolon_v/0.0': ['/glade/campaign/cgd/oce/projects/pump/cesm//gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods/run/gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods.mom6.static.nc',
    5974696,
    989280],
-  &#39;geolon_v/.zattrs&#39;: &#39;{&quot;_ARRAY_DIMENSIONS&quot;:[&quot;yq&quot;,&quot;xh&quot;],&quot;cell_methods&quot;:&quot;time: point&quot;,&quot;interp_method&quot;:&quot;none&quot;,&quot;long_name&quot;:&quot;Longitude of meridional velocity (Cv) points&quot;,&quot;units&quot;:&quot;degrees_east&quot;}&#39;,
-  &#39;geolat_v/.zarray&#39;: &#39;{&quot;chunks&quot;:[458,540],&quot;compressor&quot;:null,&quot;dtype&quot;:&quot;&gt;f4&quot;,&quot;fill_value&quot;:1.0000000200408773e+20,&quot;filters&quot;:null,&quot;order&quot;:&quot;C&quot;,&quot;shape&quot;:[458,540],&quot;zarr_format&quot;:2}&#39;,
-  &#39;geolat_v/0.0&#39;: [&#39;/glade/campaign/cgd/oce/projects/pump/cesm//gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods/run/gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods.mom6.static.nc&#39;,
+  'geolon_v/.zattrs': '{"_ARRAY_DIMENSIONS":["yq","xh"],"cell_methods":"time: point","interp_method":"none","long_name":"Longitude of meridional velocity (Cv) points","units":"degrees_east"}',
+  'geolat_v/.zarray': '{"chunks":[458,540],"compressor":null,"dtype":"&gt;f4","fill_value":1.0000000200408773e+20,"filters":null,"order":"C","shape":[458,540],"zarr_format":2}',
+  'geolat_v/0.0': ['/glade/campaign/cgd/oce/projects/pump/cesm//gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods/run/gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods.mom6.static.nc',
    6963976,
    989280],
-  &#39;geolat_v/.zattrs&#39;: &#39;{&quot;_ARRAY_DIMENSIONS&quot;:[&quot;yq&quot;,&quot;xh&quot;],&quot;cell_methods&quot;:&quot;time: point&quot;,&quot;interp_method&quot;:&quot;none&quot;,&quot;long_name&quot;:&quot;Latitude of meridional velocity (Cv) points&quot;,&quot;units&quot;:&quot;degrees_north&quot;}&#39;,
-  &#39;deptho/.zarray&#39;: &#39;{&quot;chunks&quot;:[458,540],&quot;compressor&quot;:null,&quot;dtype&quot;:&quot;&gt;f4&quot;,&quot;fill_value&quot;:1.0000000200408773e+20,&quot;filters&quot;:null,&quot;order&quot;:&quot;C&quot;,&quot;shape&quot;:[458,540],&quot;zarr_format&quot;:2}&#39;,
-  &#39;deptho/0.0&#39;: [&#39;/glade/campaign/cgd/oce/projects/pump/cesm//gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods/run/gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods.mom6.static.nc&#39;,
+  'geolat_v/.zattrs': '{"_ARRAY_DIMENSIONS":["yq","xh"],"cell_methods":"time: point","interp_method":"none","long_name":"Latitude of meridional velocity (Cv) points","units":"degrees_north"}',
+  'deptho/.zarray': '{"chunks":[458,540],"compressor":null,"dtype":"&gt;f4","fill_value":1.0000000200408773e+20,"filters":null,"order":"C","shape":[458,540],"zarr_format":2}',
+  'deptho/0.0': ['/glade/campaign/cgd/oce/projects/pump/cesm//gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods/run/gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods.mom6.static.nc',
    7953256,
    989280],
-  &#39;deptho/.zattrs&#39;: &#39;{&quot;_ARRAY_DIMENSIONS&quot;:[&quot;yh&quot;,&quot;xh&quot;],&quot;cell_measures&quot;:&quot;area: areacello&quot;,&quot;cell_methods&quot;:&quot;area:mean yh:mean xh:mean time: point&quot;,&quot;long_name&quot;:&quot;Sea Floor Depth&quot;,&quot;standard_name&quot;:&quot;sea_floor_depth_below_geoid&quot;,&quot;units&quot;:&quot;m&quot;}&#39;,
-  &#39;wet/.zarray&#39;: &#39;{&quot;chunks&quot;:[458,540],&quot;compressor&quot;:null,&quot;dtype&quot;:&quot;&gt;f4&quot;,&quot;fill_value&quot;:1.0000000200408773e+20,&quot;filters&quot;:null,&quot;order&quot;:&quot;C&quot;,&quot;shape&quot;:[458,540],&quot;zarr_format&quot;:2}&#39;,
-  &#39;wet/0.0&#39;: [&#39;/glade/campaign/cgd/oce/projects/pump/cesm//gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods/run/gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods.mom6.static.nc&#39;,
+  'deptho/.zattrs': '{"_ARRAY_DIMENSIONS":["yh","xh"],"cell_measures":"area: areacello","cell_methods":"area:mean yh:mean xh:mean time: point","long_name":"Sea Floor Depth","standard_name":"sea_floor_depth_below_geoid","units":"m"}',
+  'wet/.zarray': '{"chunks":[458,540],"compressor":null,"dtype":"&gt;f4","fill_value":1.0000000200408773e+20,"filters":null,"order":"C","shape":[458,540],"zarr_format":2}',
+  'wet/0.0': ['/glade/campaign/cgd/oce/projects/pump/cesm//gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods/run/gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods.mom6.static.nc',
    8942536,
    989280],
-  &#39;wet/.zattrs&#39;: &#39;{&quot;_ARRAY_DIMENSIONS&quot;:[&quot;yh&quot;,&quot;xh&quot;],&quot;cell_measures&quot;:&quot;area: areacello&quot;,&quot;cell_methods&quot;:&quot;time: point&quot;,&quot;long_name&quot;:&quot;0 if land, 1 if ocean at tracer points&quot;,&quot;units&quot;:&quot;none&quot;}&#39;,
-  &#39;wet_c/.zarray&#39;: &#39;{&quot;chunks&quot;:[458,540],&quot;compressor&quot;:null,&quot;dtype&quot;:&quot;&gt;f4&quot;,&quot;fill_value&quot;:1.0000000200408773e+20,&quot;filters&quot;:null,&quot;order&quot;:&quot;C&quot;,&quot;shape&quot;:[458,540],&quot;zarr_format&quot;:2}&#39;,
-  &#39;wet_c/0.0&#39;: [&#39;/glade/campaign/cgd/oce/projects/pump/cesm//gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods/run/gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods.mom6.static.nc&#39;,
+  'wet/.zattrs': '{"_ARRAY_DIMENSIONS":["yh","xh"],"cell_measures":"area: areacello","cell_methods":"time: point","long_name":"0 if land, 1 if ocean at tracer points","units":"none"}',
+  'wet_c/.zarray': '{"chunks":[458,540],"compressor":null,"dtype":"&gt;f4","fill_value":1.0000000200408773e+20,"filters":null,"order":"C","shape":[458,540],"zarr_format":2}',
+  'wet_c/0.0': ['/glade/campaign/cgd/oce/projects/pump/cesm//gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods/run/gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods.mom6.static.nc',
    9931816,
    989280],
-  &#39;wet_c/.zattrs&#39;: &#39;{&quot;_ARRAY_DIMENSIONS&quot;:[&quot;yq&quot;,&quot;xq&quot;],&quot;cell_methods&quot;:&quot;time: point&quot;,&quot;interp_method&quot;:&quot;none&quot;,&quot;long_name&quot;:&quot;0 if land, 1 if ocean at corner (Bu) points&quot;,&quot;units&quot;:&quot;none&quot;}&#39;,
-  &#39;wet_u/.zarray&#39;: &#39;{&quot;chunks&quot;:[458,540],&quot;compressor&quot;:null,&quot;dtype&quot;:&quot;&gt;f4&quot;,&quot;fill_value&quot;:1.0000000200408773e+20,&quot;filters&quot;:null,&quot;order&quot;:&quot;C&quot;,&quot;shape&quot;:[458,540],&quot;zarr_format&quot;:2}&#39;,
-  &#39;wet_u/0.0&#39;: [&#39;/glade/campaign/cgd/oce/projects/pump/cesm//gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods/run/gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods.mom6.static.nc&#39;,
+  'wet_c/.zattrs': '{"_ARRAY_DIMENSIONS":["yq","xq"],"cell_methods":"time: point","interp_method":"none","long_name":"0 if land, 1 if ocean at corner (Bu) points","units":"none"}',
+  'wet_u/.zarray': '{"chunks":[458,540],"compressor":null,"dtype":"&gt;f4","fill_value":1.0000000200408773e+20,"filters":null,"order":"C","shape":[458,540],"zarr_format":2}',
+  'wet_u/0.0': ['/glade/campaign/cgd/oce/projects/pump/cesm//gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods/run/gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods.mom6.static.nc',
    10921096,
    989280],
-  &#39;wet_u/.zattrs&#39;: &#39;{&quot;_ARRAY_DIMENSIONS&quot;:[&quot;yh&quot;,&quot;xq&quot;],&quot;cell_methods&quot;:&quot;time: point&quot;,&quot;interp_method&quot;:&quot;none&quot;,&quot;long_name&quot;:&quot;0 if land, 1 if ocean at zonal velocity (Cu) points&quot;,&quot;units&quot;:&quot;none&quot;}&#39;,
-  &#39;wet_v/.zarray&#39;: &#39;{&quot;chunks&quot;:[458,540],&quot;compressor&quot;:null,&quot;dtype&quot;:&quot;&gt;f4&quot;,&quot;fill_value&quot;:1.0000000200408773e+20,&quot;filters&quot;:null,&quot;order&quot;:&quot;C&quot;,&quot;shape&quot;:[458,540],&quot;zarr_format&quot;:2}&#39;,
-  &#39;wet_v/0.0&#39;: [&#39;/glade/campaign/cgd/oce/projects/pump/cesm//gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods/run/gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods.mom6.static.nc&#39;,
+  'wet_u/.zattrs': '{"_ARRAY_DIMENSIONS":["yh","xq"],"cell_methods":"time: point","interp_method":"none","long_name":"0 if land, 1 if ocean at zonal velocity (Cu) points","units":"none"}',
+  'wet_v/.zarray': '{"chunks":[458,540],"compressor":null,"dtype":"&gt;f4","fill_value":1.0000000200408773e+20,"filters":null,"order":"C","shape":[458,540],"zarr_format":2}',
+  'wet_v/0.0': ['/glade/campaign/cgd/oce/projects/pump/cesm//gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods/run/gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods.mom6.static.nc',
    11910376,
    989280],
-  &#39;wet_v/.zattrs&#39;: &#39;{&quot;_ARRAY_DIMENSIONS&quot;:[&quot;yq&quot;,&quot;xh&quot;],&quot;cell_methods&quot;:&quot;time: point&quot;,&quot;interp_method&quot;:&quot;none&quot;,&quot;long_name&quot;:&quot;0 if land, 1 if ocean at meridional velocity (Cv) points&quot;,&quot;units&quot;:&quot;none&quot;}&#39;,
-  &#39;Coriolis/.zarray&#39;: &#39;{&quot;chunks&quot;:[458,540],&quot;compressor&quot;:null,&quot;dtype&quot;:&quot;&gt;f4&quot;,&quot;fill_value&quot;:1.0000000200408773e+20,&quot;filters&quot;:null,&quot;order&quot;:&quot;C&quot;,&quot;shape&quot;:[458,540],&quot;zarr_format&quot;:2}&#39;,
-  &#39;Coriolis/0.0&#39;: [&#39;/glade/campaign/cgd/oce/projects/pump/cesm//gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods/run/gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods.mom6.static.nc&#39;,
+  'wet_v/.zattrs': '{"_ARRAY_DIMENSIONS":["yq","xh"],"cell_methods":"time: point","interp_method":"none","long_name":"0 if land, 1 if ocean at meridional velocity (Cv) points","units":"none"}',
+  'Coriolis/.zarray': '{"chunks":[458,540],"compressor":null,"dtype":"&gt;f4","fill_value":1.0000000200408773e+20,"filters":null,"order":"C","shape":[458,540],"zarr_format":2}',
+  'Coriolis/0.0': ['/glade/campaign/cgd/oce/projects/pump/cesm//gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods/run/gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods.mom6.static.nc',
    12899656,
    989280],
-  &#39;Coriolis/.zattrs&#39;: &#39;{&quot;_ARRAY_DIMENSIONS&quot;:[&quot;yq&quot;,&quot;xq&quot;],&quot;cell_methods&quot;:&quot;time: point&quot;,&quot;interp_method&quot;:&quot;none&quot;,&quot;long_name&quot;:&quot;Coriolis parameter at corner (Bu) points&quot;,&quot;units&quot;:&quot;s-1&quot;}&#39;,
-  &#39;areacello/.zarray&#39;: &#39;{&quot;chunks&quot;:[458,540],&quot;compressor&quot;:null,&quot;dtype&quot;:&quot;&gt;f4&quot;,&quot;fill_value&quot;:1.0000000200408773e+20,&quot;filters&quot;:null,&quot;order&quot;:&quot;C&quot;,&quot;shape&quot;:[458,540],&quot;zarr_format&quot;:2}&#39;,
-  &#39;areacello/0.0&#39;: [&#39;/glade/campaign/cgd/oce/projects/pump/cesm//gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods/run/gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods.mom6.static.nc&#39;,
+  'Coriolis/.zattrs': '{"_ARRAY_DIMENSIONS":["yq","xq"],"cell_methods":"time: point","interp_method":"none","long_name":"Coriolis parameter at corner (Bu) points","units":"s-1"}',
+  'areacello/.zarray': '{"chunks":[458,540],"compressor":null,"dtype":"&gt;f4","fill_value":1.0000000200408773e+20,"filters":null,"order":"C","shape":[458,540],"zarr_format":2}',
+  'areacello/0.0': ['/glade/campaign/cgd/oce/projects/pump/cesm//gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods/run/gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods.mom6.static.nc',
    13888936,
    989280],
-  &#39;areacello/.zattrs&#39;: &#39;{&quot;_ARRAY_DIMENSIONS&quot;:[&quot;yh&quot;,&quot;xh&quot;],&quot;cell_methods&quot;:&quot;area:sum yh:sum xh:sum time: point&quot;,&quot;long_name&quot;:&quot;Ocean Grid-Cell Area&quot;,&quot;standard_name&quot;:&quot;cell_area&quot;,&quot;units&quot;:&quot;m2&quot;}&#39;,
-  &#39;areacello_cu/.zarray&#39;: &#39;{&quot;chunks&quot;:[458,540],&quot;compressor&quot;:null,&quot;dtype&quot;:&quot;&gt;f4&quot;,&quot;fill_value&quot;:1.0000000200408773e+20,&quot;filters&quot;:null,&quot;order&quot;:&quot;C&quot;,&quot;shape&quot;:[458,540],&quot;zarr_format&quot;:2}&#39;,
-  &#39;areacello_cu/0.0&#39;: [&#39;/glade/campaign/cgd/oce/projects/pump/cesm//gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods/run/gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods.mom6.static.nc&#39;,
+  'areacello/.zattrs': '{"_ARRAY_DIMENSIONS":["yh","xh"],"cell_methods":"area:sum yh:sum xh:sum time: point","long_name":"Ocean Grid-Cell Area","standard_name":"cell_area","units":"m2"}',
+  'areacello_cu/.zarray': '{"chunks":[458,540],"compressor":null,"dtype":"&gt;f4","fill_value":1.0000000200408773e+20,"filters":null,"order":"C","shape":[458,540],"zarr_format":2}',
+  'areacello_cu/0.0': ['/glade/campaign/cgd/oce/projects/pump/cesm//gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods/run/gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods.mom6.static.nc',
    14878216,
    989280],
-  &#39;areacello_cu/.zattrs&#39;: &#39;{&quot;_ARRAY_DIMENSIONS&quot;:[&quot;yh&quot;,&quot;xq&quot;],&quot;cell_methods&quot;:&quot;area:sum yh:sum xq:sum time: point&quot;,&quot;long_name&quot;:&quot;Ocean Grid-Cell Area&quot;,&quot;standard_name&quot;:&quot;cell_area&quot;,&quot;units&quot;:&quot;m2&quot;}&#39;,
-  &#39;areacello_cv/.zarray&#39;: &#39;{&quot;chunks&quot;:[458,540],&quot;compressor&quot;:null,&quot;dtype&quot;:&quot;&gt;f4&quot;,&quot;fill_value&quot;:1.0000000200408773e+20,&quot;filters&quot;:null,&quot;order&quot;:&quot;C&quot;,&quot;shape&quot;:[458,540],&quot;zarr_format&quot;:2}&#39;,
-  &#39;areacello_cv/0.0&#39;: [&#39;/glade/campaign/cgd/oce/projects/pump/cesm//gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods/run/gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods.mom6.static.nc&#39;,
+  'areacello_cu/.zattrs': '{"_ARRAY_DIMENSIONS":["yh","xq"],"cell_methods":"area:sum yh:sum xq:sum time: point","long_name":"Ocean Grid-Cell Area","standard_name":"cell_area","units":"m2"}',
+  'areacello_cv/.zarray': '{"chunks":[458,540],"compressor":null,"dtype":"&gt;f4","fill_value":1.0000000200408773e+20,"filters":null,"order":"C","shape":[458,540],"zarr_format":2}',
+  'areacello_cv/0.0': ['/glade/campaign/cgd/oce/projects/pump/cesm//gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods/run/gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods.mom6.static.nc',
    15867496,
    989280],
-  &#39;areacello_cv/.zattrs&#39;: &#39;{&quot;_ARRAY_DIMENSIONS&quot;:[&quot;yq&quot;,&quot;xh&quot;],&quot;cell_methods&quot;:&quot;area:sum yq:sum xh:sum time: point&quot;,&quot;long_name&quot;:&quot;Ocean Grid-Cell Area&quot;,&quot;standard_name&quot;:&quot;cell_area&quot;,&quot;units&quot;:&quot;m2&quot;}&#39;,
-  &#39;areacello_bu/.zarray&#39;: &#39;{&quot;chunks&quot;:[458,540],&quot;compressor&quot;:null,&quot;dtype&quot;:&quot;&gt;f4&quot;,&quot;fill_value&quot;:1.0000000200408773e+20,&quot;filters&quot;:null,&quot;order&quot;:&quot;C&quot;,&quot;shape&quot;:[458,540],&quot;zarr_format&quot;:2}&#39;,
-  &#39;areacello_bu/0.0&#39;: [&#39;/glade/campaign/cgd/oce/projects/pump/cesm//gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods/run/gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods.mom6.static.nc&#39;,
+  'areacello_cv/.zattrs': '{"_ARRAY_DIMENSIONS":["yq","xh"],"cell_methods":"area:sum yq:sum xh:sum time: point","long_name":"Ocean Grid-Cell Area","standard_name":"cell_area","units":"m2"}',
+  'areacello_bu/.zarray': '{"chunks":[458,540],"compressor":null,"dtype":"&gt;f4","fill_value":1.0000000200408773e+20,"filters":null,"order":"C","shape":[458,540],"zarr_format":2}',
+  'areacello_bu/0.0': ['/glade/campaign/cgd/oce/projects/pump/cesm//gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods/run/gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods.mom6.static.nc',
    16856776,
    989280],
-  &#39;areacello_bu/.zattrs&#39;: &#39;{&quot;_ARRAY_DIMENSIONS&quot;:[&quot;yq&quot;,&quot;xq&quot;],&quot;cell_methods&quot;:&quot;area:sum yq:sum xq:sum time: point&quot;,&quot;long_name&quot;:&quot;Ocean Grid-Cell Area&quot;,&quot;standard_name&quot;:&quot;cell_area&quot;,&quot;units&quot;:&quot;m2&quot;}&#39;,
-  &#39;sin_rot/.zarray&#39;: &#39;{&quot;chunks&quot;:[458,540],&quot;compressor&quot;:null,&quot;dtype&quot;:&quot;&gt;f4&quot;,&quot;fill_value&quot;:1.0000000200408773e+20,&quot;filters&quot;:null,&quot;order&quot;:&quot;C&quot;,&quot;shape&quot;:[458,540],&quot;zarr_format&quot;:2}&#39;,
-  &#39;sin_rot/0.0&#39;: [&#39;/glade/campaign/cgd/oce/projects/pump/cesm//gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods/run/gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods.mom6.static.nc&#39;,
+  'areacello_bu/.zattrs': '{"_ARRAY_DIMENSIONS":["yq","xq"],"cell_methods":"area:sum yq:sum xq:sum time: point","long_name":"Ocean Grid-Cell Area","standard_name":"cell_area","units":"m2"}',
+  'sin_rot/.zarray': '{"chunks":[458,540],"compressor":null,"dtype":"&gt;f4","fill_value":1.0000000200408773e+20,"filters":null,"order":"C","shape":[458,540],"zarr_format":2}',
+  'sin_rot/0.0': ['/glade/campaign/cgd/oce/projects/pump/cesm//gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods/run/gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods.mom6.static.nc',
    17846056,
    989280],
-  &#39;sin_rot/.zattrs&#39;: &#39;{&quot;_ARRAY_DIMENSIONS&quot;:[&quot;yh&quot;,&quot;xh&quot;],&quot;cell_methods&quot;:&quot;time: point&quot;,&quot;long_name&quot;:&quot;sine of the clockwise angle of the ocean grid north to true north&quot;,&quot;units&quot;:&quot;none&quot;}&#39;,
-  &#39;cos_rot/.zarray&#39;: &#39;{&quot;chunks&quot;:[458,540],&quot;compressor&quot;:null,&quot;dtype&quot;:&quot;&gt;f4&quot;,&quot;fill_value&quot;:1.0000000200408773e+20,&quot;filters&quot;:null,&quot;order&quot;:&quot;C&quot;,&quot;shape&quot;:[458,540],&quot;zarr_format&quot;:2}&#39;,
-  &#39;cos_rot/0.0&#39;: [&#39;/glade/campaign/cgd/oce/projects/pump/cesm//gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods/run/gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods.mom6.static.nc&#39;,
+  'sin_rot/.zattrs': '{"_ARRAY_DIMENSIONS":["yh","xh"],"cell_methods":"time: point","long_name":"sine of the clockwise angle of the ocean grid north to true north","units":"none"}',
+  'cos_rot/.zarray': '{"chunks":[458,540],"compressor":null,"dtype":"&gt;f4","fill_value":1.0000000200408773e+20,"filters":null,"order":"C","shape":[458,540],"zarr_format":2}',
+  'cos_rot/0.0': ['/glade/campaign/cgd/oce/projects/pump/cesm//gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods/run/gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods.mom6.static.nc',
    18835336,
    989280],
-  &#39;cos_rot/.zattrs&#39;: &#39;{&quot;_ARRAY_DIMENSIONS&quot;:[&quot;yh&quot;,&quot;xh&quot;],&quot;cell_methods&quot;:&quot;time: point&quot;,&quot;long_name&quot;:&quot;cosine of the clockwise angle of the ocean grid north to true north&quot;,&quot;units&quot;:&quot;none&quot;}&#39;,
-  &#39;time/.zarray&#39;: &#39;{&quot;chunks&quot;:[1],&quot;compressor&quot;:null,&quot;dtype&quot;:&quot;&gt;f8&quot;,&quot;fill_value&quot;:null,&quot;filters&quot;:null,&quot;order&quot;:&quot;C&quot;,&quot;shape&quot;:[1],&quot;zarr_format&quot;:2}&#39;,
-  &#39;time/.zattrs&#39;: &#39;{&quot;_ARRAY_DIMENSIONS&quot;:[&quot;time&quot;],&quot;calendar&quot;:&quot;NOLEAP&quot;,&quot;calendar_type&quot;:&quot;NOLEAP&quot;,&quot;cartesian_axis&quot;:&quot;T&quot;,&quot;long_name&quot;:&quot;time&quot;,&quot;units&quot;:&quot;days since 0001-01-01 00:00:00&quot;}&#39;,
-  &#39;time/0&#39;: &#39;\x00\x00\x00\x00\x00\x00\x00\x00&#39;,
-  &#39;.zattrs&#39;: &#39;{&quot;grid_tile&quot;:&quot;N\\/A&quot;,&quot;grid_type&quot;:&quot;regular&quot;,&quot;title&quot;:&quot;MOM6 diagnostic fields table for CESM case: gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods&quot;}&#39;}}
+  'cos_rot/.zattrs': '{"_ARRAY_DIMENSIONS":["yh","xh"],"cell_methods":"time: point","long_name":"cosine of the clockwise angle of the ocean grid north to true north","units":"none"}',
+  'time/.zarray': '{"chunks":[1],"compressor":null,"dtype":"&gt;f8","fill_value":null,"filters":null,"order":"C","shape":[1],"zarr_format":2}',
+  'time/.zattrs': '{"_ARRAY_DIMENSIONS":["time"],"calendar":"NOLEAP","calendar_type":"NOLEAP","cartesian_axis":"T","long_name":"time","units":"days since 0001-01-01 00:00:00"}',
+  'time/0': '\x00\x00\x00\x00\x00\x00\x00\x00',
+  '.zattrs': '{"grid_tile":"N\\/A","grid_type":"regular","title":"MOM6 diagnostic fields table for CESM case: gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods"}'}}
 </pre></div>
 </div>
 </div>
@@ -1091,12 +1091,12 @@ This can take a while.</p>
 <p>First note that the <code class="docutils literal notranslate"><span class="pre">xh</span></code> variable is stored as a reference to a byte range in the static file.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">refs</span><span class="p">[</span><span class="s2">&quot;refs&quot;</span><span class="p">][</span><span class="s2">&quot;xh/0&quot;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">refs</span><span class="p">[</span><span class="s2">"refs"</span><span class="p">][</span><span class="s2">"xh/0"</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;/glade/campaign/cgd/oce/projects/pump/cesm//gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods/run/gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods.mom6.static.nc&#39;,
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>['/glade/campaign/cgd/oce/projects/pump/cesm//gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods/run/gmom.e23.GJRAv3.TL319_t061_zstar_N65.baseline.kpp.lmd.004.mixpods.mom6.static.nc',
  23048,
  4320]
 </pre></div>
@@ -1106,12 +1106,12 @@ This can take a while.</p>
 <p>The data for <code class="docutils literal notranslate"><span class="pre">time</span></code> is stored as bytes (here 0)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">refs</span><span class="p">[</span><span class="s2">&quot;refs&quot;</span><span class="p">][</span><span class="s2">&quot;time/0&quot;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">refs</span><span class="p">[</span><span class="s2">"refs"</span><span class="p">][</span><span class="s2">"time/0"</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;\x00\x00\x00\x00\x00\x00\x00\x00&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'\x00\x00\x00\x00\x00\x00\x00\x00'
 </pre></div>
 </div>
 </div>
@@ -1121,12 +1121,12 @@ This can take a while.</p>
 <p>We see that the data is base64 encoded.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">NetCDF3ToZarr</span><span class="p">(</span><span class="n">staticfile</span><span class="p">,</span> <span class="n">inline_threshold</span><span class="o">=</span><span class="mi">5000</span><span class="p">)</span><span class="o">.</span><span class="n">translate</span><span class="p">()[</span><span class="s2">&quot;refs&quot;</span><span class="p">][</span><span class="s2">&quot;xh/0&quot;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">NetCDF3ToZarr</span><span class="p">(</span><span class="n">staticfile</span><span class="p">,</span> <span class="n">inline_threshold</span><span class="o">=</span><span class="mi">5000</span><span class="p">)</span><span class="o">.</span><span class="n">translate</span><span class="p">()[</span><span class="s2">"refs"</span><span class="p">][</span><span class="s2">"xh/0"</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;base64:wHHqqqqqqqrAceAAAAAAAMBx1VVVVVVWwHHKqqqqqqrAccAAAAAAAMBxtVVVVVVUwHGqqqqqqqzAcaAAAAAAAMBxlVVVVVVUwHGKqqqqqqzAcYAAAAAAAMBxdVVVVVVUwHFqqqqqqqzAcWAAAAAAAMBxVVVVVVVUwHFKqqqqqqzAcUAAAAAAAMBxNVVVVVVUwHEqqqqqqqzAcSAAAAAAAMBxFVVVVVVUwHEKqqqqqqzAcQAAAAAAAMBw9VVVVVVUwHDqqqqqqqzAcOAAAAAAAMBw1VVVVVVUwHDKqqqqqqzAcMAAAAAAAMBwtVVVVVVUwHCqqqqqqqzAcKAAAAAAAMBwlVVVVVVUwHCKqqqqqqzAcIAAAAAAAMBwdVVVVVVUwHBqqqqqqqzAcGAAAAAAAMBwVVVVVVVUwHBKqqqqqqzAcEAAAAAAAMBwNVVVVVVUwHAqqqqqqqzAcCAAAAAAAMBwFVVVVVVUwHAKqqqqqqzAcAAAAAAAAMBv6qqqqqqowG/VVVVVVVjAb8AAAAAAAMBvqqqqqqqowG+VVVVVVVjAb4AAAAAAAMBvaqqqqqqowG9VVVVVVVjAb0AAAAAAAMBvKqqqqqqowG8VVVVVVVjAbwAAAAAAAMBu6qqqqqqowG7VVVVVVVjAbsAAAAAAAMBuqqqqqqqowG6VVVVVVVjAboAAAAAAAMBuaqqqqqqowG5VVVVVVVjAbkAAAAAAAMBuKqqqqqqowG4VVVVVVVjAbgAAAAAAAMBt6qqqqqqowG3VVVVVVVjAbcAAAAAAAMBtqqqqqqqowG2VVVVVVVjAbYAAAAAAAMBtaqqqqqqowG1VVVVVVVjAbUAAAAAAAMBtKqqqqqqowG0VVVVVVVjAbQAAAAAAAMBs6qqqqqqowGzVVVVVVVjAbMAAAAAAAMBsqqqqqqqowGyVVVVVVVjAbIAAAAAAAMBsaqqqqqqowGxVVVVVVVjAbEAAAAAAAMBsKqqqqqqowGwVVVVVVVjAbAAAAAAAAMBr6qqqqqqowGvVVVVVVVjAa8AAAAAAAMBrqqqqqqqwwGuVVVVVVVjAa4AAAAAAAMBraqqqqqqwwGtVVVVVVVjAa0AAAAAAAMBrKqqqqqqwwGsVVVVVVVjAawAAAAAAAMBq6qqqqqqwwGrVVVVVVVjAasAAAAAAAMBqqqqqqqqwwGqVVVVVVVjAaoAAAAAAAMBqaqqqqqqwwGpVVVVVVVjAakAAAAAAAMBqKqqqqqqwwGoVVVVVVVjAagAAAAAAAMBp6qqqqqqwwGnVVVVVVVjAacAAAAAAAMBpqqqqqqqwwGmVVVVVVVjAaYAAAAAAAMBpaqqqqqqwwGlVVVVVVVjAaUAAAAAAAMBpKqqqqqqwwGkVVVVVVVjAaQAAAAAAAMBo6qqqqqqwwGjVVVVVVVjAaMAAAAAAAMBoqqqqqqqwwGiVVVVVVVjAaIAAAAAAAMBoaqqqqqqwwGhVVVVVVVjAaEAAAAAAAMBoKqqqqqqwwGgVVVVVVVjAaAAAAAAAAMBn6qqqqqqwwGfVVVVVVVjAZ8AAAAAAAMBnqqqqqqqwwGeVVVVVVVjAZ4AAAAAAAMBnaqqqqqqwwGdVVVVVVVjAZ0AAAAAAAMBnKqqqqqqwwGcVVVVVVVjAZwAAAAAAAMBm6qqqqqqwwGbVVVVVVVjAZsAAAAAAAMBmqqqqqqqwwGaVVVVVVVjAZoAAAAAAAMBmaqqqqqqwwGZVVVVVVVjAZkAAAAAAAMBmKqqqqqqwwGYVVVVVVVjAZgAAAAAAAMBl6qqqqqqwwGXVVVVVVVjAZcAAAAAAAMBlqqqqqqqwwGWVVVVVVVjAZYAAAAAAAMBlaqqqqqqwwGVVVVVVVVjAZUAAAAAAAMBlKqqqqqqwwGUVVVVVVVjAZQAAAAAAAMBk6qqqqqqwwGTVVVVVVVjAZMAAAAAAAMBkqqqqqqqwwGSVVVVVVVjAZIAAAAAAAMBkaqqqqqqwwGRVVVVVVVjAZEAAAAAAAMBkKqqqqqqwwGQVVVVVVVjAZAAAAAAAAMBj6qqqqqqwwGPVVVVVVVjAY8AAAAAAAMBjqqqqqqqwwGOVVVVVVVjAY4AAAAAAAMBjaqqqqqqwwGNVVVVVVVjAY0AAAAAAAMBjKqqqqqqwwGMVVVVVVVjAYwAAAAAAAMBi6qqqqqqwwGLVVVVVVVjAYsAAAAAAAMBiqqqqqqqwwGKVVVVVVVjAYoAAAAAAAMBiaqqqqqqwwGJVVVVVVVjAYkAAAAAAAMBiKqqqqqqwwGIVVVVVVVjAYgAAAAAAAMBh6qqqqqqwwGHVVVVVVVjAYcAAAAAAAMBhqqqqqqqwwGGVVVVVVVjAYYAAAAAAAMBhaqqqqqqwwGFVVVVVVVjAYUAAAAAAAMBhKqqqqqqwwGEVVVVVVVjAYQAAAAAAAMBg6qqqqqqwwGDVVVVVVVjAYMAAAAAAAMBgqqqqqqqwwGCVVVVVVVjAYIAAAAAAAMBgaqqqqqqwwGBVVVVVVVjAYEAAAAAAAMBgKqqqqqqwwGAVVVVVVVjAYAAAAAAAAMBf1VVVVVVgwF+qqqqqqrDAX4AAAAAAAMBfVVVVVVVgwF8qqqqqqrDAXwAAAAAAAMBe1VVVVVVgwF6qqqqqqrDAXoAAAAAAAMBeVVVVVVVgwF4qqqqqqrDAXgAAAAAAAMBd1VVVVVVgwF2qqqqqqrDAXYAAAAAAAMBdVVVVVVVgwF0qqqqqqrDAXQAAAAAAAMBc1VVVVVVgwFyqqqqqqrDAXIAAAAAAAMBcVVVVVVVgwFwqqqqqqrDAXAAAAAAAAMBb1VVVVVVgwFuqqqqqqrDAW4AAAAAAAMBbVVVVVVVgwFsqqqqqqrDAWwAAAAAAAMBa1VVVVVVgwFqqqqqqqrDAWoAAAAAAAMBaVVVVVVVgwFoqqqqqqrDAWgAAAAAAAMBZ1VVVVVVgwFmqqqqqqrDAWYAAAAAAAMBZVVVVVVVgwFkqqqqqqrDAWQAAAAAAAMBY1VVVVVVgwFiqqqqqqrDAWIAAAAAAAMBYVVVVVVVgwFgqqqqqqrDAWAAAAAAAAMBX1VVVVVVgwFeqqqqqqrDAV4AAAAAAAMBXVVVVVVVgwFcqqqqqqrDAVwAAAAAAAMBW1VVVVVVgwFaqqqqqqrDAVoAAAAAAAMBWVVVVVVVgwFYqqqqqqrDAVgAAAAAAAMBV1VVVVVVgwFWqqqqqqrDAVYAAAAAAAMBVVVVVVVVgwFUqqqqqqrDAVQAAAAAAAMBU1VVVVVVgwFSqqqqqqrDAVIAAAAAAAMBUVVVVVVVgwFQqqqqqqrDAVAAAAAAAAMBT1VVVVVVgwFOqqqqqqrDAU4AAAAAAAMBTVVVVVVVgwFMqqqqqqrDAUwAAAAAAAMBS1VVVVVVgwFKqqqqqqrDAUoAAAAAAAMBSVVVVVVVgwFIqqqqqqrDAUgAAAAAAAMBR1VVVVVVgwFGqqqqqqrDAUYAAAAAAAMBRVVVVVVVgwFEqqqqqqrDAUQAAAAAAAMBQ1VVVVVVgwFCqqqqqqrDAUIAAAAAAAMBQVVVVVVVgwFAqqqqqqrDAUAAAAAAAAMBPqqqqqqrAwE9VVVVVVWDATwAAAAAAAMBOqqqqqqrAwE5VVVVVVWDATgAAAAAAAMBNqqqqqqrAwE1VVVVVVWDATQAAAAAAAMBMqqqqqqrAwExVVVVVVWDATAAAAAAAAMBLqqqqqqrAwEtVVVVVVWDASwAAAAAAAMBKqqqqqqrAwEpVVVVVVWDASgAAAAAAAMBJqqqqqqrAwElVVVVVVWDASQAAAAAAAMBIqqqqqqrAwEhVVVVVVWDASAAAAAAAAMBHqqqqqqrAwEdVVVVVVWDARwAAAAAAAMBGqqqqqqrAwEZVVVVVVWDARgAAAAAAAMBFqqqqqqrAwEVVVVVVVWDARQAAAAAAAMBEqqqqqqrAwERVVVVVVWDARAAAAAAAAMBDqqqqqqrAwENVVVVVVWDAQwAAAAAAAMBCqqqqqqrAwEJVVVVVVWDAQgAAAAAAAMBBqqqqqqrAwEFVVVVVVWDAQQAAAAAAAMBAqqqqqqrAwEBVVVVVVWDAQAAAAAAAAMA/VVVVVVWAwD6qqqqqqsDAPgAAAAAAAMA9VVVVVVWAwDyqqqqqqsDAPAAAAAAAAMA7VVVVVVWAwDqqqqqqqsDAOgAAAAAAAMA5VVVVVVWAwDiqqqqqqsDAOAAAAAAAAMA3VVVVVVWAwDaqqqqqqsDANgAAAAAAAMA1VVVVVVWAwDSqqqqqqsDANAAAAAAAAMAzVVVVVVWAwDKqqqqqqsDAMgAAAAAAAMAxVVVVVVWAwDCqqqqqqsDAMAAAAAAAAMAuqqqqqqsAwC1VVVVVVYDALAAAAAAAAMAqqqqqqqsAwClVVVVVVYDAKAAAAAAAAMAmqqqqqqsAwCVVVVVVVYDAJAAAAAAAAMAiqqqqqqsAwCFVVVVVVYDAIAAAAAAAAMAdVVVVVVYAwBqqqqqqqwDAGAAAAAAAAMAVVVVVVVYAwBKqqqqqqwDAEAAAAAAAAMAKqqqqqqwAwAVVVVVVVgDAAAAAAAAAAL/1VVVVVVgAv+VVVVVVWAAAAAAAAAAAAD/lVVVVVVAAP/VVVVVVVABAAAAAAAAAAEAFVVVVVVQAQAqqqqqqqgBAEAAAAAAAAEASqqqqqqoAQBVVVVVVVQBAGAAAAAAAAEAaqqqqqqoAQB1VVVVVVQBAIAAAAAAAAEAhVVVVVVUAQCKqqqqqqoBAJAAAAAAAAEAlVVVVVVUAQCaqqqqqqoBAKAAAAAAAAEApVVVVVVUAQCqqqqqqqoBALAAAAAAAAEAtVVVVVVUAQC6qqqqqqoBAMAAAAAAAAEAwqqqqqqqAQDFVVVVVVUBAMgAAAAAAAEAyqqqqqqqAQDNVVVVVVUBANAAAAAAAAEA0qqqqqqqAQDVVVVVVVUBANgAAAAAAAEA2qqqqqqqAQDdVVVVVVUBAOAAAAAAAAEA4qqqqqqqAQDlVVVVVVUBAOgAAAAAAAEA6qqqqqqqAQDtVVVVVVUBAPAAAAAAAAEA8qqqqqqqAQD1VVVVVVUBAPgAAAAAAAEA+qqqqqqqAQD9VVVVVVUBAQAAAAAAAAEBAVVVVVVVAQECqqqqqqqBAQQAAAAAAAEBBVVVVVVVAQEGqqqqqqqBAQgAAAAAAAEBCVVVVVVVAQEKqqqqqqqBAQwAAAAAAAEBDVVVVVVVAQEOqqqqqqqBARAAAAAAAAEBEVVVVVVVAQESqqqqqqqBARQAAAAAAAEBFVVVVVVVAQEWqqqqqqqBARgAAAAAAAEBGVVVVVVVAQEaqqqqqqqBARwAAAAAAAEBHVVVVVVVAQEeqqqqqqqBASAAAAAAAAEBIVVVVVVVAQEiqqqqqqqBASQAAAAAAAEBJVVVVVVVAQEmqqqqqqqBASgAAAAAAAEBKVVVVVVVAQEqqqqqqqqBASwAAAAAAAEBLVVVVVVVAQEuqqqqqqqBATAAAAAAAAEBMVVVVVVVAQEyqqqqqqqBATQAAAAAAAEBNVVVVVVVAQE2qqqqqqqBATgAAAAAAAEBOVVVVVVVAQE6qqqqqqqBATwAAAAAAAEBPVVVVVVVAQE+qqqqqqqBAUAAAAAAAAEBQKqqqqqqgQFBVVVVVVVBAUIAAAAAAAEBQqqqqqqqgQFDVVVVVVVBAUQAAAAAAAEBRKqqqqqqgQFFVVVVVVVBAUYAAAAAAAEBRqqqqqqqgQFHVVVVVVVBAUgAAAAAAAEBSKqqqqqqg&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'base64:wHHqqqqqqqrAceAAAAAAAMBx1VVVVVVWwHHKqqqqqqrAccAAAAAAAMBxtVVVVVVUwHGqqqqqqqzAcaAAAAAAAMBxlVVVVVVUwHGKqqqqqqzAcYAAAAAAAMBxdVVVVVVUwHFqqqqqqqzAcWAAAAAAAMBxVVVVVVVUwHFKqqqqqqzAcUAAAAAAAMBxNVVVVVVUwHEqqqqqqqzAcSAAAAAAAMBxFVVVVVVUwHEKqqqqqqzAcQAAAAAAAMBw9VVVVVVUwHDqqqqqqqzAcOAAAAAAAMBw1VVVVVVUwHDKqqqqqqzAcMAAAAAAAMBwtVVVVVVUwHCqqqqqqqzAcKAAAAAAAMBwlVVVVVVUwHCKqqqqqqzAcIAAAAAAAMBwdVVVVVVUwHBqqqqqqqzAcGAAAAAAAMBwVVVVVVVUwHBKqqqqqqzAcEAAAAAAAMBwNVVVVVVUwHAqqqqqqqzAcCAAAAAAAMBwFVVVVVVUwHAKqqqqqqzAcAAAAAAAAMBv6qqqqqqowG/VVVVVVVjAb8AAAAAAAMBvqqqqqqqowG+VVVVVVVjAb4AAAAAAAMBvaqqqqqqowG9VVVVVVVjAb0AAAAAAAMBvKqqqqqqowG8VVVVVVVjAbwAAAAAAAMBu6qqqqqqowG7VVVVVVVjAbsAAAAAAAMBuqqqqqqqowG6VVVVVVVjAboAAAAAAAMBuaqqqqqqowG5VVVVVVVjAbkAAAAAAAMBuKqqqqqqowG4VVVVVVVjAbgAAAAAAAMBt6qqqqqqowG3VVVVVVVjAbcAAAAAAAMBtqqqqqqqowG2VVVVVVVjAbYAAAAAAAMBtaqqqqqqowG1VVVVVVVjAbUAAAAAAAMBtKqqqqqqowG0VVVVVVVjAbQAAAAAAAMBs6qqqqqqowGzVVVVVVVjAbMAAAAAAAMBsqqqqqqqowGyVVVVVVVjAbIAAAAAAAMBsaqqqqqqowGxVVVVVVVjAbEAAAAAAAMBsKqqqqqqowGwVVVVVVVjAbAAAAAAAAMBr6qqqqqqowGvVVVVVVVjAa8AAAAAAAMBrqqqqqqqwwGuVVVVVVVjAa4AAAAAAAMBraqqqqqqwwGtVVVVVVVjAa0AAAAAAAMBrKqqqqqqwwGsVVVVVVVjAawAAAAAAAMBq6qqqqqqwwGrVVVVVVVjAasAAAAAAAMBqqqqqqqqwwGqVVVVVVVjAaoAAAAAAAMBqaqqqqqqwwGpVVVVVVVjAakAAAAAAAMBqKqqqqqqwwGoVVVVVVVjAagAAAAAAAMBp6qqqqqqwwGnVVVVVVVjAacAAAAAAAMBpqqqqqqqwwGmVVVVVVVjAaYAAAAAAAMBpaqqqqqqwwGlVVVVVVVjAaUAAAAAAAMBpKqqqqqqwwGkVVVVVVVjAaQAAAAAAAMBo6qqqqqqwwGjVVVVVVVjAaMAAAAAAAMBoqqqqqqqwwGiVVVVVVVjAaIAAAAAAAMBoaqqqqqqwwGhVVVVVVVjAaEAAAAAAAMBoKqqqqqqwwGgVVVVVVVjAaAAAAAAAAMBn6qqqqqqwwGfVVVVVVVjAZ8AAAAAAAMBnqqqqqqqwwGeVVVVVVVjAZ4AAAAAAAMBnaqqqqqqwwGdVVVVVVVjAZ0AAAAAAAMBnKqqqqqqwwGcVVVVVVVjAZwAAAAAAAMBm6qqqqqqwwGbVVVVVVVjAZsAAAAAAAMBmqqqqqqqwwGaVVVVVVVjAZoAAAAAAAMBmaqqqqqqwwGZVVVVVVVjAZkAAAAAAAMBmKqqqqqqwwGYVVVVVVVjAZgAAAAAAAMBl6qqqqqqwwGXVVVVVVVjAZcAAAAAAAMBlqqqqqqqwwGWVVVVVVVjAZYAAAAAAAMBlaqqqqqqwwGVVVVVVVVjAZUAAAAAAAMBlKqqqqqqwwGUVVVVVVVjAZQAAAAAAAMBk6qqqqqqwwGTVVVVVVVjAZMAAAAAAAMBkqqqqqqqwwGSVVVVVVVjAZIAAAAAAAMBkaqqqqqqwwGRVVVVVVVjAZEAAAAAAAMBkKqqqqqqwwGQVVVVVVVjAZAAAAAAAAMBj6qqqqqqwwGPVVVVVVVjAY8AAAAAAAMBjqqqqqqqwwGOVVVVVVVjAY4AAAAAAAMBjaqqqqqqwwGNVVVVVVVjAY0AAAAAAAMBjKqqqqqqwwGMVVVVVVVjAYwAAAAAAAMBi6qqqqqqwwGLVVVVVVVjAYsAAAAAAAMBiqqqqqqqwwGKVVVVVVVjAYoAAAAAAAMBiaqqqqqqwwGJVVVVVVVjAYkAAAAAAAMBiKqqqqqqwwGIVVVVVVVjAYgAAAAAAAMBh6qqqqqqwwGHVVVVVVVjAYcAAAAAAAMBhqqqqqqqwwGGVVVVVVVjAYYAAAAAAAMBhaqqqqqqwwGFVVVVVVVjAYUAAAAAAAMBhKqqqqqqwwGEVVVVVVVjAYQAAAAAAAMBg6qqqqqqwwGDVVVVVVVjAYMAAAAAAAMBgqqqqqqqwwGCVVVVVVVjAYIAAAAAAAMBgaqqqqqqwwGBVVVVVVVjAYEAAAAAAAMBgKqqqqqqwwGAVVVVVVVjAYAAAAAAAAMBf1VVVVVVgwF+qqqqqqrDAX4AAAAAAAMBfVVVVVVVgwF8qqqqqqrDAXwAAAAAAAMBe1VVVVVVgwF6qqqqqqrDAXoAAAAAAAMBeVVVVVVVgwF4qqqqqqrDAXgAAAAAAAMBd1VVVVVVgwF2qqqqqqrDAXYAAAAAAAMBdVVVVVVVgwF0qqqqqqrDAXQAAAAAAAMBc1VVVVVVgwFyqqqqqqrDAXIAAAAAAAMBcVVVVVVVgwFwqqqqqqrDAXAAAAAAAAMBb1VVVVVVgwFuqqqqqqrDAW4AAAAAAAMBbVVVVVVVgwFsqqqqqqrDAWwAAAAAAAMBa1VVVVVVgwFqqqqqqqrDAWoAAAAAAAMBaVVVVVVVgwFoqqqqqqrDAWgAAAAAAAMBZ1VVVVVVgwFmqqqqqqrDAWYAAAAAAAMBZVVVVVVVgwFkqqqqqqrDAWQAAAAAAAMBY1VVVVVVgwFiqqqqqqrDAWIAAAAAAAMBYVVVVVVVgwFgqqqqqqrDAWAAAAAAAAMBX1VVVVVVgwFeqqqqqqrDAV4AAAAAAAMBXVVVVVVVgwFcqqqqqqrDAVwAAAAAAAMBW1VVVVVVgwFaqqqqqqrDAVoAAAAAAAMBWVVVVVVVgwFYqqqqqqrDAVgAAAAAAAMBV1VVVVVVgwFWqqqqqqrDAVYAAAAAAAMBVVVVVVVVgwFUqqqqqqrDAVQAAAAAAAMBU1VVVVVVgwFSqqqqqqrDAVIAAAAAAAMBUVVVVVVVgwFQqqqqqqrDAVAAAAAAAAMBT1VVVVVVgwFOqqqqqqrDAU4AAAAAAAMBTVVVVVVVgwFMqqqqqqrDAUwAAAAAAAMBS1VVVVVVgwFKqqqqqqrDAUoAAAAAAAMBSVVVVVVVgwFIqqqqqqrDAUgAAAAAAAMBR1VVVVVVgwFGqqqqqqrDAUYAAAAAAAMBRVVVVVVVgwFEqqqqqqrDAUQAAAAAAAMBQ1VVVVVVgwFCqqqqqqrDAUIAAAAAAAMBQVVVVVVVgwFAqqqqqqrDAUAAAAAAAAMBPqqqqqqrAwE9VVVVVVWDATwAAAAAAAMBOqqqqqqrAwE5VVVVVVWDATgAAAAAAAMBNqqqqqqrAwE1VVVVVVWDATQAAAAAAAMBMqqqqqqrAwExVVVVVVWDATAAAAAAAAMBLqqqqqqrAwEtVVVVVVWDASwAAAAAAAMBKqqqqqqrAwEpVVVVVVWDASgAAAAAAAMBJqqqqqqrAwElVVVVVVWDASQAAAAAAAMBIqqqqqqrAwEhVVVVVVWDASAAAAAAAAMBHqqqqqqrAwEdVVVVVVWDARwAAAAAAAMBGqqqqqqrAwEZVVVVVVWDARgAAAAAAAMBFqqqqqqrAwEVVVVVVVWDARQAAAAAAAMBEqqqqqqrAwERVVVVVVWDARAAAAAAAAMBDqqqqqqrAwENVVVVVVWDAQwAAAAAAAMBCqqqqqqrAwEJVVVVVVWDAQgAAAAAAAMBBqqqqqqrAwEFVVVVVVWDAQQAAAAAAAMBAqqqqqqrAwEBVVVVVVWDAQAAAAAAAAMA/VVVVVVWAwD6qqqqqqsDAPgAAAAAAAMA9VVVVVVWAwDyqqqqqqsDAPAAAAAAAAMA7VVVVVVWAwDqqqqqqqsDAOgAAAAAAAMA5VVVVVVWAwDiqqqqqqsDAOAAAAAAAAMA3VVVVVVWAwDaqqqqqqsDANgAAAAAAAMA1VVVVVVWAwDSqqqqqqsDANAAAAAAAAMAzVVVVVVWAwDKqqqqqqsDAMgAAAAAAAMAxVVVVVVWAwDCqqqqqqsDAMAAAAAAAAMAuqqqqqqsAwC1VVVVVVYDALAAAAAAAAMAqqqqqqqsAwClVVVVVVYDAKAAAAAAAAMAmqqqqqqsAwCVVVVVVVYDAJAAAAAAAAMAiqqqqqqsAwCFVVVVVVYDAIAAAAAAAAMAdVVVVVVYAwBqqqqqqqwDAGAAAAAAAAMAVVVVVVVYAwBKqqqqqqwDAEAAAAAAAAMAKqqqqqqwAwAVVVVVVVgDAAAAAAAAAAL/1VVVVVVgAv+VVVVVVWAAAAAAAAAAAAD/lVVVVVVAAP/VVVVVVVABAAAAAAAAAAEAFVVVVVVQAQAqqqqqqqgBAEAAAAAAAAEASqqqqqqoAQBVVVVVVVQBAGAAAAAAAAEAaqqqqqqoAQB1VVVVVVQBAIAAAAAAAAEAhVVVVVVUAQCKqqqqqqoBAJAAAAAAAAEAlVVVVVVUAQCaqqqqqqoBAKAAAAAAAAEApVVVVVVUAQCqqqqqqqoBALAAAAAAAAEAtVVVVVVUAQC6qqqqqqoBAMAAAAAAAAEAwqqqqqqqAQDFVVVVVVUBAMgAAAAAAAEAyqqqqqqqAQDNVVVVVVUBANAAAAAAAAEA0qqqqqqqAQDVVVVVVVUBANgAAAAAAAEA2qqqqqqqAQDdVVVVVVUBAOAAAAAAAAEA4qqqqqqqAQDlVVVVVVUBAOgAAAAAAAEA6qqqqqqqAQDtVVVVVVUBAPAAAAAAAAEA8qqqqqqqAQD1VVVVVVUBAPgAAAAAAAEA+qqqqqqqAQD9VVVVVVUBAQAAAAAAAAEBAVVVVVVVAQECqqqqqqqBAQQAAAAAAAEBBVVVVVVVAQEGqqqqqqqBAQgAAAAAAAEBCVVVVVVVAQEKqqqqqqqBAQwAAAAAAAEBDVVVVVVVAQEOqqqqqqqBARAAAAAAAAEBEVVVVVVVAQESqqqqqqqBARQAAAAAAAEBFVVVVVVVAQEWqqqqqqqBARgAAAAAAAEBGVVVVVVVAQEaqqqqqqqBARwAAAAAAAEBHVVVVVVVAQEeqqqqqqqBASAAAAAAAAEBIVVVVVVVAQEiqqqqqqqBASQAAAAAAAEBJVVVVVVVAQEmqqqqqqqBASgAAAAAAAEBKVVVVVVVAQEqqqqqqqqBASwAAAAAAAEBLVVVVVVVAQEuqqqqqqqBATAAAAAAAAEBMVVVVVVVAQEyqqqqqqqBATQAAAAAAAEBNVVVVVVVAQE2qqqqqqqBATgAAAAAAAEBOVVVVVVVAQE6qqqqqqqBATwAAAAAAAEBPVVVVVVVAQE+qqqqqqqBAUAAAAAAAAEBQKqqqqqqgQFBVVVVVVVBAUIAAAAAAAEBQqqqqqqqgQFDVVVVVVVBAUQAAAAAAAEBRKqqqqqqgQFFVVVVVVVBAUYAAAAAAAEBRqqqqqqqgQFHVVVVVVVBAUgAAAAAAAEBSKqqqqqqg'
 </pre></div>
 </div>
 </div>
@@ -1148,9 +1148,9 @@ This can take a while.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The static file with time-invariant variables has a useless `time` dimension.</span>
-<span class="c1"># This messes up kerchunk&#39;s heuristics.</span>
+<span class="c1"># This messes up kerchunk's heuristics.</span>
 <span class="c1"># kerchunk.combine.drop returns a function ...</span>
-<span class="n">drop_time</span> <span class="o">=</span> <span class="n">kerchunk</span><span class="o">.</span><span class="n">combine</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">)</span>
+<span class="n">drop_time</span> <span class="o">=</span> <span class="n">kerchunk</span><span class="o">.</span><span class="n">combine</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">"time"</span><span class="p">)</span>
 <span class="n">staticdict</span> <span class="o">=</span> <span class="n">drop_time</span><span class="p">(</span><span class="n">gen_ref</span><span class="p">(</span><span class="n">staticfile</span><span class="p">))</span>
 </pre></div>
 </div>
@@ -1158,12 +1158,12 @@ This can take a while.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">staticdict</span><span class="p">[</span><span class="s2">&quot;refs&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">staticdict</span><span class="p">[</span><span class="s2">"refs"</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_keys([&#39;.zgroup&#39;, &#39;xh/.zarray&#39;, &#39;xh/0&#39;, &#39;xh/.zattrs&#39;, &#39;yh/.zarray&#39;, &#39;yh/0&#39;, &#39;yh/.zattrs&#39;, &#39;xq/.zarray&#39;, &#39;xq/0&#39;, &#39;xq/.zattrs&#39;, &#39;yq/.zarray&#39;, &#39;yq/0&#39;, &#39;yq/.zattrs&#39;, &#39;geolon/.zarray&#39;, &#39;geolon/0.0&#39;, &#39;geolon/.zattrs&#39;, &#39;geolat/.zarray&#39;, &#39;geolat/0.0&#39;, &#39;geolat/.zattrs&#39;, &#39;geolon_c/.zarray&#39;, &#39;geolon_c/0.0&#39;, &#39;geolon_c/.zattrs&#39;, &#39;geolat_c/.zarray&#39;, &#39;geolat_c/0.0&#39;, &#39;geolat_c/.zattrs&#39;, &#39;geolon_u/.zarray&#39;, &#39;geolon_u/0.0&#39;, &#39;geolon_u/.zattrs&#39;, &#39;geolat_u/.zarray&#39;, &#39;geolat_u/0.0&#39;, &#39;geolat_u/.zattrs&#39;, &#39;geolon_v/.zarray&#39;, &#39;geolon_v/0.0&#39;, &#39;geolon_v/.zattrs&#39;, &#39;geolat_v/.zarray&#39;, &#39;geolat_v/0.0&#39;, &#39;geolat_v/.zattrs&#39;, &#39;deptho/.zarray&#39;, &#39;deptho/0.0&#39;, &#39;deptho/.zattrs&#39;, &#39;wet/.zarray&#39;, &#39;wet/0.0&#39;, &#39;wet/.zattrs&#39;, &#39;wet_c/.zarray&#39;, &#39;wet_c/0.0&#39;, &#39;wet_c/.zattrs&#39;, &#39;wet_u/.zarray&#39;, &#39;wet_u/0.0&#39;, &#39;wet_u/.zattrs&#39;, &#39;wet_v/.zarray&#39;, &#39;wet_v/0.0&#39;, &#39;wet_v/.zattrs&#39;, &#39;Coriolis/.zarray&#39;, &#39;Coriolis/0.0&#39;, &#39;Coriolis/.zattrs&#39;, &#39;areacello/.zarray&#39;, &#39;areacello/0.0&#39;, &#39;areacello/.zattrs&#39;, &#39;areacello_cu/.zarray&#39;, &#39;areacello_cu/0.0&#39;, &#39;areacello_cu/.zattrs&#39;, &#39;areacello_cv/.zarray&#39;, &#39;areacello_cv/0.0&#39;, &#39;areacello_cv/.zattrs&#39;, &#39;areacello_bu/.zarray&#39;, &#39;areacello_bu/0.0&#39;, &#39;areacello_bu/.zattrs&#39;, &#39;sin_rot/.zarray&#39;, &#39;sin_rot/0.0&#39;, &#39;sin_rot/.zattrs&#39;, &#39;cos_rot/.zarray&#39;, &#39;cos_rot/0.0&#39;, &#39;cos_rot/.zattrs&#39;, &#39;time/.zarray&#39;, &#39;time/.zattrs&#39;, &#39;time/0&#39;, &#39;.zattrs&#39;])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_keys(['.zgroup', 'xh/.zarray', 'xh/0', 'xh/.zattrs', 'yh/.zarray', 'yh/0', 'yh/.zattrs', 'xq/.zarray', 'xq/0', 'xq/.zattrs', 'yq/.zarray', 'yq/0', 'yq/.zattrs', 'geolon/.zarray', 'geolon/0.0', 'geolon/.zattrs', 'geolat/.zarray', 'geolat/0.0', 'geolat/.zattrs', 'geolon_c/.zarray', 'geolon_c/0.0', 'geolon_c/.zattrs', 'geolat_c/.zarray', 'geolat_c/0.0', 'geolat_c/.zattrs', 'geolon_u/.zarray', 'geolon_u/0.0', 'geolon_u/.zattrs', 'geolat_u/.zarray', 'geolat_u/0.0', 'geolat_u/.zattrs', 'geolon_v/.zarray', 'geolon_v/0.0', 'geolon_v/.zattrs', 'geolat_v/.zarray', 'geolat_v/0.0', 'geolat_v/.zattrs', 'deptho/.zarray', 'deptho/0.0', 'deptho/.zattrs', 'wet/.zarray', 'wet/0.0', 'wet/.zattrs', 'wet_c/.zarray', 'wet_c/0.0', 'wet_c/.zattrs', 'wet_u/.zarray', 'wet_u/0.0', 'wet_u/.zattrs', 'wet_v/.zarray', 'wet_v/0.0', 'wet_v/.zattrs', 'Coriolis/.zarray', 'Coriolis/0.0', 'Coriolis/.zattrs', 'areacello/.zarray', 'areacello/0.0', 'areacello/.zattrs', 'areacello_cu/.zarray', 'areacello_cu/0.0', 'areacello_cu/.zattrs', 'areacello_cv/.zarray', 'areacello_cv/0.0', 'areacello_cv/.zattrs', 'areacello_bu/.zarray', 'areacello_bu/0.0', 'areacello_bu/.zattrs', 'sin_rot/.zarray', 'sin_rot/0.0', 'sin_rot/.zattrs', 'cos_rot/.zarray', 'cos_rot/0.0', 'cos_rot/.zattrs', 'time/.zarray', 'time/.zattrs', 'time/0', '.zattrs'])
 </pre></div>
 </div>
 </div>
@@ -1182,9 +1182,9 @@ This can take a while.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">generate_json</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">casename</span><span class="p">,</span> <span class="n">stream</span><span class="p">,</span> <span class="n">static_refs</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Generate Kerchunk references for CESM output.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
     <span class="kn">import</span><span class="w"> </span><span class="nn">copy</span>
     <span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
@@ -1193,7 +1193,7 @@ This can take a while.</p>
     <span class="kn">import</span><span class="w"> </span><span class="nn">ujson</span>
 
     <span class="c1"># Get list of files</span>
-    <span class="n">flist</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">glob</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">root</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">casename</span><span class="si">}</span><span class="s2">/run/*mom6.</span><span class="si">{</span><span class="n">stream</span><span class="si">}</span><span class="s2">_*&quot;</span><span class="p">))</span>
+    <span class="n">flist</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">glob</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">root</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">casename</span><span class="si">}</span><span class="s2">/run/*mom6.</span><span class="si">{</span><span class="n">stream</span><span class="si">}</span><span class="s2">_*"</span><span class="p">))</span>
 
     <span class="c1"># parallelize generating references using dask.bag</span>
     <span class="c1"># Alternatively this could be dask.delayed</span>
@@ -1202,17 +1202,17 @@ This can take a while.</p>
 
     <span class="c1"># Combine multiple Zarr references (one per file) to</span>
     <span class="c1"># a single aggregate reference file</span>
-    <span class="n">mzz</span> <span class="o">=</span> <span class="n">MultiZarrToZarr</span><span class="p">(</span><span class="n">dicts</span><span class="p">,</span> <span class="n">inline_threshold</span><span class="o">=</span><span class="mi">5000</span><span class="p">,</span> <span class="n">concat_dims</span><span class="o">=</span><span class="s2">&quot;time&quot;</span><span class="p">)</span>
+    <span class="n">mzz</span> <span class="o">=</span> <span class="n">MultiZarrToZarr</span><span class="p">(</span><span class="n">dicts</span><span class="p">,</span> <span class="n">inline_threshold</span><span class="o">=</span><span class="mi">5000</span><span class="p">,</span> <span class="n">concat_dims</span><span class="o">=</span><span class="s2">"time"</span><span class="p">)</span>
 
     <span class="c1"># merge in the static variable references</span>
     <span class="c1"># TODO: this deep-copy is necessary because static_refs gets modified in-place otherwise</span>
     <span class="n">merged</span> <span class="o">=</span> <span class="n">kerchunk</span><span class="o">.</span><span class="n">combine</span><span class="o">.</span><span class="n">merge_vars</span><span class="p">([</span><span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">static_refs</span><span class="p">),</span> <span class="n">mzz</span><span class="o">.</span><span class="n">translate</span><span class="p">()])</span>
 
     <span class="c1"># create the output directory if needed</span>
-    <span class="n">Path</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">root</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">casename</span><span class="si">}</span><span class="s2">/run/jsons/&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">Path</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">root</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">casename</span><span class="si">}</span><span class="s2">/run/jsons/"</span><span class="p">)</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
     <span class="c1"># write the JSON</span>
-    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">root</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">casename</span><span class="si">}</span><span class="s2">/run/jsons/</span><span class="si">{</span><span class="n">stream</span><span class="si">}</span><span class="s2">.json&quot;</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">root</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">casename</span><span class="si">}</span><span class="s2">/run/jsons/</span><span class="si">{</span><span class="n">stream</span><span class="si">}</span><span class="s2">.json"</span><span class="p">,</span> <span class="s2">"wb"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
         <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">ujson</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">merged</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span>
 </pre></div>
 </div>
@@ -1225,14 +1225,14 @@ This can take a while.</p>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">generate_json</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">casename</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="s2">&quot;sfc&quot;</span><span class="p">,</span> <span class="n">static_refs</span><span class="o">=</span><span class="n">staticdict</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">generate_json</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">casename</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="s2">"sfc"</span><span class="p">,</span> <span class="n">static_refs</span><span class="o">=</span><span class="n">staticdict</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">generate_json</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">casename</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="s2">&quot;h&quot;</span><span class="p">,</span> <span class="n">static_refs</span><span class="o">=</span><span class="n">staticdict</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">generate_json</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">casename</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="s2">"h"</span><span class="p">,</span> <span class="n">static_refs</span><span class="o">=</span><span class="n">staticdict</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1245,11 +1245,11 @@ This can take a while.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fs</span> <span class="o">=</span> <span class="n">fsspec</span><span class="o">.</span><span class="n">filesystem</span><span class="p">(</span>
-    <span class="s2">&quot;reference&quot;</span><span class="p">,</span>  <span class="c1"># protocol</span>
-    <span class="n">fo</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">root</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">casename</span><span class="si">}</span><span class="s2">/run/jsons/sfc.json&quot;</span><span class="p">,</span>  <span class="c1"># json</span>
+    <span class="s2">"reference"</span><span class="p">,</span>  <span class="c1"># protocol</span>
+    <span class="n">fo</span><span class="o">=</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">root</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">casename</span><span class="si">}</span><span class="s2">/run/jsons/sfc.json"</span><span class="p">,</span>  <span class="c1"># json</span>
     <span class="n">skip_instance_cache</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>  <span class="c1"># skip caching, this is useful when building catalogs.</span>
 <span class="p">)</span>
-<span class="n">mapper</span> <span class="o">=</span> <span class="n">fs</span><span class="o">.</span><span class="n">get_mapper</span><span class="p">(</span><span class="n">root</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="n">mapper</span> <span class="o">=</span> <span class="n">fs</span><span class="o">.</span><span class="n">get_mapper</span><span class="p">(</span><span class="n">root</span><span class="o">=</span><span class="s2">""</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1257,12 +1257,12 @@ This can take a while.</p>
 <p>Mapper is a dictionary-like object. We can ask it for the <code class="docutils literal notranslate"><span class="pre">.zgroup</span></code> “file” for example</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mapper</span><span class="p">[</span><span class="s2">&quot;.zgroup&quot;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mapper</span><span class="p">[</span><span class="s2">".zgroup"</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>b&#39;{&quot;zarr_format&quot;:2}&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>b'{"zarr_format":2}'
 </pre></div>
 </div>
 </div>
@@ -4040,27 +4040,27 @@ Attributes:
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">combine_stream_jsons_as_groups</span><span class="p">(</span><span class="n">streams</span><span class="p">):</span>
-    <span class="n">ZARR_GROUP_ENTRY</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;.zgroup&quot;</span><span class="p">:</span> <span class="s1">&#39;{&quot;zarr_format&quot;:2}&#39;</span><span class="p">}</span>
+    <span class="n">ZARR_GROUP_ENTRY</span> <span class="o">=</span> <span class="p">{</span><span class="s2">".zgroup"</span><span class="p">:</span> <span class="s1">'{"zarr_format":2}'</span><span class="p">}</span>
 
     <span class="kn">import</span><span class="w"> </span><span class="nn">ujson</span>
 
     <span class="n">newrefs</span> <span class="o">=</span> <span class="p">{}</span>
     <span class="k">for</span> <span class="n">stream</span> <span class="ow">in</span> <span class="n">streams</span><span class="p">:</span>
         <span class="c1"># read in existing JSON references</span>
-        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">root</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">casename</span><span class="si">}</span><span class="s2">/run/jsons/</span><span class="si">{</span><span class="n">stream</span><span class="si">}</span><span class="s2">.json&quot;</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">root</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">casename</span><span class="si">}</span><span class="s2">/run/jsons/</span><span class="si">{</span><span class="n">stream</span><span class="si">}</span><span class="s2">.json"</span><span class="p">,</span> <span class="s2">"rb"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
             <span class="n">d</span> <span class="o">=</span> <span class="n">ujson</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
 
         <span class="c1"># Add a new group by renaming the keys</span>
-        <span class="n">newrefs</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">stream</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">:</span> <span class="n">v</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">d</span><span class="p">[</span><span class="s2">&quot;refs&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">()})</span>
+        <span class="n">newrefs</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">stream</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2">"</span><span class="p">:</span> <span class="n">v</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">d</span><span class="p">[</span><span class="s2">"refs"</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">()})</span>
 
     <span class="c1"># Add top-level .zgroup entry</span>
     <span class="n">newrefs</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">ZARR_GROUP_ENTRY</span><span class="p">)</span>
 
     <span class="c1"># This is now the combined dataset</span>
-    <span class="n">combined</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;refs&quot;</span><span class="p">:</span> <span class="n">newrefs</span><span class="p">}</span>
+    <span class="n">combined</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"version"</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">"refs"</span><span class="p">:</span> <span class="n">newrefs</span><span class="p">}</span>
 
     <span class="c1"># write a new reference JSON file</span>
-    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">root</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">casename</span><span class="si">}</span><span class="s2">/run/jsons/combined.json&quot;</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">root</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">casename</span><span class="si">}</span><span class="s2">/run/jsons/combined.json"</span><span class="p">,</span> <span class="s2">"wb"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
         <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">ujson</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">combined</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span>
 </pre></div>
 </div>
@@ -4071,7 +4071,7 @@ Attributes:
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
 
-<span class="n">combine_stream_jsons_as_groups</span><span class="p">(</span><span class="n">streams</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;sfc&quot;</span><span class="p">,</span> <span class="s2">&quot;h&quot;</span><span class="p">])</span>
+<span class="n">combine_stream_jsons_as_groups</span><span class="p">(</span><span class="n">streams</span><span class="o">=</span><span class="p">[</span><span class="s2">"sfc"</span><span class="p">,</span> <span class="s2">"h"</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -4090,11 +4090,11 @@ Wall time: 469 ms
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fs</span> <span class="o">=</span> <span class="n">fsspec</span><span class="o">.</span><span class="n">filesystem</span><span class="p">(</span>
-    <span class="s2">&quot;reference&quot;</span><span class="p">,</span>
-    <span class="n">fo</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">root</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">casename</span><span class="si">}</span><span class="s2">/run/jsons/combined.json&quot;</span><span class="p">,</span>
+    <span class="s2">"reference"</span><span class="p">,</span>
+    <span class="n">fo</span><span class="o">=</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">root</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">casename</span><span class="si">}</span><span class="s2">/run/jsons/combined.json"</span><span class="p">,</span>
     <span class="n">skip_instance_cache</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
 <span class="p">)</span>
-<span class="n">mapper</span> <span class="o">=</span> <span class="n">fs</span><span class="o">.</span><span class="n">get_mapper</span><span class="p">(</span><span class="n">root</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="n">mapper</span> <span class="o">=</span> <span class="n">fs</span><span class="o">.</span><span class="n">get_mapper</span><span class="p">(</span><span class="n">root</span><span class="o">=</span><span class="s2">""</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -4107,7 +4107,7 @@ Wall time: 469 ms
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
 
-<span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">mapper</span><span class="p">,</span> <span class="n">engine</span><span class="o">=</span><span class="s2">&quot;zarr&quot;</span><span class="p">,</span> <span class="n">group</span><span class="o">=</span><span class="s2">&quot;sfc&quot;</span><span class="p">,</span> <span class="n">use_cftime</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">consolidated</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">mapper</span><span class="p">,</span> <span class="n">engine</span><span class="o">=</span><span class="s2">"zarr"</span><span class="p">,</span> <span class="n">group</span><span class="o">=</span><span class="s2">"sfc"</span><span class="p">,</span> <span class="n">use_cftime</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">consolidated</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -4578,7 +4578,7 @@ Attributes:
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
 
-<span class="n">tree</span> <span class="o">=</span> <span class="n">datatree</span><span class="o">.</span><span class="n">open_datatree</span><span class="p">(</span><span class="n">mapper</span><span class="p">,</span> <span class="n">engine</span><span class="o">=</span><span class="s2">&quot;zarr&quot;</span><span class="p">,</span> <span class="n">use_cftime</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">consolidated</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">tree</span> <span class="o">=</span> <span class="n">datatree</span><span class="o">.</span><span class="n">open_datatree</span><span class="p">(</span><span class="n">mapper</span><span class="p">,</span> <span class="n">engine</span><span class="o">=</span><span class="s2">"zarr"</span><span class="p">,</span> <span class="n">use_cftime</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">consolidated</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">tree</span>
 </pre></div>
 </div>
@@ -5771,7 +5771,7 @@ Attributes:
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tree</span><span class="p">[</span><span class="s2">&quot;h&quot;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tree</span><span class="p">[</span><span class="s2">"h"</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -6193,7 +6193,7 @@ Attributes:
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tree</span><span class="p">[</span><span class="s2">&quot;sfc&quot;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tree</span><span class="p">[</span><span class="s2">"sfc"</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -6719,8 +6719,8 @@ Attributes:
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9"></script>
-<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -6754,7 +6754,7 @@ Attributes:
         <div class="footer-item">
 <p class="theme-version">
   <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.20.0.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.21.0.
 </p></div>
       
     </div>

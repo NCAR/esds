@@ -27,8 +27,8 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
@@ -37,10 +37,10 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=66307ba7" />
   
   <!-- So that users can add custom icons -->
-  <script defer src="../../../_static/scripts/fontawesome.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer src="../../../_static/scripts/fontawesome.js?digest=cb8930eaaf36d9849b67"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9" />
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67" />
 
     <script src="../../../_static/documentation_options.js?v=55b5f74b"></script>
     <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
@@ -74,7 +74,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
-    <meta name="docbuild:last-update" content="Jul 27, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 10, 2026"/>
   
     
     <script src="../../../_static/searchtools.js"></script>
@@ -588,29 +588,29 @@ Sea Water Potential Temperature (<code class="docutils literal notranslate"><spa
 </div>
 <p>Set a path to the CMIP catalog - in this case, since we using the glade file system, use this and open the catalog using the intake-esm extension.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set the path for the catalog file</span>
-<span class="n">catalog_file</span> <span class="o">=</span> <span class="s1">&#39;/glade/collections/cmip/catalog/intake-esm-datastore/catalogs/glade-cmip6.json&#39;</span>
+<span class="n">catalog_file</span> <span class="o">=</span> <span class="s1">'/glade/collections/cmip/catalog/intake-esm-datastore/catalogs/glade-cmip6.json'</span>
 
 <span class="c1"># Open the catalog using intake</span>
 <span class="n">col</span> <span class="o">=</span> <span class="n">intake</span><span class="o">.</span><span class="n">open_esm_datastore</span><span class="p">(</span><span class="n">catalog_file</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Now, we set which experiment to use. In this case, we are interested in the Ocean Model Intercomparison Project (OMIP) since we are looking at ocean data, setting</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">experiment_id</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;omip1&#39;</span><span class="p">]</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">experiment_id</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'omip1'</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>In terms of the variables of interest, we are interested in Sea Water Silinity (<code class="docutils literal notranslate"><span class="pre">so</span></code>) and Sea Water Potential Temperature (<code class="docutils literal notranslate"><span class="pre">thetao</span></code>), so we set</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">variable_id</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;so&#39;</span><span class="p">,</span> <span class="s1">&#39;thetao&#39;</span><span class="p">]</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">variable_id</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'so'</span><span class="p">,</span> <span class="s1">'thetao'</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>The last variable to change is the table_id which corresponds to the temporal frequency. Since we are interested in monthly data, we set</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">table_id</span> <span class="o">=</span> <span class="s1">&#39;Omon&#39;</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">table_id</span> <span class="o">=</span> <span class="s1">'Omon'</span>
 </pre></div>
 </div>
 <p>Putting all that together, we setup the catalog and call <code class="docutils literal notranslate"><span class="pre">to_dataset_dict</span></code> which assembles a dictionary of datasets</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span> <span class="o">=</span> <span class="n">col</span><span class="o">.</span><span class="n">search</span><span class="p">(</span>
-    <span class="n">experiment_id</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;omip1&#39;</span><span class="p">],</span>
-    <span class="n">variable_id</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;thetao&#39;</span><span class="p">,</span> <span class="s1">&#39;so&#39;</span><span class="p">],</span>
-    <span class="n">table_id</span><span class="o">=</span><span class="s1">&#39;Omon&#39;</span>
+    <span class="n">experiment_id</span><span class="o">=</span><span class="p">[</span><span class="s1">'omip1'</span><span class="p">],</span>
+    <span class="n">variable_id</span><span class="o">=</span><span class="p">[</span><span class="s1">'thetao'</span><span class="p">,</span> <span class="s1">'so'</span><span class="p">],</span>
+    <span class="n">table_id</span><span class="o">=</span><span class="s1">'Omon'</span>
 <span class="p">)</span>
 <span class="n">dset_dict</span> <span class="o">=</span> <span class="n">cat</span><span class="o">.</span><span class="n">to_dataset_dict</span><span class="p">()</span>
 </pre></div>
@@ -635,11 +635,11 @@ Sea Water Potential Temperature (<code class="docutils literal notranslate"><spa
 </pre></div>
 </div>
 <p>Notice how in the error, the source_id which triggered the error is <code class="docutils literal notranslate"><span class="pre">CNRM-CM6-1</span></code>, so let’s subset for that and investigate the problem…</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="n">cat</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">source_id</span> <span class="o">==</span> <span class="s1">&#39;CNRM-CM6-1&#39;</span><span class="p">]</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span><span class="o">.</span><span class="n">df</span><span class="p">[</span><span class="n">cat</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">source_id</span> <span class="o">==</span> <span class="s1">'CNRM-CM6-1'</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>Another option for looking at the subset for problematic key would be (returns a pandas dataframe):</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span><span class="p">[</span><span class="s1">&#39;OMIP.CNRM-CERFACS.CNRM-CM6-1.omip1.Omon.gn&#39;</span><span class="p">]</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span><span class="p">[</span><span class="s1">'OMIP.CNRM-CERFACS.CNRM-CM6-1.omip1.Omon.gn'</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>Here, we focus on the <code class="docutils literal notranslate"><span class="pre">time_range</span></code> column - noticing that the last time step for <code class="docutils literal notranslate"><span class="pre">so</span></code> is <code class="docutils literal notranslate"><span class="pre">194912</span></code> while the last timestep for datasets with <code class="docutils literal notranslate"><span class="pre">thetao</span></code> is <code class="docutils literal notranslate"><span class="pre">199912</span></code>, with the dates formatted <code class="docutils literal notranslate"><span class="pre">YYYYMM</span></code>.</p>
@@ -651,17 +651,17 @@ Sea Water Potential Temperature (<code class="docutils literal notranslate"><spa
 <p>To work around this problem, If you would still like to work with the data, you will need to read in datasets using separate queries as shown below</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Search and read in dataset for so</span>
 <span class="n">cat_so</span> <span class="o">=</span> <span class="n">col</span><span class="o">.</span><span class="n">search</span><span class="p">(</span>
-    <span class="n">experiment_id</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;omip1&#39;</span><span class="p">],</span>
-    <span class="n">variable_id</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;so&#39;</span><span class="p">],</span>
-    <span class="n">table_id</span><span class="o">=</span><span class="s1">&#39;Omon&#39;</span>
+    <span class="n">experiment_id</span><span class="o">=</span><span class="p">[</span><span class="s1">'omip1'</span><span class="p">],</span>
+    <span class="n">variable_id</span><span class="o">=</span><span class="p">[</span><span class="s1">'so'</span><span class="p">],</span>
+    <span class="n">table_id</span><span class="o">=</span><span class="s1">'Omon'</span>
 <span class="p">)</span>
 <span class="n">dset_dict_so</span> <span class="o">=</span> <span class="n">cat_so</span><span class="o">.</span><span class="n">to_dataset_dict</span><span class="p">()</span>
 
 <span class="c1"># Search and read in dataset for thetao</span>
 <span class="n">cat_thetao</span> <span class="o">=</span> <span class="n">col</span><span class="o">.</span><span class="n">search</span><span class="p">(</span>
-    <span class="n">experiment_id</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;omip1&#39;</span><span class="p">],</span>
-    <span class="n">variable_id</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;thetao&#39;</span><span class="p">],</span>
-    <span class="n">table_id</span><span class="o">=</span><span class="s1">&#39;Omon&#39;</span>
+    <span class="n">experiment_id</span><span class="o">=</span><span class="p">[</span><span class="s1">'omip1'</span><span class="p">],</span>
+    <span class="n">variable_id</span><span class="o">=</span><span class="p">[</span><span class="s1">'thetao'</span><span class="p">],</span>
+    <span class="n">table_id</span><span class="o">=</span><span class="s1">'Omon'</span>
 <span class="p">)</span>
 <span class="n">dset_dict_thetao</span> <span class="o">=</span> <span class="n">cat_thetao</span><span class="o">.</span><span class="n">to_dataset_dict</span><span class="p">()</span>
 </pre></div>
@@ -766,8 +766,8 @@ Sea Water Potential Temperature (<code class="docutils literal notranslate"><spa
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9"></script>
-<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -801,7 +801,7 @@ Sea Water Potential Temperature (<code class="docutils literal notranslate"><spa
         <div class="footer-item">
 <p class="theme-version">
   <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.20.0.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.21.0.
 </p></div>
       
     </div>

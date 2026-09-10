@@ -27,8 +27,8 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
@@ -37,10 +37,10 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=66307ba7" />
   
   <!-- So that users can add custom icons -->
-  <script defer src="../../../_static/scripts/fontawesome.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer src="../../../_static/scripts/fontawesome.js?digest=cb8930eaaf36d9849b67"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9" />
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67" />
 
     <script src="../../../_static/documentation_options.js?v=55b5f74b"></script>
     <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
@@ -74,7 +74,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
-    <meta name="docbuild:last-update" content="Jul 27, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 10, 2026"/>
   
     
     <script src="../../../_static/searchtools.js"></script>
@@ -673,11 +673,11 @@
 <p>which access the <code class="docutils literal notranslate"><span class="pre">analysis_config</span></code> variable from the <code class="docutils literal notranslate"><span class="pre">config.py</span></code> script:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">yaml</span>
 
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;analysis_config.yml&quot;</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fptr</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"analysis_config.yml"</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">"r"</span><span class="p">)</span> <span class="k">as</span> <span class="n">fptr</span><span class="p">:</span>
     <span class="n">analysis_config</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">safe_load</span><span class="p">(</span><span class="n">fptr</span><span class="p">)</span>
 
-<span class="n">analysis_config</span><span class="p">[</span><span class="s1">&#39;all_variables&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">analysis_config</span><span class="p">[</span><span class="s1">&#39;variables&#39;</span><span class="p">][</span><span class="s1">&#39;physics&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">analysis_config</span><span class="p">[</span><span class="s1">&#39;variables&#39;</span><span class="p">][</span><span class="s1">&#39;biogeochemistry&#39;</span><span class="p">]</span>
-<span class="n">analysis_config</span><span class="p">[</span><span class="s1">&#39;all_cases&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">analysis_config</span><span class="p">[</span><span class="s1">&#39;reference_case_name&#39;</span><span class="p">]]</span> <span class="o">+</span> <span class="n">analysis_config</span><span class="p">[</span><span class="s1">&#39;compare_case_name&#39;</span><span class="p">]</span> 
+<span class="n">analysis_config</span><span class="p">[</span><span class="s1">'all_variables'</span><span class="p">]</span> <span class="o">=</span> <span class="n">analysis_config</span><span class="p">[</span><span class="s1">'variables'</span><span class="p">][</span><span class="s1">'physics'</span><span class="p">]</span> <span class="o">+</span> <span class="n">analysis_config</span><span class="p">[</span><span class="s1">'variables'</span><span class="p">][</span><span class="s1">'biogeochemistry'</span><span class="p">]</span>
+<span class="n">analysis_config</span><span class="p">[</span><span class="s1">'all_cases'</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">analysis_config</span><span class="p">[</span><span class="s1">'reference_case_name'</span><span class="p">]]</span> <span class="o">+</span> <span class="n">analysis_config</span><span class="p">[</span><span class="s1">'compare_case_name'</span><span class="p">]</span> 
 </pre></div>
 </div>
 <p>This allows us to access a dictionary with the configuration set in our <code class="docutils literal notranslate"><span class="pre">analysis_config.yml</span></code> file.</p>
@@ -734,14 +734,14 @@
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">papermill</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pm</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">config</span><span class="w"> </span><span class="kn">import</span> <span class="n">analysis_config</span>
 
-<span class="k">for</span> <span class="n">variable_type</span> <span class="ow">in</span> <span class="n">analysis_config</span><span class="p">[</span><span class="s1">&#39;variables&#39;</span><span class="p">]:</span>
-    <span class="k">for</span> <span class="n">variable</span> <span class="ow">in</span> <span class="n">analysis_config</span><span class="p">[</span><span class="s1">&#39;variables&#39;</span><span class="p">][</span><span class="n">variable_type</span><span class="p">]:</span>
-        <span class="n">out_notebook_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">variable_type</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">variable</span><span class="si">}</span><span class="s2">.ipynb&quot;</span>
+<span class="k">for</span> <span class="n">variable_type</span> <span class="ow">in</span> <span class="n">analysis_config</span><span class="p">[</span><span class="s1">'variables'</span><span class="p">]:</span>
+    <span class="k">for</span> <span class="n">variable</span> <span class="ow">in</span> <span class="n">analysis_config</span><span class="p">[</span><span class="s1">'variables'</span><span class="p">][</span><span class="n">variable_type</span><span class="p">]:</span>
+        <span class="n">out_notebook_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">variable_type</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">variable</span><span class="si">}</span><span class="s2">.ipynb"</span>
         <span class="n">pm</span><span class="o">.</span><span class="n">execute_notebook</span><span class="p">(</span>
-            <span class="s2">&quot;interactive_plot_template.ipynb&quot;</span><span class="p">,</span>
+            <span class="s2">"interactive_plot_template.ipynb"</span><span class="p">,</span>
             <span class="n">out_notebook_name</span><span class="p">,</span>
             <span class="n">parameters</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">variable</span><span class="o">=</span><span class="n">variable</span><span class="p">),</span>
-            <span class="n">kernel_name</span><span class="o">=</span><span class="s1">&#39;python3&#39;</span><span class="p">,</span>
+            <span class="n">kernel_name</span><span class="o">=</span><span class="s1">'python3'</span><span class="p">,</span>
         <span class="p">)</span>
 </pre></div>
 </div>
@@ -771,14 +771,14 @@
     <span class="n">notebook</span> <span class="o">=</span> <span class="n">nbf</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">notebook_name</span><span class="p">,</span> <span class="n">nbf</span><span class="o">.</span><span class="n">NO_CONVERT</span><span class="p">)</span>
     <span class="n">cells_to_keep</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">cell</span> <span class="ow">in</span> <span class="n">notebook</span><span class="o">.</span><span class="n">cells</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">cell</span><span class="o">.</span><span class="n">cell_type</span> <span class="o">==</span> <span class="s1">&#39;markdown&#39;</span><span class="p">:</span>
-            <span class="n">cell</span><span class="p">[</span><span class="s1">&#39;source&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">cell</span><span class="p">[</span><span class="s1">&#39;source&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;Variable&#39;</span><span class="p">,</span> <span class="n">variable</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">cell</span><span class="o">.</span><span class="n">cell_type</span> <span class="o">==</span> <span class="s1">'markdown'</span><span class="p">:</span>
+            <span class="n">cell</span><span class="p">[</span><span class="s1">'source'</span><span class="p">]</span> <span class="o">=</span> <span class="n">cell</span><span class="p">[</span><span class="s1">'source'</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">'Variable'</span><span class="p">,</span> <span class="n">variable</span><span class="p">)</span>
 
         <span class="n">cells_to_keep</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cell</span><span class="p">)</span>
     <span class="n">new_notebook</span> <span class="o">=</span> <span class="n">notebook</span>
     <span class="n">new_notebook</span><span class="o">.</span><span class="n">cells</span> <span class="o">=</span> <span class="n">cells_to_keep</span>
     <span class="n">nbf</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">new_notebook</span><span class="p">,</span> <span class="n">notebook_name</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="n">nbf</span><span class="o">.</span><span class="n">NO_CONVERT</span><span class="p">)</span>
-    <span class="k">return</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Modified </span><span class="si">{</span><span class="n">notebook_name</span><span class="si">}</span><span class="s1"> with </span><span class="si">{</span><span class="n">variable</span><span class="si">}</span><span class="s1"> header&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Modified </span><span class="si">{</span><span class="n">notebook_name</span><span class="si">}</span><span class="s1"> with </span><span class="si">{</span><span class="n">variable</span><span class="si">}</span><span class="s1"> header'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -786,14 +786,14 @@
 <p>We can then add this function after creating the notebooks in papermill, with the workflow shown below:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">variable_type</span> <span class="ow">in</span> <span class="n">analysis_config</span><span class="p">[</span><span class="s1">&#39;variables&#39;</span><span class="p">]:</span>
-    <span class="k">for</span> <span class="n">variable</span> <span class="ow">in</span> <span class="n">analysis_config</span><span class="p">[</span><span class="s1">&#39;variables&#39;</span><span class="p">][</span><span class="n">variable_type</span><span class="p">]:</span>
-        <span class="n">out_notebook_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">variable_type</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">variable</span><span class="si">}</span><span class="s2">.ipynb&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">variable_type</span> <span class="ow">in</span> <span class="n">analysis_config</span><span class="p">[</span><span class="s1">'variables'</span><span class="p">]:</span>
+    <span class="k">for</span> <span class="n">variable</span> <span class="ow">in</span> <span class="n">analysis_config</span><span class="p">[</span><span class="s1">'variables'</span><span class="p">][</span><span class="n">variable_type</span><span class="p">]:</span>
+        <span class="n">out_notebook_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">variable_type</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">variable</span><span class="si">}</span><span class="s2">.ipynb"</span>
         <span class="n">pm</span><span class="o">.</span><span class="n">execute_notebook</span><span class="p">(</span>
-            <span class="s2">&quot;interactive_plot_template.ipynb&quot;</span><span class="p">,</span>
+            <span class="s2">"interactive_plot_template.ipynb"</span><span class="p">,</span>
             <span class="n">out_notebook_name</span><span class="p">,</span>
             <span class="n">parameters</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">variable</span><span class="o">=</span><span class="n">variable</span><span class="p">),</span>
-            <span class="n">kernel_name</span><span class="o">=</span><span class="s1">&#39;python3&#39;</span><span class="p">,</span>
+            <span class="n">kernel_name</span><span class="o">=</span><span class="s1">'python3'</span><span class="p">,</span>
         <span class="p">)</span>
         <span class="n">modify_markdown_header</span><span class="p">(</span><span class="n">out_notebook_name</span><span class="p">,</span> <span class="n">variable</span><span class="p">)</span>
 </pre></div>
@@ -862,7 +862,7 @@
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Build the book</span>
 <span class="w">      </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
 <span class="w">        </span><span class="no">jupyter-book build notebooks</span>
-<span class="w">    </span><span class="c1"># Deploy the book&#39;s HTML to gh-pages branch</span>
+<span class="w">    </span><span class="c1"># Deploy the book's HTML to gh-pages branch</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">GitHub Pages action</span>
 <span class="w">      </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">peaceiris/actions-gh-pages@v3.6.1</span>
 <span class="w">      </span><span class="nt">with</span><span class="p">:</span>
@@ -989,8 +989,8 @@
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9"></script>
-<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -1024,7 +1024,7 @@
         <div class="footer-item">
 <p class="theme-version">
   <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.20.0.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.21.0.
 </p></div>
       
     </div>

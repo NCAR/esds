@@ -27,8 +27,8 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
@@ -37,10 +37,10 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=66307ba7" />
   
   <!-- So that users can add custom icons -->
-  <script defer src="../../../_static/scripts/fontawesome.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer src="../../../_static/scripts/fontawesome.js?digest=cb8930eaaf36d9849b67"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9" />
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67" />
 
     <script src="../../../_static/documentation_options.js?v=55b5f74b"></script>
     <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
@@ -74,7 +74,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
-    <meta name="docbuild:last-update" content="Jul 27, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 10, 2026"/>
   
     
     <script src="../../../_static/searchtools.js"></script>
@@ -617,7 +617,7 @@
 <span class="kn">from</span><span class="w"> </span><span class="nn">distributed</span><span class="w"> </span><span class="kn">import</span> <span class="n">Client</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">ncar_jobqueue</span><span class="w"> </span><span class="kn">import</span> <span class="n">NCARCluster</span>
 
-<span class="n">hv</span><span class="o">.</span><span class="n">extension</span><span class="p">(</span><span class="s1">&#39;bokeh&#39;</span><span class="p">)</span>
+<span class="n">hv</span><span class="o">.</span><span class="n">extension</span><span class="p">(</span><span class="s1">'bokeh'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2298,7 +2298,7 @@ roTBs2RqAAAAAElFTkSuQmCC'
 <p>We are using some sample data provided by Cindy Bruyere, who works in the Mesoscale &amp; Microscale Meteorology Lab at NCAR! She proposed this challenge of finding a more performant way of getting WRF data into the Xarray data model. The data here is from a regional model simulation over Australia!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">files</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s1">&#39;/glade/scratch/bruyerec/IAG/METGRID/*.nc&#39;</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">files</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s1">'/glade/scratch/bruyerec/IAG/METGRID/*.nc'</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -2718,7 +2718,7 @@ Attributes: (12/73)
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">var</span> <span class="ow">in</span> <span class="n">wrf_ds</span><span class="p">:</span>
     <span class="k">try</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;variable: </span><span class="si">{</span><span class="n">var</span><span class="si">}</span><span class="s1">, description: </span><span class="si">{</span><span class="n">wrf_ds</span><span class="p">[</span><span class="n">var</span><span class="p">]</span><span class="o">.</span><span class="n">description</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'variable: </span><span class="si">{</span><span class="n">var</span><span class="si">}</span><span class="s1">, description: </span><span class="si">{</span><span class="n">wrf_ds</span><span class="p">[</span><span class="n">var</span><span class="p">]</span><span class="o">.</span><span class="n">description</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
     <span class="k">except</span><span class="p">:</span>
         <span class="k">pass</span>
 </pre></div>
@@ -2848,7 +2848,7 @@ variable: XLAT_M, description: Latitude on mass grid
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
-<span class="n">variables</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;PRES&quot;</span><span class="p">,</span> <span class="s2">&quot;TT&quot;</span><span class="p">,</span> <span class="s2">&quot;RH&quot;</span><span class="p">]</span>
+<span class="n">variables</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"PRES"</span><span class="p">,</span> <span class="s2">"TT"</span><span class="p">,</span> <span class="s2">"RH"</span><span class="p">]</span>
 
 
 <span class="k">def</span><span class="w"> </span><span class="nf">preprocess</span><span class="p">(</span><span class="n">ds</span><span class="p">):</span>
@@ -2857,12 +2857,12 @@ variable: XLAT_M, description: Latitude on mass grid
 
 <span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_mfdataset</span><span class="p">(</span>
     <span class="n">file_subset</span><span class="p">,</span>
-    <span class="n">engine</span><span class="o">=</span><span class="s2">&quot;xwrf&quot;</span><span class="p">,</span>
+    <span class="n">engine</span><span class="o">=</span><span class="s2">"xwrf"</span><span class="p">,</span>
     <span class="n">parallel</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-    <span class="n">concat_dim</span><span class="o">=</span><span class="s2">&quot;Time&quot;</span><span class="p">,</span>
-    <span class="n">combine</span><span class="o">=</span><span class="s2">&quot;nested&quot;</span><span class="p">,</span>
+    <span class="n">concat_dim</span><span class="o">=</span><span class="s2">"Time"</span><span class="p">,</span>
+    <span class="n">combine</span><span class="o">=</span><span class="s2">"nested"</span><span class="p">,</span>
     <span class="n">preprocess</span><span class="o">=</span><span class="n">preprocess</span><span class="p">,</span>
-    <span class="n">chunks</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Time&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">},</span>
+    <span class="n">chunks</span><span class="o">=</span><span class="p">{</span><span class="s1">'Time'</span><span class="p">:</span> <span class="mi">1</span><span class="p">},</span>
 <span class="p">)</span>
 </pre></div>
 </div>
@@ -3841,11 +3841,11 @@ Attributes: (12/73)
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/glade/work/mgrover/miniconda3/envs/cesm-collections-dev/lib/python3.9/site-packages/xarray/core/indexing.py:1226: PerformanceWarning: Slicing is producing a large chunk. To accept the large
 chunk and silence this warning, set the option
-    &gt;&gt;&gt; with dask.config.set(**{&#39;array.slicing.split_large_chunks&#39;: False}):
+    &gt;&gt;&gt; with dask.config.set(**{'array.slicing.split_large_chunks': False}):
     ...     array[indexer]
 
 To avoid creating the large chunks, set the option
-    &gt;&gt;&gt; with dask.config.set(**{&#39;array.slicing.split_large_chunks&#39;: True}):
+    &gt;&gt;&gt; with dask.config.set(**{'array.slicing.split_large_chunks': True}):
     ...     array[indexer]
   return self.array[key]
 </pre></div>
@@ -3855,7 +3855,7 @@ To avoid creating the large chunks, set the option
 <p>Next, we can rename the vertical levels to <code class="docutils literal notranslate"><span class="pre">plev</span></code> which stands for pressure levels!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds_to_plot</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="s1">&#39;num_metgrid_levels&#39;</span><span class="p">:</span> <span class="s1">&#39;plev&#39;</span><span class="p">})</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds_to_plot</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="s1">'num_metgrid_levels'</span><span class="p">:</span> <span class="s1">'plev'</span><span class="p">})</span>
 <span class="n">ds_to_plot</span>
 </pre></div>
 </div>
@@ -4755,8 +4755,8 @@ Attributes: (12/73)
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plevs</span> <span class="o">=</span> <span class="n">ds_to_plot</span><span class="o">.</span><span class="n">PRES</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">south_north</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">west_east</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:]</span>
-<span class="n">ds_to_plot</span><span class="p">[</span><span class="s1">&#39;plev&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">plevs</span> <span class="o">/</span> <span class="mi">100</span>
-<span class="n">ds_to_plot</span><span class="p">[</span><span class="s1">&#39;plev&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;units&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;hPa&#39;</span>
+<span class="n">ds_to_plot</span><span class="p">[</span><span class="s1">'plev'</span><span class="p">]</span> <span class="o">=</span> <span class="n">plevs</span> <span class="o">/</span> <span class="mi">100</span>
+<span class="n">ds_to_plot</span><span class="p">[</span><span class="s1">'plev'</span><span class="p">]</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">'units'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'hPa'</span>
 </pre></div>
 </div>
 </div>
@@ -4767,7 +4767,7 @@ Attributes: (12/73)
 <p>The <code class="docutils literal notranslate"><span class="pre">Time</span></code> dimension has a similar issue here where the values are integers, rather than usable time values. We can modify this by setting <code class="docutils literal notranslate"><span class="pre">Time</span></code> to be equal to the time values <code class="docutils literal notranslate"><span class="pre">Times</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds_to_plot</span><span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">Times</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds_to_plot</span><span class="p">[</span><span class="s1">'Time'</span><span class="p">]</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">Times</span>
 <span class="n">ds_to_plot</span><span class="o">.</span><span class="n">Time</span>
 </pre></div>
 </div>
@@ -5312,14 +5312,14 @@ Coordinates:
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot</span> <span class="o">=</span> <span class="n">ds_to_plot</span><span class="o">.</span><span class="n">hvplot</span><span class="o">.</span><span class="n">quadmesh</span><span class="p">(</span>
-    <span class="n">x</span><span class="o">=</span><span class="s1">&#39;XLONG_M&#39;</span><span class="p">,</span>
-    <span class="n">y</span><span class="o">=</span><span class="s1">&#39;XLAT_M&#39;</span><span class="p">,</span>
-    <span class="n">z</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;TT&#39;</span><span class="p">,</span> <span class="s1">&#39;RH&#39;</span><span class="p">],</span>
-    <span class="n">groupby</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">,</span> <span class="s1">&#39;plev&#39;</span><span class="p">],</span>
-    <span class="n">widget_location</span><span class="o">=</span><span class="s1">&#39;bottom&#39;</span><span class="p">,</span>
+    <span class="n">x</span><span class="o">=</span><span class="s1">'XLONG_M'</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="s1">'XLAT_M'</span><span class="p">,</span>
+    <span class="n">z</span><span class="o">=</span><span class="p">[</span><span class="s1">'TT'</span><span class="p">,</span> <span class="s1">'RH'</span><span class="p">],</span>
+    <span class="n">groupby</span><span class="o">=</span><span class="p">[</span><span class="s1">'Time'</span><span class="p">,</span> <span class="s1">'plev'</span><span class="p">],</span>
+    <span class="n">widget_location</span><span class="o">=</span><span class="s1">'bottom'</span><span class="p">,</span>
     <span class="n">rasterize</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="n">coastline</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-    <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;inferno&#39;</span><span class="p">,</span>
+    <span class="n">cmap</span><span class="o">=</span><span class="s1">'inferno'</span><span class="p">,</span>
 <span class="p">)</span>
 <span class="n">plot</span>
 </pre></div>
@@ -5473,8 +5473,8 @@ Coordinates:
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9"></script>
-<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -5508,7 +5508,7 @@ Coordinates:
         <div class="footer-item">
 <p class="theme-version">
   <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.20.0.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.21.0.
 </p></div>
       
     </div>

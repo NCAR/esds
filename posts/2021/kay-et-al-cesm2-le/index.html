@@ -27,8 +27,8 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
@@ -37,10 +37,10 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=66307ba7" />
   
   <!-- So that users can add custom icons -->
-  <script defer src="../../../_static/scripts/fontawesome.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer src="../../../_static/scripts/fontawesome.js?digest=cb8930eaaf36d9849b67"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9" />
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67" />
 
     <script src="../../../_static/documentation_options.js?v=55b5f74b"></script>
     <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
@@ -74,7 +74,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
-    <meta name="docbuild:last-update" content="Jul 27, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 10, 2026"/>
   
     
     <script src="../../../_static/searchtools.js"></script>
@@ -595,11 +595,11 @@
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
 <span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
 
-<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">"ignore"</span><span class="p">)</span>
 <span class="c1"># Silence dask.distributed logs</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">logging</span>
 
-<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s2">&quot;distributed.utils_perf&quot;</span><span class="p">)</span>
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s2">"distributed.utils_perf"</span><span class="p">)</span>
 <span class="n">logger</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">ERROR</span><span class="p">)</span>
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">holoviews</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">hv</span>
@@ -612,7 +612,7 @@
 <span class="kn">from</span><span class="w"> </span><span class="nn">distributed</span><span class="w"> </span><span class="kn">import</span> <span class="n">Client</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">ncar_jobqueue</span><span class="w"> </span><span class="kn">import</span> <span class="n">NCARCluster</span>
 
-<span class="n">hv</span><span class="o">.</span><span class="n">extension</span><span class="p">(</span><span class="s1">&#39;bokeh&#39;</span><span class="p">)</span>
+<span class="n">hv</span><span class="o">.</span><span class="n">extension</span><span class="p">(</span><span class="s1">'bokeh'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -4437,11 +4437,11 @@ roTBs2RqAAAAAElFTkSuQmCC'
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cluster</span> <span class="o">=</span> <span class="n">NCARCluster</span><span class="p">(</span>
-    <span class="n">memory</span><span class="o">=</span><span class="s2">&quot;50GB&quot;</span><span class="p">,</span>
-    <span class="n">walltime</span><span class="o">=</span><span class="s1">&#39;2:00:00&#39;</span><span class="p">,</span>
+    <span class="n">memory</span><span class="o">=</span><span class="s2">"50GB"</span><span class="p">,</span>
+    <span class="n">walltime</span><span class="o">=</span><span class="s1">'2:00:00'</span><span class="p">,</span>
     <span class="n">cores</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
     <span class="n">processes</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
-    <span class="n">resource_spec</span><span class="o">=</span><span class="s1">&#39;select=1:ncpus=1:mem=50GB&#39;</span><span class="p">,</span>
+    <span class="n">resource_spec</span><span class="o">=</span><span class="s1">'select=1:ncpus=1:mem=50GB'</span><span class="p">,</span>
 <span class="p">)</span>
 <span class="n">cluster</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
 <span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">cluster</span><span class="p">)</span>
@@ -4573,7 +4573,7 @@ roTBs2RqAAAAAElFTkSuQmCC'
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">catalog</span> <span class="o">=</span> <span class="n">intake</span><span class="o">.</span><span class="n">open_esm_datastore</span><span class="p">(</span>
-    <span class="s1">&#39;https://raw.githubusercontent.com/NCAR/cesm2-le-aws/main/data/aws-cesm2-le.json&#39;</span>
+    <span class="s1">'https://raw.githubusercontent.com/NCAR/cesm2-le-aws/main/data/aws-cesm2-le.json'</span>
 <span class="p">)</span>
 <span class="n">catalog</span>
 </pre></div>
@@ -4652,7 +4652,7 @@ roTBs2RqAAAAAElFTkSuQmCC'
 <p>We use <a class="reference external" href="https://intake-esm.readthedocs.io/en/latest/"><code class="docutils literal notranslate"><span class="pre">Intake-ESM</span></code></a> here to query for our dataset, focusing the smoothed biomass burning (smbb) experiment!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">catalog_subset</span> <span class="o">=</span> <span class="n">catalog</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">variable</span><span class="o">=</span><span class="s1">&#39;TREFHT&#39;</span><span class="p">,</span> <span class="n">frequency</span><span class="o">=</span><span class="s1">&#39;daily&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">catalog_subset</span> <span class="o">=</span> <span class="n">catalog</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">variable</span><span class="o">=</span><span class="s1">'TREFHT'</span><span class="p">,</span> <span class="n">frequency</span><span class="o">=</span><span class="s1">'daily'</span><span class="p">)</span>
 <span class="n">catalog_subset</span>
 </pre></div>
 </div>
@@ -4918,13 +4918,13 @@ roTBs2RqAAAAAElFTkSuQmCC'
 <p>We use <code class="docutils literal notranslate"><span class="pre">.to_dataset_dict()</span></code> to return a dictionary of datasets, which we can now use for the analysis</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dsets</span> <span class="o">=</span> <span class="n">catalog_subset</span><span class="o">.</span><span class="n">to_dataset_dict</span><span class="p">(</span><span class="n">storage_options</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;anon&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">})</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dsets</span> <span class="o">=</span> <span class="n">catalog_subset</span><span class="o">.</span><span class="n">to_dataset_dict</span><span class="p">(</span><span class="n">storage_options</span><span class="o">=</span><span class="p">{</span><span class="s1">'anon'</span><span class="p">:</span> <span class="kc">True</span><span class="p">})</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--&gt; The keys in the returned dictionary of datasets are constructed as follows:
-	&#39;component.experiment.frequency.forcing_variant&#39;
+	'component.experiment.frequency.forcing_variant'
 </pre></div>
 </div>
 <div class="output text_html">
@@ -4954,7 +4954,7 @@ roTBs2RqAAAAAElFTkSuQmCC'
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_keys([&#39;atm.ssp370.daily.smbb&#39;, &#39;atm.historical.daily.smbb&#39;, &#39;atm.ssp370.daily.cmip6&#39;, &#39;atm.historical.daily.cmip6&#39;])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_keys(['atm.ssp370.daily.smbb', 'atm.historical.daily.smbb', 'atm.ssp370.daily.cmip6', 'atm.historical.daily.cmip6'])
 </pre></div>
 </div>
 </div>
@@ -4962,11 +4962,11 @@ roTBs2RqAAAAAElFTkSuQmCC'
 <p>Let’s load these into separate datasets, then merge these together!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">historical_smbb</span> <span class="o">=</span> <span class="n">dsets</span><span class="p">[</span><span class="s1">&#39;atm.historical.daily.smbb&#39;</span><span class="p">]</span>
-<span class="n">future_smbb</span> <span class="o">=</span> <span class="n">dsets</span><span class="p">[</span><span class="s1">&#39;atm.ssp370.daily.smbb&#39;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">historical_smbb</span> <span class="o">=</span> <span class="n">dsets</span><span class="p">[</span><span class="s1">'atm.historical.daily.smbb'</span><span class="p">]</span>
+<span class="n">future_smbb</span> <span class="o">=</span> <span class="n">dsets</span><span class="p">[</span><span class="s1">'atm.ssp370.daily.smbb'</span><span class="p">]</span>
 
-<span class="n">historical_cmip6</span> <span class="o">=</span> <span class="n">dsets</span><span class="p">[</span><span class="s1">&#39;atm.historical.daily.cmip6&#39;</span><span class="p">]</span>
-<span class="n">future_cmip6</span> <span class="o">=</span> <span class="n">dsets</span><span class="p">[</span><span class="s1">&#39;atm.ssp370.daily.cmip6&#39;</span><span class="p">]</span>
+<span class="n">historical_cmip6</span> <span class="o">=</span> <span class="n">dsets</span><span class="p">[</span><span class="s1">'atm.historical.daily.cmip6'</span><span class="p">]</span>
+<span class="n">future_cmip6</span> <span class="o">=</span> <span class="n">dsets</span><span class="p">[</span><span class="s1">'atm.ssp370.daily.cmip6'</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -4974,11 +4974,11 @@ roTBs2RqAAAAAElFTkSuQmCC'
 <p>Now, we can merged the historical and future scenarios. We will drop any members that do not include the full 1850-2100 output!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">merge_ds_smbb</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">historical_smbb</span><span class="p">,</span> <span class="n">future_smbb</span><span class="p">],</span> <span class="n">dim</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">)</span>
-<span class="n">merge_ds_smbb</span> <span class="o">=</span> <span class="n">merge_ds_smbb</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s1">&#39;member_id&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">merge_ds_smbb</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">historical_smbb</span><span class="p">,</span> <span class="n">future_smbb</span><span class="p">],</span> <span class="n">dim</span><span class="o">=</span><span class="s1">'time'</span><span class="p">)</span>
+<span class="n">merge_ds_smbb</span> <span class="o">=</span> <span class="n">merge_ds_smbb</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s1">'member_id'</span><span class="p">)</span>
 
-<span class="n">merge_ds_cmip6</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">historical_cmip6</span><span class="p">,</span> <span class="n">future_cmip6</span><span class="p">],</span> <span class="n">dim</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">)</span>
-<span class="n">merge_ds_cmip6</span> <span class="o">=</span> <span class="n">merge_ds_cmip6</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s1">&#39;member_id&#39;</span><span class="p">)</span>
+<span class="n">merge_ds_cmip6</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">historical_cmip6</span><span class="p">,</span> <span class="n">future_cmip6</span><span class="p">],</span> <span class="n">dim</span><span class="o">=</span><span class="s1">'time'</span><span class="p">)</span>
+<span class="n">merge_ds_cmip6</span> <span class="o">=</span> <span class="n">merge_ds_cmip6</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s1">'member_id'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -4986,8 +4986,8 @@ roTBs2RqAAAAAElFTkSuQmCC'
 <p>For ease of plotting, we convert the <code class="docutils literal notranslate"><span class="pre">cftime.datetime</span></code> times to regular <code class="docutils literal notranslate"><span class="pre">datetime</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">merge_ds_smbb</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">merge_ds_smbb</span><span class="o">.</span><span class="n">indexes</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">to_datetimeindex</span><span class="p">()</span>
-<span class="n">merge_ds_cmip6</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">merge_ds_cmip6</span><span class="o">.</span><span class="n">indexes</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">to_datetimeindex</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">merge_ds_smbb</span><span class="p">[</span><span class="s1">'time'</span><span class="p">]</span> <span class="o">=</span> <span class="n">merge_ds_smbb</span><span class="o">.</span><span class="n">indexes</span><span class="p">[</span><span class="s1">'time'</span><span class="p">]</span><span class="o">.</span><span class="n">to_datetimeindex</span><span class="p">()</span>
+<span class="n">merge_ds_cmip6</span><span class="p">[</span><span class="s1">'time'</span><span class="p">]</span> <span class="o">=</span> <span class="n">merge_ds_cmip6</span><span class="o">.</span><span class="n">indexes</span><span class="p">[</span><span class="s1">'time'</span><span class="p">]</span><span class="o">.</span><span class="n">to_datetimeindex</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -5002,7 +5002,7 @@ roTBs2RqAAAAAElFTkSuQmCC'
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t_smbb</span> <span class="o">=</span> <span class="n">merge_ds_smbb</span><span class="o">.</span><span class="n">TREFHT</span>
 <span class="n">t_cmip6</span> <span class="o">=</span> <span class="n">merge_ds_cmip6</span><span class="o">.</span><span class="n">TREFHT</span>
-<span class="n">t_ref</span> <span class="o">=</span> <span class="n">t_cmip6</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="s1">&#39;1961&#39;</span><span class="p">,</span> <span class="s1">&#39;1990&#39;</span><span class="p">))</span>
+<span class="n">t_ref</span> <span class="o">=</span> <span class="n">t_cmip6</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="s1">'1961'</span><span class="p">,</span> <span class="s1">'1990'</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -6222,7 +6222,7 @@ Attributes:
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grid_subset</span> <span class="o">=</span> <span class="n">catalog</span><span class="o">.</span><span class="n">search</span><span class="p">(</span>
-    <span class="n">component</span><span class="o">=</span><span class="s1">&#39;atm&#39;</span><span class="p">,</span> <span class="n">frequency</span><span class="o">=</span><span class="s1">&#39;static&#39;</span><span class="p">,</span> <span class="n">experiment</span><span class="o">=</span><span class="s1">&#39;historical&#39;</span><span class="p">,</span> <span class="n">forcing_variant</span><span class="o">=</span><span class="s1">&#39;smbb&#39;</span>
+    <span class="n">component</span><span class="o">=</span><span class="s1">'atm'</span><span class="p">,</span> <span class="n">frequency</span><span class="o">=</span><span class="s1">'static'</span><span class="p">,</span> <span class="n">experiment</span><span class="o">=</span><span class="s1">'historical'</span><span class="p">,</span> <span class="n">forcing_variant</span><span class="o">=</span><span class="s1">'smbb'</span>
 <span class="p">)</span>
 </pre></div>
 </div>
@@ -6232,7 +6232,7 @@ Attributes:
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">_</span><span class="p">,</span> <span class="n">grid</span> <span class="o">=</span> <span class="n">grid_subset</span><span class="o">.</span><span class="n">to_dataset_dict</span><span class="p">(</span>
-    <span class="n">aggregate</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">zarr_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;consolidated&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span> <span class="n">storage_options</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;anon&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">}</span>
+    <span class="n">aggregate</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">zarr_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s2">"consolidated"</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span> <span class="n">storage_options</span><span class="o">=</span><span class="p">{</span><span class="s1">'anon'</span><span class="p">:</span> <span class="kc">True</span><span class="p">}</span>
 <span class="p">)</span><span class="o">.</span><span class="n">popitem</span><span class="p">()</span>
 <span class="n">grid</span>
 </pre></div>
@@ -6240,7 +6240,7 @@ Attributes:
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--&gt; The keys in the returned dictionary of datasets are constructed as follows:
-	&#39;component.spatial_domain.frequency.path.experiment.forcing_variant.variable.long_name.start_time.end_time&#39;
+	'component.spatial_domain.frequency.path.experiment.forcing_variant.variable.long_name.start_time.end_time'
 </pre></div>
 </div>
 <div class="output text_html">
@@ -7791,13 +7791,13 @@ Attributes:
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
-<span class="n">t_ref_ts</span> <span class="o">=</span> <span class="p">((</span><span class="n">t_ref</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="s2">&quot;AS&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">weighted</span><span class="p">(</span><span class="n">cell_area</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">((</span><span class="s1">&#39;lat&#39;</span><span class="p">,</span> <span class="s1">&#39;lon&#39;</span><span class="p">)))</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span>
-    <span class="n">dim</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="s2">&quot;member_id&quot;</span><span class="p">)</span>
+<span class="n">t_ref_ts</span> <span class="o">=</span> <span class="p">((</span><span class="n">t_ref</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="s2">"AS"</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s2">"time"</span><span class="p">))</span><span class="o">.</span><span class="n">weighted</span><span class="p">(</span><span class="n">cell_area</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">((</span><span class="s1">'lat'</span><span class="p">,</span> <span class="s1">'lon'</span><span class="p">)))</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span>
+    <span class="n">dim</span><span class="o">=</span><span class="p">(</span><span class="s2">"time"</span><span class="p">,</span> <span class="s2">"member_id"</span><span class="p">)</span>
 <span class="p">)</span>
 
-<span class="n">t_smbb_ts</span> <span class="o">=</span> <span class="p">(</span><span class="n">t_smbb</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="s2">&quot;AS&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">weighted</span><span class="p">(</span><span class="n">cell_area</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">((</span><span class="s1">&#39;lat&#39;</span><span class="p">,</span> <span class="s1">&#39;lon&#39;</span><span class="p">))</span>
+<span class="n">t_smbb_ts</span> <span class="o">=</span> <span class="p">(</span><span class="n">t_smbb</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="s2">"AS"</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s2">"time"</span><span class="p">))</span><span class="o">.</span><span class="n">weighted</span><span class="p">(</span><span class="n">cell_area</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">((</span><span class="s1">'lat'</span><span class="p">,</span> <span class="s1">'lon'</span><span class="p">))</span>
 
-<span class="n">t_cmip6_ts</span> <span class="o">=</span> <span class="p">(</span><span class="n">t_cmip6</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="s2">&quot;AS&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">weighted</span><span class="p">(</span><span class="n">cell_area</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">((</span><span class="s1">&#39;lat&#39;</span><span class="p">,</span> <span class="s1">&#39;lon&#39;</span><span class="p">))</span>
+<span class="n">t_cmip6_ts</span> <span class="o">=</span> <span class="p">(</span><span class="n">t_cmip6</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="s2">"AS"</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s2">"time"</span><span class="p">))</span><span class="o">.</span><span class="n">weighted</span><span class="p">(</span><span class="n">cell_area</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">((</span><span class="s1">'lat'</span><span class="p">,</span> <span class="s1">'lon'</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -7886,7 +7886,7 @@ Wall time: 5min 51s
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Observational time series data for comparison with ensemble average</span>
 <span class="n">obsDataURL</span> <span class="o">=</span> <span class="p">(</span>
-    <span class="s2">&quot;https://www.esrl.noaa.gov/psd/thredds/dodsC/Datasets/cru/hadcrut4/air.mon.anom.median.nc&quot;</span>
+    <span class="s2">"https://www.esrl.noaa.gov/psd/thredds/dodsC/Datasets/cru/hadcrut4/air.mon.anom.median.nc"</span>
 <span class="p">)</span>
 </pre></div>
 </div>
@@ -8341,20 +8341,20 @@ Data is a collaboration of CRU and the Hadley Center</dd><dt><span>version :</sp
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">weighted_temporal_mean</span><span class="p">(</span><span class="n">ds</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    weight by days in each month</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">time_bound_diff</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">time_bnds</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s2">&quot;nbnds&quot;</span><span class="p">)[:,</span> <span class="mi">0</span><span class="p">]</span>
-    <span class="n">wgts</span> <span class="o">=</span> <span class="n">time_bound_diff</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;time.year&quot;</span><span class="p">)</span> <span class="o">/</span> <span class="n">time_bound_diff</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;time.year&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span>
+<span class="sd">    """</span>
+    <span class="n">time_bound_diff</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">time_bnds</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s2">"nbnds"</span><span class="p">)[:,</span> <span class="mi">0</span><span class="p">]</span>
+    <span class="n">wgts</span> <span class="o">=</span> <span class="n">time_bound_diff</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">"time.year"</span><span class="p">)</span> <span class="o">/</span> <span class="n">time_bound_diff</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">"time.year"</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span>
         <span class="n">xr</span><span class="o">.</span><span class="n">ALL_DIMS</span>
     <span class="p">)</span>
-    <span class="n">np</span><span class="o">.</span><span class="n">testing</span><span class="o">.</span><span class="n">assert_allclose</span><span class="p">(</span><span class="n">wgts</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;time.year&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">xr</span><span class="o">.</span><span class="n">ALL_DIMS</span><span class="p">),</span> <span class="mf">1.0</span><span class="p">)</span>
-    <span class="n">obs</span> <span class="o">=</span> <span class="n">ds</span><span class="p">[</span><span class="s2">&quot;air&quot;</span><span class="p">]</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">testing</span><span class="o">.</span><span class="n">assert_allclose</span><span class="p">(</span><span class="n">wgts</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">"time.year"</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">xr</span><span class="o">.</span><span class="n">ALL_DIMS</span><span class="p">),</span> <span class="mf">1.0</span><span class="p">)</span>
+    <span class="n">obs</span> <span class="o">=</span> <span class="n">ds</span><span class="p">[</span><span class="s2">"air"</span><span class="p">]</span>
     <span class="n">cond</span> <span class="o">=</span> <span class="n">obs</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span>
     <span class="n">ones</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">cond</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
-    <span class="n">obs_sum</span> <span class="o">=</span> <span class="p">(</span><span class="n">obs</span> <span class="o">*</span> <span class="n">wgts</span><span class="p">)</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="s2">&quot;AS&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s2">&quot;time&quot;</span><span class="p">)</span>
-    <span class="n">ones_out</span> <span class="o">=</span> <span class="p">(</span><span class="n">ones</span> <span class="o">*</span> <span class="n">wgts</span><span class="p">)</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="s2">&quot;AS&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s2">&quot;time&quot;</span><span class="p">)</span>
-    <span class="n">obs_s</span> <span class="o">=</span> <span class="p">(</span><span class="n">obs_sum</span> <span class="o">/</span> <span class="n">ones_out</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">((</span><span class="s2">&quot;lat&quot;</span><span class="p">,</span> <span class="s2">&quot;lon&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">to_series</span><span class="p">()</span>
+    <span class="n">obs_sum</span> <span class="o">=</span> <span class="p">(</span><span class="n">obs</span> <span class="o">*</span> <span class="n">wgts</span><span class="p">)</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="s2">"AS"</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s2">"time"</span><span class="p">)</span>
+    <span class="n">ones_out</span> <span class="o">=</span> <span class="p">(</span><span class="n">ones</span> <span class="o">*</span> <span class="n">wgts</span><span class="p">)</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="s2">"AS"</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s2">"time"</span><span class="p">)</span>
+    <span class="n">obs_s</span> <span class="o">=</span> <span class="p">(</span><span class="n">obs_sum</span> <span class="o">/</span> <span class="n">ones_out</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">((</span><span class="s2">"lat"</span><span class="p">,</span> <span class="s2">"lon"</span><span class="p">))</span><span class="o">.</span><span class="n">to_series</span><span class="p">()</span>
     <span class="k">return</span> <span class="n">obs_s</span>
 </pre></div>
 </div>
@@ -8391,7 +8391,7 @@ Freq: AS-JAN, Length: 172, dtype: float64
 <h3>Convert the dataset into a dataframe<a class="headerlink" href="#convert-the-dataset-into-a-dataframe" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">obs_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">obs_s</span><span class="p">)</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="s1">&#39;value&#39;</span><span class="p">})</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">obs_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">obs_s</span><span class="p">)</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="s1">'value'</span><span class="p">})</span>
 <span class="n">obs_df</span>
 </pre></div>
 </div>
@@ -8481,34 +8481,34 @@ Freq: AS-JAN, Length: 172, dtype: float64
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">smbb_plot</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n">anomaly_smbb</span><span class="o">.</span><span class="n">hvplot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
-        <span class="s1">&#39;time&#39;</span><span class="p">,</span>
+        <span class="s1">'time'</span><span class="p">,</span>
         <span class="n">height</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
         <span class="n">width</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span>
-        <span class="n">color</span><span class="o">=</span><span class="s1">&#39;lightgrey&#39;</span><span class="p">,</span>
+        <span class="n">color</span><span class="o">=</span><span class="s1">'lightgrey'</span><span class="p">,</span>
         <span class="n">legend</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-        <span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;Year&#39;</span><span class="p">,</span>
-        <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Global Mean </span><span class="se">\n</span><span class="s1"> Temperature Anomaly (K)&#39;</span><span class="p">,</span>
+        <span class="n">xlabel</span><span class="o">=</span><span class="s1">'Year'</span><span class="p">,</span>
+        <span class="n">ylabel</span><span class="o">=</span><span class="s1">'Global Mean </span><span class="se">\n</span><span class="s1"> Temperature Anomaly (K)'</span><span class="p">,</span>
         <span class="n">hover</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
     <span class="p">)</span>
-    <span class="o">*</span> <span class="n">anomaly_smbb</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">hvplot</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;ensemble mean&#39;</span><span class="p">)</span>
-    <span class="o">*</span> <span class="n">obs_df</span><span class="o">.</span><span class="n">hvplot</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;observations&#39;</span><span class="p">)</span>
-<span class="p">)</span><span class="o">.</span><span class="n">opts</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Smoothed Biomass Burning&#39;</span><span class="p">)</span>
+    <span class="o">*</span> <span class="n">anomaly_smbb</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">hvplot</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="s1">'time'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'k'</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'ensemble mean'</span><span class="p">)</span>
+    <span class="o">*</span> <span class="n">obs_df</span><span class="o">.</span><span class="n">hvplot</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="s1">'time'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'red'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'observations'</span><span class="p">)</span>
+<span class="p">)</span><span class="o">.</span><span class="n">opts</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">'Smoothed Biomass Burning'</span><span class="p">)</span>
 
 
 <span class="n">cmip6_plot</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n">anomaly_cmip6</span><span class="o">.</span><span class="n">hvplot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
-        <span class="s1">&#39;time&#39;</span><span class="p">,</span>
+        <span class="s1">'time'</span><span class="p">,</span>
         <span class="n">height</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
         <span class="n">width</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span>
-        <span class="n">color</span><span class="o">=</span><span class="s1">&#39;lightgrey&#39;</span><span class="p">,</span>
+        <span class="n">color</span><span class="o">=</span><span class="s1">'lightgrey'</span><span class="p">,</span>
         <span class="n">legend</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-        <span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;Year&#39;</span><span class="p">,</span>
-        <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Global Mean </span><span class="se">\n</span><span class="s1"> Temperature Anomaly (K)&#39;</span><span class="p">,</span>
+        <span class="n">xlabel</span><span class="o">=</span><span class="s1">'Year'</span><span class="p">,</span>
+        <span class="n">ylabel</span><span class="o">=</span><span class="s1">'Global Mean </span><span class="se">\n</span><span class="s1"> Temperature Anomaly (K)'</span><span class="p">,</span>
         <span class="n">hover</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
     <span class="p">)</span>
-    <span class="o">*</span> <span class="n">anomaly_cmip6</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">hvplot</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;ensemble mean&#39;</span><span class="p">)</span>
-    <span class="o">*</span> <span class="n">obs_df</span><span class="o">.</span><span class="n">hvplot</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;observations&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">opts</span><span class="p">(</span>
-        <span class="n">title</span><span class="o">=</span><span class="s1">&#39;CMIP6 Biomass Burning&#39;</span>
+    <span class="o">*</span> <span class="n">anomaly_cmip6</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">hvplot</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="s1">'time'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'k'</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'ensemble mean'</span><span class="p">)</span>
+    <span class="o">*</span> <span class="n">obs_df</span><span class="o">.</span><span class="n">hvplot</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="s1">'time'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'red'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'observations'</span><span class="p">)</span><span class="o">.</span><span class="n">opts</span><span class="p">(</span>
+        <span class="n">title</span><span class="o">=</span><span class="s1">'CMIP6 Biomass Burning'</span>
     <span class="p">)</span>
 <span class="p">)</span>
 
@@ -8680,8 +8680,8 @@ Freq: AS-JAN, Length: 172, dtype: float64
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9"></script>
-<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -8715,7 +8715,7 @@ Freq: AS-JAN, Length: 172, dtype: float64
         <div class="footer-item">
 <p class="theme-version">
   <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.20.0.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.21.0.
 </p></div>
       
     </div>

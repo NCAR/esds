@@ -27,8 +27,8 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
@@ -37,10 +37,10 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=66307ba7" />
   
   <!-- So that users can add custom icons -->
-  <script defer src="../../../_static/scripts/fontawesome.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer src="../../../_static/scripts/fontawesome.js?digest=cb8930eaaf36d9849b67"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9" />
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67" />
 
     <script src="../../../_static/documentation_options.js?v=55b5f74b"></script>
     <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
@@ -74,7 +74,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
-    <meta name="docbuild:last-update" content="Jul 27, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 10, 2026"/>
   
     
     <script src="../../../_static/searchtools.js"></script>
@@ -616,7 +616,7 @@ Attributes: (12/13)
 </ul>
 <p>For <strong><em>this</em></strong> specific issue though, we can use Xoak to deal with these latitudes and longitudes which have the same dimension, <code class="docutils literal notranslate"><span class="pre">ncol</span></code>.</p>
 <p>Before using xoak for selecting data, there is one modification we need to make to the dataset. In the output from xarray, notice how <code class="docutils literal notranslate"><span class="pre">lat</span></code> and <code class="docutils literal notranslate"><span class="pre">lon</span></code> are not included in the coordinates. Xoak expects <code class="docutils literal notranslate"><span class="pre">latitude</span></code> and <code class="docutils literal notranslate"><span class="pre">longitude</span></code> to be coordinates, so we make a slight modification, setting these two variables to be coordinates.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">set_coords</span><span class="p">([</span><span class="s1">&#39;lat&#39;</span><span class="p">,</span> <span class="s1">&#39;lon&#39;</span><span class="p">])</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">set_coords</span><span class="p">([</span><span class="s1">'lat'</span><span class="p">,</span> <span class="s1">'lon'</span><span class="p">])</span>
 </pre></div>
 </div>
 <p>Now that we have our dataset ready for xoak, we can setup our function and apply it for the lats/lons we are interested in looking at.</p>
@@ -624,7 +624,7 @@ Attributes: (12/13)
 
 <span class="c1"># Setup a function to deal with flexible indexing</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">kdtree_sel</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span> <span class="n">lats</span><span class="p">,</span> <span class="n">lons</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Uses xoak to select data with irregular dimensions</span>
 
 <span class="sd">    Parameters</span>
@@ -642,14 +642,14 @@ Attributes: (12/13)
 <span class="sd">    -------</span>
 <span class="sd">    ds : `xr.Dataset`</span>
 <span class="sd">      Dataset subset based on input lats/lons</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
     <span class="c1"># Checks to see if this has an xoak index - if not, create one using the extension</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">ds</span><span class="o">.</span><span class="n">xoak</span><span class="o">.</span><span class="n">index</span><span class="p">:</span>
-        <span class="n">ds</span><span class="o">.</span><span class="n">xoak</span><span class="o">.</span><span class="n">set_index</span><span class="p">((</span><span class="s2">&quot;lat&quot;</span><span class="p">,</span> <span class="s2">&quot;lon&quot;</span><span class="p">),</span> <span class="s2">&quot;scipy_kdtree&quot;</span><span class="p">)</span>
+        <span class="n">ds</span><span class="o">.</span><span class="n">xoak</span><span class="o">.</span><span class="n">set_index</span><span class="p">((</span><span class="s2">"lat"</span><span class="p">,</span> <span class="s2">"lon"</span><span class="p">),</span> <span class="s2">"scipy_kdtree"</span><span class="p">)</span>
 
     <span class="c1"># Return the selected datasets</span>
-    <span class="k">return</span> <span class="n">ds</span><span class="o">.</span><span class="n">xoak</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">lat</span><span class="o">=</span><span class="n">xr</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="s2">&quot;ncol&quot;</span><span class="p">,</span> <span class="n">lats</span><span class="p">),</span> <span class="n">lon</span><span class="o">=</span><span class="n">xr</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="s2">&quot;ncol&quot;</span><span class="p">,</span> <span class="n">lons</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">ds</span><span class="o">.</span><span class="n">xoak</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">lat</span><span class="o">=</span><span class="n">xr</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="s2">"ncol"</span><span class="p">,</span> <span class="n">lats</span><span class="p">),</span> <span class="n">lon</span><span class="o">=</span><span class="n">xr</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="s2">"ncol"</span><span class="p">,</span> <span class="n">lons</span><span class="p">))</span>
 
 
 <span class="n">kdtree_sel</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span> <span class="p">[</span><span class="mi">34</span><span class="p">,</span> <span class="mf">34.25</span><span class="p">,</span> <span class="mf">34.3</span><span class="p">,</span> <span class="mi">42</span><span class="p">],</span> <span class="p">[</span><span class="mi">350</span><span class="p">,</span> <span class="mi">350</span><span class="p">,</span> <span class="mi">352</span><span class="p">,</span> <span class="mi">290</span><span class="p">])</span>
@@ -764,8 +764,8 @@ Attributes: (12/13)
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9"></script>
-<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -799,7 +799,7 @@ Attributes: (12/13)
         <div class="footer-item">
 <p class="theme-version">
   <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.20.0.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.21.0.
 </p></div>
       
     </div>

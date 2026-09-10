@@ -27,8 +27,8 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
@@ -37,10 +37,10 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=66307ba7" />
   
   <!-- So that users can add custom icons -->
-  <script defer src="../../../_static/scripts/fontawesome.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer src="../../../_static/scripts/fontawesome.js?digest=cb8930eaaf36d9849b67"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9" />
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67" />
 
     <script src="../../../_static/documentation_options.js?v=55b5f74b"></script>
     <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
@@ -74,7 +74,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
-    <meta name="docbuild:last-update" content="Jul 27, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 10, 2026"/>
   
     
     <script src="../../../_static/searchtools.js"></script>
@@ -604,8 +604,8 @@
 
 <span class="c1"># some nice plotting settings</span>
 <span class="n">xr</span><span class="o">.</span><span class="n">set_options</span><span class="p">(</span><span class="n">cmap_sequential</span><span class="o">=</span><span class="n">mpl</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">YlGn</span><span class="p">,</span> <span class="n">keep_attrs</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s2">&quot;figure.dpi&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">120</span>
-<span class="n">cbar_kwargs</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;orientation&quot;</span><span class="p">:</span> <span class="s2">&quot;horizontal&quot;</span><span class="p">,</span> <span class="s2">&quot;shrink&quot;</span><span class="p">:</span> <span class="mf">0.8</span><span class="p">,</span> <span class="s2">&quot;aspect&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">}</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s2">"figure.dpi"</span><span class="p">]</span> <span class="o">=</span> <span class="mi">120</span>
+<span class="n">cbar_kwargs</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"orientation"</span><span class="p">:</span> <span class="s2">"horizontal"</span><span class="p">,</span> <span class="s2">"shrink"</span><span class="p">:</span> <span class="mf">0.8</span><span class="p">,</span> <span class="s2">"aspect"</span><span class="p">:</span> <span class="mi">30</span><span class="p">}</span>
 
 
 <span class="k">def</span><span class="w"> </span><span class="nf">setup_axes</span><span class="p">():</span>
@@ -624,13 +624,13 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pft_constants</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span>
-    <span class="s2">&quot;/glade/p/cesm/cseg/inputdata/lnd/clm2/paramdata/clm5_params.c190529.nc&quot;</span>
+    <span class="s2">"/glade/p/cesm/cseg/inputdata/lnd/clm2/paramdata/clm5_params.c190529.nc"</span>
 <span class="p">)</span>
 <span class="n">pftnames</span> <span class="o">=</span> <span class="n">pft_constants</span><span class="o">.</span><span class="n">pftname</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span>
-    <span class="s2">&quot;/glade/p/cgd/tss/people/dll/TRENDY2019_History/S0_control/TRENDY2019_S0_control_v2.clm2.h1.GPP.170001-201812.nc&quot;</span><span class="p">,</span>
+    <span class="s2">"/glade/p/cgd/tss/people/dll/TRENDY2019_History/S0_control/TRENDY2019_S0_control_v2.clm2.h1.GPP.170001-201812.nc"</span><span class="p">,</span>
     <span class="n">decode_times</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-    <span class="n">chunks</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;time&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">},</span>
+    <span class="n">chunks</span><span class="o">=</span><span class="p">{</span><span class="s2">"time"</span><span class="p">:</span> <span class="mi">100</span><span class="p">},</span>
 <span class="p">)</span>
 <span class="n">data</span>
 </pre></div>
@@ -4613,7 +4613,7 @@ Attributes:
 </summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">to_sparse</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">vegtype</span><span class="p">,</span> <span class="n">jxy</span><span class="p">,</span> <span class="n">ixy</span><span class="p">,</span> <span class="n">shape</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Takes an input numpy array and converts it to a sparse array.</span>
 
 <span class="sd">    Parameters</span>
@@ -4634,12 +4634,12 @@ Attributes:
 <span class="sd">    -------</span>
 <span class="sd">    sparse.COO</span>
 <span class="sd">        Sparse nD array</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="kn">import</span><span class="w"> </span><span class="nn">sparse</span>
 
     <span class="c1"># This constructs a list of coordinate locations at which data exists</span>
     <span class="c1"># it works for arbitrary number of dimensions but assumes that the last dimension</span>
-    <span class="c1"># is the &quot;stacked&quot; dimension i.e. &quot;pft&quot;</span>
+    <span class="c1"># is the "stacked" dimension i.e. "pft"</span>
     <span class="k">if</span> <span class="n">data</span><span class="o">.</span><span class="n">ndim</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
         <span class="n">coords</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">stack</span><span class="p">([</span><span class="n">vegtype</span><span class="p">,</span> <span class="n">jxy</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">ixy</span> <span class="o">-</span> <span class="mi">1</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
     <span class="k">elif</span> <span class="n">data</span><span class="o">.</span><span class="n">ndim</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
@@ -4662,7 +4662,7 @@ Attributes:
 
 
 <span class="k">def</span><span class="w"> </span><span class="nf">convert_pft_variables_to_sparse</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">pftnames</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Convert 2D PFT variables in dataset to 4D sparse arrays.</span>
 
 <span class="sd">    Parameters</span>
@@ -4673,15 +4673,15 @@ Attributes:
 <span class="sd">    Returns</span>
 <span class="sd">    -------</span>
 <span class="sd">    xarray.Dataset</span>
-<span class="sd">        Dataset whose &quot;PFT&quot; arrays are now sparse arrays</span>
+<span class="sd">        Dataset whose "PFT" arrays are now sparse arrays</span>
 <span class="sd">        with `pft` dimension expanded out to (type, lat, lon)</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
     <span class="kn">import</span><span class="w"> </span><span class="nn">sparse</span>
     <span class="kn">import</span><span class="w"> </span><span class="nn">xarray</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">xr</span>
 
     <span class="c1"># extract PFT variables</span>
-    <span class="n">pfts</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">({</span><span class="n">k</span><span class="p">:</span> <span class="n">v</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">dataset</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="s2">&quot;pft&quot;</span> <span class="ow">in</span> <span class="n">v</span><span class="o">.</span><span class="n">dims</span><span class="p">})</span>
+    <span class="n">pfts</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">({</span><span class="n">k</span><span class="p">:</span> <span class="n">v</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">dataset</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="s2">"pft"</span> <span class="ow">in</span> <span class="n">v</span><span class="o">.</span><span class="n">dims</span><span class="p">})</span>
 
     <span class="c1"># extract coordinate index locations</span>
     <span class="n">ixy</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">pfts1d_ixy</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
@@ -4691,9 +4691,9 @@ Attributes:
 
     <span class="c1"># expected shape of sparse arrays to pass to `to_sparse` (excludes time)</span>
     <span class="n">output_sizes</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s2">&quot;vegtype&quot;</span><span class="p">:</span> <span class="n">npft</span><span class="p">,</span>
-        <span class="s2">&quot;lat&quot;</span><span class="p">:</span> <span class="n">dataset</span><span class="o">.</span><span class="n">sizes</span><span class="p">[</span><span class="s2">&quot;lat&quot;</span><span class="p">],</span>
-        <span class="s2">&quot;lon&quot;</span><span class="p">:</span> <span class="n">dataset</span><span class="o">.</span><span class="n">sizes</span><span class="p">[</span><span class="s2">&quot;lon&quot;</span><span class="p">],</span>
+        <span class="s2">"vegtype"</span><span class="p">:</span> <span class="n">npft</span><span class="p">,</span>
+        <span class="s2">"lat"</span><span class="p">:</span> <span class="n">dataset</span><span class="o">.</span><span class="n">sizes</span><span class="p">[</span><span class="s2">"lat"</span><span class="p">],</span>
+        <span class="s2">"lon"</span><span class="p">:</span> <span class="n">dataset</span><span class="o">.</span><span class="n">sizes</span><span class="p">[</span><span class="s2">"lon"</span><span class="p">],</span>
     <span class="p">}</span>
 
     <span class="n">result</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">()</span>
@@ -4706,9 +4706,9 @@ Attributes:
             <span class="n">jxy</span><span class="p">,</span>
             <span class="n">ixy</span><span class="p">,</span>
             <span class="n">kwargs</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="nb">tuple</span><span class="p">(</span><span class="n">output_sizes</span><span class="o">.</span><span class="n">values</span><span class="p">())),</span>
-            <span class="n">input_core_dims</span><span class="o">=</span><span class="p">[[</span><span class="s2">&quot;pft&quot;</span><span class="p">]]</span> <span class="o">*</span> <span class="mi">4</span><span class="p">,</span>
-            <span class="n">output_core_dims</span><span class="o">=</span><span class="p">[[</span><span class="s2">&quot;vegtype&quot;</span><span class="p">,</span> <span class="s2">&quot;lat&quot;</span><span class="p">,</span> <span class="s2">&quot;lon&quot;</span><span class="p">]],</span>
-            <span class="n">dask</span><span class="o">=</span><span class="s2">&quot;parallelized&quot;</span><span class="p">,</span>
+            <span class="n">input_core_dims</span><span class="o">=</span><span class="p">[[</span><span class="s2">"pft"</span><span class="p">]]</span> <span class="o">*</span> <span class="mi">4</span><span class="p">,</span>
+            <span class="n">output_core_dims</span><span class="o">=</span><span class="p">[[</span><span class="s2">"vegtype"</span><span class="p">,</span> <span class="s2">"lat"</span><span class="p">,</span> <span class="s2">"lon"</span><span class="p">]],</span>
+            <span class="n">dask</span><span class="o">=</span><span class="s2">"parallelized"</span><span class="p">,</span>
             <span class="n">dask_gufunc_kwargs</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
                 <span class="n">meta</span><span class="o">=</span><span class="n">sparse</span><span class="o">.</span><span class="n">COO</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">pfts</span><span class="p">[</span><span class="n">var</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span><span class="p">)),</span>
                 <span class="n">output_sizes</span><span class="o">=</span><span class="n">output_sizes</span><span class="p">,</span>
@@ -4717,8 +4717,8 @@ Attributes:
         <span class="p">)</span>
 
     <span class="c1"># copy over coordinate variables lat, lon</span>
-    <span class="n">result</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">dataset</span><span class="p">[[</span><span class="s2">&quot;lat&quot;</span><span class="p">,</span> <span class="s2">&quot;lon&quot;</span><span class="p">]])</span>
-    <span class="n">result</span><span class="p">[</span><span class="s2">&quot;vegtype&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pftnames</span><span class="o">.</span><span class="n">data</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">dataset</span><span class="p">[[</span><span class="s2">"lat"</span><span class="p">,</span> <span class="s2">"lon"</span><span class="p">]])</span>
+    <span class="n">result</span><span class="p">[</span><span class="s2">"vegtype"</span><span class="p">]</span> <span class="o">=</span> <span class="n">pftnames</span><span class="o">.</span><span class="n">data</span>
     <span class="c1"># save the dataset attributes</span>
     <span class="n">result</span><span class="o">.</span><span class="n">attrs</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">attrs</span>
     <span class="k">return</span> <span class="n">result</span>
@@ -5362,7 +5362,7 @@ Attributes:
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ax</span> <span class="o">=</span> <span class="n">setup_axes</span><span class="p">()</span>
 <span class="p">(</span>
     <span class="n">sparse_data</span><span class="o">.</span><span class="n">GPP</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">vegtype</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">time</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mi">24</span><span class="p">))</span>
-    <span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;time.month&quot;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">"time.month"</span><span class="p">)</span>
     <span class="o">.</span><span class="n">mean</span><span class="p">()</span>
     <span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">month</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
     <span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">robust</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">cbar_kwargs</span><span class="o">=</span><span class="n">cbar_kwargs</span><span class="p">)</span>
@@ -5395,7 +5395,7 @@ Attributes:
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">Image</span>
 
-<span class="n">Image</span><span class="p">(</span><span class="s2">&quot;../images/sparse_matrix.png&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">125</span><span class="p">)</span>
+<span class="n">Image</span><span class="p">(</span><span class="s2">"../images/sparse_matrix.png"</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">125</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -5543,7 +5543,7 @@ Attributes:
 <p>works by passing the sparse array to <code class="docutils literal notranslate"><span class="pre">xarray.DataArray</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">da</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">coords</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;x&quot;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">4</span><span class="p">),</span> <span class="s2">&quot;y&quot;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">4</span><span class="p">)})</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">da</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">coords</span><span class="o">=</span><span class="p">{</span><span class="s2">"x"</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">4</span><span class="p">),</span> <span class="s2">"y"</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">4</span><span class="p">)})</span>
 <span class="n">da</span>
 </pre></div>
 </div>
@@ -6321,7 +6321,7 @@ Coordinates:
 <p>This works.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">da</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">da</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s2">"x"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -6687,7 +6687,7 @@ Coordinates:
 <p>Xarray knows how to handle dask arrays, so we can just pass <code class="docutils literal notranslate"><span class="pre">dasky_array</span></code> and things work</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span><span class="n">dasky_array</span><span class="p">,</span> <span class="n">coords</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;x&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="s2">&quot;y&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]})</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span><span class="n">dasky_array</span><span class="p">,</span> <span class="n">coords</span><span class="o">=</span><span class="p">{</span><span class="s2">"x"</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="s2">"y"</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]})</span>
 </pre></div>
 </div>
 </div>
@@ -8247,7 +8247,7 @@ Attributes:
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sparse_gpp</span> <span class="o">=</span> <span class="n">sparse</span><span class="o">.</span><span class="n">COO</span><span class="p">(</span>
     <span class="n">coords</span><span class="o">=</span><span class="n">coords</span><span class="p">,</span>
     <span class="n">data</span><span class="o">=</span><span class="n">subset</span><span class="o">.</span><span class="n">data</span><span class="p">,</span>
-    <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">pftnames</span><span class="p">),</span> <span class="n">data</span><span class="o">.</span><span class="n">sizes</span><span class="p">[</span><span class="s2">&quot;lat&quot;</span><span class="p">],</span> <span class="n">data</span><span class="o">.</span><span class="n">sizes</span><span class="p">[</span><span class="s2">&quot;lon&quot;</span><span class="p">]),</span>
+    <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">pftnames</span><span class="p">),</span> <span class="n">data</span><span class="o">.</span><span class="n">sizes</span><span class="p">[</span><span class="s2">"lat"</span><span class="p">],</span> <span class="n">data</span><span class="o">.</span><span class="n">sizes</span><span class="p">[</span><span class="s2">"lon"</span><span class="p">]),</span>
     <span class="n">fill_value</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span>
 <span class="p">)</span>
 <span class="n">sparse_gpp</span>
@@ -8262,8 +8262,8 @@ Attributes:
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sparse_gpp_da</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span>
     <span class="n">sparse_gpp</span><span class="p">,</span>
-    <span class="n">dims</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;vegtype&quot;</span><span class="p">,</span> <span class="s2">&quot;lat&quot;</span><span class="p">,</span> <span class="s2">&quot;lon&quot;</span><span class="p">),</span>
-    <span class="n">coords</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;vegtype&quot;</span><span class="p">:</span> <span class="n">pftnames</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="s2">&quot;lat&quot;</span><span class="p">:</span> <span class="n">data</span><span class="o">.</span><span class="n">lat</span><span class="p">,</span> <span class="s2">&quot;lon&quot;</span><span class="p">:</span> <span class="n">data</span><span class="o">.</span><span class="n">lon</span><span class="p">},</span>
+    <span class="n">dims</span><span class="o">=</span><span class="p">(</span><span class="s2">"vegtype"</span><span class="p">,</span> <span class="s2">"lat"</span><span class="p">,</span> <span class="s2">"lon"</span><span class="p">),</span>
+    <span class="n">coords</span><span class="o">=</span><span class="p">{</span><span class="s2">"vegtype"</span><span class="p">:</span> <span class="n">pftnames</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="s2">"lat"</span><span class="p">:</span> <span class="n">data</span><span class="o">.</span><span class="n">lat</span><span class="p">,</span> <span class="s2">"lon"</span><span class="p">:</span> <span class="n">data</span><span class="o">.</span><span class="n">lon</span><span class="p">},</span>
 <span class="p">)</span>
 <span class="n">sparse_gpp_da</span>
 </pre></div>
@@ -8792,7 +8792,7 @@ Coordinates:
 <span class="n">sparse_gpp</span> <span class="o">=</span> <span class="n">sparse</span><span class="o">.</span><span class="n">COO</span><span class="p">(</span>
     <span class="n">coords</span><span class="o">=</span><span class="n">coords</span><span class="p">,</span>
     <span class="n">data</span><span class="o">=</span><span class="n">subset</span><span class="o">.</span><span class="n">data</span><span class="p">,</span>
-    <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">types</span><span class="p">),</span> <span class="n">data</span><span class="o">.</span><span class="n">sizes</span><span class="p">[</span><span class="s2">&quot;lat&quot;</span><span class="p">],</span> <span class="n">data</span><span class="o">.</span><span class="n">sizes</span><span class="p">[</span><span class="s2">&quot;lon&quot;</span><span class="p">]),</span>
+    <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">types</span><span class="p">),</span> <span class="n">data</span><span class="o">.</span><span class="n">sizes</span><span class="p">[</span><span class="s2">"lat"</span><span class="p">],</span> <span class="n">data</span><span class="o">.</span><span class="n">sizes</span><span class="p">[</span><span class="s2">"lon"</span><span class="p">]),</span>
     <span class="n">fill_value</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span>
 <span class="p">)</span>
 <span class="n">sparse_gpp</span>
@@ -9197,7 +9197,7 @@ Attributes:
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">to_sparse</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">vegtype</span><span class="p">,</span> <span class="n">jxy</span><span class="p">,</span> <span class="n">ixy</span><span class="p">,</span> <span class="n">shape</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Takes an input numpy array and converts it to a sparse array.</span>
 
 <span class="sd">    Parameters</span>
@@ -9218,12 +9218,12 @@ Attributes:
 <span class="sd">    -------</span>
 <span class="sd">    sparse.COO</span>
 <span class="sd">        Sparse nD array</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="kn">import</span><span class="w"> </span><span class="nn">sparse</span>
 
     <span class="c1"># This constructs a list of coordinate locations at which data exists</span>
     <span class="c1"># it works for arbitrary number of dimensions but assumes that the last dimension</span>
-    <span class="c1"># is the &quot;stacked&quot; dimension i.e. &quot;pft&quot;</span>
+    <span class="c1"># is the "stacked" dimension i.e. "pft"</span>
     <span class="k">if</span> <span class="n">data</span><span class="o">.</span><span class="n">ndim</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
         <span class="n">coords</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">stack</span><span class="p">([</span><span class="n">vegtype</span><span class="p">,</span> <span class="n">jxy</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">ixy</span> <span class="o">-</span> <span class="mi">1</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
     <span class="k">elif</span> <span class="n">data</span><span class="o">.</span><span class="n">ndim</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
@@ -9260,12 +9260,12 @@ Attributes:
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sparse_gpp_da</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span>
     <span class="n">sparse_gpp</span><span class="p">,</span>
-    <span class="n">dims</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="s2">&quot;vegtype&quot;</span><span class="p">,</span> <span class="s2">&quot;lat&quot;</span><span class="p">,</span> <span class="s2">&quot;lon&quot;</span><span class="p">),</span>
+    <span class="n">dims</span><span class="o">=</span><span class="p">(</span><span class="s2">"time"</span><span class="p">,</span> <span class="s2">"vegtype"</span><span class="p">,</span> <span class="s2">"lat"</span><span class="p">,</span> <span class="s2">"lon"</span><span class="p">),</span>
     <span class="n">coords</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">&quot;time&quot;</span><span class="p">:</span> <span class="n">subset</span><span class="o">.</span><span class="n">time</span><span class="p">,</span>
-        <span class="s2">&quot;vegtype&quot;</span><span class="p">:</span> <span class="n">pftnames</span><span class="o">.</span><span class="n">data</span><span class="p">,</span>
-        <span class="s2">&quot;lat&quot;</span><span class="p">:</span> <span class="n">data</span><span class="o">.</span><span class="n">lat</span><span class="p">,</span>
-        <span class="s2">&quot;lon&quot;</span><span class="p">:</span> <span class="n">data</span><span class="o">.</span><span class="n">lon</span><span class="p">,</span>
+        <span class="s2">"time"</span><span class="p">:</span> <span class="n">subset</span><span class="o">.</span><span class="n">time</span><span class="p">,</span>
+        <span class="s2">"vegtype"</span><span class="p">:</span> <span class="n">pftnames</span><span class="o">.</span><span class="n">data</span><span class="p">,</span>
+        <span class="s2">"lat"</span><span class="p">:</span> <span class="n">data</span><span class="o">.</span><span class="n">lat</span><span class="p">,</span>
+        <span class="s2">"lon"</span><span class="p">:</span> <span class="n">data</span><span class="o">.</span><span class="n">lon</span><span class="p">,</span>
     <span class="p">},</span>
 <span class="p">)</span>
 <span class="n">sparse_gpp_da</span>
@@ -9750,7 +9750,7 @@ Coordinates:
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fg</span> <span class="o">=</span> <span class="n">sparse_gpp_da</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">vegtype</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
-    <span class="n">col</span><span class="o">=</span><span class="s2">&quot;time&quot;</span><span class="p">,</span>
+    <span class="n">col</span><span class="o">=</span><span class="s2">"time"</span><span class="p">,</span>
     <span class="n">robust</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="n">transform</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(),</span>
     <span class="n">subplot_kws</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">()),</span>
@@ -9790,9 +9790,9 @@ Coordinates:
     <span class="n">jxy</span><span class="p">,</span>
     <span class="n">ixy</span><span class="p">,</span>
     <span class="c1"># other non-array arguments expected by to_sparse</span>
-    <span class="n">kwargs</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;shape&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">79</span><span class="p">,</span> <span class="mi">192</span><span class="p">,</span> <span class="mi">288</span><span class="p">)},</span>
+    <span class="n">kwargs</span><span class="o">=</span><span class="p">{</span><span class="s2">"shape"</span><span class="p">:</span> <span class="p">(</span><span class="mi">79</span><span class="p">,</span> <span class="mi">192</span><span class="p">,</span> <span class="mi">288</span><span class="p">)},</span>
     <span class="c1"># extra metadata info required by apply_ufunc</span>
-    <span class="n">input_core_dims</span><span class="o">=</span><span class="p">[[</span><span class="s2">&quot;pft&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;pft&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;pft&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;pft&quot;</span><span class="p">]],</span>
+    <span class="n">input_core_dims</span><span class="o">=</span><span class="p">[[</span><span class="s2">"pft"</span><span class="p">],</span> <span class="p">[</span><span class="s2">"pft"</span><span class="p">],</span> <span class="p">[</span><span class="s2">"pft"</span><span class="p">],</span> <span class="p">[</span><span class="s2">"pft"</span><span class="p">]],</span>
 <span class="p">)</span>
 </pre></div>
 </div>
@@ -9807,10 +9807,10 @@ Coordinates:
     <span class="mi">756</span>         <span class="n">data</span> <span class="o">=</span> <span class="n">as_compatible_data</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
     <span class="mi">757</span>         <span class="k">if</span> <span class="n">data</span><span class="o">.</span><span class="n">ndim</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">dims</span><span class="p">):</span>
 <span class="o">--&gt;</span> <span class="mi">758</span>             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
-    <span class="mi">759</span>                 <span class="s2">&quot;applied function returned data with unexpected &quot;</span>
-    <span class="mi">760</span>                 <span class="sa">f</span><span class="s2">&quot;number of dimensions. Received </span><span class="si">{</span><span class="n">data</span><span class="o">.</span><span class="n">ndim</span><span class="si">}</span><span class="s2"> dimension(s) but &quot;</span>
+    <span class="mi">759</span>                 <span class="s2">"applied function returned data with unexpected "</span>
+    <span class="mi">760</span>                 <span class="sa">f</span><span class="s2">"number of dimensions. Received </span><span class="si">{</span><span class="n">data</span><span class="o">.</span><span class="n">ndim</span><span class="si">}</span><span class="s2"> dimension(s) but "</span>
 
-<span class="ne">ValueError</span><span class="p">:</span> <span class="n">applied</span> <span class="n">function</span> <span class="n">returned</span> <span class="n">data</span> <span class="k">with</span> <span class="n">unexpected</span> <span class="n">number</span> <span class="n">of</span> <span class="n">dimensions</span><span class="o">.</span> <span class="n">Received</span> <span class="mi">4</span> <span class="n">dimension</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="n">but</span> <span class="n">expected</span> <span class="mi">1</span> <span class="n">dimensions</span> <span class="k">with</span> <span class="n">names</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">,)</span>
+<span class="ne">ValueError</span><span class="p">:</span> <span class="n">applied</span> <span class="n">function</span> <span class="n">returned</span> <span class="n">data</span> <span class="k">with</span> <span class="n">unexpected</span> <span class="n">number</span> <span class="n">of</span> <span class="n">dimensions</span><span class="o">.</span> <span class="n">Received</span> <span class="mi">4</span> <span class="n">dimension</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="n">but</span> <span class="n">expected</span> <span class="mi">1</span> <span class="n">dimensions</span> <span class="k">with</span> <span class="n">names</span><span class="p">:</span> <span class="p">(</span><span class="s1">'time'</span><span class="p">,)</span>
 </pre></div>
 </div>
 <p>Xarray complains because it received a 4D variable back <code class="docutils literal notranslate"><span class="pre">(time,</span> <span class="pre">type,</span> <span class="pre">lat,</span> <span class="pre">lon)</span></code> but only knows about the <code class="docutils literal notranslate"><span class="pre">time</span></code> dimension. We need to specify the rest using <code class="docutils literal notranslate"><span class="pre">output_core_dims</span></code>. The output looks right!</p>
@@ -9825,10 +9825,10 @@ Coordinates:
     <span class="n">jxy</span><span class="p">,</span>
     <span class="n">ixy</span><span class="p">,</span>
     <span class="c1"># other non-array arguments expected by to_sparse</span>
-    <span class="n">kwargs</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;shape&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">79</span><span class="p">,</span> <span class="mi">192</span><span class="p">,</span> <span class="mi">288</span><span class="p">)},</span>
+    <span class="n">kwargs</span><span class="o">=</span><span class="p">{</span><span class="s2">"shape"</span><span class="p">:</span> <span class="p">(</span><span class="mi">79</span><span class="p">,</span> <span class="mi">192</span><span class="p">,</span> <span class="mi">288</span><span class="p">)},</span>
     <span class="c1"># extra metadata info required by apply_ufunc</span>
-    <span class="n">input_core_dims</span><span class="o">=</span><span class="p">[[</span><span class="s2">&quot;pft&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;pft&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;pft&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;pft&quot;</span><span class="p">]],</span>
-    <span class="n">output_core_dims</span><span class="o">=</span><span class="p">[[</span><span class="s2">&quot;vegtype&quot;</span><span class="p">,</span> <span class="s2">&quot;lat&quot;</span><span class="p">,</span> <span class="s2">&quot;lon&quot;</span><span class="p">]],</span>
+    <span class="n">input_core_dims</span><span class="o">=</span><span class="p">[[</span><span class="s2">"pft"</span><span class="p">],</span> <span class="p">[</span><span class="s2">"pft"</span><span class="p">],</span> <span class="p">[</span><span class="s2">"pft"</span><span class="p">],</span> <span class="p">[</span><span class="s2">"pft"</span><span class="p">]],</span>
+    <span class="n">output_core_dims</span><span class="o">=</span><span class="p">[[</span><span class="s2">"vegtype"</span><span class="p">,</span> <span class="s2">"lat"</span><span class="p">,</span> <span class="s2">"lon"</span><span class="p">]],</span>
 <span class="p">)</span>
 </pre></div>
 </div>
@@ -10215,14 +10215,14 @@ Attributes:
     <span class="n">jxy</span><span class="p">,</span>
     <span class="n">ixy</span><span class="p">,</span>
     <span class="c1"># other non-array arguments expected by to_sparse</span>
-    <span class="n">kwargs</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;shape&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">79</span><span class="p">,</span> <span class="mi">192</span><span class="p">,</span> <span class="mi">288</span><span class="p">)},</span>
+    <span class="n">kwargs</span><span class="o">=</span><span class="p">{</span><span class="s2">"shape"</span><span class="p">:</span> <span class="p">(</span><span class="mi">79</span><span class="p">,</span> <span class="mi">192</span><span class="p">,</span> <span class="mi">288</span><span class="p">)},</span>
     <span class="c1"># extra metadata info required by apply_ufunc</span>
-    <span class="n">input_core_dims</span><span class="o">=</span><span class="p">[[</span><span class="s2">&quot;pft&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;pft&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;pft&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;pft&quot;</span><span class="p">]],</span>
-    <span class="n">output_core_dims</span><span class="o">=</span><span class="p">[[</span><span class="s2">&quot;vegtype&quot;</span><span class="p">,</span> <span class="s2">&quot;lat&quot;</span><span class="p">,</span> <span class="s2">&quot;lon&quot;</span><span class="p">]],</span>
-    <span class="n">dask</span><span class="o">=</span><span class="s2">&quot;parallelized&quot;</span><span class="p">,</span>
+    <span class="n">input_core_dims</span><span class="o">=</span><span class="p">[[</span><span class="s2">"pft"</span><span class="p">],</span> <span class="p">[</span><span class="s2">"pft"</span><span class="p">],</span> <span class="p">[</span><span class="s2">"pft"</span><span class="p">],</span> <span class="p">[</span><span class="s2">"pft"</span><span class="p">]],</span>
+    <span class="n">output_core_dims</span><span class="o">=</span><span class="p">[[</span><span class="s2">"vegtype"</span><span class="p">,</span> <span class="s2">"lat"</span><span class="p">,</span> <span class="s2">"lon"</span><span class="p">]],</span>
+    <span class="n">dask</span><span class="o">=</span><span class="s2">"parallelized"</span><span class="p">,</span>
     <span class="c1"># info needed by dask to automatically parallelize with dask.array.apply_gufunc</span>
     <span class="n">dask_gufunc_kwargs</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
-        <span class="n">output_sizes</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;vegtype&quot;</span><span class="p">:</span> <span class="mi">79</span><span class="p">,</span> <span class="s2">&quot;lat&quot;</span><span class="p">:</span> <span class="mi">192</span><span class="p">,</span> <span class="s2">&quot;lon&quot;</span><span class="p">:</span> <span class="mi">288</span><span class="p">},</span>
+        <span class="n">output_sizes</span><span class="o">=</span><span class="p">{</span><span class="s2">"vegtype"</span><span class="p">:</span> <span class="mi">79</span><span class="p">,</span> <span class="s2">"lat"</span><span class="p">:</span> <span class="mi">192</span><span class="p">,</span> <span class="s2">"lon"</span><span class="p">:</span> <span class="mi">288</span><span class="p">},</span>
     <span class="p">),</span>
 <span class="p">)</span>
 </pre></div>
@@ -10736,15 +10736,15 @@ Attributes:
     <span class="n">jxy</span><span class="p">,</span>
     <span class="n">ixy</span><span class="p">,</span>
     <span class="c1"># other non-array arguments expected by to_sparse</span>
-    <span class="n">kwargs</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;shape&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">79</span><span class="p">,</span> <span class="mi">192</span><span class="p">,</span> <span class="mi">288</span><span class="p">)},</span>
+    <span class="n">kwargs</span><span class="o">=</span><span class="p">{</span><span class="s2">"shape"</span><span class="p">:</span> <span class="p">(</span><span class="mi">79</span><span class="p">,</span> <span class="mi">192</span><span class="p">,</span> <span class="mi">288</span><span class="p">)},</span>
     <span class="c1"># extra metadata info required by apply_ufunc</span>
-    <span class="n">input_core_dims</span><span class="o">=</span><span class="p">[[</span><span class="s2">&quot;pft&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;pft&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;pft&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;pft&quot;</span><span class="p">]],</span>
-    <span class="n">output_core_dims</span><span class="o">=</span><span class="p">[[</span><span class="s2">&quot;vegtype&quot;</span><span class="p">,</span> <span class="s2">&quot;lat&quot;</span><span class="p">,</span> <span class="s2">&quot;lon&quot;</span><span class="p">]],</span>
-    <span class="n">dask</span><span class="o">=</span><span class="s2">&quot;parallelized&quot;</span><span class="p">,</span>
+    <span class="n">input_core_dims</span><span class="o">=</span><span class="p">[[</span><span class="s2">"pft"</span><span class="p">],</span> <span class="p">[</span><span class="s2">"pft"</span><span class="p">],</span> <span class="p">[</span><span class="s2">"pft"</span><span class="p">],</span> <span class="p">[</span><span class="s2">"pft"</span><span class="p">]],</span>
+    <span class="n">output_core_dims</span><span class="o">=</span><span class="p">[[</span><span class="s2">"vegtype"</span><span class="p">,</span> <span class="s2">"lat"</span><span class="p">,</span> <span class="s2">"lon"</span><span class="p">]],</span>
+    <span class="n">dask</span><span class="o">=</span><span class="s2">"parallelized"</span><span class="p">,</span>
     <span class="c1"># info needed by dask to automatically parallelize with dask.array.apply_gufunc</span>
     <span class="n">dask_gufunc_kwargs</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
         <span class="n">meta</span><span class="o">=</span><span class="n">sparse</span><span class="o">.</span><span class="n">COO</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">GPP</span><span class="o">.</span><span class="n">dtype</span><span class="p">)),</span>
-        <span class="n">output_sizes</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;vegtype&quot;</span><span class="p">:</span> <span class="mi">79</span><span class="p">,</span> <span class="s2">&quot;lat&quot;</span><span class="p">:</span> <span class="mi">192</span><span class="p">,</span> <span class="s2">&quot;lon&quot;</span><span class="p">:</span> <span class="mi">288</span><span class="p">},</span>
+        <span class="n">output_sizes</span><span class="o">=</span><span class="p">{</span><span class="s2">"vegtype"</span><span class="p">:</span> <span class="mi">79</span><span class="p">,</span> <span class="s2">"lat"</span><span class="p">:</span> <span class="mi">192</span><span class="p">,</span> <span class="s2">"lon"</span><span class="p">:</span> <span class="mi">288</span><span class="p">},</span>
     <span class="p">),</span>
 <span class="p">)</span>
 </pre></div>
@@ -11259,7 +11259,7 @@ Attributes:
 </summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">convert_pft_variables_to_sparse</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">pftnames</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Convert 2D PFT variables in dataset to 4D sparse arrays.</span>
 
 <span class="sd">    Parameters</span>
@@ -11270,15 +11270,15 @@ Attributes:
 <span class="sd">    Returns</span>
 <span class="sd">    -------</span>
 <span class="sd">    xarray.Dataset</span>
-<span class="sd">        Dataset whose &quot;PFT&quot; arrays are now sparse arrays</span>
+<span class="sd">        Dataset whose "PFT" arrays are now sparse arrays</span>
 <span class="sd">        with `pft` dimension expanded out to (type, lat, lon)</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
     <span class="kn">import</span><span class="w"> </span><span class="nn">sparse</span>
     <span class="kn">import</span><span class="w"> </span><span class="nn">xarray</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">xr</span>
 
     <span class="c1"># extract PFT variables</span>
-    <span class="n">pfts</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">({</span><span class="n">k</span><span class="p">:</span> <span class="n">v</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">dataset</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="s2">&quot;pft&quot;</span> <span class="ow">in</span> <span class="n">v</span><span class="o">.</span><span class="n">dims</span><span class="p">})</span>
+    <span class="n">pfts</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">({</span><span class="n">k</span><span class="p">:</span> <span class="n">v</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">dataset</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="s2">"pft"</span> <span class="ow">in</span> <span class="n">v</span><span class="o">.</span><span class="n">dims</span><span class="p">})</span>
 
     <span class="c1"># extract coordinate index locations</span>
     <span class="n">ixy</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">pfts1d_ixy</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
@@ -11288,9 +11288,9 @@ Attributes:
 
     <span class="c1"># expected shape of sparse arrays to pass to `to_sparse` (excludes time)</span>
     <span class="n">output_sizes</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s2">&quot;vegtype&quot;</span><span class="p">:</span> <span class="n">npft</span><span class="p">,</span>
-        <span class="s2">&quot;lat&quot;</span><span class="p">:</span> <span class="n">dataset</span><span class="o">.</span><span class="n">sizes</span><span class="p">[</span><span class="s2">&quot;lat&quot;</span><span class="p">],</span>
-        <span class="s2">&quot;lon&quot;</span><span class="p">:</span> <span class="n">dataset</span><span class="o">.</span><span class="n">sizes</span><span class="p">[</span><span class="s2">&quot;lon&quot;</span><span class="p">],</span>
+        <span class="s2">"vegtype"</span><span class="p">:</span> <span class="n">npft</span><span class="p">,</span>
+        <span class="s2">"lat"</span><span class="p">:</span> <span class="n">dataset</span><span class="o">.</span><span class="n">sizes</span><span class="p">[</span><span class="s2">"lat"</span><span class="p">],</span>
+        <span class="s2">"lon"</span><span class="p">:</span> <span class="n">dataset</span><span class="o">.</span><span class="n">sizes</span><span class="p">[</span><span class="s2">"lon"</span><span class="p">],</span>
     <span class="p">}</span>
 
     <span class="n">result</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">()</span>
@@ -11303,9 +11303,9 @@ Attributes:
             <span class="n">jxy</span><span class="p">,</span>
             <span class="n">ixy</span><span class="p">,</span>
             <span class="n">kwargs</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="nb">tuple</span><span class="p">(</span><span class="n">output_sizes</span><span class="o">.</span><span class="n">values</span><span class="p">())),</span>
-            <span class="n">input_core_dims</span><span class="o">=</span><span class="p">[[</span><span class="s2">&quot;pft&quot;</span><span class="p">]]</span> <span class="o">*</span> <span class="mi">4</span><span class="p">,</span>
-            <span class="n">output_core_dims</span><span class="o">=</span><span class="p">[[</span><span class="s2">&quot;vegtype&quot;</span><span class="p">,</span> <span class="s2">&quot;lat&quot;</span><span class="p">,</span> <span class="s2">&quot;lon&quot;</span><span class="p">]],</span>
-            <span class="n">dask</span><span class="o">=</span><span class="s2">&quot;parallelized&quot;</span><span class="p">,</span>
+            <span class="n">input_core_dims</span><span class="o">=</span><span class="p">[[</span><span class="s2">"pft"</span><span class="p">]]</span> <span class="o">*</span> <span class="mi">4</span><span class="p">,</span>
+            <span class="n">output_core_dims</span><span class="o">=</span><span class="p">[[</span><span class="s2">"vegtype"</span><span class="p">,</span> <span class="s2">"lat"</span><span class="p">,</span> <span class="s2">"lon"</span><span class="p">]],</span>
+            <span class="n">dask</span><span class="o">=</span><span class="s2">"parallelized"</span><span class="p">,</span>
             <span class="n">dask_gufunc_kwargs</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
                 <span class="n">meta</span><span class="o">=</span><span class="n">sparse</span><span class="o">.</span><span class="n">COO</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">pfts</span><span class="p">[</span><span class="n">var</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span><span class="p">)),</span>
                 <span class="n">output_sizes</span><span class="o">=</span><span class="n">output_sizes</span><span class="p">,</span>
@@ -11314,8 +11314,8 @@ Attributes:
         <span class="p">)</span>
 
     <span class="c1"># copy over coordinate variables lat, lon</span>
-    <span class="n">result</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">dataset</span><span class="p">[[</span><span class="s2">&quot;lat&quot;</span><span class="p">,</span> <span class="s2">&quot;lon&quot;</span><span class="p">]])</span>
-    <span class="n">result</span><span class="p">[</span><span class="s2">&quot;vegtype&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pftnames</span><span class="o">.</span><span class="n">data</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">dataset</span><span class="p">[[</span><span class="s2">"lat"</span><span class="p">,</span> <span class="s2">"lon"</span><span class="p">]])</span>
+    <span class="n">result</span><span class="p">[</span><span class="s2">"vegtype"</span><span class="p">]</span> <span class="o">=</span> <span class="n">pftnames</span><span class="o">.</span><span class="n">data</span>
     <span class="c1"># save the dataset attributes</span>
     <span class="n">result</span><span class="o">.</span><span class="n">attrs</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">attrs</span>
     <span class="k">return</span> <span class="n">result</span>
@@ -13003,8 +13003,8 @@ Attributes: (12/102)
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9"></script>
-<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -13038,7 +13038,7 @@ Attributes: (12/102)
         <div class="footer-item">
 <p class="theme-version">
   <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.20.0.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.21.0.
 </p></div>
       
     </div>

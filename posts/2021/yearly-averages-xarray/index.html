@@ -27,8 +27,8 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
@@ -37,10 +37,10 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=66307ba7" />
   
   <!-- So that users can add custom icons -->
-  <script defer src="../../../_static/scripts/fontawesome.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer src="../../../_static/scripts/fontawesome.js?digest=cb8930eaaf36d9849b67"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9" />
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67" />
 
     <script src="../../../_static/documentation_options.js?v=55b5f74b"></script>
     <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
@@ -74,7 +74,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
-    <meta name="docbuild:last-update" content="Jul 27, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 10, 2026"/>
   
     
     <script src="../../../_static/searchtools.js"></script>
@@ -612,7 +612,7 @@
 <span class="kn">from</span><span class="w"> </span><span class="nn">distributed</span><span class="w"> </span><span class="kn">import</span> <span class="n">Client</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">ncar_jobqueue</span><span class="w"> </span><span class="kn">import</span> <span class="n">NCARCluster</span>
 
-<span class="n">hv</span><span class="o">.</span><span class="n">extension</span><span class="p">(</span><span class="s1">&#39;bokeh&#39;</span><span class="p">)</span>
+<span class="n">hv</span><span class="o">.</span><span class="n">extension</span><span class="p">(</span><span class="s1">'bokeh'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2291,8 +2291,8 @@ Hosting the HTTP server on port 37603 instead
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_zarr</span><span class="p">(</span>
-    <span class="s1">&#39;s3://ncar-cesm2-lens/ocn/monthly/cesm2LE-ssp370-cmip6-TEMP.zarr&#39;</span><span class="p">,</span>
-    <span class="n">storage_options</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;anon&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
+    <span class="s1">'s3://ncar-cesm2-lens/ocn/monthly/cesm2LE-ssp370-cmip6-TEMP.zarr'</span><span class="p">,</span>
+    <span class="n">storage_options</span><span class="o">=</span><span class="p">{</span><span class="s1">'anon'</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
 <span class="p">)</span>
 </pre></div>
 </div>
@@ -2301,7 +2301,7 @@ Hosting the HTTP server on port 37603 instead
 <p>You’ll notice we have data from 2015 to 2100 - at monthly frequency! Let’s subset the first six years and first five ensemble members as a benchmark.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds_first_five_years</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="s1">&#39;2015&#39;</span><span class="p">,</span> <span class="s1">&#39;2019&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">member_id</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds_first_five_years</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="s1">'2015'</span><span class="p">,</span> <span class="s1">'2019'</span><span class="p">))</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">member_id</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
 <span class="n">ds_first_five_years</span>
 </pre></div>
 </div>
@@ -2926,7 +2926,7 @@ Attributes:
 <p>We can calculate our resampled dataset using the following</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">resampled</span> <span class="o">=</span> <span class="n">ds_first_five_years</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="s1">&#39;AS&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">resampled</span> <span class="o">=</span> <span class="n">ds_first_five_years</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="s1">'AS'</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s1">'time'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2949,12 +2949,12 @@ Wall time: 19.8 s
 <p>Let’s get a quick plot of the data!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">yearly_average_weighted_incorrectly</span><span class="o">.</span><span class="n">TEMP</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">z_t</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">nlat</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">nlon</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">);</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">yearly_average_weighted_incorrectly</span><span class="o">.</span><span class="n">TEMP</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">z_t</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">nlat</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">nlon</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">'time'</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/glade/work/mgrover/miniconda3/envs/cesm-collections-dev/lib/python3.9/site-packages/xarray/plot/plot.py:1476: MatplotlibDeprecationWarning: shading=&#39;flat&#39; when X and Y have the same dimensions as C is deprecated since 3.3.  Either specify the corners of the quadrilaterals with X and Y, or pass shading=&#39;auto&#39;, &#39;nearest&#39; or &#39;gouraud&#39;, or set rcParams[&#39;pcolor.shading&#39;].  This will become an error two minor releases later.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/glade/work/mgrover/miniconda3/envs/cesm-collections-dev/lib/python3.9/site-packages/xarray/plot/plot.py:1476: MatplotlibDeprecationWarning: shading='flat' when X and Y have the same dimensions as C is deprecated since 3.3.  Either specify the corners of the quadrilaterals with X and Y, or pass shading='auto', 'nearest' or 'gouraud', or set rcParams['pcolor.shading'].  This will become an error two minor releases later.
   primitive = ax.pcolormesh(x, y, z, **kwargs)
 </pre></div>
 </div>
@@ -3400,7 +3400,7 @@ Coordinates:
 <p>Notice how longer months (ex. months with 31 days) have a <strong>higher weight</strong> than months with less days (ex. 28)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wgts</span> <span class="o">=</span> <span class="n">month_length</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;time.year&quot;</span><span class="p">)</span> <span class="o">/</span> <span class="n">month_length</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;time.year&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wgts</span> <span class="o">=</span> <span class="n">month_length</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">"time.year"</span><span class="p">)</span> <span class="o">/</span> <span class="n">month_length</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">"time.year"</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 <span class="n">wgts</span>
 </pre></div>
 </div>
@@ -3854,7 +3854,7 @@ Coordinates:
 <p>This is making sure that sum of each year’s weights is equal to 1!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">testing</span><span class="o">.</span><span class="n">assert_allclose</span><span class="p">(</span><span class="n">wgts</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;time.year&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">xr</span><span class="o">.</span><span class="n">ALL_DIMS</span><span class="p">),</span> <span class="mf">1.0</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">testing</span><span class="o">.</span><span class="n">assert_allclose</span><span class="p">(</span><span class="n">wgts</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">"time.year"</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">xr</span><span class="o">.</span><span class="n">ALL_DIMS</span><span class="p">),</span> <span class="mf">1.0</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -3862,7 +3862,7 @@ Coordinates:
 <p>We <em><strong>could</strong></em> just print out the sum to take a look too</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wgts</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;time.year&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">xr</span><span class="o">.</span><span class="n">ALL_DIMS</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wgts</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">"time.year"</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">xr</span><span class="o">.</span><span class="n">ALL_DIMS</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -4226,7 +4226,7 @@ Coordinates:
 <p>Now that we have our weights, we need to apply them to our dataset. We can still use resample here too!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temp</span> <span class="o">=</span> <span class="n">ds_first_five_years</span><span class="p">[</span><span class="s1">&#39;TEMP&#39;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temp</span> <span class="o">=</span> <span class="n">ds_first_five_years</span><span class="p">[</span><span class="s1">'TEMP'</span><span class="p">]</span>
 <span class="n">temp</span>
 </pre></div>
 </div>
@@ -4791,7 +4791,7 @@ Attributes:
 <p>Next, we calculate our numerator, which is our value (<code class="docutils literal notranslate"><span class="pre">TEMP</span></code>) multiplied by our weights</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temp_sum</span> <span class="o">=</span> <span class="p">(</span><span class="n">temp</span> <span class="o">*</span> <span class="n">wgts</span><span class="p">)</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="s2">&quot;AS&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s2">&quot;time&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temp_sum</span> <span class="o">=</span> <span class="p">(</span><span class="n">temp</span> <span class="o">*</span> <span class="n">wgts</span><span class="p">)</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="s2">"AS"</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s2">"time"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -4799,7 +4799,7 @@ Attributes:
 <p>Next, we calculate our denominator which is our <code class="docutils literal notranslate"><span class="pre">ones</span></code> array multiplied by our weights</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ones_sum</span> <span class="o">=</span> <span class="p">(</span><span class="n">ones</span> <span class="o">*</span> <span class="n">wgts</span><span class="p">)</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="s2">&quot;AS&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s2">&quot;time&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ones_sum</span> <span class="o">=</span> <span class="p">(</span><span class="n">ones</span> <span class="o">*</span> <span class="n">wgts</span><span class="p">)</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="s2">"AS"</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s2">"time"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -5300,17 +5300,17 @@ Dimensions without coordinates: nlat, nlon</pre><div class='xr-wrap' hidden><div
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">weighted_temporal_mean</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span> <span class="n">var</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    weight by days in each month</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="c1"># Determine the month length</span>
     <span class="n">month_length</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">days_in_month</span>
 
     <span class="c1"># Calculate the weights</span>
-    <span class="n">wgts</span> <span class="o">=</span> <span class="n">month_length</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;time.year&quot;</span><span class="p">)</span> <span class="o">/</span> <span class="n">month_length</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;time.year&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+    <span class="n">wgts</span> <span class="o">=</span> <span class="n">month_length</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">"time.year"</span><span class="p">)</span> <span class="o">/</span> <span class="n">month_length</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">"time.year"</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 
     <span class="c1"># Make sure the weights in each year add up to 1</span>
-    <span class="n">np</span><span class="o">.</span><span class="n">testing</span><span class="o">.</span><span class="n">assert_allclose</span><span class="p">(</span><span class="n">wgts</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;time.year&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">xr</span><span class="o">.</span><span class="n">ALL_DIMS</span><span class="p">),</span> <span class="mf">1.0</span><span class="p">)</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">testing</span><span class="o">.</span><span class="n">assert_allclose</span><span class="p">(</span><span class="n">wgts</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">"time.year"</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">xr</span><span class="o">.</span><span class="n">ALL_DIMS</span><span class="p">),</span> <span class="mf">1.0</span><span class="p">)</span>
 
     <span class="c1"># Subset our dataset for our variable</span>
     <span class="n">obs</span> <span class="o">=</span> <span class="n">ds</span><span class="p">[</span><span class="n">var</span><span class="p">]</span>
@@ -5320,10 +5320,10 @@ Dimensions without coordinates: nlat, nlon</pre><div class='xr-wrap' hidden><div
     <span class="n">ones</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">cond</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
 
     <span class="c1"># Calculate the numerator</span>
-    <span class="n">obs_sum</span> <span class="o">=</span> <span class="p">(</span><span class="n">obs</span> <span class="o">*</span> <span class="n">wgts</span><span class="p">)</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="s2">&quot;AS&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s2">&quot;time&quot;</span><span class="p">)</span>
+    <span class="n">obs_sum</span> <span class="o">=</span> <span class="p">(</span><span class="n">obs</span> <span class="o">*</span> <span class="n">wgts</span><span class="p">)</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="s2">"AS"</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s2">"time"</span><span class="p">)</span>
 
     <span class="c1"># Calculate the denominator</span>
-    <span class="n">ones_out</span> <span class="o">=</span> <span class="p">(</span><span class="n">ones</span> <span class="o">*</span> <span class="n">wgts</span><span class="p">)</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="s2">&quot;AS&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s2">&quot;time&quot;</span><span class="p">)</span>
+    <span class="n">ones_out</span> <span class="o">=</span> <span class="p">(</span><span class="n">ones</span> <span class="o">*</span> <span class="n">wgts</span><span class="p">)</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="s2">"AS"</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s2">"time"</span><span class="p">)</span>
 
     <span class="c1"># Return the weighted average</span>
     <span class="k">return</span> <span class="n">obs_sum</span> <span class="o">/</span> <span class="n">ones_out</span>
@@ -5333,7 +5333,7 @@ Dimensions without coordinates: nlat, nlon</pre><div class='xr-wrap' hidden><div
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">average_weighted_temp</span> <span class="o">=</span> <span class="n">weighted_temporal_mean</span><span class="p">(</span><span class="n">ds_first_five_years</span><span class="p">,</span> <span class="s1">&#39;TEMP&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">average_weighted_temp</span> <span class="o">=</span> <span class="n">weighted_temporal_mean</span><span class="p">(</span><span class="n">ds_first_five_years</span><span class="p">,</span> <span class="s1">'TEMP'</span><span class="p">)</span>
 <span class="n">average_weighted_temp</span>
 </pre></div>
 </div>
@@ -5837,12 +5837,12 @@ Wall time: 9.61 s
 <p>Let’s plot a quick visualization again!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">yearly_average_weighted_correctly</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">z_t</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">nlat</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">nlon</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">);</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">yearly_average_weighted_correctly</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">z_t</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">nlat</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">nlon</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">'time'</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/glade/work/mgrover/miniconda3/envs/cesm-collections-dev/lib/python3.9/site-packages/xarray/plot/plot.py:1476: MatplotlibDeprecationWarning: shading=&#39;flat&#39; when X and Y have the same dimensions as C is deprecated since 3.3.  Either specify the corners of the quadrilaterals with X and Y, or pass shading=&#39;auto&#39;, &#39;nearest&#39; or &#39;gouraud&#39;, or set rcParams[&#39;pcolor.shading&#39;].  This will become an error two minor releases later.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/glade/work/mgrover/miniconda3/envs/cesm-collections-dev/lib/python3.9/site-packages/xarray/plot/plot.py:1476: MatplotlibDeprecationWarning: shading='flat' when X and Y have the same dimensions as C is deprecated since 3.3.  Either specify the corners of the quadrilaterals with X and Y, or pass shading='auto', 'nearest' or 'gouraud', or set rcParams['pcolor.shading'].  This will become an error two minor releases later.
   primitive = ax.pcolormesh(x, y, z, **kwargs)
 </pre></div>
 </div>
@@ -5856,17 +5856,17 @@ Wall time: 9.61 s
 <p>Let’s create a plotting function here to take a look at the difference between the two!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">plot_field</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span> <span class="n">label</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;magma&#39;</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">35</span><span class="p">):</span>
-    <span class="n">ds</span><span class="p">[</span><span class="s1">&#39;nlat&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">nlat</span>
-    <span class="n">ds</span><span class="p">[</span><span class="s1">&#39;nlon&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">nlon</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">plot_field</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span> <span class="n">label</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">'magma'</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">35</span><span class="p">):</span>
+    <span class="n">ds</span><span class="p">[</span><span class="s1">'nlat'</span><span class="p">]</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">nlat</span>
+    <span class="n">ds</span><span class="p">[</span><span class="s1">'nlon'</span><span class="p">]</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">nlon</span>
     <span class="k">return</span> <span class="n">ds</span><span class="o">.</span><span class="n">hvplot</span><span class="o">.</span><span class="n">quadmesh</span><span class="p">(</span>
-        <span class="n">x</span><span class="o">=</span><span class="s1">&#39;nlon&#39;</span><span class="p">,</span>
-        <span class="n">y</span><span class="o">=</span><span class="s1">&#39;nlat&#39;</span><span class="p">,</span>
+        <span class="n">x</span><span class="o">=</span><span class="s1">'nlon'</span><span class="p">,</span>
+        <span class="n">y</span><span class="o">=</span><span class="s1">'nlat'</span><span class="p">,</span>
         <span class="n">rasterize</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
         <span class="n">cmap</span><span class="o">=</span><span class="n">cmap</span><span class="p">,</span>
         <span class="n">title</span><span class="o">=</span><span class="n">label</span><span class="p">,</span>
         <span class="n">clim</span><span class="o">=</span><span class="p">(</span><span class="n">vmin</span><span class="p">,</span> <span class="n">vmax</span><span class="p">),</span>
-        <span class="n">clabel</span><span class="o">=</span><span class="s1">&#39;TEMP (degC)&#39;</span><span class="p">,</span>
+        <span class="n">clabel</span><span class="o">=</span><span class="s1">'TEMP (degC)'</span><span class="p">,</span>
     <span class="p">)</span>
 </pre></div>
 </div>
@@ -5875,8 +5875,8 @@ Wall time: 9.61 s
 <p>We first setup our plots, adding labels and adjusting for the lower (correct) values of temperature for the <code class="docutils literal notranslate"><span class="pre">correct_plot</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">incorrect_plot</span> <span class="o">=</span> <span class="n">plot_field</span><span class="p">(</span><span class="n">yearly_average_weighted_incorrectly</span><span class="o">.</span><span class="n">TEMP</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Incorrect Weighting&#39;</span><span class="p">)</span>
-<span class="n">correct_plot</span> <span class="o">=</span> <span class="n">plot_field</span><span class="p">(</span><span class="n">yearly_average_weighted_correctly</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Correct Weighting&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">incorrect_plot</span> <span class="o">=</span> <span class="n">plot_field</span><span class="p">(</span><span class="n">yearly_average_weighted_incorrectly</span><span class="o">.</span><span class="n">TEMP</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'Incorrect Weighting'</span><span class="p">)</span>
+<span class="n">correct_plot</span> <span class="o">=</span> <span class="n">plot_field</span><span class="p">(</span><span class="n">yearly_average_weighted_correctly</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'Correct Weighting'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -5892,7 +5892,7 @@ Wall time: 9.61 s
 <p>Since <em><strong>most</strong></em> of our values are much larger for the incorrect weigthing, we use a red colobar for that plot.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">difference_plot</span> <span class="o">=</span> <span class="n">plot_field</span><span class="p">(</span><span class="n">difference</span><span class="p">,</span> <span class="s1">&#39;Incorrect - Correct Weighting&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Reds&#39;</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mf">0.05</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">difference_plot</span> <span class="o">=</span> <span class="n">plot_field</span><span class="p">(</span><span class="n">difference</span><span class="p">,</span> <span class="s1">'Incorrect - Correct Weighting'</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">'Reds'</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mf">0.05</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -6051,8 +6051,8 @@ Wall time: 9.61 s
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9"></script>
-<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -6086,7 +6086,7 @@ Wall time: 9.61 s
         <div class="footer-item">
 <p class="theme-version">
   <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.20.0.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.21.0.
 </p></div>
       
     </div>

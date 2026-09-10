@@ -27,8 +27,8 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
@@ -37,10 +37,10 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=66307ba7" />
   
   <!-- So that users can add custom icons -->
-  <script defer src="../../../_static/scripts/fontawesome.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer src="../../../_static/scripts/fontawesome.js?digest=cb8930eaaf36d9849b67"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9" />
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67" />
 
     <script src="../../../_static/documentation_options.js?v=55b5f74b"></script>
     <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
@@ -74,7 +74,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
-    <meta name="docbuild:last-update" content="Jul 27, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 10, 2026"/>
   
     
     <script src="../../../_static/searchtools.js"></script>
@@ -640,7 +640,7 @@ We use a single ensemble member historical experiment with daily data from 1850 
 <span class="kn">from</span><span class="w"> </span><span class="nn">kerchunk.hdf</span><span class="w"> </span><span class="kn">import</span> <span class="n">SingleHdf5ToZarr</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">ncar_jobqueue</span><span class="w"> </span><span class="kn">import</span> <span class="n">NCARCluster</span>
 
-<span class="n">hv</span><span class="o">.</span><span class="n">extension</span><span class="p">(</span><span class="s1">&#39;bokeh&#39;</span><span class="p">)</span>
+<span class="n">hv</span><span class="o">.</span><span class="n">extension</span><span class="p">(</span><span class="s1">'bokeh'</span><span class="p">)</span>
 
 <span class="o">%</span><span class="k">watermark</span> -iv
 </pre></div>
@@ -2572,36 +2572,36 @@ sys      : 3.11.0 | packaged by conda-forge | (main, Jan 14 2023, 12:27:40) [GCC
 <p>We use <code class="docutils literal notranslate"><span class="pre">fsspec</span></code> to create a filesystem-like representation:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fs</span> <span class="o">=</span> <span class="n">fsspec</span><span class="o">.</span><span class="n">filesystem</span><span class="p">(</span><span class="s1">&#39;s3&#39;</span><span class="p">,</span> <span class="n">anon</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">skip_instance_cache</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fs</span> <span class="o">=</span> <span class="n">fsspec</span><span class="o">.</span><span class="n">filesystem</span><span class="p">(</span><span class="s1">'s3'</span><span class="p">,</span> <span class="n">anon</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">skip_instance_cache</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">filelist</span> <span class="o">=</span> <span class="n">fs</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;ncar-cesm2-lens/tseries/*nc&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">filelist</span> <span class="o">=</span> <span class="n">fs</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="sa">f</span><span class="s1">'ncar-cesm2-lens/tseries/*nc'</span><span class="p">)</span>
 <span class="n">filelist</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;ncar-cesm2-lens/tseries/b.e21.BHISTcmip6.f09_g17.LE2-1001.001.cam.h6.T.18500101-18591231.nc&#39;,
- &#39;ncar-cesm2-lens/tseries/b.e21.BHISTcmip6.f09_g17.LE2-1001.001.cam.h6.T.18600101-18691231.nc&#39;,
- &#39;ncar-cesm2-lens/tseries/b.e21.BHISTcmip6.f09_g17.LE2-1001.001.cam.h6.T.18700101-18791231.nc&#39;,
- &#39;ncar-cesm2-lens/tseries/b.e21.BHISTcmip6.f09_g17.LE2-1001.001.cam.h6.T.18800101-18891231.nc&#39;,
- &#39;ncar-cesm2-lens/tseries/b.e21.BHISTcmip6.f09_g17.LE2-1001.001.cam.h6.T.18900101-18991231.nc&#39;,
- &#39;ncar-cesm2-lens/tseries/b.e21.BHISTcmip6.f09_g17.LE2-1001.001.cam.h6.T.19000101-19091231.nc&#39;,
- &#39;ncar-cesm2-lens/tseries/b.e21.BHISTcmip6.f09_g17.LE2-1001.001.cam.h6.T.19100101-19191231.nc&#39;,
- &#39;ncar-cesm2-lens/tseries/b.e21.BHISTcmip6.f09_g17.LE2-1001.001.cam.h6.T.19200101-19291231.nc&#39;,
- &#39;ncar-cesm2-lens/tseries/b.e21.BHISTcmip6.f09_g17.LE2-1001.001.cam.h6.T.19300101-19391231.nc&#39;,
- &#39;ncar-cesm2-lens/tseries/b.e21.BHISTcmip6.f09_g17.LE2-1001.001.cam.h6.T.19400101-19491231.nc&#39;,
- &#39;ncar-cesm2-lens/tseries/b.e21.BHISTcmip6.f09_g17.LE2-1001.001.cam.h6.T.19500101-19591231.nc&#39;,
- &#39;ncar-cesm2-lens/tseries/b.e21.BHISTcmip6.f09_g17.LE2-1001.001.cam.h6.T.19600101-19691231.nc&#39;,
- &#39;ncar-cesm2-lens/tseries/b.e21.BHISTcmip6.f09_g17.LE2-1001.001.cam.h6.T.19700101-19791231.nc&#39;,
- &#39;ncar-cesm2-lens/tseries/b.e21.BHISTcmip6.f09_g17.LE2-1001.001.cam.h6.T.19800101-19891231.nc&#39;,
- &#39;ncar-cesm2-lens/tseries/b.e21.BHISTcmip6.f09_g17.LE2-1001.001.cam.h6.T.19900101-19991231.nc&#39;,
- &#39;ncar-cesm2-lens/tseries/b.e21.BHISTcmip6.f09_g17.LE2-1001.001.cam.h6.T.20000101-20091231.nc&#39;,
- &#39;ncar-cesm2-lens/tseries/b.e21.BHISTcmip6.f09_g17.LE2-1001.001.cam.h6.T.20100101-20141231.nc&#39;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>['ncar-cesm2-lens/tseries/b.e21.BHISTcmip6.f09_g17.LE2-1001.001.cam.h6.T.18500101-18591231.nc',
+ 'ncar-cesm2-lens/tseries/b.e21.BHISTcmip6.f09_g17.LE2-1001.001.cam.h6.T.18600101-18691231.nc',
+ 'ncar-cesm2-lens/tseries/b.e21.BHISTcmip6.f09_g17.LE2-1001.001.cam.h6.T.18700101-18791231.nc',
+ 'ncar-cesm2-lens/tseries/b.e21.BHISTcmip6.f09_g17.LE2-1001.001.cam.h6.T.18800101-18891231.nc',
+ 'ncar-cesm2-lens/tseries/b.e21.BHISTcmip6.f09_g17.LE2-1001.001.cam.h6.T.18900101-18991231.nc',
+ 'ncar-cesm2-lens/tseries/b.e21.BHISTcmip6.f09_g17.LE2-1001.001.cam.h6.T.19000101-19091231.nc',
+ 'ncar-cesm2-lens/tseries/b.e21.BHISTcmip6.f09_g17.LE2-1001.001.cam.h6.T.19100101-19191231.nc',
+ 'ncar-cesm2-lens/tseries/b.e21.BHISTcmip6.f09_g17.LE2-1001.001.cam.h6.T.19200101-19291231.nc',
+ 'ncar-cesm2-lens/tseries/b.e21.BHISTcmip6.f09_g17.LE2-1001.001.cam.h6.T.19300101-19391231.nc',
+ 'ncar-cesm2-lens/tseries/b.e21.BHISTcmip6.f09_g17.LE2-1001.001.cam.h6.T.19400101-19491231.nc',
+ 'ncar-cesm2-lens/tseries/b.e21.BHISTcmip6.f09_g17.LE2-1001.001.cam.h6.T.19500101-19591231.nc',
+ 'ncar-cesm2-lens/tseries/b.e21.BHISTcmip6.f09_g17.LE2-1001.001.cam.h6.T.19600101-19691231.nc',
+ 'ncar-cesm2-lens/tseries/b.e21.BHISTcmip6.f09_g17.LE2-1001.001.cam.h6.T.19700101-19791231.nc',
+ 'ncar-cesm2-lens/tseries/b.e21.BHISTcmip6.f09_g17.LE2-1001.001.cam.h6.T.19800101-19891231.nc',
+ 'ncar-cesm2-lens/tseries/b.e21.BHISTcmip6.f09_g17.LE2-1001.001.cam.h6.T.19900101-19991231.nc',
+ 'ncar-cesm2-lens/tseries/b.e21.BHISTcmip6.f09_g17.LE2-1001.001.cam.h6.T.20000101-20091231.nc',
+ 'ncar-cesm2-lens/tseries/b.e21.BHISTcmip6.f09_g17.LE2-1001.001.cam.h6.T.20100101-20141231.nc']
 </pre></div>
 </div>
 </div>
@@ -2609,7 +2609,7 @@ sys      : 3.11.0 | packaged by conda-forge | (main, Jan 14 2023, 12:27:40) [GCC
 <p>We can check the size of a single dataset here</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">fs</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="n">filelist</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">/</span> <span class="mf">1e9</span><span class="p">,</span> <span class="s1">&#39;gb&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">fs</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="n">filelist</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">/</span> <span class="mf">1e9</span><span class="p">,</span> <span class="s1">'gb'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2627,8 +2627,8 @@ sys      : 3.11.0 | packaged by conda-forge | (main, Jan 14 2023, 12:27:40) [GCC
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">filelist</span> <span class="o">=</span> <span class="n">filelist</span><span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">:]</span>
-<span class="n">urls</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;s3://&quot;</span> <span class="o">+</span> <span class="n">f</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">filelist</span><span class="p">]</span>
-<span class="n">so</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;rb&#39;</span><span class="p">,</span> <span class="n">anon</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">default_fill_cache</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">default_cache_type</span><span class="o">=</span><span class="s1">&#39;first&#39;</span><span class="p">)</span>
+<span class="n">urls</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"s3://"</span> <span class="o">+</span> <span class="n">f</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">filelist</span><span class="p">]</span>
+<span class="n">so</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s1">'rb'</span><span class="p">,</span> <span class="n">anon</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">default_fill_cache</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">default_cache_type</span><span class="o">=</span><span class="s1">'first'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2649,7 +2649,7 @@ sys      : 3.11.0 | packaged by conda-forge | (main, Jan 14 2023, 12:27:40) [GCC
 <p>Set the output directory of the json mapping files</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">json_dir</span> <span class="o">=</span> <span class="s1">&#39;cesm2_le_reference_files&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">json_dir</span> <span class="o">=</span> <span class="s1">'cesm2_le_reference_files'</span>
 </pre></div>
 </div>
 </div>
@@ -2660,11 +2660,11 @@ sys      : 3.11.0 | packaged by conda-forge | (main, Jan 14 2023, 12:27:40) [GCC
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">gen_json</span><span class="p">(</span><span class="n">u</span><span class="p">):</span>
     <span class="k">with</span> <span class="n">fs</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="o">**</span><span class="n">so</span><span class="p">)</span> <span class="k">as</span> <span class="n">infile</span><span class="p">:</span>
         <span class="n">h5chunks</span> <span class="o">=</span> <span class="n">SingleHdf5ToZarr</span><span class="p">(</span><span class="n">infile</span><span class="p">,</span> <span class="n">u</span><span class="p">,</span> <span class="n">inline_threshold</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
-        <span class="n">p</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">'/'</span><span class="p">)</span>
         <span class="n">fname</span> <span class="o">=</span> <span class="n">p</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-        <span class="n">outf</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">fname</span><span class="si">}</span><span class="s1">.json&#39;</span>
+        <span class="n">outf</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="n">fname</span><span class="si">}</span><span class="s1">.json'</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">outf</span><span class="p">)</span>
-        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">json_dir</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">outf</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">json_dir</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">outf</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span> <span class="s1">'wb'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
             <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">ujson</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">h5chunks</span><span class="o">.</span><span class="n">translate</span><span class="p">())</span><span class="o">.</span><span class="n">encode</span><span class="p">());</span>
 </pre></div>
 </div>
@@ -2832,17 +2832,17 @@ Wall time: 3min 25s
 <p>The previous process produced a <strong>single reference file for each netCDF file</strong> - let’s merge these all together to create single store.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">reference_files</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s1">&#39;cesm2_le_reference_files/*&#39;</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">reference_files</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s1">'cesm2_le_reference_files/*'</span><span class="p">))</span>
 <span class="n">reference_files</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;cesm2_le_reference_files/b.e21.BHISTcmip6.f09_g17.LE2-1001.001.cam.h6.T.19700101-19791231.nc.json&#39;,
- &#39;cesm2_le_reference_files/b.e21.BHISTcmip6.f09_g17.LE2-1001.001.cam.h6.T.19800101-19891231.nc.json&#39;,
- &#39;cesm2_le_reference_files/b.e21.BHISTcmip6.f09_g17.LE2-1001.001.cam.h6.T.19900101-19991231.nc.json&#39;,
- &#39;cesm2_le_reference_files/b.e21.BHISTcmip6.f09_g17.LE2-1001.001.cam.h6.T.20000101-20091231.nc.json&#39;,
- &#39;cesm2_le_reference_files/b.e21.BHISTcmip6.f09_g17.LE2-1001.001.cam.h6.T.20100101-20141231.nc.json&#39;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>['cesm2_le_reference_files/b.e21.BHISTcmip6.f09_g17.LE2-1001.001.cam.h6.T.19700101-19791231.nc.json',
+ 'cesm2_le_reference_files/b.e21.BHISTcmip6.f09_g17.LE2-1001.001.cam.h6.T.19800101-19891231.nc.json',
+ 'cesm2_le_reference_files/b.e21.BHISTcmip6.f09_g17.LE2-1001.001.cam.h6.T.19900101-19991231.nc.json',
+ 'cesm2_le_reference_files/b.e21.BHISTcmip6.f09_g17.LE2-1001.001.cam.h6.T.20000101-20091231.nc.json',
+ 'cesm2_le_reference_files/b.e21.BHISTcmip6.f09_g17.LE2-1001.001.cam.h6.T.20100101-20141231.nc.json']
 </pre></div>
 </div>
 </div>
@@ -2852,10 +2852,10 @@ Wall time: 3min 25s
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mzz</span> <span class="o">=</span> <span class="n">MultiZarrToZarr</span><span class="p">(</span>
     <span class="n">reference_files</span><span class="p">,</span>
-    <span class="n">target_options</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;anon&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">},</span>
-    <span class="n">remote_protocol</span><span class="o">=</span><span class="s1">&#39;s3&#39;</span><span class="p">,</span>
-    <span class="n">remote_options</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;anon&#39;</span><span class="p">:</span> <span class="s1">&#39;True&#39;</span><span class="p">},</span>  <span class="c1"># JSON files</span>
-    <span class="n">concat_dims</span><span class="o">=</span><span class="s2">&quot;time&quot;</span><span class="p">,</span>
+    <span class="n">target_options</span><span class="o">=</span><span class="p">{</span><span class="s1">'anon'</span><span class="p">:</span> <span class="kc">False</span><span class="p">},</span>
+    <span class="n">remote_protocol</span><span class="o">=</span><span class="s1">'s3'</span><span class="p">,</span>
+    <span class="n">remote_options</span><span class="o">=</span><span class="p">{</span><span class="s1">'anon'</span><span class="p">:</span> <span class="s1">'True'</span><span class="p">},</span>  <span class="c1"># JSON files</span>
+    <span class="n">concat_dims</span><span class="o">=</span><span class="s2">"time"</span><span class="p">,</span>
 <span class="p">)</span>
 </pre></div>
 </div>
@@ -2866,7 +2866,7 @@ Wall time: 3min 25s
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
 <span class="c1">#%%prun -D multizarr_profile</span>
-<span class="n">mzz</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="s1">&#39;cesm2-le-tseries-aws.json&#39;</span><span class="p">)</span>
+<span class="n">mzz</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="s1">'cesm2-le-tseries-aws.json'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2888,7 +2888,7 @@ Wall time: 3.29 s
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fs_s3</span> <span class="o">=</span> <span class="n">s3fs</span><span class="o">.</span><span class="n">S3FileSystem</span><span class="p">(</span><span class="n">anon</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
-<span class="n">flist</span> <span class="o">=</span> <span class="p">[</span><span class="n">fs_s3</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">path</span> <span class="ow">in</span> <span class="n">urls</span><span class="p">]</span>
+<span class="n">flist</span> <span class="o">=</span> <span class="p">[</span><span class="n">fs_s3</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">"rb"</span><span class="p">)</span> <span class="k">for</span> <span class="n">path</span> <span class="ow">in</span> <span class="n">urls</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -2904,11 +2904,11 @@ Wall time: 3.29 s
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
 <span class="n">ds_read_directly</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_mfdataset</span><span class="p">(</span>
     <span class="n">flist</span><span class="p">,</span>
-    <span class="n">engine</span><span class="o">=</span><span class="s2">&quot;h5netcdf&quot;</span><span class="p">,</span>
-    <span class="n">chunks</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;lat&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="s2">&quot;lon&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">},</span>
-    <span class="n">data_vars</span><span class="o">=</span><span class="s2">&quot;minimal&quot;</span><span class="p">,</span>
-    <span class="n">coords</span><span class="o">=</span><span class="s2">&quot;minimal&quot;</span><span class="p">,</span>
-    <span class="n">compat</span><span class="o">=</span><span class="s2">&quot;override&quot;</span><span class="p">,</span>
+    <span class="n">engine</span><span class="o">=</span><span class="s2">"h5netcdf"</span><span class="p">,</span>
+    <span class="n">chunks</span><span class="o">=</span><span class="p">{</span><span class="s2">"lat"</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="s2">"lon"</span><span class="p">:</span> <span class="mi">20</span><span class="p">},</span>
+    <span class="n">data_vars</span><span class="o">=</span><span class="s2">"minimal"</span><span class="p">,</span>
+    <span class="n">coords</span><span class="o">=</span><span class="s2">"minimal"</span><span class="p">,</span>
+    <span class="n">compat</span><span class="o">=</span><span class="s2">"override"</span><span class="p">,</span>
 <span class="p">)</span>
 </pre></div>
 </div>
@@ -4732,7 +4732,7 @@ Attributes:
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
-<span class="n">ds_read_directly</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="mi">1460</span><span class="p">),</span> <span class="n">lev</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">lat</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">lon</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">hvplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="n">grid</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">ds_read_directly</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="mi">1460</span><span class="p">),</span> <span class="n">lev</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">lat</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">lon</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">hvplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">'time'</span><span class="p">,</span> <span class="n">grid</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -4788,12 +4788,12 @@ Wall time: 17min 12s
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fs</span> <span class="o">=</span> <span class="n">fsspec</span><span class="o">.</span><span class="n">filesystem</span><span class="p">(</span>
-    <span class="s2">&quot;reference&quot;</span><span class="p">,</span>
-    <span class="n">fo</span><span class="o">=</span><span class="s1">&#39;cesm2-le-tseries-aws.json&#39;</span><span class="p">,</span>
-    <span class="n">remote_protocol</span><span class="o">=</span><span class="s1">&#39;s3&#39;</span><span class="p">,</span>
-    <span class="n">remote_options</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;anon&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
+    <span class="s2">"reference"</span><span class="p">,</span>
+    <span class="n">fo</span><span class="o">=</span><span class="s1">'cesm2-le-tseries-aws.json'</span><span class="p">,</span>
+    <span class="n">remote_protocol</span><span class="o">=</span><span class="s1">'s3'</span><span class="p">,</span>
+    <span class="n">remote_options</span><span class="o">=</span><span class="p">{</span><span class="s1">'anon'</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
 <span class="p">)</span>
-<span class="n">m</span> <span class="o">=</span> <span class="n">fs</span><span class="o">.</span><span class="n">get_mapper</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="n">m</span> <span class="o">=</span> <span class="n">fs</span><span class="o">.</span><span class="n">get_mapper</span><span class="p">(</span><span class="s2">""</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -4802,7 +4802,7 @@ Wall time: 17min 12s
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
-<span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">engine</span><span class="o">=</span><span class="s2">&quot;zarr&quot;</span><span class="p">)</span>
+<span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">engine</span><span class="o">=</span><span class="s2">"zarr"</span><span class="p">)</span>
 <span class="n">ds</span>
 </pre></div>
 </div>
@@ -5315,7 +5315,7 @@ Attributes:
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
-<span class="n">ds</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="mi">1460</span><span class="p">),</span> <span class="n">lev</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">lat</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">lon</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">hvplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="n">grid</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="mi">1460</span><span class="p">),</span> <span class="n">lev</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">lat</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">lon</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">hvplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">'time'</span><span class="p">,</span> <span class="n">grid</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -5471,8 +5471,8 @@ Wall time: 44.2 s
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9"></script>
-<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -5506,7 +5506,7 @@ Wall time: 44.2 s
         <div class="footer-item">
 <p class="theme-version">
   <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.20.0.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.21.0.
 </p></div>
       
     </div>

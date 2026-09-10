@@ -27,8 +27,8 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
@@ -37,10 +37,10 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=66307ba7" />
   
   <!-- So that users can add custom icons -->
-  <script defer src="../../../_static/scripts/fontawesome.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer src="../../../_static/scripts/fontawesome.js?digest=cb8930eaaf36d9849b67"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9" />
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67" />
 
     <script src="../../../_static/documentation_options.js?v=55b5f74b"></script>
     <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
@@ -74,7 +74,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
-    <meta name="docbuild:last-update" content="Jul 27, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 10, 2026"/>
   
     
     <script src="../../../_static/searchtools.js"></script>
@@ -588,7 +588,7 @@
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">Image</span>
 
-<span class="n">Image</span><span class="p">(</span><span class="s2">&quot;../images/cam-se-ivt.png&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">600</span><span class="p">)</span>
+<span class="n">Image</span><span class="p">(</span><span class="s2">"../images/cam-se-ivt.png"</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">600</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2531,8 +2531,8 @@ hvplot    : 0.8.2
 <p>First some file paths</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_file</span> <span class="o">=</span> <span class="s2">&quot;/glade/campaign/collections/cmip/CMIP6/iHESP/BHIST/HR/b.e13.BHISTC5.ne120_t12.cesm-ihesp-hires1.0.30-1920-2100.002/atm/proc/tseries/hour_6I/b.e13.BHISTC5.ne120_t12.cesm-ihesp-hires1.0.30-1920-2100.002.cam.h2.IVT.192001-192912.nc&quot;</span>
-<span class="n">weight_file</span> <span class="o">=</span> <span class="s2">&quot;/glade/work/shields/SE_grid/map_ne120_to_0.23x0.31_bilinear.nc&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_file</span> <span class="o">=</span> <span class="s2">"/glade/campaign/collections/cmip/CMIP6/iHESP/BHIST/HR/b.e13.BHISTC5.ne120_t12.cesm-ihesp-hires1.0.30-1920-2100.002/atm/proc/tseries/hour_6I/b.e13.BHISTC5.ne120_t12.cesm-ihesp-hires1.0.30-1920-2100.002.cam.h2.IVT.192001-192912.nc"</span>
+<span class="n">weight_file</span> <span class="o">=</span> <span class="s2">"/glade/work/shields/SE_grid/map_ne120_to_0.23x0.31_bilinear.nc"</span>
 </pre></div>
 </div>
 </div>
@@ -2540,7 +2540,7 @@ hvplot    : 0.8.2
 <p>We read in the input data</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_in</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">data_file</span><span class="p">,</span> <span class="n">chunks</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;time&quot;</span><span class="p">:</span> <span class="mi">50</span><span class="p">})</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_in</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">data_file</span><span class="p">,</span> <span class="n">chunks</span><span class="o">=</span><span class="p">{</span><span class="s2">"time"</span><span class="p">:</span> <span class="mi">50</span><span class="p">})</span>
 <span class="n">data_in</span>
 </pre></div>
 </div>
@@ -5597,7 +5597,7 @@ Attributes:
     <span class="n">ds_in</span><span class="p">,</span> 
     <span class="n">ds_out</span><span class="p">,</span>
     <span class="n">weights</span><span class="o">=</span><span class="n">weight_file</span><span class="p">,</span>
-    <span class="n">method</span><span class="o">=</span><span class="s2">&quot;bilinear&quot;</span><span class="p">,</span>
+    <span class="n">method</span><span class="o">=</span><span class="s2">"bilinear"</span><span class="p">,</span>
     <span class="n">reuse_weights</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="n">periodic</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
 <span class="p">)</span>
@@ -5614,7 +5614,7 @@ Attributes:
 <span class="c1"># input variable shape</span>
 <span class="n">in_shape</span> <span class="o">=</span> <span class="n">weights</span><span class="o">.</span><span class="n">src_grid_dims</span><span class="o">.</span><span class="n">load</span><span class="p">()</span><span class="o">.</span><span class="n">data</span>
 
-<span class="c1"># Since xESMF expects 2D vars, we&#39;ll insert a dummy dimension of size-1</span>
+<span class="c1"># Since xESMF expects 2D vars, we'll insert a dummy dimension of size-1</span>
 <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">in_shape</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
     <span class="n">in_shape</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="n">in_shape</span><span class="o">.</span><span class="n">item</span><span class="p">()]</span>
 
@@ -5644,14 +5644,14 @@ Attributes:
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dummy_in</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">(</span>
     <span class="p">{</span>
-        <span class="s2">&quot;lat&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;lat&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="n">in_shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],))),</span>
-        <span class="s2">&quot;lon&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;lon&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="n">in_shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],))),</span>
+        <span class="s2">"lat"</span><span class="p">:</span> <span class="p">(</span><span class="s2">"lat"</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="n">in_shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],))),</span>
+        <span class="s2">"lon"</span><span class="p">:</span> <span class="p">(</span><span class="s2">"lon"</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="n">in_shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],))),</span>
     <span class="p">}</span>
 <span class="p">)</span>
 <span class="n">dummy_out</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">(</span>
     <span class="p">{</span>
-        <span class="s2">&quot;lat&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;lat&quot;</span><span class="p">,</span> <span class="n">weights</span><span class="o">.</span><span class="n">yc_b</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">out_shape</span><span class="p">)[:,</span> <span class="mi">0</span><span class="p">]),</span>
-        <span class="s2">&quot;lon&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;lon&quot;</span><span class="p">,</span> <span class="n">weights</span><span class="o">.</span><span class="n">xc_b</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">out_shape</span><span class="p">)[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:]),</span>
+        <span class="s2">"lat"</span><span class="p">:</span> <span class="p">(</span><span class="s2">"lat"</span><span class="p">,</span> <span class="n">weights</span><span class="o">.</span><span class="n">yc_b</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">out_shape</span><span class="p">)[:,</span> <span class="mi">0</span><span class="p">]),</span>
+        <span class="s2">"lon"</span><span class="p">:</span> <span class="p">(</span><span class="s2">"lon"</span><span class="p">,</span> <span class="n">weights</span><span class="o">.</span><span class="n">xc_b</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">out_shape</span><span class="p">)[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:]),</span>
     <span class="p">}</span>
 <span class="p">)</span>
 
@@ -5659,7 +5659,7 @@ Attributes:
     <span class="n">dummy_in</span><span class="p">,</span>
     <span class="n">dummy_out</span><span class="p">,</span>
     <span class="n">weights</span><span class="o">=</span><span class="n">weight_file</span><span class="p">,</span>
-    <span class="n">method</span><span class="o">=</span><span class="s2">&quot;bilinear&quot;</span><span class="p">,</span>
+    <span class="n">method</span><span class="o">=</span><span class="s2">"bilinear"</span><span class="p">,</span>
     <span class="n">reuse_weights</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="n">periodic</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
 <span class="p">)</span>
@@ -5687,9 +5687,9 @@ Periodic in longitude?      True
 <p>Here I’m using the name <code class="docutils literal notranslate"><span class="pre">dummy</span></code> so that we  are clear that it is fake.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vars_with_ncol</span> <span class="o">=</span> <span class="p">[</span><span class="n">name</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">data_in</span><span class="o">.</span><span class="n">variables</span> <span class="k">if</span> <span class="s2">&quot;ncol&quot;</span> <span class="ow">in</span> <span class="n">data_in</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">dims</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vars_with_ncol</span> <span class="o">=</span> <span class="p">[</span><span class="n">name</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">data_in</span><span class="o">.</span><span class="n">variables</span> <span class="k">if</span> <span class="s2">"ncol"</span> <span class="ow">in</span> <span class="n">data_in</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">dims</span><span class="p">]</span>
 <span class="n">updated</span> <span class="o">=</span> <span class="n">data_in</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
-    <span class="n">data_in</span><span class="p">[</span><span class="n">vars_with_ncol</span><span class="p">]</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="s2">&quot;ncol&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="s2">&quot;dummy&quot;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=-</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">data_in</span><span class="p">[</span><span class="n">vars_with_ncol</span><span class="p">]</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="s2">"ncol"</span><span class="p">)</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="s2">"dummy"</span><span class="p">,</span> <span class="n">axis</span><span class="o">=-</span><span class="mi">2</span><span class="p">)</span>
 <span class="p">)</span>
 <span class="n">updated</span>
 </pre></div>
@@ -7912,7 +7912,7 @@ Attributes:
 <p>Now to apply the regridder on <code class="docutils literal notranslate"><span class="pre">updated</span></code> we rename <code class="docutils literal notranslate"><span class="pre">dummy</span></code> to <code class="docutils literal notranslate"><span class="pre">lat</span></code> (both are size-1 in <code class="docutils literal notranslate"><span class="pre">updated</span></code> and <code class="docutils literal notranslate"><span class="pre">dummy_in</span></code>), and <code class="docutils literal notranslate"><span class="pre">ncol</span></code>  to <code class="docutils literal notranslate"><span class="pre">lon</span></code> (both are the same size in <code class="docutils literal notranslate"><span class="pre">updated</span></code> and <code class="docutils literal notranslate"><span class="pre">dummy_in</span></code>)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">regridded</span> <span class="o">=</span> <span class="n">regridder</span><span class="p">(</span><span class="n">updated</span><span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="s2">&quot;dummy&quot;</span><span class="p">:</span> <span class="s2">&quot;lat&quot;</span><span class="p">,</span> <span class="s2">&quot;ncol&quot;</span><span class="p">:</span> <span class="s2">&quot;lon&quot;</span><span class="p">}))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">regridded</span> <span class="o">=</span> <span class="n">regridder</span><span class="p">(</span><span class="n">updated</span><span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="s2">"dummy"</span><span class="p">:</span> <span class="s2">"lat"</span><span class="p">,</span> <span class="s2">"ncol"</span><span class="p">:</span> <span class="s2">"lon"</span><span class="p">}))</span>
 <span class="n">regridded</span>
 </pre></div>
 </div>
@@ -8561,7 +8561,7 @@ Attributes:
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">figure</span> <span class="o">=</span> <span class="n">regridded</span><span class="o">.</span><span class="n">IVT</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">hvplot</span><span class="p">(</span>
-    <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;twilight&quot;</span><span class="p">,</span> <span class="n">clim</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1000</span><span class="p">),</span> <span class="n">frame_width</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">geo</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">coastline</span><span class="o">=</span><span class="kc">True</span>
+    <span class="n">cmap</span><span class="o">=</span><span class="s2">"twilight"</span><span class="p">,</span> <span class="n">clim</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1000</span><span class="p">),</span> <span class="n">frame_width</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">geo</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">coastline</span><span class="o">=</span><span class="kc">True</span>
 <span class="p">)</span>
 <span class="n">figure</span>
 </pre></div>
@@ -8611,7 +8611,7 @@ Attributes:
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">regrid_cam_se</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">weight_file</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Regrid CAM-SE output using an existing ESMF weights file.</span>
 
 <span class="sd">    Parameters</span>
@@ -8625,7 +8625,7 @@ Attributes:
 <span class="sd">    -------</span>
 <span class="sd">    regridded</span>
 <span class="sd">        xarray.Dataset after regridding.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
     <span class="kn">import</span><span class="w"> </span><span class="nn">xarray</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">xr</span>
 
@@ -8635,25 +8635,25 @@ Attributes:
     <span class="c1"># input variable shape</span>
     <span class="n">in_shape</span> <span class="o">=</span> <span class="n">weights</span><span class="o">.</span><span class="n">src_grid_dims</span><span class="o">.</span><span class="n">load</span><span class="p">()</span><span class="o">.</span><span class="n">data</span>
 
-    <span class="c1"># Since xESMF expects 2D vars, we&#39;ll insert a dummy dimension of size-1</span>
+    <span class="c1"># Since xESMF expects 2D vars, we'll insert a dummy dimension of size-1</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">in_shape</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
         <span class="n">in_shape</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="n">in_shape</span><span class="o">.</span><span class="n">item</span><span class="p">()]</span>
 
     <span class="c1"># output variable shape</span>
     <span class="n">out_shape</span> <span class="o">=</span> <span class="n">weights</span><span class="o">.</span><span class="n">dst_grid_dims</span><span class="o">.</span><span class="n">load</span><span class="p">()</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">tolist</span><span class="p">()[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Regridding from </span><span class="si">{</span><span class="n">in_shape</span><span class="si">}</span><span class="s2"> to </span><span class="si">{</span><span class="n">out_shape</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Regridding from </span><span class="si">{</span><span class="n">in_shape</span><span class="si">}</span><span class="s2"> to </span><span class="si">{</span><span class="n">out_shape</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 
     <span class="c1"># Insert dummy dimension</span>
-    <span class="n">vars_with_ncol</span> <span class="o">=</span> <span class="p">[</span><span class="n">name</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">data_in</span><span class="o">.</span><span class="n">variables</span> <span class="k">if</span> <span class="s2">&quot;ncol&quot;</span> <span class="ow">in</span> <span class="n">data_in</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">dims</span><span class="p">]</span>
+    <span class="n">vars_with_ncol</span> <span class="o">=</span> <span class="p">[</span><span class="n">name</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">data_in</span><span class="o">.</span><span class="n">variables</span> <span class="k">if</span> <span class="s2">"ncol"</span> <span class="ow">in</span> <span class="n">data_in</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">dims</span><span class="p">]</span>
     <span class="n">updated</span> <span class="o">=</span> <span class="n">data_in</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
-        <span class="n">data_in</span><span class="p">[</span><span class="n">vars_with_ncol</span><span class="p">]</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="s2">&quot;ncol&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="s2">&quot;dummy&quot;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=-</span><span class="mi">2</span><span class="p">)</span>
+        <span class="n">data_in</span><span class="p">[</span><span class="n">vars_with_ncol</span><span class="p">]</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="s2">"ncol"</span><span class="p">)</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="s2">"dummy"</span><span class="p">,</span> <span class="n">axis</span><span class="o">=-</span><span class="mi">2</span><span class="p">)</span>
     <span class="p">)</span>
 
     <span class="c1"># Actually regrid, after renaming</span>
-    <span class="n">regridded</span> <span class="o">=</span> <span class="n">regridder</span><span class="p">(</span><span class="n">updated</span><span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="s2">&quot;dummy&quot;</span><span class="p">:</span> <span class="s2">&quot;lat&quot;</span><span class="p">,</span> <span class="s2">&quot;ncol&quot;</span><span class="p">:</span> <span class="s2">&quot;lon&quot;</span><span class="p">}))</span>
+    <span class="n">regridded</span> <span class="o">=</span> <span class="n">regridder</span><span class="p">(</span><span class="n">updated</span><span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="s2">"dummy"</span><span class="p">:</span> <span class="s2">"lat"</span><span class="p">,</span> <span class="s2">"ncol"</span><span class="p">:</span> <span class="s2">"lon"</span><span class="p">}))</span>
 
-    <span class="c1"># merge back any variables that didn&#39;t have the ncol dimension</span>
+    <span class="c1"># merge back any variables that didn't have the ncol dimension</span>
     <span class="c1"># And so were not regridded</span>
     <span class="k">return</span> <span class="n">xr</span><span class="o">.</span><span class="n">merge</span><span class="p">([</span><span class="n">data_in</span><span class="o">.</span><span class="n">drop_vars</span><span class="p">(</span><span class="n">regridded</span><span class="o">.</span><span class="n">variables</span><span class="p">),</span> <span class="n">regridded</span><span class="p">])</span>
 
@@ -10794,8 +10794,8 @@ Attributes:
     <span class="c1"># path to weights file</span>
     <span class="n">path</span><span class="o">=...</span><span class="p">,</span>
     <span class="c1"># input dimension names that will be removed while regridding</span>
-    <span class="c1"># These are &quot;core dimensions&quot;</span>
-    <span class="n">dims_in</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;ncol&quot;</span><span class="p">,),</span>
+    <span class="c1"># These are "core dimensions"</span>
+    <span class="n">dims_in</span><span class="o">=</span><span class="p">(</span><span class="s2">"ncol"</span><span class="p">,),</span>
     <span class="c1"># Output dataset with lat, lon information</span>
     <span class="n">ds_out</span><span class="o">=...</span><span class="p">,</span>
 <span class="p">)</span>
@@ -10903,8 +10903,8 @@ Attributes:
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9"></script>
-<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -10938,7 +10938,7 @@ Attributes:
         <div class="footer-item">
 <p class="theme-version">
   <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.20.0.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.21.0.
 </p></div>
       
     </div>

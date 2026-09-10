@@ -27,8 +27,8 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
@@ -37,10 +37,10 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=66307ba7" />
   
   <!-- So that users can add custom icons -->
-  <script defer src="../../../_static/scripts/fontawesome.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer src="../../../_static/scripts/fontawesome.js?digest=cb8930eaaf36d9849b67"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9" />
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67" />
 
     <script src="../../../_static/documentation_options.js?v=55b5f74b"></script>
     <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
@@ -74,7 +74,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
-    <meta name="docbuild:last-update" content="Jul 27, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 10, 2026"/>
   
     
     <script src="../../../_static/searchtools.js"></script>
@@ -628,12 +628,12 @@
 <p>Taking a look at that directory, we see that there is a single case <code class="docutils literal notranslate"><span class="pre">b.e20.B1850.f19_g17.test</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s1">&#39;/glade/work/mgrover/cesm_test_data/*&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s1">'/glade/work/mgrover/cesm_test_data/*'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test&#39;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>['/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test']
 </pre></div>
 </div>
 </div>
@@ -641,22 +641,22 @@
 <p>Once we go into that directory, we see all the different components, including the atmosphere (atm), ocean (ocn), and land (lnd)!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s1">&#39;/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/*&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s1">'/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/*'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/logs&#39;,
- &#39;/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/cpl&#39;,
- &#39;/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/atm&#39;,
- &#39;/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/ocn&#39;,
- &#39;/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/lnd&#39;,
- &#39;/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/esp&#39;,
- &#39;/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/glc&#39;,
- &#39;/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/rof&#39;,
- &#39;/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/rest&#39;,
- &#39;/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/wav&#39;,
- &#39;/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/ice&#39;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>['/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/logs',
+ '/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/cpl',
+ '/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/atm',
+ '/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/ocn',
+ '/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/lnd',
+ '/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/esp',
+ '/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/glc',
+ '/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/rof',
+ '/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/rest',
+ '/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/wav',
+ '/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/ice']
 </pre></div>
 </div>
 </div>
@@ -664,14 +664,14 @@
 <p>If we go one step further, we notice that within each component, is a <code class="docutils literal notranslate"><span class="pre">hist</span></code> directory which contains the model output</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s1">&#39;/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/atm/*/*.nc&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s1">'/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/atm/*/*.nc'</span><span class="p">)[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/atm/hist/b.e20.B1850.f19_g17.test.cam.h0.0002-08.nc&#39;,
- &#39;/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/atm/hist/b.e20.B1850.f19_g17.test.cam.h0.0001-09.nc&#39;,
- &#39;/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/atm/hist/b.e20.B1850.f19_g17.test.cam.h0.0002-07.nc&#39;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>['/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/atm/hist/b.e20.B1850.f19_g17.test.cam.h0.0002-08.nc',
+ '/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/atm/hist/b.e20.B1850.f19_g17.test.cam.h0.0001-09.nc',
+ '/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/atm/hist/b.e20.B1850.f19_g17.test.cam.h0.0002-07.nc']
 </pre></div>
 </div>
 </div>
@@ -679,14 +679,14 @@
 <p>If we take a look at the <code class="docutils literal notranslate"><span class="pre">ocn</span></code> component though, we notice that there are a few timeseries files in there…</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s1">&#39;/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/ocn/*/*.nc&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s1">'/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/ocn/*/*.nc'</span><span class="p">)[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/ocn/tseries/b.e20.B1850.f19_g17.test.pop.h.pCO2SURF.000101-001012.nc&#39;,
- &#39;/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/ocn/tseries/b.e20.B1850.f19_g17.test.pop.h.SiO3_RIV_FLUX.000101-001012.nc&#39;,
- &#39;/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/ocn/tseries/b.e20.B1850.f19_g17.test.pop.h.graze_sp_zootot.000101-001012.nc&#39;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>['/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/ocn/tseries/b.e20.B1850.f19_g17.test.pop.h.pCO2SURF.000101-001012.nc',
+ '/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/ocn/tseries/b.e20.B1850.f19_g17.test.pop.h.SiO3_RIV_FLUX.000101-001012.nc',
+ '/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/ocn/tseries/b.e20.B1850.f19_g17.test.pop.h.graze_sp_zootot.000101-001012.nc']
 </pre></div>
 </div>
 </div>
@@ -708,7 +708,7 @@
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">Init signature:</span>
 Builder<span class=" -Color -Color-Blue">(</span>
     root_path<span class=" -Color -Color-Blue">:</span> pydantic<span class=" -Color -Color-Blue">.</span>types<span class=" -Color -Color-Blue">.</span>DirectoryPath<span class=" -Color -Color-Blue">,</span>
-    extension<span class=" -Color -Color-Blue">:</span> str <span class=" -Color -Color-Blue">=</span> <span class=" -Color -Color-Blue">&#39;.nc&#39;,</span>
+    extension<span class=" -Color -Color-Blue">:</span> str <span class=" -Color -Color-Blue">=</span> <span class=" -Color -Color-Blue">'.nc',</span>
     depth<span class=" -Color -Color-Blue">:</span> int <span class=" -Color -Color-Blue">=</span> <span class=" -Color -Color-Cyan">0</span><span class=" -Color -Color-Blue">,</span>
     exclude_patterns<span class=" -Color -Color-Blue">:</span> List<span class=" -Color -Color-Blue">[</span>str<span class=" -Color -Color-Blue">]</span> <span class=" -Color -Color-Blue">=</span> <span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">,</span>
     njobs<span class=" -Color -Color-Blue">:</span> int <span class=" -Color -Color-Blue">=</span> <span class=" -Color -Color-Blue">-</span><span class=" -Color -Color-Cyan">1</span><span class=" -Color -Color-Blue">,</span>
@@ -722,7 +722,7 @@ root_path : str
     Path of root directory.
 extension : str, optional
     File extension, by default None. If None, the builder will look for files with
-    &quot;*.nc&quot; extension.
+    "*.nc" extension.
 depth : int, optional
     Recursion depth. Recursively crawl `root_path` up to a specified depth, by default 0
 exclude_patterns : list, optional
@@ -745,11 +745,11 @@ njobs : int, optional
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="n">Builder</span><span class="p">(</span>
     <span class="c1"># Directory with the output</span>
-    <span class="s2">&quot;/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/&quot;</span><span class="p">,</span>
+    <span class="s2">"/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/"</span><span class="p">,</span>
     <span class="c1"># Depth of 1 since we are sending it to the case output directory</span>
     <span class="n">depth</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
     <span class="c1"># Exclude the timeseries and restart directories</span>
-    <span class="n">exclude_patterns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;*/tseries/*&quot;</span><span class="p">,</span> <span class="s2">&quot;*/rest/*&quot;</span><span class="p">],</span>
+    <span class="n">exclude_patterns</span><span class="o">=</span><span class="p">[</span><span class="s2">"*/tseries/*"</span><span class="p">,</span> <span class="s2">"*/rest/*"</span><span class="p">],</span>
     <span class="c1"># Number of jobs to execute - should be equal to # threads you are using</span>
     <span class="n">njobs</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
 <span class="p">)</span>
@@ -765,7 +765,7 @@ njobs : int, optional
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Builder(root_path=PosixPath(&#39;/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test&#39;), extension=&#39;.nc&#39;, depth=1, exclude_patterns=[&#39;*/tseries/*&#39;, &#39;*/rest/*&#39;], njobs=5)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Builder(root_path=PosixPath('/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test'), extension='.nc', depth=1, exclude_patterns=['*/tseries/*', '*/rest/*'], njobs=5)
 </pre></div>
 </div>
 </div>
@@ -1025,7 +1025,7 @@ njobs : int, optional
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PosixPath(&#39;/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/atm/hist/b.e20.B1850.f19_g17.test.cam.i.0002-01-01-00000.nc&#39;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PosixPath('/glade/work/mgrover/cesm_test_data/b.e20.B1850.f19_g17.test/atm/hist/b.e20.B1850.f19_g17.test.cam.i.0002-01-01-00000.nc')
 </pre></div>
 </div>
 </div>
@@ -1188,21 +1188,21 @@ njobs : int, optional
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span><span class="o">.</span><span class="n">save</span><span class="p">(</span>
     <span class="c1"># File path - could save as .csv (uncompressed csv) or .csv.gz (compressed csv)</span>
-    <span class="s2">&quot;/glade/work/mgrover/cesm-hist-test.csv&quot;</span><span class="p">,</span>
+    <span class="s2">"/glade/work/mgrover/cesm-hist-test.csv"</span><span class="p">,</span>
     <span class="c1"># Column name including filepath</span>
-    <span class="n">path_column_name</span><span class="o">=</span><span class="s1">&#39;path&#39;</span><span class="p">,</span>
+    <span class="n">path_column_name</span><span class="o">=</span><span class="s1">'path'</span><span class="p">,</span>
     <span class="c1"># Column name including variables</span>
-    <span class="n">variable_column_name</span><span class="o">=</span><span class="s1">&#39;variables&#39;</span><span class="p">,</span>
+    <span class="n">variable_column_name</span><span class="o">=</span><span class="s1">'variables'</span><span class="p">,</span>
     <span class="c1"># Data file format - could be netcdf or zarr (in this case, netcdf)</span>
-    <span class="n">data_format</span><span class="o">=</span><span class="s2">&quot;netcdf&quot;</span><span class="p">,</span>
+    <span class="n">data_format</span><span class="o">=</span><span class="s2">"netcdf"</span><span class="p">,</span>
     <span class="c1"># Which attributes to groupby when reading in variables using intake-esm</span>
-    <span class="n">groupby_attrs</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;component&quot;</span><span class="p">,</span> <span class="s2">&quot;stream&quot;</span><span class="p">,</span> <span class="s2">&quot;case&quot;</span><span class="p">],</span>
+    <span class="n">groupby_attrs</span><span class="o">=</span><span class="p">[</span><span class="s2">"component"</span><span class="p">,</span> <span class="s2">"stream"</span><span class="p">,</span> <span class="s2">"case"</span><span class="p">],</span>
     <span class="c1"># Aggregations which are fed into xarray when reading in data using intake</span>
     <span class="n">aggregations</span><span class="o">=</span><span class="p">[</span>
         <span class="p">{</span>
-            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;join_existing&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;attribute_name&quot;</span><span class="p">:</span> <span class="s2">&quot;date&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;options&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;dim&quot;</span><span class="p">:</span> <span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="s2">&quot;coords&quot;</span><span class="p">:</span> <span class="s2">&quot;minimal&quot;</span><span class="p">,</span> <span class="s2">&quot;compat&quot;</span><span class="p">:</span> <span class="s2">&quot;override&quot;</span><span class="p">},</span>
+            <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"join_existing"</span><span class="p">,</span>
+            <span class="s2">"attribute_name"</span><span class="p">:</span> <span class="s2">"date"</span><span class="p">,</span>
+            <span class="s2">"options"</span><span class="p">:</span> <span class="p">{</span><span class="s2">"dim"</span><span class="p">:</span> <span class="s2">"time"</span><span class="p">,</span> <span class="s2">"coords"</span><span class="p">:</span> <span class="s2">"minimal"</span><span class="p">,</span> <span class="s2">"compat"</span><span class="p">:</span> <span class="s2">"override"</span><span class="p">},</span>
         <span class="p">}</span>
     <span class="p">],</span>
 <span class="p">)</span>
@@ -1241,9 +1241,9 @@ njobs : int, optional
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">col</span> <span class="o">=</span> <span class="n">intake</span><span class="o">.</span><span class="n">open_esm_datastore</span><span class="p">(</span>
-    <span class="s2">&quot;/glade/work/mgrover/cesm-hist-test.json&quot;</span><span class="p">,</span>
-    <span class="n">csv_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;converters&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;variables&quot;</span><span class="p">:</span> <span class="n">ast</span><span class="o">.</span><span class="n">literal_eval</span><span class="p">}},</span>
-    <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;/&quot;</span><span class="p">,</span>
+    <span class="s2">"/glade/work/mgrover/cesm-hist-test.json"</span><span class="p">,</span>
+    <span class="n">csv_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s2">"converters"</span><span class="p">:</span> <span class="p">{</span><span class="s2">"variables"</span><span class="p">:</span> <span class="n">ast</span><span class="o">.</span><span class="n">literal_eval</span><span class="p">}},</span>
+    <span class="n">sep</span><span class="o">=</span><span class="s2">"/"</span><span class="p">,</span>
 <span class="p">)</span>
 <span class="n">col</span>
 </pre></div>
@@ -1307,7 +1307,7 @@ njobs : int, optional
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span> <span class="o">=</span> <span class="n">col</span><span class="o">.</span><span class="n">search</span><span class="p">(</span>
-    <span class="n">variables</span><span class="o">=</span><span class="s1">&#39;TEMP&#39;</span><span class="p">,</span>
+    <span class="n">variables</span><span class="o">=</span><span class="s1">'TEMP'</span><span class="p">,</span>
 <span class="p">)</span>
 <span class="n">cat</span>
 </pre></div>
@@ -1370,13 +1370,13 @@ njobs : int, optional
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dsets</span> <span class="o">=</span> <span class="n">cat</span><span class="o">.</span><span class="n">to_dataset_dict</span><span class="p">(</span><span class="n">cdf_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;use_cftime&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s1">&#39;chunks&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;time&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">}})</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dsets</span> <span class="o">=</span> <span class="n">cat</span><span class="o">.</span><span class="n">to_dataset_dict</span><span class="p">(</span><span class="n">cdf_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s1">'use_cftime'</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s1">'chunks'</span><span class="p">:</span> <span class="p">{</span><span class="s1">'time'</span><span class="p">:</span> <span class="mi">10</span><span class="p">}})</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--&gt; The keys in the returned dictionary of datasets are constructed as follows:
-	&#39;component/stream/case&#39;
+	'component/stream/case'
 </pre></div>
 </div>
 <div class="output text_html">
@@ -1405,7 +1405,7 @@ njobs : int, optional
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;ocn/pop.h/b.e20.B1850.f19_g17.test&#39;: &lt;xarray.Dataset&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{'ocn/pop.h/b.e20.B1850.f19_g17.test': &lt;xarray.Dataset&gt;
  Dimensions:  (nlat: 384, nlon: 320, time: 36, z_t: 60)
  Coordinates:
    * time     (time) object 0004-01-01 00:00:00 ... 0002-03-01 00:00:00
@@ -1418,7 +1418,7 @@ njobs : int, optional
  Data variables:
      TEMP     (time, z_t, nlat, nlon) float32 dask.array&lt;chunksize=(1, 60, 384, 320), meta=np.ndarray&gt;
  Attributes:
-     intake_esm_varname:      [&#39;TEMP&#39;]
+     intake_esm_varname:      ['TEMP']
      source:                  CCSM POP2, the CCSM Ocean Component
      time_period_freq:        month_1
      calendar:                All years have exactly  365 days.
@@ -1437,7 +1437,7 @@ njobs : int, optional
 <p>Let’s plot a quick figure from the dataset!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dsets</span><span class="p">[</span><span class="s1">&#39;ocn/pop.h/b.e20.B1850.f19_g17.test&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">TEMP</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">z_t</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">();</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dsets</span><span class="p">[</span><span class="s1">'ocn/pop.h/b.e20.B1850.f19_g17.test'</span><span class="p">]</span><span class="o">.</span><span class="n">TEMP</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">z_t</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">();</span>
 </pre></div>
 </div>
 </div>
@@ -1556,8 +1556,8 @@ njobs : int, optional
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9"></script>
-<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -1591,7 +1591,7 @@ njobs : int, optional
         <div class="footer-item">
 <p class="theme-version">
   <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.20.0.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.21.0.
 </p></div>
       
     </div>
